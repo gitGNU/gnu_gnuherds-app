@@ -1,0 +1,3381 @@
+# Authors: Davi Leal
+#
+# Copyright (C) 2006 Davi Leal <davi at leals dot com>
+#
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the Affero General Public License as published by Affero Inc.,
+# either version 1 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful to the Free
+# Software community, but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the Affero
+# General Public License for more details.
+#
+# You should have received a copy of the Affero General Public License with this
+# software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street,
+# Suite 225, San Francisco, CA 94107, USA
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: messages 0.0.1\n"
+"Report-Msgid-Bugs-To: davi@leals.com\n"
+"POT-Creation-Date: 2006-04-10 19:12+0200\n"
+"PO-Revision-Date: 2006-04-13 09:53+0200\n"
+"Last-Translator: Davi Leal <davi@leals.com>\n"
+"Language-Team: es <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#
+# Heading: Themes.php, Layer-1*/*.php
+#
+
+msgid "Free Software Association"
+msgstr "Asociación de Software Libre"
+
+#
+# header.tpl
+#
+
+msgid "Project state"
+msgstr "Estado del proyecto"
+
+msgid "Look at the %1Hackers' Guide%2"
+msgstr "Véase la %1Guía del Hacker%2"
+
+msgid "version"
+msgstr "versión"
+
+#
+# menu.tpl
+#
+
+msgid "Home"
+msgstr "Portada"
+
+msgid "Charter (draft)"
+msgstr "Estatutos (borrador)"
+
+msgid "Timeline"
+msgstr "Plan de trabajo"
+
+msgid "Hackers' Guide"
+msgstr "Guía del Hacker"
+
+msgid "Manage your data"
+msgstr "Gestione sus datos"
+
+msgid "Person"
+msgstr "Persona"
+
+msgid "Person (Member)"
+msgstr "Persona (Asociado)"
+
+msgid "Company"
+msgstr "Compañía"
+
+msgid "non-profit Organization"
+msgstr "Organización sin ánimo de lucro"
+
+msgid "My qualifications"
+msgstr "Mi cualificación"
+
+msgid "Our qualifications"
+msgstr "Nuestra cualificación"
+
+msgid "Your qualifications"
+msgstr "Tu cualificación"
+
+msgid "My job offers"
+msgstr "Mis ofertas de empleo"
+
+msgid "Our job offers"
+msgstr "Nuestras ofertas"
+
+msgid "Your job offers"
+msgstr "Tus ofertas de empleo"
+
+msgid "My job applications"
+msgstr "Mis candidaturas"
+
+msgid "Our job applications"
+msgstr "Nuestras candidaturas"
+
+msgid "Your job applications"
+msgstr "Tus candidaturas"
+
+msgid "My qualif. searches"
+msgstr "Mis búsquedas de cualificaciones"
+
+msgid "Our qualif. searches"
+msgstr "Nuestras búsquedas de cualificaciones"
+
+msgid "Your qualif. searches"
+msgstr "Tus búsquedas de cualificaciones"
+
+msgid "Resources"
+msgstr "Recursos"
+
+msgid "Careers"
+msgstr "Carreras"
+
+msgid "FS Business Networks"
+msgstr "Redes de Negocios FS"
+
+msgid "FS Job Offers"
+msgstr "Ofertas de empleo FS"
+
+msgid "FS job sites"
+msgstr "Web sites de empleo FS"
+
+msgid "FS job articles"
+msgstr "Artículos de empleo FS"
+
+msgid "Others"
+msgstr "Otros"
+
+msgid "Technical documentation"
+msgstr "Documentación técnica"
+
+msgid "International Trade Law"
+msgstr "Ley de Comercio Internacional"
+
+msgid "Special Interest Groups"
+msgstr "Grupos con interés especial"
+
+msgid "FS Businesses"
+msgstr "Negocios FS"
+
+msgid "e-Voting"
+msgstr "Voto electrónico"
+
+#
+# log_in_box.tpl
+#
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "Log in"
+msgstr "Entrar"
+
+msgid "This website is under construction. Any feedback, contribution or full redesign is welcome."
+msgstr "Esta website está en construcción. Cualquier opinión, contribucion o rediseño total será bienvenido."
+
+msgid "Lost password?"
+msgstr "¿Olvidó su contraseña?"
+
+msgid "New person?"
+msgstr "¿Nueva Persona?"
+
+msgid "New company?"
+msgstr "¿Nueva Compañia?"
+
+msgid "New non-profit?"
+msgstr "¿Nueva Organización?"
+
+#
+# log_out_box.tpl
+#
+
+msgid "Log out"
+msgstr "Salir"
+
+msgid "Now, you can go to the menu to manage your data"
+msgstr "Ahora, usted puede gestionar sus datos"
+
+#
+# content.tpl
+#
+
+msgid "Log in successful"
+msgstr "Entrada correcta"
+
+msgid "Log out successful"
+msgstr "Salida correcta"
+
+msgid "Log in unsuccessful: Invalid user or password, or some problem with the data base."
+msgstr "Entrada incorrecta: Usuario o contraseña incorrecta, o algun problema con la base de datos."
+
+msgid "To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the %1 domain to offices managed by FSF staff."
+msgstr "Para mantener el acceso a los datos de los usuarios físicamente seguro, se ha propuesto trasladar los servicios PostgreSQL y HTTP asociados al dominio %1 a oficinas controladas por personal de la FSF."
+
+#
+# Lost_Password_form.tpl
+#
+
+msgid "Write your email and click the Send button."
+msgstr "Escriba su correo electrónico y pulse el botón Enviar."
+
+msgid "Send"
+msgstr "Enviar"
+
+#
+# Lost_Password_form.php
+#
+
+msgid "You are already logged!. So we suppose you know your password. Anyway, log out and ask for it again if you want we send it to you."
+msgstr "¡Usted está ya dentro!. De modo que se supone que usted conoce su contraseña. De todas formas, salga y solicítela de nuevo si quiere que se la enviemos."
+
+msgid "For security reasons, GNU Herds does not send passwords by electronic mail."
+msgstr "Por razones de seguridad, GNU Herds no envía contraseñas por correo electrónico."
+
+msgid "To get your new password follow the below link:"
+msgstr "Para obtener su nueva contraseña siga el siguiente enlace:"
+
+msgid "If you have not asked for a new password, ignore it and your password will not be changed."
+msgstr "Si usted no ha solicitado una nueva contraseña, ignórelo y su contraseña no será modificada."
+
+msgid "An email has been sent to such address with the instructions to change the password."
+msgstr "Un correo electrónico ha sido enviado a tal dirección con las instrucciones para cambiar la contraseña."
+
+msgid "There is not member with that email!. Try again."
+msgstr "¡No hay ningún afiliado con ese correo electrónico!. Inténtelo de nuevo."
+
+msgid "Your new password is:"
+msgstr "Su nueva contraseña es:"
+
+msgid "To improve your security, you should change your password after loging in."
+msgstr "Para mejorar su seguridad, usted debería cambiar su contraseña después de entrar."
+
+#
+# Entity.php
+#
+
+msgid "ERROR: Wrong magic number!."
+msgstr "ERROR: ¡Número mágico incorrecto!."
+
+#
+# Home_content.tpl
+#
+
+msgid "Under construction. Look at the %1Hackers' Guide%2."
+msgstr "En construcción. Véase la %1Guía del Hacker%2."
+
+msgid "GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors. %5Job Site%4 modules have been developed. It has been put together by a small %3team%4 of interested members of the Free Software community."
+msgstr "GNU Herds es una asociación %1democrática%4 sin ánimo de lucro, cuyo %2objeto%4 es promover el desarrollo profesional de aquellos que contribuyen al Software Libre. Se han desarrollado los módulos de %5web de Empleo%4. Este proyecto ha sido llevado a cabo por un pequeño %3grupo%4 de miembros de la comunidad de Software Libre." 
+
+msgid "is the project main list."
+msgstr "es la lista principal del proyecto."
+
+msgid "to carry on the web application development."
+msgstr "para proseguir el desarrollo de la aplicación web."
+
+msgid "For more information:"
+msgstr "Para mas información:"
+
+#
+# Charter_content.tpl
+#
+
+msgid "Charter for GNU Herds (draft)"
+msgstr "Estatutos para GNU Herds (borrador)"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "The name of the Association shall be GNU Herds, to be known publicly as GNU Herds - Free Software Association."
+msgstr "El nombre de la Asociación será GNU Herds, conocida publicamente como GNU Herds - Asociación de Software Libre."
+
+msgid "Aims"
+msgstr "Objetivos"
+
+msgid "The aims of the Association shall be to %1encourage%2 the professional development of Free Software contributors."
+msgstr "Los objetivos de la Asociación serán %1fomentar%2 el desarrollo profesional de los que participan en la comunidad de Software Libre."
+
+msgid "Membership"
+msgstr "Afiliación"
+
+msgid "There shall be two kinds of members, voting members, to be known simply as a member, and non-voting members, to be known as an associate member."
+msgstr "Habrá dos tipos de afiliados: con capacidad de voto, conocidos simplemente como afiliados, y sin capacidad de voto, conocidos como asociados."
+
+msgid "All members must subscribe to the purposes of GNU Herds and adhere to the Code of Ethics at the penalty of their membership being revoked."
+msgstr "Todos los afiliados deben suscribir los propositos de GNU Herds y guardar el Código de Ética so pena de cancelación."
+
+msgid "To qualify for voting membership one must show a contribution to the Free Software movement."
+msgstr "Para obtener la capacidad de voto se debe proporcionar una contribución al movimiento de Software Libre."
+
+msgid "Memberships will be on a yearly basis.  Even though membership is free of charge membership must be renewed."
+msgstr "Las afiliaciones se renovarán cada año.  Aunque afiliarse es gratis, debe ser renovada."
+
+msgid "Committee"
+msgstr "Comité"
+
+msgid "The Committee shall consist of the following: the members of the system administrator team, the web master team, the certifications team, the translator teams, the Public Relations team and the Ethics Officer."
+msgstr "El Comité consistirá de: los miembros del equipo de administración de sistemas, el equipo de mantenimiento de la aplicación web, el equipo de gestión de certificaciones, los equipos de traducción de la aplicación web, el equipo de Relaciones Públicas y el Delegado de Ética."
+
+msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
+msgstr "Las responsabilidades del equipo de gestión de certificaciones serán evaluar, bajo petición, la certificación %1Free Software Contributor%2, la certificación %3GNU Business Network%4, etc. "
+
+msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure that: %1 %2the integrity of the GNU name is not breached and%3 %2the Association follows the %4Free Software%5 philosophy.%3 %6"
+msgstr "El Delegado de Ética será designado por la Free Software Foundation, Inc. para asegurar que: %1 %2la integridad del nombre GNU no sea alterada y que %3 %2la Asociación sigue la filosofía del %4Software Libre%5.%3 %6"
+
+msgid "The Ethics Officer will suggest ways to maintain those values.  To ensure the Association follows The Free Software philosophy a set of rules will be built. Initially they can be gleaned directly from"
+msgstr "El Delegado de Ética sugerirá las vías para mantener esos valores.  Para asegurar que la Asociación sigue la filosofía del Software libre un conjunto de reglas serán escritas. Inicialmente pueden ser deducidas directamente de"
+
+msgid "The Ethic Officer is a general counsel whose job is to let the group know s/he thinks the Association is investing too much time on something that may jeopardize its status with the FSF."
+msgstr "El Delegado de Ética es un consejero general cuya tarea es hacer ver a la Asociación que está invirtiendo demasiado tiempo en algo que podría hacer peligrar su relación con la FSF."
+
+msgid "While the Ethics Officer may choose to actively participate in the committee, it is not his primary duty. All other officers will be elected by the membership."
+msgstr "Aunque el Delegado de Ética puede participar activamente en el comité, no es su función principal. El resto de delegados serán elegidos por los afiliados."
+
+msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or his out of office."
+msgstr "La duración del Cargo será de 4 años.  Todos los cargos del comité son voluntarios. Cualquier delegado puede renunciar en cualquier momento.  Después de 6 meses, si los afiliados están descontentos con un delegado pueden apartarlo/a de su cargo."
+
+msgid "Decisions"
+msgstr "Decisiones"
+
+msgid "The goal of the committee is to administer the Association and execute the decisions taken by the members.  Therefore, all decisions will be voted upon by the membership."
+msgstr "La función del comité es administrar la Asociación y ejecutar las decisiones tomadas por los afiliados.  Por tanto, todas las decisiones serán votadas por los afiliados."
+
+msgid "Voting"
+msgstr "Votación"
+
+msgid "In addition to the issues at hand in a vote, the option to abstain, delegate your vote to another individual, and delegate your vote to the committee shall be present.  Through membership options a member can set one of these to be the default if they do not vote.  The option will initially be set to abstain.  Officer elections, amendments or dissolutions may not be delegated."
+msgstr "Además de las opciones de voto disponibles en una votación concreta, estarán también presentes las opciones de: abstenerse, delegar el voto en otro individuo, y delegar el voto en el comité.  En la ficha de opciones de afiliado se podrá especificar una de estas opciones como defecto, la cual se aplicará si el afiliado no vota.  Esta opción será inicialmente configurada para abstenerse. Las elecciones de cargos, enmiendas o mociones de disolución no pueden ser delegadas."
+
+msgid "Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed to discuss it is too long should there be a vote.%2Vote on non-technical subjects.%3"
+msgstr "Directrices: %1No use el mecanismo de votación para tomar decisiones sobre temas técnicos. Simplemente, discútalos para obtener la mejor solución técnica. Utilíselo solo si el tiempo necesario para discutirlo es demasiado.%2Úsese el mecanismo de votación para tomar decisiones no-técnicas.%3"
+
+msgid "Special Interest Groups will be formed at the discretion of the committee based on the demand within the membership."
+msgstr "Grupos con interés especial serán formados a la discreción del comité, basándose en las demandas de los afiliados."
+
+msgid "See the %1e-Voting%2 Special Interest Group section. We could work on the design of the official voting mechanism."
+msgstr "Véase la sección del grupo con interés especial en %1Voto electrónico%2. Se podría trabajar en el diseño del mecanismo oficial para votar."
+
+msgid "Amendments"
+msgstr "Enmiendas"
+
+msgid "Any member may motion for amendments to this Charter for any reason.  All proposed amendments will be put to a vote of the general membership."
+msgstr "Cualquier afiliado puede presentar enmiendas a este Estatuto. Todas las enmiendas propuestas serán sometidas al voto de los afiliados."
+
+msgid "Dissolution"
+msgstr "Disolución"
+
+msgid "The committee may motion for dissolution of the Association if they feel it is no longer serving a useful purpose.  Upon the motion being passed 75% of the membership must vote in favour of dissolution for it to occur."
+msgstr "El comité puede presentar una moción para la disolución de la Asociación si se piensa que ya no es útil.  Para que la moción sea aprovada, el 75% de los afiliados deben votar en favor de la disolución."
+
+msgid "Send comments to"
+msgstr "Envie comentarios a"
+
+#
+# Timeline_content.tpl
+#
+
+msgid "DONE!"
+msgstr "¡HECHO!"
+
+msgid "ONGOING PROCESS"
+msgstr "PROCESO EN CURSO"
+
+msgid "Add the member support."
+msgstr "Añadir el servicio de afiliados."
+
+msgid "Add the FS Job Offers support."
+msgstr "Añadir el servicio de Ofertas de Empleo de Software Libre."
+
+msgid "Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed."
+msgstr "Enviar un pequeño informe, con referencia a esta web site, a Richard Stallman para que revise nuestro trabajo y nos diga si debemos cambiar algo."
+
+msgid "Association announcement."
+msgstr "Anuncio de la Asociación."
+
+msgid "Translate the web site to other languages."
+msgstr "Traducir la web site a otros lenguajes."
+
+msgid "Work on e-Vote subjects:"
+msgstr "Trabajar en temas de voto electrónico:"
+
+msgid "Be ready to use at least a primitive e-Vote system, as for example, to count emails."
+msgstr "Estar preparado para usar al menos un sistema de voto electrónico elemental, como por ejemplo, contar correos electrónicos."
+
+msgid "Work on others e-Vote proposals."
+msgstr "Trabajar en otras propuestas de voto electrónico."
+
+msgid "Finish and show the draft of the P2P based e-Vote system proposal."
+msgstr "Terminar y mostrar el borrador de la propuesta de sistema de voto electrónico P2P."
+
+#
+# GNU_Herds_Hackers_Guide_content.tpl
+#
+
+msgid "GNU Herds Hackers' Guide"
+msgstr "Guía del Hacker de GNU Herds"
+
+msgid "Introduction"
+msgstr "Introducción"
+
+msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!."
+msgstr "Si usted quiere formar parte del equipo de GNU Herds, o simplemente colaborar esporádicamente, como algunos ya han hecho, puede %1subscribirse%2 a la lista de correo 'gnuherds-app-dev' o coordinarse con uno de los miembros del equipo. ¡Gracias!."
+
+msgid "To play with the web application, %1download%2 the code and install it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this Hackers' Guide. If you need support ask for it at"
+msgstr "Para jugar con la aplicación web, %1descarge%2 el código e instálelo en su PC. Los traductores no necesitan descargar el código fuente, nosotros le enviaremos el fichero POT de gettext a traducir. En esta Guía del Hacker se responden las preguntas mas frecuentes. Si necesita ayuda pídala en"
+
+msgid "Read the current draft of %1GNU Herds' Charter%2."
+msgstr "Véase el borrador actual de los %1Estatutos de GNU Herds%2."
+
+msgid "Technologies"
+msgstr "Tecnologías"
+
+msgid "The project depends on the below technologies. Though it is and must be open to any proposal."
+msgstr "El proyecto utiliza las siguientes tecnologías. Aunque está y debe estar abierto a cualquier propuesta."
+
+msgid "%1CVS%2 server at %2Savannah%3"
+msgstr "Sevidor %1CVS%2 en %2Savannah%3"
+
+msgid "Web application Architecture"
+msgstr "Arquitectura de la aplicación web"
+
+msgid "As a Free Software project we look for a modular and extensible design. We hope it could be easy to change the technology of a specific layer if it is needed."
+msgstr "Como proyecto de Software Libre se busca un diseño modular y extensible. Se espera que sea fácil cambiar la tecnología de una capa específica si es necesario."
+
+msgid "This architecture proposal is based on PHP:"
+msgstr "Esta propuesta de arquitectura esta basada en PHP:"
+
+msgid "outdated"
+msgstr "desactualizado"
+
+msgid "Web application Design"
+msgstr "Diseño de la aplicación web"
+
+msgid "The Smarty templates could be moved outside this layer."
+msgstr "Las plantillas Smarty se podrían mover fuera de esta capa."
+
+msgid "ADOdb is an external library. It is not being used yet. We give up about using a data base abstraction library, and this proposal will use instead just %1PDO%2."
+msgstr "ADOdb es una librería externa. No se está utilizando todavía. Se ha dejado de lado la idea de usar una librería de abstracción de base de datos, y esta propuesta usará en su lugar simplemente %1PDO%2."
+
+msgid "Documentation of the new Data Base design:"
+msgstr "Documentación del nuevo diseño de Base de Datos:"
+
+msgid "Entity Relation logical model"
+msgstr "Modelo lógico Entidad Relación"
+
+msgid "Physical model"
+msgstr "Modelo físico"
+
+msgid "SQL Implementation"
+msgstr "Implementación en SQL"
+
+msgid "Coding Standards"
+msgstr "Estándares de codificación"
+
+msgid "Internationalization and Localization"
+msgstr "Internacionalización y localización"
+
+msgid "We will try to follow these %1Coding Standards%2."
+msgstr "Se intentará seguir estos %1Estándares de codificación%2."
+
+msgid "How the development team and production is integrated?"
+msgstr "¿Cómo se integra el equipo de desarrollo y el entorno de producción?"
+
+msgid "CVS is used as repository. The HTTP server gets a tagged release via 'update' from the CVS server."
+msgstr "CVS se usa como almacén. El servidor HTTP obtiene una release etiquetada via 'update' del servidor CVS."
+
+msgid "The TODO task list"
+msgstr "La lista de tareas (TODO)"
+
+msgid "See the %1Task Manager%2 at Savannah."
+msgstr "Véase el %1Task Manager%2 en Savannah."
+
+msgid "The source code"
+msgstr "El código fuente"
+
+msgid "If you do not like play with CVS, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2."
+msgstr "Si a usted no le gusta tratar con CVS, puede obtener una copia, quizas un poco desactualizada, de la website, en nuestro  Savannah %1Filelist (Download area)%2."
+
+msgid "You could set up all the required %1Technologies%2 on your host, to be used as your development environment."
+msgstr "Usted podría instalar todas las %1Tecnologías%2 requeridas en su equipo, para usarlo como su entorno de desarrollo."
+
+msgid "The source code can have 'XXX' flags, which are used to mark pending tasks, etc."
+msgstr "El código fuente puede contener etiquetas 'XXX', las cuales se usan para marcar tareas pendientes, etc."
+
+msgid "The CVS server"
+msgstr "El servidor CVS"
+
+msgid "The CVS of gnuherds-app is at %1Savannah%2. The PostgreSQL database and the website is at the gnuherds.org host."
+msgstr "El CVS de gnuherds-app está en %1Savannah%2. La base de datos PostgreSQL y la website están en gnuherds.org."
+
+msgid "Though before getting write permision to the CVS repository it is usual to prove the interest with some patch, you can register at the Savannah development site and ask to join the project. Do not fear, if you join, nobody will force you to contribute :) "
+msgstr "Aunque antes de obtener permiso de escritura en el almacén CVS es usual probar el interés con algun parche, usted puede registrarse en la site de desarrollo Savannah y solicitar la entrada en el proyecto. Si lo solicita, no se preocupe, nadie le forzará a colaborar :) "
+
+msgid "Hints"
+msgstr "Consejos"
+
+msgid "%1Register%3 at %2Savannah%3"
+msgstr "%1Registrese%3 en %2Savannah%3"
+
+msgid "%1Request%2 for inclusion to the project"
+msgstr "%1Solicite%2 la entrada en el proyecto"
+
+msgid "gnuherds-app %1CVS%2 view"
+msgstr "Vista %1CVS%2 de gnuherds-app"
+
+msgid "Note: If you register at Savannah and join the project, both checkout and checkin will work in spite of the message \"Your savannah password is useless for cvs\".  When you register, take note of your passphrase. Savannah will ask for it at each cvs operation. For example, my first checkout was as follows:"
+msgstr "Nota: Si usted se registra en Savannah y se une al proyecto, tanto el checkout como el checkin funcionarán correctamente a pesar del mensaje \"Your savannah password is useless for cvs\". Cuando usted se registre, tome nota de su frase-clave. Savannah se la solicitará en cada operación cvs. Por ejemplo, mi primer checkout fue como sigue:"
+
+msgid "Note: Use the -P option to avoid getting the old directories which are empty."
+msgstr "Nota: Use la opción -P para descartar los directorios antiguos que están vacíos."
+
+msgid "Now you can work:"
+msgstr "Ahora usted puede trabajar:"
+
+msgid "To avoid writing the pass phrase at every cvs command:"
+msgstr "Para evitar tener que escribir la pass phrase con cada comando cvs:"
+
+msgid "The web site"
+msgstr "La web site"
+
+msgid "It is in the gnuherds.org host."
+msgstr "Está en el servidor gnuherds.org."
+
+msgid "The PostgreSQL data base"
+msgstr "La base de datos PostgreSQL"
+
+msgid "Creating from scratch. Follow the below steps:"
+msgstr "Partiendo desde cero. Siga los siguientes pasos:"
+
+msgid "Create the data base"
+msgstr "Crear la base de datos"
+
+msgid "Create the user, as super user"
+msgstr "Crear el usuario, como super usuario"
+
+msgid "Grant permissions"
+msgstr "Conceder permisos"
+
+msgid "Quit"
+msgstr "Salir"
+
+msgid "Create the initial state of the data base"
+msgstr "Crear el estado inicial de la base de datos"
+
+msgid "Check that 'stderr' and 'stdout' do not show errors"
+msgstr "Comprobar que 'stderr' y 'stdout' no muestran errores"
+
+msgid "General references:"
+msgstr "Referencias generales:"
+
+msgid "Email lists"
+msgstr "Listas de correo"
+
+msgid "The old list archives:"
+msgstr "Los archivos de las listas antiguas:"
+
+msgid "The %1general%2 mailing list"
+msgstr "La lista de correo %1general%2"
+
+msgid "The %1web-dev%2 mailing list"
+msgstr "La lista de correo %1web-dev%2"
+
+msgid "Current work team"
+msgstr "Equipo de trabajo actual"
+
+msgid "The list could be outdated:"
+msgstr "La lista podría estar desactualizada:"
+
+#
+# FAQ_content.tpl
+#
+
+msgid "Frequently Asked Questions"
+msgstr "Preguntas frecuentes"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Index"
+msgstr "Índice"
+
+msgid "Back to top"
+msgstr "Volver al Índice"
+
+msgid "Why another Job Site?"
+msgstr "¿Porqué otra web de Empleo?"
+
+msgid "Why develop a job site module if GNU Herds includes a %1jobsite list%2?."
+msgstr "¿Porqué desarrollar un módulo de web de Empleo si GNU Herds incluye una %1lista de web sites de empleo%2?."
+
+msgid "Because no one comply the below proposed conditions:"
+msgstr "Porque ninguna cumple las condiciones expuestas a continuación:"
+
+msgid "Be licensed with the %1Affero GPL%2 or similar, to cover use of the software over a computer network."
+msgstr "Estar licensiada con %1Affero GPL%2 o similar, para proteger el uso del software en Internet."
+
+msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users."
+msgstr "Además, la gestión de la web de empleo debe estar %1controlada por sus propios usuarios%2 via principios democráticos. Esto estará garantizado por la política de la associación GNU Herds. De esta forma, se estará seguro que la evolución de la web de empleo estará controlada y dirigida por sus usuarios."
+
+msgid "Supplying support to engage among companies and persons, it doesn't matter the which or the order, helping the raise of a diversity of business models.  That is flexibility."
+msgstr "Favorecer las relaciones contractuales entre empresas y personas, no importa en que orden, ayudando al surgimiento de una diversidad de modelos de negocio.  Esto es flexibilidad."
+
+msgid "Make it easy the contacts among persons and companies interested in Free Software business."
+msgstr "Facilitar los contactos entre personas y compañias interesadas en los negocios con Software Libre."
+
+msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
+msgstr "Teniendo un alcance global, facilitar los modelos de negocio basados en el teletrabajo. Con las tecnologías futuras la ubicación no debe ser un obstáculo para suministrar servicios de Tecnologías de la Información. De ahí el objetivo, ya alcanzado, de traducir la web site a otros lenguajes, y hacer posible que una oferta de empleo pueda ser expuesta en varios lenguajes."
+
+msgid "All this taking into account that: \"The %1aims%2 of the Association shall be to encourage the professional development of Free Software contributors.\""
+msgstr "Todo esto teniendo en cuenta que: \"Los %1objetivos%2 de la Asociación serán fomentar el desarrollo profesional de los que participan en la comunidad de Software Libre.\""
+
+msgid "How to subscribe to a job offer?"
+msgstr "¿Cómo subscribirse a una oferta de empleo?"
+
+msgid "Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4."
+msgstr "Regístrese como nueva %1Persona%4, %2Compañia%4 o %3Organización sin ánimo de lucro%4."
+
+msgid "Fill the %1Qualifications%2 form."
+msgstr "Rellene el formulario de %1Cualificaciones%2."
+
+msgid "Log in."
+msgstr "Entre."
+
+msgid "Subscribe to the offer."
+msgstr "Subscríbase a la oferta."
+
+msgid "Note that some offers could allow to subscribe only to some entity types: Persons, Companies or non-profit Organizations."
+msgstr "Nótese que algunas ofertas podrían permitir subscribirse sólo a algunos tipos de entidades: Personas, Compañias o Organizaciones sin ánimo de lucro."
+
+msgid "Who can subscribe to a job offer?"
+msgstr "¿Quién puede subscribirse a una oferta de empleo?"
+
+msgid "Persons, Companies or non-profit Organizations."
+msgstr "Las Personas, Compañias o Organizaciones sin ánimo de lucro."
+
+msgid "Who can post a job offer?"
+msgstr "¿Quién puede crear una oferta de empleo?"
+
+msgid "Any Person, Company or non-profit Organization."
+msgstr "Cualquier Persona, Compañia o Organización sin ánimo de lucro."
+
+msgid "How is the Job Site module related to the GNU Herds Association?"
+msgstr "¿Qué relación tiene el módulo de la web de Empleo con la Asociación GNU Herds?"
+
+msgid "The Job Site module is %1controlled%2 by the Association."
+msgstr "El módulo de la web de Empleo está %1controlado%2 por la Asociación."
+
+#
+# Timeline_content.tpl [DELAYED]
+#
+
+#
+# FS_Job_Offers_form.tpl
+#
+
+msgid "There are not active job offers"
+msgstr "No hay ofertas de empleo activas"
+
+msgid "Vacancy title"
+msgstr "Título de la vacante"
+
+msgid "Location"
+msgstr "Localización"
+
+msgid "Offer date"
+msgstr "Fecha de la oferta"
+
+msgid "Employer"
+msgstr "Empleador,-ora"
+
+msgid "Any"
+msgstr "Cualquiera"
+
+msgid "telework"
+msgstr "teletrabajo"
+
+#
+# View_Job_Offer_form.php
+#
+
+msgid "To be able to subscribe your application, you have to fill the Qualification form."
+msgstr "Para poder subscribir su solicitud, usted tiene que rellenar el formulario de Cualificaciones."
+
+msgid "To be able to subscribe your application, you have to log in first."
+msgstr "Para poder subscribir su solicitud, usted tiene que identificarse primero."
+
+msgid "See the"
+msgstr "Véase la"
+
+msgid "Note that this job offer is not looking for a"
+msgstr "Observe que esta oferta de empleo no está buscando una"
+
+msgid "You can not subscribe to you own offer."
+msgstr "Usted no puede subscribirse a su propia oferta."
+
+msgid "ERROR: Unexpected condition"
+msgstr "ERROR: Condición inesperada"
+
+#
+# View_Job_Offer_form.tpl
+#
+
+msgid "Your application has been subscribed to this job offer"
+msgstr "Su solicitud ha sido subscrita a esta oferta"
+
+msgid "been born in"
+msgstr "nació en"
+
+msgid "Nationality"
+msgstr "Nacionalidad"
+
+msgid "View contact information"
+msgstr "Ver información de contacto"
+
+msgid "IS LOOKING FOR"
+msgstr "ESTÁ BUSCANDO"
+
+msgid "Entity type"
+msgstr "Tipo de entidad"
+
+msgid "Persons"
+msgstr "Personas"
+
+msgid "Companies"
+msgstr "Compañias"
+
+msgid "non-profit Organizations"
+msgstr "Organizaciones sin ánimo de lucro"
+
+msgid "or"
+msgstr "o"
+
+msgid "Vacancies"
+msgstr "Vacantes"
+
+msgid "Ref."
+msgstr "Ref."
+
+msgid "Contract type"
+msgstr "Tipo de contrato"
+
+msgid "Wage rank"
+msgstr "Rango salarial"
+
+msgid "Minimum"
+msgstr "Mínimo"
+
+msgid "Optimum"
+msgstr "Óptimo"
+
+msgid "Professional experience since"
+msgstr "Experiencia profesional desde"
+
+msgid "Academic qualification"
+msgstr "Cualificación académica"
+
+msgid "Skills"
+msgstr "Habilidades"
+
+msgid "Skill"
+msgstr "Habilidad"
+
+msgid "Languages"
+msgstr "Lenguajes"
+
+msgid "Language"
+msgstr "Lenguaje"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Certifications"
+msgstr "Certificaciones"
+
+msgid "Experience with FS projects"
+msgstr "Experiencia con proyectos FS"
+
+msgid "Currently you are"
+msgstr "Actualmente usted está"
+
+msgid "RESIDENCE LOCATION"
+msgstr "UBICACIÓN DE LA RESIDENCIA"
+
+msgid "Telework"
+msgstr "Teletrabajo"
+
+msgid "any location"
+msgstr "cualquier localización"
+
+msgid "required"
+msgstr "se requiere"
+
+msgid "Subscribe to this job offer"
+msgstr "Subscribirse a esta oferta"
+
+#
+# View_Qualifications_form.tpl
+#
+
+msgid "web site"
+msgstr "web site"
+
+msgid "Landline"
+msgstr "Teléfono fijo"
+
+msgid "Mobile phone"
+msgstr "Teléfono móvil"
+
+msgid "IP phone or videophone"
+msgstr "Teléfono o vídeo teléfono IP"
+
+msgid "none"
+msgstr "ninguna"
+
+msgid "not specified"
+msgstr "no especificado"
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid "No"
+msgstr "No"
+
+#
+# View_Qualifications_form.php
+#
+
+msgid "The identifier to show has not been specified."
+msgstr "El identificador a mostrar no ha sido especificado."
+
+#
+# FS_Business_Networks_content.tpl
+#
+
+msgid "These are the networks, or ways to set up one, which we know about:"
+msgstr "Estas son las redes, o vías para crear una, que nosotros conocemos:"
+
+msgid "It is a small company based on Free Software located in Argentina (Cordoba). Menttes is looking forward to contact other Free Software Developers in Europe and US."
+msgstr "Es una pequeña empresa que trabaja con Software Libre, ubicada en Argentina (Córdoba). Menttes desea contactar con otros desarrolladores de Software Libre en Europa y Estados Unidos."
+
+msgid "Its"
+msgstr "Su"
+
+msgid "draft"
+msgstr "borrador"
+
+msgid "December"
+msgstr "Diciembre"
+
+msgid "Its mailing list:"
+msgstr "Su lista de correo:"
+
+msgid "Flexible Business Networks"
+msgstr "Redes de Negocios Flexibles"
+
+msgid "If your company is not able to undertake fully a project, instead of losing the contract, you %1could choose to work with %2outsourcers%3. You can cut costs and foster competition between vendors, while taking advantage of vendor specialization and technical expertise%4."
+msgstr "Si su empresa no es capaz de asumir completamente un proyecto, en lugar de perder el contrato, usted %1podría decidir trabajar con %2subcontratas%3. Puede recortar costes y fomentar la competencia entre vendedores, a la vez que aprovecha la especialización y experiencia de la subcontrata%4."
+
+msgid "Cooperatives & non-profit Franchises"
+msgstr "Cooperativas y Franquicias sin ánimo de lucro"
+
+msgid "Following the way of successful organizations as %1Best Western%2 or %3Mondragon Cooperative Corporation%2. You can read comments at the %4 email list."
+msgstr "Siguiendo la huella de organizaciones de éxito como %1Best Western%2 o %3Mondragón Cooperative Corporation%2. Véanse los comentarios en la lista de correo %4."
+
+msgid "Send an email to"
+msgstr "Envíe un email a"
+
+msgid "to update the above list"
+msgstr "para actualizar la lista anterior"
+
+#
+# International_Trade_Law_content.tpl
+#
+
+msgid "Reference"
+msgstr "Referencia"
+
+msgid "References"
+msgstr "Referencias"
+
+#
+# FS_Businesses_SIG_content.tpl
+#
+
+msgid "Special Interest Group: FS Businesses"
+msgstr "Grupo de Interés Especial: Negocios FS"
+
+msgid "You can see the %1FS Business Networks%2 section."
+msgstr "Usted puede ver la sección %1Redes de Negocios FS%2."
+
+msgid "Email lists where we know FS Businesses are discussed:"
+msgstr "Listas de correo donde sabemos que se habla de Negocios FS:"
+
+
+#
+# Person form: Person_form.tpl, Person_form.php
+#
+
+# Person_form.tpl
+
+msgid "NEW PERSON"
+msgstr "NUEVA PERSONA"
+
+msgid "If you are already registered, first, login and then get into here again to update your data."
+msgstr "Si usted ya está registrado, 'entre' primero y vuelva a esta sección para actualizar sus datos."
+
+msgid "Read the %1%2%3Membership%4 Charter section."
+msgstr "Lea el apartado %1%2%3Socios%4 de los Estatutos."
+
+msgid "UPDATE PERSON DATA"
+msgstr "ACTUALIZAR DATOS DE PERSONA"
+
+msgid "The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional."
+msgstr "Los campos marcados con un asterisco %1*%2 deben ser rellenados para completar la operación. El resto de campos son opcionales."
+
+msgid "ACCOUNT IDENTIFICATION"
+msgstr "IDENTIFICACIÓN DE LA CUENTA"
+
+msgid "Retype Password"
+msgstr "Repetir Contraseña"
+
+msgid "NAME"
+msgstr "NOMBRE"
+
+msgid "First name"
+msgstr "Nombre"
+
+msgid "Last name"
+msgstr "Primer apellido"
+
+msgid "Middle name"
+msgstr "Segundo apellido"
+
+msgid "ADDRESS"
+msgstr "DIRECCIÓN"
+
+msgid "Street"
+msgstr "Calle"
+
+msgid "Suite"
+msgstr "Piso"
+
+msgid "City"
+msgstr "Ciudad / Pueblo"
+
+msgid "State / Province"
+msgstr "Estado / Provincia"
+
+msgid "Postal code"
+msgstr "Código postal"
+
+msgid "Country"
+msgstr "País"
+
+msgid "VOTING"
+msgstr "DERECHO DE VOTO"
+
+msgid "To qualify for voting membership  <br>one must show a contribution  <br>to the Free Software movement "
+msgstr "Para obtener el derecho de voto  <br>se debe mostrar una contribución  <br>al movimiento del Software Libre "
+
+msgid "Your Public Key"
+msgstr "Su clave pública"
+
+msgid "SURVEY"
+msgstr "ENCUESTA"
+
+msgid "What is your motivation  <br>to join <i>GNU Herds</i>? "
+msgstr "¿Porqué desea inscribirse  <br>en <i>GNU Herds</i>? "
+
+msgid "Media in which you have  <br>heard about <i>GNU Herds</i> "
+msgstr "¿Cómo conoció  <br><i>GNU Herds</i>? "
+
+msgid "Reset form"
+msgstr "Restaurar el formulario"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Delete me from this Association"
+msgstr "Deme de baja de esta Asociación"
+
+# Person_form.php
+
+msgid "You can not access this section been logged as"
+msgstr "Usted no puede acceder a esta ficha habiendo entrado como"
+
+msgid "Back"
+msgstr "Atras"
+
+msgid "Your information has been deleted from the data base. You have been logout automatically."
+msgstr "Su información ha sido eliminada de la base de datos. Su salida ha sido procesada automáticamente."
+
+msgid "The operation has been cancelled."
+msgstr "La operación ha sido cancelada."
+
+msgid "Updated successfully"
+msgstr "Actualizado satisfactoriamente"
+
+msgid "Success. You have been logged authomatically. You can realize others operations in the left menu."
+msgstr "Correcto. Su entrada se ha realizado automáticamente. Puede seleccionar otras operaciones en el menu de la izquierda."
+
+msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
+msgstr "Su contribución al Software Libre será evaluada. Se le enviará el resultado via correo electrónico, habilitando su capacidad para votar en el caso de una evaluación positiva."
+
+msgid "There is already a member with this email in the data base. If that email is yours, get the password via the \"Lost Password\" form, else choose a different email."
+msgstr "Ya hay un afiliado con este correo electrónico en la base de datos. Si ese email es suyo, obtenga la contraseña vía el formulario \"Olvidó su contraseña\", sino escoja un email diferente."
+
+msgid "The Password fields differ:"
+msgstr "Los campos Contraseña son diferentes:"
+
+msgid "Please, write it again."
+msgstr "Por favor, escríbalos de nuevo."
+
+msgid "Some required fields are empty!. You have to fill them:"
+msgstr "¡Algunos campos requeridos están vacíos!. Usted tiene que rellenarlos:"
+
+msgid "The Email field is not an email address."
+msgstr "El campo Email no es una dirección de correo."
+
+msgid "If you want to qualify to vote, you have to supply both the contributions and your public key."
+msgstr "Si usted quiere obtener el derecho de voto, tiene que rellenar tanto el campo contribución como su clave pública. "
+
+#
+# Company form: Company_form.tpl, Company_form.php
+#
+
+# Company_form.tpl
+
+msgid "NEW COMPANY"
+msgstr "NUEVA EMPRESA"
+
+msgid "UPDATE COMPANY DATA"
+msgstr "ACTUALIZAR DATOS DE EMPRESA"
+
+msgid "COMPANY"
+msgstr "EMPRESA"
+
+msgid "Company name"
+msgstr "Nombre de la empresa"
+
+msgid "Company website"
+msgstr "Website de la empresa"
+
+msgid "to be linked in your Job Offers. Full URL, ie."
+msgstr "a ser incluida en sus ofertas de empleo. Ej."
+
+msgid "Delete me"
+msgstr "Deme de baja"
+
+# Company_form.php
+
+# msgid ""
+# msgstr ""
+
+#
+# non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
+#
+
+# non-profit_Organization_form.tpl
+
+msgid "NEW NONPROFIT ORGANIZATION"
+msgstr "NUEVA ORGANIZACIÓN SIN ÁNIMO DE LUCRO"
+
+msgid "UPDATE NONPROFIT ORGANIZATION"
+msgstr "ACTUALIZAR DATOS DE ORGANIZACIÓN SIN ÁNIMO DE LUCRO"
+
+msgid "NONPROFIT"
+msgstr "ORGANIZACIÓN"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Web site"
+msgstr "Web site"
+
+# non-profit_Organization_form.php
+
+# msgid ""
+# msgstr ""
+
+#
+# Qualifications form: Qualifications_form.tpl, Qualifications_form.php
+#
+
+# Qualifications_form.tpl
+
+msgid "NEW QUALIFICATIONS"
+msgstr "NUEVA FICHA DE CAPACIDADES"
+
+msgid "UPDATE QUALIFICATIONS DATA"
+msgstr "ACTUALIZAR DATOS DE CAPACIDADES"
+
+msgid "To demand any form reorganization: the addition to the lists, update, deletion of a profile, skill, etc., you can send an email to"
+msgstr "Para solicitar cualquier reorganización del formulario: la adición a las listas, actualización, eliminación de un perfil, habilidad, etc., usted puede enviar un correo electrónico a"
+
+msgid "PERSONAL"
+msgstr "PERSONAL"
+
+msgid "Year of birth"
+msgstr "Año de nacimiento"
+
+msgid "TECHNICAL"
+msgstr "TÉCNICO"
+
+msgid "Years of experience"
+msgstr "Años de experiencia"
+
+msgid "Profiles"
+msgstr "Perfiles"
+
+msgid "Product profiles"
+msgstr "Perfiles de producto"
+
+msgid "Press Ctrl key to choose more than one Profile"
+msgstr "Presione la tecla Ctrl para seleccionar mas de un Perfil"
+
+msgid "Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3."
+msgstr "Escoja cualquier habilidad en uno de los combo-boxes y entonces seleccione los niveles de conocimiento y experiencia.%1 La habilidad y niveles aparecerán en la caja de la derecha. Repita esta operación con cada habilidad que conozca.%1 Si usted desea borrar alguna, selecionela en la caja de la derecha y pique %2Borrar%3."
+
+msgid "Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3."
+msgstr "Escoja cualquier idioma en el primer combo-box y entonces seleccione los niveles hablado y escrito.%1 El idioma y niveles aparecerán en la caja de la derecha. Repita esta operación con cada idioma que conozca.%1 Si usted desea borrar alguno, selecionelo en la caja de la derecha y pique %2Borrar%3."
+
+msgid "URIs which prove your contritution to FS projects. For example: CVS web reference, email with patch or advices, etc."
+msgstr "URIs que prueban su contribución a proyectos FS. Por ejemplo: referencia a CVS web, email con parche o consejos, etc."
+
+msgid "Professional profiles"
+msgstr "Perfiles profesionales"
+
+msgid "Field profiles"
+msgstr "Perfiles de campo"
+
+msgid "Request your certifications"
+msgstr "Solicite sus certificaciones"
+
+msgid "Project"
+msgstr "Proyecto"
+
+msgid "Contributions to FS projects"
+msgstr "Contribuciones a proyectos FS"
+
+msgid "The Project and URI fields are required. Please, try again."
+msgstr "Los campos Proyecto y URI son requeridos. Por favor, inténtelo de nuevo."
+
+msgid "Knowledge level"
+msgstr "Nivel de conocimientos"
+
+msgid "Experience level"
+msgstr "Nivel de experiencia"
+
+msgid "Spoken level"
+msgstr "Nivel hablado"
+
+msgid "Written level"
+msgstr "Nivel escrito"
+
+msgid "Add"
+msgstr "Añadir"
+
+msgid "Delete"
+msgstr "Borrar"
+
+msgid "CONTRACT"
+msgstr "CONTRATO"
+
+msgid "Desired contract type"
+msgstr "Tipo de contrato deseado"
+
+msgid "Desired wage rank"
+msgstr "Rango salarial deseado"
+
+msgid "The format has to be: Minimum-Optimum. For example:"
+msgstr "El formato tiene que ser: Mínimo-Óptimo. Por ejemplo:"
+
+msgid "Currency"
+msgstr "Moneda"
+
+msgid "Current employability"
+msgstr "Estado actual"
+
+msgid "LOCATION"
+msgstr "UBICACIÓN"
+
+msgid "Available to travel"
+msgstr "Dispuesto a viajar"
+
+msgid "Available to change residence"
+msgstr "Dispuesto a cambiar de residencia"
+
+msgid "Check qualifications view"
+msgstr "Comprobar la vista de cualificaciones"
+
+# msgid ""
+# msgstr ""
+
+# Qualifications_form.php
+
+msgid "To access this section you have to login first."
+msgstr "Para acceder a esta sección usted debe 'entrar'."
+
+msgid "Delete qualifications"
+msgstr "Borrar cualificaciones"
+
+msgid "The qualifications information has been deleted from the data base."
+msgstr "La ficha de cualificaciones ha sido borrada de la base de datos."
+
+msgid "Success. Your qualifications have been saved."
+msgstr "Correcto. Sus cualificaciones han sido guardadas."
+
+#
+# JobOffer form: Job_Offer_form.tpl, Job_Offer_form.php
+#
+
+# Job_Offer_form.tpl
+
+msgid "UPDATE JOB OFFER"
+msgstr "ACTUALIZAR OFERTA DE EMPLEO"
+
+msgid "NEW JOB OFFER"
+msgstr "NUEVA OFERTA DE EMPLEO"
+
+msgid "GENERAL"
+msgstr "GENERAL"
+
+msgid "Filled automatically"
+msgstr "Rellenado automáticamente"
+
+msgid "The offer is closed"
+msgstr "La oferta ha finalizado"
+
+msgid "Your offer reference"
+msgstr "Su referencia de la oferta"
+
+msgid "Expiration date"
+msgstr "Fecha en que expira"
+
+msgid "The format could be for example"
+msgstr "El formato podría ser por ejemplo"
+
+msgid "Allow applications from"
+msgstr "Permitir candidaturas de"
+
+msgid "Required languages"
+msgstr "Lenguajes requeridos"
+
+msgid "Check job offer view"
+msgstr "Comprobar la vista de la oferta de trabajo"
+
+# Job_Offer_form.php
+
+msgid "In the RESIDENCE LOCATION subsection, you have to fill an address (at least the Country), or activate the \"Telework\" checkbox."
+msgstr "En la subsección de UBICACIÓN DE LA RESIDENCIA, usted tiene que indicar una dirección (al menos el País), o activar la marca \"Teletrabajo\"."
+
+msgid "Incorrect format."
+msgstr "Formato incorrecto."
+
+msgid "Success. Your job offer have been saved."
+msgstr "Correcto. Su oferta de empleo han sido guardada."
+
+#
+# Manage_Job_Offer_Applications_form.tpl
+#
+
+msgid "Manage the Job Offer applications"
+msgstr "Gestionar candidaturas de Ofertas de Empleo"
+
+msgid "Offer title"
+msgstr "Título de la oferta"
+
+msgid "Applicant"
+msgstr "Candidato,-a"
+
+#
+# Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_form.php
+#
+
+# Manage_Job_Offers_form.tpl
+
+msgid "Manage Job Offers"
+msgstr "Gestionar Ofertas de empleo"
+
+msgid "You do not have any defined job offer."
+msgstr "Usted no tiene ninguna oferta de empleo definida."
+
+msgid "Closed"
+msgstr "Cerrada"
+
+msgid "Delete selected offers"
+msgstr "Borrar las ofertas seleccionadas"
+
+msgid "New offer"
+msgstr "Nueva oferta"
+
+# Manage_Job_Offers_form.php
+
+msgid "The selected job offers has been deleted from the data base."
+msgstr "Las ofertas de empleo seleccionadas han sido eliminadas de la base de datos."
+
+msgid "Offers to delete have not been selected. Try again."
+msgstr "Usted no ha seleccionado ninguna oferta para borrar. Inténtelo de nuevo."
+
+#
+# View_Job_Applications_State_form.tpl
+#
+
+msgid "Job Applications"
+msgstr "Solicitudes de empleo"
+
+msgid "You do not have your application subscribed to any open job offer."
+msgstr "Usted no tiene su candidatura subscrita a ninguna oferta de empleo abierta."
+
+msgid "Subscription state"
+msgstr "Estado"
+
+#
+# e-Voting_SIG_content.tpl
+#
+
+msgid "Special Interest Group"
+msgstr "Grupo con interes especial en"
+
+msgid "Initially, GNU Herds' members can vote showing their hands, sending an email."
+msgstr "Inicialmente, los afiliados a GNU Herds pueden votar a mano alzada, enviando un correo electrónico."
+
+msgid "The GNU Herds' official voting mechanism is not intented to:"
+msgstr "El mecanismo de votación oficial de GNU Herds no pretende:"
+
+msgid "be used as a country voting system."
+msgstr "ser usado como sistema de votación de un país."
+
+msgid "be used as the FS community voting system. The FS community does not need a voting system. As Barry Fitzgerald exposes:"
+msgstr "ser usado como sistema de votación para la comunidad de Software Libre. Dicha comunidad no necesita un sistema de votación. Como Barry Fitzgerald %1expuso%2:"
+
+msgid "The GNU Herds' official voting mechanism is only intented to:"
+msgstr "El sistema de votación de GNU Herds solo pretende:"
+
+msgid "be used as voting system to this Association. The voting mechanism must be used as a tool to keep GNU Herds moving in the right direction, helping members guide the board members. It can also be used to get opinions about ideas, etc.: binding vote, opinion vote."
+msgstr "ser usado como sistema de votación para esta Asociación. El mecanismo de votación debe ser usado como una herramienta para mantener GNU Herds en la dirección correcta, ayudando a los afiliados a guiar al Comité. También puede ser usado para obtener opiniones acerca de ideas, etc.: voto vinculante, voto de opión."
+
+msgid "See references to documentation at bottom of this page."
+msgstr "Véase la documentación de referencia al pie de esta página."
+
+msgid "Options"
+msgstr "Opciones"
+
+msgid "There are several projects which try to solve the e-Voting trouble. The goal of each project can be different. Some of them has modified its aims or are stalled:"
+msgstr "Hay varios proyectos que intentan resolver el problema del voto electrónico. El objetivo de cada proyecto puede ser diferente. Algunos de ellos han modificado sus pretenciones o no están activos:"
+
+msgid "The development has been discontinued due to"
+msgstr "El desarrollo ha sido suspendido debido a que"
+
+msgid "It seems to support the %1Condorcet method%2 used by the Debian voting system, and even \"a mix of secret and public ballots\"."
+msgstr "Parece que soporta el %1método Condorcet%2 usado por el sistema de votación de Debian, y incluso \"una mezcla de papeletas secretas y publicas\"."
+
+msgid "It works over a centralised server. It is done by email to an address processed by scripts run by the Project Secretary. Therefore, it does not allow fully anonymous voting. Read at"
+msgstr "Utiliza un servidor central. Se envían emails a una dirección procesada con scripts por la Secretaria del proyecto. Por tanto, no permite el anonimato. Véase en "
+
+msgid "This is the %1debian-vote%2 email list. As an example, you can read the %3Debian Project Leader Elections 2003%4 report."
+msgstr "Esta es la lista de correo %1debian-vote%2. Como ejemplo, puede verse el informe %3Debian Project Leader Elections 2003%4."
+
+msgid "Stalled since March 2002."
+msgstr "Congelado desde marzo de 2002."
+
+msgid "We have added the below links from the %1\"Bringing free software to voting booths\"%2 %3LWN%4 article:"
+msgstr "Hemos tomado los siguientes links del artículo de %3LWN%4 titulado %1\"Bringing free software to voting booths\"%2:"
+
+msgid "It is dormant."
+msgstr "Inactivo."
+
+msgid "It is interested in exploring alternative voting methods."
+msgstr "Enfocado a la exploración de métodos de votación alternativos."
+
+msgid "It is too young to have released any useful code."
+msgstr "Es demasiado joven. Su código fuente no es útil."
+
+msgid "It is based on %1Debian GNU/Linux%2. It has already been used in at least one election for the Legislative Assembly in the Australian Capitol Territory in October 2001 and is approved for use in future elections."
+msgstr "Está basado en %1Debian GNU/Linux%2. Ha sido ya usado en al menos unas elecciones para el Legislative Assembly en el Australian Capitol Territory en octubre de 2001, y está aprovado para su uso en futuras elecciones."
+
+msgid "It is a already implemented, working solution for electronic voting."
+msgstr "Es una solución para voto electrónico que ya está desarrollada y funciona."
+
+msgid "References to documentation"
+msgstr "Documentación de referencia"
+
+msgid "A 16 page nontechnical paper, on 16 requirements that a voting system \"must\" meet. Read it to know a bit more about efforts underway at coming up with secure voting (and what may constitute a definition of secure voting). Consider in particular the requirement that anonimity be maintained."
+msgstr "Un artículo no técnico de 16 páginas, sobre los 16 requisitos que un sistema de voto \"debe\" cumplir. Léase para conocer un poco mas acerca del proceso necesario para obtener un sistema de voto seguro, y lo que puede constituir la definición del mismo. Considerese en particular el requerimiento de mantener el anonimato."
+
+msgid "We want remark:"
+msgstr "Destacamos:"
+
+msgid "Note that all those systems are country voting oriented."
+msgstr "Nótese que todos esos sistemas están orientados a elecciones de país."
+
+#
+# Data Base LO_Countries table
+#
+# Tip: Translated searching  wikipedia.org
+#
+
+msgid "Afghanistan"
+msgstr "Afganistán"
+
+msgid "Albania"
+msgstr "Albania"
+
+msgid "Algeria"
+msgstr "Argelia"
+
+msgid "American Samoa"
+msgstr "Samoa Americana"
+
+msgid "Andorra"
+msgstr "Andorra"
+
+msgid "Angola"
+msgstr "Angola"
+
+msgid "Anguilla"
+msgstr "Anguilla"
+
+msgid "Antarctica"
+msgstr "Antártida"
+
+msgid "Antigua and Barbuda"
+msgstr "Antigua y Barbuda"
+
+msgid "Argentina"
+msgstr "Argentina"
+
+msgid "Armenia"
+msgstr "Armenia"
+
+msgid "Aruba"
+msgstr "Aruba"
+
+msgid "Australia"
+msgstr "Australia"
+
+msgid "Austria"
+msgstr "Austria"
+
+msgid "Azerbaijan"
+msgstr "Azerbaijan"
+
+msgid "Bahamas"
+msgstr "Bahamas"
+
+msgid "Bahrain"
+msgstr "Bahrain"
+
+msgid "Bangladesh"
+msgstr "Bangladesh"
+
+msgid "Barbados"
+msgstr "Barbados"
+
+msgid "Belarus"
+msgstr "Belarus"
+
+msgid "Belgium"
+msgstr "Bélgica"
+
+msgid "Belize"
+msgstr "Belize"
+
+msgid "Benin"
+msgstr "Benin"
+
+msgid "Bermuda"
+msgstr "Bermuda"
+
+msgid "Bhutan"
+msgstr "Bhutan"
+
+msgid "Bolivia"
+msgstr "Bolivia"
+
+msgid "Bosnia and Herzegovina"
+msgstr "Bosnia Herzegovina"
+
+msgid "Botswana"
+msgstr "Botswana"
+
+msgid "Bouvet Island"
+msgstr "Isla Bouvet"
+
+msgid "Brazil"
+msgstr "Brasil"
+
+msgid "British Indian Ocean Territory"
+msgstr "Territorio del océano Indio Británico"
+
+msgid "British Virgin Islands"
+msgstr "Islas virgenes Británicas"
+
+msgid "Brunei Darussalam"
+msgstr "Brunei Darussalam"
+
+msgid "Bulgaria"
+msgstr "Bulgaria"
+
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+msgid "Burundi"
+msgstr "Burundi"
+
+msgid "Cambodia"
+msgstr "Cambodia"
+
+msgid "Cameroon"
+msgstr "Camerún"
+
+msgid "Canada"
+msgstr "Canadá"
+
+msgid "Cape Verde"
+msgstr "Cabo Verde"
+
+msgid "Cayman Islands"
+msgstr "Islas Caimán"
+
+msgid "Central African Republic"
+msgstr "República Centroafricana"
+
+msgid "Chad"
+msgstr "Chad"
+
+msgid "Chile"
+msgstr "Chile"
+
+msgid "China"
+msgstr "China"
+
+msgid "Christmas Island"
+msgstr "Isla Navidad"
+
+msgid "Cocos (Keeling) Islands"
+msgstr "Islas Cocos"
+
+msgid "Colombia"
+msgstr "Colombia"
+
+msgid "Comoros"
+msgstr "Comoros"
+
+msgid "Congo, Democratic Republic of"
+msgstr "El Congo, República Democrática de"
+
+msgid "Congo, People's Republic of"
+msgstr "El Congo, Gentes de la República de"
+
+msgid "Cook Islands"
+msgstr "Islas Cook"
+
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+msgid "Cote D'Ivoire"
+msgstr "Costa de Marfil"
+
+msgid "Cuba"
+msgstr "Cuba"
+
+msgid "Cyprus"
+msgstr "Chipre"
+
+msgid "Czech Republic"
+msgstr "República Checa"
+
+msgid "Denmark"
+msgstr "Dinamarca"
+
+msgid "Djibouti"
+msgstr "Djibouti"
+
+msgid "Dominica"
+msgstr "Dominica"
+
+msgid "Dominican Republic"
+msgstr "República Dominicana"
+
+msgid "Ecuador"
+msgstr "Ecuador"
+
+msgid "Egypt"
+msgstr "Egipto"
+
+msgid "El Salvador"
+msgstr "El Salvador"
+
+msgid "Equatorial Guinea"
+msgstr "Guinea Ecuatorial"
+
+msgid "Eritrea"
+msgstr "Eritrea"
+
+msgid "Estonia"
+msgstr "Estonia"
+
+msgid "Ethiopia"
+msgstr "Etiopía"
+
+msgid "Faeroe Islands"
+msgstr "Islas Faeroe"
+
+msgid "Falkland Islands (Malvinas)"
+msgstr "Islas Malvinas"
+
+msgid "Fiji Islands"
+msgstr "Islas Fiji"
+
+msgid "Finland"
+msgstr "Finlandia"
+
+msgid "France"
+msgstr "Francia"
+
+msgid "French Guiana"
+msgstr "Guayana Francesa"
+
+msgid "French Polynesia"
+msgstr "Polinesia Francesa"
+
+msgid "French Southern Territories"
+msgstr "Territorios Australes Franceses"
+
+msgid "Gabon"
+msgstr "Gabon"
+
+msgid "Gambia"
+msgstr "Gambia"
+
+msgid "Georgia"
+msgstr "Georgia"
+
+msgid "Germany"
+msgstr "Alemania"
+
+msgid "Ghana"
+msgstr "Ghana"
+
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+msgid "Greece"
+msgstr "Grecia"
+
+msgid "Greenland"
+msgstr "Groenlandia"
+
+msgid "Grenada"
+msgstr "Granada"
+
+msgid "Guadaloupe"
+msgstr "Guadalupe"
+
+msgid "Guam"
+msgstr "Guaján"
+
+msgid "Guatemala"
+msgstr "Guatemala"
+
+msgid "Guinea"
+msgstr "Guinea"
+
+msgid "Guinea-Bissau"
+msgstr "Guinea-Bissáu"
+
+msgid "Guyana"
+msgstr "Guyana"
+
+msgid "Haiti"
+msgstr "Haití"
+
+msgid "Heard and McDonald Islands"
+msgstr "Islas Heard y McDonald"
+
+msgid "Holy See (Vatican City State)"
+msgstr "Estado de la Ciudad del Vaticano"
+
+msgid "Honduras"
+msgstr "Honduras"
+
+msgid "Hong Kong"
+msgstr "Hong Kong"
+
+msgid "Hrvatska (Croatia)"
+msgstr "Croacia"
+
+msgid "Hungary"
+msgstr "Hungría"
+
+msgid "Iceland"
+msgstr "Islandia"
+
+msgid "India"
+msgstr "India"
+
+msgid "Indonesia"
+msgstr "Indonesia"
+
+msgid "Iran"
+msgstr "Irán"
+
+msgid "Iraq"
+msgstr "Irak"
+
+msgid "Ireland"
+msgstr "Irlanda"
+
+msgid "Israel"
+msgstr "Israel"
+
+msgid "Italy"
+msgstr "Italia"
+
+msgid "Jamaica"
+msgstr "Jamaica"
+
+msgid "Japan"
+msgstr "Japón"
+
+msgid "Jordan"
+msgstr "Jordania"
+
+msgid "Kazakhstan"
+msgstr "Kazajistán"
+
+msgid "Kenya"
+msgstr "Kenia"
+
+msgid "Kiribati"
+msgstr "Kiribati"
+
+msgid "Korea Democratic People's Republic of"
+msgstr "Corea, República Democrática"
+
+msgid "Korea, Republic of"
+msgstr "Corea, República"
+
+msgid "Kuwait"
+msgstr "Kuwait"
+
+msgid "Kyrgyz Republic"
+msgstr "Kirguiz"
+
+msgid "Lao"
+msgstr "Lao"
+
+msgid "Latvia"
+msgstr "Letonia"
+
+msgid "Lebanon"
+msgstr "Líbano"
+
+msgid "Lesotho"
+msgstr "Lesoto"
+
+msgid "Liberia"
+msgstr "Liberia"
+
+msgid "Libyan Arab Jamahiriya"
+msgstr "Libia"
+
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+msgid "Lithuania"
+msgstr "Lituania"
+
+msgid "Luxembourg"
+msgstr "Luxemburgo"
+
+msgid "Macao"
+msgstr "Macao"
+
+msgid "Macedonia"
+msgstr "Macedonia"
+
+msgid "Madagascar"
+msgstr "Madagascar"
+
+msgid "Malawi"
+msgstr "Malawi"
+
+msgid "Malaysia"
+msgstr "Malasia"
+
+msgid "Maldives"
+msgstr "Maldivas"
+
+msgid "Mali"
+msgstr "Malí"
+
+msgid "Malta"
+msgstr "Malta"
+
+msgid "Marshall Islands"
+msgstr "Islas Marshall"
+
+msgid "Martinique"
+msgstr "Martinica"
+
+msgid "Mauritania"
+msgstr "Mauritania"
+
+msgid "Mauritius"
+msgstr "Mauricio"
+
+msgid "Mayotte"
+msgstr "Mayotte"
+
+msgid "Mexico"
+msgstr "México"
+
+msgid "Micronesia"
+msgstr "Micronesia"
+
+msgid "Moldova"
+msgstr "Moldova"
+
+msgid "Monaco"
+msgstr "Mónaco"
+
+msgid "Mongolia"
+msgstr "Mongolia"
+
+msgid "Montserrat"
+msgstr "Montserrat"
+
+msgid "Morocco"
+msgstr "Marruecos"
+
+msgid "Mozambique"
+msgstr "Mozambique"
+
+msgid "Myanmar"
+msgstr "Myanmar"
+
+msgid "Namibia"
+msgstr "Namibia"
+
+msgid "Nauru"
+msgstr "Nauru"
+
+msgid "Nepal"
+msgstr "Nepal"
+
+msgid "Netherlands Antilles"
+msgstr "Antillas Neerlandesas"
+
+msgid "Netherlands, Kingdom of the"
+msgstr "Países Bajos"
+
+msgid "New Caledonia"
+msgstr "Nueva Caledonia"
+
+msgid "New Zealand"
+msgstr "Nueva Zelanda"
+
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+msgid "Niger"
+msgstr "Níger"
+
+msgid "Nigeria"
+msgstr "Nigeria"
+
+msgid "Niue"
+msgstr "Niue"
+
+msgid "Norfolk Island"
+msgstr "Isla de Norfolk"
+
+msgid "Northern Mariana Islands"
+msgstr "Islas Marianas del Norte"
+
+msgid "Norway"
+msgstr "Noruega"
+
+msgid "Oman"
+msgstr "Omán"
+
+msgid "Pakistan"
+msgstr "Pakistán"
+
+msgid "Palau"
+msgstr "Palau"
+
+msgid "Palestinian Territory"
+msgstr "Territorio Palestino"
+
+msgid "Panama"
+msgstr "Panamá"
+
+msgid "Papua New Guinea"
+msgstr "Papúa Nueva Guinea"
+
+msgid "Paraguay"
+msgstr "Paraguay"
+
+msgid "Peru"
+msgstr "Perú"
+
+msgid "Philippines"
+msgstr "Filipinas"
+
+msgid "Pitcairn Island"
+msgstr "Islas Pitcairn"
+
+msgid "Poland"
+msgstr "Polonia"
+
+msgid "Portugal"
+msgstr "Portugal"
+
+msgid "Puerto Rico"
+msgstr "Puerto Rico"
+
+msgid "Qatar"
+msgstr "Qatar"
+
+msgid "Reunion"
+msgstr "Reunión"
+
+msgid "Romania"
+msgstr "Rumania"
+
+msgid "Russian Federation"
+msgstr "Rusia"
+
+msgid "Rwanda"
+msgstr "Ruanda"
+
+msgid "St. Helena"
+msgstr "Santa Helena"
+
+msgid "St. Kitts and Nevis"
+msgstr "Saint Kitts y Nevis"
+
+msgid "St. Lucia"
+msgstr "Santa Lucia"
+
+msgid "St. Pierre and Miquelon"
+msgstr "San Pedro y Miquelón"
+
+msgid "St. Vincent and the Grenadines"
+msgstr "San Vicente y las Granadinas"
+
+msgid "Samoa"
+msgstr "Samoa"
+
+msgid "San Marino"
+msgstr "San Marino"
+
+msgid "Sao Tome and Principe"
+msgstr "Santo Tomé y Príncipe"
+
+msgid "Saudi Arabia"
+msgstr "Arabia Saudí"
+
+msgid "Senegal"
+msgstr "Senegal"
+
+msgid "Serbia and Montenegro"
+msgstr "Serbia y Montenegro"
+
+msgid "Seychelles"
+msgstr "Seychelles"
+
+msgid "Sierra Leone"
+msgstr "Sierra Leona"
+
+msgid "Singapore"
+msgstr "Singapur"
+
+msgid "Slovakia"
+msgstr "Eslovaquia"
+
+msgid "Slovenia"
+msgstr "Eslovenia"
+
+msgid "Solomon Islands"
+msgstr "Islas Salomón"
+
+msgid "Somalia"
+msgstr "Somalia"
+
+msgid "South Africa"
+msgstr "Sudáfrica"
+
+msgid "South Georgia and the South Sandwich Islands"
+msgstr "Islas Georgias del Sur y Sandwich del Sur"
+
+msgid "Spain"
+msgstr "España"
+
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+msgid "Sudan"
+msgstr "Sudán"
+
+msgid "Suriname"
+msgstr "Surinam"
+
+msgid "Svalbard & Jan Mayen Islands"
+msgstr "Svalbard y Jan Mayen"
+
+msgid "Swaziland"
+msgstr "Swazilandia"
+
+msgid "Sweden"
+msgstr "Suecia"
+
+msgid "Switzerland"
+msgstr "Suiza"
+
+msgid "Syrian Arab Republic"
+msgstr "Siria"
+
+msgid "Taiwan"
+msgstr "Taiwán"
+
+msgid "Tajikistan"
+msgstr "Tayikistán"
+
+msgid "Tanzania"
+msgstr "Tanzania"
+
+msgid "Thailand"
+msgstr "Tailandia"
+
+msgid "Timor-Leste"
+msgstr "Timor Oriental"
+
+msgid "Togo"
+msgstr "Togo"
+
+msgid "Tokelau"
+msgstr "Tokelau"
+
+msgid "Tonga"
+msgstr "Tonga"
+
+msgid "Trinidad and Tobago"
+msgstr "Trinidad y Tobago"
+
+msgid "Tunisia"
+msgstr "Túnez"
+
+msgid "Turkey"
+msgstr "Turquía"
+
+msgid "Turkmenistan"
+msgstr "Turkmenistán"
+
+msgid "Turks and Caicos Islands"
+msgstr "Islas Turcas y Caicos"
+
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+msgid "US Virgin Islands"
+msgstr "Islas Vírgenes de los Estados Unidos"
+
+msgid "Uganda"
+msgstr "Uganda"
+
+msgid "Ukraine"
+msgstr "Ucrania"
+
+msgid "United Arab Emirates"
+msgstr "Emiratos Árabes Unidos"
+
+msgid "United Kingdom of Great Britain & N. Ireland"
+msgstr "Gran Bretaña"
+
+msgid "United States Minor Outlying Islands"
+msgstr "Islas Ultramarinas de Estados Unidos"
+
+msgid "United States of America"
+msgstr "Estados Unidos de América"
+
+msgid "Uruguay"
+msgstr "Uruguay"
+
+msgid "Uzbekistan"
+msgstr "Uzbekistán"
+
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+msgid "Venezuela"
+msgstr "Venezuela"
+
+msgid "Viet Nam"
+msgstr "Vietnam"
+
+msgid "Wallis and Futuna Islands"
+msgstr "Islas de Wallis y Futuna"
+
+msgid "Western Sahara"
+msgstr "Sahara Occidental"
+
+msgid "Yemen"
+msgstr "Yemen"
+
+msgid "Zambia"
+msgstr "Zambia"
+
+msgid "Zimbabwe"
+msgstr "Zimbabwe"
+
+#
+# Data Base LL_Languages table
+#
+# Tip: Translated searching  wikipedia.org
+#
+
+msgid "Afar"
+msgstr "Afar"
+
+msgid "Abkhazian"
+msgstr "Abjaso"
+
+msgid "Afrikaans"
+msgstr "Afrikáans"
+
+msgid "Amharic"
+msgstr "Amhárico"
+
+msgid "Arabic"
+msgstr "Árabe"
+
+msgid "Assamese"
+msgstr "Asamés"
+
+msgid "Aymara"
+msgstr "Aymara"
+
+msgid "Azerbaijani"
+msgstr "Azerí"
+
+msgid "Bashkir"
+msgstr "Baskir"
+
+msgid "Byelorussian"
+msgstr "Bielorruso"
+
+msgid "Bulgarian"
+msgstr "Búlgaro"
+
+msgid "Bihari"
+msgstr "Bihari"
+
+msgid "Bislama"
+msgstr "Bislama"
+
+msgid "Bengali"
+msgstr "Bengalí"
+
+msgid "Tibetan"
+msgstr "Tibetano"
+
+msgid "Breton"
+msgstr "Bretón"
+
+msgid "Catalan"
+msgstr "Catalán"
+
+msgid "Corsican"
+msgstr "Corso"
+
+msgid "Czech"
+msgstr "Checo"
+
+msgid "Welsh"
+msgstr "Galés"
+
+msgid "Danish"
+msgstr "Danés"
+
+msgid "German"
+msgstr "Alemán"
+
+msgid "Bhutani"
+msgstr ""
+
+msgid "Greek"
+msgstr "Griego"
+
+msgid "English"
+msgstr "Inglés"
+
+msgid "Esperanto"
+msgstr "Esperanto"
+
+msgid "Spanish"
+msgstr "Español"
+
+msgid "Estonian"
+msgstr "Estonio"
+
+msgid "Basque"
+msgstr "Euskera"
+
+msgid "Persian"
+msgstr "Persa"
+
+msgid "Finnish"
+msgstr "Finés"
+
+msgid "Fiji"
+msgstr "Fijiano"
+
+msgid "Faroese"
+msgstr "Feroés"
+
+msgid "French"
+msgstr "Francés"
+
+msgid "Frisian"
+msgstr "Frisón"
+
+msgid "Irish"
+msgstr "Irlandés"
+
+msgid "Scots"
+msgstr "Scots"
+
+msgid "Galician"
+msgstr "Gallego"
+
+msgid "Guarani"
+msgstr "Guaraní"
+
+msgid "Gujarati"
+msgstr "Guyaratí"
+
+msgid "Hausa"
+msgstr "Hausa"
+
+msgid "Hebrew"
+msgstr "Hebreo"
+
+msgid "Hindi"
+msgstr "Hindi"
+
+msgid "Croatian"
+msgstr "Croata"
+
+msgid "Hungarian"
+msgstr "Húngaro"
+
+msgid "Armenian"
+msgstr "Armenio"
+
+msgid "Interlingua"
+msgstr "Interlingua"
+
+msgid "Interlingue"
+msgstr "Interlingue"
+
+msgid "Inupiak"
+msgstr "Inupiak"
+
+msgid "Indonesian"
+msgstr "Indonesio"
+
+msgid "Icelandic"
+msgstr "Islandés"
+
+msgid "Italian"
+msgstr "Italiano"
+
+msgid "Japanese"
+msgstr "Japonés"
+
+msgid "Yiddish"
+msgstr "Yídish"
+
+msgid "Javanese"
+msgstr "Javanés"
+
+msgid "Georgian"
+msgstr "Georgiano"
+
+msgid "Kazakh"
+msgstr "Kazajo"
+
+msgid "Greenlandic"
+msgstr "Groenlandés"
+
+msgid "Cambodian"
+msgstr ""
+
+msgid "Kannada"
+msgstr "Canarés"
+
+msgid "Korean"
+msgstr "Coreano"
+
+msgid "Kashmiri"
+msgstr "Cachemiro"
+
+msgid "Kurdish"
+msgstr "Kurdo"
+
+msgid "Kirghiz"
+msgstr "Kirguís"
+
+msgid "Latin"
+msgstr "Latín"
+
+msgid "Lingala"
+msgstr "Lingala"
+
+msgid "Laothian"
+msgstr "Lao"
+
+msgid "Lithuanian"
+msgstr "Lituano"
+
+msgid "Latvian"
+msgstr "Letón"
+
+msgid "Malagasy"
+msgstr "Malgache"
+
+msgid "Maori"
+msgstr "Maorí"
+
+msgid "Macedonian"
+msgstr "Macedonio"
+
+msgid "Malayalam"
+msgstr "Malayalam"
+
+msgid "Mongolian"
+msgstr "Mongol"
+
+msgid "Moldavian"
+msgstr "Moldavo"
+
+msgid "Marathi"
+msgstr "Maratí"
+
+msgid "Malay"
+msgstr "Malayo"
+
+msgid "Maltese"
+msgstr "Maltés"
+
+msgid "Burmese"
+msgstr "Birmano"
+
+msgid "Nauruan"
+msgstr "Nauruano"
+
+msgid "Nepali"
+msgstr "Nepalí"
+
+msgid "Dutch"
+msgstr "Neerlandés"
+
+msgid "Norwegian"
+msgstr "Noruego"
+
+msgid "Occitan"
+msgstr "Occitano"
+
+msgid "Oromo"
+msgstr "Oromo"
+
+msgid "Oriya"
+msgstr "Oriya"
+
+msgid "Punjabi"
+msgstr "Panyabí"
+
+msgid "Polish"
+msgstr "Polaco"
+
+msgid "Pashto"
+msgstr "Pastú"
+
+msgid "Portuguese"
+msgstr "Portugués"
+
+msgid "Quechua"
+msgstr "Quechua"
+
+msgid "Rhaeto-romance"
+msgstr ""
+
+msgid "Kurundi"
+msgstr ""
+
+msgid "Romanian"
+msgstr "Rumano"
+
+msgid "Russian"
+msgstr "Ruso"
+
+msgid "Kinyarwanda"
+msgstr "Kinyarwanda"
+
+msgid "Sanskrit"
+msgstr "Sánscrito"
+
+msgid "Sindhi"
+msgstr "Sindhi"
+
+msgid "Sangho"
+msgstr "Sango"
+
+msgid "Serbo-Croatian"
+msgstr "Serbocroata"
+
+msgid "Singhalese"
+msgstr "Cingalés"
+
+msgid "Slovak"
+msgstr "Eslovaco"
+
+msgid "Slovenian"
+msgstr "Esloveno"
+
+msgid "Samoan"
+msgstr "Samoano"
+
+msgid "Shona"
+msgstr "Shona"
+
+msgid "Somali"
+msgstr "Somalí"
+
+msgid "Albanian"
+msgstr "Albanés"
+
+msgid "Serbian"
+msgstr "Serbio"
+
+msgid "Siswati"
+msgstr "Suazi"
+
+msgid "Sesotho"
+msgstr "Sesotho"
+
+msgid "Sundanese"
+msgstr "Sundanés"
+
+msgid "Swedish"
+msgstr "Sueco"
+
+msgid "Swahili"
+msgstr "Swahili"
+
+msgid "Tamil"
+msgstr "Tamil"
+
+msgid "Telugu"
+msgstr "Telugú"
+
+msgid "Tajik"
+msgstr "Tayiko"
+
+msgid "Thai"
+msgstr "Tailandés"
+
+msgid "Tigrinya"
+msgstr "Tigriña"
+
+msgid "Turkmen"
+msgstr "Turcomano"
+
+msgid "Tagalog"
+msgstr "Tagalo"
+
+msgid "Setswana"
+msgstr "Setsuana"
+
+msgid "Tongan"
+msgstr "Tongano"
+
+msgid "Turkish"
+msgstr "Turco"
+
+msgid "Tsonga"
+msgstr "Tsonga"
+
+msgid "Tatar"
+msgstr "Tártaro"
+
+msgid "Twi"
+msgstr "Twi"
+
+msgid "Ukrainian"
+msgstr "Ucraniano"
+
+msgid "Urdu"
+msgstr "Urdú"
+
+msgid "Uzbek"
+msgstr "Uzbeko"
+
+msgid "Vietnamese"
+msgstr "Vietnamita"
+
+msgid "Volapuk"
+msgstr "Volapük"
+
+msgid "Wolof"
+msgstr "Wolof"
+
+msgid "Xhosa"
+msgstr "Xhosa"
+
+msgid "Yoruba"
+msgstr "Yoruba"
+
+msgid "Chinese"
+msgstr "Chino"
+
+msgid "Zulu"
+msgstr "Zulú"
+
+#
+# Data Base LU_Currencies table (LU_PluralName field)
+#
+# Tip: Translated searching  wikipedia.org  Refereces: http://es.wikipedia.org/wiki/ISO_4217 , etc.
+#
+
+msgid "Afghanis"
+msgstr "Afganis"
+
+msgid "Lekë"
+msgstr "Leks"
+
+msgid "Dinars, Algeria"
+msgstr "Dinares, Argelia"
+
+msgid "Dinars, Bahrain"
+msgstr "Dinares, Bahrain"
+
+msgid "Dinars, Iraq"
+msgstr "Dinares, Irak"
+
+msgid "Dinars, Jordan"
+msgstr "Dinares, Jordania"
+
+msgid "Dinars, Kuwait"
+msgstr "Dinares, Kuwait"
+
+msgid "Dinars, Libya"
+msgstr "Dinares, Libia"
+
+msgid "Dinars, Serbia"
+msgstr "Dinares, Serbia"
+
+msgid "Dinars, Sudan"
+msgstr "Dinares, Sudán"
+
+msgid "Dinars, Tunisia"
+msgstr "Dinares, Túnez"
+
+msgid "Dollars, United States of America"
+msgstr "Dólares, Estados Unidos de América"
+
+msgid "Dollars, East Caribbean"
+msgstr "Dólares, Caribe Oriental"
+
+msgid "Dollars, Australia"
+msgstr "Dólares, Australia"
+
+msgid "Dollars, Bahamas"
+msgstr "Dólares, Bahamas"
+
+msgid "Dollars, Barbados"
+msgstr "Dólares, Barbados"
+
+msgid "Dollars, Belize"
+msgstr "Dólares, Belize"
+
+msgid "Dollars, Bermuda"
+msgstr "Dólares, Bermuda"
+
+msgid "Dollars, Brunei"
+msgstr "Dólares, Brunei"
+
+msgid "Dollars, Singapore"
+msgstr "Dólares, Singapur"
+
+msgid "Dollars, Canada"
+msgstr "Dólares, Canadá"
+
+msgid "Dollars, Fiji"
+msgstr "Dólares, Fiji"
+
+msgid "Dollars, Guyana"
+msgstr "Dólares, Guyana"
+
+msgid "Dollars, Hong Kong"
+msgstr "Dólares, Hong Kong"
+
+msgid "Dollars, Jamaica"
+msgstr "Dólares, Jamaica"
+
+msgid "Dollars, Liberia"
+msgstr "Dólares, Liberia"
+
+msgid "Dollars, Namibia"
+msgstr "Dólares, Namibia"
+
+msgid "Dollars, New Zealand"
+msgstr "Dólares, Nueva Zelanda"
+
+msgid "Dollars, Suriname"
+msgstr "Dólares, Surinam"
+
+msgid "New Dollars, Taiwan"
+msgstr "Nuevos Dólares, Taiwán"
+
+msgid "Dollars, Trinidad and Tobago"
+msgstr "Dólares, Trinidad y Tobago"
+
+msgid "Dollars, Tuvalu"
+msgstr "Dólares, Tuvalu"
+
+msgid "Dollars, Zimbabwe"
+msgstr "Dólares, Zimbabwe"
+
+msgid "Euros"
+msgstr "Euros"
+
+msgid "Kwanzas"
+msgstr "Kwanzas"
+
+msgid "Dram"
+msgstr ""
+
+msgid "Guilders, Aruba"
+msgstr ""
+
+msgid "Guilders, Netherlands Antilles"
+msgstr ""
+
+msgid "Manats, Azerbaijan"
+msgstr ""
+
+msgid "Manats, Turkmenistan"
+msgstr ""
+
+msgid "Taka"
+msgstr ""
+
+msgid "Rubles"
+msgstr "Rublos"
+
+msgid "CFA Francs BCEAO"
+msgstr "Francos CFA, BCEAO"
+
+msgid "Francs, Burundi"
+msgstr "Francos, Burundi"
+
+msgid "CFA Francs BEAC"
+msgstr "Francos CFA, BEAC"
+
+msgid "Francs, Comoros"
+msgstr "Francos, Comoros"
+
+msgid "Francs, Congo/Kinshasa"
+msgstr "Francos, Congo/Kinshasa"
+
+msgid "Francs, Djibouti"
+msgstr "Francos, Djibouti"
+
+msgid "Francs, Guinea"
+msgstr "Francos, Guinea"
+
+msgid "Francs, Switzerland"
+msgstr "Francos, Suiza"
+
+msgid "Francs, Comptoirs du Pacifique"
+msgstr "Francos, Comptoirs du Pacifique"
+
+msgid "Francs, Rwanda"
+msgstr "Francos, Ruanda"
+
+msgid "Rupees, India"
+msgstr "Rupias, India"
+
+msgid "Rupees, Seychelles"
+msgstr "Rupias, Seychelles"
+
+msgid "Rupees, Sri Lanka"
+msgstr "Rupias, Sri Lanka"
+
+msgid "Rupees, Mauritius"
+msgstr "Rupias, Mauricio"
+
+msgid "Rupees, Nepal"
+msgstr "Rupias, Nepal"
+
+msgid "Rupees, Pakistan"
+msgstr "Rupias, Pakistán"
+
+msgid "Ngultrum"
+msgstr ""
+
+msgid "Bolivianos"
+msgstr "Bolivianos"
+
+msgid "Convertible Maraka"
+msgstr "Marcos convertibles"
+
+msgid "Pula"
+msgstr ""
+
+msgid "Reais"
+msgstr "Reales"
+
+msgid "Pounds, United Kingdom"
+msgstr "Libras, Gran Bretaña"
+
+msgid "Pounds, Cyprus"
+msgstr "Libras, Chipre"
+
+msgid "Pounds, Egypt"
+msgstr "Libras, Egipto"
+
+msgid "Pounds, Gibraltar"
+msgstr "Libras, Gibraltar"
+
+msgid "Pounds, Guernsey"
+msgstr "Libras, Guernsey"
+
+msgid "Pounds, Isle of Man"
+msgstr "Libras, Isle of Man"
+
+msgid "Pounds, Jersey"
+msgstr "Libras, Jersey"
+
+msgid "Pounds, Lebanon"
+msgstr "Libras, Líbano"
+
+msgid "Pounds, Saint Helena"
+msgstr "Libras, Santa Helena"
+
+msgid "Pounds, Syria"
+msgstr "Libras, Siria"
+
+msgid "Leva"
+msgstr ""
+
+msgid "Kyats"
+msgstr ""
+
+msgid "Riels"
+msgstr ""
+
+msgid "Escudos"
+msgstr "Escudos"
+
+msgid "Pesos, Argentina"
+msgstr "Pesos, Argentina"
+
+msgid "Pesos, Chile"
+msgstr "Pesos, Chile"
+
+msgid "Pesos, Colombia"
+msgstr "Pesos, Colombia"
+
+msgid "Pesos, Cuba"
+msgstr "Pesos, Cuba"
+
+msgid "Pesos, Dominican Republic"
+msgstr "Pesos, República Dominicana"
+
+msgid "Pesos, Mexico"
+msgstr "Pesos, México"
+
+msgid "Pesos, Philippines"
+msgstr "Pesos, Filipinas"
+
+msgid "Pesos, Uruguay"
+msgstr "Pesos, Uruguay"
+
+msgid "Yuan"
+msgstr ""
+
+msgid "Colones, Costa Rica"
+msgstr "Colones, Costa Rica"
+
+msgid "Kuna"
+msgstr "Kunas"
+
+msgid "Koruny, Czech Republic"
+msgstr "Coronas, República Checa"
+
+msgid "Koruny, Slovakia"
+msgstr "Coronas, Eslovaquia"
+
+msgid "Kroner, Denmark"
+msgstr "Coronas, Dinamarca"
+
+msgid "Kroner, Norway"
+msgstr "Coronas, Noruega"
+
+msgid "Kronur, Iceland"
+msgstr "Coronas, Islandia"
+
+msgid "Kronor, Sweden"
+msgstr "Coronas, Suecia"
+
+msgid "Nakfas"
+msgstr ""
+
+msgid "Krooni"
+msgstr "Coronas, Estonia"
+
+msgid "Birr"
+msgstr ""
+
+msgid "Dalasis"
+msgstr ""
+
+msgid "Israel New Shekels"
+msgstr "Nuevos Shequels israelís"
+
+msgid "Lari"
+msgstr "Lari"
+
+msgid "Cedis"
+msgstr "Cedis"
+
+msgid "Ounces of Gold"
+msgstr "Onzas de Oro"
+
+msgid "Ounces of Palladium"
+msgstr "Onzas de Paladio"
+
+msgid "Ounces of Platinum"
+msgstr "Onzas de Platino"
+
+msgid "Ounces of Silver"
+msgstr "Onzas de Plata"
+
+msgid "Quetzales"
+msgstr "Quetzales"
+
+msgid "Gourdes, Haiti"
+msgstr "Gourdes, Haití"
+
+msgid "Lempiras"
+msgstr "Lempiras"
+
+msgid "Forint, Hungary"
+msgstr "Florines, Hungría"
+
+msgid "Rupiahs, Indonesia"
+msgstr "Rupias, Indonesia"
+
+msgid "Special Drawing Rights"
+msgstr ""
+
+msgid "Rials, Iran"
+msgstr "Riales, Irán"
+
+msgid "Rials, Oman"
+msgstr "Riales, Omán"
+
+msgid "Rials, Yemen"
+msgstr "Riales, Yemen"
+
+msgid "Yen, Japan"
+msgstr "Yenes, Japón"
+
+msgid "Tenge"
+msgstr ""
+
+msgid "Shillings, Kenya"
+msgstr "Chelines, Kenia"
+
+msgid "Shillings, Uganda"
+msgstr "Chelines, Uganda"
+
+msgid "Shillings, Somalia"
+msgstr "Chelines, Somalia"
+
+msgid "Shillings, Tanzania"
+msgstr "Chelines, Tanzania"
+
+msgid "Som, Kyrgyzstan"
+msgstr "Som, Kirguistán"
+
+msgid "Som, Uzbekistan"
+msgstr "Som, Uzbekistán"
+
+msgid "Kip"
+msgstr ""
+
+msgid "Lats"
+msgstr "Lats"
+
+msgid "Maloti, Lesotho"
+msgstr "Lotis, Lesoto"
+
+msgid "Litas"
+msgstr "Litas"
+
+msgid "Patacas"
+msgstr "Patacas"
+
+msgid "Denars"
+msgstr "Dinares"
+
+msgid "Ariary"
+msgstr ""
+
+msgid "Kwacha, Malawi"
+msgstr ""
+
+msgid "Kwacha, Zambia"
+msgstr ""
+
+msgid "Ringgits, Malaysia"
+msgstr "Ringgits, Malasia"
+
+msgid "Rufiyaa"
+msgstr ""
+
+msgid "Liras, Malta"
+msgstr "Liras, Malta"
+
+msgid "Liras, Turkey"
+msgstr "Liras, Turquía"
+
+msgid "Ouguiya"
+msgstr ""
+
+msgid "Lei, Moldova"
+msgstr ""
+
+msgid "Lei, Romania"
+msgstr ""
+
+msgid "Tugrug"
+msgstr ""
+
+msgid "Dirhams, Morocco"
+msgstr "Dirhams, Marruecos"
+
+msgid "Dirhams, United Arab Emirates"
+msgstr "Dirhams, Emiratos Árabes Unidos"
+
+msgid "Meticais"
+msgstr "Meticales"
+
+msgid "Córdobas"
+msgstr "Córdobas"
+
+msgid "Nairas"
+msgstr ""
+
+msgid "Won, North Korea"
+msgstr "Won, Corea del Norte"
+
+msgid "Won, South Korea"
+msgstr "Won, Corea del Sur"
+
+msgid "Balboas"
+msgstr "Balboas"
+
+msgid "Kina"
+msgstr "Kina"
+
+msgid "Guaraníes"
+msgstr "Guaraníes"
+
+msgid "Nuevos soles"
+msgstr "Nuevos soles"
+
+msgid "Zlotych, Poland"
+msgstr ""
+
+msgid "Riyals, Qatar"
+msgstr "Riales, Qatar"
+
+msgid "Riyals, Saudi Arabia"
+msgstr "Riales, Arabia Saudí"
+
+msgid "Rubles, Russia"
+msgstr "Rublos, Rusia"
+
+msgid "Tala"
+msgstr ""
+
+msgid "Dobras"
+msgstr ""
+
+msgid "Leones"
+msgstr "Leones"
+
+msgid "Rand, South Africa"
+msgstr "Rand, Sudáfrica"
+
+msgid "Emalangeni"
+msgstr "Emalangeni"
+
+msgid "Somoni"
+msgstr "Rublos, Tayikistán"
+
+msgid "Baht"
+msgstr ""
+
+### XXX Do we know how translate some word with '. I think it did not work!. Check it.
+# msgid "Pa\'anga"
+# msgstr ""
+
+msgid "Hryvnias"
+msgstr ""
+
+msgid "Vatu"
+msgstr "Vatu"
+
+msgid "Bolivares"
+msgstr "Bolivares"
+
+msgid "Dong"
+msgstr ""
+
+#
+# Data Base LF_FieldProfiles table
+#
+
+msgid "Data Bases"
+msgstr "Bases de datos"
+
+msgid "Networks"
+msgstr "Redes"
+
+msgid "Systems"
+msgstr "Sistemas"
+
+msgid "Security"
+msgstr "Seguridad"
+
+msgid "Web"
+msgstr "Web"
+
+msgid "Creative design"
+msgstr "Diseño creativo"
+
+msgid "Quality Assurance"
+msgstr "Control de calidad"
+
+#
+# Data Base LP_ProfessionalProfiles table
+#
+
+msgid "General Manager"
+msgstr "Director general"
+
+msgid "HH.RR."
+msgstr "RR.HH."
+
+msgid "Marketing"
+msgstr "Marketing"
+
+msgid "Logistics and Distribution"
+msgstr "Logística y Distribución"
+
+msgid "Commercial - Seller"
+msgstr "Comercial"
+
+msgid "Customer support"
+msgstr "Soporte a cliente"
+
+msgid "Research and Development"
+msgstr "Investigación y Desarrollo"
+
+msgid "Account Manager"
+msgstr "Gestor de cuenta"
+
+msgid "Project Manager"
+msgstr "Jefe de proyecto"
+
+msgid "Architect"
+msgstr "Arquitecto"
+
+msgid "Auditor"
+msgstr "Auditor"
+
+msgid "Adviser"
+msgstr "Asesor"
+
+msgid "Technician"
+msgstr "Técnico"
+
+msgid "Functional Analyst"
+msgstr "Analista funcional"
+
+msgid "Technician Analyst"
+msgstr "Analista técnico"
+
+msgid "Developer"
+msgstr "Programador"
+
+msgid "Beta tester"
+msgstr "Beta tester"
+
+msgid "Administrator"
+msgstr "Administrador"
+
+msgid "Documentalist"
+msgstr "Documentalista"
+
+msgid "Technical Redactor"
+msgstr "Redactor técnico"
+
+msgid "Teacher"
+msgstr "Profesor"
+
+msgid "Translator"
+msgstr "Traductor"
+
+msgid "Operator"
+msgstr "Operador"
+
+msgid "Technical support"
+msgstr "Soporte técnico"
+
+msgid "Helpdesk"
+msgstr "Helpdesk"
+
+#
+# Data Base LA_AcademicQualifications table
+#
+
+msgid "Undergraduate"
+msgstr "Estudiante universitario,-a"
+
+msgid "Graduate"
+msgstr "Ingeniero técnico o Diplomado,-a"
+
+msgid "Postgraduate"
+msgstr "Ingeniero o Licensiado,-a"
+
+msgid "Doctoral"
+msgstr "Doctorado,-a"
+
+msgid "Other"
+msgstr "Otro"
+
+#
+# Data Base LK_ContractType table
+#
+
+msgid "Vacation cover"
+msgstr "Covertura de vacaciones"
+
+msgid "Maternity cover"
+msgstr "Covertura de maternidad"
+
+msgid "Training"
+msgstr "Formación"
+
+msgid "By hours"
+msgstr "Por horas"
+
+msgid "By project"
+msgstr "Por proyecto"
+
+msgid "Freelance"
+msgstr "Free lance"
+
+msgid "Temporary"
+msgstr "Eventual"
+
+msgid "Half time"
+msgstr "Media jornada"
+
+msgid "Full time"
+msgstr "Jornada completa"
+
+msgid "Indefinite"
+msgstr "Indefinido"
+
+#
+# Data Base LB_ByPeriod table
+#
+
+msgid "by year"
+msgstr "por año"
+
+msgid "by month"
+msgstr "por mes"
+
+msgid "by week"
+msgstr "por semana"
+
+msgid "by day"
+msgstr "por día"
+
+msgid "by hour"
+msgstr "por hora"
+
+#
+# Data Base LE_Employability table
+#
+
+msgid "Working"
+msgstr "Trabajando"
+
+msgid "Studying"
+msgstr "Estudiando"
+
+msgid "Without job"
+msgstr "Sin empleo"
+
+#
+# Data Base LS_SpokenLevel table
+#
+
+msgid "Null"
+msgstr "Nulo"
+
+msgid "Basic"
+msgstr "Básico"
+
+msgid "Conversation"
+msgstr "Conversación"
+
+msgid "Negotiation"
+msgstr "Negociación"
+
+msgid "Native"
+msgstr "Nativo"
+
+#
+# Data Base LW_WrittenLevel table
+#
+
+msgid "Medium"
+msgstr "Medio"
+
+msgid "High"
+msgstr "Alto"
+
+msgid "Excellent"
+msgstr "Excelente"
+
+#
+# Data Base LZ_ApplicationStates table
+#
+
+msgid "Received"
+msgstr "Recivido"
+
+msgid "In process"
+msgstr "En proceso"
+
+msgid "Ruled out"
+msgstr "Rechazado"
+
+msgid "Finalist"
+msgstr "Finalista"
+
+msgid "Selected"
+msgstr "Seleccionado"
+
+#
+# Data Base LT_SkillSetTypes table
+#
+
+msgid "Operating systems"
+msgstr "Sistemas operativos"
+
+msgid "Operating system kernels"
+msgstr "Núcleos de sistemas operativos"
+
+msgid "Hardware architectures"
+msgstr "Arquitecturas hardware"
+
+msgid "Software engineering methodologies"
+msgstr "Metodologías de ingeniería del software"
+
+msgid "Architectural Patterns"
+msgstr "Patrones de arquitectura"
+
+msgid "Design Patterns"
+msgstr "Patrones de diseño"
+
+msgid "Development formal languages"
+msgstr "Lenguajes formales de programación"
+
+msgid "Development specification languages"
+msgstr "Lenguajes de especificación de programación"
+
+msgid "Development tools"
+msgstr "Herramientas de programación"
+
+msgid "Development libraries"
+msgstr "Librerias de programación"
+
+msgid "Development frameworks"
+msgstr "Frameworks de programación"
+
+msgid "Development techniques"
+msgstr "Técnicas de programación"
+
+msgid "Specifications"
+msgstr "Especificaciones"
+
+msgid "Network protocols"
+msgstr "Protocolos de red"
+
+msgid "Network servers"
+msgstr "Servidores de red"
+
+msgid "Network tools"
+msgstr "Herramientas de red"
+
+msgid "Desktop applications"
+msgstr "Aplicaciones de escritorio"
+
+msgid "Documentation tools"
+msgstr "Herramientas de documentación"
+
+msgid "Translation tools"
+msgstr "Herramientas de traducción"
+
+#
+# Data Base LG_KnowledgeLevel table
+#
+
+msgid "Good"
+msgstr "Bueno"
+
+msgid "Master"
+msgstr "Maestro"
+
+msgid "Expert"
+msgstr "Experto"
+
+msgid "internals"
+msgstr "internals"
+
+#
+# Data Base LN_ExperienceLevel table
+#
+
+msgid "up to 6 months"
+msgstr "hasta 6 meses"
+
+msgid "up to 2 years"
+msgstr "hasta 2 años"
+
+msgid "up to 5 years"
+msgstr "hasta 5 años"
+
+msgid "up to 10 years"
+msgstr "hasta 10 años"
+
+msgid "more than 10 years"
+msgstr "más de 10 años"
+

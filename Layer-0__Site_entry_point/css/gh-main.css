@@ -1,0 +1,502 @@
+/*
+Authors: Davi Leal
+
+Copyright (C) 2002, 2003, 2004, 2005, 2006 Davi Leal <davi at leals dot com>
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the Affero General Public License as published by Affero Inc.,
+either version 1 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful to the Free
+Software community, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the Affero
+General Public License for more details.
+
+You should have received a copy of the Affero General Public License with this
+software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street,
+Suite 225, San Francisco, CA 94107, USA
+*/
+
+
+/* document-wide settings */
+
+body
+{
+	color: #000000;
+	/* background: #999999; */
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+a:link
+{
+	color: #008000;
+}
+
+a:visited
+{
+	color: #006060;
+}
+
+a:active
+{
+	color: #a00000;
+}
+
+
+/* miscellaneous settings */
+
+.mainheading
+{
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	font-weight: bold;
+	font-size: 38px;
+	padding-left: 5px;
+	text-align: left;
+	text-decoration: none;
+	color: #008080;
+}
+
+.mainsubheading
+{
+	font-size: 14px;
+}
+
+.maincontent
+{
+	margin-left: 25;
+	margin-right: 25;
+}
+
+.news
+{
+	padding-left: 5;
+	padding-right: 5;
+}
+
+.heading
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: left;
+	padding-left: 5px;
+	text-decoration: none;
+	color: #008080;
+}
+
+.body
+{
+	text-align: justify;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 14px;
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+}
+
+.linksheading
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+	color: #008080;
+}
+
+.linksbody
+{
+	text-align: center;
+	font-size: 14px;
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+}
+
+a.linksheading
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+	color: #008080;
+}
+
+a.linksbody
+{
+	text-decoration: none;
+}
+
+a.html2
+{
+	font-size: 12px;
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	color: #000080;
+	text-decoration: underline;
+}
+
+p.credits
+{
+	font-size: 12px;
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	text-align: center;
+}
+
+
+/* HTML2 compatability settings */
+
+h1
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	text-align: left;
+	text-decoration: none;
+	color: #555544;
+}
+
+h2
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: left;
+	padding-left: 5px;
+	text-decoration: none;
+	color: #555544;
+}
+
+h3
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 0;
+	text-decoration: none;
+	color: #606000;
+}
+
+h4
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: left;
+	padding-left: 5px;
+	text-decoration: none;
+	color: #606000;
+}
+
+p
+{
+	text-align: justify;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 14px;
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+}
+
+ul
+{
+	/*list-style: square outside url("images/menu-left-up.png");*/
+	/*margin-bottom: 10;*/
+	/*margin-top: 5;*/
+}
+
+ol
+{
+	list-style: decimal outside none;
+}
+
+li
+{
+	text-align: justify;
+	font-size: 14px;
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	/*margin-top: 5;*/
+	margin-bottom: 4;
+}
+
+dd
+{
+	text-align: justify;
+	font-size: 14px;
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+}
+
+dt
+{
+	font-weight: bold;
+	font-size: 14px;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+
+pre
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+blockquote
+{
+	text-align: justify;
+	font-size: 14px;
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	padding-left: 5;
+	padding-right: 5px;
+}
+
+
+/* Setting to the forms */
+
+td
+{
+	font-size: 12px;
+	/*
+	padding-left: 5px;  Note: Remove due to it disturb the look and feel of all tables.
+	padding-right: 5px;
+	*/
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+}
+
+select
+{
+	font-size: 12px;
+}
+
+input
+{
+	font-size: 12px;
+}
+
+textarea
+{
+	font-size: 12px;
+}
+
+.mainsection
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	padding-left: 5px;
+	text-decoration: none;
+	color: #555544;
+}
+
+.subsection
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	padding-left: 5px;
+	padding-right: 0;
+	text-decoration: none;
+	color: #555544;
+	/* background-color: #e8d9bd; */
+	background-color: #e0e1bf;
+}
+
+.must
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	/* font-size: 12px; */
+	color: #aa0000;
+}
+
+
+/* Specific setting */
+
+.menu1
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	color: #335522;
+}
+
+.menu1noactive
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	color: #335522;
+	cursor: default;
+}
+
+.menu2
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	color: #446633;
+}
+
+.menu2noactive
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+	color: #446633;
+	cursor: default;
+}
+
+.menu3
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	color: #557744;
+}
+
+.menu3noactive
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	color: #888855;
+	cursor: default;
+}
+
+.footnote
+{
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	font-size: 12px;
+}
+
+.hidden1 /* Home and Charter sections */
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #bedde1;
+}
+
+.hidden2 /* Resources sections */
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #c7bf96;
+}
+
+.hidden3 /* Special Interest Groups sections */
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #bedde1;
+}
+
+.login
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #888a5e;
+	text-decoration: none
+}
+
+.popup
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none
+}
+
+.modification
+{
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	/* font-size: 12px; */
+	color: #aa0000;
+}
+.date
+{
+	color: #00aa00;
+}
+
+.translate
+{
+	background-color: #ecf2fd;
+}
+
+
+.tdTitle
+{	
+	/* background-color: #e8d9bd; */
+	background-color: #e0e1bf;
+	border: thin outset #641212;
+	color: #000000;
+}
+
+.tdDark
+{
+	/* background-color: #fffbed; */
+	background-color: #f3f6e8;
+	border-left: thin #e0c080;
+	border-right: thin #e0c080;
+	border-bottom: thin #e0c080;
+	color: #333333;
+}
+
+.tdLight
+{	
+	/* background-color: #ffeecc; */
+	background-color: #fffbed;
+	border-left: thin #e0c080;
+	border-right: thin #e0c080;
+	border-bottom: thin #e0c080;
+	color: #333333;
+}
+
+.tdNote
+{
+	background-color: #e3e2ae;
+	border-left: thin #e0c080;
+	border-right: thin #e0c080;
+	border-bottom: thin #e0c080;
+	color: #333333;
+}
+
+.backgroundcolor
+{
+	background-color: #e8edd3;
+}
+
+.greenDark
+{
+	background-color: #f3f6e8;
+}
+
+.greenLight
+{
+	/* background-color: #f7f9f0; */
+	/* background-color: #f0f9f6; */
+	background-color: #f9f6e3;
+}
+
+.required
+{
+	background-color: #fff5e3;
+}
+
+.notRequired
+{
+	background-color: #f4f8e0;
+}
+
+.blueApplicationState
+{
+	background-color: #d9eaff;
+}
+
+.redApplicationState
+{
+	background-color: #ffd9d9;
+}
+
+.almostGreenApplicationState
+{
+	background-color: #f5ffd9;
+}
+
+.greenApplicationState
+{
+	background-color: #dbffd9;
+}
+
