@@ -23,17 +23,17 @@ function UpdateVacancyTitle()
 	for (i=0; i<document.jobOfferForm.ProfessionalProfileList.length && document.jobOfferForm.ProfessionalProfileList[i].selected==false; i++)
 		;
 	if (i<document.jobOfferForm.ProfessionalProfileList.length)
-		document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.ProfessionalProfileList[i].value;
+		document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.ProfessionalProfileList[i].text;
 	else
 		document.jobOfferForm.VacancyTitle.value = 'Empty professional profile';
 
 	for (i++; i<document.jobOfferForm.ProfessionalProfileList.length; i++)
 		if ( document.jobOfferForm.ProfessionalProfileList[i].selected==true && ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.ProfessionalProfileList[i].value ).length < 100 )
-			document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.ProfessionalProfileList[i].value;
+			document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.ProfessionalProfileList[i].text;
 			
 	for (i=0; i<document.jobOfferForm.FieldProfileList.length; i++)
 		if ( document.jobOfferForm.FieldProfileList[i].selected==true && ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.FieldProfileList[i].value ).length < 100 )
-			document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.FieldProfileList[i].value;
+			document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.FieldProfileList[i].text;
 			
 	for (i=0; i<document.jobOfferForm.SkillList.length; i++)
 		if ( ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.SkillList[i].value ).length < 100 )
@@ -41,6 +41,6 @@ function UpdateVacancyTitle()
 
 	for (i=0; i<document.jobOfferForm.LanguageList.length; i++)
 		if ( ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.LanguageList[i].value ).length < 100 )
-			document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.LanguageList[i].value;
+			document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.LanguageList[i].text;
 }
 
