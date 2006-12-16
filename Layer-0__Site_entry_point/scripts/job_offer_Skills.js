@@ -35,7 +35,7 @@ function ResetSkillLevels()
 	position = -1;
 	for (i=0; i<document.jobOfferForm.SkillList.length; i++)
 	{
-		if ( document.jobOfferForm.SkillList.options[i].text == document.jobOfferForm.Skill.value )
+		if ( document.jobOfferForm.SkillList.options[i].value == document.jobOfferForm.Skill.value )
 		{
 			position = i;
 			break;
@@ -68,7 +68,7 @@ function UpdateSkill() // If there is already the skill we will realize an Updat
 	position = -1;
 	for (i=0; i<document.jobOfferForm.SkillList.length; i++)
 	{
-		if ( document.jobOfferForm.SkillList.options[i].text == document.jobOfferForm.Skill.value )
+		if ( document.jobOfferForm.SkillList.options[i].value == document.jobOfferForm.Skill.value )
 		{
 			position = i;
 			break;
@@ -79,10 +79,10 @@ function UpdateSkill() // If there is already the skill we will realize an Updat
 	{
 		if ( document.jobOfferForm.skillKnowledgeLevel.value != "Null" || document.jobOfferForm.skillExperienceLevel.value != "Null" )
 		{
-			document.jobOfferForm.ViewSkillList.options[document.jobOfferForm.ViewSkillList.options.length] = new Option( document.jobOfferForm.Skill.options[document.jobOfferForm.Skill.selectedIndex].label +' '+ document.jobOfferForm.skillKnowledgeLevel.options[document.jobOfferForm.skillKnowledgeLevel.selectedIndex].label +' '+ document.jobOfferForm.skillExperienceLevel.options[document.jobOfferForm.skillExperienceLevel.selectedIndex].label );
-			document.jobOfferForm.SkillList.options[document.jobOfferForm.SkillList.options.length] = new Option(document.jobOfferForm.Skill.value);
-			document.jobOfferForm.SkillKnowledgeLevelList.options[document.jobOfferForm.SkillKnowledgeLevelList.options.length] = new Option(document.jobOfferForm.skillKnowledgeLevel.value);
-			document.jobOfferForm.SkillExperienceLevelList.options[document.jobOfferForm.SkillExperienceLevelList.options.length] = new Option(document.jobOfferForm.skillExperienceLevel.value);
+			document.jobOfferForm.ViewSkillList.options[document.jobOfferForm.ViewSkillList.options.length] = new Option( document.jobOfferForm.Skill.options[document.jobOfferForm.Skill.selectedIndex].label +' '+ document.jobOfferForm.skillKnowledgeLevel.options[document.jobOfferForm.skillKnowledgeLevel.selectedIndex].label +' '+ document.jobOfferForm.skillExperienceLevel.options[document.jobOfferForm.skillExperienceLevel.selectedIndex].label, document.jobOfferForm.Skill.options[document.jobOfferForm.Skill.selectedIndex].label +' '+ document.jobOfferForm.skillKnowledgeLevel.options[document.jobOfferForm.skillKnowledgeLevel.selectedIndex].label +' '+ document.jobOfferForm.skillExperienceLevel.options[document.jobOfferForm.skillExperienceLevel.selectedIndex].label );
+			document.jobOfferForm.SkillList.options[document.jobOfferForm.SkillList.options.length] = new Option(document.jobOfferForm.Skill.value, document.jobOfferForm.Skill.value);
+			document.jobOfferForm.SkillKnowledgeLevelList.options[document.jobOfferForm.SkillKnowledgeLevelList.options.length] = new Option(document.jobOfferForm.skillKnowledgeLevel.value, document.jobOfferForm.skillKnowledgeLevel.value);
+			document.jobOfferForm.SkillExperienceLevelList.options[document.jobOfferForm.SkillExperienceLevelList.options.length] = new Option(document.jobOfferForm.skillExperienceLevel.value, document.jobOfferForm.skillExperienceLevel.value);
 
 			if (document.jobOfferForm.ViewSkillList.selectedIndex>=0)
 				document.jobOfferForm.ViewSkillList.options[document.jobOfferForm.ViewSkillList.selectedIndex].selected = false;

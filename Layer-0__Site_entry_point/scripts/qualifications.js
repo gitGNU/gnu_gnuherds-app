@@ -50,7 +50,7 @@ function InitializationOnLoad()
 		document.qualificationsForm.Skill.value = document.qualificationsForm.SkillList[i].value;
 		document.qualificationsForm.skillKnowledgeLevel.value = document.qualificationsForm.SkillKnowledgeLevelList[i].value;
 		document.qualificationsForm.skillExperienceLevel.value = document.qualificationsForm.SkillExperienceLevelList[i].value;
-		document.qualificationsForm.ViewSkillList.options[document.qualificationsForm.ViewSkillList.options.length] = new Option( document.qualificationsForm.Skill.options[document.qualificationsForm.Skill.selectedIndex].label +' '+ document.qualificationsForm.skillKnowledgeLevel.options[document.qualificationsForm.skillKnowledgeLevel.selectedIndex].label +' '+ document.qualificationsForm.skillExperienceLevel.options[document.qualificationsForm.skillExperienceLevel.selectedIndex].label );
+		document.qualificationsForm.ViewSkillList.options[document.qualificationsForm.ViewSkillList.options.length] = new Option( document.qualificationsForm.Skill.options[document.qualificationsForm.Skill.selectedIndex].label +' '+ document.qualificationsForm.skillKnowledgeLevel.options[document.qualificationsForm.skillKnowledgeLevel.selectedIndex].label +' '+ document.qualificationsForm.skillExperienceLevel.options[document.qualificationsForm.skillExperienceLevel.selectedIndex].label, document.qualificationsForm.Skill.options[document.qualificationsForm.Skill.selectedIndex].label +' '+ document.qualificationsForm.skillKnowledgeLevel.options[document.qualificationsForm.skillKnowledgeLevel.selectedIndex].label +' '+ document.qualificationsForm.skillExperienceLevel.options[document.qualificationsForm.skillExperienceLevel.selectedIndex].label );
 	}
 	if (document.qualificationsForm.SkillList.length>0) {
 		document.qualificationsForm.ViewSkillList.selectedIndex = 0;
@@ -64,7 +64,9 @@ function InitializationOnLoad()
 		document.qualificationsForm.Language.value = document.qualificationsForm.LanguageList[i].value;
 		document.qualificationsForm.languageSpokenLevel.value = document.qualificationsForm.LanguageSpokenLevelList[i].value;
 		document.qualificationsForm.languageWrittenLevel.value = document.qualificationsForm.LanguageWrittenLevelList[i].value;
-		document.qualificationsForm.ViewLanguageList.options[document.qualificationsForm.ViewLanguageList.options.length] = new Option( document.qualificationsForm.Language.options[document.qualificationsForm.Language.selectedIndex].label +' '+ document.qualificationsForm.languageSpokenLevel.options[document.qualificationsForm.languageSpokenLevel.selectedIndex].label +' '+ document.qualificationsForm.languageWrittenLevel.options[document.qualificationsForm.languageWrittenLevel.selectedIndex].label );
+		document.qualificationsForm.ViewLanguageList.options[document.qualificationsForm.ViewLanguageList.options.length] = new Option( document.qualificationsForm.Language.options[document.qualificationsForm.Language.selectedIndex].label +' '+ document.qualificationsForm.languageSpokenLevel.options[document.qualificationsForm.languageSpokenLevel.selectedIndex].label +' '+ document.qualificationsForm.languageWrittenLevel.options[document.qualificationsForm.languageWrittenLevel.selectedIndex].label, document.qualificationsForm.Language.options[document.qualificationsForm.Language.selectedIndex].label +' '+ document.qualificationsForm.languageSpokenLevel.options[document.qualificationsForm.languageSpokenLevel.selectedIndex].label +' '+ document.qualificationsForm.languageWrittenLevel.options[document.qualificationsForm.languageWrittenLevel.selectedIndex].label );
+
+		document.qualificationsForm.LanguageList[i].text = document.qualificationsForm.Language.options[document.qualificationsForm.Language.selectedIndex].label;
 	}
 	if (document.qualificationsForm.LanguageList.length>0) {
 		document.qualificationsForm.ViewLanguageList.selectedIndex = 0;
@@ -75,7 +77,7 @@ function InitializationOnLoad()
 	// Visible contribution list
 	for (i=0; i<document.qualificationsForm.ContributionsListProject.length; i++) 
 	{
-		document.qualificationsForm.VisibleContributionsList.options[document.qualificationsForm.VisibleContributionsList.options.length] = new Option( document.qualificationsForm.ContributionsListProject[i].text + " " + document.qualificationsForm.ContributionsListDescription[i].text);
+		document.qualificationsForm.VisibleContributionsList.options[document.qualificationsForm.VisibleContributionsList.options.length] = new Option( document.qualificationsForm.ContributionsListProject[i].text + " " + document.qualificationsForm.ContributionsListDescription[i].text, document.qualificationsForm.ContributionsListProject[i].text + " " + document.qualificationsForm.ContributionsListDescription[i].text );
 	}
 }
 

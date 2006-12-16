@@ -35,7 +35,7 @@ function ResetLevels()
 	position = -1;
 	for (i=0; i<document.qualificationsForm.LanguageList.length; i++)
 	{
-		if ( document.qualificationsForm.LanguageList.options[i].text == document.qualificationsForm.Language.value )
+		if ( document.qualificationsForm.LanguageList.options[i].value == document.qualificationsForm.Language.value )
 		{
 			position = i;
 			break;
@@ -68,7 +68,7 @@ function UpdateIdiom() // If there is already the idiom we will realize an Updat
 	position = -1;
 	for (i=0; i<document.qualificationsForm.LanguageList.length; i++)
 	{
-		if ( document.qualificationsForm.LanguageList.options[i].text == document.qualificationsForm.Language.value )
+		if ( document.qualificationsForm.LanguageList.options[i].value == document.qualificationsForm.Language.value )
 		{
 			position = i;
 			break;
@@ -79,10 +79,10 @@ function UpdateIdiom() // If there is already the idiom we will realize an Updat
 	{
 		if ( document.qualificationsForm.languageSpokenLevel.value != "Null" || document.qualificationsForm.languageWrittenLevel.value != "Null" )
 		{
-			document.qualificationsForm.ViewLanguageList.options[document.qualificationsForm.ViewLanguageList.options.length] = new Option( document.qualificationsForm.Language.options[document.qualificationsForm.Language.selectedIndex].label +' '+ document.qualificationsForm.languageSpokenLevel.options[document.qualificationsForm.languageSpokenLevel.selectedIndex].label +' '+ document.qualificationsForm.languageWrittenLevel.options[document.qualificationsForm.languageWrittenLevel.selectedIndex].label );
-			document.qualificationsForm.LanguageList.options[document.qualificationsForm.LanguageList.options.length] = new Option(document.qualificationsForm.Language.value);
-			document.qualificationsForm.LanguageSpokenLevelList.options[document.qualificationsForm.LanguageSpokenLevelList.options.length] = new Option(document.qualificationsForm.languageSpokenLevel.value);
-			document.qualificationsForm.LanguageWrittenLevelList.options[document.qualificationsForm.LanguageWrittenLevelList.options.length] = new Option(document.qualificationsForm.languageWrittenLevel.value);
+			document.qualificationsForm.ViewLanguageList.options[document.qualificationsForm.ViewLanguageList.options.length] = new Option( document.qualificationsForm.Language.options[document.qualificationsForm.Language.selectedIndex].label +' '+ document.qualificationsForm.languageSpokenLevel.options[document.qualificationsForm.languageSpokenLevel.selectedIndex].label +' '+ document.qualificationsForm.languageWrittenLevel.options[document.qualificationsForm.languageWrittenLevel.selectedIndex].label, document.qualificationsForm.Language.options[document.qualificationsForm.Language.selectedIndex].label +' '+ document.qualificationsForm.languageSpokenLevel.options[document.qualificationsForm.languageSpokenLevel.selectedIndex].label +' '+ document.qualificationsForm.languageWrittenLevel.options[document.qualificationsForm.languageWrittenLevel.selectedIndex].label );
+			document.qualificationsForm.LanguageList.options[document.qualificationsForm.LanguageList.options.length] = new Option(document.qualificationsForm.Language.options[document.qualificationsForm.Language.selectedIndex].label, document.qualificationsForm.Language.value);
+			document.qualificationsForm.LanguageSpokenLevelList.options[document.qualificationsForm.LanguageSpokenLevelList.options.length] = new Option(document.qualificationsForm.languageSpokenLevel.value, document.qualificationsForm.languageSpokenLevel.value);
+			document.qualificationsForm.LanguageWrittenLevelList.options[document.qualificationsForm.LanguageWrittenLevelList.options.length] = new Option(document.qualificationsForm.languageWrittenLevel.value, document.qualificationsForm.languageWrittenLevel.value);
 
 			if (document.qualificationsForm.ViewLanguageList.selectedIndex>=0)
 				document.qualificationsForm.ViewLanguageList.options[document.qualificationsForm.ViewLanguageList.selectedIndex].selected = false;
@@ -96,7 +96,7 @@ function UpdateIdiom() // If there is already the idiom we will realize an Updat
 			document.qualificationsForm.ViewLanguageList.options[position].value = document.qualificationsForm.Language.options[document.qualificationsForm.Language.selectedIndex].label +' '+ document.qualificationsForm.languageSpokenLevel.options[document.qualificationsForm.languageSpokenLevel.selectedIndex].label +' '+ document.qualificationsForm.languageWrittenLevel.options[document.qualificationsForm.languageWrittenLevel.selectedIndex].label ;
 			document.qualificationsForm.ViewLanguageList.options[position].text = document.qualificationsForm.Language.options[document.qualificationsForm.Language.selectedIndex].label +' '+ document.qualificationsForm.languageSpokenLevel.options[document.qualificationsForm.languageSpokenLevel.selectedIndex].label +' '+ document.qualificationsForm.languageWrittenLevel.options[document.qualificationsForm.languageWrittenLevel.selectedIndex].label ;
 			document.qualificationsForm.LanguageList.options[position].value = document.qualificationsForm.Language.value;
-			document.qualificationsForm.LanguageList.options[position].text = document.qualificationsForm.Language.value;
+			document.qualificationsForm.LanguageList.options[position].text = document.qualificationsForm.Language.options[document.qualificationsForm.Language.selectedIndex].label;
 			document.qualificationsForm.LanguageWrittenLevelList.options[position].value = document.qualificationsForm.languageWrittenLevel.value;
 			document.qualificationsForm.LanguageWrittenLevelList.options[position].text = document.qualificationsForm.languageWrittenLevel.value;
 			document.qualificationsForm.LanguageSpokenLevelList.options[position].value = document.qualificationsForm.languageSpokenLevel.value;
