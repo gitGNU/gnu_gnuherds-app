@@ -166,24 +166,18 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 <td>{t}Professional profiles{/t}<br>
-<select name="ProfessionalProfileList[]" id="ProfessionalProfileList" size="{$professionalProfilesId|@count}" multiple="true" class="required" onChange="UpdateVacancyTitle()">
+<select name="ProfessionalProfileList[]" id="ProfessionalProfileList" size="{$professionalProfilesId|@count}" multiple="true" class="required" onChange="UpdateVacancyTitle();">
 {html_options values=$professionalProfilesId output=$professionalProfilesName selected=$smarty.session.jProfessionalProfileList}
 </select>
 </td>
 
 <td>{t}Field profiles{/t}<br>
-<select name="FieldProfileList[]" id="FieldProfileList" size="{$fieldProfilesId|@count}" multiple="true" class="notRequired" onChange="UpdateVacancyTitle()">
+<select name="FieldProfileList[]" id="FieldProfileList" size="{$fieldProfilesId|@count}" multiple="true" class="notRequired" onChange="UpdateVacancyTitle();">
 {html_options values=$fieldProfilesId output=$fieldProfilesName selected=$smarty.session.jFieldProfileList}
 </select>
 </td>
 
 </tr>
-
-
-
-
-
-
 
 <tr valign="top">
 <td align="right"><a href="javascript://" OnMouseOver="popup('{t escape='no'
@@ -247,10 +241,10 @@ Suite 225, San Francisco, CA 94107, USA
 
 <select name="ViewSkillList[]" id="ViewSkillList" size="3" multiple="true" class="notRequired" OnClick="{foreach from=$skillsBySets item=s key=setId} document.jobOfferForm.Skill_{$setId|strip:'_'}.value=''; {/foreach} {foreach from=$skillsBySets item=s key=setId} document.jobOfferForm.Skill_{$setId|strip:'_'}.value=document.jobOfferForm.SkillList[document.jobOfferForm.ViewSkillList.selectedIndex].value; {/foreach}  UpdateWithSelectedSkill();">
 </select><br>
-<a href="javascript://" OnClick="DeleteSkill(document.jobOfferForm.ViewSkillList.selectedIndex);"><strong>{t}Delete{/t}</strong></a>
+<a href="javascript://" OnClick="DeleteSkill(document.jobOfferForm.ViewSkillList.selectedIndex); UpdateVacancyTitle();"><strong>{t}Delete{/t}</strong></a>
 
 <div id="SkillLists" style="display:none">
-<select name="SkillList[]" id="SkillList" size="4" multiple="true"> <!-- Note: Commented due to it only raise the event if the new Object is selected.  onChange="UpdateVacancyTitle()"> -->
+<select name="SkillList[]" id="SkillList" size="4" multiple="true"> <!-- Note: Commented due to it only raise the event if the new Object is selected.  onChange="UpdateVacancyTitle();"> -->
 {html_options values=$smarty.session.jSkillList output=$smarty.session.jSkillList}
 </select><br>
 <select name="SkillKnowledgeLevelList[]" id="SkillKnowledgeLevelList" size="4" multiple="true">
@@ -269,14 +263,6 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
-
-
-
-
-
-
-
-
 <tr valign="top">
 <td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t escape='no'
   1='<br> <br>'
@@ -293,12 +279,12 @@ Suite 225, San Francisco, CA 94107, USA
 </select><br>
 
 {t}Spoken level{/t}:
-<select name="languageSpokenLevel" class="required" disabled onChange="UpdateIdiom();">
+<select name="languageSpokenLevel" class="required" disabled onChange="UpdateIdiom(); UpdateVacancyTitle();">
 {html_options values=$languagesSpokenLevelsId output=$languagesSpokenLevelsName}
 </select><br>
 
 {t}Written level{/t}:
-<select name="languageWrittenLevel" class="required" disabled onChange="UpdateIdiom();">
+<select name="languageWrittenLevel" class="required" disabled onChange="UpdateIdiom(); UpdateVacancyTitle();">
 {html_options values=$languagesWrittenLevelsId output=$languagesWrittenLevelsName}
 </select>
 
@@ -307,7 +293,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="center">
 <select name="ViewLanguageList[]" id="ViewLanguageList" size="4" multiple="true" class="required" OnClick="UpdateWithSelectedItem();">
 </select><br>
-<a href="javascript://" OnClick="DeleteItem(document.jobOfferForm.ViewLanguageList.selectedIndex);"><strong>{t}Delete{/t}</strong></a>
+<a href="javascript://" OnClick="DeleteItem(document.jobOfferForm.ViewLanguageList.selectedIndex); UpdateVacancyTitle();"><strong>{t}Delete{/t}</strong></a>
 
 <div id="LanguageLists" style="display:none">
 <select name="LanguageList[]" id="LanguageList" size="4" multiple="true">
