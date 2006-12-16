@@ -26,11 +26,11 @@ function AddContributionItem()
 	}
 	else
 	{
-		document.qualificationsForm.VisibleContributionsList.options[document.qualificationsForm.VisibleContributionsList.options.length] = new Option( document.qualificationsForm.ContributionProject.value + " " + document.qualificationsForm.ContributionDescription.value );
+		document.qualificationsForm.VisibleContributionsList.options[document.qualificationsForm.VisibleContributionsList.options.length] = new Option( document.qualificationsForm.ContributionProject.value + " " + document.qualificationsForm.ContributionDescription.value, document.qualificationsForm.ContributionProject.value + " " + document.qualificationsForm.ContributionDescription.value );
 
-		document.qualificationsForm.ContributionsListProject.options[document.qualificationsForm.ContributionsListProject.options.length] = new Option( document.qualificationsForm.ContributionProject.value );
-		document.qualificationsForm.ContributionsListDescription.options[document.qualificationsForm.ContributionsListDescription.options.length] = new Option( document.qualificationsForm.ContributionDescription.value );
-		document.qualificationsForm.ContributionsListURI.options[document.qualificationsForm.ContributionsListURI.options.length] = new Option( document.qualificationsForm.ContributionURI.value );
+		document.qualificationsForm.ContributionsListProject.options[document.qualificationsForm.ContributionsListProject.options.length] = new Option( document.qualificationsForm.ContributionProject.value, document.qualificationsForm.ContributionProject.value );
+		document.qualificationsForm.ContributionsListDescription.options[document.qualificationsForm.ContributionsListDescription.options.length] = new Option( document.qualificationsForm.ContributionDescription.value, document.qualificationsForm.ContributionDescription.value );
+		document.qualificationsForm.ContributionsListURI.options[document.qualificationsForm.ContributionsListURI.options.length] = new Option( document.qualificationsForm.ContributionURI.value, document.qualificationsForm.ContributionURI.value );
 
 		// Reset
 		document.qualificationsForm.ContributionProject.value = "";
