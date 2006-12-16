@@ -20,8 +20,6 @@ Suite 225, San Francisco, CA 94107, USA
 
 function UpdateVacancyTitle()
 {
-	const MAX_LENGTH = 100;
-
 	for (i=0; i<document.jobOfferForm.ProfessionalProfileList.length && document.jobOfferForm.ProfessionalProfileList[i].selected==false; i++)
 		;
 	if (i<document.jobOfferForm.ProfessionalProfileList.length)
@@ -30,19 +28,19 @@ function UpdateVacancyTitle()
 		document.jobOfferForm.VacancyTitle.value = 'Empty professional profile';
 
 	for (i++; i<document.jobOfferForm.ProfessionalProfileList.length; i++)
-		if ( document.jobOfferForm.ProfessionalProfileList[i].selected==true && ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.ProfessionalProfileList[i].value ).length < MAX_LENGTH )
+		if ( document.jobOfferForm.ProfessionalProfileList[i].selected==true && ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.ProfessionalProfileList[i].value ).length < 100 )
 			document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.ProfessionalProfileList[i].value;
 			
 	for (i=0; i<document.jobOfferForm.FieldProfileList.length; i++)
-		if ( document.jobOfferForm.FieldProfileList[i].selected==true && ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.FieldProfileList[i].value ).length < MAX_LENGTH )
+		if ( document.jobOfferForm.FieldProfileList[i].selected==true && ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.FieldProfileList[i].value ).length < 100 )
 			document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.FieldProfileList[i].value;
 			
 	for (i=0; i<document.jobOfferForm.SkillList.length; i++)
-		if ( ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.SkillList[i].value ).length < MAX_LENGTH )
+		if ( ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.SkillList[i].value ).length < 100 )
 			document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.SkillList[i].value;
 
 	for (i=0; i<document.jobOfferForm.LanguageList.length; i++)
-		if ( ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.LanguageList[i].value ).length < MAX_LENGTH )
+		if ( ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.LanguageList[i].value ).length < 100 )
 			document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.LanguageList[i].value;
 }
 
