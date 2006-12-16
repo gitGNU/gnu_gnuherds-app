@@ -35,7 +35,7 @@ function ResetLevels()
 	position = -1;
 	for (i=0; i<document.jobOfferForm.LanguageList.length; i++)
 	{
-		if ( document.jobOfferForm.LanguageList.options[i].text == document.jobOfferForm.Language.value )
+		if ( document.jobOfferForm.LanguageList.options[i].value == document.jobOfferForm.Language.value )
 		{
 			position = i;
 			break;
@@ -68,7 +68,7 @@ function UpdateIdiom() // If there is already the idiom we will realize an Updat
 	position = -1;
 	for (i=0; i<document.jobOfferForm.LanguageList.length; i++)
 	{
-		if ( document.jobOfferForm.LanguageList.options[i].text == document.jobOfferForm.Language.value )
+		if ( document.jobOfferForm.LanguageList.options[i].value == document.jobOfferForm.Language.value )
 		{
 			position = i;
 			break;
@@ -79,10 +79,10 @@ function UpdateIdiom() // If there is already the idiom we will realize an Updat
 	{
 		if ( document.jobOfferForm.languageSpokenLevel.value != "Null" || document.jobOfferForm.languageWrittenLevel.value != "Null" )
 		{
-			document.jobOfferForm.ViewLanguageList.options[document.jobOfferForm.ViewLanguageList.options.length] = new Option( document.jobOfferForm.Language.options[document.jobOfferForm.Language.selectedIndex].label +' '+ document.jobOfferForm.languageSpokenLevel.options[document.jobOfferForm.languageSpokenLevel.selectedIndex].label +' '+ document.jobOfferForm.languageWrittenLevel.options[document.jobOfferForm.languageWrittenLevel.selectedIndex].label );
-			document.jobOfferForm.LanguageList.options[document.jobOfferForm.LanguageList.options.length] = new Option(document.jobOfferForm.Language.value);
-			document.jobOfferForm.LanguageSpokenLevelList.options[document.jobOfferForm.LanguageSpokenLevelList.options.length] = new Option(document.jobOfferForm.languageSpokenLevel.value);
-			document.jobOfferForm.LanguageWrittenLevelList.options[document.jobOfferForm.LanguageWrittenLevelList.options.length] = new Option(document.jobOfferForm.languageWrittenLevel.value);
+			document.jobOfferForm.ViewLanguageList.options[document.jobOfferForm.ViewLanguageList.options.length] = new Option( document.jobOfferForm.Language.options[document.jobOfferForm.Language.selectedIndex].label +' '+ document.jobOfferForm.languageSpokenLevel.options[document.jobOfferForm.languageSpokenLevel.selectedIndex].label +' '+ document.jobOfferForm.languageWrittenLevel.options[document.jobOfferForm.languageWrittenLevel.selectedIndex].label, document.jobOfferForm.Language.options[document.jobOfferForm.Language.selectedIndex].label +' '+ document.jobOfferForm.languageSpokenLevel.options[document.jobOfferForm.languageSpokenLevel.selectedIndex].label +' '+ document.jobOfferForm.languageWrittenLevel.options[document.jobOfferForm.languageWrittenLevel.selectedIndex].label );
+			document.jobOfferForm.LanguageList.options[document.jobOfferForm.LanguageList.options.length] = new Option(document.jobOfferForm.Language.options[document.jobOfferForm.Language.selectedIndex].label, document.jobOfferForm.Language.value);
+			document.jobOfferForm.LanguageSpokenLevelList.options[document.jobOfferForm.LanguageSpokenLevelList.options.length] = new Option(document.jobOfferForm.languageSpokenLevel.value, document.jobOfferForm.languageSpokenLevel.value);
+			document.jobOfferForm.LanguageWrittenLevelList.options[document.jobOfferForm.LanguageWrittenLevelList.options.length] = new Option(document.jobOfferForm.languageWrittenLevel.value, document.jobOfferForm.languageWrittenLevel.value);
 
 			if (document.jobOfferForm.ViewLanguageList.selectedIndex>=0)
 				document.jobOfferForm.ViewLanguageList.options[document.jobOfferForm.ViewLanguageList.selectedIndex].selected = false;
@@ -96,7 +96,7 @@ function UpdateIdiom() // If there is already the idiom we will realize an Updat
 			document.jobOfferForm.ViewLanguageList.options[position].value = document.jobOfferForm.Language.options[document.jobOfferForm.Language.selectedIndex].label +' '+ document.jobOfferForm.languageSpokenLevel.options[document.jobOfferForm.languageSpokenLevel.selectedIndex].label +' '+ document.jobOfferForm.languageWrittenLevel.options[document.jobOfferForm.languageWrittenLevel.selectedIndex].label ;
 			document.jobOfferForm.ViewLanguageList.options[position].text = document.jobOfferForm.Language.options[document.jobOfferForm.Language.selectedIndex].label +' '+ document.jobOfferForm.languageSpokenLevel.options[document.jobOfferForm.languageSpokenLevel.selectedIndex].label +' '+ document.jobOfferForm.languageWrittenLevel.options[document.jobOfferForm.languageWrittenLevel.selectedIndex].label ;
 			document.jobOfferForm.LanguageList.options[position].value = document.jobOfferForm.Language.value;
-			document.jobOfferForm.LanguageList.options[position].text = document.jobOfferForm.Language.value;
+			document.jobOfferForm.LanguageList.options[position].text = document.jobOfferForm.Language.options[document.jobOfferForm.Language.selectedIndex].label;
 			document.jobOfferForm.LanguageWrittenLevelList.options[position].value = document.jobOfferForm.languageWrittenLevel.value;
 			document.jobOfferForm.LanguageWrittenLevelList.options[position].text = document.jobOfferForm.languageWrittenLevel.value;
 			document.jobOfferForm.LanguageSpokenLevelList.options[position].value = document.jobOfferForm.languageSpokenLevel.value;
