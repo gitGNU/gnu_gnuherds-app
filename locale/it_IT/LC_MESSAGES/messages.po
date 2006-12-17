@@ -324,13 +324,13 @@ msgid "An Office term will be 4 years.  All committee positions are voluntary, a
 msgstr "La duración del Cargo será de 4 años.  Todos los cargos del comité son voluntarios. Cualquier delegado puede renunciar en cualquier momento.  Después de 6 meses, si los afiliados están descontentos con un delegado pueden apartarlo/a de su cargo."
 
 msgid "Decisions"
-msgstr "Decisiones"
+msgstr "Decisioni"
 
 msgid "The goal of the committee is to administer the Association and execute the decisions taken by the members.  Therefore, all decisions will be voted upon by the membership."
 msgstr "La función del comité es administrar la Asociación y ejecutar las decisiones tomadas por los afiliados.  Por tanto, todas las decisiones serán votadas por los afiliados."
 
 msgid "Voting"
-msgstr "Votación"
+msgstr "Votazioni"
 
 msgid "In addition to the issues at hand in a vote, the option to abstain, delegate your vote to another individual, and delegate your vote to the committee shall be present.  Through membership options a member can set one of these to be the default if they do not vote.  The option will initially be set to abstain.  Officer elections, amendments or dissolutions may not be delegated."
 msgstr "Además de las opciones de voto disponibles en una votación concreta, estarán también presentes las opciones de: abstenerse, delegar el voto en otro individuo, y delegar el voto en el comité.  En la ficha de opciones de afiliado se podrá especificar una de estas opciones como defecto, la cual se aplicará si el afiliado no vota.  Esta opción será inicialmente configurada para abstenerse. Las elecciones de cargos, enmiendas o mociones de disolución no pueden ser delegadas."
@@ -345,29 +345,29 @@ msgid "See the %1e-Voting%2 Special Interest Group section. We could work on the
 msgstr "Véase la sección del grupo con interés especial en %1Voto electrónico%2. Se podría trabajar en el diseño del mecanismo oficial para votar."
 
 msgid "Amendments"
-msgstr "Enmiendas"
+msgstr "Emendamenti"
 
 msgid "Any member may motion for amendments to this Charter for any reason.  All proposed amendments will be put to a vote of the general membership."
 msgstr "Cualquier afiliado puede presentar enmiendas a este Estatuto. Todas las enmiendas propuestas serán sometidas al voto de los afiliados."
 
 msgid "Dissolution"
-msgstr "Disolución"
+msgstr "Dissoluzioni"
 
 msgid "The committee may motion for dissolution of the Association if they feel it is no longer serving a useful purpose.  Upon the motion being passed 75% of the membership must vote in favour of dissolution for it to occur."
 msgstr "El comité puede presentar una moción para la disolución de la Asociación si se piensa que ya no es útil.  Para que la moción sea aprovada, el 75% de los afiliados deben votar en favor de la disolución."
 
 msgid "Send comments to"
-msgstr "Envie comentarios a"
+msgstr "Invia commenti a"
 
 #
 # Timeline_content.tpl
 #
 
 msgid "DONE!"
-msgstr "¡HECHO!"
+msgstr "FATTO!"
 
 msgid "ONGOING PROCESS"
-msgstr "PROCESO EN CURSO"
+msgstr "PROCESSO IN CORSO"
 
 msgid "Add the member support."
 msgstr "Añadir el servicio de afiliados."
@@ -404,7 +404,7 @@ msgid "GNU Herds Hackers' Guide"
 msgstr "Guía del Hacker de GNU Herds"
 
 msgid "Introduction"
-msgstr "Introducción"
+msgstr "Introduzione"
 
 msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!."
 msgstr "Si usted quiere formar parte del equipo de GNU Herds, o simplemente colaborar esporádicamente, como algunos ya han hecho, puede %1subscribirse%2 a la lista de correo 'gnuherds-app-dev' o coordinarse con uno de los miembros del equipo. ¡Gracias!."
@@ -417,16 +417,16 @@ msgid "Read the current draft of %1GNU Herds' Charter%2."
 msgstr "Véase el borrador actual de los %1Estatutos de GNU Herds%2."
 
 msgid "Technologies"
-msgstr "Tecnologías"
+msgstr "Tecnologie"
 
 msgid "The project depends on the below technologies. Though it is and must be open to any proposal."
 msgstr "El proyecto utiliza las siguientes tecnologías. Aunque está y debe estar abierto a cualquier propuesta."
 
 msgid "%1CVS%2 server at %2Savannah%3"
-msgstr "Sevidor %1CVS%2 en %2Savannah%3"
+msgstr "Server %1CVS%2 su %2Savannah%3"
 
 msgid "Web application Architecture"
-msgstr "Arquitectura de la aplicación web"
+msgstr "Architettura dell'applicazione web"
 
 msgid "As a Free Software project we look for a modular and extensible design. We hope it could be easy to change the technology of a specific layer if it is needed."
 msgstr "Como proyecto de Software Libre se busca un diseño modular y extensible. Se espera que sea fácil cambiar la tecnología de una capa específica si es necesario."
@@ -435,10 +435,10 @@ msgid "This architecture proposal is based on PHP:"
 msgstr "Esta propuesta de arquitectura esta basada en PHP:"
 
 msgid "outdated"
-msgstr "desactualizado"
+msgstr "scaduto"
 
 msgid "Web application Design"
-msgstr "Diseño de la aplicación web"
+msgstr "Disegno dell'applicazione web"
 
 msgid "The Smarty templates could be moved outside this layer."
 msgstr "Las plantillas Smarty se podrían mover fuera de esta capa."
@@ -447,22 +447,22 @@ msgid "ADOdb is an external library. It is not being used yet. We give up about 
 msgstr "ADOdb es una librería externa. No se está utilizando todavía. Se ha dejado de lado la idea de usar una librería de abstracción de base de datos, y esta propuesta usará en su lugar simplemente %1PDO%2."
 
 msgid "Documentation of the new Data Base design:"
-msgstr "Documentación del nuevo diseño de Base de Datos:"
+msgstr "Documentazione del nuovo schema del Data Base:"
 
 msgid "Entity Relation logical model"
-msgstr "Modelo lógico Entidad Relación"
+msgstr "Modello logico relazionale delle entità"
 
 msgid "Physical model"
-msgstr "Modelo físico"
+msgstr "Modelo fisico"
 
 msgid "SQL Implementation"
-msgstr "Implementación en SQL"
+msgstr "Implementazione SQL"
 
 msgid "Coding Standards"
-msgstr "Estándares de codificación"
+msgstr "Coding Standars"
 
 msgid "Internationalization and Localization"
-msgstr "Internacionalización y localización"
+msgstr "Internazionalizzazione e Localizzazione"
 
 msgid "We will try to follow these %1Coding Standards%2."
 msgstr "Se intentará seguir estos %1Estándares de codificación%2."
@@ -474,13 +474,13 @@ msgid "CVS is used as repository. The HTTP server gets a tagged release via 'upd
 msgstr "CVS se usa como almacén. El servidor HTTP obtiene una release etiquetada via 'update' del servidor CVS."
 
 msgid "The TODO task list"
-msgstr "La lista de tareas (TODO)"
+msgstr "La lista dei task (TODO)"
 
 msgid "See the %1Task Manager%2 at Savannah."
-msgstr "Véase el %1Task Manager%2 en Savannah."
+msgstr "Guarda il %1Task Manager%2 su Savannah."
 
 msgid "The source code"
-msgstr "El código fuente"
+msgstr "Il cosice sorgente"
 
 msgid "If you do not like play with CVS, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2."
 msgstr "Si a usted no le gusta tratar con CVS, puede obtener una copia, quizas un poco desactualizada, de la website, en nuestro  Savannah %1Filelist (Download area)%2."
@@ -492,7 +492,7 @@ msgid "The source code can have 'XXX' flags, which are used to mark pending task
 msgstr "El código fuente puede contener etiquetas 'XXX', las cuales se usan para marcar tareas pendientes, etc."
 
 msgid "The CVS server"
-msgstr "El servidor CVS"
+msgstr "Il server CVS"
 
 msgid "The CVS of gnuherds-app is at %1Savannah%2. The PostgreSQL database and the website is at the gnuherds.org host."
 msgstr "El CVS de gnuherds-app está en %1Savannah%2. La base de datos PostgreSQL y la website están en gnuherds.org."
@@ -501,7 +501,7 @@ msgid "Though before getting write permision to the CVS repository it is usual t
 msgstr "Aunque antes de obtener permiso de escritura en el almacén CVS es usual probar el interés con algun parche, usted puede registrarse en la site de desarrollo Savannah y solicitar la entrada en el proyecto. Si lo solicita, no se preocupe, nadie le forzará a colaborar :) "
 
 msgid "Hints"
-msgstr "Consejos"
+msgstr "Consigli"
 
 msgid "%1Register%3 at %2Savannah%3"
 msgstr "%1Registrese%3 en %2Savannah%3"
@@ -519,34 +519,34 @@ msgid "Note: Use the -P option to avoid getting the old directories which are em
 msgstr "Nota: Use la opción -P para descartar los directorios antiguos que están vacíos."
 
 msgid "Now you can work:"
-msgstr "Ahora usted puede trabajar:"
+msgstr "Adesso puo lavorare:"
 
 msgid "To avoid writing the pass phrase at every cvs command:"
 msgstr "Para evitar tener que escribir la pass phrase con cada comando cvs:"
 
 msgid "The web site"
-msgstr "La web site"
+msgstr "Il sito web"
 
 msgid "It is in the gnuherds.org host."
 msgstr "Está en el servidor gnuherds.org."
 
 msgid "The PostgreSQL data base"
-msgstr "La base de datos PostgreSQL"
+msgstr "Il data base PostgreSQL"
 
 msgid "Creating from scratch. Follow the below steps:"
-msgstr "Partiendo desde cero. Siga los siguientes pasos:"
+msgstr "Partendo da zero. Segui i seguenti passi:"
 
 msgid "Create the data base"
-msgstr "Crear la base de datos"
+msgstr "Crerare la basa dati"
 
 msgid "Create the user, as super user"
-msgstr "Crear el usuario, como super usuario"
+msgstr "Creare l'utente come super utente"
 
 msgid "Grant permissions"
-msgstr "Conceder permisos"
+msgstr "Dare i permessi"
 
 msgid "Quit"
-msgstr "Salir"
+msgstr "Uscire"
 
 msgid "Create the initial state of the data base"
 msgstr "Crear el estado inicial de la base de datos"
@@ -555,44 +555,44 @@ msgid "Check that 'stderr' and 'stdout' do not show errors"
 msgstr "Comprobar que 'stderr' y 'stdout' no muestran errores"
 
 msgid "General references:"
-msgstr "Referencias generales:"
+msgstr "Referenze generali:"
 
 msgid "Email lists"
-msgstr "Listas de correo"
+msgstr "Liste di distribuzione"
 
 msgid "The old list archives:"
-msgstr "Los archivos de las listas antiguas:"
+msgstr "Archivi della lista:"
 
 msgid "The %1general%2 mailing list"
-msgstr "La lista de correo %1general%2"
+msgstr "Lista di sistribuzione %1general%2"
 
 msgid "The %1web-dev%2 mailing list"
-msgstr "La lista de correo %1web-dev%2"
+msgstr "Lista di distribuzione%1web-dev%2"
 
 msgid "Current work team"
-msgstr "Equipo de trabajo actual"
+msgstr "Gruppo di lavoro corrente"
 
 msgid "The list could be outdated:"
-msgstr "La lista podría estar desactualizada:"
+msgstr "La lista potrebbe essere non aggiornata:"
 
 #
 # FAQ_content.tpl
 #
 
 msgid "Frequently Asked Questions"
-msgstr "Preguntas frecuentes"
+msgstr "Domande Frequenti"
 
 msgid "FAQ"
 msgstr "FAQ"
 
 msgid "Index"
-msgstr "Índice"
+msgstr "Indice"
 
 msgid "Back to top"
-msgstr "Volver al Índice"
+msgstr "Torna all'indice"
 
 msgid "Why another Job Site?"
-msgstr "¿Porqué otra web de Empleo?"
+msgstr "Perchè un altro sito di offerte di lavoro?"
 
 msgid "Why develop a job site module if GNU Herds includes a %1jobsite list%2?."
 msgstr "¿Porqué desarrollar un módulo de web de Empleo si GNU Herds incluye una %1lista de web sites de empleo%2?."
@@ -628,10 +628,10 @@ msgid "Fill the %1Qualifications%2 form."
 msgstr "Rellene el formulario de %1Cualificaciones%2."
 
 msgid "Log in."
-msgstr "Entre."
+msgstr "Entrare."
 
 msgid "Subscribe to the offer."
-msgstr "Subscríbase a la oferta."
+msgstr "Sottoscrivi l'offerta."
 
 msgid "Note that some offers could allow to subscribe only to some entity types: Persons, Companies or non-profit Organizations."
 msgstr "Nótese que algunas ofertas podrían permitir subscribirse sólo a algunos tipos de entidades: Personas, Compañias o Organizaciones sin ánimo de lucro."
