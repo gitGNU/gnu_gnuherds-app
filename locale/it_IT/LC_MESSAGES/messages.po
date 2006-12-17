@@ -282,40 +282,40 @@ msgid "Aims"
 msgstr "Scopo"
 
 msgid "The aims of the Association shall be to %1encourage%2 the professional development of Free Software contributors."
-msgstr "Los objetivos de la Asociación serán %1fomentar%2 el desarrollo profesional de los que participan en la comunidad de Software Libre."
+msgstr "Gli scopo dell'Associazione sarà di %1incoraggiare%1 lo sviluppo professionale dei contributori del Software Libero."
 
 msgid "Membership"
-msgstr "Afiliación"
+msgstr "Affiliazione"
 
 msgid "There shall be two kinds of members, voting members, to be known simply as a member, and non-voting members, to be known as an associate member."
-msgstr "Habrá dos tipos de afiliados: con capacidad de voto, conocidos simplemente como afiliados, y sin capacidad de voto, conocidos como asociados."
+msgstr "Ci saranno due tipi di socio, soci votanti, semplicemente conosciuti come soci e soci non-votanti, che saranno semplicemente conosciuti come associati."
 
 msgid "All members must subscribe to the purposes of GNU Herds and adhere to the Code of Ethics at the penalty of their membership being revoked."
-msgstr "Todos los afiliados deben suscribir los propositos de GNU Herds y guardar el Código de Ética so pena de cancelación."
+msgstr "Tutti gli associati devono sottoscrivere lo scopo di GNU Herds e aderire al Codice Etico, pena la revoca dell'associazione."
 
 msgid "To qualify for voting membership one must show a contribution to the Free Software movement."
-msgstr "Para obtener la capacidad de voto se debe proporcionar una contribución al movimiento de Software Libre."
+msgstr "Per il diritto di voto occorre mostrare almeno un contributo al movimento Software Libero."
 
 msgid "Memberships will be on a yearly basis.  Even though membership is free of charge membership must be renewed."
-msgstr "Las afiliaciones se renovarán cada año.  Aunque afiliarse es gratis, debe ser renovada."
+msgstr "L'iscrizione e su base annua. Anche l'iscrizione è libera deve essere rinnovata."
 
 msgid "Committee"
-msgstr "Comité"
+msgstr "Comitato"
 
 msgid "The Committee shall consist of the following: the members of the system administrator team, the web master team, the certifications team, the translator teams, the Public Relations team and the Ethics Officer."
-msgstr "El Comité consistirá de: los miembros del equipo de administración de sistemas, el equipo de mantenimiento de la aplicación web, el equipo de gestión de certificaciones, los equipos de traducción de la aplicación web, el equipo de Relaciones Públicas y el Delegado de Ética."
+msgstr "Il comitato sarà così composto: I membri del gruppo system administrator, il gruppo dei web master, il gruppo di certificazione, i traduttori del gruppo, il gruppo Relazioni Publiche e gli ufficizali Etici."
 
 msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
-msgstr "Las responsabilidades del equipo de gestión de certificaciones serán evaluar, bajo petición, la certificación %1Free Software Contributor%2, la certificación %3GNU Business Network%4, etc. "
+msgstr "Il gruppo di certificazione, verificherà, su richiesta, le certificazioni %1Free Software Contributor%2, %3GNU Business Network%4, etc."
 
 msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure that: %1 %2the integrity of the GNU name is not breached and%3 %2the Association follows the %4Free Software%5 philosophy.%3 %6"
-msgstr "El Delegado de Ética será designado por la Free Software Foundation, Inc. para asegurar que: %1 %2la integridad del nombre GNU no sea alterada y que %3 %2la Asociación sigue la filosofía del %4Software Libre%5.%3 %6"
+msgstr "Gli Ufficiali Etici saranno designati dalla Free Software Foundation, Inc. per assicurare che: %1 %2l'integrità del nome GNU non sia alterata e che %3 %2l'Associazione persegua la filosofia del %4Software Libero%5.%3 %6""
 
 msgid "The Ethics Officer will suggest ways to maintain those values.  To ensure the Association follows The Free Software philosophy a set of rules will be built. Initially they can be gleaned directly from"
-msgstr "El Delegado de Ética sugerirá las vías para mantener esos valores.  Para asegurar que la Asociación sigue la filosofía del Software libre un conjunto de reglas serán escritas. Inicialmente pueden ser deducidas directamente de"
+msgstr "Gli Ufficiali Eitici suggeriranno il modo per mantenere questi valori. Per assicurare che l'Asscoiazione segua la filosofia del Software Libero verranno istituite delle regole. Inizialmente potranno essere dedotte direttamente da"
 
 msgid "The Ethic Officer is a general counsel whose job is to let the group know s/he thinks the Association is investing too much time on something that may jeopardize its status with the FSF."
-msgstr "El Delegado de Ética es un consejero general cuya tarea es hacer ver a la Asociación que está invirtiendo demasiado tiempo en algo que podría hacer peligrar su relación con la FSF."
+msgstr "L'Ufficiale Etico è un consigliere il cui lavoro è di far sapere al gruppo quando qualcuno sta facendo qualcosa che possa mettere in pericolo la sua relazione con FSF."
 
 msgid "While the Ethics Officer may choose to actively participate in the committee, it is not his primary duty. All other officers will be elected by the membership."
 msgstr "Aunque el Delegado de Ética puede participar activamente en el comité, no es su función principal. El resto de delegados serán elegidos por los afiliados."
