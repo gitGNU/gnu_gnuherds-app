@@ -41,6 +41,9 @@ function AddContributionItem()
 
 function DeleteContributionItem(position) 
 {
+	if (position == -1)
+		return;
+
 	// Delete the item
 	document.qualificationsForm.VisibleContributionsList.options[position] = null;
 
