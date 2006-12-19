@@ -158,7 +158,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td align="center">
 
-<select name="ViewSkillList[]" id="ViewSkillList" size="3" multiple="true" class="notRequired" OnClick="{foreach from=$skillsBySets item=s key=setId} document.qualificationsForm.Skill_{$setId|strip:'_'}.value=''; {/foreach} {foreach from=$skillsBySets item=s key=setId} document.qualificationsForm.Skill_{$setId|strip:'_'}.value=document.qualificationsForm.SkillList[document.qualificationsForm.ViewSkillList.selectedIndex].value; {/foreach}  UpdateWithSelectedSkill();">
+<select name="ViewSkillList[]" id="ViewSkillList" size="3" multiple="true" class="notRequired" OnClick="document.qualificationsForm.skillKnowledgeLevel.focus(); document.qualificationsForm.ViewSkillList.focus(); {foreach from=$skillsBySets item=s key=setId} document.qualificationsForm.Skill_{$setId|strip:'_'}.value=''; {/foreach} {foreach from=$skillsBySets item=s key=setId} document.qualificationsForm.Skill_{$setId|strip:'_'}.value=document.qualificationsForm.SkillList[document.qualificationsForm.ViewSkillList.selectedIndex].value; {/foreach}  UpdateWithSelectedSkill(true);">
 </select><br>
 <a href="javascript://" OnClick="DeleteSkill(document.qualificationsForm.ViewSkillList.selectedIndex);"><strong>{t}Delete{/t}</strong></a>
 
@@ -210,7 +210,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 <td align="center">
-<select name="ViewLanguageList[]" id="ViewLanguageList" size="4" multiple="true" class="required" OnClick="UpdateWithSelectedItem();">
+<select name="ViewLanguageList[]" id="ViewLanguageList" size="4" multiple="true" class="required" OnClick="UpdateWithSelectedItem(true);">
 </select><br>
 <a href="javascript://" OnClick="DeleteItem(document.qualificationsForm.ViewLanguageList.selectedIndex);"><strong>{t}Delete{/t}</strong></a>
 
