@@ -47,7 +47,7 @@ function InitializationOnLoad()
 	}
 	if (document.jobOfferForm.SkillList.length>0) {
 		document.jobOfferForm.ViewSkillList.selectedIndex = 0;
-		UpdateWithSelectedSkill();
+		UpdateWithSelectedSkill(false);
 		document.jobOfferForm.ViewSkillList.options[0].selected = false;
 	}
 
@@ -63,7 +63,7 @@ function InitializationOnLoad()
 	}
 	if (document.jobOfferForm.LanguageList.length>0) {
 		document.jobOfferForm.ViewLanguageList.selectedIndex = 0;
-		UpdateWithSelectedItem();
+		UpdateWithSelectedItem(false);
 		document.jobOfferForm.ViewLanguageList.options[0].selected = false;
 	}
 

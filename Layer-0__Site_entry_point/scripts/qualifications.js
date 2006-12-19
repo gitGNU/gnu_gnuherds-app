@@ -54,7 +54,7 @@ function InitializationOnLoad()
 	}
 	if (document.qualificationsForm.SkillList.length>0) {
 		document.qualificationsForm.ViewSkillList.selectedIndex = 0;
-		UpdateWithSelectedSkill();
+		UpdateWithSelectedSkill(false);
 		document.qualificationsForm.ViewSkillList.options[0].selected = false;
 	}
 
@@ -70,7 +70,7 @@ function InitializationOnLoad()
 	}
 	if (document.qualificationsForm.LanguageList.length>0) {
 		document.qualificationsForm.ViewLanguageList.selectedIndex = 0;
-		UpdateWithSelectedItem();
+		UpdateWithSelectedItem(false);
 		document.qualificationsForm.ViewLanguageList.options[0].selected = false;
 	}
 
