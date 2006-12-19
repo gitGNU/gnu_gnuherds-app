@@ -116,6 +116,9 @@ function UpdateSkill() // If there is already the skill we will realize an Updat
 
 function DeleteSkill(position)
 {
+	if (position == -1)
+		return;
+
 	// Delete the item
 	document.qualificationsForm.ViewSkillList.options[position] = null;
 	document.qualificationsForm.SkillList.options[position] = null;
@@ -140,11 +143,17 @@ function DeleteSkill(position)
 			document.qualificationsForm.ViewSkillList.options[position-1].selected = true;
 		}
 	}
-	UpdateWithSelectedSkill();
+	UpdateWithSelectedSkill(false);
 }
 
-function UpdateWithSelectedSkill() 
+function UpdateWithSelectedSkill(IE_workaround) 
 {
+	if ( IE_workaround == true ) // Workaround to IE 6.0 bug, that expose a wrong value on .selectedIndex;  Moving the focus, we get the right .selectedIndex value.
+	{
+		document.qualificationsForm.skillKnowledgeLevel.focus();
+		document.qualificationsForm.ViewSkillList.focus();
+	}
+
 	if (document.qualificationsForm.ViewSkillList.selectedIndex>=0)
 	{
 		document.qualificationsForm.Skill.value = document.qualificationsForm.SkillList[document.qualificationsForm.ViewSkillList.selectedIndex].value;

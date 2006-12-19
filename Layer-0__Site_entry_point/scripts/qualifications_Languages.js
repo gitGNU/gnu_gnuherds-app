@@ -116,6 +116,9 @@ function UpdateIdiom() // If there is already the idiom we will realize an Updat
 
 function DeleteItem(position)
 {
+	if (position == -1)
+		return;
+
 	// Delete the item
 	document.qualificationsForm.ViewLanguageList.options[position] = null;
 	document.qualificationsForm.LanguageList.options[position] = null;
@@ -140,11 +143,17 @@ function DeleteItem(position)
 			document.qualificationsForm.ViewLanguageList.options[position-1].selected = true;
 		}
 	}
-	UpdateWithSelectedItem();
+	UpdateWithSelectedItem(false);
 }
 
-function UpdateWithSelectedItem() 
+function UpdateWithSelectedItem(IE_workaround) 
 {
+	if ( IE_workaround == true ) // Workaround to IE 6.0 bug, that expose a wrong value on .selectedIndex;  Moving the focus, we get the right .selectedIndex value.
+	{
+		document.qualificationsForm.Language.focus();
+		document.qualificationsForm.ViewLanguageList.focus();
+	}
+
 	if (document.qualificationsForm.ViewLanguageList.selectedIndex>=0)
 	{
 		document.qualificationsForm.Language.value = document.qualificationsForm.LanguageList[document.qualificationsForm.ViewLanguageList.selectedIndex].value;
