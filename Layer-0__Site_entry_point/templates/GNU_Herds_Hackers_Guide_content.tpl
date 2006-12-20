@@ -483,7 +483,8 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr> <td><b>Bill</b>     <td>System administrator, architecture Adviser, etc.
 	<tr> <td><b>Charles</b>  <td>Auditor, Quality Assurance, etc.
 	<tr> <td><b>Davi</b>     <td>Web developer, CVS, Spanish Translator, etc.
-	<tr> <td><b>Fatima</b>   <td>Functional Auditor and Portuguese (Brazil) Translator.
+	<tr> <td><b>David</b>    <td>Italian Translator.
+	<tr> <td><b>Fatima</b>   <td>Functional Auditor.
 	<tr> <td><b>Gabriel</b>  <td>Data base Adviser.
 	<tr> <td><b>Jonas</b>    <td>GNU Business Network.
 	<tr> <td><b>Jose</b>     <td>Architecture Adviser.
@@ -491,6 +492,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr> <td><b>Martin</b>   <td>Auditor and Quality Assurance; he evaluates the project as a whole. Public Relations.
 	<tr> <td><b>Neal</b>     <td>Initial proposal, project Chapter, Public Relations, etc.
 	<tr> <td><b>RMS</b>      <td>Ethics Officer; he evaluates the project as a whole.
+	<tr> <td><b>Victor</b>   <td>Web developer.
 	</table>
 	</p>
 
