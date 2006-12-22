@@ -77,6 +77,8 @@ class WebPage
 					"es_CU" => true, "es_DO" => true, "es_EC" => true, "es_ES" => true, "es_GI" => true, "es_GT" => true,
 					"es_HN" => true, "es_MX" => true, "es_NI" => true, "es_PA" => true, "es_PE" => true, "es_PR" => true,
 					"es_PY" => true, "es_SV" => true, "es_US" => true, "es_UY" => true, "es_VE" => true,
+					"it" => true,
+					"it_IT" => true, "it_CH" => true
 				);
 
 				$chosen = HTTP::negotiateLanguage($supported);
@@ -94,6 +96,9 @@ class WebPage
 					      or $chosen == "es_HN" or $chosen == "es_MX" or $chosen == "es_NI" or $chosen == "es_PA" or $chosen == "es_PE" or $chosen == "es_PR"
 					      or $chosen == "es_PY" or $chosen == "es_SV" or $chosen == "es_US" or $chosen == "es_UY" or $chosen == "es_VE" )
 						$this->setLanguage("es_ES");
+					elseif ( $chosen == "it"
+					      or $chosen == "it_IT" or $chosen == "it_CH" )
+					    $this->setLanguage("it_IT");
 					else
 						$this->setLanguage($default_language);
 				}
@@ -108,6 +113,8 @@ class WebPage
 						$this->setLanguage("es_ES");
 					elseif ( $country_code == "US" or $country_code == "GB" )
 						$this->setLanguage("en_US");
+					elseif ( $country_code == "IT" )
+						$this->setLanguage("it_IT");
 					else
 						$this->setLanguage($default_language);
 				}
