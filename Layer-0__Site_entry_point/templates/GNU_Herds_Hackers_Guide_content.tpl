@@ -483,7 +483,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr> <td><b>Bill</b>     <td>System administrator, architecture Adviser, etc.
 	<tr> <td><b>Charles</b>  <td>Auditor, Quality Assurance, etc.
 	<tr> <td><b>Davi</b>     <td>Web developer, CVS, Spanish Translator, etc.
-	<tr> <td><b>David</b>    <td>Italian Translator.
+	<tr> <td><b>David</b>    <td>Web developer, Italian Translator.
 	<tr> <td><b>Fatima</b>   <td>Functional Auditor.
 	<tr> <td><b>Gabriel</b>  <td>Data base Adviser.
 	<tr> <td><b>Jonas</b>    <td>GNU Business Network.
