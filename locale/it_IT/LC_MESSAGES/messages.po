@@ -961,6 +961,12 @@ msgstr "Código postal"
 msgid "Country"
 msgstr "País"
 
+msgid "INTERACTIVE COMMUNICATION MEDIAS"
+msgstr "MEDIOS DE COMUNICACIÓN INTERACTIVOS"
+
+msgid "OTHER INFORMATION"
+msgstr "OTRA INFORMACIÓN"
+
 msgid "VOTING"
 msgstr "DERECHO DE VOTO"
 
@@ -1235,6 +1241,9 @@ msgstr "GENERAL"
 
 msgid "Filled automatically"
 msgstr "Rellenado automáticamente"
+
+msgid "Empty professional profile"
+msgstr "Perfil profesional vacío"
 
 msgid "The offer is closed"
 msgstr "La oferta ha finalizado"
