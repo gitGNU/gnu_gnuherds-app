@@ -966,24 +966,6 @@ msgstr "MEDIOS DE COMUNICACIÓN INTERACTIVOS"
 msgid "OTHER INFORMATION"
 msgstr "OTRA INFORMACIÓN"
 
-msgid "VOTING"
-msgstr "DERECHO DE VOTO"
-
-msgid "To qualify for voting membership  <br>one must show a contribution  <br>to the Free Software movement "
-msgstr "Para obtener el derecho de voto  <br>se debe mostrar una contribución  <br>al movimiento del Software Libre "
-
-msgid "Your Public Key"
-msgstr "Su clave pública"
-
-msgid "SURVEY"
-msgstr "ENCUESTA"
-
-msgid "What is your motivation  <br>to join <i>GNU Herds</i>? "
-msgstr "¿Porqué desea inscribirse  <br>en <i>GNU Herds</i>? "
-
-msgid "Media in which you have  <br>heard about <i>GNU Herds</i> "
-msgstr "¿Cómo conoció  <br><i>GNU Herds</i>? "
-
 msgid "Reset form"
 msgstr "Restaurar el formulario"
 
