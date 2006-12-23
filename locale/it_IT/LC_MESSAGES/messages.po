@@ -161,7 +161,7 @@ msgid "Log in"
 msgstr "Entra"
 
 msgid "This website is under construction. Any feedback, contribution or full redesign is welcome."
-msgstr "Questo sito &egrave; in costruzione. Ogni commento, contributo o un ridisegno totale sono benvenuti."
+msgstr "Questo sito è in costruzione. Ogni commento, contributo o un ridisegno totale sono benvenuti."
 
 msgid "Lost password?"
 msgstr "Perso la password?"
@@ -216,7 +216,7 @@ msgstr "Invia"
 #
 
 msgid "You are already logged!. So we suppose you know your password. Anyway, log out and ask for it again if you want we send it to you."
-msgstr "Hai gi&agrave; effettuato l'accesso! Per questo supponiamo che conosci la tua password. Ad ogni modo, esci e chiedila nuovamente se vuoi che te la rimandiamo."
+msgstr "Hai già effettuato l'accesso! Per questo supponiamo che conosci la tua password. Ad ogni modo, esci e chiedila nuovamente se vuoi che te la rimandiamo."
 
 msgid "For security reasons, GNU Herds does not send passwords by electronic mail."
 msgstr "Per ragioni di sicurezza, GNU Herds non invia passwords per posta elettronica."
@@ -225,16 +225,16 @@ msgid "To get your new password follow the below link:"
 msgstr "Per ottenere la tua nuova password, segui il link seguente:"
 
 msgid "If you have not asked for a new password, ignore it and your password will not be changed."
-msgstr "Se non hai chiesto una nuova password, ignoralo e la tua password non sar&agrave; cambiata."
+msgstr "Se non hai chiesto una nuova password, ignoralo e la tua password non sarà cambiata."
 
 msgid "An email has been sent to such address with the instructions to change the password."
-msgstr "Un'email &egrave; stata spedita all'indirizzo indicato con le istruzioni per cambiare la password."
+msgstr "Un'email è stata spedita all'indirizzo indicato con le istruzioni per cambiare la password."
 
 msgid "There is not member with that email!. Try again."
-msgstr "Non c'&egrave; nessun utente con quell'indirizzo di posta elettronica. Prova di nuovo."
+msgstr "Non c'è nessun utente con quell'indirizzo di posta elettronica. Prova di nuovo."
 
 msgid "Your new password is:"
-msgstr "La tua nuova password &egrave;:"
+msgstr "La tua nuova password è:"
 
 msgid "To improve your security, you should change your password after loging in."
 msgstr "Per migliorare la tua sicurezza, dovresti cambiare la password dopo aver effettuato l'accesso."
@@ -254,10 +254,10 @@ msgid "Under construction. Look at the %1Hackers' Guide%2."
 msgstr "In costruzione. Guarda la %1Guida dell'Hacker%2."
 
 msgid "GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors. %5Job Site%4 modules have been developed. It has been put together by a small %3team%4 of interested members of the Free Software community."
-msgstr "GNU Herds &egrave; un'associazione %1democratica%4 senza scopo di lucro, il cui %2obiettivo%4 &egrave; promuovere lo sviluppo professionale di coloro che contribuiscono al Software Libero. Sono stati realizzati alcuni moduli del %5Portale del lavoro%4. Attualmente un piccolo %3gruppo%4 di membri della comunit&agrave; del Software Libero sta lavorando ad esso."
+msgstr "GNU Herds è un'associazione %1democratica%4 senza scopo di lucro, il cui %2obiettivo%4 è promuovere lo sviluppo professionale di coloro che contribuiscono al Software Libero. Sono stati realizzati alcuni moduli del %5Portale del lavoro%4. Attualmente un piccolo %3gruppo%4 di membri della comunità del Software Libero sta lavorando ad esso."
 
 msgid "is the project main list."
-msgstr "&egrave; la lista principale del progetto."
+msgstr "è la lista principale del progetto."
 
 msgid "to carry on the web application development."
 msgstr "per continuare lo sviluppo dell'applicazione web."
@@ -276,13 +276,13 @@ msgid "Title"
 msgstr "Titolo"
 
 msgid "The name of the Association shall be GNU Herds, to be known publicly as GNU Herds - Free Software Association."
-msgstr "Il nome dell'Associazione sar&agrave; GNU Herds, conosciuta pubblicamente come GNU Herds - Free Software Association."
+msgstr "Il nome dell'Associazione sarà GNU Herds, conosciuta pubblicamente come GNU Herds - Associazione Software Libero."
 
 msgid "Aims"
 msgstr "Scopo"
 
 msgid "The aims of the Association shall be to %1encourage%2 the professional development of Free Software contributors."
-msgstr "Lo scopo dell'Associazione sar&agrave; di %1incoraggiare%1 lo sviluppo professionale dei contributori del Software Libero."
+msgstr "Lo scopo dell'Associazione sarà di %1incoraggiare%2 lo sviluppo professionale dei contributori del Software Libero."
 
 msgid "Membership"
 msgstr "Affiliazione"
@@ -297,46 +297,46 @@ msgid "To qualify for voting membership one must show a contribution to the Free
 msgstr "Per il diritto di voto occorre mostrare almeno un contributo al movimento Software Libero."
 
 msgid "Memberships will be on a yearly basis.  Even though membership is free of charge membership must be renewed."
-msgstr "L'iscrizione sar&agrave; su base annua. Sebbene l'iscrizione sia libera, deve essere rinnovata."
+msgstr "L'iscrizione sarà su base annua. Sebbene l'iscrizione sia libera, deve essere rinnovata."
 
 msgid "Committee"
 msgstr "Comitato"
 
 msgid "The Committee shall consist of the following: the members of the system administrator team, the web master team, the certifications team, the translator teams, the Public Relations team and the Ethics Officer."
-msgstr "Il Comitato sar&agrave; cos&igrave; composto: i membri del gruppo system administrator, il gruppo dei web master, il gruppo di certificazione, i traduttori del gruppo, il gruppo Relazioni Pubbliche e l'Ufficiale Etico."
+msgstr "Il Comitato sarà così composto: i membri del gruppo system administrator, il gruppo dei web master, il gruppo di certificazione, i traduttori del gruppo, il gruppo Relazioni Pubbliche e l'Ufficiale Etico."
 
 msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
-msgstr "Il gruppo di certificazione verificher&agrave;, su richiesta, le certificazioni %1Free Software Contributor%2, %3GNU Business Network%4, etc."
+msgstr "Il gruppo di certificazione verificherà, su richiesta, le certificazioni %1Free Software Contributor%2, %3GNU Business Network%4, etc."
 
 msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure that: %1 %2the integrity of the GNU name is not breached and%3 %2the Association follows the %4Free Software%5 philosophy.%3 %6"
-msgstr "L'Ufficiale Etico sar&agrave; designato dalla Free Software Foundation, Inc. per assicurare che: %1 %2l'integrità del nome GNU non sia alterata e che %3 %2l'Associazione persegua la filosofia del %4Software Libero%5.%3 %6"
+msgstr "L'Ufficiale Etico sarà designato dalla Free Software Foundation, Inc. per assicurare che: %1 %2l'integrità del nome GNU non sia alterata e che %3 %2l'Associazione persegua la filosofia del %4Software Libero%5.%3 %6"
 
 msgid "The Ethics Officer will suggest ways to maintain those values.  To ensure the Association follows The Free Software philosophy a set of rules will be built. Initially they can be gleaned directly from"
-msgstr "L'Ufficiale Etico suggerir&agrave; il modo per mantenere questi valori. Per assicurare che l'Asscoiazione segua la filosofia del Software Libero verranno istituite delle regole. Inizialmente potranno essere dedotte direttamente da"
+msgstr "L'Ufficiale Etico suggerirà il modo per mantenere questi valori. Per assicurare che l'Asscoiazione segua la filosofia del Software Libero verranno istituite delle regole. Inizialmente potranno essere dedotte direttamente da"
 
 msgid "The Ethic Officer is a general counsel whose job is to let the group know s/he thinks the Association is investing too much time on something that may jeopardize its status with the FSF."
-msgstr "L'Ufficiale Etico &egrave; un consigliere il cui lavoro &egrave; di far sapere al gruppo quando qualcuno sta facendo qualcosa che possa mettere in pericolo la sua relazione con FSF."
+msgstr "L'Ufficiale Etico è un consigliere il cui lavoro è di far sapere al gruppo quando qualcuno sta facendo qualcosa che possa mettere in pericolo la sua relazione con FSF."
 
 msgid "While the Ethics Officer may choose to actively participate in the committee, it is not his primary duty. All other officers will be elected by the membership."
-msgstr "Sebbene l'Ufficiale Etico possa decidere di partecipare attivamente al comitato, non &egrave; il suo compito primario. Tutti gli altri ufficiali saranno eletti dai soci."
+msgstr "Sebbene l'Ufficiale Etico possa decidere di partecipare attivamente al comitato, non è il suo compito primario. Tutti gli altri ufficiali saranno eletti dai soci."
 
 msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or his out of office."
-msgstr "La durata di una Carica sar&agrave; di 4 anni.  Tutte le posizioni del comitato sono volontarie, un ufficiale pu&ograve; rinunciare in qualunque momento.  Dopo 6 mesi, se i soci non sono soddisfatti di un ufficiale, possono rimuoverlo dall'incarico."
+msgstr "La durata di una Carica sarà di 4 anni.  Tutte le posizioni del comitato sono volontarie, un ufficiale può rinunciare in qualunque momento.  Dopo 6 mesi, se i soci non sono soddisfatti di un ufficiale, possono rimuoverlo dall'incarico."
 
 msgid "Decisions"
 msgstr "Decisioni"
 
 msgid "The goal of the committee is to administer the Association and execute the decisions taken by the members.  Therefore, all decisions will be voted upon by the membership."
-msgstr "La funzione del comitato &egrave; di amministrare l'Associazione ed eseguire le decisioni prese dai membri.  Pertanto tutte le decisioni saranno votate dai soci."
+msgstr "La funzione del comitato è di amministrare l'Associazione ed eseguire le decisioni prese dai membri.  Pertanto tutte le decisioni saranno votate dai soci."
 
 msgid "Voting"
 msgstr "Votazioni"
 
 msgid "In addition to the issues at hand in a vote, the option to abstain, delegate your vote to another individual, and delegate your vote to the committee shall be present.  Through membership options a member can set one of these to be the default if they do not vote.  The option will initially be set to abstain.  Officer elections, amendments or dissolutions may not be delegated."
-msgstr "In aggiunta alle opzioni di voto in una situazione concreta, dovrebbero essere presenti l'opzione di astenersi, delegare il voto ad un altro individuo e delegare il voto al comitato.  Attraverso le opzioni di affiliazione, un socio pu&ograve; impostare una di queste opzioni come predefinita in caso non voti.  L'opzione verr&agrave; inizialmente impostata sull'astensione.  Le elezioni degli Ufficiali, emendamenti o dissoluzioni non possono essere delegati."
+msgstr "In aggiunta alle opzioni di voto in una situazione concreta, dovrebbero essere presenti l'opzione di astenersi, delegare il voto ad un altro individuo e delegare il voto al comitato.  Attraverso le opzioni di affiliazione, un socio può impostare una di queste opzioni come predefinita in caso non voti.  L'opzione verrà inizialmente impostata sull'astensione.  Le elezioni degli Ufficiali, emendamenti o dissoluzioni non possono essere delegati."
 
 msgid "Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed to discuss it is too long should there be a vote.%2Vote on non-technical subjects.%3"
-msgstr "Linee guida: %1Non votare su temi tecnici. Semplicemente discutilo per ottenere la migliore soluzione tecnica. Solo se il tempo necessario alla discussione &egrave; troppo dovrebbe esserci una votazione.%2Vota invece su temi non tecnici.%3"
+msgstr "Linee guida: %1Non votare su temi tecnici. Semplicemente discutilo per ottenere la migliore soluzione tecnica. Solo se il tempo necessario alla discussione è troppo dovrebbe esserci una votazione.%2Vota invece su temi non tecnici.%3"
 
 msgid "Special Interest Groups will be formed at the discretion of the committee based on the demand within the membership."
 msgstr "Gruppi con Interessi Speciali saranno formati a discrezione del comitato in base alle richieste dei soci."
@@ -348,13 +348,13 @@ msgid "Amendments"
 msgstr "Emendamenti"
 
 msgid "Any member may motion for amendments to this Charter for any reason.  All proposed amendments will be put to a vote of the general membership."
-msgstr "Qualunque socio pu&ograve; presentare emendamenti a questo Statuto per qualunque ragione.  Tutti gli emendamenti proposti verranno messi al voto dei soci."
+msgstr "Qualunque socio può presentare emendamenti a questo Statuto per qualunque ragione.  Tutti gli emendamenti proposti verranno messi al voto dei soci."
 
 msgid "Dissolution"
 msgstr "Dissoluzioni"
 
 msgid "The committee may motion for dissolution of the Association if they feel it is no longer serving a useful purpose.  Upon the motion being passed 75% of the membership must vote in favour of dissolution for it to occur."
-msgstr "Il comitato pu&ograve; presentare una mozione per la dissoluzione dell'Associazione se si pensa che non &egrave; pi&ugrave; utile.  Affinch&eacute; la mozione sia approvata, il 75% dei soci deve votare a favore."
+msgstr "Il comitato può presentare una mozione per la dissoluzione dell'Associazione se si pensa che non è più utile.  Affinché la mozione sia approvata, il 75% dei soci deve votare a favore."
 
 msgid "Send comments to"
 msgstr "Invia commenti a"
@@ -376,7 +376,7 @@ msgid "Add the FS Job Offers support."
 msgstr "Aggiungere il supporto Offerte di Impiego FS."
 
 msgid "Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed."
-msgstr "Inviare un piccolo rapporto di progresso, con riferimento a questo sito web, a Richard Stallman, cosicch&eacute; possa rivedere le nostre attivit&agrave; e dirci, nel caso ce ne fosse bisogno, cosa deve essere cambiato."
+msgstr "Inviare un piccolo rapporto di progresso, con riferimento a questo sito web, a Richard Stallman, cosicché possa rivedere le nostre attività e dirci, nel caso ce ne fosse bisogno, cosa deve essere cambiato."
 
 msgid "Association announcement."
 msgstr "Annuncio dell'Associazione."
@@ -592,7 +592,7 @@ msgid "Back to top"
 msgstr "Torna all'indice"
 
 msgid "Why another Job Site?"
-msgstr "Perch&eacute; un altro sito di offerte di lavoro?"
+msgstr "Perché un altro sito di offerte di lavoro?"
 
 msgid "Why develop a job site module if GNU Herds includes a %1jobsite list%2?."
 msgstr "¿Porqué desarrollar un módulo de web de Empleo si GNU Herds incluye una %1lista de web sites de empleo%2?."
@@ -1679,7 +1679,7 @@ msgid "Heard and McDonald Islands"
 msgstr "Islas Heard y McDonald"
 
 msgid "Holy See (Vatican City State)"
-msgstr "Citt&agrave; del Vaticano"
+msgstr "Città del Vaticano"
 
 msgid "Honduras"
 msgstr "Honduras"
@@ -1904,7 +1904,7 @@ msgid "Paraguay"
 msgstr "Paraguay"
 
 msgid "Peru"
-msgstr "Per&ugrave;"
+msgstr "Perù"
 
 msgid "Philippines"
 msgstr "Filippine"
@@ -3058,7 +3058,7 @@ msgid "Creative design"
 msgstr "Disegno creativo"
 
 msgid "Quality Assurance"
-msgstr "Controllo di qualit&agrave;"
+msgstr "Controllo di qualità"
 
 #
 # Data Base LP_ProfessionalProfiles table
@@ -3166,7 +3166,7 @@ msgid "Vacation cover"
 msgstr "Copertura vacanze"
 
 msgid "Maternity cover"
-msgstr "Copertura maternit&agrave;"
+msgstr "Copertura maternità"
 
 msgid "Training"
 msgstr "Formazione"
@@ -3369,5 +3369,5 @@ msgid "up to 10 years"
 msgstr "fino a 10 anni"
 
 msgid "more than 10 years"
-msgstr "pi&ugrave; di 10 anni"
+msgstr "più di 10 anni"
 
