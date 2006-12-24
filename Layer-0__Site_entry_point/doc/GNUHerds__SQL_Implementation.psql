@@ -234,7 +234,6 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         --------------------------------------------------------------------------
 	-- Various
         E1_BirthYear       char(4), -- NOT NULL CHECK (Q1_BirthYear <> ''),
-	E1_Photo           bytea, -- Person's photo, or company or non-profit Organization photo.
 
         --------------------------------------------------------------------------
         -- Access Control List (ACL): List the Certifications which this entity requires to its contractors entities or contracted entities.
