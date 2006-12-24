@@ -158,7 +158,7 @@ class ViewQualificationsForm
 		$_SESSION['ViewNationality'] = $result[9][0];
 
 		$_SESSION['ViewBirthYear'] = $result[10][0];
-		$_SESSION['ViewPhoto'] = $result[11][0];
+		$_SESSION['ViewPhoto'] = '';
 
 		$_SESSION['ViewIpPhoneOrVideo'] = $result[12][0];
 		$_SESSION['ViewLandline'] = $result[13][0];
