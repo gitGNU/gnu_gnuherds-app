@@ -34,7 +34,7 @@ Suite 225, San Francisco, CA 94107, USA
 <li> <a href="#The_web_site" style='text-decoration: none;' target="_top">{t}The web site{/t}</a>
 <li> <a href="#The_PostgreSQL_data_base" style='text-decoration: none;' target="_top">{t}The PostgreSQL data base{/t}</a>
 <li> <a href="#Email_lists" style='text-decoration: none;' target="_top">{t}Email lists{/t}</a>
-<li> <a href="#How_to_install_a_development_environment" style='text-decoration: none;' target="_top">{t}How to install a development environment{/t}</a>
+<li> <a href="#How_to_install_a_development_environment" style='text-decoration: none;' target="_top">{t}How to install a development environment?{/t}</a>
 <!-- XXX <li> <a href="#How_to_kill_spam_by_hand_at_our_email_lists" style='text-decoration: none;' target="_top">{t}How to kill spam by hand at our email lists{/t}</a> -->
 <li> <a href="#Current_work_team" style='text-decoration: none;' target="_top">{t}Current work team{/t}</a>
 </ol>
@@ -475,18 +475,18 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>14. {t}How to install a development environment{/t} <a name="How_to_install_a_development_environment"></a> </h4>
+<h4>14. {t}How to install a development environment?{/t} <a name="How_to_install_a_development_environment"></a> </h4>
 
 <ul>
-	<li>{t}Install{/t} PostgreSQL
-	<li><a href="/GNU_Herds_Hackers_Guide.php#The_PostgreSQL_data_base">{t}Configure{/t}</a> PostgreSQL
-	<li>{t}Install{/t} Apache HTTP server; apache2, libapache2-mod-encoding
-	<li>{t}Install{/t} PHP; libapache2-mod-php5
-	<li>{t}Install{/t} GeoIP; libgeoip1, geoip-bin, libapache2-mod-geoip
-	<li>{t}Install{/t} Smarty; smarty
-	<li>{t}Install{/t} PHP PEAR module for HTTP related stuff; php-http, php-pear
-	<li>{t}Configure{/t} Apache HTTP server <a href="/doc/conf/apache_virtual_domain.conf">virtual domain</a>
-	<li>{t}Configure{/t} PHP <a href="/doc/conf/php.ini">php.ini</a>
+	<li>{t}Install{/t}: PostgreSQL
+	<li><a href="/GNU_Herds_Hackers_Guide.php#The_PostgreSQL_data_base">{t}Configure{/t}</a>: PostgreSQL
+	<li>{t}Install{/t}: Apache HTTP server -- apache2, libapache2-mod-encoding
+	<li>{t}Install{/t}: PHP -- libapache2-mod-php5
+	<li>{t}Install{/t}: GeoIP -- libgeoip1, geoip-bin, libapache2-mod-geoip
+	<li>{t}Install{/t}: Smarty -- smarty
+	<li>{t}Install{/t}: PHP PEAR module for HTTP related stuff -- php-http, php-pear
+	<li>{t}Configure{/t}: Apache HTTP server -- <a href="/doc/conf/apache_virtual_domain.conf">virtual domain</a>
+	<li>{t}Configure{/t}: PHP -- <a href="/doc/conf/php.ini">php.ini</a>
 </ul>
 
 <center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
