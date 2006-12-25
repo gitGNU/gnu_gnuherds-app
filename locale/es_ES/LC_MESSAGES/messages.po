@@ -1034,12 +1034,6 @@ msgstr "ACTUALIZAR DATOS DE EMPRESA"
 msgid "COMPANY"
 msgstr "EMPRESA"
 
-msgid "Company name"
-msgstr "Nombre de la empresa"
-
-msgid "Company website"
-msgstr "Website de la empresa"
-
 msgid "to be linked in your Job Offers. Full URL, ie."
 msgstr "a ser incluida en sus ofertas de empleo. Ej."
 

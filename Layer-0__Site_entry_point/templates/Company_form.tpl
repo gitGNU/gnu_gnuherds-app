@@ -53,11 +53,11 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="2" class="subsection">{t}COMPANY{/t}</td> </tr>
 <!-- Name -->
 <tr>
-<td align="right"><span class="must">*</span>{'Company name'|gettext|strip:'&nbsp;'}&nbsp;: </td>
+<td align="right"><span class="must">*</span>{t}Name{/t} : </td>
 <td> <input type="text" name="CompanyName" size="20" maxlength="30" class="required" value="{$smarty.session.CompanyName}"> </td>
 </tr>
 <tr valign="top">
-<td align="right">{t}Company website{/t} : </td>
+<td align="right">{t}Website{/t} : </td>
 <td> <input type="text" name="Website" size="20" maxlength="30" class="notRequired" value="{$smarty.session.Website}"> {t}to be linked in your Job Offers. Full URL, ie.{/t}: <a href="http://lwn.net/" target="_blank">http://lwn.net/</a></td>
 </tr>
 

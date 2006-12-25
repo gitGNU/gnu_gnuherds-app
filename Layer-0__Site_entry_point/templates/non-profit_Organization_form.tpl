@@ -53,7 +53,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="2" class="subsection">{t}NONPROFIT{/t}</td> </tr>
 <!-- Name -->
 <tr>
-<td align="right"><span class="must">*</span>{'Name'|gettext} : </td>
+<td align="right"><span class="must">*</span>{t}Name{/t} : </td>
 <td> <input type="text" name="NonprofitName" size="20" maxlength="30" class="required" value="{$smarty.session.NonprofitName}"> </td>
 </tr>
 <tr valign="top">
