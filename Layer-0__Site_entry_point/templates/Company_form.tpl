@@ -35,7 +35,6 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="2">&nbsp;</td> </tr>
 <tr> <td colspan="2" class="subsection">{t}ACCOUNT IDENTIFICATION{/t}</td> </tr>
-<!-- Account identification -->
 <tr>
 <td align="right"><span class="must">*</span>email : </td>
 <td> <input type="text" name="Email" size="60" maxlength="60" class="required" value="{$smarty.session.Email}"> </td>
@@ -51,7 +50,6 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="2">&nbsp;</td> </tr>
 <tr> <td colspan="2" class="subsection">{t}COMPANY{/t}</td> </tr>
-<!-- Name -->
 <tr>
 <td align="right"><span class="must">*</span>{t}Name{/t} : </td>
 <td> <input type="text" name="CompanyName" size="20" maxlength="30" class="required" value="{$smarty.session.CompanyName}"> </td>
@@ -72,7 +70,6 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="2">&nbsp;</td> </tr>
 <tr> <td colspan="2" class="subsection">{t}ADDRESS{/t}</td> </tr>
-<!-- Address -->
 <tr>
 <td align="right">{t}Street{/t} : </td>
 <td> <input type="text" name="Street" size="60" maxlength="80" class="notRequired" value="{$smarty.session.Street}"> </td>
