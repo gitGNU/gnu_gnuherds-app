@@ -126,9 +126,6 @@ msgstr "Redes de Negocios FS"
 msgid "FS Job Offers"
 msgstr "Ofertas de empleo FS"
 
-msgid "FS job sites"
-msgstr "Web sites de empleo FS"
-
 msgid "FS job articles"
 msgstr "Artículos de empleo FS"
 
