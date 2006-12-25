@@ -25,7 +25,7 @@ function UpdateVacancyTitle()
 	if (i<document.jobOfferForm.ProfessionalProfileList.length)
 		document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.ProfessionalProfileList[i].text;
 	else
-		document.jobOfferForm.VacancyTitle.value = 'Empty professional profile';
+		document.jobOfferForm.VacancyTitle.value = document.jobOfferForm.VacancyTitleWarningMessage.value;
 
 	for (i++; i<document.jobOfferForm.ProfessionalProfileList.length; i++)
 		if ( document.jobOfferForm.ProfessionalProfileList[i].selected==true && ( document.jobOfferForm.VacancyTitle.value + ", " + document.jobOfferForm.ProfessionalProfileList[i].value ).length < 100 )

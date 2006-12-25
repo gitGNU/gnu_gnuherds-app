@@ -55,6 +55,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr valign="top">
 <td align="right">{t}Vacancy title{/t} : </td>
 <td colspan="3"> <input type="text" name="VacancyTitle" size="65" maxlength="100" value="{t}Filled automatically{/t}" disabled> </td>
+<input type="hidden" name="VacancyTitleWarningMessage" value="{t}Empty professional profile{/t}">
 </tr>
 
 <tr valign="top">
