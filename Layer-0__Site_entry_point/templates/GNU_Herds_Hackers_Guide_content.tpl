@@ -487,6 +487,22 @@ Suite 225, San Francisco, CA 94107, USA
 	<li>{t}Install{/t}: PHP PEAR module for HTTP related stuff -- php-http, php-pear
 	<li>{t}Configure{/t}: Apache HTTP server -- <a href="/doc/conf/apache_virtual_domain.conf">virtual domain</a>
 	<li>{t}Configure{/t}: PHP -- <a href="/doc/conf/php.ini">php.ini</a>
+<li>
+<pre>
+cd Layer-0__Site_entry_point
+ln -s Home.php index.php
+</pre>
+
+<li>
+<pre>
+cd locale/es_ES/LC_MESSAGES
+msgfmt messages.po
+locale/it_IT/LC_MESSAGES
+msgfmt messages.po
+...
+/etc/init.d/apache2 reload
+</pre>
+
 </ul>
 
 <center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
