@@ -370,13 +370,13 @@ msgid "Add the FS Job Offers support."
 msgstr "Añadir el servicio de Ofertas de Empleo de Software Libre."
 
 msgid "Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed."
-msgstr "Enviar un pequeño informe, con referencia a esta web site, a Richard Stallman para que revise nuestro trabajo y nos diga si debemos cambiar algo."
+msgstr "Enviar un pequeño informe, con referencia a este sitio web, a Richard Stallman para que revise nuestro trabajo y nos diga si debemos cambiar algo."
 
 msgid "Association announcement."
 msgstr "Anuncio de la Asociación."
 
 msgid "Translate the web site to other languages."
-msgstr "Traducir la web site a otros lenguajes."
+msgstr "Traducir el sitio web a otros lenguajes."
 
 msgid "Work on e-Vote subjects:"
 msgstr "Trabajar en temas de voto electrónico:"
@@ -476,7 +476,7 @@ msgid "The source code"
 msgstr "El código fuente"
 
 msgid "If you do not like play with CVS, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2."
-msgstr "Si a usted no le gusta tratar con CVS, puede obtener una copia, quizas un poco desactualizada, de la website, en nuestro  Savannah %1Filelist (Download area)%2."
+msgstr "Si a usted no le gusta tratar con CVS, puede obtener una copia, quizas un poco desactualizada, del sitio web, en nuestro  Savannah %1Filelist (Download area)%2."
 
 msgid "You could set up all the required %1Technologies%2 on your host, to be used as your development environment."
 msgstr "Usted podría instalar todas las %1Tecnologías%2 requeridas en su equipo, para usarlo como su entorno de desarrollo."
@@ -488,10 +488,10 @@ msgid "The CVS server"
 msgstr "El servidor CVS"
 
 msgid "The CVS of gnuherds-app is at %1Savannah%2. The PostgreSQL database and the website is at the gnuherds.org host."
-msgstr "El CVS de gnuherds-app está en %1Savannah%2. La base de datos PostgreSQL y la website están en gnuherds.org."
+msgstr "El CVS de gnuherds-app está en %1Savannah%2. La base de datos PostgreSQL y el sitio web están en gnuherds.org."
 
 msgid "Though before getting write permision to the CVS repository it is usual to prove the interest with some patch, you can register at the Savannah development site and ask to join the project. Do not fear, if you join, nobody will force you to contribute :) "
-msgstr "Aunque antes de obtener permiso de escritura en el almacén CVS es usual probar el interés con algun parche, usted puede registrarse en la site de desarrollo Savannah y solicitar la entrada en el proyecto. Si lo solicita, no se preocupe, nadie le forzará a colaborar :) "
+msgstr "Aunque antes de obtener permiso de escritura en el almacén CVS es usual probar el interés con algun parche, usted puede registrarse en el sitio de desarrollo Savannah y solicitar la entrada en el proyecto. Si lo solicita, no se preocupe, nadie le forzará a colaborar :) "
 
 msgid "Hints"
 msgstr "Consejos"
@@ -518,7 +518,7 @@ msgid "To avoid writing the pass phrase at every cvs command:"
 msgstr "Para evitar tener que escribir la pass phrase con cada comando cvs:"
 
 msgid "The web site"
-msgstr "La web site"
+msgstr "El sitio web"
 
 msgid "It is in the gnuherds.org host."
 msgstr "Está en el servidor gnuherds.org."
@@ -606,7 +606,7 @@ msgid "Make it easy the contacts among persons and companies interested in Free 
 msgstr "Facilitar los contactos entre personas y compañias interesadas en los negocios con Software Libre."
 
 msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
-msgstr "Teniendo un alcance global, facilitar los modelos de negocio basados en el teletrabajo. Con las tecnologías futuras la ubicación no debe ser un obstáculo para suministrar servicios de Tecnologías de la Información. De ahí el objetivo, ya alcanzado, de traducir la web site a otros lenguajes, y hacer posible que una oferta de empleo pueda ser expuesta en varios lenguajes."
+msgstr "Teniendo un alcance global, facilitar los modelos de negocio basados en el teletrabajo. Con las tecnologías futuras la ubicación no debe ser un obstáculo para suministrar servicios de Tecnologías de la Información. De ahí el objetivo, ya alcanzado, de traducir el sitio web a otros lenguajes, y hacer posible que una oferta de empleo pueda ser expuesta en varios lenguajes."
 
 msgid "All this taking into account that: \"The %1aims%2 of the Association shall be to encourage the professional development of Free Software contributors.\""
 msgstr "Todo esto teniendo en cuenta que: \"Los %1objetivos%2 de la Asociación serán fomentar el desarrollo profesional de los que participan en la comunidad de Software Libre.\""
@@ -800,7 +800,7 @@ msgstr "Subscribirse a esta oferta"
 #
 
 msgid "web site"
-msgstr "web site"
+msgstr "sitio web"
 
 msgid "Landline"
 msgstr "Teléfono fijo"
@@ -1058,7 +1058,7 @@ msgid "Name"
 msgstr "Nombre"
 
 msgid "Web site"
-msgstr "Web site"
+msgstr "Sitio web"
 
 # non-profit_Organization_form.php
 

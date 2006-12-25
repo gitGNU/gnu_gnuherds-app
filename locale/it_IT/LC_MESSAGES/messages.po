@@ -593,7 +593,7 @@ msgid "Make it easy the contacts among persons and companies interested in Free 
 msgstr "Facilitare i contatti tra persone e aziende interessate nel business Free Software."
 
 msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
-msgstr "Teniendo un alcance global, facilitar los modelos de negocio basados en el teletrabajo. Con las tecnologías futuras la ubicación no debe ser un obstáculo para suministrar servicios de Tecnologías de la Información. De ahí el objetivo, ya alcanzado, de traducir la web site a otros lenguajes, y hacer posible que una oferta de empleo pueda ser expuesta en varios lenguajes."
+msgstr "Teniendo un alcance global, facilitar los modelos de negocio basados en el teletrabajo. Con las tecnologías futuras la ubicación no debe ser un obstáculo para suministrar servicios de Tecnologías de la Información. De ahí el objetivo, ya alcanzado, de traducir el sitio web a otros lenguajes, y hacer posible que una oferta de empleo pueda ser expuesta en varios lenguajes."
 
 msgid "All this taking into account that: \"The %1aims%2 of the Association shall be to encourage the professional development of Free Software contributors.\""
 msgstr "Tutto questo tenendo in conto che: \"Lo %1scopo%2 dell'Associazione dovrebbe essere incoraggiare lo sviluppo professionale di coloro che partecipano nella comunità del Free Software.\""
