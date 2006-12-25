@@ -55,7 +55,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td> <input type="text" name="CompanyName" size="20" maxlength="30" class="required" value="{$smarty.session.CompanyName}"> </td>
 </tr>
 <tr valign="top">
-<td align="right">{t}Website{/t} : </td>
+<td align="right">{t}Web site{/t} : </td>
 <td> <input type="text" name="Website" size="20" maxlength="30" class="notRequired" value="{$smarty.session.Website}"> {t}to be linked in your Job Offers. Full URL, ie.{/t}: <a href="http://lwn.net/" target="_blank">http://lwn.net/</a></td>
 </tr>
 
