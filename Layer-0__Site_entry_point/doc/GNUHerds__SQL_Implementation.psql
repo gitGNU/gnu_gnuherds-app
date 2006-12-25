@@ -178,6 +178,7 @@ CREATE TABLE LZ_ApplicationStates (
 
 
 CREATE TABLE LT_SkillSetTypes (
+	LT_order char(2) NOT NULL UNIQUE CHECK (LT_order <> ''),
 	LT_Id	varchar(35) PRIMARY KEY CHECK (LT_Id <> '')
 );
 
@@ -1204,27 +1205,28 @@ INSERT INTO LZ_ApplicationStates VALUES ( 'Ruled out' );
 INSERT INTO LZ_ApplicationStates VALUES ( 'Finalist' );
 INSERT INTO LZ_ApplicationStates VALUES ( 'Selected' );
 
-INSERT INTO LT_SkillSetTypes VALUES ( 'Operating systems' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Operating system kernels' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Hardware architectures' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Software engineering methodologies' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Architectural Patterns' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Design Patterns' );
--- INSERT INTO LT_SkillSetTypes VALUES ( 'Coding Patterns (Idioms)' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Development formal languages' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Development specification languages' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Development tools' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Development libraries' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Development frameworks' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Development techniques' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Specifications' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Network protocols' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Network servers' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Network tools' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Desktop applications' );
+INSERT INTO LT_SkillSetTypes VALUES ( '00', 'Operating systems' );
+INSERT INTO LT_SkillSetTypes VALUES ( '01', 'Operating system kernels' );
+INSERT INTO LT_SkillSetTypes VALUES ( '02', 'Hardware architectures' );
+INSERT INTO LT_SkillSetTypes VALUES ( '03', 'Software engineering methodologies' );
+INSERT INTO LT_SkillSetTypes VALUES ( '04', 'Architectural Patterns' );
+INSERT INTO LT_SkillSetTypes VALUES ( '05', 'Design Patterns' );
+-- INSERT INTO LT_SkillSetTypes VALUES ( '00', 'Coding Patterns (Idioms)' );
+INSERT INTO LT_SkillSetTypes VALUES ( '06', 'Development formal languages' );
+INSERT INTO LT_SkillSetTypes VALUES ( '07', 'Development specification languages' );
+INSERT INTO LT_SkillSetTypes VALUES ( '08', 'Development tools' );
+INSERT INTO LT_SkillSetTypes VALUES ( '09', 'Development libraries' );
+INSERT INTO LT_SkillSetTypes VALUES ( '10', 'Development frameworks' );
+INSERT INTO LT_SkillSetTypes VALUES ( '11', 'Development techniques' );
+INSERT INTO LT_SkillSetTypes VALUES ( '12', 'Testing frameworks' );
+INSERT INTO LT_SkillSetTypes VALUES ( '13', 'Specifications' );
+INSERT INTO LT_SkillSetTypes VALUES ( '14', 'Network protocols' );
+INSERT INTO LT_SkillSetTypes VALUES ( '15', 'Network servers' );
+INSERT INTO LT_SkillSetTypes VALUES ( '16', 'Network tools' );
+INSERT INTO LT_SkillSetTypes VALUES ( '17', 'Desktop applications' );
 -- INSERT INTO LT_SkillSetTypes VALUES ( 'Analisys and Design tools' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Documentation tools' );
-INSERT INTO LT_SkillSetTypes VALUES ( 'Translation tools' );
+INSERT INTO LT_SkillSetTypes VALUES ( '18', 'Documentation tools' );
+INSERT INTO LT_SkillSetTypes VALUES ( '19', 'Translation tools' );
 
 INSERT INTO LI_Skills VALUES ( 'FreeBSD',							'Operating systems' );
 INSERT INTO LI_Skills VALUES ( 'NetBSD',							'Operating systems' );
@@ -1467,6 +1469,7 @@ INSERT INTO LI_Skills VALUES ( 'Smarty',							'Development frameworks' );
 INSERT INTO LI_Skills VALUES ( 'Apache Struts',							'Development frameworks' );
 INSERT INTO LI_Skills VALUES ( 'Apache Tapestry',						'Development frameworks' );
 INSERT INTO LI_Skills VALUES ( 'Turbine',							'Development frameworks' );
+INSERT INTO LI_Skills VALUES ( 'Spring',							'Development frameworks' ); -- Apache License, Version 2.0
 INSERT INTO LI_Skills VALUES ( 'Velocity',							'Development frameworks' );
 
 INSERT INTO LI_Skills VALUES ( 'GridSphere',							'Development frameworks' );
@@ -1478,6 +1481,8 @@ INSERT INTO LI_Skills VALUES ( 'GNUstep',							'Development frameworks' );
 INSERT INTO LI_Skills VALUES ( 'PRADO',								'Development frameworks' );
 
 INSERT INTO LI_Skills VALUES ( 'Asynchronous JavaScript and XML (AJAX)',			'Development techniques' );
+
+INSERT INTO LI_Skills VALUES ( 'TestNG',							'Testing frameworks' ); -- Apache License, Version 2.0
 
 -- Specifications
    -- Note that a Specification can be Standarized, but it is anyway a Specification.
