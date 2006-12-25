@@ -487,14 +487,14 @@ class JobOffer
 				$array[4][$i] = $arrayEN[5][0]; // E1_City
 				$array[5][$i] = $arrayEN[6][0]; // E1_StateProvince
 
-				$array[6][$i] = $arrayEN[15][0]; // E1_Website
+				$array[6][$i] = $arrayEN[14][0]; // E1_Website
 
-				$array[7][$i] = $arrayEN[16][0]; // EP_FirstName
-				$array[8][$i] = $arrayEN[17][0]; // EP_LastName
-				$array[9][$i] = $arrayEN[18][0]; // EP_MiddleName
+				$array[7][$i] = $arrayEN[15][0]; // EP_FirstName
+				$array[8][$i] = $arrayEN[16][0]; // EP_LastName
+				$array[9][$i] = $arrayEN[17][0]; // EP_MiddleName
 
-				$array[10][$i] = $arrayEN[19][0]; // EC_CompanyName
-				$array[11][$i] = $arrayEN[20][0]; // EO_OrganizationName
+				$array[10][$i] = $arrayEN[18][0]; // EC_CompanyName
+				$array[11][$i] = $arrayEN[19][0]; // EO_OrganizationName
 
 				$array[12][$i] = $arrayEN[30][0]; // LO_Name
 

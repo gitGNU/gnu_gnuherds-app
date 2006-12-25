@@ -219,13 +219,13 @@ class NonprofitOrganizationForm
 
 		$_SESSION['Nationality'] = $result[9][0];
 
-		$_SESSION['IpPhoneOrVideo'] = $result[12][0];
-		$_SESSION['Landline'] = $result[13][0];
-		$_SESSION['MobilePhone'] = $result[14][0];
+		$_SESSION['IpPhoneOrVideo'] = $result[11][0];
+		$_SESSION['Landline'] = $result[12][0];
+		$_SESSION['MobilePhone'] = $result[13][0];
 
-		$_SESSION['Website'] = $result[15][0];
+		$_SESSION['Website'] = $result[14][0];
 
-		$_SESSION['NonprofitName'] = $result[20][0];
+		$_SESSION['NonprofitName'] = $result[19][0];
 
 		return true;
 	}

@@ -54,15 +54,15 @@ class Entity
 		$array[8] = pg_fetch_all_columns($result, 8); // E1_LO_Country
 		$array[9] = pg_fetch_all_columns($result, 9); // E1_LO_Nationality
 		$array[10] = pg_fetch_all_columns($result, 10); // E1_BirthYear
-		$array[12] = pg_fetch_all_columns($result, 11); // E1_IpPhoneOrVideo
-		$array[13] = pg_fetch_all_columns($result, 12); // E1_Landline
-		$array[14] = pg_fetch_all_columns($result, 13); // E1_MobilePhone
-		$array[15] = pg_fetch_all_columns($result, 14); // E1_Website
-		$array[16] = pg_fetch_all_columns($result, 15); // EP_FirstName
-		$array[17] = pg_fetch_all_columns($result, 16); // EP_LastName
-		$array[18] = pg_fetch_all_columns($result, 17); // EP_MiddleName
-		$array[19] = pg_fetch_all_columns($result, 18); // EC_CompanyName
-		$array[20] = pg_fetch_all_columns($result, 19); // EO_OrganizationName
+		$array[11] = pg_fetch_all_columns($result, 11); // E1_IpPhoneOrVideo
+		$array[12] = pg_fetch_all_columns($result, 12); // E1_Landline
+		$array[13] = pg_fetch_all_columns($result, 13); // E1_MobilePhone
+		$array[14] = pg_fetch_all_columns($result, 14); // E1_Website
+		$array[15] = pg_fetch_all_columns($result, 15); // EP_FirstName
+		$array[16] = pg_fetch_all_columns($result, 16); // EP_LastName
+		$array[17] = pg_fetch_all_columns($result, 17); // EP_MiddleName
+		$array[18] = pg_fetch_all_columns($result, 18); // EC_CompanyName
+		$array[19] = pg_fetch_all_columns($result, 19); // EO_OrganizationName
 
 		for( $i=0; $i < count($array[0]); $i++) // LO_Name for E1_LO_Country
 		{

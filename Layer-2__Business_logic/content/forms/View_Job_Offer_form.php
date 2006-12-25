@@ -219,19 +219,19 @@ class ViewJobOfferForm
 		$_SESSION['ViewBirthYear'] = $result[10][0];
 		$_SESSION['ViewPhoto'] = '';
 
-		$_SESSION['ViewIpPhoneOrVideo'] = $result[12][0];
-		$_SESSION['ViewLandline'] = $result[13][0];
-		$_SESSION['ViewMobilePhone'] = $result[14][0];
+		$_SESSION['ViewIpPhoneOrVideo'] = $result[11][0];
+		$_SESSION['ViewLandline'] = $result[12][0];
+		$_SESSION['ViewMobilePhone'] = $result[13][0];
 
-		$_SESSION['ViewWebsite'] = $result[15][0];
+		$_SESSION['ViewWebsite'] = $result[14][0];
 
-		$_SESSION['ViewFirstName'] = $result[16][0];
-		$_SESSION['ViewLastName'] = $result[17][0];
-		$_SESSION['ViewMiddleName'] = $result[18][0];
+		$_SESSION['ViewFirstName'] = $result[15][0];
+		$_SESSION['ViewLastName'] = $result[16][0];
+		$_SESSION['ViewMiddleName'] = $result[17][0];
 
-		$_SESSION['ViewCompanyName'] = $result[19][0];
+		$_SESSION['ViewCompanyName'] = $result[18][0];
 
-		$_SESSION['ViewNonprofitName'] = $result[20][0];
+		$_SESSION['ViewNonprofitName'] = $result[19][0];
 
 		$_SESSION['ViewEntityCountryName'] = $result[30][0];
 		$_SESSION['ViewEntityNationalityName'] = $result[31][0];
