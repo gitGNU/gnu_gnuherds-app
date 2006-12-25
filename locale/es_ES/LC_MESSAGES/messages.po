@@ -157,9 +157,6 @@ msgstr "Contraseña"
 msgid "Log in"
 msgstr "Entrar"
 
-msgid "This website is under construction. Any feedback, contribution or full redesign is welcome."
-msgstr "Esta website está en construcción. Cualquier opinión, contribucion o rediseño total será bienvenido."
-
 msgid "Lost password?"
 msgstr "¿Olvidó su contraseña?"
 

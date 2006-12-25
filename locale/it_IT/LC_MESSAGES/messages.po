@@ -153,9 +153,6 @@ msgstr "Password"
 msgid "Log in"
 msgstr "Entra"
 
-msgid "This website is under construction. Any feedback, contribution or full redesign is welcome."
-msgstr "Questo sito è in costruzione. Ogni commento, contributo o un ridisegno totale sono benvenuti."
-
 msgid "Lost password?"
 msgstr "Perso la password?"
 
