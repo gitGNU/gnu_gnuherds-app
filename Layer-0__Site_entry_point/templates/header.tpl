@@ -36,9 +36,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td width="100%"></td>
 
 <td>
-{'Languages'|gettext}:&nbsp;<br><a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageEN.value;document.getElementById('languageForm').submit();}{/literal}">{'English'|gettext}</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageES.value;document.getElementById('languageForm').submit();}{/literal}">{'Spanish'|gettext}</a>
-
-<!-- ,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageIT.value;document.getElementById('languageForm').submit();}{/literal}">{'Italian'|gettext}</a> -->
+{'Languages'|gettext}:&nbsp;<br><a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageEN.value;document.getElementById('languageForm').submit();}{/literal}">{'English'|gettext}</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageES.value;document.getElementById('languageForm').submit();}{/literal}">{'Spanish'|gettext}</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageIT.value;document.getElementById('languageForm').submit();}{/literal}">{'Italian'|gettext}</a>
 
 <!-- ,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languagePT_BR.value;document.getElementById('languageForm').submit();}{/literal}">{'Portuguese'|gettext}&nbsp;({'Brazil'|gettext})</a> -->
 
