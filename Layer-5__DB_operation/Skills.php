@@ -41,7 +41,7 @@ class Skills
 
 	public function getSkillSetTypesIdList()
 	{
-		$sqlQuery = "SELECT LT_Id FROM LT_SkillSetTypes";
+		$sqlQuery = "SELECT LT_Id FROM LT_SkillSetTypes ORDER BY LT_Order";
 		return $this->postgresql->getOneField($sqlQuery,0);
 	}
 
