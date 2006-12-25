@@ -31,7 +31,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="tdTitle"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong></td>
 <td class="tdTitle"><strong>{'Offer date'|gettext|strip:'&nbsp;'}</strong></td>
 <td></td>
-<td class="tdTitle">{t}Subscription state{/t}</td>
+<td class="tdTitle">{'Subscription state'|gettext|strip:'&nbsp;'}</td>
 </tr>
 
 {foreach from=$jobOfferId item=Id key=i}
