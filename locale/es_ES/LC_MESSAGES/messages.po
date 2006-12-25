@@ -562,6 +562,15 @@ msgstr "La lista de correo %1general%2"
 msgid "The %1web-dev%2 mailing list"
 msgstr "La lista de correo %1web-dev%2"
 
+msgid "How to install a development environment?"
+msgstr "¿Cómo instalar un entorno de desarrollo?"
+
+msgid "Install"
+msgstr "Instale"
+
+msgid "Configure"
+msgstr "Configure"
+
 msgid "Current work team"
 msgstr "Equipo de trabajo actual"
 
