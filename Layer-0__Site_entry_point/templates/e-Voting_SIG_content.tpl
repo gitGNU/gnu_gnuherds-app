@@ -62,14 +62,7 @@ Suite 225, San Francisco, CA 94107, USA
 		  2='</i>'
 		}It seems to support the %1Condorcet method%2 used by the Debian voting system, and even "a mix of secret and public ballots".{/t}
 		</li>
-		<li><a href="http://www.mathematik.uni-kl.de/~wwwstoch/voss/comp/vote.html" target="_blank">The Debian Voting System</a>. {t}It works over a centralised server. It is done by email to an address processed by scripts run by the Project Secretary. Therefore, it does not allow fully anonymous voting. Read at{/t} <a href="http://lists.debian.org/debian-vote/2002/debian-vote-200203/msg00266.html" target="_blank">1</a>, <a href="http://lists.debian.org/debian-vote/2002/debian-vote-200204/msg00005.html" target="_blank">2</a>, <a href="http://lists.debian.org/debian-vote/2002/debian-vote-200204/msg00017.html" target="_blank">3</a> & <a href="http://lists.debian.org/debian-vote/2002/debian-vote-200205/msg00007.html" target="_blank">4</a>.
-		{t escape='no'
-		  1='<a href="mailto:debian-vote@lists.debian.org">'
-		  2='</a>'
-		  3='<a href="http://www.debian.org/vote/2003/vote_0001" target="_blank">'
-		  4='</a>'
-		}This is the %1debian-vote%2 email list. As an example, you can read the %3Debian Project Leader Elections 2003%4 report.{/t}
-		</li>
+		<li>{t}Some free GNU/Linux distributions use it own voting system.{/t}</li>
 		<li><a href="http://www.nongnu.org/ampu/" target="_blank">AMPU</a>. {t}Stalled since March 2002.{/t}</li>
 	</ul>
 </p>
@@ -84,10 +77,7 @@ Suite 225, San Francisco, CA 94107, USA
 		<li><a href="http://votesystem.sourceforge.net/" target="_blank">Voting Systems Toolbox</a>. {t}It is dormant.{/t}</li>
 		<li><a href="http://electionmethods.org/GVI.htm" target="_blank">GVI</a>. {t}It is interested in exploring alternative voting methods.{/t}</li>
 		<li><a href="http://lwn.net/Articles/43600/" target="_blank">EVM</a>. {t}It is too young to have released any useful code.{/t}</li>
-		<li><a href="http://www.softimp.com.au/evacs/index.html" target="_blank">eVACS</a>. {t escape='no'
-		  1='<a href="http://lists.debian.org/debian-news/debian-news-2001/msg00028.html" target="_blank">'
-		  2='</a>'
-		}It is based on %1Debian GNU/Linux%2. It has already been used in at least one election for the Legislative Assembly in the Australian Capitol Territory in October 2001 and is approved for use in future elections.{/t}</li>
+		<li><a href="http://www.softimp.com.au/evacs/index.html" target="_blank">eVACS</a>. {t}It has already been used in at least one election for the Legislative Assembly in the Australian Capitol Territory in October 2001 and is approved for use in future elections.{/t}</li>
 		<li><a href="http://jfreevote.hispalinux.es/" target="_blank">JFreeVote</a>. {t}It is a already implemented, working solution for electronic voting.{/t}</li>
 	</ul>
 </p>

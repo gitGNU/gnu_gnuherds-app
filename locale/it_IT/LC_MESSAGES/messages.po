@@ -905,8 +905,8 @@ msgstr "IDENTIFICAZIOEN ACCOUNT"
 msgid "Retype Password"
 msgstr "Ripeti Password"
 
-msgid "NAME"
-msgstr "NOME"
+msgid "PERSON"
+msgstr "PERSONA"
 
 msgid "First name"
 msgstr "Nome"
@@ -916,6 +916,9 @@ msgstr "Cognome"
 
 msgid "Middle name"
 msgstr "Secondo nome"
+
+msgid "Photo"
+msgstr "Foto"
 
 msgid "ADDRESS"
 msgstr "INDIRIZZO"
@@ -1011,6 +1014,9 @@ msgstr "AZIENDA"
 
 msgid "to be linked in your Job Offers. Full URL, ie."
 msgstr "da includere nelle tuo Offerte di Impiego. URL completo, es."
+
+msgid "Photo or logo"
+msgstr "Foto o logotipo"
 
 msgid "Delete me"
 msgstr "Cancellami"
@@ -1303,11 +1309,8 @@ msgstr "Lo sviluppo è stato sospeso a causa di"
 msgid "It seems to support the %1Condorcet method%2 used by the Debian voting system, and even \"a mix of secret and public ballots\"."
 msgstr "Sembra supporta il %1metodo Condorcet%2 usato dal sistema di votazione Debian, incluso \"un misto di votazioni segrete e pubbliche\"."
 
-msgid "It works over a centralised server. It is done by email to an address processed by scripts run by the Project Secretary. Therefore, it does not allow fully anonymous voting. Read at"
-msgstr "Utilizza un server centralizzato. Si inviano email ad un indirizzo processato con scripts eseguiti dalla Segreteria del Progetto. Perciò non permette un voto totalmente anonimo. Leggi"
-
-msgid "This is the %1debian-vote%2 email list. As an example, you can read the %3Debian Project Leader Elections 2003%4 report."
-msgstr "Questa è la mailing list %1debian-vote%2. Come esempio, puoi leggere il report %3Debian Project Leader Elections 2003%4."
+msgid "Some free GNU/Linux distributions use it own voting system."
+msgstr "Algunas distribuciones libres de GNU/Linux usan su propio sistema de votación."
 
 msgid "Stalled since March 2002."
 msgstr "Sospeso da Marzo 2002."
@@ -1324,8 +1327,8 @@ msgstr "Interessato nell'esplorazione di metodi di votazione alternitivi."
 msgid "It is too young to have released any useful code."
 msgstr "Troppo giovane per aver rilasciato alcun codice utile."
 
-msgid "It is based on %1Debian GNU/Linux%2. It has already been used in at least one election for the Legislative Assembly in the Australian Capitol Territory in October 2001 and is approved for use in future elections."
-msgstr "Basato su %1Debian GNU/Linux%2. È già stato usato in almeno un'elezione per l'Assemblea Legislativa del Capitol Territory Australiano nell'ottobre del 2001, ed il suo uso è stato approvato per elezioni future."
+msgid "It has already been used in at least one election for the Legislative Assembly in the Australian Capitol Territory in October 2001 and is approved for use in future elections."
+msgstr "È già stato usato in almeno un'elezione per l'Assemblea Legislativa del Capitol Territory Australiano nell'ottobre del 2001, ed il suo uso è stato approvato per elezioni future."
 
 msgid "It is a already implemented, working solution for electronic voting."
 msgstr "È una soluzione già implementata e funzionante per la votazione elettronica."
