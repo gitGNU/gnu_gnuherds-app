@@ -60,7 +60,7 @@ Suite 225, San Francisco, CA 94107, USA
 		<li><a href="http://glasnost.entrouvert.org" target="_blank">Glasnot</a>. {t escape='no'
 		  1='<i>'
 		  2='</i>'
-		}It seems to support the %1Condorcet method%2 used by the Debian voting system, and even "a mix of secret and public ballots".{/t}
+		}It seems to support the %1Condorcet method%2 and even "a mix of secret and public ballots".{/t}
 		</li>
 		<li>{t}Some free GNU/Linux distributions use it own voting system.{/t}</li>
 		<li><a href="http://www.nongnu.org/ampu/" target="_blank">AMPU</a>. {t}Stalled since March 2002.{/t}</li>

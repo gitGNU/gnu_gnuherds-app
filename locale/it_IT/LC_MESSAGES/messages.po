@@ -1306,8 +1306,8 @@ msgstr "Ci sono diversi progetti che tentano di risolvere il problema del voto e
 msgid "The development has been discontinued due to"
 msgstr "Lo sviluppo è stato sospeso a causa di"
 
-msgid "It seems to support the %1Condorcet method%2 used by the Debian voting system, and even \"a mix of secret and public ballots\"."
-msgstr "Sembra supporta il %1metodo Condorcet%2 usato dal sistema di votazione Debian, incluso \"un misto di votazioni segrete e pubbliche\"."
+msgid "It seems to support the %1Condorcet method%2 and even \"a mix of secret and public ballots\"."
+msgstr "Sembra supporta il %1metodo Condorcet%2 incluso \"un misto di votazioni segrete e pubbliche\"."
 
 msgid "Some free GNU/Linux distributions use it own voting system."
 msgstr "Algunas distribuciones libres de GNU/Linux usan su propio sistema de votación."
