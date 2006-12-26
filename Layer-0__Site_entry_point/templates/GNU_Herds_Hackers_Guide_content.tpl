@@ -484,6 +484,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<li>{t}Install{/t}: PHP -- <a href="http://packages.debian.org/testing/net/libapache2-mod-php5" target="_blank">libapache2-mod-php5</a>
 	<li>{t}Install{/t}: GeoIP -- <a href="http://packages.debian.org/testing/libs/libgeoip1" target="_blank">libgeoip1</a>, <a href="http://packages.debian.org/testing/net/geoip-bin" target="_blank">geoip-bin</a>, <a href="http://packages.debian.org/testing/net/libapache2-mod-geoip" target="_blank">libapache2-mod-geoip</a>
 	<li>{t}Install{/t}: Smarty -- <a href="http://packages.debian.org/testing/web/smarty" target="_blank">smarty</a>
+	<li>{t}Install{/t}: Smarty-Gettext -- <a href="http://sourceforge.net/projects/smarty-gettext/" target="_blank">sourceforge.net page</a>
 	<li>{t}Install{/t}: PHP PEAR module for HTTP related stuff -- <a href="http://packages.debian.org/testing/web/php-http" target="_blank">php-http</a>, <a href="http://packages.debian.org/testing/web/php-pear" target="_blank">php-pear</a>
 	<li>{t}Configure{/t}: Apache HTTP server -- <a href="/doc/conf/apache_virtual_domain.conf">virtual domain</a>
 	<li>{t}Configure{/t}: PHP -- <a href="/doc/conf/php.ini">php.ini</a>
