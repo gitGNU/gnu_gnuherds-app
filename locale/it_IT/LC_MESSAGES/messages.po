@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: messages 0.0.1\n"
 "Report-Msgid-Bugs-To: davi@leals.com\n"
 "POT-Creation-Date: 2006-04-10 19:12+0200\n"
-"PO-Revision-Date: 2006-12-26 17:16+0100\n"
+"PO-Revision-Date: 2006-12-26 19:56+0100\n"
 "Last-Translator: David Paleino <d.paleino@gmail.com>\n"
 "Language-Team: it <it@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -602,7 +602,7 @@ msgid "Make it easy the contacts among persons and companies interested in Free 
 msgstr "Facilitare i contatti tra persone e aziende interessate nel business Free Software."
 
 msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
-msgstr "Teniendo un alcance global, facilitar los modelos de negocio basados en el teletrabajo. Con las tecnologías futuras la ubicación no debe ser un obstáculo para suministrar servicios de Tecnologías de la Información. De ahí el objetivo, ya alcanzado, de traducir el sitio web a otros lenguajes, y hacer posible que una oferta de empleo pueda ser expuesta en varios lenguajes."
+msgstr "Avere un obiettivo globale, supportare modelli di business basati sul telelavoro. Con le tecnologie future, l'ubicazione non deve essere un ostacolo per stabilire relazioni riguardo servizi informatici. Da qui l'obiettivo, già raggiunto, di tradurre il sito web in altre lingue, e di supportare il fatto che un'offerta di lavoro possa essere inserita in diverse lingue."
 
 msgid "All this taking into account that: \"The %1aims%2 of the Association shall be to encourage the professional development of Free Software contributors.\""
 msgstr "Tutto questo tenendo in conto che: \"Lo %1scopo%2 dell'Associazione dovrebbe essere incoraggiare lo sviluppo professionale di coloro che partecipano nella comunità del Free Software.\""
@@ -674,7 +674,7 @@ msgstr "telelavoro"
 # View_Job_Offer_form.php
 #
 msgid "To be able to subscribe your application, you have to fill the Qualification form."
-msgstr "Para poder subscribir su solicitud, usted tiene que rellenar el formulario de Cualificaciones."
+msgstr "Per poter sottoscrivere la tua candidatura, devi riempire il modulo Qualifiche."
 
 msgid "To be able to subscribe your application, you have to log in first."
 msgstr "Per poter sottoscrivere la tua candidatura, devi prima effettuare l'accesso."
@@ -973,7 +973,7 @@ msgid "Updated successfully"
 msgstr "Aggiornato con successo"
 
 msgid "Success. You have been logged authomatically. You can realize others operations in the left menu."
-msgstr "Correcto. Su entrada se ha realizado automáticamente. Puede seleccionar otras operaciones en el menu de la izquierda."
+msgstr "Successo. Hai effettuato automaticamente l'accesso.Puoi effettuare altre operazioni nel menu sulla sinistra."
 
 msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
 msgstr "Il tuo contributo alla comunità Free Software sarà valutata. Il risultato ti sarà inviato via email, con l'abilitazione della capacità di voto in caso di valutazione positiva."
@@ -3155,10 +3155,10 @@ msgstr "per ora"
 # Data Base LE_Employability table
 #
 msgid "Working"
-msgstr "Trabajando"
+msgstr "Lavorando"
 
 msgid "Studying"
-msgstr "Estudiando"
+msgstr "Studiando"
 
 msgid "Without job"
 msgstr "Senza impiego"
