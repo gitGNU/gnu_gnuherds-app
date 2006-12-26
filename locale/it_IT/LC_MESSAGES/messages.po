@@ -3089,17 +3089,18 @@ msgstr "Helpdesk"
 #
 # Data Base LA_AcademicQualifications table
 #
+#XXX: Antenore, please check if my translations are good here. David.
 msgid "Undergraduate"
 msgstr "Studente universitario"
 
 msgid "Graduate"
-msgstr "Ingeniero técnico o Diplomado,-a"
+msgstr "Laureato (laurea triennale)"
 
 msgid "Postgraduate"
-msgstr "Ingeniero o Licensiado,-a"
+msgstr "Laureato (laurea lunga)"
 
 msgid "Doctoral"
-msgstr "Doctorado,-a"
+msgstr "Dottorando"
 
 msgid "Other"
 msgstr "Altro"
@@ -3207,7 +3208,7 @@ msgid "In process"
 msgstr "In processo"
 
 msgid "Ruled out"
-msgstr "Rechazado"
+msgstr "Scartato"
 
 msgid "Finalist"
 msgstr "Finalista"
