@@ -22,10 +22,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <ol>
 
-<li>
-<p><span class="modification">{t}DONE!{/t}</span>: {t}Add the member support.{/t} <!-- We have to develop the <a href="/Charter.php#Membership" target="_top">policy</a> draft to accept a member.</p>
-<p>How will GNU Herds assign a member status to a person?. You can take a look at <a href="http://www.debian.org/devel/join/newmaint" target="_blank">Debian New Maintainers' Corner</a>. To verify the identities, maybe our solution would involve a sort of web of trust (as a more distributed trusting mechanism) ... something like debian (or we think also like advogato). <a href="http://www.mathematik.uni-bielefeld.de/~mmutz/sign-policy.html" target="_blank">OpenPGP Key Signing Policy of Marc Mutz</a>: "The signee must prove her identity to me by way of a national ID card, a driver's licence or a credit card. The token must feature a photographic picture of the signee." Initially it will not support the Debian developers - automatic membership. --> </p>
-</li>
+<li><p><span class="modification">{t}DONE!{/t}</span>: {t}Add the member support.{/t}</p></li>
 
 <li><p><span class="modification">{t}DONE!{/t}</span>: {t}Add the FS Job Offers support.{/t}</p></li>
 
