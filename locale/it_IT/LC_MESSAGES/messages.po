@@ -551,13 +551,13 @@ msgid "The %1web-dev%2 mailing list"
 msgstr "Lista di distribuzione %1web-dev%2"
 
 msgid "How to install a development environment?"
-msgstr "¿Cómo instalar un entorno de desarrollo?"
+msgstr "Come installare un ambiente di sviluppo?"
 
 msgid "Install"
-msgstr "Instale"
+msgstr "Installare"
 
 msgid "Configure"
-msgstr "Configure"
+msgstr "Configurare"
 
 msgid "Current work team"
 msgstr "Gruppo di lavoro corrente"
