@@ -1307,8 +1307,7 @@ msgid "The development has been discontinued due to"
 msgstr "Lo sviluppo è stato sospeso a causa di"
 
 msgid "It seems to support the %1Condorcet method%2 and even \"a mix of secret and public ballots\"."
-msgstr "Sembra supporti il %1metodo Condorcet%2, incluso \"un misto di votazioni segrete e 
-pubbliche\"."
+msgstr "Sembra supporti il %1metodo Condorcet%2, incluso \"un misto di votazioni segrete e pubbliche\"."
 
 msgid "Some free GNU/Linux distributions use it own voting system."
 msgstr "Alcune distribuzioni free GNU/Linux usano un proprio sistema di votazioni."
