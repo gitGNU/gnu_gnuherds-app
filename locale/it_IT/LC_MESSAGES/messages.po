@@ -975,7 +975,7 @@ msgstr "L'operazione è stata annullata."
 msgid "Updated successfully"
 msgstr "Aggiornato con successo"
 
-msgid "Success. You have been logged authomatically. You can realize others operations in the left menu."
+msgid "Success. You have been logged automatically. You can realize others operations in the left menu."
 msgstr "Successo. Hai effettuato automaticamente l'accesso.Puoi effettuare altre operazioni nel menu sulla sinistra."
 
 msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
@@ -1016,7 +1016,7 @@ msgid "to be linked in your Job Offers. Full URL, ie."
 msgstr "da includere nelle tuo Offerte di Impiego. URL completo, es."
 
 msgid "Photo or logo"
-msgstr "Foto o logotipo"
+msgstr "Foto o logo"
 
 msgid "Delete me"
 msgstr "Cancellami"
@@ -1307,10 +1307,11 @@ msgid "The development has been discontinued due to"
 msgstr "Lo sviluppo è stato sospeso a causa di"
 
 msgid "It seems to support the %1Condorcet method%2 and even \"a mix of secret and public ballots\"."
-msgstr "Sembra supporta il %1metodo Condorcet%2 incluso \"un misto di votazioni segrete e pubbliche\"."
+msgstr "Sembra supporti il %1metodo Condorcet%2, incluso \"un misto di votazioni segrete e 
+pubbliche\"."
 
 msgid "Some free GNU/Linux distributions use it own voting system."
-msgstr "Algunas distribuciones libres de GNU/Linux usan su propio sistema de votación."
+msgstr "Alcune distribuzioni free GNU/Linux usano un proprio sistema di votazioni."
 
 msgid "Stalled since March 2002."
 msgstr "Sospeso da Marzo 2002."

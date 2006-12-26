@@ -1001,7 +1001,7 @@ msgstr "La operación ha sido cancelada."
 msgid "Updated successfully"
 msgstr "Actualizado satisfactoriamente"
 
-msgid "Success. You have been logged authomatically. You can realize others operations in the left menu."
+msgid "Success. You have been logged automatically. You can realize others operations in the left menu."
 msgstr "Correcto. Su entrada se ha realizado automáticamente. Puede seleccionar otras operaciones en el menu de la izquierda."
 
 msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."

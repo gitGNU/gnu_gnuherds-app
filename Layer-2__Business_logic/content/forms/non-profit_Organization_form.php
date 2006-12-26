@@ -150,7 +150,7 @@ class NonprofitOrganizationForm
 		else // new
 		{
 			$this->manager->addEntity();
-			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. You have been logged authomatically. You can realize others operations in the left menu.')."<p>\n";
+			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. You have been logged automatically. You can realize others operations in the left menu.')."<p>\n";
 
 			// Set the three 'Login state' variables: $_SESSION['Logged'], $_SESSION['EntityId'], $_SESSION['LoginType']
 			$logForm = new LogForm();
