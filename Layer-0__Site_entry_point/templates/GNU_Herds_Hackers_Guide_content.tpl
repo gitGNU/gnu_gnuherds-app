@@ -480,11 +480,11 @@ Suite 225, San Francisco, CA 94107, USA
 <ul>
 	<li>{t}Install{/t}: PostgreSQL
 	<li><a href="/GNU_Herds_Hackers_Guide.php#The_PostgreSQL_data_base">{t}Configure{/t}</a>: PostgreSQL
-	<li>{t}Install{/t}: Apache HTTP server -- apache2, libapache2-mod-encoding
-	<li>{t}Install{/t}: PHP -- libapache2-mod-php5
-	<li>{t}Install{/t}: GeoIP -- libgeoip1, geoip-bin, libapache2-mod-geoip
-	<li>{t}Install{/t}: Smarty -- smarty
-	<li>{t}Install{/t}: PHP PEAR module for HTTP related stuff -- php-http, php-pear
+	<li>{t}Install{/t}: Apache HTTP server -- <a href="http://packages.debian.org/testing/net/apache2" target="_blank">apache2</a>, <a href="http://packages.debian.org/testing/net/libapache2-mod-encoding" target="_blank">libapache2-mod-encoding</a>
+	<li>{t}Install{/t}: PHP -- <a href="http://packages.debian.org/testing/net/libapache2-mod-php5" target="_blank">libapache2-mod-php5</a>
+	<li>{t}Install{/t}: GeoIP -- <a href="http://packages.debian.org/testing/libs/libgeoip1" target="_blank">libgeoip1</a>, <a href="http://packages.debian.org/testing/net/geoip-bin" target="_blank">geoip-bin</a>, <a href="http://packages.debian.org/testing/net/libapache2-mod-geoip" target="_blank">libapache2-mod-geoip</a>
+	<li>{t}Install{/t}: Smarty -- <a href="http://packages.debian.org/testing/web/smarty" target="_blank">smarty</a>
+	<li>{t}Install{/t}: PHP PEAR module for HTTP related stuff -- <a href="http://packages.debian.org/testing/web/php-http" target="_blank">php-http</a>, <a href="http://packages.debian.org/testing/web/php-pear" target="_blank">php-pear</a>
 	<li>{t}Configure{/t}: Apache HTTP server -- <a href="/doc/conf/apache_virtual_domain.conf">virtual domain</a>
 	<li>{t}Configure{/t}: PHP -- <a href="/doc/conf/php.ini">php.ini</a>
 <li>
