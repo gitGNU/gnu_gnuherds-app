@@ -164,8 +164,6 @@ are poor. Others have been rejected. If you have any comment ...
 	{t}Note that all those systems are country voting oriented.{/t}<br>
 </li>
 
-<li><a href="http://www.debian.org/devel/join/newmaint" target="_blank">Debian New Maintainers' Corner</a></li>
-
 <li><a href="http://grouper.ieee.org/groups/scc38/1583/" target="_blank">IEEE, Voting Equipment Standards</a></li>
 
 </ul>
