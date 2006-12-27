@@ -3314,6 +3314,9 @@ msgstr "Frameworks de programación"
 msgid "Development techniques"
 msgstr "Técnicas de programación"
 
+msgid "Testing frameworks"
+msgstr "Frameworks de pruebas"
+
 msgid "Specifications"
 msgstr "Especificaciones"
 
