@@ -3174,7 +3174,7 @@ msgid "By project"
 msgstr "Por proyecto"
 
 msgid "Partner"
-msgstr "Socio"
+msgstr "Partner"
 
 msgid "Freelance"
 msgstr "Freelance"
