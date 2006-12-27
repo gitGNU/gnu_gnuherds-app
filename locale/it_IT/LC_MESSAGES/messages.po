@@ -3125,7 +3125,7 @@ msgid "By project"
 msgstr "Per progetto"
 
 msgid "Partner"
-msgstr "Socio"
+msgstr "Partner"
 
 msgid "Freelance"
 msgstr "Freelance"
@@ -3260,7 +3260,7 @@ msgid "Development techniques"
 msgstr "Tecniche di sviluppo"
 
 msgid "Testing frameworks"
-msgstr "Frameworks de pruebas"
+msgstr "Frameworks di prova"
 
 msgid "Specifications"
 msgstr "Specifiche"
