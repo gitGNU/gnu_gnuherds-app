@@ -3124,6 +3124,9 @@ msgstr "Per ore"
 msgid "By project"
 msgstr "Per progetto"
 
+msgid "Partner"
+msgstr "Socio"
+
 msgid "Freelance"
 msgstr "Freelance"
 

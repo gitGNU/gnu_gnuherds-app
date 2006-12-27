@@ -3173,8 +3173,11 @@ msgstr "Por horas"
 msgid "By project"
 msgstr "Por proyecto"
 
+msgid "Partner"
+msgstr "Socio"
+
 msgid "Freelance"
-msgstr "Free lance"
+msgstr "Freelance"
 
 msgid "Temporary"
 msgstr "Eventual"
