@@ -107,7 +107,6 @@ Suite 225, San Francisco, CA 94107, USA
 	&nbsp;&nbsp;<a href="http://{$smarty.server.HTTP_HOST}/FS_Business_Networks.php" class="menu3" target="_top">{'FS Business Networks'|gettext|strip:'&nbsp;'}</a><br>
 	&nbsp;&nbsp;<a href="http://{$smarty.server.HTTP_HOST}/FS_job_articles.php" class="menu3" target="_top">{'FS job articles'|gettext|strip:'&nbsp;'}</a><br>
 	&nbsp;&nbsp;<span class="menu2noactive">{'Others'|gettext}</span><br>
-	&nbsp;&nbsp;<a href="http://www.tldp.org/" class="menu3" target="_blank">{'Technical documentation'|gettext|strip:'&nbsp;'}</a><br>
 	&nbsp;&nbsp;<a href="http://{$smarty.server.HTTP_HOST}/International_Trade_Law.php" class="menu3" target="_top">{'International Trade Law'|gettext|strip:'&nbsp;'}</a><br>
 	&nbsp;&nbsp;<span class="menu3noactive">{'Marketing'|gettext}</span><br>
 </p>

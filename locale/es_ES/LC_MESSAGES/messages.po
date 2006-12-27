@@ -132,9 +132,6 @@ msgstr "Artículos de empleo FS"
 msgid "Others"
 msgstr "Otros"
 
-msgid "Technical documentation"
-msgstr "Documentación técnica"
-
 msgid "International Trade Law"
 msgstr "Ley de Comercio Internacional"
 
