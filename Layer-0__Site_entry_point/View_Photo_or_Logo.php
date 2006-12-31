@@ -267,7 +267,7 @@ class __JobOffer
 	// Check if the E1_Id entity has some job offer published
 	public function hasJobOfferPublished($E1_Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT count(*) FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=$1 AND J1_Closed='f' AND J1_ExpirationDate > 'now';  EXECUTE query('$E1_Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT count(*) FROM J1_JobOffers WHERE J1_E1_Id=$1 AND J1_Closed='f' AND J1_ExpirationDate > 'now';  EXECUTE query('$E1_Id');";
 		$result = $this->postgresql->getOneField($sqlQuery,1);
 
 		if ( intval($result[0]) >= 1 )
@@ -295,7 +295,7 @@ class __PostgreSQL
 	public function getPostgreSQLObject($sqlQuery,$prepared=0)
 	{
 		// Connect
-		$GLOBALS["PG_CONNECT"] = pg_connect("dbname=g-00.org user=www-data");
+		$GLOBALS["PG_CONNECT"] = pg_connect("dbname=www.gnuherds.org user=www-data");
 		if (!$GLOBALS["PG_CONNECT"])
 		{
 			$error = "<p>ERROR: Connection to database failed.</p>\n";
