@@ -267,13 +267,22 @@ class Entity
 				$vsize = 120;
 			}
 
-			if ( !imagick_resize($handle,$hsize,$vsize,IMAGICK_FILTER_UNKNOWN,0) )
-			{
-				$reason      = imagick_failedreason($handle);
-				$description = imagick_faileddescription($handle);
+			// Before resizing we check the width and height of the original image to avoid an image zoom.
 
-				$error = "<p>"."imagick_resize() failed<BR>\nReason: $reason<BR>\nDescription: $description<BR>"."</p>";
-				throw new Exception($error,false);
+			$size = getimagesize("../entity_photos/".$E1_Id);
+			$width  = $size[0];
+			$height = $size[1];
+
+			if ( $width > $hsize  or  $height > $vsize )
+			{
+				if ( !imagick_resize($handle,$hsize,$vsize,IMAGICK_FILTER_UNKNOWN,0) )
+				{
+					$reason      = imagick_failedreason($handle);
+					$description = imagick_faileddescription($handle);
+
+					$error = "<p>"."imagick_resize() failed<BR>\nReason: $reason<BR>\nDescription: $description<BR>"."</p>";
+					throw new Exception($error,false);
+				}
 			}
 
 			if ( !imagick_writeimage($handle,"../entity_photos/".$E1_Id) )
