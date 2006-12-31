@@ -237,6 +237,12 @@ msgstr "Para mejorar su seguridad, usted debería cambiar su contraseña despué
 msgid "ERROR: Wrong magic number!."
 msgstr "ERROR: ¡Número mágico incorrecto!."
 
+msgid "ERROR: Can not save the uploaded file!."
+msgstr "ERROR: ¡No se puede guardar el fichero!."
+
+msgid "ERROR: Can not delete the photo or logo file!."
+msgstr "ERROR: ¡No se puede borrar el fichero de foto o logotipo!."
+
 #
 # Home_content.tpl
 #
@@ -942,6 +948,9 @@ msgstr "Segundo apellido"
 msgid "Photo"
 msgstr "Foto"
 
+msgid "Default image size"
+msgstr "Tamaño de imagen por defecto"
+
 msgid "ADDRESS"
 msgstr "DIRECCIÓN"
 
@@ -1036,9 +1045,6 @@ msgstr "ACTUALIZAR DATOS DE EMPRESA"
 
 msgid "COMPANY"
 msgstr "EMPRESA"
-
-msgid "to be linked in your Job Offers. Full URL, ie."
-msgstr "a ser incluida en sus ofertas de empleo. Ej."
 
 msgid "Photo or logo"
 msgstr "Foto o logotipo"
