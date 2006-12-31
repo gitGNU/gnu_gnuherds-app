@@ -229,10 +229,10 @@ msgid "ERROR: Wrong magic number!."
 msgstr "ERRORE: Numero magico non corretto!."
 
 msgid "ERROR: Can not save the uploaded file!."
-msgstr "ERROR: ¡No se puede guardar el fichero!."
+msgstr "ERRORE: Impossibile salvare il file caricato!"
 
 msgid "ERROR: Can not delete the photo or logo file!."
-msgstr "ERROR: ¡No se puede borrar el fichero de foto o logotipo!."
+msgstr "ERRORE: Impossibile cancellare la foto o il logo!"
 
 #
 # Home_content.tpl
@@ -924,7 +924,7 @@ msgid "Photo"
 msgstr "Foto"
 
 msgid "Default image size"
-msgstr "Tamaño de imagen por defecto"
+msgstr "Dimensioni predefinite immagine"
 
 msgid "ADDRESS"
 msgstr "INDIRIZZO"
