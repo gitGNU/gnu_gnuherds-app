@@ -217,7 +217,7 @@ class ViewJobOfferForm
 		$_SESSION['ViewEntityNationality'] = $result[9][0];
 
 		$_SESSION['ViewBirthYear'] = $result[10][0];
-		$_SESSION['ViewPhoto'] = '';
+		$_SESSION['ViewPhotoOrLogo'] = '';
 
 		$_SESSION['ViewIpPhoneOrVideo'] = $result[11][0];
 		$_SESSION['ViewLandline'] = $result[12][0];
@@ -235,6 +235,11 @@ class ViewJobOfferForm
 
 		$_SESSION['ViewEntityCountryName'] = $result[30][0];
 		$_SESSION['ViewEntityNationalityName'] = $result[31][0];
+
+		if ( file_exists("../entity_photos/".$_POST['ViewEntityId']) )
+			$_SESSION['ViewPhotoOrLogo'] = "true";
+		else
+			$_SESSION['ViewPhotoOrLogo'] = "false";
 	}
 }
 ?> 

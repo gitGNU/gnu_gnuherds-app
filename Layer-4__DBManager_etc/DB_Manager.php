@@ -59,6 +59,15 @@ class DBManager
 		return $entity->getEntity($Id);
 	}
 
+	public function getEntityPhotoOrLogo($Id)
+	{
+		$acl = new AccessControlList();
+		$acl->checkProperlyLogged();
+
+		$entity = new Entity();
+		return $entity->getEntityPhotoOrLogo($Id);
+	}
+
 	public function addEntity()
 	{
 		$entity = new Entity();
@@ -69,6 +78,15 @@ class DBManager
 	{
 		$entity = new Entity();
 		$entity->deleteEntity();
+	}
+
+	public function deletePhotoOrLogo()
+	{
+		$acl = new AccessControlList();
+		$acl->checkProperlyLogged();
+
+		$entity = new Entity();
+		$entity->deletePhotoOrLogo();
 	}
 
 	public function updateEntity()
@@ -103,6 +121,15 @@ class DBManager
 
 		$qualifications = new Qualifications();
 		return $qualifications->getQualificationsForEntity($Id);
+	}
+
+	public function getQualificationsPhotoOrLogoForEntity($Id)
+	{
+		$acl = new AccessControlList();
+		$acl->checkQualificationsAccess("READ",$Id);
+
+		$entity = new Entity();
+		return $entity->getEntityPhotoOrLogo($Id);
 	}
 
 	public function addQualifications()
@@ -146,6 +173,15 @@ class DBManager
 	{
 		$jobOffer = new JobOffer();
 		return $jobOffer->getJobOffer($Id);
+	}
+
+	public function getJobOfferPhotoOrLogoForEntity($Id)
+	{
+		$acl = new AccessControlList();
+		$acl->checkJobOfferAccess("READ",$Id);
+
+		$entity = new Entity();
+		return $entity->getEntityPhotoOrLogo($Id);
 	}
 
 	public function addJobOffer()

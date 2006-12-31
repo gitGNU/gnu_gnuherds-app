@@ -57,6 +57,8 @@ class PersonForm
 				}
 			}
 		}
+		else // new
+			$_SESSION['ViewPhotoOrLogo'] = "false"; // Initialization
 
 		// Process each button event
 		$phpTools = new PHPTools();
@@ -138,6 +140,8 @@ class PersonForm
 		$_SESSION['FirstName'] = trim($_POST['FirstName']);
 		$_SESSION['LastName'] = trim($_POST['LastName']);
 		$_SESSION['MiddleName'] = trim($_POST['MiddleName']);
+
+		//XXX $_SESSION['PhotoOrLogo'] = 
 
 		// Checks
 		$this->checkPersonForm();
@@ -235,6 +239,11 @@ class PersonForm
 		$_SESSION['FirstName'] = $result[15][0];
 		$_SESSION['LastName'] = $result[16][0];
 		$_SESSION['MiddleName'] = $result[17][0];
+
+		if ( file_exists("../entity_photos/".$_SESSION['EntityId']) )
+			$_SESSION['ViewPhotoOrLogo'] = "true";
+		else
+			$_SESSION['ViewPhotoOrLogo'] = "false";
 
 		return true;
 	}

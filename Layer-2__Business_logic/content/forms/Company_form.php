@@ -57,7 +57,8 @@ class CompanyForm
 				}
 			}
 		}
-		// else // new
+		else // new
+			$_SESSION['ViewPhotoOrLogo'] = "false"; // Initialization
 
 		// Process each button event
 		$phpTools = new PHPTools();
@@ -135,6 +136,8 @@ class CompanyForm
 		$_SESSION['Website'] = trim($_POST['Website']);
 
 		$_SESSION['CompanyName'] = trim($_POST['CompanyName']);
+
+		//XXX $_SESSION['PhotoOrLogo'] = 
 
 		// Checks
 		$this->checkCompanyForm();
@@ -227,6 +230,11 @@ class CompanyForm
 		$_SESSION['Website'] = $result[14][0];
 
 		$_SESSION['CompanyName'] = $result[18][0];
+
+		if ( file_exists("../entity_photos/".$_SESSION['EntityId']) )
+			$_SESSION['ViewPhotoOrLogo'] = "true";
+		else
+			$_SESSION['ViewPhotoOrLogo'] = "false";
 
 		return true;
 	}

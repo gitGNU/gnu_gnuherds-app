@@ -32,9 +32,28 @@ class AccessControlList
 		throw new Exception($error,true);
 	}
 
+	public function checkProperlyLogged()
+	{
+		if ( $_SESSION['Logged'] == '1' )
+		{
+			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
+			{
+				$error = "<p>".gettext('To access this section you have to login first.')."</p>";
+				throw new Exception($error,true);
+			}
+		}
+		else
+		{
+			$error = "<p>".gettext('To access this section you have to login first.')."</p>";
+			throw new Exception($error,false);
+    		}
+	}
+
 
 	public function checkQualificationsAccess($mode,$E1_Id)
 	{
+		$this->checkProperlyLogged();
+
 		$qualifications = new Qualifications();
 
 		switch ($mode) {
@@ -45,6 +64,29 @@ class AccessControlList
 				     // Check if the request comes from an Entity that has a JobOffer with such Qualifications subscribed
 				     $qualifications->isJobOfferApplication($E1_Id) == true
 				   )
+					$this->granted();
+				else
+					$this->notGranted();
+
+				break;
+
+		//	case "WRITE": // Data Base operations: add, delete, update
+		//		$this->notGranted();
+		//		break;
+
+			default:
+				$this->notGranted();
+		}
+	}
+
+
+	public function checkJobOfferAccess($mode,$E1_Id)
+	{
+		$jobOffer = new JobOffer();
+
+		switch ($mode) {
+			case "READ": // Data Base operations: get
+				if ( $jobOffer->hasJobOfferPublished($E1_Id) == true ) // Check if the E1_Id entity has some job offer published
 					$this->granted();
 				else
 					$this->notGranted();

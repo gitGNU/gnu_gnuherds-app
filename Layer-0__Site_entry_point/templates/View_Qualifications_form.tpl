@@ -23,14 +23,14 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr valign="top">
 <td>
-{if $smarty.session.ViewPhoto eq '' }
-	{if $smarty.session.ViewEntityType eq 'Person' }
-		<img src="/images/default/Person.png"  width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
-	{else}
-		<img src="/images/default/Company_or_non-profit_Organization.png"  width="180" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
-	{/if}
+{if $smarty.session.ViewPhotoOrLogo eq 'true' }
+		<img src="/View_Photo_or_Logo.php?Data=Qualifications&EntityId={$smarty.post.ViewEntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
 {else}
-		<img src="XXX"  align="left" alt="" border="1" hspace="0" vspace="0">
+	{if $smarty.session.ViewEntityType eq 'Person' }
+		<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
+	{else}
+		<img src="/images/default/Company_or_non-profit_Organization.png" width="180" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
+	{/if}
 {/if}
 </td>
 <td colspan="3">

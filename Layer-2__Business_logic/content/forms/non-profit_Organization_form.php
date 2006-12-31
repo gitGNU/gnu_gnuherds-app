@@ -57,6 +57,8 @@ class NonprofitOrganizationForm
 				}
 			}
 		}
+		else // new
+			$_SESSION['ViewPhotoOrLogo'] = "false"; // Initialization
 
 		// Process each button event
 		$phpTools = new PHPTools();
@@ -134,6 +136,8 @@ class NonprofitOrganizationForm
 		$_SESSION['Website'] = trim($_POST['Website']);
 
 		$_SESSION['NonprofitName'] = trim($_POST['NonprofitName']);
+
+		//XXX $_SESSION['PhotoOrLogo'] = 
 
 		// Checks
 		$this->checkNonprofitForm();
@@ -226,6 +230,11 @@ class NonprofitOrganizationForm
 		$_SESSION['Website'] = $result[14][0];
 
 		$_SESSION['NonprofitName'] = $result[19][0];
+
+		if ( file_exists("../entity_photos/".$_SESSION['EntityId']) )
+			$_SESSION['ViewPhotoOrLogo'] = "true";
+		else
+			$_SESSION['ViewPhotoOrLogo'] = "false";
 
 		return true;
 	}
