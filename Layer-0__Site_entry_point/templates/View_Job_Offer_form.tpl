@@ -388,7 +388,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 		<tr align="center">
 		<td colspan="4" align="center">
-		{t}Send comments to{/t} {mailto address='suspicious-joboffer@gnuherds.org'}
+		{t}Send comments to{/t} {mailto address='joboffer@gnuherds.org'}
 		</td>
 		</tr>
 {/if}
