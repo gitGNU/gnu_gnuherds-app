@@ -36,21 +36,23 @@ class JobOffer
 
 	public function getJobOffersForEntity()
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_VacancyTitle FROM J1_JobOffers WHERE J1_E1_Id=$1;  EXECUTE query('$_SESSION[EntityId]');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_OfferDate,J1_ExpirationDate,J1_Closed FROM J1_JobOffers WHERE J1_E1_Id=$1;  EXECUTE query('$_SESSION[EntityId]');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 		$array = array();
 		$array[0] = pg_fetch_all_columns($result, 0);
 		$array[1] = pg_fetch_all_columns($result, 1);
 		$array[2] = pg_fetch_all_columns($result, 2);
 		$array[3] = pg_fetch_all_columns($result, 3);
-		$array[4] = pg_fetch_all_columns($result, 4);
+
+		for( $i=0; $i < count($array[0]); $i++)
+			$array[4][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
 
 		return $array;
 	}
 
 	public function getJobOffers()
 	{
-		$sqlQuery = "SELECT J1_Id, J1_Telework, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CompanyName, EO_OrganizationName, J1_VacancyTitle FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_Closed='f' AND J1_ExpirationDate > 'now'";
+		$sqlQuery = "SELECT J1_Id, J1_Telework, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CompanyName, EO_OrganizationName FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_Closed='f' AND J1_ExpirationDate > 'now'";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
 		$array = array();
@@ -98,7 +100,8 @@ class JobOffer
 		$array[12] = pg_fetch_all_columns($result, 12); // EC_CompanyName
 		$array[13] = pg_fetch_all_columns($result, 13); // EO_OrganizationName
 
-		$array[14] = pg_fetch_all_columns($result, 14); // J1_VacancyTitle
+		for( $i=0; $i < count($array[0]); $i++)
+			$array[14][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
 
 		return $array;
 	}
@@ -106,7 +109,7 @@ class JobOffer
 
 	public function getJobOffer($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,LU_PluralName,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_VacancyTitle FROM J1_JobOffers,LU_Currencies WHERE J1_LU_Currency=LU_ThreeLetter AND J1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,LU_PluralName,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt FROM J1_JobOffers,LU_Currencies WHERE J1_LU_Currency=LU_ThreeLetter AND J1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array = array();
@@ -194,7 +197,7 @@ class JobOffer
 		$array[44] = $arrayLS[1];
 		$array[45] = $arrayLS[2];
 
-		$array[60] = pg_fetch_all_columns($result, 23); // J1_VacancyTitle
+		$array[60][0] = $this->makeUp_VacancyTitle($Id);
 
 		return $array;
 	}
@@ -211,7 +214,6 @@ class JobOffer
 
 		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : '';
 
-		$VacancyTitle = $this->makeUp_VacancyTitle(); // Make up the VacancyTitle
 		$EmployerJobOfferReference = isset($_POST['EmployerJobOfferReference']) ? trim($_POST['EmployerJobOfferReference']) : '';
 
 		$ExpirationDate = isset($_POST['ExpirationDate']) ? trim($_POST['ExpirationDate']) : '';
@@ -260,7 +262,7 @@ class JobOffer
 			$AvailableToTravel = 'true';
 		else	$AvailableToTravel = 'false';
 
-		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,text,text,text,text,text,text,text,text,text,bool,text,text,text,bool) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_VacancyTitle,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22);  EXECUTE query('$EntityId','$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$VacancyTitle','$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$ProfessionalExperienceSinceYear','$AcademicQualification','$FreeSoftwareExperiences','$Telework','$City','$StateProvince','$CountryCode','$AvailableToTravel');";
+		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,text,text,text,text,text,text,text,text,bool,text,text,text,bool) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21);  EXECUTE query('$EntityId','$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$ProfessionalExperienceSinceYear','$AcademicQualification','$FreeSoftwareExperiences','$Telework','$City','$StateProvince','$CountryCode','$AvailableToTravel');";
 		$this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 
@@ -362,7 +364,6 @@ class JobOffer
 
 		// J1_JobOffers table
 
-		$VacancyTitle = $this->makeUp_VacancyTitle(); // Make up the VacancyTitle
 		$EmployerJobOfferReference = isset($_POST['EmployerJobOfferReference']) ? trim($_POST['EmployerJobOfferReference']) : '';
 
 		$ExpirationDate = isset($_POST['ExpirationDate']) ? trim($_POST['ExpirationDate']) : '';
@@ -411,7 +412,7 @@ class JobOffer
 			$AvailableToTravel = 'true';
 		else	$AvailableToTravel = 'false';
 
-		$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,text,text,text,text,text,text,text,text,bool,text,text,text,bool,text,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCompanyApplications=$6,J1_AllowOrganizationApplications=$7,J1_Vacancies=$8,J1_LK_ContractType=$9,J1_WageRank=$10,J1_LU_Currency=$11,J1_LB_WageRankByPeriod=$12,J1_ProfessionalExperienceSinceYear=$13,J1_LA_Id=$14,J1_FreeSoftwareProjects=$15,J1_Telework=$16,J1_City=$17,J1_StateProvince=$18,J1_LO_Country=$19,J1_AvailableToTravel=$20,J1_VacancyTitle=$21 WHERE J1_Id=$22;  EXECUTE query('$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$ProfessionalExperienceSinceYear','$AcademicQualification','$FreeSoftwareExperiences','$Telework','$City','$StateProvince','$CountryCode','$AvailableToTravel','$VacancyTitle','$J1_Id');";
+		$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,text,text,text,text,text,text,text,text,bool,text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCompanyApplications=$6,J1_AllowOrganizationApplications=$7,J1_Vacancies=$8,J1_LK_ContractType=$9,J1_WageRank=$10,J1_LU_Currency=$11,J1_LB_WageRankByPeriod=$12,J1_ProfessionalExperienceSinceYear=$13,J1_LA_Id=$14,J1_FreeSoftwareProjects=$15,J1_Telework=$16,J1_City=$17,J1_StateProvince=$18,J1_LO_Country=$19,J1_AvailableToTravel=$20 WHERE J1_Id=$21;  EXECUTE query('$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$ProfessionalExperienceSinceYear','$AcademicQualification','$FreeSoftwareExperiences','$Telework','$City','$StateProvince','$CountryCode','$AvailableToTravel','$J1_Id');";
 		$this->postgresql->execute($sqlQuery,1);
 
 
@@ -468,8 +469,7 @@ class JobOffer
 
 	public function getJobOfferApplications($JobOfferId)
 	{
-		$arrayJO = $this->getJobOffer($JobOfferId);
-		$array[0] =$arrayJO[60][0]; // J1ST_VacancyTitle
+		$array[0] = $this->makeUp_VacancyTitle($JobOfferId);
 
 		$entities = $this->getEntitiesSubscribed($JobOfferId);
 		if ( is_array($entities) and count($entities)>0 )
@@ -533,40 +533,48 @@ class JobOffer
 
 	public function getJobApplicationsForEntity()
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_E1_Id,J1_OfferDate,R0_State,J1_VacancyTitle FROM J1_JobOffers,R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=J1_Id AND R0_E1_Id=$1 AND J1_Closed='f' AND J1_ExpirationDate > 'now' ;  EXECUTE query('$_SESSION[EntityId]');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_E1_Id,J1_OfferDate,R0_State FROM J1_JobOffers,R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=J1_Id AND R0_E1_Id=$1 AND J1_Closed='f' AND J1_ExpirationDate > 'now' ;  EXECUTE query('$_SESSION[EntityId]');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 		$array = array();
 		$array[0] = pg_fetch_all_columns($result, 0);
 		$array[1] = pg_fetch_all_columns($result, 1);
 		$array[2] = pg_fetch_all_columns($result, 2);
 		$array[3] = pg_fetch_all_columns($result, 3);
-		$array[4] = pg_fetch_all_columns($result, 4);
+
+		for( $i=0; $i < count($array[0]); $i++)
+			$array[4][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
 
 		return $array;
 	}
 
 
-	private function makeUp_VacancyTitle()
+	private function makeUp_VacancyTitle($J1_Id)
 	{
-		define("MAX_LENGTH",100);
+		$professionalProfiles = new ProfessionalProfiles();
+		$arrayLP = $professionalProfiles->getProfessionalProfilesForJobOffer($J1_Id);
 
-		$VacancyTitle = $_POST['ProfessionalProfileList'][0];
+		$fieldProfiles = new FieldProfiles();
+		$arrayLF = $fieldProfiles->getFieldProfilesForJobOffer($J1_Id);
 
-		for( $i=1; $i < count($_POST['ProfessionalProfileList']); $i++)
-			if ( strlen($VacancyTitle.", ".$_POST['ProfessionalProfileList'][$i]) < MAX_LENGTH )
-				$VacancyTitle .= ", ".$_POST['ProfessionalProfileList'][$i];
+		$skills = new Skills();
+		$arrayLS = $skills->getSkillsForJobOffer($J1_Id);
 
-		for( $i=0; $i < count($_POST['FieldProfileList']); $i++)
-			if ( strlen($VacancyTitle.", ".$_POST['FieldProfileList'][$i]) < MAX_LENGTH )
-				$VacancyTitle .= ", ".$_POST['FieldProfileList'][$i];
+		$languages = new Languages();
+		$arrayLL = $languages->getLanguagesForJobOffer($J1_Id);
 
-		for( $i=0; $i < count($_POST['SkillList']); $i++)
-			if ( strlen($VacancyTitle.", ".$_POST['SkillList'][$i]) < MAX_LENGTH )
-				$VacancyTitle .= ", ".$_POST['SkillList'][$i];
+		$VacancyTitle = gettext($arrayLP[0]);
 
-		for( $i=0; $i < count($_POST['LanguageList']); $i++)
-			if ( strlen($VacancyTitle.", ".$_POST['LanguageList'][$i]) < MAX_LENGTH )
-				$VacancyTitle .= ", ".$_POST['LanguageList'][$i];
+		for( $i=1; $i < count($arrayLP); $i++)
+			$VacancyTitle .= ", ".gettext($arrayLP[$i]);
+
+		for( $i=0; $i < count($arrayLF); $i++)
+			$VacancyTitle .= ", ".gettext($arrayLF[$i]);
+
+		for( $i=0; $i < count($arrayLS[0]); $i++)
+			$VacancyTitle .= ", ".$arrayLS[0][$i];
+
+		for( $i=0; $i < count($arrayLL[0]); $i++)
+			$VacancyTitle .= ", ".gettext($arrayLL[0][$i]);
 
 		return $VacancyTitle;
 	}
