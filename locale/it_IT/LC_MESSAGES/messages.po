@@ -728,7 +728,7 @@ msgid "or"
 msgstr "o"
 
 msgid "Vacancies"
-msgstr "Vacanze"
+msgstr "Posti vacanti"
 
 msgid "Ref."
 msgstr "Rif."
