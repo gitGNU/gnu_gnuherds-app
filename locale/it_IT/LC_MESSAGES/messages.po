@@ -656,7 +656,7 @@ msgid "There are not active job offers"
 msgstr "Non ci sono offerte di impiego attive"
 
 msgid "Vacancy title"
-msgstr "Titolo della vacanza"
+msgstr "Titolo del posto vacante"
 
 msgid "Location"
 msgstr "Ubicazione"
