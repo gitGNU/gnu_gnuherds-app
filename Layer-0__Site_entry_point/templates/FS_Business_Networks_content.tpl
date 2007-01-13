@@ -33,7 +33,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<li>
 		<p>
 		<a href="http://www.menttes.com" target="_blank">Menttes</a> ({t}English{/t}, {t}Spanish{/t}) <br>
-		{t}It is a small company based on Free Software located in Argentina (Cordoba). Menttes is looking forward to contact other Free Software Developers in Europe and US.{/t}
+		{t}Menttes provides training, consulting, web sites, portals, extranets, intranets and custom web application development with Plone, Zope and Python. These services are provided for end-users companies and consulting firms located in Southamerica, North America and Worlwide.{/t}
 		</p>
 	</li>
 

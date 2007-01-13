@@ -849,8 +849,8 @@ msgstr "El identificador a mostrar no ha sido especificado."
 msgid "These are the networks, or ways to set up one, which we know about:"
 msgstr "Estas son las redes, o vías para crear una, que nosotros conocemos:"
 
-msgid "It is a small company based on Free Software located in Argentina (Cordoba). Menttes is looking forward to contact other Free Software Developers in Europe and US."
-msgstr "Es una pequeña empresa que trabaja con Software Libre, ubicada en Argentina (Córdoba). Menttes desea contactar con otros desarrolladores de Software Libre en Europa y Estados Unidos."
+msgid "Menttes provides training, consulting, web sites, portals, extranets, intranets and custom web application development with Plone, Zope and Python. These services are provided for end-users companies and consulting firms located in Southamerica, North America and Worlwide."
+msgstr ""
 
 msgid "Its"
 msgstr "Su"
