@@ -303,19 +303,13 @@ msgid "The Committee shall consist of the following: the members of the system a
 msgstr "El Comité consistirá de: los miembros del equipo de administración de sistemas, el equipo de mantenimiento de la aplicación web, el equipo de gestión de certificaciones, los equipos de traducción de la aplicación web, el equipo de Relaciones Públicas y el Delegado de Ética."
 
 msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
-msgstr "Las responsabilidades del equipo de gestión de certificaciones serán evaluar, bajo petición, la certificación %1Free Software Contributor%2, la certificación %3GNU Business Network%4, etc. "
+msgstr "Las responsabilidades del equipo de gestión de certificaciones serán evaluar, bajo petición, la certificación %1Free Software Contributor%2, la certificación %3GNU Business Network%4, etc."
 
-msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure that: %1 %2the integrity of the GNU name is not breached and%3 %2the Association follows the %4Free Software%5 philosophy.%3 %6"
-msgstr "El Delegado de Ética será designado por la Free Software Foundation, Inc. para asegurar que: %1 %2la integridad del nombre GNU no sea alterada y que %3 %2la Asociación sigue la filosofía del %4Software Libre%5.%3 %6"
+msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points, having veto power over all subjects related to such points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6"
+msgstr "El Delegado de Ética será designado por la Free Software Foundation, Inc. para asegurar los siguientes puntos, teniendo poder de veto sobre todos los temas relacionados con tales puntos: %1 %2La integridad del nombre GNU no sea alterada.%3 %2La Asociación sigue la filosofía del %4Software Libre%5.%3 %2Las actividades son llevadas a cabo de forma que no se deja lugar a que sean abusadas en contra de los principios de la filosofía del %4Software Libre%5.%6"
 
-msgid "The Ethics Officer will suggest ways to maintain those values.  To ensure the Association follows The Free Software philosophy a set of rules will be built. Initially they can be gleaned directly from"
-msgstr "El Delegado de Ética sugerirá las vías para mantener esos valores.  Para asegurar que la Asociación sigue la filosofía del Software libre un conjunto de reglas serán escritas. Inicialmente pueden ser deducidas directamente de"
-
-msgid "The Ethic Officer is a general counsel whose job is to let the group know s/he thinks the Association is investing too much time on something that may jeopardize its status with the FSF."
-msgstr "El Delegado de Ética es un consejero general cuya tarea es hacer ver a la Asociación que está invirtiendo demasiado tiempo en algo que podría hacer peligrar su relación con la FSF."
-
-msgid "While the Ethics Officer may choose to actively participate in the committee, it is not his primary duty. All other officers will be elected by the membership."
-msgstr "Aunque el Delegado de Ética puede participar activamente en el comité, no es su función principal. El resto de delegados serán elegidos por los afiliados."
+msgid "All other officers will be elected by the membership."
+msgstr "El resto de delegados serán elegidos por los afiliados."
 
 msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or his out of office."
 msgstr "La duración del Cargo será de 4 años.  Todos los cargos del comité son voluntarios. Cualquier delegado puede renunciar en cualquier momento.  Después de 6 meses, si los afiliados están descontentos con un delegado pueden apartarlo/a de su cargo."
@@ -374,6 +368,9 @@ msgstr "Añadir el servicio de Ofertas de Empleo de Software Libre."
 
 msgid "Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed."
 msgstr "Enviar un pequeño informe, con referencia a este sitio web, a Richard Stallman para que revise nuestro trabajo y nos diga si debemos cambiar algo."
+
+msgid "Move to offices managed by FSF staff."
+msgstr "Traslado a oficinas controladas por personal de la FSF."
 
 msgid "Association announcement."
 msgstr "Anuncio de la Asociación."
@@ -608,8 +605,8 @@ msgstr "Porque ninguna cumple las condiciones expuestas a continuación:"
 msgid "Be licensed with the %1Affero GPL%2 or similar, to cover use of the software over a computer network."
 msgstr "Estar licensiada con %1Affero GPL%2 o similar, para proteger el uso del software en Internet."
 
-msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users."
-msgstr "Además, la gestión de la web de empleo debe estar %1controlada por sus propios usuarios%2 via principios democráticos. Esto estará garantizado por la política de la associación GNU Herds. De esta forma, se estará seguro que la evolución de la web de empleo estará controlada y dirigida por sus usuarios."
+msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users. The Ethics Officer's %3veto power%2 on Free Software related subjects is needed to be sure the association will follow the %4Free Software%2 philosophy for ever."
+msgstr "Además, la gestión de la web de empleo debe estar %1controlada por sus propios usuarios%2 via principios democráticos. Esto estará garantizado por la política de la associación GNU Herds. De esta forma, se estará seguro que la evolución de la web de empleo estará controlada y dirigida por sus usuarios. El poder de veto del Delegado de Ética sobre los temas relacionados con el Software Libre es necesario para asegurar que la asociación seguirá siempre la filosofía del %4Software Libre%2."
 
 msgid "Supplying support to engage among companies and persons, it doesn't matter the which or the order, helping the raise of a diversity of business models.  That is flexibility."
 msgstr "Favorecer las relaciones contractuales entre empresas y personas, no importa en que orden, ayudando al surgimiento de una diversidad de modelos de negocio.  Esto es flexibilidad."
@@ -3215,6 +3212,9 @@ msgstr "por día"
 
 msgid "by hour"
 msgstr "por hora"
+
+msgid "by project"
+msgstr "por proyecto"
 
 #
 # Data Base LE_Employability table
