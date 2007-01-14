@@ -850,7 +850,7 @@ msgid "These are the networks, or ways to set up one, which we know about:"
 msgstr "Estas son las redes, o vías para crear una, que nosotros conocemos:"
 
 msgid "Menttes provides training, consulting, web sites, portals, extranets, intranets and custom web application development with Plone, Zope and Python. These services are provided for end-users companies and consulting firms located in Southamerica, North America and Worlwide."
-msgstr ""
+msgstr "Menttes proporciona formación, consultoría, sitios web, portales, extranets, intranets y desarrollo de aplicaciones web a medida con Plone, Zope y Python. Estos servicios se ofrecen a compañías y consultoras de América del Sur, América del Norte y del resto del mundo."
 
 msgid "Its"
 msgstr "Su"
