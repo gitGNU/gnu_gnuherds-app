@@ -84,19 +84,11 @@ Non-executive committee members?:  The number of non-executive committee members
   4='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
   5='</a>'
   6='</ul>'
-}The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure that: %1 %2the integrity of the GNU name is not breached and%3 %2the Association follows the %4Free Software%5 philosophy.%3 %6{/t}
+}The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points, having veto power over all subjects related to such points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6{/t}
 </p>
 
 <p>
-{t}The Ethics Officer will suggest ways to maintain those values.  To ensure the Association follows The Free Software philosophy a set of rules will be built. Initially they can be gleaned directly from{/t} <a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">The Free Software Definition</a>.
-</p>
-
-<p>
-{t}The Ethic Officer is a general counsel whose job is to let the group know s/he thinks the Association is investing too much time on something that may jeopardize its status with the FSF.{/t}
-</p>
-
-<p>
-{t}While the Ethics Officer may choose to actively participate in the committee, it is not his primary duty. All other officers will be elected by the membership.{/t}
+{t}All other officers will be elected by the membership.{/t}
 </p>
 
 <p>
