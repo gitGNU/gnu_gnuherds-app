@@ -294,17 +294,12 @@ msgstr "Il Comitato sarà così composto: i membri del gruppo system administrat
 msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
 msgstr "Il gruppo di certificazione verificherà, su richiesta, le certificazioni %1Free Software Contributor%2, %3GNU Business Network%4, etc."
 
-msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure that: %1 %2the integrity of the GNU name is not breached and%3 %2the Association follows the %4Free Software%5 philosophy.%3 %6"
-msgstr "L'Ufficiale Etico sarà designato dalla Free Software Foundation, Inc. per assicurare che: %1 %2l'integrità del nome GNU non sia alterata e che %3 %2l'Associazione persegua la filosofia del %4Software Libero%5.%3 %6"
+msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points, having veto power over all subjects related to such points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6"
+msgstr ""
+# XXX David, this was the previous translation. You can see that the last sentence has been added. Some uppercase has been changed too. -- msgstr "L'Ufficiale Etico sarà designato dalla Free Software Foundation, Inc. per assicurare che: %1 %2l'integrità del nome GNU non sia alterata e che %3 %2l'Associazione persegua la filosofia del %4Software Libero%5.%3 %6"
 
-msgid "The Ethics Officer will suggest ways to maintain those values.  To ensure the Association follows The Free Software philosophy a set of rules will be built. Initially they can be gleaned directly from"
-msgstr "L'Ufficiale Etico suggerirà il modo per mantenere questi valori. Per assicurare che l'Asscoiazione segua la filosofia del Software Libero verranno istituite delle regole. Inizialmente potranno essere dedotte direttamente da"
-
-msgid "The Ethic Officer is a general counsel whose job is to let the group know s/he thinks the Association is investing too much time on something that may jeopardize its status with the FSF."
-msgstr "L'Ufficiale Etico è un consigliere il cui lavoro è di far sapere al gruppo quando qualcuno sta facendo qualcosa che possa mettere in pericolo la sua relazione con FSF."
-
-msgid "While the Ethics Officer may choose to actively participate in the committee, it is not his primary duty. All other officers will be elected by the membership."
-msgstr "Sebbene l'Ufficiale Etico possa decidere di partecipare attivamente al comitato, non è il suo compito primario. Tutti gli altri ufficiali saranno eletti dai soci."
+msgid "All other officers will be elected by the membership."
+msgstr "Tutti gli altri ufficiali saranno eletti dai soci."
 
 msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or his out of office."
 msgstr "La durata di una Carica sarà di 4 anni.  Tutte le posizioni del comitato sono volontarie, un ufficiale può rinunciare in qualunque momento.  Dopo 6 mesi, se i soci non sono soddisfatti di un ufficiale, possono rimuoverlo dall'incarico."
@@ -362,6 +357,9 @@ msgstr "Aggiungere il supporto Offerte di Impiego FS."
 
 msgid "Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed."
 msgstr "Inviare un piccolo rapporto di progresso, con riferimento a questo sito web, a Richard Stallman, cosicché possa rivedere le nostre attività e dirci, nel caso ce ne fosse bisogno, cosa deve essere cambiato."
+
+msgid "Move to offices managed by FSF staff."
+msgstr "Spostare negli uffici gestiti da personale FSF."
 
 msgid "Association announcement."
 msgstr "Annuncio dell'Associazione."
@@ -595,8 +593,9 @@ msgstr "Perché nessuno segue le condizioni proposte di seguito:"
 msgid "Be licensed with the %1Affero GPL%2 or similar, to cover use of the software over a computer network."
 msgstr "Essere sotto licenza %1Affero GPL%2 o simile, per coprire l'utilizzo di software su una rete di computer."
 
-msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users."
-msgstr "Inoltre, la gestione del sito deve essere %1controllata dai suoi stessi utenti%2, secondo una politica democratica. Questo sarà garantito dalla politica dell'associazione GNU Herds. Perciò si sarà sicuri che l'evoluzione del sito sarà controllata e portata avanti dai suoi utenti."
+msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users. The Ethics Officer's %3veto power%2 on Free Software related subjects is needed to be sure the association will follow the %4Free Software%2 philosophy for ever."
+msgstr ""
+# XXX David, this was the previous translation. Only the last sentence has been added. -- msgstr "Inoltre, la gestione del sito deve essere %1controllata dai suoi stessi utenti%2, secondo una politica democratica. Questo sarà garantito dalla politica dell'associazione GNU Herds. Perciò si sarà sicuri che l'evoluzione del sito sarà controllata e portata avanti dai suoi utenti."
 
 msgid "Supplying support to engage among companies and persons, it doesn't matter the which or the order, helping the raise of a diversity of business models.  That is flexibility."
 msgstr "Favorire le relazioni contrattuali tra aziende e persone, non importa in quale ordine, aiutando il raggiungemento di una diversità di modelli di lavoro.  Questa è flessibilità."
@@ -3165,6 +3164,9 @@ msgstr "per giorno"
 
 msgid "by hour"
 msgstr "per ora"
+
+msgid "by project"
+msgstr "per progetto"
 
 #
 # Data Base LE_Employability table
