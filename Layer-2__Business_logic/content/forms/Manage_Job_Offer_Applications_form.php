@@ -52,6 +52,13 @@ class ManageJobOfferApplicationsForm
 			throw new Exception($error,false);
 		}
 
+		// Check parameters
+		if ( !isset($_POST['JobOfferId']) or trim($_POST['JobOfferId']) == '' )
+		{
+			$error = "<p>".gettext('ERROR: The identifier to show has not been specified!.')."</p>";
+			throw new Exception($error,false);
+		}
+
 		// Process each button event
 		if ( $_POST['ApplicationState'] != '' )
 			$this->manager->setApplicationState($_POST['JobOfferId'],$_POST['ApplicationState'],$_POST['EntityId']);
