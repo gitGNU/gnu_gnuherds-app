@@ -836,8 +836,8 @@ msgstr "No"
 # View_Qualifications_form.php
 #
 
-msgid "The identifier to show has not been specified."
-msgstr "El identificador a mostrar no ha sido especificado."
+msgid "ERROR: The identifier to show has not been specified!."
+msgstr "ERROR: ¡El identificador a mostrar no ha sido especificado!."
 
 #
 # FS_Business_Networks_content.tpl

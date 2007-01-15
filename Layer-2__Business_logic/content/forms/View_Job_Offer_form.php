@@ -38,7 +38,7 @@ class ViewJobOfferForm
 		// Load the data
 		if ( !isset( $_POST['ViewJobOfferId'] ) or $_POST['ViewJobOfferId']=='' )
 		{
-			$error = "<p>".gettext('The identifier to show has not been specified.')."</p>";
+			$error = "<p>".gettext('ERROR: The identifier to show has not been specified!.')."</p>";
 			throw new Exception($error,false);
 		}
 		else
