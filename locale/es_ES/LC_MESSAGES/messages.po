@@ -3266,7 +3266,7 @@ msgstr "Excelente"
 #
 
 msgid "Received"
-msgstr "Recivido"
+msgstr "Recibido"
 
 msgid "In process"
 msgstr "En proceso"
