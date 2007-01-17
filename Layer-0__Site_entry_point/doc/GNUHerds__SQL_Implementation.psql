@@ -1327,6 +1327,7 @@ INSERT INTO LI_Skills VALUES ( 'COBOL',								'Development formal languages' );
 INSERT INTO LI_Skills VALUES ( 'Eiffel',							'Development formal languages' );
 INSERT INTO LI_Skills VALUES ( 'Forth',								'Development formal languages' );
 INSERT INTO LI_Skills VALUES ( 'Fortran',							'Development formal languages' );
+INSERT INTO LI_Skills VALUES ( 'Haskell',							'Development formal languages' );
 INSERT INTO LI_Skills VALUES ( 'Java',								'Development formal languages' );
 INSERT INTO LI_Skills VALUES ( 'JavaScript',							'Development formal languages' );
 INSERT INTO LI_Skills VALUES ( 'Lisp',								'Development formal languages' );
