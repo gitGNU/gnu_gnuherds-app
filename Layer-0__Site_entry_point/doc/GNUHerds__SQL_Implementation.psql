@@ -1177,6 +1177,7 @@ INSERT INTO LB_ByPeriod VALUES ( 'by month' );
 INSERT INTO LB_ByPeriod VALUES ( 'by week' );
 INSERT INTO LB_ByPeriod VALUES ( 'by day' );
 INSERT INTO LB_ByPeriod VALUES ( 'by hour' );
+INSERT INTO LB_ByPeriod VALUES ( 'by project' );
 
 -- These registers must be inserted in sort according to the value of the first field:
 INSERT INTO LE_Employability VALUES ( 'Working' );
