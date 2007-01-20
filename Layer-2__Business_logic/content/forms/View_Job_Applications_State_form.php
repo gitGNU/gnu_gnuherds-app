@@ -41,7 +41,7 @@ class ViewJobApplicationsStateForm
 			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
 			{
 				$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-				throw new Exception($error,true);
+				throw new Exception($error,false);
 			}
 		}
 		else

@@ -43,7 +43,7 @@ class JobOfferForm
 			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
 			{
 				$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-				throw new Exception($error,true);
+				throw new Exception($error,false);
 			}
 
 			if ( $_POST['back'] != gettext('Back') and $_POST['JobOfferId'] != '' ) // $back='Back' exposes we are along a no finished operation, so we do not overrride the transitional $_SESSION variable values loading from the data base table.
