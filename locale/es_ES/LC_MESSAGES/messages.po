@@ -472,6 +472,9 @@ msgstr "La lista de tareas (TODO)"
 msgid "See the %1Task Manager%2 at Savannah."
 msgstr "Véase el %1Task Manager%2 en Savannah."
 
+msgid "See the %1Wiki HOWTO%2 at Savannah."
+msgstr "Véase la %1Wiki HOWTO%2 en Savannah."
+
 msgid "The source code"
 msgstr "El código fuente"
 
