@@ -29,6 +29,7 @@ Suite 225, San Francisco, CA 94107, USA
 <li> <a href="#Internationalization_and_Localization" style='text-decoration: none;' target="_top">{t}Internationalization and Localization{/t}</a>
 <li> <a href="#How_the_development_team_and_production_is_integrated" style='text-decoration: none;' target="_top">{t}How the development team and production is integrated?{/t}</a>
 <li> <a href="#The_TODO_task_list" style='text-decoration: none;' target="_top">{t}The TODO task list{/t}</a>
+<li> <a href="#Wikis" style='text-decoration: none;' target="_top">Wikis</a>
 <li> <a href="#The_source_code" style='text-decoration: none;' target="_top">{t}The source code{/t}</a>
 <li> <a href="#The_CVS_server" style='text-decoration: none;' target="_top">{t}The CVS server{/t}</a>
 <li> <a href="#The_web_site" style='text-decoration: none;' target="_top">{t}The web site{/t}</a>
@@ -254,7 +255,21 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>9. {t}The source code{/t} <a name="The_source_code"></a> </h4>
+<h4>9. Wikis <a name="Wikis"></a> </h4>
+
+	<p>
+	{t escape='no'
+	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&item_id=146" target="_blank">'
+	  2='</a>'
+	}See the %1Wiki HOWTO%2 at Savannah.{/t}
+	</p>
+
+<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+
+<p>&nbsp;</p>
+
+
+<h4>10. {t}The source code{/t} <a name="The_source_code"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -275,7 +290,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>10. {t}The CVS server{/t} <a name="The_CVS_server"></a> </h4>
+<h4>11. {t}The CVS server{/t} <a name="The_CVS_server"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -369,7 +384,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>11. {t}The web site{/t} <a name="The_web_site"></a> </h4>
+<h4>12. {t}The web site{/t} <a name="The_web_site"></a> </h4>
 
 	<p>
 	{t}It is in the gnuherds.org host.{/t}
@@ -380,7 +395,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>12. {t}The PostgreSQL data base{/t} <a name="The_PostgreSQL_data_base"></a> </h4>
+<h4>13. {t}The PostgreSQL data base{/t} <a name="The_PostgreSQL_data_base"></a> </h4>
 
 	<p>
 	{t}Creating from scratch. Follow the below steps:{/t}
@@ -463,7 +478,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>13. {t}Email lists{/t} <a name="Email_lists"></a> </h4>
+<h4>14. {t}Email lists{/t} <a name="Email_lists"></a> </h4>
 
 <ul>
 	<li><a href="https://lists.gnuherds.org/mailman/listinfo/association" target="_blank">association</a> {t}is the project main list.{/t}</li>
@@ -475,7 +490,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>14. {t}How to install a development environment?{/t} <a name="How_to_install_a_development_environment"></a> </h4>
+<h4>15. {t}How to install a development environment?{/t} <a name="How_to_install_a_development_environment"></a> </h4>
 
 <ul>
 	<li>{t}Install{/t}: PostgreSQL
@@ -518,7 +533,7 @@ msgfmt messages.po
 <p>&nbsp;</p>
 
 
-<h4>15. {t}Current work team{/t} <a name="Current_work_team"></a> </h4>
+<h4>16. {t}Current work team{/t} <a name="Current_work_team"></a> </h4>
 
 	<p>
 	{t}The list could be outdated:{/t}<br>
@@ -529,7 +544,7 @@ msgfmt messages.po
 	<tr> <td><b>Charles</b>  <td>Auditor, Quality Assurance, etc.
 	<tr> <td><b>Davi</b>     <td>Web developer, CVS, Spanish Translator, etc.
 	<tr> <td><b>David</b>    <td>Web developer, Italian Translator.
-	<tr> <td><b>Fatima</b>   <td>Functional Auditor.
+	<tr> <td><b>Fatima</b>   <td>Functional Auditor. Portuguese translation Maintainer.
 	<tr> <td><b>Gabriel</b>  <td>Data base Adviser.
 	<tr> <td><b>Jonas</b>    <td>GNU Business Network.
 	<tr> <td><b>Jose</b>     <td>Architecture Adviser.
