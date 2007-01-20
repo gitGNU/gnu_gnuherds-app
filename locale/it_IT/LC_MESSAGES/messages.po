@@ -830,8 +830,7 @@ msgid "These are the networks, or ways to set up one, which we know about:"
 msgstr "Queste sono le reti, o i modi per crearne una, che noi conosciamo:"
 
 msgid "Menttes provides training, consulting, web sites, portals, extranets, intranets and custom web application development with Plone, Zope and Python. These services are provided for end-users, companies and consulting firms located in Southamerica, North America and Worlwide."
-msgstr "Menttes fornisce formazione, consultazione, siti web, portali, extranets, intranets e sviluppo di applicazioni web con Plone, Zope e Python. Questi servizi vengono forniti a utilizzatori finali, compagnie e aziende di consultazione con sede in Sud America, Nord America e in tutto il resto del Mondo."
-### David, I am not sure if the pacth I have added "utilizzatori finali", "o --> e" is right.
+msgstr "Menttes fornisce formazione, consultazione, siti web, portali, extranets, intranets e sviluppo di applicazioni web con Plone, Zope e Python. Questi servizi vengono forniti a utenti finali, compagnie e aziende di consultazione con sede in Sud America, Nord America e in tutto il resto del Mondo."
 
 msgid "Its"
 msgstr "Sua"
