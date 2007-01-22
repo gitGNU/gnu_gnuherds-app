@@ -765,6 +765,9 @@ msgstr "Óptimo"
 msgid "Professional experience since"
 msgstr "Experiencia profesional desde"
 
+msgid "Experience since"
+msgstr "Experiencia desde"
+
 msgid "Academic qualification"
 msgstr "Cualificación académica"
 
