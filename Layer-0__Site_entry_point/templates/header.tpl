@@ -36,9 +36,9 @@ Suite 225, San Francisco, CA 94107, USA
 <td width="100%"></td>
 
 <td>
-{'Languages'|gettext}:&nbsp;<br><a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageEN.value;document.getElementById('languageForm').submit();}{/literal}">{'English'|gettext}</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageES.value;document.getElementById('languageForm').submit();}{/literal}">{'Spanish'|gettext}</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageIT.value;document.getElementById('languageForm').submit();}{/literal}">{'Italian'|gettext}</a>
+{'Languages'|gettext}:&nbsp;<br><a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageEN.value;document.getElementById('languageForm').submit();}{/literal}" title="{'English'|gettext}">English</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageES.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Spanish'|gettext}">Espa&#x00f1;ol</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageIT.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Italian'|gettext}">Italiano</a>
 
-<!-- ,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languagePT_BR.value;document.getElementById('languageForm').submit();}{/literal}">{'Portuguese'|gettext}&nbsp;({'Brazil'|gettext})</a> -->
+<!-- &nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languagePT_BR.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Portuguese'|gettext}">Portugu&#x0ea;s</a> -->
 
 <br>
 <span class="hidden2">{'______________________________'|strip:'&nbsp;'}</span>
