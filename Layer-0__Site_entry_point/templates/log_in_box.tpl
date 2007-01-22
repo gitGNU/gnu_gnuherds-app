@@ -27,31 +27,47 @@ Suite 225, San Francisco, CA 94107, USA
 
 <table border="0" cellspacing="0" cellpadding="2" bgcolor="{$webpage->theme->loginBoxBGcolor}">
 <tr>
-<td colspan="2" align="center" class="login"><u>{'Manage your data'|gettext|strip:'&nbsp;'}</u><br><br></td>
+<td align="center" class="login"><u>{'Manage your data'|gettext|strip:'&nbsp;'}</u><br><br></td>
 </tr>
 
 <tr>
-<td nowrap align="right" class="login">
-E-mail:<br>
-<br>
-{'Password'|gettext}:<br>
-<br>
+<td nowrap align="left" class="login">
+E-mail:
 </td>
+</tr>
+
+<tr>
 <td nowrap>
-<input type="text" name="Email" size="6"> <br>
-<input type="password" name="Password" size="6"><br>
-<br>
+<input type="text" name="Email" size="22" class="loginControls"> <br>
 </td>
 </tr>
 
 <tr>
-<td colspan="2" align="center">
+<td nowrap align="left" class="login">
+{'Password'|gettext}:
+</td>
+</tr>
+
+<tr>
+<td nowrap>
+<input type="password" name="Password" size="22" class="loginControls"><br>
+</td>
+</tr>
+
+<tr>
+<td nowrap>
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td align="center">
 <input type="submit" name="login" value="{'Log in'|gettext}">
 </td>
 </tr>
 
 <tr>
-<td colspan="2" align="center" class="login">
+<td align="center" class="login">
 <a href="https://{$smarty.server.HTTP_HOST}/Lost_Password.php" target="_top">{'Lost password?'|gettext|strip:'&nbsp;'}</a><br>
 <br>
 <a href="https://{$smarty.server.HTTP_HOST}/Person.php" target="_top">{'New person?'|gettext}</a><br>
