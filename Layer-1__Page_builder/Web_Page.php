@@ -63,7 +63,7 @@ class WebPage
 				;
 			elseif ($_SESSION["Language"] == "it_IT")
 				;
-			elseif ($_SESSION["Language"] == "pt_BR")
+			elseif ($_SESSION["Language"] == "pt_PT")
 				;
 			else // The client has not specified a language, so we try to guess the best default language according to the user browser settings.
 			{
@@ -78,7 +78,9 @@ class WebPage
 					"es_HN" => true, "es_MX" => true, "es_NI" => true, "es_PA" => true, "es_PE" => true, "es_PR" => true,
 					"es_PY" => true, "es_SV" => true, "es_US" => true, "es_UY" => true, "es_VE" => true,
 					"it" => true,
-					"it_IT" => true, "it_CH" => true
+					"it_IT" => true, "it_CH" => true,
+					"pt" => true,
+					"pt_PT" => true, "pt_BR" => true
 				);
 
 				$chosen = HTTP::negotiateLanguage($supported);
@@ -99,6 +101,9 @@ class WebPage
 					elseif ( $chosen == "it"
 					      or $chosen == "it_IT" or $chosen == "it_CH" )
 					    $this->setLanguage("it_IT");
+					elseif ( $chosen == "pt"
+					      or $chosen == "pt_PT" or $chosen == "pt_BR" )
+					    $this->setLanguage("pt_PT");
 					else
 						$this->setLanguage($default_language);
 				}
@@ -115,6 +120,10 @@ class WebPage
 						$this->setLanguage("en_US");
 					elseif ( $country_code == "IT" )
 						$this->setLanguage("it_IT");
+					elseif ( $country_code == "PT" or $country_code == "BR" or $country_code == "AO" or $country_code == "CV"
+					  or $country_code == "GW" or $country_code == "MZ" or $country_code == "ST"
+					  or $country_code == "MO" or $country_code == "TL" ) // Co-official language. Ref.: wikipedia.org
+						$this->setLanguage("pt_PT");
 					else
 						$this->setLanguage($default_language);
 				}

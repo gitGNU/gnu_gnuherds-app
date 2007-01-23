@@ -36,10 +36,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td width="100%"></td>
 
 <td>
-{'Languages'|gettext}:&nbsp;<br><a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageEN.value;document.getElementById('languageForm').submit();}{/literal}" title="{'English'|gettext}">English</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageES.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Spanish'|gettext}">Espa&#x00f1;ol</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageIT.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Italian'|gettext}">Italiano</a>
-
-<!-- &nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languagePT_BR.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Portuguese'|gettext}">Portugu&#x0ea;s</a> -->
-
+{'Languages'|gettext}:&nbsp;<br><a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageEN.value;document.getElementById('languageForm').submit();}{/literal}" title="{'English'|gettext}">English</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageES.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Spanish'|gettext}">Espa&#x00f1;ol</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageIT.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Italian'|gettext}">Italiano</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languagePT.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Portuguese'|gettext}">Portugu&#x0ea;s</a>
 <br>
 <span class="hidden2">{'______________________________'|strip:'&nbsp;'}</span>
 <br>
@@ -55,7 +52,7 @@ Suite 225, San Francisco, CA 94107, USA
 <input type="hidden" name="languageEN" id="languageEN" value="en_US">
 <input type="hidden" name="languageES" id="languageES" value="es_ES">
 <input type="hidden" name="languageIT" id="languageIT" value="it_IT">
-<input type="hidden" name="languagePT_BR" id="languagePT_BR" value="pt_BR">
+<input type="hidden" name="languagePT" id="languagePT" value="pt_PT">
 <input type="hidden" name="language" id="language" value="none">
 
 <!-- These are the post values which we must pass through at this page. -->

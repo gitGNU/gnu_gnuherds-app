@@ -34,8 +34,8 @@ class LanguageForm
 			$language = 'es_ES.utf8';
 		if ($_SESSION['Language'] == "it_IT")
 			$language = 'it_IT.utf8';
-		if ($_SESSION['Language'] == "pt_BR")
-			$language = 'pt_BR.utf8';
+		if ($_SESSION['Language'] == "pt_PT")
+			$language = 'pt_PT.utf8';
 
 		putenv("LANG=$language");
 		setlocale(LC_ALL, $language);
