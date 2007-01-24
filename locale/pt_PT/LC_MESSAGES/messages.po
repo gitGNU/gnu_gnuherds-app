@@ -415,8 +415,8 @@ msgstr "Tecnologias"
 msgid "The project depends on the below technologies. Though it is and must be open to any proposal."
 msgstr "O projecto depende das tecnologias abaixo. Não obstante encontra-se e dever estar sempre aberto a qualquer proposta."
 
-msgid "%1CVS%2 server at %2Savannah%3"
-msgstr "Servidor %1CVS%2 em %2Savannah%3"
+msgid "%1CVS%3 server at %2Savannah%3"
+msgstr "Servidor %1CVS%3 em %2Savannah%3"
 
 msgid "Web application Architecture"
 msgstr "Arquitectura da aplicação web"

@@ -403,8 +403,8 @@ msgstr "Tecnologie"
 msgid "The project depends on the below technologies. Though it is and must be open to any proposal."
 msgstr "Il progetto dipende dalle tecnologie seguenti. È comunque aperto, e deve restarlo, ad ogni proposta."
 
-msgid "%1CVS%2 server at %2Savannah%3"
-msgstr "Server %1CVS%2 su %2Savannah%3"
+msgid "%1CVS%3 server at %2Savannah%3"
+msgstr "Server %1CVS%3 su %2Savannah%3"
 
 msgid "Web application Architecture"
 msgstr "Architettura dell'applicazione web"
