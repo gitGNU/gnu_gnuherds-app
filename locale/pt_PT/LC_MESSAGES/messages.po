@@ -32,7 +32,7 @@ msgstr ""
 #
 
 msgid "Free Software Association"
-msgstr "Associação de Código Livre"
+msgstr "Associação de Software Livre"
 
 #
 # header.tpl
@@ -121,13 +121,13 @@ msgid "Careers"
 msgstr "Carreiras"
 
 msgid "FS Business Networks"
-msgstr "Redes de Negócios CL"
+msgstr "Redes de Negócios FS"
 
 msgid "FS Job Offers"
-msgstr "Ofertas de Emprego CL"
+msgstr "Ofertas de Emprego FS"
 
 msgid "FS job articles"
-msgstr "Artigos de Emprego CL"
+msgstr "Artigos de Emprego FS"
 
 msgid "Others"
 msgstr "Outros"
@@ -139,7 +139,7 @@ msgid "Special Interest Groups"
 msgstr "Grupos com Interesses Especiais"
 
 msgid "FS Businesses"
-msgstr "Negócios CL"
+msgstr "Negócios FS"
 
 msgid "e-Voting"
 msgstr "e-Voto"
@@ -251,7 +251,7 @@ msgid "Under construction. Look at the %1Hackers' Guide%2."
 msgstr "Em construção. Consulte o %1Guia do Programador%2."
 
 msgid "GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors. %5Job Site%4 modules have been developed. It has been put together by a small %3team%4 of interested members of the Free Software community."
-msgstr "GNU Herds é uma associação %1democrática%4 sem fins lucrativos, cujo %2objectivo%4 é promover o desenvolvimento profissional de quem contribui para o Código Livre. Foi já desenvolvido o módulo de %5Classificados de Emprego%4. Este projecto foi realizado por um pequeno %3grupo%4 de membros da comunidade de Código Livre." 
+msgstr "GNU Herds é uma associação %1democrática%4 sem fins lucrativos, cujo %2objectivo%4 é promover o desenvolvimento profissional de quem contribui para o Software Livre. Foi já desenvolvido o módulo de %5Classificados de Emprego%4. Este projecto foi realizado por um pequeno %3grupo%4 de membros da comunidade de Software Livre." 
 
 msgid "is the project main list."
 msgstr "esta é a lista principal do projecto."
@@ -273,13 +273,13 @@ msgid "Title"
 msgstr "Título"
 
 msgid "The name of the Association shall be GNU Herds, to be known publicly as GNU Herds - Free Software Association."
-msgstr "O nome da Associação será GNU Herds, publicamente designada como GNU Herds - Associação de Código Livre."
+msgstr "O nome da Associação será GNU Herds, publicamente designada como GNU Herds - Associação de Software Livre."
 
 msgid "Aims"
 msgstr "Objectivos"
 
 msgid "The aims of the Association shall be to %1encourage%2 the professional development of Free Software contributors."
-msgstr "Os objectivos da Associação serão %1fomentar%2 o desenvolvimento profissional dos participantes na comunidade de Código Livre."
+msgstr "Os objectivos da Associação serão %1fomentar%2 o desenvolvimento profissional dos participantes na comunidade de Software Livre."
 
 msgid "Membership"
 msgstr "Afiliação"
@@ -291,7 +291,7 @@ msgid "All members must subscribe to the purposes of GNU Herds and adhere to the
 msgstr "Todos os membros devem subscrever os objectivos da GNU Herds e reger-se por este Código de Ética sob pena de verem o seu estatuto de membro ser cancelado."
 
 msgid "To qualify for voting membership one must show a contribution to the Free Software movement."
-msgstr "Para se qualificar como membro com poder de voto é necessário demonstrar uma contribuição para o movimento de Código Livre."
+msgstr "Para se qualificar como membro com poder de voto é necessário demonstrar uma contribuição para o movimento de Software Livre."
 
 msgid "Memberships will be on a yearly basis.  Even though membership is free of charge membership must be renewed."
 msgstr "A afiliação terá uma validade de um ano.  Apesar da afiliação ser gratuita, tem de ser renovada."
@@ -303,10 +303,10 @@ msgid "The Committee shall consist of the following: the members of the system a
 msgstr "O Comité consistirá no seguinte: os membros da equipa de administração de sistemas, a equipa de administradores web, a equipa de certificações, a equipa de tradutores, a equipa de Relações Públicas e o Responsável de Ética."
 
 msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
-msgstr "As responsabilidades da equipa de certificações serão avaliar, quando requerido, a certificação de %1Contribuição para o Código Livre%2, certificação de %3Rede de Negócios GNU%4, etc."
+msgstr "As responsabilidades da equipa de certificações serão avaliar, quando requerido, a certificação de %1Contribuição para o Software Livre%2, certificação de %3Rede de Negócios GNU%4, etc."
 
 msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points, having veto power over all subjects related to such points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6"
-msgstr "O Responsável de Ética será designado pela Free Software Foundation, Inc. para garantir os seguintes pontos, detendo poder de veto sobre todos os temas relacionados com estes pontos: %1 %2A integridade do nome GNU não é comprometida.%3 %2A Associação respeita a filosofia do %4Código Livre%5.%3 %2As actividades são conduzidas de uma forma que não dá azo a que sejam abusadas atentando aos princípios ou filosofia do %4Código Livre%5.%6"
+msgstr "O Responsável de Ética será designado pela Free Software Foundation, Inc. para garantir os seguintes pontos, detendo poder de veto sobre todos os temas relacionados com estes pontos: %1 %2A integridade do nome GNU não é comprometida.%3 %2A Associação respeita a filosofia do %4Software Livre%5.%3 %2As actividades são conduzidas de uma forma que não dá azo a que sejam abusadas atentando aos princípios ou filosofia do %4Software Livre%5.%6"
 
 msgid "All other officers will be elected by the membership."
 msgstr "Todos os restantes cargos serão eleitos pelos membros."
@@ -364,7 +364,7 @@ msgid "Add the member support."
 msgstr "Adicionar o suporte a membros."
 
 msgid "Add the FS Job Offers support."
-msgstr "Adicionar o suporte aos Classificados de Emprego em CL."
+msgstr "Adicionar o suporte aos Classificados de Emprego em FS."
 
 msgid "Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed."
 msgstr "Apresentar um breve relatório de progresso, com referência a esta página, ao Richard Stallman para que eles revejam as nossas actividades e nos digam se há algo (e o quê) que tem de ser alterado."
@@ -422,7 +422,7 @@ msgid "Web application Architecture"
 msgstr "Arquitectura da aplicação web"
 
 msgid "As a Free Software project we look for a modular and extensible design. We hope it could be easy to change the technology of a specific layer if it is needed."
-msgstr "Na qualidade de projecto de Código Livre procuramos um desenho modular e extensível. Desejamos que, se necessário, seja fácil substituir a tecnologia numa camada específica."
+msgstr "Na qualidade de projecto de Software Livre procuramos um desenho modular e extensível. Desejamos que, se necessário, seja fácil substituir a tecnologia numa camada específica."
 
 msgid "This architecture proposal is based on PHP:"
 msgstr "Esta proposta de arquitectura é baseada em PHP:"
@@ -606,19 +606,19 @@ msgid "Be licensed with the %1Affero GPL%2 or similar, to cover use of the softw
 msgstr "Estar licenciado com a %1Affero GPL%2 ou semelhante, para proteger a utilização da aplicação numa rede informática."
 
 msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users. The Ethics Officer's %3veto power%2 on Free Software related subjects is needed to be sure the association will follow the %4Free Software%2 philosophy for ever."
-msgstr "Adicionalmente, a gestão do servidor de classificados deve ser %1controlada pelos seus utilizadores%2 segundo regras democráticas. Tal será garantido pelos estatutos da GNU Herds. Assim, garante-se que a evolução do servidor de classificados será controlada e liderada pelos seus utilizadores. O %3poder de veto%2 do Responsável de Ética em assuntos relacionados com o Código Livre é necessário para se ter a certeza de que a associação irá sempre seguir a filosofia do %4Código Livre%2."
+msgstr "Adicionalmente, a gestão do servidor de classificados deve ser %1controlada pelos seus utilizadores%2 segundo regras democráticas. Tal será garantido pelos estatutos da GNU Herds. Assim, garante-se que a evolução do servidor de classificados será controlada e liderada pelos seus utilizadores. O %3poder de veto%2 do Responsável de Ética em assuntos relacionados com o Software Livre é necessário para se ter a certeza de que a associação irá sempre seguir a filosofia do %4Software Livre%2."
 
 msgid "Supplying support to engage among companies and persons, it doesn't matter the which or the order, helping the raise of a diversity of business models.  That is flexibility."
 msgstr "Favorecer a interacção entre empresas e indivíduos, independentemente de quais ou da ordem, ajudando à criação de uma diversidade de modelos de negócio.  Isto é flexibilidade."
 
 msgid "Make it easy the contacts among persons and companies interested in Free Software business."
-msgstr "Facilitar o contacto entre indivíduos e empresas interessadas no negócio do Código Livre."
+msgstr "Facilitar o contacto entre indivíduos e empresas interessadas no negócio do Software Livre."
 
 msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
 msgstr "Tendo um âmbito global, suportar modelos de negócio baseados em tele-trabalho. Com as tecnologias futuras a localização não mais poderá ser um obstáculo à criação de relações sobre serviços de TI. Assim, o objectivo, já alcançado, de traduzir a aplicação web para outros idiomas, e de suportar o facto de que uma oferta de trabalho poderá ser inserida em vários idiomas."
 
 msgid "All this taking into account that: \"The %1aims%2 of the Association shall be to encourage the professional development of Free Software contributors.\""
-msgstr "Tudo isto tendo em conta que: \"Os %1objectivos%2 da Associação serão os de encorajar o desenvolvimento profissional de quem contribui para o Código Livre.\""
+msgstr "Tudo isto tendo em conta que: \"Os %1objectivos%2 da Associação serão os de encorajar o desenvolvimento profissional de quem contribui para o Software Livre.\""
 
 msgid "How to subscribe to a job offer?"
 msgstr "Como se candidatar a uma oferta de trabalho?"
@@ -784,7 +784,7 @@ msgid "Certifications"
 msgstr "Certificações"
 
 msgid "Experience with FS projects"
-msgstr "Experiência em projectos CL"
+msgstr "Experiência em projectos FS"
 
 msgid "Currently you are"
 msgstr "De momento encontra-se"
@@ -894,13 +894,13 @@ msgstr "Referências"
 #
 
 msgid "Special Interest Group: FS Businesses"
-msgstr "Grupo de Interesse Especial: Negócios CL"
+msgstr "Grupo de Interesse Especial: Negócios FS"
 
 msgid "You can see the %1FS Business Networks%2 section."
-msgstr "Pode consultar a secção %1Redes de Negócios CL%2."
+msgstr "Pode consultar a secção %1Redes de Negócios FS%2."
 
 msgid "Email lists where we know FS Businesses are discussed:"
-msgstr "Listas de distribuição onde os Negócios CL são discutidos:"
+msgstr "Listas de distribuição onde os Negócios FS são discutidos:"
 
 
 #
@@ -1008,7 +1008,7 @@ msgid "Success. You have been logged automatically. You can realize others opera
 msgstr "Sucesso. A sua sessão foi iniciada automaticamente. Poderá realizar outras operações a partir do menu à esquerda."
 
 msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
-msgstr "A sua contribuição para a comunidade de Código Livre irá ser avaliada. O resultado ser-lhe-á enviado por email, atribuindo-lhe poder de voto caso a avaliação seja positiva."
+msgstr "A sua contribuição para a comunidade de Software Livre irá ser avaliada. O resultado ser-lhe-á enviado por email, atribuindo-lhe poder de voto caso a avaliação seja positiva."
 
 msgid "There is already a member with this email in the data base. If that email is yours, get the password via the \"Lost Password\" form, else choose a different email."
 msgstr "Já existe um membro com este email na base de dados. Caso esse email seja seu, obtenha a senha através do formulário de \"Senha Perdida\", caso contrário indique um email diferente."
@@ -1123,7 +1123,7 @@ msgid "Choose any idiom in the first combo-box and then select the spoken and wr
 msgstr "Seleccione um qualquer idioma na primeira caixa de selecção e depois o nível de experiência falado e escrito.%1 Os idiomas e experiências irão surgir na caixa à direita. Repita este procedimento para cada idioma que conheça.%1 Caso deseje apagar uma entrada, seleccione-a na caixa à direita e prima %2Apagar%3."
 
 msgid "URIs which prove your contritution to FS projects. For example: CVS web reference, email with patch or advices, etc."
-msgstr "URIs que comprovem a sua contribuição para projectos de CL. Por exemplo: referências a CVS web, email com alterações ao código ou conselhos, etc."
+msgstr "URIs que comprovem a sua contribuição para projectos de FS. Por exemplo: referências a CVS web, email com alterações ao código ou conselhos, etc."
 
 msgid "Professional profiles"
 msgstr "Perfis profissionais"
@@ -1138,7 +1138,7 @@ msgid "Project"
 msgstr "Projecto"
 
 msgid "Contributions to FS projects"
-msgstr "Contribuições para projectos em CL"
+msgstr "Contribuições para projectos em FS"
 
 msgid "The Project and URI fields are required. Please, try again."
 msgstr "Os campos de Projecto e URI são obrigatórios. Tente novamente."
@@ -1333,7 +1333,7 @@ msgid "be used as a country voting system."
 msgstr "ser utilizado como sistema de voto de um país."
 
 msgid "be used as the FS community voting system. The FS community does not need a voting system. As Barry Fitzgerald exposes:"
-msgstr "ser utilizado como o sistema de voto da comunidade de Código Livre. A comunidade de CL não necessita de um sistema de voto. Como Barry Fitzgerald %1expôs%2:"
+msgstr "ser utilizado como o sistema de voto da comunidade de Software Livre. A comunidade de FS não necessita de um sistema de voto. Como Barry Fitzgerald %1expôs%2:"
 
 msgid "The GNU Herds' official voting mechanism is only intented to:"
 msgstr "O sistema de voto oficial do GNU Herds apenas pretende:"
