@@ -1333,7 +1333,7 @@ msgid "be used as a country voting system."
 msgstr "ser utilizado como sistema de voto de um país."
 
 msgid "be used as the FS community voting system. The FS community does not need a voting system. As Barry Fitzgerald exposes:"
-msgstr "ser utilizado como o sistema de voto da comunidade de Software Livre. A comunidade de FS não necessita de um sistema de voto. Como Barry Fitzgerald %1expôs%2:"
+msgstr "ser utilizado como o sistema de voto da comunidade de Software Livre. A comunidade de FS não necessita de um sistema de voto. Como Barry Fitzgerald expôs:"
 
 msgid "The GNU Herds' official voting mechanism is only intented to:"
 msgstr "O sistema de voto oficial do GNU Herds apenas pretende:"
