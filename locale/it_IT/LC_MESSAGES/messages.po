@@ -571,11 +571,8 @@ msgstr "La lista potrebbe non essere aggiornata:"
 #
 # FAQ_content.tpl
 #
-msgid "Frequently Asked Questions"
-msgstr "Domande Frequenti"
-
-msgid "FAQ"
-msgstr "FAQ"
+msgid "Frequently Asked Questions (FAQ)"
+msgstr "Domande Frequenti (FAQ)"
 
 msgid "Index"
 msgstr "Indice"

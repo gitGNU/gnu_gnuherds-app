@@ -17,7 +17,7 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-<h3>{t}Frequently Asked Questions{/t} ({t}FAQ{/t})</h3>
+<h3>{t}Frequently Asked Questions (FAQ){/t}</h3>
 
 <p>{t}Index{/t}</p>
 <ol>

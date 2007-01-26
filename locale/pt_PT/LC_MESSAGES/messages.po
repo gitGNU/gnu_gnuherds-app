@@ -581,11 +581,8 @@ msgstr "Esta lista pode estar desactualizada:"
 # FAQ_content.tpl
 #
 
-msgid "Frequently Asked Questions"
+msgid "Frequently Asked Questions (FAQ)"
 msgstr "Perguntas Mais Frequentes (FAQ)"
-
-msgid "FAQ"
-msgstr "FAQ"
 
 msgid "Index"
 msgstr "Índice"
