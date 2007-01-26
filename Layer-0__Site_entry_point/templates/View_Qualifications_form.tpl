@@ -215,7 +215,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 </tr>
-
+{*
 <tr valign="top">
 <td align="right"><strong>{t}Certifications{/t}</strong> : <br> </td>
 <td colspan="3" class="greenDark">
@@ -232,10 +232,10 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 </td>
 </tr>
-
+*}
 <tr valign="top">
 <td align="right"><strong>{'Contributions to FS projects'|gettext|strip:'&nbsp;'}</strong>&nbsp;: <br> </td>
-<td colspan="3" class="greenLight">
+<td colspan="3" class="greenDark">
 {if is_array($smarty.session.ViewContributionsListProject) and count($smarty.session.ViewContributionsListProject) > 0 }
 	{foreach from=$smarty.session.ViewContributionsListProject item=project key=i}
 		<a href="{$smarty.session.ViewContributionsListURI[$i]}" target="_blank">{$project}</a>{if $smarty.session.ViewContributionsListDescription[$i] neq ''}: {$smarty.session.ViewContributionsListDescription[$i]}{/if}<br>
