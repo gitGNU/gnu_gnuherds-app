@@ -298,10 +298,13 @@ class Entity
 
 	public function deletePhotoOrLogo()
 	{
-		if ( unlink("../entity_photos/".$_SESSION['EntityId']) == false )
+		if ( file_exists("../entity_photos/".$_SESSION['EntityId']) == true )
 		{
-			$error = "<p>".gettext("ERROR: Can not delete the photo or logo file!.")."</p>";
-			throw new Exception($error,false);
+			if ( unlink("../entity_photos/".$_SESSION['EntityId']) == false )
+			{
+				$error = "<p>".gettext("ERROR: Can not delete the photo or logo file!.")."</p>";
+				throw new Exception($error,false);
+			}
 		}
 	}
 }
