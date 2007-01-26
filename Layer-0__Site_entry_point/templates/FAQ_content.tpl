@@ -110,39 +110,39 @@ Suite 225, San Francisco, CA 94107, USA
 
 <h4>4. {t}Who can post a job offer?{/t} <a name="Who_can_post_a_job_offer?"></a> </h4>
 
-	<p>{t}Any Person, Company or non-profit Organization that have met the conditions imposed by the JobOffer form and that fits one of the following requirements:{/t}</p>
+	<p>{t}Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:{/t}</p>
 
 	<p>
 	<ul>
 		<li>{t escape='no'
 			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
 			2='</a>'
-		    }Development or maintenance of software for distribution to the public, if all the software to be developed or maintained is %1free software%2.{/t} </li>
+		    }Development or maintenance of software for distribution to the public, if all the software to be developed or maintained is %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
 			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
 			2='</a>'
-		    }Writing or maintenance of documentation for software, if all the software to be documented is %1free software%2, and all the documentation to be written or maintained is free in the same sense.{/t} </li>
+		    }Writing or maintenance of documentation for software, if all the software to be documented is %1Free Software%2, and all the documentation to be written or maintained is free in the same sense.{/t} </li>
 
 		<li>{t escape='no'
 			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
 			2='</a>'
-		    }Development or maintenance of software for private use by specific clients, if the clients will have the source code and rights to modify and distribute it, and if the software to be used for the development is all %1free software%2.{/t} </li>
+		    }Development or maintenance of software for private use by specific clients, if the clients will have the source code and rights to modify and distribute it, and if the software to be used for the development is all %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
 			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
 			2='</a>'
-		    }Providing support of software, if all the software to be supported is %1free software%2.{/t} </li>
+		    }Providing support of software, if all the software to be supported is %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
 			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
 			2='</a>'
-		    }Promotion or marketing of software, if all the software to be promoted and/or marketed is %1free software%2.{/t} </li>
+		    }Promotion or marketing of software, if all the software to be promoted and/or marketed is %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
 			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
 			2='</a>'
-		    }Installation of software, if all the software to be installed is %1free software%2.{/t} </li>
+		    }Installation of software, if all the software to be installed is %1Free Software%2.{/t} </li>
 	</ul>
 	</p>
 
