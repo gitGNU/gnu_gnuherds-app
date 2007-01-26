@@ -96,7 +96,7 @@ Suite 225, San Francisco, CA 94107, USA
 	  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/" target="_blank">'
 	  2='<a href="http://savannah.gnu.org/" target="_blank">'
 	  3='</a>'
-	}%1CVS%2 server at %2Savannah%3{/t}
+	}%1CVS%3 server at %2Savannah%3{/t}
 	<td>
 	<!-- XXX: <tr> <td><a href="http://www.openbsd.org/" target="_blank">OpenBSD 3.x</a> <td>The gnuherds.org host is a 633MHZ DEC Alpha 64-bit CPU running OpenBSD. -->
 	</table>
