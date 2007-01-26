@@ -593,9 +593,6 @@ msgstr "Regressar ao topo"
 msgid "Why another Job Site?"
 msgstr "Porquê outro servidor de Classificados de Emprego?"
 
-msgid "Why develop a job site module if GNU Herds includes a %1jobsite list%2?."
-msgstr "Porquê desenvolver um módulo de Classificados de Emprego se o GNU Herds inclui uma %1lista de servidores de classificados de emprego%2?."
-
 msgid "Because no one comply the below proposed conditions:"
 msgstr "Porque nenhum deles respeita todas as condições abaixo enunciadas:"
 
