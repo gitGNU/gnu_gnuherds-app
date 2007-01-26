@@ -53,10 +53,11 @@ Suite 225, San Francisco, CA 94107, USA
 {if $smarty.session.ViewEntityType eq 'Person' }
 	<!-- Person's name -->
 	<strong>
+	{if trim($smarty.session.ViewWebsite) neq ''}<a href="{$smarty.session.ViewWebsite}" target="_blank">{/if}
 	{if trim($smarty.session.ViewLastName) neq '' or trim($smarty.session.ViewMiddleName) neq ''}
 		{$smarty.session.ViewLastName} {$smarty.session.ViewMiddleName},
 	{/if}
-	{$smarty.session.ViewFirstName}
+	{$smarty.session.ViewFirstName}{if trim($smarty.session.ViewWebsite) neq ''}</a>{/if}
 	</strong>
 	<br>
 
@@ -203,8 +204,8 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="right"><strong>{t}Wage rank{/t}</strong> : </td>
 <td colspan="3" class="greenLight">
 {$smarty.session.ViewWageRank}
-({t}{$smarty.session.ViewWageRankCurrencyName}{/t})
-{t}{$smarty.session.ViewWageRankByPeriod}{/t}{if trim($smarty.session.ViewWageRank) neq ''}. [{t}Minimum{/t}-{t}Optimum{/t}]{/if}
+{t}{$smarty.session.ViewWageRankCurrencyName}{/t} 
+{t}{$smarty.session.ViewWageRankByPeriod}{/t}{if trim($smarty.session.ViewWageRank) neq ''}{/if}
 </td>
 </tr>
 
