@@ -407,7 +407,6 @@ CREATE TABLE J1_JobOffers (
         -- Offer:
 
         J1_Vacancies       varchar(3),
-        J1_VacancyTitle    varchar(100), -- NOT NULL CHECK (J1_VacancyTitle <> ''),
 
         -- Contract
         J1_LK_ContractType varchar(15), -- REFERENCES LK_ContractType(LK_Id) NOT NULL,
