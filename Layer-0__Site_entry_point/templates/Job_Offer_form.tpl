@@ -86,15 +86,15 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr valign="top">
 <td align="right"><span class="must">*</span>{t}Allow applications from{/t} : </td>
-<td colspan="3"> <input type="checkbox" name="AllowPersonApplications" class="required" {if $smarty.session.jAllowPersonApplications eq 'true'} checked {/if} onChange="SelectAllItems(); jobOfferForm.submit();">{t}Persons{/t}</td>
+<td colspan="3"> <input type="checkbox" name="AllowPersonApplications" class="required" {if $smarty.session.jAllowPersonApplications eq 'true'} checked {/if} onChange="evalDisplay();">{t}Persons{/t}</td>
 </tr>
 <tr valign="top">
 <td></td>
-<td colspan="3"> <input type="checkbox" name="AllowCompanyApplications" class="required" {if $smarty.session.jAllowCompanyApplications eq 'true'} checked {/if} onChange="SelectAllItems(); jobOfferForm.submit();">{t}Companies{/t}</td>
+<td colspan="3"> <input type="checkbox" name="AllowCompanyApplications" class="required" {if $smarty.session.jAllowCompanyApplications eq 'true'} checked {/if} onChange="evalDisplay();">{t}Companies{/t}</td>
 </tr>
 <tr valign="top">
 <td></td>
-<td colspan="3"> <input type="checkbox" name="AllowOrganizationApplications" class="required" {if $smarty.session.jAllowOrganizationApplications eq 'true'} checked {/if} onChange="SelectAllItems(); jobOfferForm.submit();">{t}non-profit Organizations{/t}</td>
+<td colspan="3"> <input type="checkbox" name="AllowOrganizationApplications" class="required" {if $smarty.session.jAllowOrganizationApplications eq 'true'} checked {/if} onChange="evalDisplay();">{t}non-profit Organizations{/t}</td>
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
@@ -146,8 +146,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
-{if $smarty.session.jAllowPersonApplications eq 'true'}
-<tr>
+<tr id="AcademicQualification" style="display:none">
 <td align="right">{t}Academic qualification{/t} : </td>
 <td colspan="3">
 <select name="AcademicQualification" class="notRequired">
@@ -155,7 +154,6 @@ Suite 225, San Francisco, CA 94107, USA
 </select>
 </td>
 </tr>
-{/if}
 
 <tr valign="top">
 <td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t}</a> : </td>

@@ -18,6 +18,23 @@ Suite 225, San Francisco, CA 94107, USA
 */
 
 
+function evalDisplay()
+{
+	// Academic qualification
+	if (document.jobOfferForm.AllowPersonApplications.checked==true)
+	{
+		AcademicQualification.style.display = "";
+	}
+	else
+	{
+		AcademicQualification.style.display = "none";
+		document.jobOfferForm.AcademicQualification.value= "";
+	}
+
+	// Certifications
+		// TODO: XXX
+}
+
 function SelectAllItems()
 {
 	for (i=0; i<document.jobOfferForm.SkillList.length; i++)
@@ -68,5 +85,7 @@ function InitializationOnLoad()
 	}
 
 	UpdateVacancyTitle();
+
+	evalDisplay();
 }
 
