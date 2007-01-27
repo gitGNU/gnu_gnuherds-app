@@ -295,7 +295,7 @@ msgid "The certifications team liabilities shall be evaluate, upon request, the 
 msgstr "Il gruppo di certificazione verificherà, su richiesta, le certificazioni %1Free Software Contributor%2, %3GNU Business Network%4, etc."
 
 msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points, having veto power over all subjects related to such points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6"
-msgstr "L'Ufficiale Etico sarà designato dalla Free Software Foundation, Inc. per assicurare i seguenti punti, con potere di veto su tutti gli argomenti in relazione a questi punti: %1 %2L'integrità del nome GNU non sia alterata.%3 %2L'Associazione segua la filosofia %4Free Software%5.%3 %2Le attività vengano svolte in modi che non portino le stesse ad essere abusate a discapito della filosofia %4Free Software%5.%6"
+msgstr "L'Ufficiale Etico sarà designato dalla Free Software Foundation, Inc. per assicurare i seguenti punti, con potere di veto su tutti gli argomenti in relazione a questi punti: %1 %2L'integrità del nome GNU non sia alterata.%3 %2L'Associazione segua la filosofia %4Software Libero%5.%3 %2Le attività vengano svolte in modi che non portino le stesse ad essere abusate a discapito della filosofia %4Software Libero%5.%6"
 
 msgid "All other officers will be elected by the membership."
 msgstr "Tutti gli altri ufficiali saranno eletti dai soci."
@@ -410,7 +410,7 @@ msgid "Web application Architecture"
 msgstr "Architettura dell'applicazione web"
 
 msgid "As a Free Software project we look for a modular and extensible design. We hope it could be easy to change the technology of a specific layer if it is needed."
-msgstr "Come progetto Free Software ricerchiamo un design modulare ed estensibile. Speriamo che possa essere facile cambiare la tecnologia di un layer specifico se si rende necessario."
+msgstr "Come progetto Software Libero ricerchiamo un design modulare ed estensibile. Speriamo che possa essere facile cambiare la tecnologia di un layer specifico se si rende necessario."
 
 msgid "This architecture proposal is based on PHP:"
 msgstr "Questa proposta di architettura è basata su PHP:"
@@ -590,19 +590,20 @@ msgid "Be licensed with the %1Affero GPL%2 or similar, to cover use of the softw
 msgstr "Essere sotto licenza %1Affero GPL%2 o simile, per coprire l'utilizzo di software su una rete di computer."
 
 msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users. The Ethics Officer's %3veto power%2 on Free Software related subjects is needed to be sure the association will follow the %4Free Software%2 philosophy for ever."
-msgstr "Inoltre, la gestione del sito deve essere %1controllata dai suoi stessi utenti%2, secondo una politica democratica. Questo sarà garantito dalla politica dell'associazione GNU Herds. Perciò si sarà sicuri che l'evoluzione del sito sarà controllata e portata avanti dai suoi utenti. Il %3potere di veto%2 dell'Ufficiale Etico su argomenti riguardanti il Free Software è necessario per assicurarsi che l'associazione segua sempre la filosofia %4Free Software%2."
+msgstr "Inoltre, la gestione del sito deve essere %1controllata dai suoi stessi utenti%2, secondo una politica democratica. Questo sarà garantito dalla politica dell'associazione GNU Herds. Perciò si sarà sicuri che l'evoluzione del sito sarà controllata e portata avanti dai suoi utenti. Il %3potere di veto%2 dell'Ufficiale Etico su argomenti riguardanti il Software Libero è necessario per assicurarsi che l'associazione segua sempre la filosofia %4Software Libero%2."
 
 msgid "Supplying support to engage among companies and persons, it doesn't matter the which or the order, helping the raise of a diversity of business models.  That is flexibility."
 msgstr "Favorire le relazioni contrattuali tra aziende e persone, non importa in quale ordine, aiutando il raggiungemento di una diversità di modelli di lavoro.  Questa è flessibilità."
 
 msgid "Make it easy the contacts among persons and companies interested in Free Software business."
-msgstr "Facilitare i contatti tra persone e aziende interessate nel business Free Software."
+msgstr "Facilitare i contatti tra persone e aziende interessate nel business Software Libero."
+### XXX-Remove-this-Spanish-translation: msgstr "Facilitar los contactos entre personas y compañias interesadas en los negocios con Software Libre."
 
 msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
 msgstr "Avere un obiettivo globale, supportare modelli di business basati sul telelavoro. Con le tecnologie future, l'ubicazione non deve essere un ostacolo per stabilire relazioni riguardo servizi informatici. Da qui l'obiettivo, già raggiunto, di tradurre il sito web in altre lingue, e di supportare il fatto che un'offerta di lavoro possa essere inserita in diverse lingue."
 
 msgid "All this taking into account that: \"The %1aims%2 of the Association shall be to encourage the professional development of Free Software contributors.\""
-msgstr "Tutto questo tenendo in conto che: \"Lo %1scopo%2 dell'Associazione dovrebbe essere incoraggiare lo sviluppo professionale di coloro che partecipano nella comunità del Free Software.\""
+msgstr "Tutto questo tenendo in conto che: \"Lo %1scopo%2 dell'Associazione dovrebbe essere incoraggiare lo sviluppo professionale di coloro che partecipano nella comunità del Software Libero.\""
 
 msgid "How to subscribe to a job offer?"
 msgstr "Come sottoscrivere un'offerta di lavoro?"
