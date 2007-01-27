@@ -625,14 +625,44 @@ msgstr "Nota che alcune offerte potrebbero permettere la sottoscrizione solo ad 
 msgid "Who can subscribe to a job offer?"
 msgstr "Chi può sottoscrivere un'offerta di lavoro?"
 
-msgid "Persons, Companies or non-profit Organizations."
-msgstr "Persone, Aziende o Organizzazioni no profit."
+msgid "Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly."
+msgstr ""
+### XXX-for: msgstr "Las Personas, Compañias u Organizaciones sin ánimo de lucro que hayan satisfecho las condiciones impuestas por el formulario de Cualificaciones, es decir, aquellos que lo hayan cumplimentado correctamente."
 
 msgid "Who can post a job offer?"
 msgstr "Chi può inserire un'offerta di lavoro?"
 
-msgid "Any Person, Company or non-profit Organization."
-msgstr "Qualunque Persona, Azienda o Organizzazione no profit."
+msgid "Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:"
+msgstr ""
+### XXX-for: msgstr "Cualquier Persona, Compañia u Organización sin ánimo de lucro cumpliendo las condiciones impuestas por el formulario de Oferta de Empleo y cuya oferta se ajuste a uno de los siguientes requisitos:"
+
+msgid "Development or maintenance of software for distribution to the public, if all the software to be developed or maintained is %1Free Software%2."
+msgstr ""
+### XXX-for: msgstr "Desarrollo o mantenimiento de software para distribución al publico, si todo el software a ser desarrollado o mantenido es %1Software Libre%2."
+
+msgid "Writing or maintenance of documentation for software, if all the software to be documented is %1Free Software%2, and all the documentation to be written or maintained is free in the same sense."
+msgstr ""
+### XXX-for: msgstr "Escritura o mantenimiento de documentación de software, si todo el software a ser documentado es %1Software Libre%2, y toda la documentación a ser escrita o mantenida es libre en el mismo sentido."
+
+msgid "Development or maintenance of software for private use by specific clients, if the clients will have the source code and rights to modify and distribute it, and if the software to be used for the development is all %1Free Software%2."
+msgstr ""
+### XXX-for: msgstr "Desarrollo o mantenimiento de software para uso privado por clientes específicos, si los clientes tendrán el código fuente y los derechos para modificarlo y distribuirlo, y si el software a ser usado para el desarrollo es todo %1Software Libre%2."
+
+msgid "Providing support of software, if all the software to be supported is %1Free Software%2."
+msgstr ""
+### XXX-for: msgstr "Servicios de soporte de software, si todo el software a ser soportado es %1Software Libre%2."
+
+msgid "Promotion or marketing of software, if all the software to be promoted and/or marketed is %1Free Software%2."
+msgstr ""
+### XXX-for: msgstr "Promoción o comercialización de software, si todo el software a ser promocionado y/o comercializado es %1Software Libre%2."
+
+msgid "Installation of software, if all the software to be installed is %1Free Software%2."
+msgstr ""
+### XXX-for: msgstr "Instalación de software, si todo el software a ser instalado es %1Software Libre%2."
+
+msgid "Report to %1 about any offer that seems improper."
+msgstr ""
+### XXX-for: msgstr "Informe a %1 de cualquier oferta que parezca incorrecta."
 
 msgid "How is the Job Site module related to the GNU Herds Association?"
 msgstr "Che relazione c'è tra il modulo del sito web di offerte di lavoro con l'Associazione GNU Herds?"
