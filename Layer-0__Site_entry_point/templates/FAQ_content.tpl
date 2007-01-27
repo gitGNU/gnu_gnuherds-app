@@ -146,6 +146,10 @@ Suite 225, San Francisco, CA 94107, USA
 	</ul>
 	</p>
 
+	<p>{t escape='no'
+		1='<a href="mailto:joboffer@gnuherds.org" >joboffer@gnuherds.org</a>'
+	   }Report to %1 about any offer that seems improper.{/t}</p>
+
 <center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>

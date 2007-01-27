@@ -386,12 +386,6 @@ Suite 225, San Francisco, CA 94107, USA
 		<input type="submit" name="subscribe" value="{t}Subscribe to this job offer{/t}">
 		</td>
 		</tr>
-
-		<tr align="center">
-		<td colspan="4" align="center">
-		{t}Send comments to{/t} {mailto address='joboffer@gnuherds.org'}
-		</td>
-		</tr>
 {/if}
 
 </form>
