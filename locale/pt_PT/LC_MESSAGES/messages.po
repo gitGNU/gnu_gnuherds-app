@@ -303,7 +303,7 @@ msgid "The Committee shall consist of the following: the members of the system a
 msgstr "O Comité consistirá no seguinte: os membros da equipa de administração de sistemas, a equipa de administradores web, a equipa de certificações, a equipa de tradutores, a equipa de Relações Públicas e o Responsável de Ética."
 
 msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
-msgstr "As responsabilidades da equipa de certificações serão avaliar, quando requerido, a certificação de %1Contribuição para o Software Livre%2, certificação de %3Rede de Negócios GNU%4, etc."
+msgstr "As responsabilidades da equipa de certificações serão avaliar, quando requerido, a certificação de %1Free Software Contributor%2, certificação de %3GNU Business Network%4, etc."
 
 msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points, having veto power over all subjects related to such points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6"
 msgstr "O Responsável de Ética será designado pela Free Software Foundation, Inc. para garantir os seguintes pontos, detendo poder de veto sobre todos os temas relacionados com estes pontos: %1 %2A integridade do nome GNU não é comprometida.%3 %2A Associação respeita a filosofia do %4Software Livre%5.%3 %2As actividades são conduzidas de uma forma que não dá azo a que sejam abusadas atentando aos princípios ou filosofia do %4Software Livre%5.%6"
@@ -472,6 +472,9 @@ msgstr "A lista de tarefas a realizar (TODO)"
 msgid "See the %1Task Manager%2 at Savannah."
 msgstr "Consulte o %1Gestor de Tarefas%2 no Savannah."
 
+msgid "See the %1Wiki HOWTO%2 at Savannah."
+msgstr "Consulte o %1Wiki HOWTO%2 no Savannah."
+
 msgid "The source code"
 msgstr "O código fonte"
 
@@ -635,14 +638,44 @@ msgstr "Note que algumas ofertas poderão apenas permitir a candidatura a alguns
 msgid "Who can subscribe to a job offer?"
 msgstr "Quem se pode candidatar a uma oferta de emprego?"
 
-msgid "Persons, Companies or non-profit Organizations."
-msgstr "Indivíduos, Empresas ou Organizações sem fins lucrativos."
+msgid "Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly."
+msgstr ""
+### XXX-for: msgstr "Las Personas, Compañias u Organizaciones sin ánimo de lucro que hayan satisfecho las condiciones impuestas por el formulario de Cualificaciones, es decir, aquellos que lo hayan cumplimentado correctamente."
 
 msgid "Who can post a job offer?"
 msgstr "Quem pode afixar uma oferta de emprego?"
 
-msgid "Any Person, Company or non-profit Organization."
-msgstr "Qualquer Indivíduo, Empresa ou Organização sem fins lucrativos."
+msgid "Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:"
+msgstr ""
+### XXX-for: msgstr "Cualquier Persona, Compañia u Organización sin ánimo de lucro cumpliendo las condiciones impuestas por el formulario de Oferta de Empleo y cuya oferta se ajuste a uno de los siguientes requisitos:"
+
+msgid "Development or maintenance of software for distribution to the public, if all the software to be developed or maintained is %1Free Software%2."
+msgstr ""
+### XXX-for: msgstr "Desarrollo o mantenimiento de software para distribución al publico, si todo el software a ser desarrollado o mantenido es %1Software Libre%2."
+
+msgid "Writing or maintenance of documentation for software, if all the software to be documented is %1Free Software%2, and all the documentation to be written or maintained is free in the same sense."
+msgstr ""
+### XXX-for: msgstr "Escritura o mantenimiento de documentación de software, si todo el software a ser documentado es %1Software Libre%2, y toda la documentación a ser escrita o mantenida es libre en el mismo sentido."
+
+msgid "Development or maintenance of software for private use by specific clients, if the clients will have the source code and rights to modify and distribute it, and if the software to be used for the development is all %1Free Software%2."
+msgstr ""
+### XXX-for: msgstr "Desarrollo o mantenimiento de software para uso privado por clientes específicos, si los clientes tendrán el código fuente y los derechos para modificarlo y distribuirlo, y si el software a ser usado para el desarrollo es todo %1Software Libre%2."
+
+msgid "Providing support of software, if all the software to be supported is %1Free Software%2."
+msgstr ""
+### XXX-for: msgstr "Servicios de soporte de software, si todo el software a ser soportado es %1Software Libre%2."
+
+msgid "Promotion or marketing of software, if all the software to be promoted and/or marketed is %1Free Software%2."
+msgstr ""
+### XXX-for: msgstr "Promoción o comercialización de software, si todo el software a ser promocionado y/o comercializado es %1Software Libre%2."
+
+msgid "Installation of software, if all the software to be installed is %1Free Software%2."
+msgstr ""
+### XXX-for: msgstr "Instalación de software, si todo el software a ser instalado es %1Software Libre%2."
+
+msgid "Report to %1 about any offer that seems improper."
+msgstr ""
+### XXX-for: msgstr "Informe a %1 de cualquier oferta que parezca incorrecta."
 
 msgid "How is the Job Site module related to the GNU Herds Association?"
 msgstr "Qual a relação entre o módulo de Classificados de Emprego e a Associação GNU Herds?"
@@ -755,6 +788,9 @@ msgstr "Ideal"
 
 msgid "Professional experience since"
 msgstr "Experiência profissional desde"
+
+msgid "Experience since"
+msgstr "Experiência desde"
 
 msgid "Academic qualification"
 msgstr "Qualificações académicas"
