@@ -387,7 +387,6 @@ msgstr "Guida dell'Hacker GNU Herds"
 msgid "Introduction"
 msgstr "Introduzione"
 
-#XXX msgstr "Se sei interessato ad aiutare nello sviluppo di GNU Herds, puoi %1iscriverti%4 alla lista di distribuzione 'gnuherds-app-dev'. Segui i consigli della %2Guída del Hacker%5 .%3Grazie!%4."
 msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!."
 msgstr "Se vuoi unirti al team GNU Herds, o collaborare sporadicamente, come diversi ragazzi hanno già fatto, per favore %1unisciti%2 alla mailing list 'gnuherds-app-dev' o coordinati con uno dei membri del team. Grazie!."
 
@@ -596,8 +595,7 @@ msgid "Supplying support to engage among companies and persons, it doesn't matte
 msgstr "Favorire le relazioni contrattuali tra aziende e persone, non importa in quale ordine, aiutando il raggiungemento di una diversità di modelli di lavoro.  Questa è flessibilità."
 
 msgid "Make it easy the contacts among persons and companies interested in Free Software business."
-msgstr "Facilitare i contatti tra persone e aziende interessate nel business Software Libero."
-### XXX-Remove-this-Spanish-translation: msgstr "Facilitar los contactos entre personas y compañias interesadas en los negocios con Software Libre."
+msgstr "Facilitare i contatti tra persone e aziende interessate negli affari con il Software Libero."
 
 msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
 msgstr "Avere un obiettivo globale, supportare modelli di business basati sul telelavoro. Con le tecnologie future, l'ubicazione non deve essere un ostacolo per stabilire relazioni riguardo servizi informatici. Da qui l'obiettivo, già raggiunto, di tradurre il sito web in altre lingue, e di supportare il fatto che un'offerta di lavoro possa essere inserita in diverse lingue."
@@ -627,43 +625,34 @@ msgid "Who can subscribe to a job offer?"
 msgstr "Chi può sottoscrivere un'offerta di lavoro?"
 
 msgid "Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly."
-msgstr ""
-### XXX-for: msgstr "Las Personas, Compañias u Organizaciones sin ánimo de lucro que hayan satisfecho las condiciones impuestas por el formulario de Cualificaciones, es decir, aquellos que lo hayan cumplimentado correctamente."
+msgstr "Persone, Aziende o Organizzazioni senza scopo di lucro che hanno soddisfatto le richieste imposte dal modulo Qualifiche, ossia che sono stato in grado di completarlo correttamente."
 
 msgid "Who can post a job offer?"
 msgstr "Chi può inserire un'offerta di lavoro?"
 
 msgid "Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:"
-msgstr ""
-### XXX-for: msgstr "Cualquier Persona, Compañia u Organización sin ánimo de lucro cumpliendo las condiciones impuestas por el formulario de Oferta de Empleo y cuya oferta se ajuste a uno de los siguientes requisitos:"
+msgstr "Qualunque Persona, Azienda o Organizzazione senza scopo di lucro che soddisfa le condizioni imposte dal modulo Offerta di Impiego e la cui offerta si adatti ad uno dei seguenti requisiti:"
 
 msgid "Development or maintenance of software for distribution to the public, if all the software to be developed or maintained is %1Free Software%2."
-msgstr ""
-### XXX-for: msgstr "Desarrollo o mantenimiento de software para distribución al publico, si todo el software a ser desarrollado o mantenido es %1Software Libre%2."
+msgstr "Sviluppo o mantenimento di software per la distribuzione al pubblico, se tutto il software da sviluppare o mantenere è %1Software Libero%2."
 
 msgid "Writing or maintenance of documentation for software, if all the software to be documented is %1Free Software%2, and all the documentation to be written or maintained is free in the same sense."
-msgstr ""
-### XXX-for: msgstr "Escritura o mantenimiento de documentación de software, si todo el software a ser documentado es %1Software Libre%2, y toda la documentación a ser escrita o mantenida es libre en el mismo sentido."
+msgstr "Stesura o mantenimento di documentazione di software, se tutto il software da documentare è %1Software Libero%2, e tutto la documentazione da scrivere o mantenere è libera nello stesso senso."
 
 msgid "Development or maintenance of software for private use by specific clients, if the clients will have the source code and rights to modify and distribute it, and if the software to be used for the development is all %1Free Software%2."
-msgstr ""
-### XXX-for: msgstr "Desarrollo o mantenimiento de software para uso privado por clientes específicos, si los clientes tendrán el código fuente y los derechos para modificarlo y distribuirlo, y si el software a ser usado para el desarrollo es todo %1Software Libre%2."
+msgstr "Sviluppo o mantenimento di software per uso privato da parte di clienti specifici, se i clienti avranno il codice sorgente e i diritti di modificarlo e distribuirlo, e se il software da usare per lo sviluppo è tutto %1Software Libero%2."
 
 msgid "Providing support of software, if all the software to be supported is %1Free Software%2."
-msgstr ""
-### XXX-for: msgstr "Servicios de soporte de software, si todo el software a ser soportado es %1Software Libre%2."
+msgstr "Fornitura di supporto software, se tutto il software da supportare è %1Software Libero%2."
 
 msgid "Promotion or marketing of software, if all the software to be promoted and/or marketed is %1Free Software%2."
-msgstr ""
-### XXX-for: msgstr "Promoción o comercialización de software, si todo el software a ser promocionado y/o comercializado es %1Software Libre%2."
+msgstr "Promozione o commercializzazione di software, se tutto il software da promuovere e/o commercializzare è %1Software Libero%2."
 
 msgid "Installation of software, if all the software to be installed is %1Free Software%2."
-msgstr ""
-### XXX-for: msgstr "Instalación de software, si todo el software a ser instalado es %1Software Libre%2."
+msgstr "Installazione di software, se tutto il software da essere installato è %1Software Libero%2."
 
 msgid "Report to %1 about any offer that seems improper."
-msgstr ""
-### XXX-for: msgstr "Informe a %1 de cualquier oferta que parezca incorrecta."
+msgstr "Segnala a %1 di qualunque offerta che sembra impropria."
 
 msgid "How is the Job Site module related to the GNU Herds Association?"
 msgstr "Che relazione c'è tra il modulo del sito web di offerte di lavoro con l'Associazione GNU Herds?"
@@ -1013,7 +1002,7 @@ msgid "Success. You have been logged automatically. You can realize others opera
 msgstr "Successo. Hai effettuato automaticamente l'accesso.Puoi effettuare altre operazioni nel menu sulla sinistra."
 
 msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
-msgstr "Il tuo contributo alla comunità Free Software sarà valutata. Il risultato ti sarà inviato via email, con l'abilitazione della capacità di voto in caso di valutazione positiva."
+msgstr "Il tuo contributo alla comunità del Software Libero sarà valutata. Il risultato ti sarà inviato via email, con l'abilitazione della capacità di voto in caso di valutazione positiva."
 
 msgid "There is already a member with this email in the data base. If that email is yours, get the password via the \"Lost Password\" form, else choose a different email."
 msgstr "Esiste già un socio con questo indirizzo email nel data base. Se quest'indirizzo ti appartiene, recupera la password attraverso il modulo \"Password Persa\", altrimenti scegli un indirizzo diverso."
