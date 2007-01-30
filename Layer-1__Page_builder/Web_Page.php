@@ -159,7 +159,7 @@ class WebPage
 	private function setLanguage($language)
 	{
 		$_SESSION["Language"] = $language;
-		setcookie("Language", $language, time()+(86400*30), '/', $_SERVER['HTTP_HOST'], false, true);
+		setcookie("Language", $language, time()+(86400*30), '/', "gnuherds.org", false, true);
 	}
 }
 ?> 
