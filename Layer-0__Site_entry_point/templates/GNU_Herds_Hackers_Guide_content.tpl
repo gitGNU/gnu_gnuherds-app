@@ -51,7 +51,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev" target="_blank">'
+	  1='<a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev" target="_top">'
 	  2='</a>'
 	}If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!.{/t}
 	</p>
@@ -81,24 +81,24 @@ Suite 225, San Francisco, CA 94107, USA
 	{t}The project depends on the below technologies. Though it is and must be open to any proposal.{/t}
 	</p><p>
 	<table>
-	<tr> <td><a href="http://www.w3.org/TR/xhtml1/" target="_blank">XHTML 1.0</a> <td>
-	<tr> <td><a href="http://www.php.net/" target="_blank">PHP</a> >= 5.1 <td>
-	<tr> <td><a href="http://smarty.php.net/" target="_blank">Smarty</a> <td>
-	<tr> <td><a href="http://smarty.incutio.com/?page=SmartyGettext" target="_blank">Smarty-Gettext</a> <td>
-	<tr> <td><a href="http://www.gnu.org/software/gettext/" target="_blank">gettext</a> <td>
-	<tr> <td><a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/" target="_blank">JavaScript 1.x</a> <td>
-	<tr> <td><a href="http://www.w3.org/Style/CSS/" target="_blank">CSS x.y</a> <td>
-	<tr> <td><a href="http://httpd.apache.org/" target="_blank">Apache x.y</a> <td>
-	<tr> <td><a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.4.x <td>
-	<tr> <td><a href="http://www.maxmind.com/" target="_blank">GeoIP</a> <td>
+	<tr> <td><a href="http://www.w3.org/TR/xhtml1/" target="_top">XHTML 1.0</a> <td>
+	<tr> <td><a href="http://www.php.net/" target="_top">PHP</a> >= 5.1 <td>
+	<tr> <td><a href="http://smarty.php.net/" target="_top">Smarty</a> <td>
+	<tr> <td><a href="http://smarty.incutio.com/?page=SmartyGettext" target="_top">Smarty-Gettext</a> <td>
+	<tr> <td><a href="http://www.gnu.org/software/gettext/" target="_top">gettext</a> <td>
+	<tr> <td><a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/" target="_top">JavaScript 1.x</a> <td>
+	<tr> <td><a href="http://www.w3.org/Style/CSS/" target="_top">CSS x.y</a> <td>
+	<tr> <td><a href="http://httpd.apache.org/" target="_top">Apache x.y</a> <td>
+	<tr> <td><a href="http://www.postgresql.org/" target="_top">PostgreSQL</a> >= 7.4.x <td>
+	<tr> <td><a href="http://www.maxmind.com/" target="_top">GeoIP</a> <td>
 	<tr> <td>
 	{t escape='no'
-	  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/" target="_blank">'
-	  2='<a href="http://savannah.gnu.org/" target="_blank">'
+	  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/" target="_top">'
+	  2='<a href="http://savannah.gnu.org/" target="_top">'
 	  3='</a>'
 	}%1CVS%3 server at %2Savannah%3{/t}
 	<td>
-	<!-- XXX: <tr> <td><a href="http://www.openbsd.org/" target="_blank">OpenBSD 3.x</a> <td>The gnuherds.org host is a 633MHZ DEC Alpha 64-bit CPU running OpenBSD. -->
+	<!-- XXX: <tr> <td><a href="http://www.openbsd.org/" target="_top">OpenBSD 3.x</a> <td>The gnuherds.org host is a 633MHZ DEC Alpha 64-bit CPU running OpenBSD. -->
 	</table>
 	</p>
 
@@ -115,15 +115,15 @@ Suite 225, San Francisco, CA 94107, USA
 	{t}This architecture proposal is based on PHP:{/t}
 	</p><p>
 	<table>
-	<tr> <td><b>Layer 0.</b> <td>Site entry point (<a href="http://www.w3.org/TR/xhtml1/" target="_blank">XHTML</a>, <a href="http://www.w3.org/Style/CSS/" target="_blank">CSS</a>, <a href="http://smarty.php.net/" target="_blank">Smarty</a>, <a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/" target="_blank">JavaScript</a>, <a href="http://httpd.apache.org/docs/2.0/howto/ssi.html" target="_blank">Apache SSI</a> and <a href="http://www.php.net/" target="_blank">PHP</a> ).
+	<tr> <td><b>Layer 0.</b> <td>Site entry point (<a href="http://www.w3.org/TR/xhtml1/" target="_top">XHTML</a>, <a href="http://www.w3.org/Style/CSS/" target="_top">CSS</a>, <a href="http://smarty.php.net/" target="_top">Smarty</a>, <a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/" target="_top">JavaScript</a>, <a href="http://httpd.apache.org/docs/2.0/howto/ssi.html" target="_top">Apache SSI</a> and <a href="http://www.php.net/" target="_top">PHP</a> ).
 	<tr> <td><b>Layer 1.</b> <td>GUI page builder and themes (PHP)
 	<tr> <td><b>Layer 2.</b> <td>GUI business logic: content section, others (checking & processing forms) (PHP, XHTML)
 	<tr> <td><b>Layer 4.</b> <td>Data base Manager class, PHP Tools class and Mailer class (PHP)
 	<tr> <td><b>Layer 5.</b> <td>Data base Operation classes (PHP, SQL)
-	<tr> <td><b>Layer 6.</b> <td><a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> Database Abstraction Library (PHP)
+	<tr> <td><b>Layer 6.</b> <td><a href="http://adodb.sourceforge.net/" target="_top">ADOdb</a> Database Abstraction Library (PHP)
 	<tr> <td><b>..... ..</b> <td>NO stored procedures layer.
-	<tr> <td><b>Layer 7.</b> <td><a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> data base server (PostgreSQL, SQL)
-	<tr> <td><b>locale</b> <td>Here are the files which translate the webapp (<a href="http://www.gnu.org/software/gettext/" target="_blank">gettext</a>)
+	<tr> <td><b>Layer 7.</b> <td><a href="http://www.postgresql.org/" target="_top">PostgreSQL</a> data base server (PostgreSQL, SQL)
+	<tr> <td><b>locale</b> <td>Here are the files which translate the webapp (<a href="http://www.gnu.org/software/gettext/" target="_top">gettext</a>)
 	</table>
 	</p>
 	<p><img src="/doc/Layers_1_2_3_4_5_and_6.png" align="center" alt="" border="0" hspace="0" vspace="0"> <span class="modification">({t}outdated{/t})</span> </p>  <!-- XXX Update this image -->
@@ -147,7 +147,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr><td>
 	<p>
 	{t escape='no'
-	  1='<a href="http://php.net/pdo" target="_blank">'
+	  1='<a href="http://php.net/pdo" target="_top">'
 	  2='</a>'
 	}ADOdb is an external library. It is not being used yet. We give up about using a data base abstraction library, and this proposal will use instead just %1PDO%2.{/t}
 	</p>
@@ -175,7 +175,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="http://docs.clawphp.org/standards/index" target="_blank">'
+	  1='<a href="http://docs.clawphp.org/standards/index" target="_top">'
 	  2='</a>'
 	}We will try to follow these %1Coding Standards%2.{/t}
 	</p>
@@ -245,7 +245,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="http://savannah.nongnu.org/task/?group=gnuherds-app" target="_blank">'
+	  1='<a href="http://savannah.nongnu.org/task/?group=gnuherds-app" target="_top">'
 	  2='</a>'
 	}See the %1Task Manager%2 at Savannah.{/t}
 	</p>
@@ -259,7 +259,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&item_id=146" target="_blank">'
+	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&item_id=146" target="_top">'
 	  2='</a>'
 	}See the %1Wiki HOWTO%2 at Savannah.{/t}
 	</p>
@@ -273,7 +273,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="http://download.savannah.gnu.org/releases/gnuherds-app/" target="_blank">'
+	  1='<a href="http://download.savannah.gnu.org/releases/gnuherds-app/" target="_top">'
 	  2='</a>'
 	}If you do not like play with CVS, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2.{/t}
 	</p><p>
@@ -294,7 +294,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="http://savannah.gnu.org" target="_blank">'
+	  1='<a href="http://savannah.gnu.org" target="_top">'
 	  2='</a>'
 	}The CVS of gnuherds-app is at %1Savannah%2. The PostgreSQL database and the website is at the gnuherds.org host.{/t}
 	</p><p>
@@ -306,26 +306,26 @@ Suite 225, San Francisco, CA 94107, USA
 	<ul>
 		<li>
 		{t escape='no'
-		  1='<a href="https://savannah.nongnu.org//account/register.php" target="_blank">'
-		  2='<a href="http://savannah.gnu.org/" target="_blank">'
+		  1='<a href="https://savannah.nongnu.org//account/register.php" target="_top">'
+		  2='<a href="http://savannah.gnu.org/" target="_top">'
 		  3='</a>'
 		}%1Register%3 at %2Savannah%3{/t}
 
 		<li>
 		{t escape='no'
-		  1='<a href="https://savannah.gnu.org/my/groups.php" target="_blank">'
+		  1='<a href="https://savannah.gnu.org/my/groups.php" target="_top">'
 		  2='</a>'
 		}%1Request%2 for inclusion to the project{/t}
 
 		<li>
 		{t escape='no'
-		  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/" target="_blank">'
+		  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/" target="_top">'
 		  2='</a>'
 		}gnuherds-app %1CVS%2 view{/t}
 
 		<li>
 		{t escape='no'
-		  1='<a href="http://savannah.nongnu.org/cvs/?group=gnuherds-app" target="_blank">'
+		  1='<a href="http://savannah.nongnu.org/cvs/?group=gnuherds-app" target="_top">'
 		  2='</a>'
 		}CVS %1HOW TO%2{/t}
 	</ul>
@@ -481,8 +481,8 @@ Suite 225, San Francisco, CA 94107, USA
 <h4>14. {t}Email lists{/t} <a name="Email_lists"></a> </h4>
 
 <ul>
-	<li><a href="https://lists.gnuherds.org/mailman/listinfo/association" target="_blank">association</a> {t}is the project main list.{/t}</li>
-	<li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev" target="_blank">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
+	<li><a href="https://lists.gnuherds.org/mailman/listinfo/association" target="_top">association</a> {t}is the project main list.{/t}</li>
+	<li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev" target="_top">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
 </ul>
 
 <center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
