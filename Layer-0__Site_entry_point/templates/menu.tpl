@@ -26,7 +26,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td>
 <p>
-<a href="http://{$smarty.server.HTTP_HOST}/index.php" class="menu1" target="_top">{'Home'|gettext}</a><br>
+<a href="http://{$smarty.server.HTTP_HOST}/Home.php" class="menu1" target="_top">{'Home'|gettext}</a><br>
 <a href="http://{$smarty.server.HTTP_HOST}/Charter.php" class="menu1" target="_top">{'Charter (draft)'|gettext}</a><br>
 <a href="http://{$smarty.server.HTTP_HOST}/Timeline.php" class="menu1" target="_top">{'Timeline'|gettext}</a><br>
 <a href="http://{$smarty.server.HTTP_HOST}/GNU_Herds_Hackers_Guide.php" class="menu1" target="_top">{"Hackers' Guide"|gettext}</a><br>
