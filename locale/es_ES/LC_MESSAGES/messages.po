@@ -129,9 +129,6 @@ msgstr "Ofertas de empleo FS"
 msgid "Others"
 msgstr "Otros"
 
-msgid "International Trade Law"
-msgstr "Ley de Comercio Internacional"
-
 msgid "Special Interest Groups"
 msgstr "Grupos con interés especial"
 
