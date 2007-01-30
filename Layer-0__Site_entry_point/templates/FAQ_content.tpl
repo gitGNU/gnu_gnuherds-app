@@ -41,7 +41,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<ul>
 		<li> {t escape='no'
-		  1='<a href="http://www.gnu.org/licenses/agpl.html" target="_blank">'
+		  1='<a href="http://www.gnu.org/licenses/agpl.html" target="_top">'
 		  2='</a>'
 		}Be licensed with the %1Affero GPL%2 or similar, to cover use of the software over a computer network.{/t}
 
@@ -49,7 +49,7 @@ Suite 225, San Francisco, CA 94107, USA
 		  1='<a href="/doc/GNUHerds__ER__Logical-model.png">'
 		  2='</a>'
 		  3='<a href="/Charter.php#Committee">'
-		  4='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
+		  4='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
 		}Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users. The Ethics Officer's %3veto power%2 on Free Software related subjects is needed to be sure the association will follow the %4Free Software%2 philosophy for ever.{/t}
 
 		<li> {t}Supplying support to engage among companies and persons, it doesn't matter the which or the order, helping the raise of a diversity of business models.  That is flexibility.{/t}
@@ -115,32 +115,32 @@ Suite 225, San Francisco, CA 94107, USA
 	<p>
 	<ul>
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
 			2='</a>'
 		    }Development or maintenance of software for distribution to the public, if all the software to be developed or maintained is %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
 			2='</a>'
 		    }Writing or maintenance of documentation for software, if all the software to be documented is %1Free Software%2, and all the documentation to be written or maintained is free in the same sense.{/t} </li>
 
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
 			2='</a>'
 		    }Development or maintenance of software for private use by specific clients, if the clients will have the source code and rights to modify and distribute it, and if the software to be used for the development is all %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
 			2='</a>'
 		    }Providing support of software, if all the software to be supported is %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
 			2='</a>'
 		    }Promotion or marketing of software, if all the software to be promoted and/or marketed is %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
 			2='</a>'
 		    }Installation of software, if all the software to be installed is %1Free Software%2.{/t} </li>
 	</ul>

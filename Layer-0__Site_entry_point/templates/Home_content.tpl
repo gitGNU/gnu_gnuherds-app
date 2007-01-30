@@ -29,8 +29,8 @@ Suite 225, San Francisco, CA 94107, USA
 </p>
 
 <ul>
-<li><a href="https://lists.gnuherds.org/mailman/listinfo/association" target="_blank">association</a> {t}is the project main list.{/t}
-<li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev" target="_blank">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
+<li><a href="https://lists.gnuherds.org/mailman/listinfo/association" target="_top">association</a> {t}is the project main list.{/t}
+<li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev" target="_top">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
 </ul>
 
 <p>&nbsp;</p>

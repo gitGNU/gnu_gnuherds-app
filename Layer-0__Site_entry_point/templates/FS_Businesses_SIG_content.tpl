@@ -32,7 +32,7 @@ Suite 225, San Francisco, CA 94107, USA
 	{t}Email lists where we know FS Businesses are discussed:{/t}
 	<ul>
 		<li>
-			<li><a href="https://lists.gnuherds.org/mailman/listinfo/association" target="_blank">association at gnuherds.org</a>
+			<li><a href="https://lists.gnuherds.org/mailman/listinfo/association" target="_top">association at gnuherds.org</a>
 		</li>
 	</ul>
 </p>

@@ -65,7 +65,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $EP_FirstName[$i]}<strong>{t}Person{/t}</strong>: {/if}
 {if $EC_CompanyName[$i]}<strong>{t}Company{/t}</strong>: {/if}
 {if $EO_OrganizationName[$i]}<strong>{t}non-profit Organization{/t}</strong>: {/if}
-{if trim($Website[$i]) neq ''}<a href="{$Website[$i]}" target="_blank">{/if}
+{if trim($Website[$i]) neq ''}<a href="{$Website[$i]}" target="_top">{/if}
 {if $EP_FirstName[$i]}{$EP_LastName[$i]} {$EP_MiddleName[$i]}{if $EP_LastName[$i] or $EP_MiddleName[$i]},{/if} {$EP_FirstName[$i]}{/if}
 {if $EC_CompanyName[$i]}{$EC_CompanyName[$i]}{/if}
 {if $EO_OrganizationName[$i]}{$EO_OrganizationName[$i]}{/if}

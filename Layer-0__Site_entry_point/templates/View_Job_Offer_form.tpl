@@ -53,7 +53,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $smarty.session.ViewEntityType eq 'Person' }
 	<!-- Person's name -->
 	<strong>
-	{if trim($smarty.session.ViewWebsite) neq ''}<a href="{$smarty.session.ViewWebsite}" target="_blank">{/if}
+	{if trim($smarty.session.ViewWebsite) neq ''}<a href="{$smarty.session.ViewWebsite}" target="_top">{/if}
 	{if trim($smarty.session.ViewLastName) neq '' or trim($smarty.session.ViewMiddleName) neq ''}
 		{$smarty.session.ViewLastName} {$smarty.session.ViewMiddleName},
 	{/if}
@@ -104,7 +104,7 @@ Suite 225, San Francisco, CA 94107, USA
 	{mailto address=$smarty.session.ViewEmail}<br>
 
 	{if trim($smarty.session.ViewWebsite) neq ''}
-		{t}web site{/t} <a href="{$smarty.session.ViewWebsite}" target="_blank">{$smarty.session.ViewWebsite}</a><br>
+		{t}web site{/t} <a href="{$smarty.session.ViewWebsite}" target="_top">{$smarty.session.ViewWebsite}</a><br>
 	{/if}
 
 

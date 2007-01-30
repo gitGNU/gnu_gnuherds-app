@@ -20,11 +20,11 @@ Suite 225, San Francisco, CA 94107, USA
 <h3>{t}International Trade Law{/t}</h3>
 
 <p>
-	<a href="http://www.llrx.com/features/trade3.htm" target="_blank">Guide to International Trade Law Sources on the Internet</a><br>
-	<a href="http://www.enterweb.org/law.htm" target="_blank">Business Law and Trade Law</a><br>
+	<a href="http://www.llrx.com/features/trade3.htm" target="_top">Guide to International Trade Law Sources on the Internet</a><br>
+	<a href="http://www.enterweb.org/law.htm" target="_top">Business Law and Trade Law</a><br>
 </p>
 <p>
-{t}Reference{/t}:  <a href="http://www.google.com/" target="_blank">Google</a>
+{t}Reference{/t}:  <a href="http://www.google.com/" target="_top">Google</a>
 </p>
 
 <p>&nbsp;</p>
