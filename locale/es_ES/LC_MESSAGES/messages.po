@@ -135,9 +135,6 @@ msgstr "Ley de Comercio Internacional"
 msgid "Special Interest Groups"
 msgstr "Grupos con interés especial"
 
-msgid "FS Businesses"
-msgstr "Negocios FS"
-
 msgid "e-Voting"
 msgstr "Voto electrónico"
 

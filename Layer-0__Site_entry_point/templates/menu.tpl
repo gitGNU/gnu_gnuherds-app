@@ -111,7 +111,6 @@ Suite 225, San Francisco, CA 94107, USA
 </p>
 <p>
 <span class="menu1noactive">{'Special Interest Groups'|gettext|strip:'&nbsp;'}</span><br>
-	&nbsp; <a href="http://{$smarty.server.HTTP_HOST}/FS_Businesses_SIG.php" class="menu3" target="_top">{'FS Businesses'|gettext|strip:'&nbsp;'}</a><br>
 	&nbsp; <a href="http://{$smarty.server.HTTP_HOST}/e-Voting_SIG.php" class="menu3" target="_top">{'e-Voting'|gettext}</a><br>
 </p>
 </td>
