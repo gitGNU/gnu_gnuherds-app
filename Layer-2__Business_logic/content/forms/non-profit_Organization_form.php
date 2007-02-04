@@ -196,7 +196,7 @@ class NonprofitOrganizationForm
 		}
 
 		// The Email field have to keep the right syntax
-		if (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,6}$", $_POST["Email"])) // Ref.: http://php.net/eregi
+		if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST["Email"]))
 		{
 			$error = "<p>".gettext('The Email field is not an email address.')."</p>\n";
 			throw new Exception($error,true);
