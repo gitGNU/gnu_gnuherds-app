@@ -37,22 +37,16 @@ Suite 225, San Francisco, CA 94107, USA
 <p>
 <span class="menu1noactive">{'Manage your data'|gettext|strip:'&nbsp;'}</span><br>
 
-{if $smarty.session.Logged neq '1' or ( $smarty.session.Logged eq '1' and $smarty.session.LoginType eq 'Person' ) }
+{if $smarty.session.LoginType eq 'Person' }
 	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Person.php" class="menu3" target="_top">{'Person (Member)'|gettext}</a><br>
-{else}
-	&nbsp;&nbsp;<span class="menu3noactive">{'Person (Member)'|gettext}</span><br>
 {/if}
 
-{if $smarty.session.Logged neq '1' or ( $smarty.session.Logged eq '1' and $smarty.session.LoginType eq 'Company' ) }
+{if $smarty.session.LoginType eq 'Company' }
 	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Company.php" class="menu3" target="_top">{'Company'|gettext}</a><br>
-{else}
-	&nbsp;&nbsp;<span class="menu3noactive">{'Company'|gettext}</span><br>
 {/if}
 
-{if $smarty.session.Logged neq '1' or ( $smarty.session.Logged eq '1' and $smarty.session.LoginType eq 'non-profit Organization' ) }
+{if $smarty.session.LoginType eq 'non-profit Organization' }
 	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/non-profit_Organization.php" class="menu3" target="_top">{'non-profit Organization'|gettext|strip:'&nbsp;'}</a><br>
-{else}
-	&nbsp;&nbsp;<span class="menu3noactive">{'non-profit Organization'|gettext|strip:'&nbsp;'}</span><br>
 {/if}
 
 {if $smarty.session.Logged eq '1' }
