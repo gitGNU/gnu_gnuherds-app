@@ -28,7 +28,9 @@ Suite 225, San Francisco, CA 94107, USA
 
 <li><p><span class="modification">{t}DONE!{/t}</span>: {t}Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed.{/t}</p></li>
 
-<li><p> <!-- <span class="modification">{t}DONE!{/t}</span>: --> {t}Association announcement.{/t}</p></li>
+<li><p> {t}Move to offices managed by FSF staff.{/t}</p></li>
+
+<li><p> <span class="modification">{t}ONGOING PROCESS{/t}</span>: {t}Association announcement.{/t}</p></li>
 
 <li><p><span class="modification">{t}ONGOING PROCESS{/t}</span>: {t}Translate the web site to other languages.{/t}</p></li>
 
