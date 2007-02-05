@@ -276,6 +276,11 @@ Suite 225, San Francisco, CA 94107, USA
 	  1='<a href="http://download.savannah.gnu.org/releases/gnuherds-app/" target="_top">'
 	  2='</a>'
 	}If you do not like play with CVS, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2.{/t}
+	{t escape='no'
+	  1='<a href="/gnuherds-online.tar.gz" target="_top">'
+	  2='</a>'
+	}Or much better, you can %1download%2 the code which is running this site right now!.{/t}
+
 	</p><p>
 	{t escape='no'
 	  1='<a href="#Technologies" target="_top">'
