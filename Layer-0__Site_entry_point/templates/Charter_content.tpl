@@ -84,7 +84,11 @@ Non-executive committee members?:  The number of non-executive committee members
   4='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
   5='</a>'
   6='</ul>'
-}The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points, having veto power over all subjects related to such points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6{/t}
+}The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6{/t}
+</p>
+
+<p>
+{t}To depart from the above GNU requirements the Association have to discuss it previously with the GNU Project. Any conflict which can not be resolved in the discussion will raise the removal of the GNU Project approval, and so the GNU part of the Association name.{/t}
 </p>
 
 <p>

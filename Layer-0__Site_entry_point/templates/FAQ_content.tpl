@@ -50,7 +50,7 @@ Suite 225, San Francisco, CA 94107, USA
 		  2='</a>'
 		  3='<a href="/Charter.php#Committee">'
 		  4='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
-		}Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users. The Ethics Officer's %3veto power%2 on Free Software related subjects is needed to be sure the association will follow the %4Free Software%2 philosophy for ever.{/t}
+		}Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users.{/t}
 
 		<li> {t}Supplying support to engage among companies and persons, it doesn't matter the which or the order, helping the raise of a diversity of business models.  That is flexibility.{/t}
 
