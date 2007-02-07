@@ -25,7 +25,41 @@ Suite 225, San Francisco, CA 94107, USA
   3='<a href="/GNU_Herds_Hackers_Guide.php#Current_work_team" target="_top">'
   4='</a>'
   5='<a href="/FAQ.php#Why_another_Job_Site?" target="_top">'
-}GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors. %5Job Site%4 modules have been developed. It has been put together by a small %3team%4 of interested members of the Free Software community.{/t}
+}GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors.{/t}
+</p>
+
+<p>
+{t escape='no'
+  1='<a href="/FAQ.php#Why_another_Job_Site?" target="_top">'
+  2='</a>'
+  3='<a href="/FS_Business_Networks.php" target="_top">'
+}The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:{/t}
+
+<ul>
+  <li>{t}Controlled by its own users{/t}
+  <li>{t}FS skills data base{/t}
+  <li>{t}Telework{/t}
+</ul>
+</p>
+
+<p>
+{t}Other modules could be developed. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled.{/t}
+</p>
+<ul>
+  <li>{t escape=no
+  	1='<i>GNU Business Network</i>'
+      }%1 certification{/t}
+</ul>
+<p>
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+{t escape='no'
+  1='<a href="/GNU_Herds_Hackers_Guide.php#Current_work_team" target="_top">'
+  2='</a>'
+}This project has been put together by a small %1team%2 of interested members of the Free Software community.{/t}
 </p>
 
 <ul>
