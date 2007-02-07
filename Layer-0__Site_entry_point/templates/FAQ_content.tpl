@@ -43,7 +43,7 @@ Suite 225, San Francisco, CA 94107, USA
 		<li> {t escape='no'
 		  1='<a href="http://www.gnu.org/licenses/agpl.html" target="_top">'
 		  2='</a>'
-		}Be licensed with the %1Affero GPL%2 or similar, to cover use of the software over a computer network.{/t}
+		}Use a license to cover use of the software over a computer network. The current %1Affero GPL%2 license will be replaced by the GPL v3 license when it be released. Anyhow, the project is always open to discuss this and any other subject.{/t}
 
 		<li> {t escape='no'
 		  1='<a href="/doc/GNUHerds__ER__Logical-model.png">'
