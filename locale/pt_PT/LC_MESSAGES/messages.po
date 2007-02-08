@@ -17,10 +17,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: messages 0.0.1\n"
+"Project-Id-Version: GNUHerds Site\n"
 "Report-Msgid-Bugs-To: happyguy_pt@hotmail.com\n"
 "POT-Creation-Date: 2006-04-10 19:12+0200\n"
-"PO-Revision-Date: 2007-01-29 13:53+0200\n"
+"PO-Revision-Date: 2007-02-08 13:03+0100\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: pt <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -238,11 +238,27 @@ msgstr "ERRO: Incapaz de apagar a fotografia ou logotipo!."
 # Home_content.tpl
 #
 
-msgid "Under construction. Look at the %1Hackers' Guide%2."
-msgstr "Em construção. Consulte o %1Guia do Programador%2."
+msgid "GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors."
+msgstr "GNU Herds é uma associação %1democrática%4 sem fins lucrativos, cujo %2objectivo%4 é promover o desenvolvimento profissional de quem contribui para o Software Livre."
 
-msgid "GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors. %5Job Site%4 modules have been developed. It has been put together by a small %3team%4 of interested members of the Free Software community."
-msgstr "GNU Herds é uma associação %1democrática%4 sem fins lucrativos, cujo %2objectivo%4 é promover o desenvolvimento profissional de quem contribui para o Software Livre. Foi já desenvolvido o módulo de %5Classificados de Emprego%4. Este projecto foi realizado por um pequeno %3grupo%4 de membros da comunidade de Software Livre." 
+#XXX: REMOVE ME: "Foi já desenvolvido o módulo de %5Classificados de Emprego%4."
+msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:"
+msgstr "O primeiro passo consistiu em desenvolver o módulo de %1Classificados de Emprego%2 e juntar vários modelos de %3Redes de Negócios%2. Algumas das funcionalidades dos Classificaso de Emprego são:"
+
+msgid "Controlled by its own users"
+msgstr "Controlado pelos seus próprios utilizadores"
+
+msgid "FS skills data base"
+msgstr "Base de datos de conhecimentos em FS"
+
+msgid "Other modules could be developed. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled."
+msgstr "Poderiam ser desenvolvidos outros módulos. Os próximos passos podem estar nas suas mãos. No entanto, um desses passos foi já proposto: a FSF poderia conceder algumas certificações. Esta aplicação web está já preparada para suportar certificações, ainda que tal suporte esteja de momento desactivado."
+
+msgid "%1 certification"
+msgstr "Certificação %1"
+
+msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
+msgstr "Este projecto foi realizado por um pequeno %1grupo%2 de membros da comunidade de Software Livre."
 
 msgid "is the project main list."
 msgstr "esta é a lista principal do projecto."
@@ -296,8 +312,11 @@ msgstr "O Comité consistirá no seguinte: os membros da equipa de administraç�
 msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
 msgstr "As responsabilidades da equipa de certificações serão avaliar, quando requerido, a certificação de %1Free Software Contributor%2, certificação de %3GNU Business Network%4, etc."
 
-msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points, having veto power over all subjects related to such points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6"
-msgstr "O Responsável de Ética será designado pela Free Software Foundation, Inc. para garantir os seguintes pontos, detendo poder de veto sobre todos os temas relacionados com estes pontos: %1 %2A integridade do nome GNU não é comprometida.%3 %2A Associação respeita a filosofia do %4Software Livre%5.%3 %2As actividades são conduzidas de uma forma que não dá azo a que sejam abusadas atentando aos princípios ou filosofia do %4Software Livre%5.%6"
+msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6"
+msgstr "O Responsável de Ética será designado pela Free Software Foundation, Inc. para garantir os seguintes pontos: %1 %2A integridade do nome GNU não é comprometida.%3 %2A Associação respeita a filosofia do %4Software Livre%5.%3 %2As actividades são conduzidas de uma forma que não dá azo a que sejam abusadas atentando aos princípios ou filosofia do %4Software Livre%5.%6"
+
+msgid "To depart from the above GNU requirements the Association have to discuss it previously with the GNU Project. Any conflict which can not be resolved in the discussion will raise the removal of the GNU Project approval, and so the GNU part of the Association name."
+msgstr "Para se desviar dos requisitos GNU acima a Associação terá de os discutir previamente com o GNU Project. Qualquer conflito que não possa ser resolvido no âmbito da discussão irá resultar na remoção da aprovação por parte do GNU Project, e assim da parte GNU do nome da Associação."
 
 msgid "All other officers will be elected by the membership."
 msgstr "Todos os restantes cargos serão eleitos pelos membros."
@@ -472,6 +491,9 @@ msgstr "O código fonte"
 msgid "If you do not like play with CVS, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2."
 msgstr "Caso não lhe agrade utilizar o CVS, poderá obter um pacote, por vezes um pouco desactualizado, do código da página web na nossa %1Lista de ficheiros (área de download)%2 no Savannah."
 
+msgid "Or much better, you can %1download%2 the code which is running this site right now!."
+msgstr "Ou ainda melhor, pode %1fazer download%2 do código que neste preciso momento faz esta página funcionar!."
+
 msgid "You could set up all the required %1Technologies%2 on your host, to be used as your development environment."
 msgstr "Poderá configurar todas as %1Tecnologias%2 necessárias no seu servidor, para ser utilizado como ambiente de desenvolvimento."
 
@@ -565,6 +587,7 @@ msgstr "Instalar"
 msgid "Configure"
 msgstr "Configurar"
 
+#XXX: REMOVE ME: "Equipa OR Equipe?"
 msgid "Current work team"
 msgstr "Equipa de trabalho actual"
 
@@ -590,11 +613,12 @@ msgstr "Porquê outro servidor de Classificados de Emprego?"
 msgid "Because no one comply the below proposed conditions:"
 msgstr "Porque nenhum deles respeita todas as condições abaixo enunciadas:"
 
-msgid "Be licensed with the %1Affero GPL%2 or similar, to cover use of the software over a computer network."
-msgstr "Estar licenciado com a %1Affero GPL%2 ou semelhante, para proteger a utilização da aplicação numa rede informática."
+#XXX: REMOVE ME: "Estar licenciado com a %1Affero GPL%2 ou semelhante, para proteger a utilização da aplicação numa rede informática."
+msgid "Use a license to cover use of the software over a computer network. The current %1Affero GPL%2 license will be replaced by the GPL v3 license when it be released. Anyhow, the project is always open to discuss this and any other subject."
+msgstr "Utilizar uma licença para proteger a utilização da aplicação numa rede informática. A actual licença %1Affero GPL%2 será substituída pela licença GPL v3 quando esta for distribuída. No entanto, o projecto estará sempre aberto a discutir este e outros assuntos."
 
-msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users. The Ethics Officer's %3veto power%2 on Free Software related subjects is needed to be sure the association will follow the %4Free Software%2 philosophy for ever."
-msgstr "Adicionalmente, a gestão do servidor de classificados deve ser %1controlada pelos seus utilizadores%2 segundo regras democráticas. Tal será garantido pelos estatutos da GNU Herds. Assim, garante-se que a evolução do servidor de classificados será controlada e liderada pelos seus utilizadores. O %3poder de veto%2 do Responsável de Ética em assuntos relacionados com o Software Livre é necessário para se ter a certeza de que a associação irá sempre seguir a filosofia do %4Software Livre%2."
+msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users."
+msgstr "Adicionalmente, a gestão do servidor de classificados deve ser %1controlada pelos seus utilizadores%2 segundo regras democráticas. Tal será garantido pelos estatutos da GNU Herds. Assim, garante-se que a evolução do servidor de classificados será controlada e liderada pelos seus utilizadores."
 
 msgid "Supplying support to engage among companies and persons, it doesn't matter the which or the order, helping the raise of a diversity of business models.  That is flexibility."
 msgstr "Favorecer a interacção entre empresas e indivíduos, independentemente de quais ou da ordem, ajudando à criação de uma diversidade de modelos de negócio.  Isto é flexibilidade."
@@ -1203,9 +1227,6 @@ msgstr "Disponível a mudar de residência"
 msgid "Check qualifications view"
 msgstr "Vista de verificação de qualificações"
 
-# msgid ""
-# msgstr ""
-
 # Qualifications_form.php
 
 msgid "To access this section you have to login first."
@@ -1403,6 +1424,15 @@ msgstr "Destacamos:"
 
 msgid "Note that all those systems are country voting oriented."
 msgstr "Note que todos esses sistemas estão orientados para eleições em países."
+
+#
+# PostgreSQL.php
+#
+msgid "ERROR: Connection to database failed!."
+msgstr "ERRO: Falha na ligação à base de dados!."
+
+msgid "Data base under maintenance. Excuse the inconveniences."
+msgstr "Base de dados em manutenção. Lamentamos o incómodo."
 
 #
 # Data Base LO_Countries table
