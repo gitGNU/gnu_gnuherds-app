@@ -231,31 +231,23 @@ msgstr "ERRORE: Impossibile cancellare la foto o il logo!"
 msgid "GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors."
 msgstr "GNU Herds è un'associazione %1democratica%4 senza scopo di lucro, il cui %2obiettivo%4 è promuovere lo sviluppo professionale di coloro che contribuiscono al Software Libero."
 
-#XXX: REMOVE ME: "Sono stati realizzati alcuni moduli del %5Portale del lavoro%4."
-#, fuzzy
 msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:"
-msgstr "El primer paso ha consistido en desarrollar el módulo de %1web de Empleo%2 y recopilar algunos modelos de %3Redes de Negocios%2. Algunas de las características de la web de empleo son:"
+msgstr "Il primo passo è stato quello di sviluppare i moduli del %1Portale del Lavoro%2 e raccogliere alcuni modelli di %3Reti di Aziende%2. Alcune delle caratteristiche del portale sono:"
 
-#, fuzzy
 msgid "Controlled by its own users"
-msgstr "Controlada por sus propios usuarios"
+msgstr "Controllata dai suoi utenti"
 
-#, fuzzy
 msgid "FS skills data base"
-msgstr "Base de datos de habilidades FS"
+msgstr "Database abilità FS"
 
-#, fuzzy
 msgid "Other modules could be developed. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled."
-msgstr "Otros módulos podrían ser desarrollados. Los siguientes pasos a dar pueden depender de ti. Sin embargo, uno de esos pasos ha sido ya propuesto: la FSF podria otorgar algunas certificaciones. Esta aplicación web ya está lista para soportar certificaciones, aunque dicho soporte está ahora deshabilitado."
+msgstr "Altri moduli potranno essere sviluppati. I prossimi passi possono dipendere da te. Comunque, uno di questi passi è già stato proposto: la FSF potrà rilasciare delle certificazioni. Questo sito è pronto a supportare le certificazioni, anche se al momento questa funzionalità è disabilitata."
 
-#, fuzzy
 msgid "%1 certification"
-msgstr "Certificación %1"
+msgstr "Certificazione %1"
 
-#XXX: "sta lavorando" but it _has been_ already put together: present participle --> past perfect.
-#, fuzzy
 msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
-msgstr "Attualmente un piccolo %1gruppo%2 di membri della comunità del Software Libero sta lavorando ad esso."
+msgstr "Questo progetto è stato realizzato da un piccolo %1gruppo%2 di membri della comunità del Software Libero."
 
 msgid "is the project main list."
 msgstr "è la lista principale del progetto."
@@ -311,9 +303,8 @@ msgstr "Il gruppo di certificazione verificherà, su richiesta, le certificazion
 msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6"
 msgstr "L'Ufficiale Etico sarà designato dalla Free Software Foundation, Inc. per assicurare i seguenti punti: %1 %2L'integrità del nome GNU non sia alterata.%3 %2L'Associazione segua la filosofia del %4Software Libero%5.%3 %2Le attività vengano svolte in modi che non portino le stesse ad essere abusate a discapito della filosofia del %4Software Libero%5.%6"
 
-#, fuzzy
 msgid "To depart from the above GNU requirements the Association have to discuss it previously with the GNU Project. Any conflict which can not be resolved in the discussion will raise the removal of the GNU Project approval, and so the GNU part of the Association name."
-msgstr "Para desviarse de las condiciones anteriores, la Asociación tiene que discutirlo previamente con el Proyecto GNU. Cualquier conflicto que no pueda ser resuelto en la discusión ocasionará la retirada de la aprobación por parte del Proyecto GNU, y por tanto la eliminación de la palabra GNU del nombre de la Asociación."
+msgstr "Per allontanarsi dai precedenti requisiti, l'Associazione dovrà discuterne prima con il Progetto GNU. Qualunque conflitto che non potrà essere risolto causerà la revoca dell'approvazione da parte del Progetto GNU, con conseguente eliminazione della parte GNU dal nome dell'Associazione."
 
 msgid "All other officers will be elected by the membership."
 msgstr "Tutti gli altri ufficiali saranno eletti dai soci."
@@ -486,9 +477,8 @@ msgstr "Il codice sorgente"
 msgid "If you do not like play with CVS, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2."
 msgstr "Se non ti piace usare CVS, puoi ottenere un pacchetto, forse obsoleto, del sito web alla nostra %1Lista dei File (area Download)%2 su Savannah."
 
-#, fuzzy
 msgid "Or much better, you can %1download%2 the code which is running this site right now!."
-msgstr "O mucho mejor, usted puede %1descargar%2 el código que está ejecutando ahora mismo este sitio web!."
+msgstr "O, meglio, puoi %1scaricare%2 il codice con cui funziona questo sito!"
 
 msgid "You could set up all the required %1Technologies%2 on your host, to be used as your development environment."
 msgstr "Puoi impostare tutte le %1Tecnologie%2 necessarie sul tuo computer, per usarlo come ambiente di sviluppo."
@@ -607,10 +597,8 @@ msgstr "Perché un altro sito di offerte di lavoro?"
 msgid "Because no one comply the below proposed conditions:"
 msgstr "Perché nessuno segue le condizioni proposte di seguito:"
 
-#XXX: REMOVE ME: "Essere sotto licenza %1Affero GPL%2 o simile, per coprire l'utilizzo di software su una rete di computer."
-#, fuzzy
 msgid "Use a license to cover use of the software over a computer network. The current %1Affero GPL%2 license will be replaced by the GPL v3 license when it be released. Anyhow, the project is always open to discuss this and any other subject."
-msgstr "Usar una licencia para proteger el uso del software en Internet. La actual licencia %1Affero GPL%2 será reemplazada por la licencia GPL v3 cuando sea liberada. En cualquier caso, el proyecto está siempre abierto a discutir este y cualquier otro asunto."
+msgstr "Usare una licenza per proteggere l'utilizzo del software su una rete di computer. L'attuale licenza, %1Affero GPL%2, verrà sostituita dalla licenza GPL v3 quando verrà pubblicata. Il progetto sarà comunque sempre aperto alla discussione su questo ed ogni altro argomento."
 
 msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users."
 msgstr "Inoltre, la gestione del sito deve essere %1controllata dai suoi stessi utenti%2, secondo una politica democratica. Questo sarà garantito dalla politica dell'associazione GNU Herds. Perciò si sarà sicuri che l'evoluzione del sito sarà controllata e portata avanti dai suoi utenti."
@@ -1390,13 +1378,11 @@ msgstr "Nota che tutti questi sistemi sono orientati alle votazioni di nazioni."
 #
 # PostgreSQL.php
 #
-#, fuzzy
 msgid "ERROR: Connection to database failed!."
-msgstr "ERROR: ¡Ha fallado la conexión con la base de datos!."
+msgstr "ERRORE: Connessione al database fallita!."
 
-#, fuzzy
 msgid "Data base under maintenance. Excuse the inconveniences."
-msgstr "Base de datos en mantenimiento. Disculpen las molestias."
+msgstr "Database in manutenzione. Ci scusiamo per l'inconveniente."
 
 #
 # Data Base LO_Countries table
