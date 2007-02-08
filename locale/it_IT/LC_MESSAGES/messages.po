@@ -850,7 +850,7 @@ msgstr "No"
 # View_Qualifications_form.php
 #
 msgid "ERROR: The identifier to show has not been specified!."
-msgstr "ERRORE: L'identificatore per la mostra non è stato specificato!."
+msgstr "ERRORE: Non è stato specificato nessuna voce da visualizzare!."
 
 #
 # FS_Business_Networks_content.tpl
