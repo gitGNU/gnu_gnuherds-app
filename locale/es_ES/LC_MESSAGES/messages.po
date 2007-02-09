@@ -568,15 +568,6 @@ msgstr "Referencias generales:"
 msgid "Email lists"
 msgstr "Listas de correo"
 
-msgid "The old list archives:"
-msgstr "Los archivos de las listas antiguas:"
-
-msgid "The %1general%2 mailing list"
-msgstr "La lista de correo %1general%2"
-
-msgid "The %1web-dev%2 mailing list"
-msgstr "La lista de correo %1web-dev%2"
-
 msgid "How to install a development environment?"
 msgstr "¿Cómo instalar un entorno de desarrollo?"
 
