@@ -36,7 +36,7 @@ class PostgreSQL
 		$GLOBALS["PG_CONNECT"] = pg_connect("dbname=www.gnuherds.org user=www-data");
 		if (!$GLOBALS["PG_CONNECT"])
 		{
-			$error = "<p>ERROR: Connection to database failed.</p>\n";
+			$error = "<p>".gettext("ERROR: Connection to database failed!.")."</p>\n";
 			throw new Exception($error,false);
 		}
 
