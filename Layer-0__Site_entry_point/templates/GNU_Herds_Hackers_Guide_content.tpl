@@ -174,10 +174,12 @@ Suite 225, San Francisco, CA 94107, USA
 <h4>5. {t}Coding Standards{/t} <a name="Coding_Standards"></a> </h4>
 
 	<p>
+	<STRIKE>
 	{t escape='no'
 	  1='<a href="http://docs.clawphp.org/standards/index" target="_top">'
 	  2='</a>'
 	}We will try to follow these %1Coding Standards%2.{/t}
+	</STRIKE>
 	</p>
 
 <center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
