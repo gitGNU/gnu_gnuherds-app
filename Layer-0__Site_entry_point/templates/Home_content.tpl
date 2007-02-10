@@ -59,7 +59,7 @@ Suite 225, San Francisco, CA 94107, USA
 {t escape='no'
   1='<a href="/GNU_Herds_Hackers_Guide.php#Current_work_team" target="_top">'
   2='</a>'
-}This project has been put together by a small %1team%2 of interested members of the Free Software community.{/t}
+}This project has been put together by a small %1team%2 of members of the Free Software community.{/t}
 </p>
 
 <ul>
