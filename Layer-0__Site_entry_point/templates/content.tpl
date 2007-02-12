@@ -75,6 +75,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
+{if !isset($smarty.get.heading)}
 <tr>
 <td>&nbsp;</td>
 </tr>
@@ -88,6 +89,7 @@ Suite 225, San Francisco, CA 94107, USA
 </p>
 </td>
 </tr>
+{/if}
 
 <tr>
 <td><img src="{$webpage->theme->borderLeftDownImage}"  width="2" height="2" align="left" alt="" border="0" hspace="0" vspace="0"></td>

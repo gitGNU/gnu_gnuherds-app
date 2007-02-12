@@ -28,6 +28,7 @@ Suite 225, San Francisco, CA 94107, USA
 <script type="text/javascript" src="scripts/job_offer_Address.js"></script>
 <script type="text/javascript" src="scripts/job_offer_VacancyTitle.js"></script>
 <script type="text/javascript" src="scripts/popup.js"></script>
+<script type="text/javascript" src="scripts/utils.js"></script>
 {/literal}
 
 
@@ -183,7 +184,7 @@ Suite 225, San Francisco, CA 94107, USA
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</a> : </td>
+}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</a> : <br>(<a href="javascript:openPopUp('Skills','/Skills_Guide.php?heading&menu&loging_box',670,780);">{t}guide{/t}</a>) &nbsp; </td>
 <td colspan="3">
 
 <table cellpadding="0" cellspacing="0" width="100%">

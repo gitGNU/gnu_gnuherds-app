@@ -44,14 +44,22 @@ Suite 225, San Francisco, CA 94107, USA
 </script>
 {/literal}
 
+{if !isset($smarty.get.heading)}
 {include file="header.tpl"}
+{/if}
 
 <table width="100%" cellpadding="5" cellspacing="0" rules="none" border="0">
 <tr valign="top">
+
+{if !isset($smarty.get.menu) or !isset($smarty.get.loging_box)}
 <td align="center" bgcolor="{$webpage->theme->pageBGcolor}" width="1"> <!-- Note: The bgcolor could be omitted -->
+{/if}
 
+{if !isset($smarty.get.menu)}
 {include file="menu.tpl"}
+{/if}
 
+{if !isset($smarty.get.loging_box)}
 &nbsp;
 
 {if $smarty.session.Logged == '1' }
@@ -60,7 +68,11 @@ Suite 225, San Francisco, CA 94107, USA
 {include file="log_in_box.tpl"}
 {/if}
 
+{/if}
+
+{if !isset($smarty.get.menu) or !isset($smarty.get.loging_box)}
 </td>
+{/if}
 
 {include file="content.tpl"}
 

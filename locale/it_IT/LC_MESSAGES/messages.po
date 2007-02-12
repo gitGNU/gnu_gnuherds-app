@@ -1225,6 +1225,10 @@ msgstr "Il formato potrebbe essere per esempio"
 msgid "Allow applications from"
 msgstr "Permetti candidature da"
 
+#, fuzzy
+msgid "guide"
+msgstr "guida"
+
 msgid "Required languages"
 msgstr "Lingue richieste"
 
