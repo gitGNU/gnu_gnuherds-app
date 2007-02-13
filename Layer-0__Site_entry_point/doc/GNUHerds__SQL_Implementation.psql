@@ -1009,11 +1009,6 @@ INSERT INTO LU_Currencies VALUES ( 'ILS', 'Israel New Shekel', 'Israel New Sheke
 INSERT INTO LU_Currencies VALUES ( 'GEL', 'Lari', 'Lari', 'Georgia' );
 INSERT INTO LU_Currencies VALUES ( 'GHC', 'Cedi', 'Cedis', 'Ghana' );
 
-INSERT INTO LU_Currencies VALUES ( 'XAU', 'Ounce of Gold',      'Ounces of Gold', 'Universal' );
-INSERT INTO LU_Currencies VALUES ( 'XPD', 'Ounce of Palladium', 'Ounces of Palladium', 'Universal' );
-INSERT INTO LU_Currencies VALUES ( 'XPT', 'Ounce of Platinum',  'Ounces of Platinum', 'Universal' );
-INSERT INTO LU_Currencies VALUES ( 'XAG', 'Ounce of Silver',    'Ounces of Silver', 'Universal' );
-
 INSERT INTO LU_Currencies VALUES ( 'GTQ', 'Quetzal',       'Quetzales', 'Guatemala' );
 INSERT INTO LU_Currencies VALUES ( 'HTG', 'Gourde, Haiti', 'Gourdes, Haiti', 'Haiti, Navassa' );
 INSERT INTO LU_Currencies VALUES ( 'HNL', 'Lempira',       'Lempiras', 'Honduras' );

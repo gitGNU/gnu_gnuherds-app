@@ -2822,18 +2822,6 @@ msgstr "Lari"
 msgid "Cedis"
 msgstr "Cedi"
 
-msgid "Ounces of Gold"
-msgstr "Once d'Oro"
-
-msgid "Ounces of Palladium"
-msgstr "Once di Palladio"
-
-msgid "Ounces of Platinum"
-msgstr "Once di Platino"
-
-msgid "Ounces of Silver"
-msgstr "Once d'Argento"
-
 msgid "Quetzales"
 msgstr "Quetzal"
 
