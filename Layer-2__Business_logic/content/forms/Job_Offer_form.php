@@ -414,7 +414,7 @@ class JobOfferForm
 				<tr><td><b>".gettext('Required languages')."</b>:</td><td> '$LanguageList'</td></tr>
 
 				</table>\n";
-			throw new Exception($error,true); // The 'code' parameter '=true' is used to note that the 'Back' button must be shown.
+			throw new Exception($error,true); // The parameter 'true' is used to note that the 'Back' button must be shown.
 		}
 
 		// Telework or Country have to be filled

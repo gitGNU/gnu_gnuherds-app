@@ -192,7 +192,7 @@ class CompanyForm
 				<tr><td><b>".gettext('Company name')."</b>:</td><td> '$_POST[CompanyName]'</td></tr>
 				<tr><td><b>".gettext('Country')."</b>:</td><td> '$_POST[CountryCode]'</td></tr>
 				</table>\n";
-			throw new Exception($error,true); // The 'code' parameter '=true' is used to note that the 'Back' button must be shown.
+			throw new Exception($error,true); // The parameter 'true' is used to note that the 'Back' button must be shown.
 		}
 
 		// The Email field have to keep the right syntax
