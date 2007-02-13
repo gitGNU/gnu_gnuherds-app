@@ -205,7 +205,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td colspan="3" class="greenLight">
 {$smarty.session.ViewWageRank}
 {t}{$smarty.session.ViewWageRankCurrencyName}{/t} 
-{t}{$smarty.session.ViewWageRankByPeriod}{/t}{if trim($smarty.session.ViewWageRank) neq ''}{/if}
+{t}{$smarty.session.ViewWageRankByPeriod}{/t}
 </td>
 </tr>
 
