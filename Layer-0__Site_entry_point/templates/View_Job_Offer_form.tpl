@@ -209,6 +209,16 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
+{if trim($smarty.session.ViewEstimatedEffort) neq ''}
+<tr>
+<td align="right"><strong>{t}Estimated effort{/t}</strong> : </td>
+<td colspan="3" class="greenLight">
+{$smarty.session.ViewEstimatedEffort}
+{t}{$smarty.session.ViewTimeUnit}{/t}
+</td>
+</tr>
+{/if}
+
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr> <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td> </tr>

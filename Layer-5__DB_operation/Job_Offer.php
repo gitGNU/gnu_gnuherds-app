@@ -109,7 +109,7 @@ class JobOffer
 
 	public function getJobOffer($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,LU_PluralName,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt FROM J1_JobOffers,LU_Currencies WHERE J1_LU_Currency=LU_ThreeLetter AND J1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,LU_PluralName,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_EstimatedEffort,J1_LM_TimeUnit FROM J1_JobOffers,LU_Currencies WHERE J1_LU_Currency=LU_ThreeLetter AND J1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array = array();
@@ -131,6 +131,8 @@ class JobOffer
 		$array[11] = pg_fetch_all_columns($result, 11); // J1_LU_Currency
 		$array[12] = pg_fetch_all_columns($result, 12); // LU_PluralName
 		$array[13] = pg_fetch_all_columns($result, 13); // J1_LB_WageRankByPeriod
+		$array[23] = pg_fetch_all_columns($result, 23); // J1_EstimatedEffort
+		$array[24] = pg_fetch_all_columns($result, 24); // J1_LM_TimeUnit
 
 		$array[14] = pg_fetch_all_columns($result, 14); // J1_ProfessionalExperienceSinceYear
 		$array[15] = pg_fetch_all_columns($result, 15); // J1_LA_Id
@@ -244,6 +246,8 @@ class JobOffer
 		$WageRank = isset($_POST['WageRank']) ? trim($_POST['WageRank']) : '';
 		$WageRankCurrency = isset($_POST['WageRankCurrency']) ? trim($_POST['WageRankCurrency']) : '';
 		$WageRankByPeriod = isset($_POST['WageRankByPeriod']) ? trim($_POST['WageRankByPeriod']) : '';
+		$EstimatedEffort = isset($_POST['EstimatedEffort']) ? trim($_POST['EstimatedEffort']) : '';
+		$TimeUnit = isset($_POST['TimeUnit']) ? trim($_POST['TimeUnit']) : '';
 
 		$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
 		$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
@@ -262,7 +266,7 @@ class JobOffer
 			$AvailableToTravel = 'true';
 		else	$AvailableToTravel = 'false';
 
-		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,text,text,text,text,text,text,text,text,bool,text,text,text,bool) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21);  EXECUTE query('$EntityId','$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$ProfessionalExperienceSinceYear','$AcademicQualification','$FreeSoftwareExperiences','$Telework','$City','$StateProvince','$CountryCode','$AvailableToTravel');";
+		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,text,text,text,text,text,text,text,text,text,text,bool,text,text,text,bool) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_EstimatedEffort,J1_LM_TimeUnit,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23);  EXECUTE query('$EntityId','$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$EstimatedEffort','$TimeUnit','$ProfessionalExperienceSinceYear','$AcademicQualification','$FreeSoftwareExperiences','$Telework','$City','$StateProvince','$CountryCode','$AvailableToTravel');";
 		$this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 
@@ -394,6 +398,8 @@ class JobOffer
 		$WageRank = isset($_POST['WageRank']) ? trim($_POST['WageRank']) : '';
 		$WageRankCurrency = isset($_POST['WageRankCurrency']) ? trim($_POST['WageRankCurrency']) : '';
 		$WageRankByPeriod = isset($_POST['WageRankByPeriod']) ? trim($_POST['WageRankByPeriod']) : '';
+		$EstimatedEffort = isset($_POST['EstimatedEffort']) ? trim($_POST['EstimatedEffort']) : '';
+		$TimeUnit = isset($_POST['TimeUnit']) ? trim($_POST['TimeUnit']) : '';
 
 		$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
 		$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
@@ -412,7 +418,7 @@ class JobOffer
 			$AvailableToTravel = 'true';
 		else	$AvailableToTravel = 'false';
 
-		$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,text,text,text,text,text,text,text,text,bool,text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCompanyApplications=$6,J1_AllowOrganizationApplications=$7,J1_Vacancies=$8,J1_LK_ContractType=$9,J1_WageRank=$10,J1_LU_Currency=$11,J1_LB_WageRankByPeriod=$12,J1_ProfessionalExperienceSinceYear=$13,J1_LA_Id=$14,J1_FreeSoftwareProjects=$15,J1_Telework=$16,J1_City=$17,J1_StateProvince=$18,J1_LO_Country=$19,J1_AvailableToTravel=$20 WHERE J1_Id=$21;  EXECUTE query('$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$ProfessionalExperienceSinceYear','$AcademicQualification','$FreeSoftwareExperiences','$Telework','$City','$StateProvince','$CountryCode','$AvailableToTravel','$J1_Id');";
+		$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,text,text,text,text,text,text,text,text,text,text,bool,text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCompanyApplications=$6,J1_AllowOrganizationApplications=$7,J1_Vacancies=$8,J1_LK_ContractType=$9,J1_WageRank=$10,J1_LU_Currency=$11,J1_LB_WageRankByPeriod=$12,J1_EstimatedEffort=$13,J1_LM_TimeUnit=$14,J1_ProfessionalExperienceSinceYear=$15,J1_LA_Id=$16,J1_FreeSoftwareProjects=$17,J1_Telework=$18,J1_City=$19,J1_StateProvince=$20,J1_LO_Country=$21,J1_AvailableToTravel=$22 WHERE J1_Id=$23;  EXECUTE query('$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$EstimatedEffort','$TimeUnit','$ProfessionalExperienceSinceYear','$AcademicQualification','$FreeSoftwareExperiences','$Telework','$City','$StateProvince','$CountryCode','$AvailableToTravel','$J1_Id');";
 		$this->postgresql->execute($sqlQuery,1);
 
 

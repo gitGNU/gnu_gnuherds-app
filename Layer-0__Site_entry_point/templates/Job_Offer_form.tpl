@@ -27,6 +27,7 @@ Suite 225, San Francisco, CA 94107, USA
 <script type="text/javascript" src="scripts/job_offer_Languages.js"></script>
 <script type="text/javascript" src="scripts/job_offer_Address.js"></script>
 <script type="text/javascript" src="scripts/job_offer_VacancyTitle.js"></script>
+<script type="text/javascript" src="scripts/job_offer_evalDisplay.js"></script>
 <script type="text/javascript" src="scripts/popup.js"></script>
 <script type="text/javascript" src="scripts/utils.js"></script>
 {/literal}
@@ -87,15 +88,15 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr valign="top">
 <td align="right"><span class="must">*</span>{t}Allow applications from{/t} : </td>
-<td colspan="3"> <input type="checkbox" name="AllowPersonApplications" class="required" {if $smarty.session.jAllowPersonApplications eq 'true'} checked {/if} onChange="evalDisplay();">{t}Persons{/t}</td>
+<td colspan="3"> <input type="checkbox" name="AllowPersonApplications" class="required" {if $smarty.session.jAllowPersonApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();">{t}Persons{/t}</td>
 </tr>
 <tr valign="top">
 <td></td>
-<td colspan="3"> <input type="checkbox" name="AllowCompanyApplications" class="required" {if $smarty.session.jAllowCompanyApplications eq 'true'} checked {/if} onChange="evalDisplay();">{t}Companies{/t}</td>
+<td colspan="3"> <input type="checkbox" name="AllowCompanyApplications" class="required" {if $smarty.session.jAllowCompanyApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();">{t}Companies{/t}</td>
 </tr>
 <tr valign="top">
 <td></td>
-<td colspan="3"> <input type="checkbox" name="AllowOrganizationApplications" class="required" {if $smarty.session.jAllowOrganizationApplications eq 'true'} checked {/if} onChange="evalDisplay();">{t}non-profit Organizations{/t}</td>
+<td colspan="3"> <input type="checkbox" name="AllowOrganizationApplications" class="required" {if $smarty.session.jAllowOrganizationApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();">{t}non-profit Organizations{/t}</td>
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
@@ -119,14 +120,24 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t}The format has to be: Minimum-Optimum. For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Wage rank{/t}</a> : </td>
+<td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t}The format has to be:{/t} {t}Minimum{/t}-{t}Optimum{/t}. {t}For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Wage rank{/t}</a> : </td>
 <td colspan="3">
 <input type="text" name="WageRank" size="15" maxlength="30" class="required" value="{$smarty.session.jWageRank}">
 <select name="WageRankCurrency" class="required">
 {html_options values=$currenciesThreeLetter output=$currenciesName selected=$smarty.session.jWageRankCurrency}
 </select>
-<select name="WageRankByPeriod" class="required">
+<select name="WageRankByPeriod" class="required" onChange="evalEstimatedEffortDisplay();">
 {html_options values=$byPeriodId output=$byPeriodName selected=$smarty.session.jWageRankByPeriod}
+</select>
+</td>
+</tr>
+
+<tr valign="top" id="EstimatedEffort" style="display:none">
+<td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t}For example:{/t} 48-56 {t}hours{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Estimated effort{/t}</a> : </td>
+<td colspan="3">
+<input type="text" name="EstimatedEffort" size="15" maxlength="30" class="required" value="{$smarty.session.jEstimatedEffort}">
+<select name="TimeUnit" class="required">
+{html_options values=$timeUnitsId output=$timeUnitsName selected=$smarty.session.jTimeUnit}
 </select>
 </td>
 </tr>

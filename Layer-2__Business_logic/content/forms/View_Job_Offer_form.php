@@ -159,6 +159,8 @@ class ViewJobOfferForm
 		$_SESSION['ViewWageRankCurrency'] = $result[11][0];
 		$_SESSION['ViewWageRankCurrencyName'] = $result[12][0];
 		$_SESSION['ViewWageRankByPeriod'] = $result[13][0];
+		$_SESSION['ViewEstimatedEffort'] = $result[23][0];
+		$_SESSION['ViewTimeUnit'] = $result[24][0];
 
 		$_SESSION['ViewProfessionalExperienceSinceYear'] = trim($result[14][0]);
 		$_SESSION['ViewAcademicQualification'] = trim($result[15][0]);

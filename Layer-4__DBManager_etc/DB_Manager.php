@@ -34,6 +34,7 @@ require_once "../Layer-5__DB_operation/Certifications.php";
 require_once "../Layer-5__DB_operation/Languages.php";
 require_once "../Layer-5__DB_operation/Contract_Types.php";
 require_once "../Layer-5__DB_operation/By_Period.php";
+require_once "../Layer-5__DB_operation/Time_Units.php";
 require_once "../Layer-5__DB_operation/Currencies.php";
 require_once "../Layer-5__DB_operation/Employability.php";
 require_once "../Layer-5__DB_operation/Application_States.php";
@@ -351,6 +352,12 @@ class DBManager
 	{
 		$byPeriod = new ByPeriod();
 		return $byPeriod->getByPeriodList();
+	}
+
+	public function getTimeUnitsList()
+	{
+		$timeUnits = new TimeUnits();
+		return $timeUnits->getTimeUnitsList();
 	}
 
 	public function getCurrenciesList()
