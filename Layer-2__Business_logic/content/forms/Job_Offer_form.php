@@ -197,6 +197,14 @@ class JobOfferForm
 		$smarty->assign('byPeriodName', $byPeriodName );
 
 
+		$timeUnits = $this->manager->getTimeUnitsList();
+		$timeUnitsId = array_merge( array(""), array_keys($timeUnits) );
+		$timeUnitsName = array_merge( array(""), array_values($timeUnits) );
+
+		$smarty->assign('timeUnitsId', $timeUnitsId );
+		$smarty->assign('timeUnitsName', $timeUnitsName );
+
+
 		$currencies = $this->manager->getCurrenciesList();
 		$currenciesThreeLetter = array_merge( array(""), array_keys($currencies) );
 		$currenciesName = array_merge( array(""), array_values($currencies) );
@@ -236,6 +244,8 @@ class JobOfferForm
 		$_SESSION['jWageRank'] = '';
 		$_SESSION['jWageRankCurrency'] = '';
 		$_SESSION['jWageRankByPeriod'] = '';
+		$_SESSION['jEstimatedEffort'] = '';
+		$_SESSION['jTimeUnit'] = '';
 
 		$_SESSION['jProfessionalExperienceSinceYear'] = '';
 		$_SESSION['jAcademicQualification'] = '';
@@ -306,6 +316,8 @@ class JobOfferForm
 		$_SESSION['jWageRank'] = isset($_POST['WageRank']) ? $_POST['WageRank'] : '';
 		$_SESSION['jWageRankCurrency'] = isset($_POST['WageRankCurrency']) ? $_POST['WageRankCurrency'] : '';
 		$_SESSION['jWageRankByPeriod'] = isset($_POST['WageRankByPeriod']) ? $_POST['WageRankByPeriod'] : '';
+		$_SESSION['jEstimatedEffort'] = isset($_POST['EstimatedEffort']) ? trim($_POST['EstimatedEffort']) : '';
+		$_SESSION['jTimeUnit'] = isset($_POST['TimeUnit']) ? $_POST['TimeUnit'] : '';
 
 		$_SESSION['jProfessionalExperienceSinceYear'] = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
 		$_SESSION['jAcademicQualification'] = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
@@ -389,7 +401,7 @@ class JobOfferForm
 		// Note that the POST values has been saved on the SESSION before calling this method. We use SESSION instead POST due to they have the isset check done, and we want to avoid to repeat it.  :P
 
 		// Some field can not be empty
-		if ( $_SESSION['jExpirationDate']=='' or ($_SESSION['jAllowPersonApplications']=="false" and $_SESSION['jAllowCompanyApplications']=="false" and $_SESSION['jAllowOrganizationApplications']=="false") or $_SESSION['jVacancies']=='' or $_SESSION['jContractType']=='' or $_SESSION['jWageRank']=='' or $_SESSION['jWageRankCurrency']=='' or $_SESSION['jWageRankByPeriod']=='' or count($_SESSION['jProfessionalProfileList'])<1 or count($_SESSION['jLanguageList'])<1 )
+		if ( $_SESSION['jExpirationDate']=='' or ($_SESSION['jAllowPersonApplications']=="false" and $_SESSION['jAllowCompanyApplications']=="false" and $_SESSION['jAllowOrganizationApplications']=="false") or $_SESSION['jVacancies']=='' or $_SESSION['jContractType']=='' or $_SESSION['jWageRank']=='' or $_SESSION['jWageRankCurrency']=='' or $_SESSION['jWageRankByPeriod']=='' or count($_SESSION['jProfessionalProfileList'])<1 or count($_SESSION['jLanguageList'])<1 or ($_SESSION['jWageRankByPeriod']=="by project" and ($_SESSION['jEstimatedEffort']=='' or $_SESSION['jTimeUnit']=='')) )
 		{
 			$AllowApplications = ( $_SESSION['jAllowPersonApplications']=="true" or $_SESSION['jAllowCompanyApplications']=="true" or $_SESSION['jAllowOrganizationApplications']=="true" ) ? "$_SESSION[jAllowPersonApplications] $_SESSION[jAllowCompanyApplications] $_SESSION[jAllowOrganizationApplications]" : '';
 			$ProfessionalProfileList = count($_SESSION['jProfessionalProfileList'])<1 ? '' : count($_SESSION['jProfessionalProfileList']);
@@ -406,13 +418,16 @@ class JobOfferForm
 				<tr><td><b>".gettext('Contract type')."</b>:</td><td> '$_SESSION[jContractType]'</td></tr>
 
 				<tr><td><b>".gettext('Wage rank')."</b>:</td><td> '$_SESSION[jWageRank]'</td></tr>
-				<tr><td><b>".gettext('Wage rank currency')."</b>:</td><td> '$_SESSION[jWageRankCurrency]'</td></tr>
-				<tr><td><b>".gettext('Wage rank by period')."</b>:</td><td> '$_SESSION[jWageRankByPeriod]'</td></tr>
+				<tr><td><b>".gettext('Wage rank')." (currency)</b>:</td><td> '$_SESSION[jWageRankCurrency]'</td></tr>
+				<tr><td><b>".gettext('Wage rank')." (by)</b>:</td><td> '$_SESSION[jWageRankByPeriod]'</td></tr>\n";
 
+			if ($_SESSION['jWageRankByPeriod']=="by project")
+				$error .= "<tr><td><b>".gettext('Estimated effort')."</b>:</td><td> '$_SESSION[jEstimatedEffort]'</td></tr>
+					<tr><td><b>".gettext('Estimated effort')." (time unit)</b>:</td><td> '$_SESSION[jTimeUnit]'</td></tr>";
+
+			$error .= "
 				<tr><td><b>".gettext('Professional profiles')."</b>:</td><td> '$ProfessionalProfileList'</td></tr>
-
 				<tr><td><b>".gettext('Required languages')."</b>:</td><td> '$LanguageList'</td></tr>
-
 				</table>\n";
 			throw new Exception($error,true); // The parameter 'true' is used to note that the 'Back' button must be shown.
 		}
@@ -481,6 +496,8 @@ class JobOfferForm
 		$_SESSION['jWageRankCurrency'] = $result[11][0];
 		$_SESSION['jWageRankCurrencyName'] = $result[12][0];
 		$_SESSION['jWageRankByPeriod'] = $result[13][0];
+		$_SESSION['jEstimatedEffort'] = $result[23][0];
+		$_SESSION['jTimeUnit'] = $result[24][0];
 
 		$_SESSION['jProfessionalExperienceSinceYear'] = $result[14][0];
 		$_SESSION['jAcademicQualification'] = $result[15][0];
