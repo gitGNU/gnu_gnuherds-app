@@ -756,9 +756,8 @@ msgstr "Tipo di contratto"
 msgid "Wage rank"
 msgstr "Rango salariale"
 
-#, fuzzy
 msgid "Estimated effort"
-msgstr "Esfuerzo estimado"
+msgstr "Impegno stimato"
 
 msgid "Professional experience since"
 msgstr "Esperienza professionale da"
@@ -1232,7 +1231,6 @@ msgstr "Il formato potrebbe essere per esempio"
 msgid "Allow applications from"
 msgstr "Permetti candidature da"
 
-#, fuzzy
 msgid "guide"
 msgstr "guida"
 
@@ -3198,25 +3196,20 @@ msgstr "per progetto"
 #
 # Data Base LM_TimeUnits table
 #
-#, fuzzy
 msgid "hours"
-msgstr "horas"
+msgstr "ore"
 
-#, fuzzy
 msgid "days"
-msgstr "días"
+msgstr "giorni"
 
-#, fuzzy
 msgid "weeks"
-msgstr "semanas"
+msgstr "settimane"
 
-#, fuzzy
 msgid "months"
-msgstr "meses"
+msgstr "mesi"
 
-#, fuzzy
 msgid "years"
-msgstr "años"
+msgstr "anni"
 
 #
 # Data Base LE_Employability table
