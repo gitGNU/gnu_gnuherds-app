@@ -777,11 +777,9 @@ msgstr "Tipo de contrato"
 msgid "Wage rank"
 msgstr "Nível salarial"
 
-msgid "Minimum"
-msgstr "Mínimo"
-
-msgid "Optimum"
-msgstr "Ideal"
+#, fuzzy
+msgid "Estimated effort"
+msgstr "Esfuerzo estimado"
 
 msgid "Professional experience since"
 msgstr "Experiência profissional desde"
@@ -1197,8 +1195,17 @@ msgstr "Tipo de contrato desejado"
 msgid "Desired wage rank"
 msgstr "Intervalo salarial desejado"
 
-msgid "The format has to be: Minimum-Optimum. For example:"
-msgstr "O formato tem de ser: Mínimo-Óptimo. Por exemplo:"
+msgid "The format has to be:"
+msgstr "O formato tem de ser:"
+
+msgid "Minimum"
+msgstr "Mínimo"
+
+msgid "Optimum"
+msgstr "Ideal"
+
+msgid "For example:"
+msgstr "Por exemplo:"
 
 msgid "Currency"
 msgstr "Moeda"
@@ -3240,6 +3247,29 @@ msgstr "por hora"
 
 msgid "by project"
 msgstr "por projecto"
+
+#
+# Data Base LM_TimeUnits table
+#
+#, fuzzy
+msgid "hours"
+msgstr "horas"
+
+#, fuzzy
+msgid "days"
+msgstr "días"
+
+#, fuzzy
+msgid "weeks"
+msgstr "semanas"
+
+#, fuzzy
+msgid "months"
+msgstr "meses"
+
+#, fuzzy
+msgid "years"
+msgstr "años"
 
 #
 # Data Base LE_Employability table
