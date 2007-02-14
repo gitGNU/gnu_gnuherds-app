@@ -58,6 +58,7 @@ DROP TABLE LA_AcademicQualifications;
 DROP TABLE LC_Certifications; -- We do not translate de certifications. It is better so, in order to keep a unique 'image'. It is as the usual mark image.
 DROP TABLE LK_ContractType;
 DROP TABLE LB_ByPeriod;
+DROP TABLE LM_TimeUnits;
 DROP TABLE LE_Employability;
 DROP TABLE LS_SpokenLevel;   -- List of Languages-Spoken-Levels
 DROP TABLE LW_WrittenLevel; -- List of Languages-Written-Levels
@@ -152,6 +153,11 @@ CREATE TABLE LK_ContractType (
 
 CREATE TABLE LB_ByPeriod(
 	LB_Id	varchar(11) PRIMARY KEY CHECK (LB_Id <> '')
+);
+
+
+CREATE TABLE LM_TimeUnits(
+	LM_Id	varchar(6) PRIMARY KEY CHECK (LM_Id <> '')
 );
 
 
@@ -415,6 +421,8 @@ CREATE TABLE J1_JobOffers (
         J1_CommissionsIncentives varchar(255), -- - - - XXX: This fields is not used. If we use it, use a combo box to avoid another free-to-fill field.
         J1_LU_Currency     char(3), -- REFERENCES LU_Currencies(LU_ThreeLetter), -- NOT NULL,
 	J1_LB_WageRankByPeriod varchar(11), -- REFERENCES LB_ByPeriod(LB_Id), -- NOT NULL,
+	J1_EstimatedEffort varchar(90),
+	J1_LM_TimeUnit varchar(6), -- REFERENCES LM_TimeUnits(LM_Id), -- NOT NULL,
         J1_LaborDay_Schedule     varchar(255), -- NOT NULL CHECK (J1_LaborDay_Schedule <> '') -- Days of labor, (e.g.: Monday-Friday), and it schedule. -- The payment can be at finishing the project. - - - XXX: This fields is not used. If we use it, use a combo box to avoid another free-to-fill field.
 
         -- Requirements: The JobOffer demand:
@@ -494,7 +502,7 @@ ON TABLE E1_Entities, E1_Entities_e1_id_seq, E2_EntityFreeSoftwareExperiences, E
 TO "www-data" ;
 
 GRANT SELECT  -- Note these tables are not modified by the webapp.
-ON TABLE LO_Countries, LU_Currencies, LL_Languages, LA_AcademicQualifications, LC_Certifications, LK_ContractType, LB_ByPeriod, LE_Employability, LS_SpokenLevel, LW_WrittenLevel, LF_FieldProfiles, LP_ProfessionalProfiles, LX_ProductProfiles, LI_Skills, LT_SkillSetTypes, LG_KnowledgeLevel, LN_ExperienceLevel, LZ_ApplicationStates
+ON TABLE LO_Countries, LU_Currencies, LL_Languages, LA_AcademicQualifications, LC_Certifications, LK_ContractType, LB_ByPeriod, LM_TimeUnits, LE_Employability, LS_SpokenLevel, LW_WrittenLevel, LF_FieldProfiles, LP_ProfessionalProfiles, LX_ProductProfiles, LI_Skills, LT_SkillSetTypes, LG_KnowledgeLevel, LN_ExperienceLevel, LZ_ApplicationStates
 TO "www-data" ;
 
 
@@ -1172,6 +1180,12 @@ INSERT INTO LB_ByPeriod VALUES ( 'by week' );
 INSERT INTO LB_ByPeriod VALUES ( 'by day' );
 INSERT INTO LB_ByPeriod VALUES ( 'by hour' );
 INSERT INTO LB_ByPeriod VALUES ( 'by project' );
+
+INSERT INTO LM_TimeUnits VALUES ( 'hours' );
+INSERT INTO LM_TimeUnits VALUES ( 'days' );
+INSERT INTO LM_TimeUnits VALUES ( 'weeks' );
+INSERT INTO LM_TimeUnits VALUES ( 'months' );
+INSERT INTO LM_TimeUnits VALUES ( 'years' );
 
 -- These registers must be inserted in sort according to the value of the first field:
 INSERT INTO LE_Employability VALUES ( 'Working' );
