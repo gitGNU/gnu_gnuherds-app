@@ -298,8 +298,8 @@ class QualificationsForm
 				$error .= "
 				<tr><td><b>".gettext('Desired contract type')."</b>:</td><td> '{$_SESSION['DesiredContractType']}'</td></tr>
 				<tr><td><b>".gettext('Desired wage rank')."</b>:</td><td> '{$_SESSION['DesiredWageRank']}'</td></tr>
-				<tr><td><b>".gettext('Wage rank currency')."</b>:</td><td> '{$_SESSION['WageRankCurrency']}'</td></tr>
-				<tr><td><b>".gettext('Wage rank By period')."</b>:</td><td> '{$_SESSION['WageRankByPeriod']}'</td></tr>
+				<tr><td><b>".gettext('Wage rank')." (currency)</b>:</td><td> '{$_SESSION['WageRankCurrency']}'</td></tr>
+				<tr><td><b>".gettext('Wage rank')." (by)</b>:</td><td> '{$_SESSION['WageRankByPeriod']}'</td></tr>
 				<tr><td><b>".gettext('Currently you are')."</b>:</td><td> '{$_SESSION['CurrentEmployability']}'</td></tr>
 				</table>\n";
 			else
