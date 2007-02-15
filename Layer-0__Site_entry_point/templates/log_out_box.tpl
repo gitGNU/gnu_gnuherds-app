@@ -23,7 +23,6 @@ Suite 225, San Francisco, CA 94107, USA
 <input type="hidden" name="JobOfferId" value="{$smarty.post.JobOfferId}">
 <input type="hidden" name="ViewEntityId" value="{$smarty.post.ViewEntityId}">
 <input type="hidden" name="ViewJobOfferId" value="{$smarty.post.ViewJobOfferId}">
-<input type="hidden" name="SearchWordsInFullTextQualifications" value="{$smarty.post.SearchWordsInFullTextQualifications}">
 
 <table width="155" border="0" cellspacing="0" cellpadding="2" bgcolor="{$webpage->theme->loginBoxBGcolor}">
 <tr>

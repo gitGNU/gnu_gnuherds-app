@@ -39,7 +39,6 @@ Suite 225, San Francisco, CA 94107, USA
 <form name="manageJobOfferApplicationsForm{$Id}" id="manageJobOfferApplicationsForm{$Id}" method="post" action="View_Qualifications.php">
 <input type="hidden" name="ViewEntityId" value="{$Id}">
 <input type="hidden" name="ViewEntityType" value="{$entityType[$i]}">
-<input type="hidden" name="SearchWordsInFullTextQualifications" value="{$smarty.post.SearchWordsInFullTextQualifications}">
 </form>
 
 <tr valign="top">
