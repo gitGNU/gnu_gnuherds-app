@@ -85,12 +85,6 @@ class JobOfferForm
 		{
 			// POST request: Submit of "Show translatable parts as" language.
 		}
-		elseif ( count($_POST) >1 )
-		{
-			// POST request: Some of the Entity checkbox has been changed, and its submit has runned.
-
-			$this->saveToSessionVars();
-		}
 		else
 		{
 			$error = "<p>".$_SERVER["REQUEST_URI"].": ".gettext('ERROR: Unexpected condition')."</p>";
