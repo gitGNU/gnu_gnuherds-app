@@ -55,7 +55,7 @@ Suite 225, San Francisco, CA 94107, USA
 <input type="hidden" name="languagePT" id="languagePT" value="pt_PT">
 <input type="hidden" name="language" id="language" value="none">
 
-<!-- These are the post values which we must pass through at this page. -->
+<!-- These are the post values which we must pass through the web page. -->
 <input type="hidden" name="JobOfferId" value="{$smarty.post.JobOfferId}">
 <input type="hidden" name="ViewEntityId" value="{$smarty.post.ViewEntityId}">
 <input type="hidden" name="ViewJobOfferId" value="{$smarty.post.ViewJobOfferId}">
