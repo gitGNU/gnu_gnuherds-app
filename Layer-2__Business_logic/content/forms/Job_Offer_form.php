@@ -54,7 +54,7 @@ class JobOfferForm
 			$error = "<p>".gettext('To access this section you have to login first.')."</p>";
 			throw new Exception($error,false);
 		}
-
+var_dump($_POST);
 		// Process each button event
 		if     ( count($_POST)==0 ) // new
 		{
@@ -73,7 +73,7 @@ class JobOfferForm
 		{
 			// POST request from Manage_Job_Offers_form.tpl: Edit JobOfferId
 		}
-		elseif ( count($_POST)==1 and isset($_POST['back']) and $_POST['back'] == gettext('Back') )
+		elseif ( count($_POST) >1 and isset($_POST['back']) and $_POST['back'] == gettext('Back') )
 		{
 			// POST request: The 'Back' button has been clicked.
 		}
