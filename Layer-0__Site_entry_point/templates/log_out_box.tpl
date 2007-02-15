@@ -19,7 +19,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <form name="LogForm" method="post" action="{if not isset($smarty.server.HTTPS) || $smarty.server.HTTPS neq 'on' }http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
 
-<!-- These are the post values which we must pass through at this page. -->
+<!-- These are the post values which we must pass through the web page. -->
 <input type="hidden" name="JobOfferId" value="{$smarty.post.JobOfferId}">
 <input type="hidden" name="ViewEntityId" value="{$smarty.post.ViewEntityId}">
 <input type="hidden" name="ViewJobOfferId" value="{$smarty.post.ViewJobOfferId}">
