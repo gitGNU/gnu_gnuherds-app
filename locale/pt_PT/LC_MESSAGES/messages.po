@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: GNUHerds Site\n"
 "Report-Msgid-Bugs-To: happyguy_pt@hotmail.com\n"
 "POT-Creation-Date: 2006-04-10 19:12+0200\n"
-"PO-Revision-Date: 2007-02-08 13:03+0100\n"
+"PO-Revision-Date: 2007-02-15 11:30+0100\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: pt <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -777,9 +777,8 @@ msgstr "Tipo de contrato"
 msgid "Wage rank"
 msgstr "Nível salarial"
 
-#, fuzzy
 msgid "Estimated effort"
-msgstr "Esfuerzo estimado"
+msgstr "Esforço estimado"
 
 msgid "Professional experience since"
 msgstr "Experiência profissional desde"
@@ -1275,7 +1274,6 @@ msgstr "O formato podería ser, por exemplo"
 msgid "Allow applications from"
 msgstr "Permitir candidaturas de"
 
-#, fuzzy
 msgid "guide"
 msgstr "guia"
 
@@ -3251,25 +3249,20 @@ msgstr "por projecto"
 #
 # Data Base LM_TimeUnits table
 #
-#, fuzzy
 msgid "hours"
 msgstr "horas"
 
-#, fuzzy
 msgid "days"
-msgstr "días"
+msgstr "dias"
 
-#, fuzzy
 msgid "weeks"
 msgstr "semanas"
 
-#, fuzzy
 msgid "months"
 msgstr "meses"
 
-#, fuzzy
 msgid "years"
-msgstr "años"
+msgstr "anos"
 
 #
 # Data Base LE_Employability table
