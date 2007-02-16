@@ -530,7 +530,7 @@ INSERT INTO LL_Languages VALUES ( 'cs', 'Czech' );
 INSERT INTO LL_Languages VALUES ( 'cy', 'Welsh' );
 INSERT INTO LL_Languages VALUES ( 'da', 'Danish' );
 INSERT INTO LL_Languages VALUES ( 'de', 'German' );
-INSERT INTO LL_Languages VALUES ( 'dz', 'Bhutani' );
+INSERT INTO LL_Languages VALUES ( 'dz', 'Dzongkha' );
 INSERT INTO LL_Languages VALUES ( 'el', 'Greek' );
 INSERT INTO LL_Languages VALUES ( 'en', 'English' );
 INSERT INTO LL_Languages VALUES ( 'eo', 'Esperanto' );
