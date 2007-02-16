@@ -2574,7 +2574,7 @@ msgstr "Zulu"
 #
 # Data Base LU_Currencies table (LU_PluralName field)
 #
-# Tip: Translated searching  wikipedia.org  Refereces: http://es.wikipedia.org/wiki/ISO_4217 , etc.
+# Tip: Translated searching  wikipedia.org  References: http://es.wikipedia.org/wiki/ISO_4217 , etc.
 #
 
 msgid "Afghanis"
