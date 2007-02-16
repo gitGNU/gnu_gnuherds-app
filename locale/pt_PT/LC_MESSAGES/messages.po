@@ -2229,8 +2229,8 @@ msgstr "Dinamarquês"
 msgid "German"
 msgstr "Alemão"
 
-msgid "Bhutani"
-msgstr "Butanês"
+msgid "Dzongkha"
+msgstr "Dzongkha"
 
 msgid "Greek"
 msgstr "Grego"

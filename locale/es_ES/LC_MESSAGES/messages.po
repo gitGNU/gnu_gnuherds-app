@@ -2178,8 +2178,8 @@ msgstr "Danés"
 msgid "German"
 msgstr "Alemán"
 
-msgid "Bhutani"
-msgstr ""
+msgid "Dzongkha"
+msgstr "Dzongkha"
 
 msgid "Greek"
 msgstr "Griego"

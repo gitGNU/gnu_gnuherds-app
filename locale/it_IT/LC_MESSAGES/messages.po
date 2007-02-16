@@ -2177,8 +2177,8 @@ msgstr "Danese"
 msgid "German"
 msgstr "Tedesco"
 
-msgid "Bhutani"
-msgstr ""
+msgid "Dzongkha"
+msgstr "Dzongkha"
 
 msgid "Greek"
 msgstr "Greco"
