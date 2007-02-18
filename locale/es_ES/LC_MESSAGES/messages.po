@@ -1249,7 +1249,7 @@ msgid "Incorrect format."
 msgstr "Formato incorrecto."
 
 msgid "Success. Your job offer have been saved."
-msgstr "Correcto. Su oferta de empleo han sido guardada."
+msgstr "Correcto. Su oferta de empleo ha sido guardada."
 
 #
 # Manage_Job_Offer_Applications_form.tpl
