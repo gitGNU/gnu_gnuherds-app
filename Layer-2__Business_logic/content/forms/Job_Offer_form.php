@@ -81,10 +81,6 @@ class JobOfferForm
 		{
 			// POST request: Submit from the language change form.
 		}
-		elseif ( count($_POST)==2 and isset($_POST['JobOfferId']) and $_POST['JobOfferId'] != '' and isset($_POST['TranslationAvailablesToShow']) and $_POST['TranslationAvailablesToShow'] != '' )
-		{
-			// POST request: Submit of "Show translatable parts as" language.
-		}
 		else
 		{
 			$error = "<p>".$_SERVER["REQUEST_URI"].": ".gettext('ERROR: Unexpected condition')."</p>";
