@@ -970,9 +970,6 @@ msgstr "MEDIA DI COMUNICAZIONE INTERATTIVI"
 msgid "OTHER INFORMATION"
 msgstr "ALTRE INFORMAZIONI"
 
-msgid "Reset form"
-msgstr "Resetta il modulo"
-
 msgid "Cancel"
 msgstr "Annulla"
 

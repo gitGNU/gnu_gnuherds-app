@@ -382,7 +382,6 @@ Reference: http://es.php.net/types.array
 
 <tr align="center">
 <td colspan="4" align="center">
-<input type="reset" name="reset" value="{t}Reset form{/t}"> <!-- This button does not remove the session loaded variables. -->
 <input type="submit" name="cancel" value="{t}Cancel{/t}">
 <input type="submit" name="save" value="{t}Save{/t}" OnClick="SelectAllItems();">
 

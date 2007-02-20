@@ -999,9 +999,6 @@ msgstr "MEIOS DE COMUNICAÇÃO INTERACTIVA"
 msgid "OTHER INFORMATION"
 msgstr "OUTRA INFORMAÇÃO"
 
-msgid "Reset form"
-msgstr "Limpar o formulário"
-
 msgid "Cancel"
 msgstr "Cancelar"
 
