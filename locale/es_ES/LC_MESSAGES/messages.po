@@ -40,12 +40,6 @@ msgstr "Asociación de Software Libre"
 msgid "Project state"
 msgstr "Estado del proyecto"
 
-msgid "Look at the %1Hackers' Guide%2"
-msgstr "Véase la %1Guía del Hacker%2"
-
-msgid "version"
-msgstr "versión"
-
 #
 # menu.tpl
 #

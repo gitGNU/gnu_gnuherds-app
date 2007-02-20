@@ -54,11 +54,6 @@ Suite 225, San Francisco, CA 94107, USA
 <span class="hidden2">______________________________</span>
 <br>
 {t}Project state{/t}: Beta
-<br>
-{t escape='no'
-  1='<a href="/GNU_Herds_Hackers_Guide.php" target="_top">'
-  2='</a>'
-}Look at the %1Hackers' Guide%2{/t}
 </td>
 
 </tr>
