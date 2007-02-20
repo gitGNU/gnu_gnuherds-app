@@ -400,10 +400,7 @@ Reference: http://es.php.net/types.array
 <tr align="center">
 <td colspan="4" align="center">
 <br>
-<form name='viewMyQualifications' method='post' action='View_Qualifications.php'>
-<input type="hidden" name="ViewEntityId" value="{$smarty.session.EntityId}">
-<input type="submit" name="view" value="{t}Check qualifications view{/t}">
-</form>
+<a href="/View_Qualifications.php?EntityId={$smarty.session.EntityId}" target="_top">{t}Check qualifications view{/t}</a>
 </td>
 </tr>
 {/if}

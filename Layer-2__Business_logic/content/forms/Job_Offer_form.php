@@ -46,7 +46,7 @@ class JobOfferForm
 				throw new Exception($error,false);
 			}
 
-			if ( $_POST['back'] != gettext('Back') and $_POST['JobOfferId'] != '' ) // $back='Back' exposes we are along a no finished operation, so we do not overrride the transitional $_SESSION variable values loading from the data base table.
+			if ( $_POST['back'] != gettext('Back') and $_GET['JobOfferId'] != '' ) // $back='Back' exposes we are along a no finished operation, so we do not overrride the transitional $_SESSION variable values loading from the data base table.
 			 	$this->loadJobOfferForm();
 		}
 		else
@@ -56,28 +56,28 @@ class JobOfferForm
 		}
 
 		// Process each button event
-		if     ( count($_POST)==0 ) // new
+		if     ( count($_GET)==0 ) // new
 		{
-			// No POST request: A simple request to this URI has arrived.
+			// No GET request: A simple request to this URI has arrived.
 			$this->resetFormSessionVars();
 		}
-		elseif ( count($_POST)==1 and isset($_POST['new']) and $_POST['new'] == gettext('New offer') ) // new
+		elseif ( isset($_POST['new']) and $_POST['new'] == gettext('New offer') ) // new
 		{
 			$this->resetFormSessionVars();
 		}
-		elseif ( count($_POST) >1 and isset($_POST['save']) and $_POST['save'] == gettext('Save') ) // update
+		elseif ( isset($_POST['save']) and $_POST['save'] == gettext('Save') ) // update
 		{
 			$this->saveJobOfferForm();
 		}
-		elseif ( count($_POST)==1 and isset($_POST['JobOfferId']) and $_POST['JobOfferId'] != '' )
+		elseif ( count($_GET)==1 and isset($_GET['JobOfferId']) and $_GET['JobOfferId'] != '' )
 		{
-			// POST request from Manage_Job_Offers_form.tpl: Edit JobOfferId
+			// GET request from Manage_Job_Offers_form.tpl: Edit JobOfferId
 		}
-		elseif ( count($_POST) >1 and isset($_POST['back']) and $_POST['back'] == gettext('Back') )
+		elseif ( isset($_POST['back']) and $_POST['back'] == gettext('Back') )
 		{
 			// POST request: The 'Back' button has been clicked.
 		}
-		elseif ( count($_POST) >1 and isset($_POST['language']) )
+		elseif ( isset($_GET['language']) )
 		{
 			// POST request: Submit from the language change form.
 		}
@@ -354,17 +354,13 @@ class JobOfferForm
 
 
 		// Update or insert the values
-		if ( $_POST['JobOfferId'] != '' ) // update
+		if ( $_GET['JobOfferId'] != '' ) // update
 		{
-			$this->manager->updateJobOffer($_POST['JobOfferId']);
+			$this->manager->updateJobOffer($_GET['JobOfferId']);
 			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
 
 			$this->processingResult .= "<center>\n";
-			$this->processingResult .= "<form name='viewMyJobOffer' method='post' action='View_Job_Offer.php'>\n";
-			$this->processingResult .= "<input type='hidden' name='ViewJobOfferId' value='$_POST[JobOfferId]'>\n";
-			$this->processingResult .= "<input type='hidden' name='ViewEntityId' value='$_SESSION[EntityId]'>\n";
-			$this->processingResult .= "<input type='submit' name='view' value='".gettext('Check job offer view')."'>\n";
-			$this->processingResult .= "</form>\n";
+			$this->processingResult .= "<a href='/View_Job_Offer.php?JobOfferId=".$_GET[JobOfferId]."' target='_top'>".gettext("Check job offer view")."</a>\n";
 			$this->processingResult .= "</center>\n";
 
 			// $_SESSION variables have been saved previously.
@@ -373,14 +369,10 @@ class JobOfferForm
 		else // new
 		{
 			$J1_Id = $this->manager->addJobOffer();
-			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. Your job offer have been saved.')."<p>\n";
+			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. Your job offer have been saved.')."<p><p>&nbsp;</p>\n";
 
 			$this->processingResult .= "<center>\n";
-			$this->processingResult .= "<form name='viewMyJobOffer' method='post' action='View_Job_Offer.php'>\n";
-			$this->processingResult .= "<input type='hidden' name='ViewJobOfferId' value='$J1_Id'>\n";
-			$this->processingResult .= "<input type='hidden' name='ViewEntityId' value='$_SESSION[EntityId]'>\n";
-			$this->processingResult .= "<input type='submit' name='view' value='".gettext('Check job offer view')."'>\n";
-			$this->processingResult .= "</form>\n";
+			$this->processingResult .= "<a href='/View_Job_Offer.php?JobOfferId=".$J1_Id."' target='_top'>".gettext("Check job offer view")."</a>\n";
 			$this->processingResult .= "</center>\n";
 		}
 	}
@@ -445,7 +437,7 @@ class JobOfferForm
 	{
 		// This function will not override the SESSION variables while the user is working in its form, because of before calling this function the 'Back' button value is checked. 
 
-		$result = $this->manager->getJobOffer($_POST['JobOfferId']);
+		$result = $this->manager->getJobOffer($_GET['JobOfferId']);
 
 
 		// J1_JobOffers table

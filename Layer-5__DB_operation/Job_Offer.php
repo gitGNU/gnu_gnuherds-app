@@ -109,10 +109,12 @@ class JobOffer
 
 	public function getJobOffer($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,LU_PluralName,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_EstimatedEffort,J1_LM_TimeUnit FROM J1_JobOffers,LU_Currencies WHERE J1_LU_Currency=LU_ThreeLetter AND J1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,LU_PluralName,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_EstimatedEffort,J1_LM_TimeUnit,J1_E1_Id FROM J1_JobOffers,LU_Currencies WHERE J1_LU_Currency=LU_ThreeLetter AND J1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array = array();
+
+		$array[26] = pg_fetch_all_columns($result, 25); // J1_E1_Id
 
 		$array[0] = pg_fetch_all_columns($result, 0); // J1_EmployerJobOfferReference
 		$array[1] = pg_fetch_all_columns($result, 1); // J1_OfferDate

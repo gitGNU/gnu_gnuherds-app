@@ -36,7 +36,7 @@ class ViewJobOfferForm
 	public function processForm()
 	{
 		// Load the data
-		if ( !isset( $_POST['ViewJobOfferId'] ) or $_POST['ViewJobOfferId']=='' )
+		if ( !isset( $_GET['JobOfferId'] ) or $_GET['JobOfferId']=='' )
 		{
 			$error = "<p>".gettext('ERROR: The identifier to show has not been specified!.')."</p>";
 			throw new Exception($error,false);
@@ -63,10 +63,10 @@ class ViewJobOfferForm
 						$result = $this->manager->getQualificationsForEntity($_SESSION['EntityId']);
 						if ( count($result[0]) ==1 )
 						{
-							$_SESSION['IsAlreadySubscribed'] = $this->manager->IsAlreadySubscribed( $_SESSION['EntityId'], $_POST['ViewJobOfferId'] );
+							$_SESSION['IsAlreadySubscribed'] = $this->manager->IsAlreadySubscribed( $_SESSION['EntityId'], $_GET['JobOfferId'] );
 
 							if ( $_SESSION['IsAlreadySubscribed'] == false )
-								$_SESSION['IsAlreadySubscribed'] = $this->manager->subscribeApplication( $_SESSION['EntityId'], $_POST['ViewJobOfferId'] );
+								$_SESSION['IsAlreadySubscribed'] = $this->manager->subscribeApplication( $_SESSION['EntityId'], $_GET['JobOfferId'] );
 						}
 						else
 						{
@@ -91,7 +91,7 @@ class ViewJobOfferForm
 		{
 			// If the there is a user logged, check if she/he is already to this job offer.
 			if ( isset($_SESSION['Logged']) and $_SESSION['Logged'] == '1' )
-				$_SESSION['IsAlreadySubscribed'] = $this->manager->IsAlreadySubscribed( $_SESSION['EntityId'], $_POST['ViewJobOfferId'] );
+				$_SESSION['IsAlreadySubscribed'] = $this->manager->IsAlreadySubscribed( $_SESSION['EntityId'], $_GET['JobOfferId'] );
 		}
 	}
 
@@ -119,10 +119,12 @@ class ViewJobOfferForm
 	{
 		// This function will not override the SESSION variables while the user is working in its form, because of before calling this function the 'Back' button value is checked. 
 
-		$result = $this->manager->getJobOffer($_POST['ViewJobOfferId']);
+		$result = $this->manager->getJobOffer($_GET['JobOfferId']);
 
 
 		// J1_JobOffers table
+
+		$_SESSION['ViewEntityId'] = $result[26][0];
 
 		$_SESSION['ViewEmployerJobOfferReference'] = trim($result[0][0]);
 		$_SESSION['ViewOfferDate'] = trim($result[1][0]);
@@ -203,7 +205,7 @@ class ViewJobOfferForm
 
 		// Entity table
 
-		$result = $this->manager->getEntity($_POST['ViewEntityId']);
+		$result = $this->manager->getEntity($_SESSION['ViewEntityId']); // EntityId, owner of the JobOffer, to be shown at the template.
 
 		$_SESSION['ViewEmail'] = $result[0][0];
 
@@ -238,7 +240,7 @@ class ViewJobOfferForm
 		$_SESSION['ViewEntityCountryName'] = $result[30][0];
 		$_SESSION['ViewEntityNationalityName'] = $result[31][0];
 
-		if ( file_exists("../entity_photos/".$_POST['ViewEntityId']) )
+		if ( file_exists("../entity_photos/".$_SESSION['ViewEntityId']) )
 			$_SESSION['ViewPhotoOrLogo'] = "true";
 		else
 			$_SESSION['ViewPhotoOrLogo'] = "false";

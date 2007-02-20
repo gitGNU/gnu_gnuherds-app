@@ -29,14 +29,10 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 
-<form name="viewJobOfferForm" method="post" action="View_Job_Offer.php">
-<input type="hidden" name="ViewJobOfferId" value="{$smarty.post.ViewJobOfferId}">
-<input type="hidden" name="ViewEntityId" value="{$smarty.post.ViewEntityId}">
-
 <tr valign="top">
 <td>
 {if $smarty.session.ViewPhotoOrLogo eq 'true' }
-		<img src="/View_Photo_or_Logo.php?Data=JobOffer&EntityId={$smarty.post.ViewEntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
+		<img src="/View_Photo_or_Logo.php?Data=JobOffer&EntityId={$smarty.session.ViewEntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
 {else}
 	{if $smarty.session.ViewEntityType eq 'Person' }
 		<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
@@ -136,14 +132,14 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}IS LOOKING FOR{/t}</td> </tr>
 
 <tr valign="top">
-<td align="right"><strong>{t}Vacancy title{/t}</strong> : </td>
+<td align="right"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="tdDark">{$smarty.session.ViewVacancyTitle}</td>
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
 
 <tr valign="top">
-<td align="right"><strong>{t}Entity type{/t}</strong> : </td>
+<td align="right"><strong>{'Entity type'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="greenLight">
 {if $smarty.session.ViewAllowPersonApplications eq 'true'}
 	{assign var="entityTypeAAA" value="Persons"}
@@ -180,7 +176,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr>
-<td align="right"><strong>{t}Offer date{/t}</strong> : </td>
+<td align="right"><strong>{'Offer date'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="greenLight">{$smarty.session.ViewOfferDate}</td>
 </tr>
 
@@ -196,12 +192,12 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}CONTRACT{/t}</td> </tr>
 
 <tr>
-<td align="right"><strong>{t}Contract type{/t}</strong> : </td>
+<td align="right"><strong>{'Contract type'|gettext|strip:'&nbsp;'}</strong> : </td>
 <td colspan="3" class="greenLight">{t}{$smarty.session.ViewContractType}{/t}</td>
 </tr>
 
 <tr>
-<td align="right"><strong>{t}Wage rank{/t}</strong> : </td>
+<td align="right"><strong>{'Wage rank'|gettext|strip:'&nbsp;'}</strong> : </td>
 <td colspan="3" class="greenLight">
 {$smarty.session.ViewWageRank}
 {t}{$smarty.session.ViewWageRankCurrencyName}{/t} 
@@ -211,7 +207,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if trim($smarty.session.ViewEstimatedEffort) neq ''}
 <tr>
-<td align="right"><strong>{t}Estimated effort{/t}</strong> : </td>
+<td align="right"><strong>{'Estimated effort'|gettext|strip:'&nbsp;'}</strong> : </td>
 <td colspan="3" class="greenLight">
 {$smarty.session.ViewEstimatedEffort}
 {t}{$smarty.session.ViewTimeUnit}{/t}
@@ -232,7 +228,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if trim($smarty.session.ViewAcademicQualification) neq ''}
 	<tr>
-	<td align="right"><strong>{t}Academic qualification{/t}</strong> : </td>
+	<td align="right"><strong>{'Academic qualification'|gettext|strip:'&nbsp;'}</strong> : </td>
 	<td colspan="3" class="greenLight">{t}{$smarty.session.ViewAcademicQualification}{/t}</td>
 	</tr>
 {/if}
@@ -338,7 +334,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if trim($smarty.session.ViewFreeSoftwareExperiences) neq ''}
 	<tr valign="top">
-	<td align="right"><strong>{t}Experience with FS projects{/t}</strong> : <br> </td>
+	<td align="right"><strong>{'Experience with FS projects'|gettext|strip:'&nbsp;'}</strong> : <br> </td>
 	<td colspan="3" class="greenLight">{$smarty.session.ViewFreeSoftwareExperiences}</td>
 	</tr>
 {/if}
@@ -365,7 +361,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	{if trim($smarty.session.ViewJobOfferStateProvince) neq ''}
 		<tr>
-		<td align="right"><strong>{t}State / Province{/t}</strong> : </td>
+		<td align="right"><strong>{'State / Province'|gettext|strip:'&nbsp;'}</strong> : </td>
 		<td colspan="3" class="greenLight">{$smarty.session.ViewJobOfferStateProvince}</td>
 		</tr>
 	{/if}
@@ -381,24 +377,24 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if $smarty.session.ViewAvailableToTravel eq 'true'}
 		<tr valign="top">
-		<td align="right"><strong>{t}Available to travel{/t}</strong> : </td>
+		<td align="right"><strong>{'Available to travel'|gettext|strip:'&nbsp;'}</strong> : </td>
 		<td colspan="3" class="greenLight">{t}required{/t}</td>
 		</tr>
 {/if}
 
 
-{if $smarty.post.ViewEntityId neq $smarty.session.EntityId and $smarty.session.IsAlreadySubscribed neq 't' }
+{if $smarty.session.ViewEntityId neq $smarty.session.EntityId and $smarty.session.IsAlreadySubscribed neq 't' }
 		<tr> <td colspan="4">&nbsp;</td> </tr> 
 		<tr> <td colspan="4">&nbsp;</td> </tr> 
 
 		<tr align="center">
 		<td colspan="4" align="center">
+		<form name="subscriteJobOfferForm" method="post" action="/View_Job_Offer.php?JobOfferId={$smarty.get.JobOfferId}">
 		<input type="submit" name="subscribe" value="{t}Subscribe to this job offer{/t}">
+		</form>
 		</td>
 		</tr>
 {/if}
-
-</form>
 
 </table>
 

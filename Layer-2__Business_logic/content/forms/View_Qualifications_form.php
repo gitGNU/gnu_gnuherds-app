@@ -45,7 +45,7 @@ class ViewQualificationsForm
 			}
 
 			// Load the data
-			if ( !isset( $_POST['ViewEntityId'] ) or $_POST['ViewEntityId']=='' )
+			if ( !isset( $_GET['EntityId'] ) or $_GET['EntityId']=='' )
 			{
 				$error = "<p>".gettext('ERROR: The identifier to show has not been specified!.')."</p>";
 				throw new Exception($error,false);
@@ -84,7 +84,7 @@ class ViewQualificationsForm
 	{
 		// This function will not override the SESSION variables while the user is working in its form, because of before calling this function the 'Back' button value is checked. 
 
-		$result = $this->manager->getQualificationsForEntity($_POST['ViewEntityId']);
+		$result = $this->manager->getQualificationsForEntity($_GET['EntityId']);
 
 
 		// Qualifications table
@@ -142,7 +142,7 @@ class ViewQualificationsForm
 
 		// Entity table
 
-		$result = $this->manager->getEntity($_POST['ViewEntityId']);
+		$result = $this->manager->getEntity($_GET['EntityId']);
 
 		$_SESSION['ViewEmail'] = $result[0][0];
 
@@ -177,7 +177,7 @@ class ViewQualificationsForm
 		$_SESSION['ViewCountryName'] = $result[30][0];
 		$_SESSION['ViewNationalityName'] = $result[31][0];
 
-		if ( file_exists("../entity_photos/".$_POST['ViewEntityId']) )
+		if ( file_exists("../entity_photos/".$_GET['EntityId']) )
 			$_SESSION['ViewPhotoOrLogo'] = "true";
 		else
 			$_SESSION['ViewPhotoOrLogo'] = "false";

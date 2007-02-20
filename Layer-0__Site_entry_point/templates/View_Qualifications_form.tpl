@@ -24,7 +24,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr valign="top">
 <td>
 {if $smarty.session.ViewPhotoOrLogo eq 'true' }
-		<img src="/View_Photo_or_Logo.php?Data=Qualifications&EntityId={$smarty.post.ViewEntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
+		<img src="/View_Photo_or_Logo.php?Data=Qualifications&EntityId={$smarty.get.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
 {else}
 	{if $smarty.session.ViewEntityType eq 'Person' }
 		<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">

@@ -36,15 +36,10 @@ Suite 225, San Francisco, CA 94107, USA
 
 {foreach from=$jobOfferId item=Id key=i}
 
-<form name="viewJobOfferForm{$Id}" id="viewJobOfferForm{$Id}" method="post" action="View_Job_Offer.php">
-<input type="hidden" name="ViewJobOfferId" value="{$Id}">
-<input type="hidden" name="ViewEntityId" value="{$entityId[$i]}">
-</form>
-
 <tr valign="top">
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="javascript:document.getElementById('viewJobOfferForm{$Id}').submit();">
+<a href="/View_Job_Offer.php?JobOfferId={$Id}" target="_top">
 {$vacancyTitle[$i]}
 </a>
 </td>

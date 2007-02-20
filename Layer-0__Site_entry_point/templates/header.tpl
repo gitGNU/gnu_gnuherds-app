@@ -36,9 +36,22 @@ Suite 225, San Francisco, CA 94107, USA
 <td width="100%"></td>
 
 <td>
-{'Languages'|gettext}:&nbsp;<br><a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageEN.value;document.getElementById('languageForm').submit();}{/literal}" title="{'English'|gettext}">English</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageES.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Spanish'|gettext}">Espa&#x00f1;ol</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languageIT.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Italian'|gettext}">Italiano</a>,&nbsp;<a href="{literal}javascript:{document.getElementById('languageForm').language.value=document.getElementById('languageForm').languagePT.value;document.getElementById('languageForm').submit();}{/literal}" title="{'Portuguese'|gettext}">Portugu&#x0ea;s</a>
+{assign var='cleanURI' value=$smarty.server.REQUEST_URI|regex_replace:"/.language=.._../":""}
+
+{if strpos($cleanURI,"?") !== false}
+	{assign var='startParameter' value='&'}
+{else}
+	{assign var='startParameter' value='?'}
+{/if}
+
+{'Languages'|gettext}:
 <br>
-<span class="hidden2">{'______________________________'|strip:'&nbsp;'}</span>
+<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=en_US" title="{'English'|gettext}">English</a>,
+<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=es_ES" title="{'Spanish'|gettext}">Espa&#x00f1;ol</a>,
+<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=it_IT" title="{'Italian'|gettext}">Italiano</a>,
+<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=pt_PT" title="{'Portuguese'|gettext}">Portugu&#x0ea;s</a>
+<br>
+<span class="hidden2">______________________________</span>
 <br>
 {t}Project state{/t}: Beta
 <br>
@@ -46,21 +59,6 @@ Suite 225, San Francisco, CA 94107, USA
   1='<a href="/GNU_Herds_Hackers_Guide.php" target="_top">'
   2='</a>'
 }Look at the %1Hackers' Guide%2{/t}
-
-<!-- Set the Language session variable and come back -->
-<form name="languageForm" id="languageForm" method="post" action="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
-<input type="hidden" name="languageEN" id="languageEN" value="en_US">
-<input type="hidden" name="languageES" id="languageES" value="es_ES">
-<input type="hidden" name="languageIT" id="languageIT" value="it_IT">
-<input type="hidden" name="languagePT" id="languagePT" value="pt_PT">
-<input type="hidden" name="language" id="language" value="none">
-
-<!-- These are the post values which we must pass through the web page. -->
-<input type="hidden" name="JobOfferId" value="{$smarty.post.JobOfferId}">
-<input type="hidden" name="ViewEntityId" value="{$smarty.post.ViewEntityId}">
-<input type="hidden" name="ViewJobOfferId" value="{$smarty.post.ViewJobOfferId}">
-
-</form>
 </td>
 
 </tr>

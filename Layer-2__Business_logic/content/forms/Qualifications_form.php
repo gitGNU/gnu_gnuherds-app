@@ -253,10 +253,7 @@ class QualificationsForm
 			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
 
 			$this->processingResult .= "<center>\n";
-			$this->processingResult .= "<form name='viewMyQualifications' method='post' action='View_Qualifications.php'>\n";
-			$this->processingResult .= "<input type='hidden' name='ViewEntityId' value='$_SESSION[EntityId]'>\n";
-			$this->processingResult .= "<input type='submit' name='view' value='".gettext('Check qualifications view')."'>\n";
-			$this->processingResult .= "</form>\n";
+			$this->processingResult .= "<a href='/View_Qualifications.php?EntityId=".$_SESSION[EntityId]."' target='_top'>".gettext("Check qualifications view")."</a>\n";
 			$this->processingResult .= "</center>\n";
 
 			// $_SESSION variables have been saved previously.
@@ -265,13 +262,10 @@ class QualificationsForm
 		else // new
 		{
 			$this->manager->addQualifications();
-			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. Your qualifications have been saved.')."<p>\n";
+			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. Your qualifications have been saved.')."<p><p>&nbsp;</p>\n";
 
 			$this->processingResult .= "<center>\n";
-			$this->processingResult .= "<form name='viewMyQualifications' method='post' action='View_Qualifications.php'>\n";
-			$this->processingResult .= "<input type='hidden' name='ViewEntityId' value='$_SESSION[EntityId]'>\n";
-			$this->processingResult .= "<input type='submit' name='view' value='".gettext('Check qualifications view')."'>\n";
-			$this->processingResult .= "</form>\n";
+			$this->processingResult .= "<a href='/View_Qualifications.php?EntityId=".$_SESSION[EntityId]."' target='_top'>".gettext("Check qualifications view")."</a>\n";
 			$this->processingResult .= "</center>\n";
 		}
 	}

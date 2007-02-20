@@ -35,7 +35,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <table align="center">
 
-{if $smarty.post.JobOfferId }
+{if $smarty.get.JobOfferId }
 <tr align="center"> <td colspan="4" align="center" class="mainsection">{t}UPDATE JOB OFFER{/t}</td> </tr>
 {else}
 <tr align="center"> <td colspan="4" align="center" class="mainsection">{t}NEW JOB OFFER{/t}</td> </tr>
@@ -49,8 +49,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<form name="jobOfferForm" method="post" action="Job_Offer.php">
-<input type="hidden" name="JobOfferId" value="{$smarty.post.JobOfferId}">
+<form name="jobOfferForm" method="post" action="/Job_Offer.php?JobOfferId={$smarty.get.JobOfferId}">
 
 <tr> <td colspan="4" class="subsection">{t}GENERAL{/t}</td> </tr>
 
@@ -402,15 +401,11 @@ Suite 225, San Francisco, CA 94107, USA
 
 </form>
 
-{if $smarty.post.JobOfferId } <!-- update -->
+{if $smarty.get.JobOfferId } <!-- update -->
 <tr align="center">
 <td colspan="4" align="center">
 <br>
-<form name='viewMyJobOffer' method='post' action='View_Job_Offer.php'>
-<input type="hidden" name="ViewJobOfferId" value="{$smarty.post.JobOfferId}">
-<input type="hidden" name="ViewEntityId" value="{$smarty.session.EntityId}">
-<input type="submit" name="view" value="{t}Check job offer view{/t}">
-</form>
+<a href="/View_Job_Offer.php?JobOfferId={$smarty.get.JobOfferId}" target="_top">{t}Check job offer view{/t}</a>
 </td>
 </tr>
 {/if}

@@ -41,16 +41,6 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="tdTitle">{'Selected'|gettext|strip:'&nbsp;'}</td>
 </tr>
 
-{foreach from=$smarty.session.M_JobOfferId item=Id key=i}
-	<form name="editJobOffersForm{$Id}" id="editJobOffersForm{$Id}" method="post" action="Job_Offer.php">
-	<input type="hidden" name="JobOfferId" value="{$Id}">
-	</form>
-
-	<form name="manageSubscribersForm{$Id}" id="manageSubscribersForm{$Id}" method="post" action="Manage_Job_Offer_Applications.php">
-	<input type="hidden" name="JobOfferId" value="{$Id}">
-	</form>
-{/foreach}
-
 <form name="deleteJobOffersForm" method="post" action="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
 
 {foreach from=$smarty.session.M_JobOfferId item=Id key=i}
@@ -63,9 +53,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="javascript:document.getElementById('editJobOffersForm{$Id}').submit();">
-{$smarty.session.M_VacancyTitle[$i]}
-</a>
+<a href="/Job_Offer.php?JobOfferId={$Id}" target="_top">{$smarty.session.M_VacancyTitle[$i]}</a>
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
@@ -91,7 +79,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $ReceivedMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="javascript:document.getElementById('manageSubscribersForm{$Id}').submit();">
+<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}" target="_top">
 {$ReceivedMeter[$i]}
 </a>
 {/if}
@@ -101,7 +89,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $InProcessMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="javascript:document.getElementById('manageSubscribersForm{$Id}').submit();">
+<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}" target="_top">
 {$InProcessMeter[$i]}
 </a>
 {/if}
@@ -111,7 +99,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $RuledOutMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="javascript:document.getElementById('manageSubscribersForm{$Id}').submit();">
+<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}" target="_top">
 {$RuledOutMeter[$i]}
 </a>
 {/if}
@@ -121,7 +109,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $FinalistMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="javascript:document.getElementById('manageSubscribersForm{$Id}').submit();">
+<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}" target="_top">
 {$FinalistMeter[$i]}
 </a>
 {/if}
@@ -131,7 +119,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $SelectedMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="javascript:document.getElementById('manageSubscribersForm{$Id}').submit();">
+<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}" target="_top">
 {$SelectedMeter[$i]}
 </a>
 {/if}

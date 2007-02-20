@@ -53,7 +53,7 @@ class ManageJobOfferApplicationsForm
 		}
 
 		// Check parameters
-		if ( !isset($_POST['JobOfferId']) or trim($_POST['JobOfferId']) == '' )
+		if ( !isset($_GET['JobOfferId']) or trim($_GET['JobOfferId']) == '' )
 		{
 			$error = "<p>".gettext('ERROR: The identifier to show has not been specified!.')."</p>";
 			throw new Exception($error,false);
@@ -61,7 +61,7 @@ class ManageJobOfferApplicationsForm
 
 		// Process each button event
 		if ( $_POST['ApplicationState'] != '' )
-			$this->manager->setApplicationState($_POST['JobOfferId'],$_POST['ApplicationState'],$_POST['EntityId']);
+			$this->manager->setApplicationState($_GET['JobOfferId'],$_POST['ApplicationState'],$_POST['EntityId']);
 	}
 
 
@@ -82,7 +82,7 @@ class ManageJobOfferApplicationsForm
 		$smarty->assign('applicationStatesIdTranslated', array_values($applicationStates));
 
 
-		$result = $this->manager->getJobOfferApplications($_POST['JobOfferId']);
+		$result = $this->manager->getJobOfferApplications($_GET['JobOfferId']);
 
 		$smarty->assign('vacancyTitle', $result[0]);
 

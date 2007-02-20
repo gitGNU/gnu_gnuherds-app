@@ -36,17 +36,13 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 {foreach from=$entityId item=Id key=i}
-<form name="manageJobOfferApplicationsForm{$Id}" id="manageJobOfferApplicationsForm{$Id}" method="post" action="View_Qualifications.php">
-<input type="hidden" name="ViewEntityId" value="{$Id}">
-<input type="hidden" name="ViewEntityType" value="{$entityType[$i]}">
-</form>
 
 <tr valign="top">
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 <strong>{t}{$entityType[$i]}{/t}</strong>
 
-<a href="javascript:document.getElementById('manageJobOfferApplicationsForm{$Id}').submit();">
+<a href="/View_Qualifications.php?EntityId={$Id}" target="_top">
 {if $firstName[$i]}{$lastName[$i]} {$middleName[$i]}{if $lastName[$i] or $middleName[$i]},{/if} {$firstName[$i]}{/if}
 {if $companyName[$i]}{$companyName[$i]}{/if}
 {if $organizationName[$i]}{$organizationName[$i]}{/if}
@@ -65,7 +61,6 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 <form name="changeApplicationStateForm{$Id}" id="changeApplicationStateForm{$Id}" method="post" action="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
 <input type="hidden" name="EntityId" value="{$Id}">
-<input type="hidden" name="JobOfferId" value="{$smarty.post.JobOfferId}">
 <select name="ApplicationState" onChange="javascript:document.getElementById('changeApplicationStateForm{$Id}').submit();">
 {html_options values=$applicationStatesId output=$applicationStatesIdTranslated selected=$applicationState[$i]}
 </select>

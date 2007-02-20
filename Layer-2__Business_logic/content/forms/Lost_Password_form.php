@@ -110,7 +110,7 @@ class LostPassword
 			// Show the form and the processingResult
 			$this->printPersonForm();
 		}
-		elseif( count($_POST) >1 and isset($_POST['language']) )
+		elseif( isset($_GET['language']) )
 		{
 			// POST request: Submit from the language change form.
 

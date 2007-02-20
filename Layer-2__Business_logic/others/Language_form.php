@@ -21,8 +21,8 @@ class LanguageForm
 {
 	public function processForm()
 	{
-		if ($_POST['language'] != '' )
-			$_SESSION['Language'] = $_POST['language'];
+		if ($_GET['language'] != '' )
+			$_SESSION['Language'] = $_GET['language'];
 
 
 		// We use the previously set SESSION Language to init the gettext environment

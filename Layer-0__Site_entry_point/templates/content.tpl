@@ -69,9 +69,6 @@ Suite 225, San Francisco, CA 94107, USA
 				<center>
 				<form name="backForm" method="post" action="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
 				<input type="submit" name="back" value="{'Back'|gettext}">
-
-				<!-- These are the post values which we must pass through the web page. -->
-				<input type="hidden" name="JobOfferId" value="{$smarty.post.JobOfferId}">
 				</form>
 				</center>
 			{/if}
