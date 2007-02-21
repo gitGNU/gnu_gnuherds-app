@@ -261,7 +261,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&item_id=146" target="_top">'
+	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=146" target="_top">'
 	  2='</a>'
 	}See the %1Wiki HOWTO%2 at Savannah.{/t}
 	</p>
