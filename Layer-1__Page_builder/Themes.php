@@ -21,7 +21,7 @@ class Theme
 {
 	// default values
 
-	public $headBackgroundImage	= '/images/themes/cyclical-green-sky.png';
+	public $headBackgroundImage	= '/images/themes/cyclical-green-sky_90.png';
 	public $headSubtitle		= 'Free Software Association';
 	public $headNoticeStyle		= 'hidden1';
 	public $headNotice		= ' '; // This and other properties can be overwritten in each web page.
