@@ -37,7 +37,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t}Because no one comply the below proposed conditions:{/t}
-	</p>
+	</p><p>
 
 	<ul>
 		<li> {t escape='no'
@@ -112,6 +112,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>{t}Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:{/t}</p>
 
+	<p>
 	<ul>
 		<li>{t escape='no'
 			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
@@ -143,6 +144,7 @@ Suite 225, San Francisco, CA 94107, USA
 			2='</a>'
 		    }Installation of software, if all the software to be installed is %1Free Software%2.{/t} </li>
 	</ul>
+	</p>
 
 	<p>{t escape='no'
 		1='<a href="mailto:joboffer@gnuherds.org" >joboffer@gnuherds.org</a>'
