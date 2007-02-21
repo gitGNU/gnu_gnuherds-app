@@ -864,7 +864,9 @@ msgstr "ERRO: Não foi especificado o identificador a apresentar!."
 msgid "These are the networks, or ways to set up one, which we know about:"
 msgstr "Estas são as redes, ou formas de criar uma, que conhecemos:"
 
-msgid "Menttes provides training, consulting, web sites, portals, extranets, intranets and custom web application development with Plone, Zope and Python. These services are provided for end-users companies and consulting firms located in Southamerica, North America and Worlwide."
+# XXX: Note the comma added at "end-users,"
+#, fuzzy
+msgid "Menttes provides training, consulting, web sites, portals, extranets, intranets and custom web application development with Plone, Zope and Python. These services are provided for end-users, companies and consulting firms of any country."
 msgstr "Mentores proporcionam formação, consultadoria, páginas web, portais, extranets, intranets e desenvolvimento de aplicações web à medida baseadas em Plone, Zope e Python. Estes serviços são disponibilizados a empresas e consultoras da  América do Sul, América do Norte e resto do mundo."
 
 msgid "Its"
