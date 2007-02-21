@@ -34,13 +34,12 @@ Suite 225, San Francisco, CA 94107, USA
   2='</a>'
   3='<a href="/FS_Business_Networks.php" target="_top">'
 }The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:{/t}
-
+</p>
 <ul>
   <li>{t}Controlled by its own users{/t}
   <li>{t}FS skills data base{/t}
   <li>{t}Telework{/t}
 </ul>
-</p>
 
 <p>
 {t}Other modules could be developed. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled.{/t}
