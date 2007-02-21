@@ -310,6 +310,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t}Hints{/t}:
+	</p>
 	<ul>
 		<li>
 		{t escape='no'
@@ -336,7 +337,6 @@ Suite 225, San Francisco, CA 94107, USA
 		  2='</a>'
 		}CVS %1HOW TO%2{/t}
 	</ul>
-	</p>
 
 	<p>
 	{t}Note: If you register at Savannah and join the project, both checkout and checkin will work in spite of the message "Your savannah password is useless for cvs".  When you register, take note of your passphrase. Savannah will ask for it at each cvs operation. For example, my first checkout was as follows:{/t}
@@ -545,6 +545,7 @@ msgfmt messages.po
 	<p>
 	{t}The list could be outdated:{/t}<br>
 	<br>
+	</p>
 	<table>
 	<tr> <td><b>Antenore</b> <td>Localization architecture Adviser, Auditor, Italian Translator, etc.
 	<tr> <td><b>Bill</b>     <td>System administrator, architecture Adviser, etc.
@@ -562,7 +563,6 @@ msgfmt messages.po
 	<tr> <td><b>RMS</b>      <td>Ethics Officer; he evaluates the project as a whole.
 	<tr> <td><b>Victor</b>   <td>Web developer.
 	</table>
-	</p>
 
 <center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
 
