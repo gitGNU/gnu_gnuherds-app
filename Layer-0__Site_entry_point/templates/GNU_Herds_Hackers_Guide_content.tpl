@@ -79,7 +79,8 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t}The project depends on the below technologies. Though it is and must be open to any proposal.{/t}
-	</p><p>
+	</p>
+
 	<table>
 	<tr> <td><a href="http://www.w3.org/TR/xhtml1/" target="_top">XHTML 1.0</a> <td>
 	<tr> <td><a href="http://www.php.net/" target="_top">PHP</a> >= 5.1 <td>
@@ -100,7 +101,6 @@ Suite 225, San Francisco, CA 94107, USA
 	<td>
 	<!-- XXX: <tr> <td><a href="http://www.openbsd.org/" target="_top">OpenBSD 3.x</a> <td>The gnuherds.org host is a 633MHZ DEC Alpha 64-bit CPU running OpenBSD. -->
 	</table>
-	</p>
 
 <center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
 
@@ -113,7 +113,8 @@ Suite 225, San Francisco, CA 94107, USA
 	{t}As a Free Software project we look for a modular and extensible design. We hope it could be easy to change the technology of a specific layer if it is needed.{/t}
 	</p><p>
 	{t}This architecture proposal is based on PHP:{/t}
-	</p><p>
+	</p>
+
 	<table>
 	<tr> <td><b>Layer 0.</b> <td>Site entry point (<a href="http://www.w3.org/TR/xhtml1/" target="_top">XHTML</a>, <a href="http://www.w3.org/Style/CSS/" target="_top">CSS</a>, <a href="http://smarty.php.net/" target="_top">Smarty</a>, <a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/" target="_top">JavaScript</a>, <a href="http://httpd.apache.org/docs/2.0/howto/ssi.html" target="_top">Apache SSI</a> and <a href="http://www.php.net/" target="_top">PHP</a> ).
 	<tr> <td><b>Layer 1.</b> <td>GUI page builder and themes (PHP)
@@ -125,7 +126,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr> <td><b>Layer 7.</b> <td><a href="http://www.postgresql.org/" target="_top">PostgreSQL</a> data base server (PostgreSQL, SQL)
 	<tr> <td><b>locale</b> <td>Here are the files which translate the webapp (<a href="http://www.gnu.org/software/gettext/" target="_top">gettext</a>)
 	</table>
-	</p>
+
 	<p><img src="/doc/Layers_1_2_3_4_5_and_6.png" align="middle" alt="" border="0" hspace="0" vspace="0"> <span class="modification">({t}outdated{/t})</span> </p>  <!-- XXX Update this image -->
 
 <center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
