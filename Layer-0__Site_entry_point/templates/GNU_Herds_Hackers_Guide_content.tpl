@@ -126,7 +126,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr> <td><b>locale</b> <td>Here are the files which translate the webapp (<a href="http://www.gnu.org/software/gettext/" target="_top">gettext</a>)
 	</table>
 	</p>
-	<p><img src="/doc/Layers_1_2_3_4_5_and_6.png" align="center" alt="" border="0" hspace="0" vspace="0"> <span class="modification">({t}outdated{/t})</span> </p>  <!-- XXX Update this image -->
+	<p><img src="/doc/Layers_1_2_3_4_5_and_6.png" align="middle" alt="" border="0" hspace="0" vspace="0"> <span class="modification">({t}outdated{/t})</span> </p>  <!-- XXX Update this image -->
 
 <center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
 
@@ -138,7 +138,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<table border="0">
 	<tbody>
 	<tr><td><p><b>Layers 0, 1, 2, 4 and 5.</b> GUI, Forms, DBManager, PHPTools, and Mailer <span class="modification">({t}outdated{/t})</span> </p>
-	<tr><td><p><a href="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.png" target="_top"><img src="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.scaled.png" align="center" alt="" border="0" hspace="0" vspace="0"></a> </p>  <!-- XXX Update this image -->
+	<tr><td><p><a href="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.png" target="_top"><img src="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.scaled.png" align="middle" alt="" border="0" hspace="0" vspace="0"></a> </p>  <!-- XXX Update this image -->
 	<p>{t}The Smarty templates could be moved outside this layer.{/t}</p>
 	<p>&nbsp;</p>
 
@@ -160,7 +160,7 @@ Suite 225, San Francisco, CA 94107, USA
 		<li><a href="/doc/GNUHerds__ER__Logical-model.png" target="_top">{t}Entity Relation logical model{/t}</a><br>
 		&nbsp; Diagram editor (Dia) image <a href="/doc/GNUHerds__ER__Logical-model.dia" target="_top">source</a><br>
 		<br>
-		<a href="/doc/GNUHerds__ER__Logical-model.png" target="_top"><img src="/doc/GNUHerds__ER__Logical-model.scaled.png" align="center" alt="" border="0" hspace="0" vspace="0"></a>
+		<a href="/doc/GNUHerds__ER__Logical-model.png" target="_top"><img src="/doc/GNUHerds__ER__Logical-model.scaled.png" align="middle" alt="" border="0" hspace="0" vspace="0"></a>
 		<li><a href="/doc/GNUHerds__Physical-model.png" target="_top">{t}Physical model{/t}</a> <span class="modification">({t}outdated{/t})</span> <br>
 		<li><a href="/doc/GNUHerds__SQL_Implementation.psql" target="_top">{t}SQL Implementation{/t}</a>
 	</ul>
@@ -236,7 +236,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>{t}CVS is used as repository. The HTTP server gets a tagged release via 'update' from the CVS server.{/t}</p>
 
-	<img src="/doc/How_the_development_team_and_production_is_integrated.png" align="center" alt="" border="0" hspace="0" vspace="0">
+	<img src="/doc/How_the_development_team_and_production_is_integrated.png" align="middle" alt="" border="0" hspace="0" vspace="0">
 
 <center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
 
