@@ -20,17 +20,16 @@ Suite 225, San Francisco, CA 94107, USA
 
 <table width="100%" cellpadding="0" cellspacing="0" rules="none" border="0">
 <tr valign="top">
-<td width="210" background="{$webpage->theme->headBackgroundImage}"><a href="/images/gnus-desc.html" target="_top"><img src="/images/gnus.jpg" align="left" alt="" border="0" hspace="0" vspace="0"></a></td>
+<td width="160" background="{$webpage->theme->headBackgroundImage}"><a href="/images/gnus-desc.html" target="_top"><img src="/images/gnus_90.jpg" align="left" alt="" border="0" hspace="0" vspace="0"></a></td>
 
 <td background="{$webpage->theme->headBackgroundImage}">
 
 <table>
-<tr>
+<tr valign="top">
 
 <td>
 <h1>GNU Herds</h1>
 <h2>{$webpage->theme->headSubtitle|gettext|strip:'&nbsp;'}</h2>
-<!-- <h4 class="{$webpage->theme->headNoticeStyle}">{$webpage->theme->headNotice|gettext|strip:'&nbsp;'}</h4> -->
 </td>
 
 <td width="100%"></td>
@@ -44,12 +43,10 @@ Suite 225, San Francisco, CA 94107, USA
 	{assign var='startParameter' value='?'}
 {/if}
 
-{'Languages'|gettext}:
-<br>
-<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=en_US" title="{'English'|gettext}">English</a>,
-<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=es_ES" title="{'Spanish'|gettext}">Espa&#x00f1;ol</a>,
-<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=it_IT" title="{'Italian'|gettext}">Italiano</a>,
-<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=pt_PT" title="{'Portuguese'|gettext}">Portugu&#x0ea;s</a>
+<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=en_US" lang="en" title="{'English'|gettext}">English</a>,
+<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=es_ES" lang="es" title="{'Spanish'|gettext}">Espa&#x00f1;ol</a>,
+<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=it_IT" lang="it" title="{'Italian'|gettext}">Italiano</a>,
+<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=pt_PT" lang="pt" title="{'Portuguese'|gettext}">Portugu&#x0ea;s</a>
 <br>
 <span class="hidden2">______________________________</span>
 <br>
