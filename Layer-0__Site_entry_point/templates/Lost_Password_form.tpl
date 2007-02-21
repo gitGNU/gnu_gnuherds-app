@@ -16,18 +16,12 @@ You should have received a copy of the Affero General Public License with this
 software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street,
 Suite 225, San Francisco, CA 94107, USA
 *}
-
 <h3>{t}Lost password?{/t}</h3>
-
 <p>{t}Write your email and click the Send button.{/t}</p>
-
 <form name="formLogin" method="post" action="Lost_Password.php">
-
 <p>
 &nbsp; &nbsp; &nbsp; &nbsp; {t}E-mail{/t}:
-<input type="text" name="Email" size="40">
-<input type=submit name="send" value="{t}Send{/t}">
+<input type="text" name="Email" size="40" />
+<input type=submit name="send" value="{t}Send{/t}" />
 </p>
-
 </form>
-

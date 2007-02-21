@@ -16,24 +16,14 @@ You should have received a copy of the Affero General Public License with this
 software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street,
 Suite 225, San Francisco, CA 94107, USA
 *}
-
-
 <h4>{t}Timeline{/t}</h4>
-
 <ol>
-
 <li><p><span class="modification">{t}DONE!{/t}</span>: {t}Add the member support.{/t}</p></li>
-
 <li><p><span class="modification">{t}DONE!{/t}</span>: {t}Add the FS Job Offers support.{/t}</p></li>
-
 <li><p><span class="modification">{t}DONE!{/t}</span>: {t}Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed.{/t}</p></li>
-
 <li><p> {t}Move to offices managed by FSF staff.{/t}</p></li>
-
 <li><p> <span class="modification">{t}ONGOING PROCESS{/t}</span>: {t}Association announcement.{/t}</p></li>
-
 <li><p><span class="modification">{t}ONGOING PROCESS{/t}</span>: {t}Translate the web site to other languages.{/t}</p></li>
-
 <li><p>{t}Work on e-Vote subjects:{/t}</p>
 	<ul>
 	<li> {t}Be ready to use at least a primitive e-Vote system, as for example, to count emails.{/t}</li>
@@ -48,5 +38,4 @@ Suite 225, San Francisco, CA 94107, USA
 	</li>
 	</ul>
 </li>
-
 </ol>

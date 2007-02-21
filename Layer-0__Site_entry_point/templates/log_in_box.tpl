@@ -16,57 +16,52 @@ You should have received a copy of the Affero General Public License with this
 software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street,
 Suite 225, San Francisco, CA 94107, USA
 *}
-
 <form name="LogForm" method="post" action="{if not isset($smarty.server.HTTPS) || $smarty.server.HTTPS neq 'on' }http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
-
-<table border="0" cellspacing="0" cellpadding="2" bgcolor="{$webpage->theme->loginBoxBGcolor}">
+<table style="border: 0; background-color: {$webpage->theme->loginBoxBGcolor};">
+<!-- XXX -->
+<!-- cellspacing="0" cellpadding="2" -->
+<!-- Replace with proper XHTML -->
+<!-- -- David -->
 <tr>
-<td align="center" class="login"><u>{'Manage your data'|gettext|strip:'&nbsp;'}</u><br><br></td>
+<td align="center" class="login"><u>{'Manage your data'|gettext|strip:'&nbsp;'}</u><br /><br /></td>
 </tr>
-
 <tr>
-<td nowrap align="left" class="login">
+<td nowrap="nowrap" align="left" class="login">
 E-mail:
 </td>
 </tr>
-
 <tr>
-<td nowrap>
-<input type="text" name="Email" size="22" class="loginControls"> <br>
+<td nowrap="nowrap">
+<input type="text" name="Email" size="22" class="loginControls" /><br />
 </td>
 </tr>
-
 <tr>
-<td nowrap align="left" class="login">
+<td nowrap="nowrap" align="left" class="login">
 {'Password'|gettext}:
 </td>
 </tr>
-
 <tr>
-<td nowrap>
-<input type="password" name="Password" size="22" class="loginControls"><br>
+<td nowrap="nowrap">
+<input type="password" name="Password" size="22" class="loginControls" /><br />
 </td>
 </tr>
-
 <tr>
-<td nowrap>
+<td nowrap="nowrap">
 &nbsp;
 </td>
 </tr>
-
 <tr>
 <td align="center">
-<input type="submit" name="login" value="{'Log in'|gettext}">
+<input type="submit" name="login" value="{'Log in'|gettext}" />
 </td>
 </tr>
-
 <tr>
 <td align="center" class="login">
-<a href="https://{$smarty.server.HTTP_HOST}/Lost_Password.php" target="_top">{'Lost password?'|gettext|strip:'&nbsp;'}</a><br>
-<br>
-<a href="https://{$smarty.server.HTTP_HOST}/Person.php" target="_top">{'New person?'|gettext}</a><br>
-<a href="https://{$smarty.server.HTTP_HOST}/Company.php" target="_top">{'New company?'|gettext}</a><br>
-<a href="https://{$smarty.server.HTTP_HOST}/non-profit_Organization.php" target="_top">{'New non-profit?'|gettext}</a>
+<a href="https://{$smarty.server.HTTP_HOST}/Lost_Password.php" target="_top">{'Lost password?'|gettext|strip:'&nbsp;'}</a><br />
+<br />
+<a href="https://{$smarty.server.HTTP_HOST}/Person.php" target="_top">{'New person?'|gettext}</a><br />
+<a href="https://{$smarty.server.HTTP_HOST}/Company.php" target="_top">{'New company?'|gettext}</a><br />
+<a href="https://{$smarty.server.HTTP_HOST}/non-profit_Organization.php" target="_top">{'New non-profit?'|gettext}</a />
 </td>
 </tr>
 </table>

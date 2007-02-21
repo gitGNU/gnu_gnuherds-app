@@ -16,9 +16,7 @@ You should have received a copy of the Affero General Public License with this
 software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street,
 Suite 225, San Francisco, CA 94107, USA
 *}
-
 <table cellpadding="0" border="1">
-
 <tr valign="top">
 <td>{t}Operating systems{/t}</td>
 <td class="tdDark"><span class="footnote">Darwin, FreeBSD, GNU/Hurd, GNU/Linux, NetBSD, OpenBSD.</span></td>

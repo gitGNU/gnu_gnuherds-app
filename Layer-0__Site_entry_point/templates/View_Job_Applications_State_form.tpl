@@ -16,41 +16,30 @@ You should have received a copy of the Affero General Public License with this
 software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street,
 Suite 225, San Francisco, CA 94107, USA
 *}
-
 <h3>{t}Job Applications{/t}</h3>
-
-
 {if count($jobOfferId) == 0 }
 	<p>&nbsp;</p>
-	<p>{t}You do not have your application subscribed to any open job offer.{/t}</p><p>&nbsp;</p>
+	<p>{t}You do not have your application subscribed to any open job offer.{/t}</p>
+	<p>&nbsp;</p>
 {else}
-
 <table align="center" border="0" width="100%">
-
 <tr valign="top">
 <td class="tdTitle"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong></td>
 <td class="tdTitle"><strong>{'Offer date'|gettext|strip:'&nbsp;'}</strong></td>
 <td></td>
 <td class="tdTitle">{'Subscription state'|gettext|strip:'&nbsp;'}</td>
 </tr>
-
 {foreach from=$jobOfferId item=Id key=i}
-
 <tr valign="top">
-
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 <a href="/View_Job_Offer.php?JobOfferId={$Id}" target="_top">
 {$vacancyTitle[$i]}
 </a>
 </td>
-
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {$offerDate[$i]}
 </td>
-
-<td>
-</td>
-
+<td></td>
 <td class="
 {if $state[$i] eq 'Received'}{if $i % 2}tdDark{else}tdLight{/if}{/if}
 {if $state[$i] eq 'In process'}blueApplicationState{/if}
@@ -67,12 +56,7 @@ Suite 225, San Francisco, CA 94107, USA
 'Selected'	green
 -->
 </td>
-
 </tr>
-
 {/foreach}
-
 </table>
-
 {/if}
-

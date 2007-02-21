@@ -16,11 +16,14 @@ You should have received a copy of the Affero General Public License with this
 software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street,
 Suite 225, San Francisco, CA 94107, USA
 *}
-
 <form name="LogForm" method="post" action="{if not isset($smarty.server.HTTPS) || $smarty.server.HTTPS neq 'on' }http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
-<table width="155" border="0" cellspacing="0" cellpadding="2" bgcolor="{$webpage->theme->loginBoxBGcolor}">
+<table width="155" style="border: 0; background-color: {$webpage->theme->loginBoxBGcolor};">
+<!-- XXX -->
+<!-- cellspacing="0" cellpadding="2" -->
+<!-- Replace with proper XHTML -->
+<!-- -- David -->
 <tr>
-<td colspan="2" align="center"><span class="footnote">{'Now, you can go to the menu to manage your data'|gettext}</span><br>
+<td colspan="2" align="center"><span class="footnote">{'Now, you can go to the menu to manage your data'|gettext}</span><br />
 <input type="submit" name="login" value="{'Log out'|gettext}">
 </td>
 </tr>

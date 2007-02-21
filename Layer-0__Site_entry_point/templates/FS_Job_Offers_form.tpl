@@ -16,34 +16,23 @@ You should have received a copy of the Affero General Public License with this
 software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street,
 Suite 225, San Francisco, CA 94107, USA
 *}
-
 <h3>{t}FS Job Offers{/t}</h3>
-
-
 {if count($JobOfferId) == 0 }
 	<p>&nbsp;</p>
 	<p>{t}There are not active job offers{/t}.</p><p>&nbsp;</p>
 {else}
-
 <table align="center" border="0" width="100%">
-
 <tr valign="top">
 <td class="tdTitle"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong></td>
 <td class="tdTitle"><strong>{'Location'|gettext|strip:'&nbsp;'}</strong></td>
 <td class="tdTitle"><strong>{'Offer date'|gettext|strip:'&nbsp;'}</strong></td>
 <td class="tdTitle"><strong>{'Employer'|gettext|strip:'&nbsp;'}</strong></td>
 </tr>
-
 {foreach from=$JobOfferId item=Id key=i}
-
 <tr valign="top">
-
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="/View_Job_Offer.php?JobOfferId={$Id}" target="_top">
-{$VacancyTitle[$i]}
-</a>
+<a href="/View_Job_Offer.php?JobOfferId={$Id}" target="_top">{$VacancyTitle[$i]}</a>
 </td>
-
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if trim($CountryName[$i]) eq ''}
 <strong>{t}Any{/t}</strong>, {t}telework{/t}
@@ -51,11 +40,7 @@ Suite 225, San Francisco, CA 94107, USA
 <strong>{t}{$CountryName[$i]}{/t}</strong>{if $StateProvince[$i]}, {$StateProvince[$i]}{/if}{if $City[$i]}, {$City[$i]}{/if}
 {/if}
 </td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$OfferDate[$i]}
-</td>
-
+<td class="{if $i % 2}tdDark{else}tdLight{/if}">{$OfferDate[$i]}</td>
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $EP_FirstName[$i]}<strong>{t}Person{/t}</strong>: {/if}
 {if $EC_CompanyName[$i]}<strong>{t}Company{/t}</strong>: {/if}
@@ -66,12 +51,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $EO_OrganizationName[$i]}{$EO_OrganizationName[$i]}{/if}
 {if trim($Website[$i]) neq ''}</a>{/if}
 </td>
-
 </tr>
-
 {/foreach}
-
 </table>
-
 {/if}
-
