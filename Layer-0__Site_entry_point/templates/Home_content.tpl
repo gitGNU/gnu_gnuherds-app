@@ -50,8 +50,6 @@ Suite 225, San Francisco, CA 94107, USA
   	1='<i>GNU Business Network</i>'
       }%1 certification{/t}
 </ul>
-<p>
-</p>
 
 <p>&nbsp;</p>
 
