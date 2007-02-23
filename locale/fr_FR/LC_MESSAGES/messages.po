@@ -2178,7 +2178,7 @@ msgstr "Danois"
 msgid "German"
 msgstr "Allemand"
 
-msgid "Bhutani"
+msgid "Dzongkha"
 msgstr "Dzongkha"
 
 msgid "Greek"
@@ -3116,12 +3116,6 @@ msgstr "Helpdesk"
 #
 # Data Base LA_AcademicQualifications table
 #
-#XXX: Antenore, please check if my translations are good here. David.
-#     In particular, check for "Doctoral" => "Dottore". Davi explained
-#     me that to become "Doctoral" you have to do a thesis. I thought
-#     to translate it to "Dottorando", but Davi told me that you are
-#     a Doctoral _after_ you made your thesis. So I finally translated
-#     it as "Dottore". But I'm not sure at all. Please, check this.
 msgid "Undergraduate"
 msgstr "Bac"
 
