@@ -847,7 +847,7 @@ msgstr "ERREUR : L'identificateur à afficher n'a pas été spécifié."
 msgid "These are the networks, or ways to set up one, which we know about:"
 msgstr "Voici les réseaux, ou les façons d'en mettre un en place, que nous connaissons :"
 
-msgid "Menttes provides training, consulting, web sites, portals, extranets, intranets and custom web application development with Plone, Zope and Python. These services are provided for end-users, companies and consulting firms located of any country."
+msgid "Menttes provides training, consulting, web sites, portals, extranets, intranets and custom web application development with Plone, Zope and Python. These services are provided for end-users, companies and consulting firms of any country."
 msgstr "Menttes fournit les formations, conseils, développements des sites web, portails, extranets, intranets et applications web avec Plone, Zope et Python. Ces services sont destinés aux utilisateurs finaux, sociétés et cabinets de conseils situées n'importe quel pays."
 
 msgid "Its"
