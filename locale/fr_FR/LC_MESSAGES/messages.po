@@ -230,10 +230,10 @@ msgstr "ERREUR : Impossible de supprimer le fichier d'image ou logo."
 # Home_content.tpl
 #
 msgid "GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors."
-msgstr "GNU Herds est une association à but non lucratif %1démocratique%4 dont le %1but%4 est d'encourager le développement professionnel des contributeurs aux Logiciels Libres."
+msgstr "GNU Herds est une association à but non lucratif %1démocratique%4 dont le %2but%4 est d'encourager le développement professionnel des contributeurs aux Logiciels Libres."
 
 msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:"
-msgstr "La première étape a été de développer les modules du %1site d'offres d'emplois%4 et de regrouper plusieurs modèles de %3réseaux d'affaires%2. Voici certaines des fonctionnalités du site d'offres d'emplois :"
+msgstr "La première étape a été de développer les modules du %1site d'offres d'emplois%2 et de regrouper plusieurs modèles de %3réseaux d'affaires%2. Voici certaines des fonctionnalités du site d'offres d'emplois :"
 
 msgid "Controlled by its own users"
 msgstr "Contrôlé par ses propres utilisateurs"
@@ -1670,7 +1670,7 @@ msgid "Heard and McDonald Islands"
 msgstr "Île Heard et îles McDonald"
 
 msgid "Holy See (Vatican City State)"
-msgstr "Cité du Vatican "
+msgstr "Cité du Vatican"
 
 msgid "Honduras"
 msgstr "Honduras"
@@ -1769,7 +1769,7 @@ msgid "Macao"
 msgstr "Macao"
 
 msgid "Macedonia"
-msgstr "Macédoine "
+msgstr "Macédoine"
 
 msgid "Madagascar"
 msgstr "Madagascar"
