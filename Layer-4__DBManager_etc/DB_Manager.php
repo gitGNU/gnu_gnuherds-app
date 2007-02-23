@@ -151,12 +151,6 @@ class DBManager
 		return $qualifications->updateQualifications();
 	}
 
-	public function searchQualifications()
-	{
-		$qualifications = new Qualifications();
-		return $qualifications->searchQualifications();
-	}
-
 
 	public function getJobOffersForEntity()
 	{
