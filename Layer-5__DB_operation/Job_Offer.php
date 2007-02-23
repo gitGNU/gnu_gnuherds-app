@@ -352,6 +352,9 @@ class JobOffer
 
 	public function deleteJobOffersForEntity()
 	{
+		// We get the Job Offers for the logged Entity. Therefore the Access Control List (ACL) check is implicit.
+		// Note this method is not at the DB_Manager.php due to is only used at this layer by the Entity.php class.
+
 		$joboffers = $this->getJobOffersForEntity();
 
 		foreach ( $joboffers[0] as $J1_Id )

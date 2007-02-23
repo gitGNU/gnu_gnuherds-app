@@ -80,7 +80,7 @@ class AccessControlList
 	}
 
 
-	public function checkJobOfferAccess($mode,$E1_Id)
+	public function checkEntityAccess($mode,$E1_Id)
 	{
 		$jobOffer = new JobOffer();
 
@@ -96,6 +96,49 @@ class AccessControlList
 		//	case "WRITE": // Data Base operations: add, delete, update
 		//		$this->notGranted();
 		//		break;
+
+			default:
+				$this->notGranted();
+		}
+	}
+
+
+	public function checkJobOfferAccess($mode,$J1_Id)
+	{
+		$jobOffer = new JobOffer();
+
+		switch ($mode) {
+		//	case "READ":
+		//		$this->granted();
+		//		break;
+
+			case "WRITE":
+				$joboffers = $jobOffer->getJobOffersForEntity(); // Job Offers for the logged Entity
+
+				if ( !in_array( $J1_Id, $joboffers[0] ) )
+					$this->notGranted();
+
+				break;
+
+			default:
+				$this->notGranted();
+		}
+	}
+
+
+	public function checkApplicationsAccess($mode,$J1_Id)
+	{
+		$jobOffer = new JobOffer();
+
+		switch ($mode) {
+			case "READ":
+			case "WRITE":
+				$joboffers = $jobOffer->getJobOffersForEntity();
+
+				if ( !in_array( $J1_Id, $joboffers[0] ) )
+					$this->notGranted();
+
+				break;
 
 			default:
 				$this->notGranted();

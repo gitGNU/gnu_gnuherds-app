@@ -110,7 +110,7 @@ class __DBManager
 	public function getJobOfferPhotoOrLogoForEntity($Id)
 	{
 		$acl = new __AccessControlList();
-		$acl->checkJobOfferAccess("READ",$Id);
+		$acl->checkEntityAccess("READ",$Id);
 
 		$entity = new __Entity();
 		return $entity->getEntityPhotoOrLogo($Id);
@@ -179,7 +179,7 @@ class __AccessControlList
 	}
 
 
-	public function checkJobOfferAccess($mode,$E1_Id)
+	public function checkEntityAccess($mode,$E1_Id)
 	{
 		$jobOffer = new __JobOffer();
 

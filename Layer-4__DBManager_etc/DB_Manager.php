@@ -49,6 +49,8 @@ class DBManager
 
 	public function authenticateEntity()
 	{
+		// This method does not need ACL check
+
 		$authenticate = new Authenticate();
 		return $authenticate->checkLogin();
 	}
@@ -56,6 +58,9 @@ class DBManager
 
 	public function getEntity($Id)
 	{
+		// This method does not need ACL check because of it works with SESSION[EntityId],
+		// or at ViewQualifications and ViewJobOffer only shows non-private information.
+
 		$entity = new Entity();
 		return $entity->getEntity($Id);
 	}
@@ -71,20 +76,23 @@ class DBManager
 
 	public function addEntity()
 	{
+		// This method does not need ACL check
+
 		$entity = new Entity();
 		$entity->addEntity();
 	}
 
 	public function deleteEntity()
 	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
 		$entity = new Entity();
 		$entity->deleteEntity();
 	}
 
 	public function deletePhotoOrLogo()
 	{
-		$acl = new AccessControlList();
-		$acl->checkProperlyLogged();
+		// This method does not need ACL check because of it works with SESSION[EntityId]
 
 		$entity = new Entity();
 		$entity->deletePhotoOrLogo();
@@ -92,24 +100,32 @@ class DBManager
 
 	public function updateEntity()
 	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
 		$entity = new Entity();
 		$entity->updateEntity();
 	}
 
 	public function lookForEntity()
 	{
+		// This method does not need ACL check
+
 		$entity = new Entity();
 		return $entity->lookForEntity();
 	}
 
 	public function saveMagicForEntity($magic)
 	{
+		// This method does not need ACL check
+
 		$entity = new Entity();
 		return $entity->saveMagicForEntity($magic);
 	}
 
 	public function setNewPasswordForEntity()
 	{
+		// This method does not need ACL check
+
 		$entity = new Entity();
 		return $entity->setNewPasswordForEntity();
 	}
@@ -135,18 +151,24 @@ class DBManager
 
 	public function addQualifications()
 	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
 		$qualifications = new Qualifications();
 		return $qualifications->addQualifications();
 	}
 
 	public function deleteQualifications()
 	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
 		$qualifications = new Qualifications();
 		return $qualifications->deleteQualifications();
 	}
 
 	public function updateQualifications()
 	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
 		$qualifications = new Qualifications();
 		return $qualifications->updateQualifications();
 	}
@@ -154,18 +176,24 @@ class DBManager
 
 	public function getJobOffersForEntity()
 	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->getJobOffersForEntity();
 	}
 
 	public function getJobOffers()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->getJobOffers();
 	}
 
 	public function getJobOffer($Id)
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->getJobOffer($Id);
 	}
@@ -173,7 +201,7 @@ class DBManager
 	public function getJobOfferPhotoOrLogoForEntity($Id)
 	{
 		$acl = new AccessControlList();
-		$acl->checkJobOfferAccess("READ",$Id);
+		$acl->checkEntityAccess("READ",$Id);
 
 		$entity = new Entity();
 		return $entity->getEntityPhotoOrLogo($Id);
@@ -181,54 +209,78 @@ class DBManager
 
 	public function addJobOffer()
 	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->addJobOffer();
 	}
 
 	public function deleteSelectedJobOffers()
 	{
+		$acl = new AccessControlList();
+		for ($i=0; $i < count($_POST['DeleteJobOffers']); $i++)
+			$acl->checkJobOfferAccess("WRITE",$_POST['DeleteJobOffers'][$i]);
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->deleteSelectedJobOffers();
 	}
 
 	public function updateJobOffer($Id)
 	{
+		$acl = new AccessControlList();
+		$acl->checkJobOfferAccess("WRITE",$Id);
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->updateJobOffer($Id);
 	}
 
 	public function getApplicationsMeterForJobOffer($Id,$meter)
 	{
+		$acl = new AccessControlList();
+		$acl->checkApplicationsAccess("READ",$Id);
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->getApplicationsMeterForJobOffer($Id,$meter);
 	}
 
 	public function subscribeApplication($EntityId,$JobOfferId)
 	{
+		// With the current use of this method, it does not need ACL check.
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->subscribeApplication($EntityId,$JobOfferId);
 	}
 
 	public function IsAlreadySubscribed($EntityId,$JobOfferId)
 	{
+		// With the current use of this method, it does not need ACL check.
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->IsAlreadySubscribed($EntityId,$JobOfferId);
 	}
 
 	public function getJobOfferApplications($JobOfferId)
 	{
+		$acl = new AccessControlList();
+		$acl->checkApplicationsAccess("READ",$JobOfferId);
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->getJobOfferApplications($JobOfferId);
 	}
 
 	public function setApplicationState($JobOfferId,$State,$EntityId)
 	{
+		$acl = new AccessControlList();
+		$acl->checkApplicationsAccess("WRITE",$JobOfferId);
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->setApplicationState($JobOfferId,$State,$EntityId);
 	}
 
 	public function getJobApplicationsForEntity()
 	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
 		$jobOffer = new JobOffer();
 		return $jobOffer->getJobApplicationsForEntity();
 	}
@@ -236,138 +288,184 @@ class DBManager
 
 	public function getCountryList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$countries = new Countries();
 		return $countries->getCountryList();
 	}
 
 	public function getCountryTwoLetterList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$countries = new Countries();
 		return $countries->getCountryTwoLetterList();
 	}
 
 	public function getCountryNameList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$countries = new Countries();
 		return $countries->getCountryNameList();
 	}
 
 	public function getAcademicQualificationsList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$academicQualifications = new AcademicQualifications();
 		return $academicQualifications->getAcademicQualificationsList();
 	}
 
 	public function getProductProfilesList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$productProfiles = new ProductProfiles();
 		return $productProfiles->getProductProfilesList();
 	}
 
 	public function getProfessionalProfilesList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$professionalProfiles = new ProfessionalProfiles();
 		return $professionalProfiles->getProfessionalProfilesList();
 	}
 
 	public function getFieldProfilesList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$fieldProfiles = new FieldProfiles();
 		return $fieldProfiles->getFieldProfilesList();
 	}
 
 	public function getSkillsListsBySets()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$skills = new Skills();
 		return $skills->getSkillsListsBySets();
 	}
 
 	public function getSkillsList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$skills = new Skills();
 		return $skills->getSkillsList();
 	}
 
 	public function getSkillKnowledgeLevelsList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$skills = new Skills();
 		return $skills->getSkillKnowledgeLevelsList();
 	}
 
 	public function getSkillExperienceLevelsList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$skills = new Skills();
 		return $skills->getSkillExperienceLevelsList();
 	}
 
 	public function getRequestedCertificationsForEntity()
 	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
 		$certifications = new Certifications();
 		return $certifications->getRequestedCertificationsForEntity();
 	}
 
 	public function getNotYetRequestedCertificationsForEntity()
 	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
 		$certifications = new Certifications();
 		return $certifications->getNotYetRequestedCertificationsForEntity();
 	}
 
 	public function getCertificationsList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$certifications = new Certifications();
 		return $certifications->getCertificationsList();
 	}
 
 	public function getLanguagesList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$languages = new Languages();
 		return $languages->getLanguagesList();
 	}
 
 	public function getLanguagesSpokenLevelsList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$languages = new Languages();
 		return $languages->getLanguageSpokenLevelsList();
 	}
 
 	public function getLanguagesWrittenLevelsList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$languages = new Languages();
 		return $languages->getLanguageWrittenLevelsList();
 	}
 
 	public function getContractTypesList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$contractTypes = new ContractTypes();
 		return $contractTypes->getContractTypesList();
 	}
 
 	public function getByPeriodList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$byPeriod = new ByPeriod();
 		return $byPeriod->getByPeriodList();
 	}
 
 	public function getTimeUnitsList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$timeUnits = new TimeUnits();
 		return $timeUnits->getTimeUnitsList();
 	}
 
 	public function getCurrenciesList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$currencies = new Currencies();
 		return $currencies ->getCurrenciesList();
 	}
 
 	public function getEmployabilityList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$employability = new Employability();
 		return $employability->getEmployabilityList();
 	}
 
 	public function getApplicationStatesList()
 	{
+		// This method does not need ACL check. It gets public information.
+
 		$applicationStates = new ApplicationStates();
 		return $applicationStates->getApplicationStatesList();
 	}
