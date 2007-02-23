@@ -366,18 +366,6 @@ class DBManager
 		return $employability->getEmployabilityList();
 	}
 
-	public function getLanguageSpokenLevelsList()
-	{
-		$languages = new Languages();
-		return $languages->getLanguageSpokenLevelsList();
-	}
-
-	public function getLanguageWrittenLevelsList()
-	{
-		$languages = new Languages();
-		return $languages->getLanguageWrittenLevelsList();
-	}
-
 	public function getApplicationStatesList()
 	{
 		$applicationStates = new ApplicationStates();
