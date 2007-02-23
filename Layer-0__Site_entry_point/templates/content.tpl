@@ -17,15 +17,11 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-<td valign="top" style="background-color: {$webpage->theme->pageBGcolor}"> <!-- The bgcolor could be omitted after checking it with all browsers: FireFox, Epiphany, Konqueror, Opera, IE, etc. -->
-<table style="background-color: {$webpage->theme->contentBGcolor}; border: 0;">
-<!-- XXX -->
-<!-- cellpadding="0" cellspacing="0" rules="none" -->
-<!-- Replace with proper XHTML -->
-<!-- -- David -->
+<td valign="top" bgcolor="{$webpage->theme->pageBGcolor}"> <!-- The bgcolor could be omitted after checking it with all browsers: FireFox, Epiphany, Konqueror, Opera, IE, etc. -->
+<table bgcolor="{$webpage->theme->contentBGcolor}" cellpadding="0" cellspacing="0" rules="none" border="0">
 <tr>
-<td><img src="{$webpage->theme->borderLeftUpImage}" width="2" height="2" align="left" alt="" style="border: 0; position: relative; left: 0; top: 0;" /></td>
-<td><img src="{$webpage->theme->borderRightUpImage}" width="2" height="2" align="right" alt="" style="border: 0; position: relative; left: 0; top: 0;" /></td>
+<td><img src="{$webpage->theme->borderLeftUpImage}"  width="2" height="2" align="left" alt="" border="0" hspace="0" vspace="0"></td>
+<td><img src="{$webpage->theme->borderRightUpImage}" width="2" height="2" align="right" alt="" border="0" hspace="0" vspace="0"></td>
 </tr>
 <tr>
 <td valign="top" height="450" width="650"> <!-- Set the max width. Note it resizes to lower when needed. -->
@@ -70,21 +66,24 @@ Suite 225, San Francisco, CA 94107, USA
 			</table>
 			{if $webpage->contentExceptionCode }
 				<p>&nbsp;</p>
-				<div align="center">
+				<center>
 				<form name="backForm" method="post" action="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
-				<input type="submit" name="back" value="{'Back'|gettext}" />
+				<input type="submit" name="back" value="{'Back'|gettext}">
 				</form>
-				</div>
+				</center>
 			{/if}
 		{/if}
 	{/if}
 {/if}
+
 </td>
 </tr>
+
 {if !isset($smarty.get.heading)}
 <tr>
 <td>&nbsp;</td>
 </tr>
+
 <tr>
 <td class="tdNote" width="650">
 <p class="footnote">
@@ -95,9 +94,11 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 {/if}
+
 <tr>
-<td><img src="{$webpage->theme->borderLeftDownImage}" width="2" height="2" align="left" alt="" style="border: 0; position: relative; left: 0; top: 0;" /></td>
-<td><img src="{$webpage->theme->borderRightDownImage}" width="2" height="2" align="right" alt="" style="border: 0; position: relative; left: 0; top: 0;" /></td>
+<td><img src="{$webpage->theme->borderLeftDownImage}"  width="2" height="2" align="left" alt="" border="0" hspace="0" vspace="0"></td>
+<td><img src="{$webpage->theme->borderRightDownImage}" width="2" height="2" align="right" alt="" border="0" hspace="0" vspace="0"></td>
 </tr>
+
 </table>
 </td>

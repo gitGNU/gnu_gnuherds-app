@@ -16,13 +16,17 @@ You should have received a copy of the Affero General Public License with this
 software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street,
 Suite 225, San Francisco, CA 94107, USA
 *}
+
 <h3>{t}Manage Job Offers{/t}</h3>
+
+
 {if count($smarty.session.M_JobOfferId) == 0 }
 	<p>&nbsp;</p>
-	<p>{t}You do not have any defined job offer.{/t}</p>
-	<p>&nbsp;</p>
+	<p>{t}You do not have any defined job offer.{/t}</p><p>&nbsp;</p>
 {else}
+
 <table align="center" border="0" width="100%">
+
 <tr valign="top">
 <td></td>
 <td class="tdTitle"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong></td>
@@ -36,15 +40,29 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="tdTitle">{'Finalist'|gettext|strip:'&nbsp;'}</td>
 <td class="tdTitle">{'Selected'|gettext|strip:'&nbsp;'}</td>
 </tr>
+
 <form name="deleteJobOffersForm" method="post" action="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
+
 {foreach from=$smarty.session.M_JobOfferId item=Id key=i}
+
 <tr valign="top">
+
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<input type="checkbox" name="DeleteJobOffers[]" value="{$Id}" />
+<input type="checkbox" name="DeleteJobOffers[]" value="{$Id}">
 </td>
-<td class="{if $i % 2}tdDark{else}tdLight{/if}"><a href="/Job_Offer.php?JobOfferId={$Id}" target="_top">{$smarty.session.M_VacancyTitle[$i]}</a></td>
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">{$smarty.session.M_OfferDate[$i]}</td>
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">{$smarty.session.M_ExpirationDate[$i]}</td>
+
+
+<td class="{if $i % 2}tdDark{else}tdLight{/if}">
+<a href="/Job_Offer.php?JobOfferId={$Id}" target="_top">{$smarty.session.M_VacancyTitle[$i]}</a>
+</td>
+
+<td class="{if $i % 2}tdDark{else}tdLight{/if}">
+{$smarty.session.M_OfferDate[$i]}
+</td>
+
+<td class="{if $i % 2}tdDark{else}tdLight{/if}">
+{$smarty.session.M_ExpirationDate[$i]}
+</td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $smarty.session.M_Closed[$i] eq 'f'}
@@ -53,7 +71,10 @@ Suite 225, San Francisco, CA 94107, USA
 {t}Yes{/t}
 {/if}
 </td>
-<td></td>
+
+<td>
+</td>
+
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $ReceivedMeter[$i] eq '0'}
 {t}none{/t}
@@ -63,6 +84,7 @@ Suite 225, San Francisco, CA 94107, USA
 </a>
 {/if}
 </td>
+
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $InProcessMeter[$i] eq '0'}
 {t}none{/t}
@@ -72,6 +94,7 @@ Suite 225, San Francisco, CA 94107, USA
 </a>
 {/if}
 </td>
+
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $RuledOutMeter[$i] eq '0'}
 {t}none{/t}
@@ -81,6 +104,7 @@ Suite 225, San Francisco, CA 94107, USA
 </a>
 {/if}
 </td>
+
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $FinalistMeter[$i] eq '0'}
 {t}none{/t}
@@ -90,6 +114,7 @@ Suite 225, San Francisco, CA 94107, USA
 </a>
 {/if}
 </td>
+
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $SelectedMeter[$i] eq '0'}
 {t}none{/t}
@@ -99,19 +124,30 @@ Suite 225, San Francisco, CA 94107, USA
 </a>
 {/if}
 </td>
+
 </tr>
+
 {/foreach}
-<tr><td colspan="5">&nbsp;</td></tr>
+
+<tr>
+<td colspan="5">&nbsp;</td>
+</tr>
+
 <tr>
 <td colspan="5">
 {if count($smarty.session.M_JobOfferId) > 0 }
-<input type="submit" name="delete" value="{t}Delete selected offers{/t}" />
+<input type="submit" name="delete" value="{t}Delete selected offers{/t}">
 {/if}
 </td>
 </tr>
+
 </form>
+
 </table>
+
 {/if}
+
 <form name="newJobOffersForm" method="post" action="Job_Offer.php">
-<input type="submit" name="new" value="{t}New offer{/t}" />
+<input type="submit" name="new" value="{t}New offer{/t}">
 </form>
+
