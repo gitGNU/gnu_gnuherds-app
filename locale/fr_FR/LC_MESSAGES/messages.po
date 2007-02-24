@@ -505,9 +505,6 @@ msgstr "Voir le %1CVS%2 de gnuherds-app"
 msgid "Note: If you register at Savannah and join the project, both checkout and checkin will work in spite of the message \"Your savannah password is useless for cvs\".  When you register, take note of your passphrase. Savannah will ask for it at each cvs operation. For example, my first checkout was as follows:"
 msgstr "Note : Si vous créez un compte chez Savannah et vous nous rejoignez, les checkout et checkin fonctionneront en dépit du message \"Your savannah password is useless for cvs\" (Votre mot de passe savannah est inutile pour CVS). Lorsque vous créez votre compte, retenez bien votre mot de passe. Savannah vous le demandera pour chaque opération CVS. Par exemple, pour mon premier checkout :"
 
-msgid "Note: Use the -P option to avoid getting the old directories which are empty."
-msgstr "Note : Utilisez l'option -P pour éviter de transférer les vieux répertoires vides."
-
 msgid "Now you can work:"
 msgstr "Vous pouvez maintenant travailler :"
 

@@ -342,13 +342,9 @@ Suite 225, San Francisco, CA 94107, USA
 	<p>
 	{t}Note: If you register at Savannah and join the project, both checkout and checkin will work in spite of the message "Your savannah password is useless for cvs".  When you register, take note of your passphrase. Savannah will ask for it at each cvs operation. For example, my first checkout was as follows:{/t}
 	</p>
-	<p>
-	{t}Note: Use the -P option to avoid getting the old directories which are empty.{/t}
-	</p>
 
 <pre>
-    $ cvs -z3 -d   -P
-      USER@savannah.nongnu.org:/cvsroot/gnuherds-app co gnuherds-app
+    $ cvs -z3 -d:ext:USER@cvs.savannah.nongnu.org:/sources/gnuherds-app co gnuherds-app
 
       The authenticity of host 'savannah.nongnu.org (199.232.41.4)' can't be 
       established.
