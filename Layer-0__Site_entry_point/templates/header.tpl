@@ -43,10 +43,16 @@ Suite 225, San Francisco, CA 94107, USA
 	{assign var='startParameter' value='?'}
 {/if}
 
-<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=en_US" lang="en" title="{'English'|gettext}">English</a>,
-<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=es_ES" lang="es" title="{'Spanish'|gettext}">Espa&#x00f1;ol</a>,
-<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=it_IT" lang="it" title="{'Italian'|gettext}">Italiano</a>,
-<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=pt_PT" lang="pt" title="{'Portuguese'|gettext}">Portugu&#x0ea;s</a>
+{if $smarty.session.Language eq 'en_US'}<strong>{/if}<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=en_US" lang="en" title="{'English'|gettext}">English</a>{if $smarty.session.Language eq 'en_US'}</strong>{/if},
+
+{if $smarty.session.Language eq 'es_ES'}<strong>{/if}<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=es_ES" lang="es" title="{'Spanish'|gettext}">Espa&#x00f1;ol</a>{if $smarty.session.Language eq 'es_ES'}</strong>{/if},
+
+{if $smarty.session.Language eq 'fr_FR'}<strong>{/if}<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=fr_FR" lang="fr" title="{'French'|gettext}">Fran&#x00e7;ais</a>{if $smarty.session.Language eq 'fr_FR'}</strong>{/if},
+
+{if $smarty.session.Language eq 'it_IT'}<strong>{/if}<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=it_IT" lang="it" title="{'Italian'|gettext}">Italiano</a>{if $smarty.session.Language eq 'it_IT'}</strong>{/if},
+
+{if $smarty.session.Language eq 'pt_PT'}<strong>{/if}<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=pt_PT" lang="pt" title="{'Portuguese'|gettext}">Portugu&#x0ea;s</a>{if $smarty.session.Language eq 'pt_PT'}</strong>{/if}
+
 <br>
 <span class="hidden2">______________________________</span>
 <br>
