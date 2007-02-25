@@ -96,15 +96,6 @@ msgstr "Le nostre candidature"
 msgid "Your job applications"
 msgstr "Le tue candidature"
 
-msgid "My qualif. searches"
-msgstr "Le mie ricerche di qualifiche"
-
-msgid "Our qualif. searches"
-msgstr "Le nostre ricerche di qualifiche"
-
-msgid "Your qualif. searches"
-msgstr "Le tue ricerche di qualifiche"
-
 msgid "Resources"
 msgstr "Risorse"
 
