@@ -964,7 +964,7 @@ msgid "You can not access this section been logged as"
 msgstr "Usted no puede acceder a esta ficha habiendo entrado como"
 
 msgid "Back"
-msgstr "Atras"
+msgstr "Atrás"
 
 msgid "Your information has been deleted from the data base. You have been logout automatically."
 msgstr "Su información ha sido eliminada de la base de datos. Su salida ha sido procesada automáticamente."
