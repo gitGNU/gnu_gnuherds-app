@@ -357,7 +357,6 @@ URI: <input type="text" name="ContributionURI" maxlength="255" value="http://" c
 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
-<tr> <td colspan="4">&nbsp;</td> </tr> 
 
 {literal}
 <!--
@@ -382,7 +381,6 @@ Reference: http://es.php.net/types.array
 
 <tr align="center">
 <td colspan="4" align="center">
-<input type="submit" name="cancel" value="{t}Cancel{/t}">
 <input type="submit" name="save" value="{t}Save{/t}" OnClick="SelectAllItems();">
 
 {if $smarty.session.HasQualifications == '1'} <!-- update -->

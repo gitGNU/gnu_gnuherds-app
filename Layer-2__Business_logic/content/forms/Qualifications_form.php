@@ -38,6 +38,8 @@ class QualificationsForm
 
 	public function processForm()
 	{
+		$phpTools = new PHPTools();
+
 		// Check the log in state
 		if ( $_SESSION['Logged'] == '1' )
 		{
@@ -58,8 +60,15 @@ class QualificationsForm
 			throw new Exception($error,false);
 		}
 
+		if ( $_SESSION['HasQualifications'] == false )
+		{
+			// If this HTTP request is not realizing any form operation, clear the session variables of this form to
+			// show the user a clean form. The action is the same than the previous Cancel operation, which was removed.
+			if ( $_POST['save'] != gettext('Save') and $_POST['back'] != gettext('Back') )
+				$phpTools->cleanPHPsession();
+		}
+
 		// Process each button event
-		$phpTools = new PHPTools();
 		if ( isset($_POST['delete']) and $_POST['delete'] == gettext('Delete qualifications') )
 		{
 			$this->manager->deleteQualifications();
@@ -67,23 +76,16 @@ class QualificationsForm
 
 			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('The qualifications information has been deleted from the data base.')."<p>\n";
 		}
-		else
-			if ( isset($_POST['cancel']) and $_POST['cancel'] == gettext('Cancel') )
-			{
-				// Do not save the $_SESSION variables.
-				$phpTools->cleanPHPsession(); // Destroy the session, so as to next time the values will not be loaded from the $_SESSION variables. 
-
-				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('The operation has been cancelled.')."</p>\n";
-			}
-			else
-				if ( isset($_POST['save']) and $_POST['save'] == gettext('Save') )
-					$this->saveQualificationsForm();
+		elseif ( isset($_POST['save']) and $_POST['save'] == gettext('Save') )
+		{
+			$this->saveQualificationsForm();
+		}
 	}
 
 
 	public function printOutput()
 	{
-		if ( $_POST['delete'] == gettext('Delete qualifications') || $_POST['cancel'] == gettext('Cancel') || $_POST['save'] == gettext('Save') )
+		if ( $_POST['delete'] == gettext('Delete qualifications') || $_POST['save'] == gettext('Save') )
 			echo $this->processingResult;
 		else
 			$this->printQualificationsForm();

@@ -39,6 +39,8 @@ class PersonForm
 
 	public function processForm()
 	{
+		$phpTools = new PHPTools();
+
 		// Check the log in state and load the data
 		if ( $_SESSION['Logged'] == '1' ) // update
 		{
@@ -58,10 +60,16 @@ class PersonForm
 			}
 		}
 		else // new
+		{
 			$_SESSION['ViewPhotoOrLogo'] = "false"; // Initialization
 
+			// If this HTTP request is not realizing any form operation, clear the session variables of this form to
+			// show the user a clean form. The action is the same than the previous Cancel operation, which was removed.
+			if ( $_POST['save'] != gettext('Save') and $_POST['back'] != gettext('Back') )
+				$phpTools->resetPHPsession();
+		}
+
 		// Process each button event
-		$phpTools = new PHPTools();
 		if ( isset($_POST['delete']) and $_POST['delete'] == gettext('Delete me from this Association') )
 		{
 			$this->manager->deleteEntity();
@@ -69,27 +77,16 @@ class PersonForm
 
 			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Your information has been deleted from the data base. You have been logout automatically.')."<p>\n";
 		}
-		else
-			if ( isset($_POST['cancel']) and $_POST['cancel'] == gettext('Cancel') )
-			{
-				if ( $_SESSION['Logged'] == '1' ) // update
-					;
-					// Do not save the $_SESSION variables.
-					// Do not destroy the session, so as to next time the values will be loaded from the $_SESSION variables. 
-				else // new
-					$phpTools->resetPHPsession();
-
-				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('The operation has been cancelled.')."</p>\n";
-			}
-			else
-				if ( isset($_POST['save']) and $_POST['save'] == gettext('Save') )
-					$this->savePersonForm();
+		elseif ( isset($_POST['save']) and $_POST['save'] == gettext('Save') )
+		{
+			$this->savePersonForm();
+		}
 	}
 
 
 	public function printOutput()
 	{
-		if ( $_POST['delete'] == gettext('Delete me from this Association') || $_POST['cancel'] == gettext('Cancel') || $_POST['save'] == gettext('Save') )
+		if ( $_POST['delete'] == gettext('Delete me from this Association') || $_POST['save'] == gettext('Save') )
 			echo $this->processingResult;
 		else
 			$this->printPersonForm();
