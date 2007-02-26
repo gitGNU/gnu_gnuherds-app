@@ -953,9 +953,6 @@ msgstr "MODE DE COMMUNICATION INTERACTIF"
 msgid "OTHER INFORMATION"
 msgstr "AUTRES INFORMATIONS"
 
-msgid "Cancel"
-msgstr "Annuler"
-
 msgid "Save"
 msgstr "Sauver"
 
@@ -971,9 +968,6 @@ msgstr "Retour"
 
 msgid "Your information has been deleted from the data base. You have been logout automatically."
 msgstr "Vos informations ont été détruites de la base de données. Vous avez été automatiquement déconnecté."
-
-msgid "The operation has been cancelled."
-msgstr "L'opération a été annulée."
 
 msgid "Updated successfully"
 msgstr "Mise à jour réussie"

@@ -983,9 +983,6 @@ msgstr "MEIOS DE COMUNICAÇÃO INTERACTIVA"
 msgid "OTHER INFORMATION"
 msgstr "OUTRA INFORMAÇÃO"
 
-msgid "Cancel"
-msgstr "Cancelar"
-
 msgid "Save"
 msgstr "Gravar"
 
@@ -1002,9 +999,6 @@ msgstr "Retroceder"
 
 msgid "Your information has been deleted from the data base. You have been logout automatically."
 msgstr "A sua informação foi removida da base de dados. A sua sessão foi terminada automaticamente."
-
-msgid "The operation has been cancelled."
-msgstr "A operação foi cancelada."
 
 msgid "Updated successfully"
 msgstr "Actualizado com sucesso"
