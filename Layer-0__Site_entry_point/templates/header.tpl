@@ -51,7 +51,9 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if $smarty.session.Language eq 'it_IT'}<strong>{/if}<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=it_IT" lang="it" title="{'Italian'|gettext}">Italiano</a>{if $smarty.session.Language eq 'it_IT'}</strong>{/if},
 
-{if $smarty.session.Language eq 'pt_PT'}<strong>{/if}<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=pt_PT" lang="pt" title="{'Portuguese'|gettext}">Portugu&#x0ea;s</a>{if $smarty.session.Language eq 'pt_PT'}</strong>{/if}
+{if $smarty.session.Language eq 'pt_PT'}<strong>{/if}<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=pt_PT" lang="pt" title="{'Portuguese'|gettext}">Portugu&#x0ea;s</a>{if $smarty.session.Language eq 'pt_PT'}</strong>{/if},
+
+{if $smarty.session.Language eq 'ru_RU'}<strong>{/if}<a href="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$cleanURI}{$startParameter}language=ru_RU" lang="ru" title="{'Russian'|gettext}">&#x0420;&#x0443;&#x0441;&#x0441;&#x043a;&#x0438;&#x0439;</a>{if $smarty.session.Language eq 'ru_RU'}</strong>{/if}
 
 <br>
 <span class="hidden2">______________________________</span>
