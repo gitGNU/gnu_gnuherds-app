@@ -40,7 +40,8 @@ class LanguageForm
 			  or $_SESSION["Language"] == "es_ES"
 			  or $_SESSION["Language"] == "fr_FR"
 			  or $_SESSION["Language"] == "it_IT"
-			  or $_SESSION["Language"] == "pt_PT" )
+			  or $_SESSION["Language"] == "pt_PT"
+			  or $_SESSION["Language"] == "ru_RU" )
 			{
 				$this->setLanguage($_SESSION["Language"]); // Update the validity of the language selection
 			}
@@ -61,7 +62,9 @@ class LanguageForm
 					"it" => true,
 					"it_IT" => true, "it_CH" => true,
 					"pt" => true,
-					"pt_PT" => true, "pt_BR" => true
+					"pt_PT" => true, "pt_BR" => true,
+					"ru" => true,
+					"ru_RU" => true, "ru_UA" => true
 				);
 
 				$chosen = HTTP::negotiateLanguage($supported);
@@ -88,29 +91,63 @@ class LanguageForm
 					elseif ( $chosen == "pt"
 					      or $chosen == "pt_PT" or $chosen == "pt_BR" )
 					    $this->setLanguage("pt_PT");
+					elseif ( $chosen == "ru"
+					      or $chosen == "ru_RU" or $chosen == "ru_UA" )
+					    $this->setLanguage("ru_RU");
 					else
 						$this->setLanguage($default_language);
 				}
-				else // The client has not specified a language, so we try to guess the best default language according to country code.
+				else // The client has not specified a language, so we try to guess the best default language according to country code. Ref. wikipedia.org, Country official languages.
 				{
 					$country_code = apache_note("GEOIP_COUNTRY_CODE");
-					if ( $country_code == "AD" or $country_code == "AR" or $country_code == "BO" or $country_code == "CL"
+
+					// Official or co-official language. Reference: wikipedia.org
+					if (
+					  // Official
+					     $country_code == "US" or $country_code == "GB" )
+						$this->setLanguage("en_US");
+
+					elseif (
+					  // Official
+					     $country_code == "AD" or $country_code == "AR" or $country_code == "BO" or $country_code == "CL"
 					  or $country_code == "CO" or $country_code == "CR" or $country_code == "CU" or $country_code == "DO" or $country_code == "EC"
 					  or $country_code == "ES" or $country_code == "GI" or $country_code == "GT" or $country_code == "HN"
 					  or $country_code == "MX" or $country_code == "NI" or $country_code == "PA" or $country_code == "PE" or $country_code == "PR"
 					  or $country_code == "PY" or $country_code == "SV" or $country_code == "UY" or $country_code == "VE" )
 						$this->setLanguage("es_ES");
-					elseif ( $country_code == "US" or $country_code == "GB" )
-						$this->setLanguage("en_US");
-					elseif ( $country_code == "FR" or $country_code == "BE" // XXX: If Dutch is added to the translation set, at Belgium (BE) should we show 'Dutch' instead of 'French' by default?.
-					  or $country_code == "LU" or $country_code == "CH" ) // XXX: If German is added to the translation set, at Switzerland (CH) should we show 'German' instead of 'French' by default?.
+
+					elseif ( // French: Reference: http://wikitravel.org/fr/Liste_des_pays_francophones
+					  // Official
+					     $country_code == "FR" or $country_code == "BE" or $country_code == "BJ" or $country_code == "BF" // XXX: If Dutch is added to the translation set, at Belgium (BE) should we show 'Dutch' instead of 'French' by default?.
+					  or $country_code == "BI" or $country_code == "CM" or $country_code == "KM" or $country_code == "CD"
+					  or $country_code == "CG" or $country_code == "CI" or $country_code == "DJ" or $country_code == "GA"
+					  or $country_code == "GN" or $country_code == "GQ" or $country_code == "HT" or $country_code == "LU"
+					  or $country_code == "MG" or $country_code == "ML" or $country_code == "MU" or $country_code == "MC"
+					  or $country_code == "NE" or $country_code == "CF" or $country_code == "RW" or $country_code == "SN"
+					  or $country_code == "SC" or $country_code == "CH" or $country_code == "TD" or $country_code == "TG"
+					  or $country_code == "VU" or $country_code == "WF"
+					  ) // XXX: If German is added to the translation set, at Switzerland (CH) should we show 'German' instead of 'French' by default?.
 						$this->setLanguage("fr_FR");
-					elseif ( $country_code == "IT" )
+
+					elseif (
+					  // Official
+					     $country_code == "IT" )
 						$this->setLanguage("it_IT");
-					elseif ( $country_code == "PT" or $country_code == "BR" or $country_code == "AO" or $country_code == "CV"
+
+					elseif (
+					  // Official
+					     $country_code == "PT" or $country_code == "BR" or $country_code == "AO" or $country_code == "CV"
 					  or $country_code == "GW" or $country_code == "MZ" or $country_code == "ST"
-					  or $country_code == "MO" or $country_code == "TL" ) // Co-official language. Ref.: wikipedia.org
+
+					  // Co-official, Ref.: wikipedia.org
+					  or $country_code == "MO" or $country_code == "TL" )
 						$this->setLanguage("pt_PT");
+
+					elseif (
+					  // Official
+					     $country_code == "RU" or $country_code == "BY" or $country_code == "KZ" or $country_code == "KG" )
+						$this->setLanguage("ru_RU");
+
 					else
 						$this->setLanguage($default_language);
 				}
@@ -135,6 +172,8 @@ class LanguageForm
 			$language = 'it_IT.utf8';
 		if ($_SESSION['Language'] == "pt_PT")
 			$language = 'pt_PT.utf8';
+		if ($_SESSION['Language'] == "ru_RU")
+			$language = 'ru_RU.utf8';
 
 		putenv("LANG=$language");
 		setlocale(LC_ALL, $language);
