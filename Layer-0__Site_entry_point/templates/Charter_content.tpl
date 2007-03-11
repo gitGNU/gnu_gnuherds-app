@@ -78,14 +78,13 @@ Non-executive committee members?:  The number of non-executive committee members
 
 <p>
 {t escape='no'
-  1='<ul>'
+  1='</p><ul>'
   2='<li>'
   3='</li>'
   4='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
   5='</a>'
   6='</ul>'
 }The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6{/t}
-</p>
 
 <p>
 {t}To depart from the above GNU requirements the Association have to discuss it previously with the GNU Project. Any conflict which can not be resolved in the discussion will raise the removal of the GNU Project approval, and so the GNU part of the Association name.{/t}
@@ -115,11 +114,10 @@ Non-executive committee members?:  The number of non-executive committee members
 
 <p>
 {t escape='no'
-  1='<ul><li>'
+  1='</p><ul><li>'
   2='</li><li>'
   3='</li></ul>'
 }Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed to discuss it is too long should there be a vote.%2Vote on non-technical subjects.%3{/t}
-</p>
 
 <p>
 {t escape='no'
