@@ -26,6 +26,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <p>
 {t}The GNU Herds' official voting mechanism is not intented to:{/t}
+</p>
 	<ul>
 		<li>
 			{t}be used as a country voting system.{/t}
@@ -34,16 +35,15 @@ Suite 225, San Francisco, CA 94107, USA
 			{t}be used as the FS community voting system. The FS community does not need a voting system. As Barry Fitzgerald exposes:{/t} <i>"Free Software embodies democracy in an anarchistic, classical democracy kind of way. The freedom of the community is itself the force of democracy"</i>.
 		</li>
 	</ul>
-</p>
 
 <p>
 {t}The GNU Herds' official voting mechanism is only intented to:{/t}
+</p>
 	<ul>
 		<li>
 			{t}be used as voting system to this Association. The voting mechanism must be used as a tool to keep GNU Herds moving in the right direction, helping members guide the board members. It can also be used to get opinions about ideas, etc.: binding vote, opinion vote.{/t}
 		</li>
 	</ul>
-</p>
 
 <p>{t}See references to documentation at bottom of this page.{/t}</p>
 
@@ -54,6 +54,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <p>
 {t}There are several projects which try to solve the e-Voting trouble. The goal of each project can be different. Some of them has modified its aims or are stalled:{/t}
+</p>
 	<ul>
 		<li><a href="http://www.gnu.org/software/free/" target="_top">GNU.FREE</a>: {t}The development has been discontinued due to{/t} <i>"creating an Internet Voting system sufficiently secure, reliable and anonymous is extremely difficult, if not impossible"</i>.
 		</li>
@@ -65,7 +66,6 @@ Suite 225, San Francisco, CA 94107, USA
 		<li>{t}Some free GNU/Linux distributions use it own voting system.{/t}</li>
 		<li><a href="http://www.nongnu.org/ampu/" target="_top">AMPU</a>. {t}Stalled since March 2002.{/t}</li>
 	</ul>
-</p>
 <p>
 {t escape='no'
   1='<i><a href="http://lwn.net/Articles/44077/" target="_top">'
@@ -73,6 +73,7 @@ Suite 225, San Francisco, CA 94107, USA
   3='<a href="http://lwn.net/" target="_top">'
   4='</a>'
 }We have added the below links from the %1"Bringing free software to voting booths"%2 %3LWN%4 article:{/t}
+</p>
 	<ul>
 		<li><a href="http://votesystem.sourceforge.net/" target="_top">Voting Systems Toolbox</a>. {t}It is dormant.{/t}</li>
 		<li><a href="http://electionmethods.org/GVI.htm" target="_top">GVI</a>. {t}It is interested in exploring alternative voting methods.{/t}</li>
@@ -80,7 +81,6 @@ Suite 225, San Francisco, CA 94107, USA
 		<li><a href="http://www.softimp.com.au/evacs/index.html" target="_top">eVACS</a>. {t}It has already been used in at least one election for the Legislative Assembly in the Australian Capitol Territory in October 2001 and is approved for use in future elections.{/t}</li>
 		<li><a href="http://jfreevote.hispalinux.es/" target="_top">JFreeVote</a>. {t}It is a already implemented, working solution for electronic voting.{/t}</li>
 	</ul>
-</p>
 
 <!--
 <p>
