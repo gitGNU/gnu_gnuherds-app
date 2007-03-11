@@ -20,9 +20,9 @@ Suite 225, San Francisco, CA 94107, USA
 
 <table width="100%" cellpadding="0" cellspacing="0" rules="none" border="0">
 <tr valign="top">
-<td width="160" background="{$webpage->theme->headBackgroundImage}"><a href="/images/gnus-desc.html" target="_top"><img src="/images/gnus_90.jpg" align="left" alt="" border="0" hspace="0" vspace="0"></a></td>
+<td width="160" style="background: url({$webpage->theme->headBackgroundImage})"><a href="/images/gnus-desc.html" target="_top"><img src="/images/gnus_90.jpg" align="left" alt="" border="0" hspace="0" vspace="0"></a></td>
 
-<td background="{$webpage->theme->headBackgroundImage}">
+<td style="background: url({$webpage->theme->headBackgroundImage})">
 
 <table>
 <tr valign="top">
