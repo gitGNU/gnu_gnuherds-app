@@ -38,7 +38,7 @@ Suite 225, San Francisco, CA 94107, USA
 {assign var='cleanURI' value=$smarty.server.REQUEST_URI|regex_replace:"/.language=.._../":""}
 
 {if strpos($cleanURI,"?") !== false}
-	{assign var='startParameter' value='&'}
+	{assign var='startParameter' value='&amp;'}
 {else}
 	{assign var='startParameter' value='?'}
 {/if}
