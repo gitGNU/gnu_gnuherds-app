@@ -29,7 +29,7 @@ class AccessControlList
 	private function notGranted()
 	{
 		$error = "<p>".gettext('The access is not granted.')."</p>";
-		throw new Exception($error,true);
+		throw new Exception($error,false);
 	}
 
 	public function checkProperlyLogged()
