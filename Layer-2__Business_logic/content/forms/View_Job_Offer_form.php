@@ -89,7 +89,7 @@ class ViewJobOfferForm
 		}
 		else
 		{
-			// If the there is a user logged, check if she/he is already to this job offer.
+			// If the there is a user logged, check if she/he is already subscribed to this job offer.
 			if ( isset($_SESSION['Logged']) and $_SESSION['Logged'] == '1' )
 				$_SESSION['IsAlreadySubscribed'] = $this->manager->IsAlreadySubscribed( $_SESSION['EntityId'], $_GET['JobOfferId'] );
 		}
