@@ -604,5 +604,17 @@ class JobOffer
 		else
 			return false;
 	}
+
+
+	public function isJobOfferActive($J1_Id)
+	{
+		$sqlQuery = "PREPARE query(integer) AS  SELECT count(*) FROM J1_JobOffers WHERE J1_Id=$1 AND J1_Closed='f' AND J1_ExpirationDate > 'now';  EXECUTE query('$J1_Id');";
+		$result = $this->postgresql->getOneField($sqlQuery,1);
+
+		if ( intval($result[0]) >= 1 )
+			return true;
+		else
+			return false;
+	}
 }
 ?> 
