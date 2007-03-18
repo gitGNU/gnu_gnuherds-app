@@ -108,9 +108,38 @@ class AccessControlList
 		$jobOffer = new JobOffer();
 
 		switch ($mode) {
-		//	case "READ":
-		//		$this->granted();
-		//		break;
+			case "READ":
+				// We add this ACL due to though a job offer can be closed or expired, Google keeps the link
+				// to such job offer, e.g. https://www.gnuherds.org/View_Job_Offer.php?JobOfferId=10 . So we
+				// have to block the access to it to avoid confussion. Else, people could think it is an
+				// active job offer.
+				// Additionally, with this ACL, we show a soft message instead of an error when a client try
+				// to access an non-existent job offer.
+
+				if ( $jobOffer->isJobOfferActive($J1_Id) )
+				{
+					// If the job offer is active, it is public information. So we grant the READ access.
+					$this->granted();
+				}
+				else
+				{
+					// If the job offer is not active, only the job offer owner can read it.
+					if ( $_SESSION['Logged'] == '1' )
+					{
+						$joboffers = $jobOffer->getJobOffersForEntity(); // Job Offers for the logged Entity
+
+						if ( !in_array( $J1_Id, $joboffers[0] ) )
+							$this->notGranted();
+						else
+							$this->granted();
+					}
+					else
+					{
+						$this->notGranted();
+					}
+				}
+
+				break;
 
 			case "WRITE":
 				$joboffers = $jobOffer->getJobOffersForEntity(); // Job Offers for the logged Entity

@@ -192,7 +192,8 @@ class DBManager
 
 	public function getJobOffer($Id)
 	{
-		// This method does not need ACL check. It gets public information.
+		$acl = new AccessControlList();
+		$acl->checkJobOfferAccess("READ",$Id);
 
 		$jobOffer = new JobOffer();
 		return $jobOffer->getJobOffer($Id);
