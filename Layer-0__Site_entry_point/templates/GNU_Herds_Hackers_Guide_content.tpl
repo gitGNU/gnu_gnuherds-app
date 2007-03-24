@@ -523,9 +523,11 @@ ln -s Home.php index.php
 <li>
 <pre>
 cd locale/es_ES/LC_MESSAGES
-msgfmt messages.po
+msgcat messages.po iso_639.po iso_4217.po iso_3166.po > result.po
+msgfmt result.po
 locale/it_IT/LC_MESSAGES
-msgfmt messages.po
+msgcat messages.po iso_639.po iso_4217.po iso_3166.po > result.po
+msgfmt result.po
 ...
 /etc/init.d/apache2 reload
 </pre>
