@@ -226,7 +226,6 @@ msgstr "ERRO: Incapaz de apagar a fotografia ou logotipo!."
 msgid "GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors."
 msgstr "GNU Herds é uma associação %1democrática%4 sem fins lucrativos, cujo %2objectivo%4 é promover o desenvolvimento profissional de quem contribui para o Software Livre."
 
-#XXX: REMOVE ME: "Foi já desenvolvido o módulo de %5Classificados de Emprego%4."
 msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:"
 msgstr "O primeiro passo consistiu em desenvolver o módulo de %1Classificados de Emprego%2 e juntar vários modelos de %3Redes de Negócios%2. Algumas das funcionalidades dos Classificaso de Emprego são:"
 
@@ -560,7 +559,6 @@ msgstr "Instalar"
 msgid "Configure"
 msgstr "Configurar"
 
-#XXX: REMOVE ME: "Equipa OR Equipe?"
 msgid "Current work team"
 msgstr "Equipa de trabalho actual"
 
@@ -586,7 +584,6 @@ msgstr "Porquê outro servidor de Classificados de Emprego?"
 msgid "Because no one comply the below proposed conditions:"
 msgstr "Porque nenhum deles respeita todas as condições abaixo enunciadas:"
 
-#XXX: REMOVE ME: "Estar licenciado com a %1Affero GPL%2 ou semelhante, para proteger a utilização da aplicação numa rede informática."
 msgid "Use a license to cover use of the software over a computer network. The current %1Affero GPL%2 license will be replaced by the GPL v3 license when it be released. Anyhow, the project is always open to discuss this and any other subject."
 msgstr "Utilizar uma licença para proteger a utilização da aplicação numa rede informática. A actual licença %1Affero GPL%2 será substituída pela licença GPL v3 quando esta for distribuída. No entanto, o projecto estará sempre aberto a discutir este e outros assuntos."
 
@@ -852,7 +849,6 @@ msgstr "ERRO: Não foi especificado o identificador a apresentar!."
 msgid "These are the networks, or ways to set up one, which we know about:"
 msgstr "Estas são as redes, ou formas de criar uma, que conhecemos:"
 
-# XXX: Note the comma added at "end-users,"
 msgid "Menttes provides training, consulting, web sites, portals, extranets, intranets and custom web application development with Plone, Zope and Python. These services are provided for end-users, companies and consulting firms of any country."
 msgstr "Menttes proporcionam formação, consultadoria, páginas web, portais, extranets, intranets e desenvolvimento de aplicações web à medida baseadas em Plone, Zope e Python. Estes serviços são disponibilizados aos utilizadores finais, empresas e consultoras de qualquer país."
 
