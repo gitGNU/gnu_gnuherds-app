@@ -861,9 +861,6 @@ msgstr "rascunho"
 msgid "December"
 msgstr "Dezembro"
 
-msgid "Its mailing list:"
-msgstr "A sua lista de distribuição:"
-
 msgid "Flexible Business Networks"
 msgstr "Redes Flexíveis de Negócios"
 

@@ -841,9 +841,6 @@ msgstr "borrador"
 msgid "December"
 msgstr "Diciembre"
 
-msgid "Its mailing list:"
-msgstr "Su lista de correo:"
-
 msgid "Flexible Business Networks"
 msgstr "Redes de Negocios Flexibles"
 

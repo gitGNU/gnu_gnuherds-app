@@ -840,9 +840,6 @@ msgstr "bozza"
 msgid "December"
 msgstr "Dicembre"
 
-msgid "Its mailing list:"
-msgstr "Sua mailing list:"
-
 msgid "Flexible Business Networks"
 msgstr "Reti Aziende Flessibili"
 

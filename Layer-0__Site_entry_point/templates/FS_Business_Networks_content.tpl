@@ -39,9 +39,8 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<li>
 		<p>
-		<a href="http://www.fsfeurope.org/gbn/" target="_top">GNU Business Network</a><br>
+		GNU Business Network<br>
 		{t}Its{/t} <a href="http://mail.fsfeurope.org/pipermail/gnubiz-disc/2000-December/000014.html" target="_top">Definition</a> ({t}draft{/t}) - ({t}December{/t} 01, 2000)<br>
-		{t}Its mailing list:{/t} <a href="https://mail.gnubiz.org/mailman/listinfo/gnubiz-disc" target="_top">GBN discussion</a>
 		</p>
 	</li>
 

@@ -841,9 +841,6 @@ msgstr "brouillon"
 msgid "December"
 msgstr "Décembre"
 
-msgid "Its mailing list:"
-msgstr "Sa liste de diffusion :"
-
 msgid "Flexible Business Networks"
 msgstr "Réseaux d'affaires flexibles"
 
