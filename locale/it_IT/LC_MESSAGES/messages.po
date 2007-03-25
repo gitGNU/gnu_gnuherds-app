@@ -162,6 +162,10 @@ msgstr "Accesso non corretto: User o password errati, o problemi con il data bas
 msgid "To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the %1 domain to offices managed by FSF staff."
 msgstr "Per mantenere l'accesso ai dati dell'utente fisicamente sicuri, abbiamo proposto di spostare i servizi PostgreSQL e HTTP associati al dominio %1 negli uffici gestiti da personale FSF."
 
+#, fuzzy
+msgid "The %2GNU Herds%3 project is not an official part of %1the GNU Project%3."
+msgstr "El proyecto %2GNU Herds%3 no es oficialmente parte de %1El Proyecto GNU%3."
+
 #
 # Lost_Password_form.tpl
 #
