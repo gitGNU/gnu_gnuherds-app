@@ -25,6 +25,7 @@ Suite 225, San Francisco, CA 94107, USA
 <head>
 <title>GNU Herds - {'Free Software Association'|gettext}</title>
 <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
 <link rel="icon" href="/images/icons/gh-icon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="/css/gh-main.css">
 <style type="text/css">
