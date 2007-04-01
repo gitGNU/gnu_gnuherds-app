@@ -63,6 +63,8 @@ Suite 225, San Francisco, CA 94107, USA
 		  2='</i>'
 		}It seems to support the %1Condorcet method%2 and even "a mix of secret and public ballots".{/t}
 		</li>
+		<li><a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2006-12/msg00055.html" target="_top">demexp</a>
+		</li>
 		<li>{t}Some free GNU/Linux distributions use it own voting system.{/t}</li>
 		<li><a href="http://www.nongnu.org/ampu/" target="_top">AMPU</a>. {t}Stalled since March 2002.{/t}</li>
 	</ul>
