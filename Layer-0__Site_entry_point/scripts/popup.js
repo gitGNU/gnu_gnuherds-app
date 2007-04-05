@@ -55,6 +55,9 @@ if(nav||iex)document.onmousemove=get_mouse;
 // set dynamic coords
 function get_mouse(e)
 {
+  if(skin.visibility == "hidden")
+    return;
+
   var x,y;
 
   if(nav || n_6) x=e.pageX;
