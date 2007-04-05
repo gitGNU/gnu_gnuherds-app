@@ -17,13 +17,7 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-{literal}
-<style type="text/css">
-    #pup { position:absolute; visibility:hidden; z-index:200; width:130; }
-</style>
-
 <script type="text/javascript" src="scripts/popup.js"></script>
-{/literal}
 
 
 <form enctype="multipart/form-data" name="companyForm" method="post" action="Company.php">
@@ -86,7 +80,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr>
-<td align="right"><a href="javascript://" OnMouseOver="popup('{t}Default image size{/t}: 180x120','lightyellow',300);" OnMouseOut="kill()">{t}Photo or logo{/t}</a> : </td>
+<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}Default image size{/t}: 180x120','lightyellow',300);" OnMouseOut="kill()">{t}Photo or logo{/t}</label> : </td>
 <td> <input type="file" name="PhotoOrLogo" class="notRequired" value="{$smarty.session.PhotoOrLogo}"> </td>
 </tr>
 

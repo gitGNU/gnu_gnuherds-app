@@ -257,6 +257,21 @@ td
 	font-family: Arial, Helvetica, Georgia, sans-serif;
 }
 
+label.raisePopUp
+{
+	font-family: Arial, Helvetica, Georgia, sans-serif;
+	font-size: 12px;
+	color: #808000;
+}
+
+#pup
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 200;
+	width: 130;
+}
+
 select
 {
 	font-size: 12px;

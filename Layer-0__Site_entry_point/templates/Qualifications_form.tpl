@@ -17,17 +17,11 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-{literal}
-<style type="text/css">
-    #pup { position:absolute; visibility:hidden; z-index:200; width:130; }
-</style>
-
 <script type="text/javascript" src="scripts/qualifications.js"></script>
 <script type="text/javascript" src="scripts/qualifications_Skills.js"></script>
 <script type="text/javascript" src="scripts/qualifications_Languages.js"></script>
 <script type="text/javascript" src="scripts/qualifications_Contributions.js"></script>
 <script type="text/javascript" src="scripts/popup.js"></script>
-{/literal}
 
 
 <table align="center">
@@ -77,7 +71,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr valign="top">
-<td align="right"><a href="javascript://" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t}</a> : </td>
+<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t}</label> : </td>
 
 <td>{t}Product profiles{/t}<br>
 <select name="ProductProfileList[]" size="{$productProfiles|@count}" multiple="true" class="notRequired">
@@ -100,11 +94,11 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr valign="top">
-<td align="right"><a href="javascript://" OnMouseOver="popup('{t escape='no'
+<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t escape='no'
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</a> : </td>
+}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</label> : </td>
 <td colspan="3">
 
 <table cellpadding="0" cellspacing="0" width="100%">
@@ -183,11 +177,11 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t escape='no'
+<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t escape='no'
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Languages{/t}</a> : </td>
+}Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Languages{/t}</label> : </td>
 <td colspan="3">
 <table cellpadding="0" cellspacing="0" width="100%">
 <tr valign="top">
@@ -235,7 +229,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if $smarty.session.CertificationsList|@count >= 1 or $notYetRequestedCertifications|@count >= 1}
 <tr valign="top">
-<td align="right"><a href="javascript://" OnMouseOver="popup('{t}Request your certifications{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Certifications{/t}</a> : <br> </td>
+<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}Request your certifications{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Certifications{/t}</label> : <br> </td>
 <td colspan="3">
 
 <table cellspacing="0" cellpadding="0">
@@ -263,7 +257,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr valign="top">
-<td align="right"><a href="javascript://" OnMouseOver="popup('{t}URIs which prove your contritution to FS projects. For example: CVS web reference, email with patch or advices, etc.{/t}','lightyellow',300);" OnMouseOut="kill()">{'Contributions to FS projects'|gettext|strip:'&nbsp;'}</a>&nbsp;: <br> </td>
+<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}URIs which prove your contritution to FS projects. For example: CVS web reference, email with patch or advices, etc.{/t}','lightyellow',300);" OnMouseOut="kill()">{'Contributions to FS projects'|gettext|strip:'&nbsp;'}</label>&nbsp;: <br> </td>
 <td colspan="3"> 
 
 <table cellpadding="0" cellspacing="0">
@@ -318,7 +312,7 @@ URI: <input type="text" name="ContributionURI" maxlength="255" value="http://" c
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t}The format has to be: Minimum-Optimum. For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Desired wage rank{/t}</a> : </td>
+<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}The format has to be: Minimum-Optimum. For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Desired wage rank{/t}</label> : </td>
 <td colspan="3">
 <input type="text" name="DesiredWageRank" size="15" maxlength="30" class="required" value="{$smarty.session.DesiredWageRank}">
 <select name="WageRankCurrency" class="required">

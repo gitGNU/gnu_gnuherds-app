@@ -17,11 +17,6 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-{literal}
-<style type="text/css">
-    #pup { position:absolute; visibility:hidden; z-index:200; width:130; }
-</style>
-
 <script type="text/javascript" src="scripts/job_offer.js"></script>
 <script type="text/javascript" src="scripts/job_offer_Skills.js"></script>
 <script type="text/javascript" src="scripts/job_offer_Languages.js"></script>
@@ -30,7 +25,6 @@ Suite 225, San Francisco, CA 94107, USA
 <script type="text/javascript" src="scripts/job_offer_evalDisplay.js"></script>
 <script type="text/javascript" src="scripts/popup.js"></script>
 <script type="text/javascript" src="scripts/utils.js"></script>
-{/literal}
 
 
 <table align="center">
@@ -67,7 +61,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr>
-<td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t}The format could be for example{/t} \'dd/mm/yyyy\'.','lightyellow',300);" OnMouseOut="kill()">{t}Expiration date{/t}</a> : </td> <!-- XXX: It should be checked that the format is one of the accepted formats by de Data Base. 2007-12-12 seems to be accepted too. -->
+<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}The format could be for example{/t} \'dd/mm/yyyy\'.','lightyellow',300);" OnMouseOut="kill()">{t}Expiration date{/t}</label> : </td> <!-- XXX: It should be checked that the format is one of the accepted formats by de Data Base. 2007-12-12 seems to be accepted too. -->
 <td colspan="3"> <input type="text" name="ExpirationDate" class="required" value="{$smarty.session.jExpirationDate}"> </td>
 </tr>
 
@@ -119,7 +113,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t}The format has to be:{/t} {t}Minimum{/t}-{t}Optimum{/t}. {t}For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Wage rank{/t}</a> : </td>
+<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}The format has to be:{/t} {t}Minimum{/t}-{t}Optimum{/t}. {t}For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Wage rank{/t}</label> : </td>
 <td colspan="3">
 <input type="text" name="WageRank" size="15" maxlength="30" class="required" value="{$smarty.session.jWageRank}">
 <select name="WageRankCurrency" class="required">
@@ -132,7 +126,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr valign="top" id="EstimatedEffort" style="display:none">
-<td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t}For example:{/t} 48-56 {t}hours{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Estimated effort{/t}</a> : </td>
+<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}For example:{/t} 48-56 {t}hours{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Estimated effort{/t}</label> : </td>
 <td colspan="3">
 <input type="text" name="EstimatedEffort" size="15" maxlength="30" class="required" value="{$smarty.session.jEstimatedEffort}">
 <select name="TimeUnit" class="required">
@@ -167,7 +161,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t}</a> : </td>
+<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t}</label> : </td>
 
 <td>{t}Product profiles{/t}<br>
 <select name="ProductProfileList[]" size="{$productProfiles|@count}" multiple="true" class="notRequired">
@@ -190,11 +184,11 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr valign="top">
-<td align="right"><a href="javascript://" OnMouseOver="popup('{t escape='no'
+<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t escape='no'
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</a> : <br>(<a href="javascript:openPopUp('Skills','/Skills_Guide.php?heading&menu&loging_box',670,780);">{t}guide{/t}</a>) &nbsp; </td>
+}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</label> : <br>(<a href="javascript:openPopUp('Skills','/Skills_Guide.php?heading&menu&loging_box',670,780);">{t}guide{/t}</a>) &nbsp; </td>
 <td colspan="3">
 
 <table cellpadding="0" cellspacing="0" width="100%">
@@ -274,11 +268,11 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><a href="javascript://" OnMouseOver="popup('{t escape='no'
+<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t escape='no'
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Required languages{/t}</a> : </td>
+}Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Required languages{/t}</label> : </td>
 <td colspan="3">
 <table cellpadding="0" cellspacing="0" width="100%">
 <tr valign="top">
