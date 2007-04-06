@@ -24,6 +24,8 @@ Suite 225, San Francisco, CA 94107, USA
 <script type="text/javascript" src="scripts/popup.js"></script>
 
 
+<form name="qualificationsForm" method="post" action="Qualifications.php">
+
 <table align="center">
 
 {if $smarty.session.HasQualifications != '1' }
@@ -41,8 +43,6 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="footnote">{t}To demand any form reorganization: the addition to the lists, update, deletion of a profile, skill, etc., you can send an email to{/t} {mailto address='form-options@gnuherds.org'}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
-
-<form name="qualificationsForm" method="post" action="Qualifications.php">
 
 <tr> <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td> </tr>
 
@@ -74,19 +74,19 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t}</label> : </td>
 
 <td>{t}Product profiles{/t}<br>
-<select name="ProductProfileList[]" size="{$productProfiles|@count}" multiple="true" class="notRequired">
+<select name="ProductProfileList[]" size="{$productProfiles|@count}" multiple="multiple" class="notRequired">
 {html_options values=$productProfiles output=$productProfiles selected=$smarty.session.ProductProfileList}
 </select>
 </td>
 
 <td>{t}Professional profiles{/t}<br>
-<select name="ProfessionalProfileList[]" size="{$professionalProfilesId|@count}" multiple="true" class="notRequired">
+<select name="ProfessionalProfileList[]" size="{$professionalProfilesId|@count}" multiple="multiple" class="notRequired">
 {html_options values=$professionalProfilesId output=$professionalProfilesName selected=$smarty.session.ProfessionalProfileList}
 </select>
 </td>
 
 <td>{t}Field profiles{/t}<br>
-<select name="FieldProfileList[]" size="{$fieldProfilesId|@count}" multiple="true" class="notRequired">
+<select name="FieldProfileList[]" size="{$fieldProfilesId|@count}" multiple="multiple" class="notRequired">
 {html_options values=$fieldProfilesId output=$fieldProfilesName selected=$smarty.session.FieldProfileList}
 </select>
 </td>
@@ -152,18 +152,18 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td align="center">
 
-<select name="ViewSkillList[]" id="ViewSkillList" size="3" multiple="true" class="notRequired" OnClick="document.qualificationsForm.skillKnowledgeLevel.focus(); document.qualificationsForm.ViewSkillList.focus(); {foreach from=$skillsBySets item=s key=setId} document.qualificationsForm.Skill_{$setId|strip:'_'}.value=''; {/foreach} {foreach from=$skillsBySets item=s key=setId} document.qualificationsForm.Skill_{$setId|strip:'_'}.value=document.qualificationsForm.SkillList[document.qualificationsForm.ViewSkillList.selectedIndex].value; {/foreach}  UpdateWithSelectedSkill(true);">
+<select name="ViewSkillList[]" id="ViewSkillList" size="3" multiple="multiple" class="notRequired" OnClick="document.qualificationsForm.skillKnowledgeLevel.focus(); document.qualificationsForm.ViewSkillList.focus(); {foreach from=$skillsBySets item=s key=setId} document.qualificationsForm.Skill_{$setId|strip:'_'}.value=''; {/foreach} {foreach from=$skillsBySets item=s key=setId} document.qualificationsForm.Skill_{$setId|strip:'_'}.value=document.qualificationsForm.SkillList[document.qualificationsForm.ViewSkillList.selectedIndex].value; {/foreach}  UpdateWithSelectedSkill(true);">
 </select><br>
 <a href="javascript://" OnClick="DeleteSkill(document.qualificationsForm.ViewSkillList.selectedIndex);"><strong>{t}Delete{/t}</strong></a>
 
 <div id="SkillLists" style="display:none">
-<select name="SkillList[]" id="SkillList" size="4" multiple="true">
+<select name="SkillList[]" id="SkillList" size="4" multiple="multiple">
 {html_options values=$smarty.session.SkillList output=$smarty.session.SkillList}
 </select><br>
-<select name="SkillKnowledgeLevelList[]" id="SkillKnowledgeLevelList" size="4" multiple="true">
+<select name="SkillKnowledgeLevelList[]" id="SkillKnowledgeLevelList" size="4" multiple="multiple">
 {html_options values=$smarty.session.SkillKnowledgeLevelList output=$smarty.session.SkillKnowledgeLevelList}
 </select><br>
-<select name="SkillExperienceLevelList[]" id="SkillExperienceLevelList" size="4" multiple="true">
+<select name="SkillExperienceLevelList[]" id="SkillExperienceLevelList" size="4" multiple="multiple">
 {html_options values=$smarty.session.SkillExperienceLevelList output=$smarty.session.SkillExperienceLevelList}
 </select><br>
 </div>
@@ -204,18 +204,18 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 <td align="center">
-<select name="ViewLanguageList[]" id="ViewLanguageList" size="4" multiple="true" class="required" OnClick="UpdateWithSelectedItem(true);">
+<select name="ViewLanguageList[]" id="ViewLanguageList" size="4" multiple="multiple" class="required" OnClick="UpdateWithSelectedItem(true);">
 </select><br>
 <a href="javascript://" OnClick="DeleteItem(document.qualificationsForm.ViewLanguageList.selectedIndex);"><strong>{t}Delete{/t}</strong></a>
 
 <div id="LanguageLists" style="display:none">
-<select name="LanguageList[]" id="LanguageList" size="4" multiple="true">
+<select name="LanguageList[]" id="LanguageList" size="4" multiple="multiple">
 {html_options values=$smarty.session.LanguageList output=$smarty.session.LanguageList}
 </select><br>
-<select name="LanguageSpokenLevelList[]" id="LanguageSpokenLevelList" size="4" multiple="true">
+<select name="LanguageSpokenLevelList[]" id="LanguageSpokenLevelList" size="4" multiple="multiple">
 {html_options values=$smarty.session.LanguageSpokenLevelList output=$smarty.session.LanguageSpokenLevelList}
 </select><br>
-<select name="LanguageWrittenLevelList[]" id="LanguageWrittenLevelList" size="4" multiple="true">
+<select name="LanguageWrittenLevelList[]" id="LanguageWrittenLevelList" size="4" multiple="multiple">
 {html_options values=$smarty.session.LanguageWrittenLevelList output=$smarty.session.LanguageWrittenLevelList}
 </select><br>
 </div>
@@ -272,18 +272,18 @@ URI: <input type="text" name="ContributionURI" maxlength="255" value="http://" c
 <a href="javascript://" OnClick="AddContributionItem();"><strong>=== {t}Add{/t} ===&gt;</strong></a>
 </td>
 <td width="0%" align="center">
-<select name="VisibleContributionsList[]" id="VisibleContributionsList" size="4" multiple="true" class="notRequired"> <!-- The list of options is loaded via JavaScript. See the InitializationOnLoad() JavaScript funtion. -->
+<select name="VisibleContributionsList[]" id="VisibleContributionsList" size="4" multiple="multiple" class="notRequired"> <!-- The list of options is loaded via JavaScript. See the InitializationOnLoad() JavaScript funtion. -->
 </select><br>
 <a href="javascript://" OnClick="DeleteContributionItem(document.qualificationsForm.VisibleContributionsList.selectedIndex);"><strong>{t}Delete{/t}</strong></a>
 
 <div id="ContributionLists" style="display:none">
-<select name="ContributionsListProject[]" id="ContributionsListProject" size="4" multiple="true">
+<select name="ContributionsListProject[]" id="ContributionsListProject" size="4" multiple="multiple">
 {html_options values=$smarty.session.ContributionsListProject output=$smarty.session.ContributionsListProject}
 </select><br>
-<select name="ContributionsListDescription[]" id="ContributionsListDescription" size="4" multiple="true">
+<select name="ContributionsListDescription[]" id="ContributionsListDescription" size="4" multiple="multiple">
 {html_options values=$smarty.session.ContributionsListDescription output=$smarty.session.ContributionsListDescription}
 </select><br>
-<select name="ContributionsListURI[]" id="ContributionsListURI" size="4" multiple="true">
+<select name="ContributionsListURI[]" id="ContributionsListURI" size="4" multiple="multiple">
 {html_options values=$smarty.session.ContributionsListURI output=$smarty.session.ContributionsListURI}
 </select><br>
 </div>
@@ -385,8 +385,6 @@ Reference: http://es.php.net/types.array
 </td>
 </tr>
 
-</form>
-
 {if $smarty.session.HasQualifications == '1'} <!-- update -->
 <tr align="center">
 <td colspan="4" align="center">
@@ -397,4 +395,6 @@ Reference: http://es.php.net/types.array
 {/if}
 
 </table>
+
+</form>
 

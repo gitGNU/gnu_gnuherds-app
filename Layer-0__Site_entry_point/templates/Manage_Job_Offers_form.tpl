@@ -25,6 +25,8 @@ Suite 225, San Francisco, CA 94107, USA
 	<p>{t}You do not have any defined job offer.{/t}</p><p>&nbsp;</p>
 {else}
 
+<form name="deleteJobOffersForm" method="post" action="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
+
 <table align="center" border="0" width="100%">
 
 <tr valign="top">
@@ -40,8 +42,6 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="tdTitle">{'Finalist'|gettext|strip:'&nbsp;'}</td>
 <td class="tdTitle">{'Selected'|gettext|strip:'&nbsp;'}</td>
 </tr>
-
-<form name="deleteJobOffersForm" method="post" action="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
 
 {foreach from=$smarty.session.M_JobOfferId item=Id key=i}
 
@@ -141,9 +141,9 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
-</form>
-
 </table>
+
+</form>
 
 {/if}
 
