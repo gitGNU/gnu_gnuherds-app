@@ -23,11 +23,11 @@ function evalAcademicQualificationDisplay()
 	// Academic qualification
 	if (document.jobOfferForm.AllowPersonApplications.checked==true)
 	{
-		document.getElementById("AcademicQualification").style.display = "";
+		document.getElementById("AcademicQualificationDivision").style.display = "";
 	}
 	else
 	{
-		document.getElementById("AcademicQualification").style.display = "none";
+		document.getElementById("AcademicQualificationDivision").style.display = "none";
 		document.jobOfferForm.AcademicQualification.value= "";
 	}
 
@@ -40,11 +40,11 @@ function evalEstimatedEffortDisplay()
 	// Estimated effort
 	if (document.jobOfferForm.WageRankByPeriod.value=="by project")
 	{
-		document.getElementById("EstimatedEffort").style.display = "";
+		document.getElementById("EstimatedEffortDivision").style.display = "";
 	}
 	else
 	{
-		document.getElementById("EstimatedEffort").style.display = "none";
+		document.getElementById("EstimatedEffortDivision").style.display = "none";
 		document.jobOfferForm.EstimatedEffort.value= "";
 		document.jobOfferForm.TimeUnit.value= "";
 	}

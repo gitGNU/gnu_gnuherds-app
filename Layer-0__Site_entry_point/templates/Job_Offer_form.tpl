@@ -49,31 +49,31 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr valign="top">
 <td align="right">{t}Vacancy title{/t} : </td>
-<td colspan="3"> <input type="text" name="VacancyTitle" size="65" maxlength="100" value="{t}Filled automatically{/t}" disabled> </td>
+<td colspan="3"> <input type="text" name="VacancyTitle" id="VacancyTitle" size="65" maxlength="100" value="{t}Filled automatically{/t}" disabled> </td>
 <input type="hidden" name="VacancyTitleWarningMessage" value="{t}Empty professional profile{/t}">
 </tr>
 
 <tr valign="top">
-<td align="right">{t}Your offer reference{/t} : </td>
-<td colspan="3"> <input type="text" name="EmployerJobOfferReference" class="notRequired" value="{$smarty.session.jEmployerJobOfferReference}"> </td>
+<td align="right"><label for="EmployerJobOfferReference">{t}Your offer reference{/t} : </label></td>
+<td colspan="3"> <input type="text" name="EmployerJobOfferReference" id="EmployerJobOfferReference" class="notRequired" value="{$smarty.session.jEmployerJobOfferReference}"> </td>
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr>
-<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}The format could be for example{/t} \'dd/mm/yyyy\'.','lightyellow',300);" OnMouseOut="kill()">{t}Expiration date{/t}</label> : </td> <!-- XXX: It should be checked that the format is one of the accepted formats by de Data Base. 2007-12-12 seems to be accepted too. -->
-<td colspan="3"> <input type="text" name="ExpirationDate" class="required" value="{$smarty.session.jExpirationDate}"> </td>
+<td align="right"><span class="must">*</span><label for="ExpirationDate" class="raisePopUp" OnMouseOver="popup('{t}The format could be for example{/t} \'dd/mm/yyyy\'.','lightyellow',300);" OnMouseOut="kill()">{t}Expiration date{/t} : </label></td> <!-- XXX: It should be checked that the format is one of the accepted formats by de Data Base. 2007-12-12 seems to be accepted too. -->
+<td colspan="3"> <input type="text" name="ExpirationDate" id="ExpirationDate" class="required" value="{$smarty.session.jExpirationDate}"> </td>
 </tr>
 
 <tr valign="top">
-<td align="right">{t}The offer is closed{/t} : </td>
-<td colspan="3"> <input type="checkbox" name="Closed" {if $smarty.session.jClosed eq 'true'} checked {/if} > </td>
+<td align="right"><label for="Closed">{t}The offer is closed{/t} : </label></td>
+<td colspan="3"> <input type="checkbox" name="Closed" id="Closed" {if $smarty.session.jClosed eq 'true'} checked {/if} > </td>
 </tr>
 
 {* This is commented due to, although it is already developed, hiding the job offer employer is not good practice.
 <tr valign="top">
-<td align="right">{t}Hide employer{/t} : </td>
-<td colspan="3"> <input type="checkbox" name="HideEmployer" {if $smarty.session.jHideEmployer eq 'true'} checked {/if} > </td>
+<td align="right"><label for="HideEmployer">{t}Hide employer{/t} : </label></td>
+<td colspan="3"> <input type="checkbox" name="HideEmployer" id="HideEmployer" {if $smarty.session.jHideEmployer eq 'true'} checked {/if} > </td>
 </tr>
 *}
 
@@ -81,22 +81,22 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr valign="top">
 <td align="right"><span class="must">*</span>{t}Allow applications from{/t} : </td>
-<td colspan="3"> <input type="checkbox" name="AllowPersonApplications" class="required" {if $smarty.session.jAllowPersonApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();">{t}Persons{/t}</td>
+<td colspan="3"> <input type="checkbox" name="AllowPersonApplications" id="AllowPersonApplications" class="required" {if $smarty.session.jAllowPersonApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();"><label for="AllowPersonApplications">{t}Persons{/t}</label></td>
 </tr>
 <tr valign="top">
 <td></td>
-<td colspan="3"> <input type="checkbox" name="AllowCompanyApplications" class="required" {if $smarty.session.jAllowCompanyApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();">{t}Companies{/t}</td>
+<td colspan="3"> <input type="checkbox" name="AllowCompanyApplications" id="AllowCompanyApplications" class="required" {if $smarty.session.jAllowCompanyApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();"><label for="AllowCompanyApplications">{t}Companies{/t}</label></td>
 </tr>
 <tr valign="top">
 <td></td>
-<td colspan="3"> <input type="checkbox" name="AllowOrganizationApplications" class="required" {if $smarty.session.jAllowOrganizationApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();">{t}non-profit Organizations{/t}</td>
+<td colspan="3"> <input type="checkbox" name="AllowOrganizationApplications" id="AllowOrganizationApplications" class="required" {if $smarty.session.jAllowOrganizationApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();"><label for="AllowOrganizationApplications">{t}non-profit Organizations{/t}</label></td>
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr>
-<td align="right"><span class="must">*</span>{t}Vacancies{/t} : </td>
-<td colspan="3"> <input type="text" name="Vacancies" size="3" maxlength="3" class="required" value="{$smarty.session.jVacancies}"> </td>
+<td align="right"><span class="must">*</span><label for="Vacancies">{t}Vacancies{/t} : </label></td>
+<td colspan="3"> <input type="text" name="Vacancies" id="Vacancies" size="3" maxlength="3" class="required" value="{$smarty.session.jVacancies}"> </td>
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
@@ -104,32 +104,32 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}CONTRACT{/t}</td> </tr>
 
 <tr>
-<td align="right"><span class="must">*</span>{t}Contract type{/t} : </td>
+<td align="right"><span class="must">*</span><label for="ContractType">{t}Contract type{/t} : </label></td>
 <td colspan="3">
-<select name="ContractType" class="required">
+<select name="ContractType" id="ContractType" class="required">
 {html_options values=$contractTypesId output=$contractTypesIdTranslated selected=$smarty.session.jContractType}
 </select>
 </td>
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}The format has to be:{/t} {t}Minimum{/t}-{t}Optimum{/t}. {t}For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Wage rank{/t}</label> : </td>
+<td align="right"><span class="must">*</span><label for="WageRank" class="raisePopUp" OnMouseOver="popup('{t}The format has to be:{/t} {t}Minimum{/t}-{t}Optimum{/t}. {t}For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Wage rank{/t} : </label></td>
 <td colspan="3">
-<input type="text" name="WageRank" size="15" maxlength="30" class="required" value="{$smarty.session.jWageRank}">
-<select name="WageRankCurrency" class="required">
+<input type="text" name="WageRank" id="WageRank" size="15" maxlength="30" class="required" value="{$smarty.session.jWageRank}">
+<select name="WageRankCurrency" id="WageRankCurrency" class="required">
 {html_options values=$currenciesThreeLetter output=$currenciesName selected=$smarty.session.jWageRankCurrency}
 </select>
-<select name="WageRankByPeriod" class="required" onChange="evalEstimatedEffortDisplay();">
+<select name="WageRankByPeriod" id="WageRankByPeriod" class="required" onChange="evalEstimatedEffortDisplay();">
 {html_options values=$byPeriodId output=$byPeriodName selected=$smarty.session.jWageRankByPeriod}
 </select>
 </td>
 </tr>
 
-<tr valign="top" id="EstimatedEffort" style="display:none">
-<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}For example:{/t} 48-56 {t}hours{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Estimated effort{/t}</label> : </td>
+<tr valign="top" id="EstimatedEffortDivision" style="display:none">
+<td align="right"><span class="must">*</span><label for="EstimatedEffort" class="raisePopUp" OnMouseOver="popup('{t}For example:{/t} 48-56 {t}hours{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Estimated effort{/t} : </label></td>
 <td colspan="3">
-<input type="text" name="EstimatedEffort" size="15" maxlength="30" class="required" value="{$smarty.session.jEstimatedEffort}">
-<select name="TimeUnit" class="required">
+<input type="text" name="EstimatedEffort" id="EstimatedEffort" size="15" maxlength="30" class="required" value="{$smarty.session.jEstimatedEffort}">
+<select name="TimeUnit" id="TimeUnit" class="required">
 {html_options values=$timeUnitsId output=$timeUnitsName selected=$smarty.session.jTimeUnit}
 </select>
 </td>
@@ -140,42 +140,42 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td> </tr>
 
 <tr>
-<td align="right">{'Professional experience since'|gettext|strip:'&nbsp;'}&nbsp;: </td>
+<td align="right"><label for="ProfessionalExperienceSinceYear">{'Professional experience since'|gettext|strip:'&nbsp;'}&nbsp;: </label></td>
 <td colspan="3">
 {if $smarty.session.jProfessionalExperienceSinceYear eq ''}
 	{assign var=ProfessionalExperienceSinceYear value='--'}
 {else}
 	{assign var=ProfessionalExperienceSinceYear value="01-01-`$smarty.session.jProfessionalExperienceSinceYear`"}
 {/if}
-{html_select_date prefix="ProfessionalExperienceSince" time="$ProfessionalExperienceSinceYear" start_year="-33" end_year="+0" display_days=false display_months=false year_empty="" year_extra="class=notRequired"}
+{html_select_date prefix="ProfessionalExperienceSince" time="$ProfessionalExperienceSinceYear" start_year="-33" end_year="+0" display_days=false display_months=false year_empty="" year_extra="id=ProfessionalExperienceSinceYear class=notRequired"}
 </td>
 </tr>
 
-<tr id="AcademicQualification" style="display:none">
-<td align="right">{t}Academic qualification{/t} : </td>
+<tr id="AcademicQualificationDivision" style="display:none">
+<td align="right"><label for="AcademicQualification">{t}Academic qualification{/t} : </label></td>
 <td colspan="3">
-<select name="AcademicQualification" class="notRequired">
+<select name="AcademicQualification" id="AcademicQualification" class="notRequired">
 {html_options values=$academicQualificationsId output=$academicQualificationsIdTranslated selected=$smarty.session.jAcademicQualification}
 </select>
 </td>
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t}</label> : </td>
+<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t} : </label></td>
 
-<td>{t}Product profiles{/t}<br>
-<select name="ProductProfileList[]" size="{$productProfiles|@count}" multiple="multiple" class="notRequired">
+<td><label for="ProductProfileList">{t}Product profiles{/t}</label><br>
+<select name="ProductProfileList[]" id="ProductProfileList" size="{$productProfiles|@count}" multiple="multiple" class="notRequired">
 {html_options values=$productProfiles output=$productProfiles selected=$smarty.session.jProductProfileList}
 </select>
 </td>
 
-<td>{t}Professional profiles{/t}<br>
+<td><label for="ProfessionalProfileList">{t}Professional profiles{/t}</label><br>
 <select name="ProfessionalProfileList[]" id="ProfessionalProfileList" size="{$professionalProfilesId|@count}" multiple="multiple" class="required" onChange="UpdateVacancyTitle();">
 {html_options values=$professionalProfilesId output=$professionalProfilesName selected=$smarty.session.jProfessionalProfileList}
 </select>
 </td>
 
-<td>{t}Field profiles{/t}<br>
+<td><label for="FieldProfileList">{t}Field profiles{/t}</label><br>
 <select name="FieldProfileList[]" id="FieldProfileList" size="{$fieldProfilesId|@count}" multiple="multiple" class="notRequired" onChange="UpdateVacancyTitle();">
 {html_options values=$fieldProfilesId output=$fieldProfilesName selected=$smarty.session.jFieldProfileList}
 </select>
@@ -188,17 +188,17 @@ Suite 225, San Francisco, CA 94107, USA
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</label> : <br>(<a href="javascript:openPopUp('Skills','/Skills_Guide.php?heading&amp;menu&amp;loging_box',670,780);">{t}guide{/t}</a>) &nbsp; </td>
+}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t} : </label><br>(<a href="javascript:openPopUp('Skills','/Skills_Guide.php?heading&amp;menu&amp;loging_box',670,780);">{t}guide{/t}</a>) &nbsp; </td>
 <td colspan="3">
 
 <table cellpadding="0" cellspacing="0" width="100%">
 {foreach from=$skillsBySets item=skillIds key=skillSetTypeId}
 <tr>
 <td>
-{$skillSetTypeId|gettext|strip:'&nbsp;'}:&nbsp;
+<label for="Skill_{$skillSetTypeId|strip:'_'}">{$skillSetTypeId|gettext|strip:'&nbsp;'}:&nbsp;</label>
 </td>
 <td>
-<select name="Skill_{$skillSetTypeId|strip:'_'}" class="notRequired" onChange="{foreach from=$skillsBySets item=s key=setId}{if $setId neq $skillSetTypeId} document.jobOfferForm.Skill_{$setId|strip:'_'}.value=''; {/if}{/foreach} document.jobOfferForm.Skill.value = document.jobOfferForm.Skill_{$skillSetTypeId|strip:'_'}.value; ResetSkillLevels();"> <!-- We raise it here due it is not automatically raised with the previous line ^ -->
+<select name="Skill_{$skillSetTypeId|strip:'_'}" id="Skill_{$skillSetTypeId|strip:'_'}" class="notRequired" onChange="{foreach from=$skillsBySets item=s key=setId}{if $setId neq $skillSetTypeId} document.jobOfferForm.Skill_{$setId|strip:'_'}.value=''; {/if}{/foreach} document.jobOfferForm.Skill.value = document.jobOfferForm.Skill_{$skillSetTypeId|strip:'_'}.value; ResetSkillLevels();"> <!-- We raise it here due it is not automatically raised with the previous line ^ -->
 {html_options values=$skillIds output=$skillIds selected=$smarty.session.jSkillList[0]}
 </select><br>
 </td>
@@ -229,13 +229,13 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td>
 <br>
-{t}Knowledge level{/t}:
-<select name="skillKnowledgeLevel" class="notRequired" disabled onChange="UpdateSkill(); UpdateVacancyTitle();">
+<label for="skillKnowledgeLevel">{t}Knowledge level{/t}:</label>
+<select name="skillKnowledgeLevel" id="skillKnowledgeLevel" class="notRequired" disabled onChange="UpdateSkill(); UpdateVacancyTitle();">
 {html_options values=$skillKnowledgeLevelsId output=$skillKnowledgeLevelsName}
 </select><br>
 
-{t}Experience level{/t}:
-<select name="skillExperienceLevel" class="notRequired" disabled onChange="UpdateSkill(); UpdateVacancyTitle();">
+<label for="skillExperienceLevel">{t}Experience level{/t}:</label>
+<select name="skillExperienceLevel" id="skillExperienceLevel" class="notRequired" disabled onChange="UpdateSkill(); UpdateVacancyTitle();">
 {html_options values=$skillExperienceLevelsId output=$skillExperienceLevelsName}
 </select> <br>
 <br>
@@ -268,27 +268,27 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t escape='no'
+<td align="right"><span class="must">*</span><label for="Language" class="raisePopUp" OnMouseOver="popup('{t escape='no'
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Required languages{/t}</label> : </td>
+}Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Required languages{/t} : </label></td>
 <td colspan="3">
 <table cellpadding="0" cellspacing="0" width="100%">
 <tr valign="top">
 <td>
 
-<select name="Language" class="required" onChange="ResetLevels();">
+<select name="Language" id="Language" class="required" onChange="ResetLevels();">
 {html_options values=$languagesName output=$languagesNameTranslated}
 </select><br>
 
-{t}Spoken level{/t}:
-<select name="languageSpokenLevel" class="required" disabled onChange="UpdateIdiom(); UpdateVacancyTitle();">
+<label for="languageSpokenLevel">{t}Spoken level{/t}:</label>
+<select name="languageSpokenLevel" id="languageSpokenLevel" class="required" disabled onChange="UpdateIdiom(); UpdateVacancyTitle();">
 {html_options values=$languagesSpokenLevelsId output=$languagesSpokenLevelsName}
 </select><br>
 
-{t}Written level{/t}:
-<select name="languageWrittenLevel" class="required" disabled onChange="UpdateIdiom(); UpdateVacancyTitle();">
+<label for="languageWrittenLevel">{t}Written level{/t}:</label>
+<select name="languageWrittenLevel" id="languageWrittenLevel" class="required" disabled onChange="UpdateIdiom(); UpdateVacancyTitle();">
 {html_options values=$languagesWrittenLevelsId output=$languagesWrittenLevelsName}
 </select>
 
@@ -322,7 +322,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $smarty.session.jAllowPersonApplications eq 'true' or $smarty.session.jAllowCompanyApplications eq 'true' or $smarty.session.jAllowOrganizationApplications eq 'true'}
 
 <tr valign="top">
-<td align="right">Certifications : <br> </td>
+<td align="right"><label for="CertificationsList">Certifications : </label><br> </td>
 <td colspan="3">
 
 <table cellspacing="0" cellpadding="0">
@@ -332,9 +332,9 @@ Suite 225, San Francisco, CA 94107, USA
 	  or ( $smarty.session.jAllowOrganizationApplications eq 'true' and $certificationsList[3][$i] eq 't' )
 	}
 		{if is_array($smarty.session.jCertificationsList) and in_array($certification, $smarty.session.jCertificationsList) }
-			<tr> <td> <input type="checkbox" name="CertificationsList[]" value="{$certification}" class="notRequired" checked>{$certification}</td> </tr>
+			<tr> <td> <input type="checkbox" name="CertificationsList[]" id="CertificationsList" value="{$certification}" class="notRequired" checked>{$certification}</td> </tr>
 		{else}
-			<tr> <td> <input type="checkbox" name="CertificationsList[]" value="{$certification}" class="notRequired">{$certification}</td> </tr>
+			<tr> <td> <input type="checkbox" name="CertificationsList[]" id="CertificationsList" value="{$certification}" class="notRequired">{$certification}</td> </tr>
 		{/if}
 	{/if}
 {/foreach}
@@ -347,8 +347,8 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr valign="top">
-<td align="right">{'Experience with FS projects'|gettext|strip:'&nbsp;'}&nbsp;: <br> </td>
-<td colspan="3"> <input type="text" name="FreeSoftwareExperiences" size="66" maxlength="60" class="notRequired" value="{$smarty.session.jFreeSoftwareExperiences}"> </td>
+<td align="right"><label for="FreeSoftwareExperiences">{'Experience with FS projects'|gettext|strip:'&nbsp;'}&nbsp;: </label><br> </td>
+<td colspan="3"> <input type="text" name="FreeSoftwareExperiences" id="FreeSoftwareExperiences" size="66" maxlength="60" class="notRequired" value="{$smarty.session.jFreeSoftwareExperiences}"> </td>
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
@@ -356,30 +356,30 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}RESIDENCE LOCATION{/t}</td> </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span>{t}Telework{/t} : </td>
-<td colspan="3"> <input type="checkbox" name="Telework" class="required" {if $smarty.session.jTelework eq 'true'} checked {/if}  onChange="ViewAddress();"> </td>
+<td align="right"><span class="must">*</span><label for="Telework">{t}Telework{/t} : </label></td>
+<td colspan="3"> <input type="checkbox" name="Telework" id="Telework" class="required" {if $smarty.session.jTelework eq 'true'} checked {/if}  onChange="ViewAddress();"> </td>
 </tr>
 
 <tr>
-<td align="right">{t}City{/t} : </td>
-<td colspan="3"> <input type="text" name="City" size="30" maxlength="30" value="{$smarty.session.jCity}" class="notRequired" {if $smarty.session.jTelework eq 'true'} disabled {/if} > </td>
+<td align="right"><label for="City">{t}City{/t} : </label></td>
+<td colspan="3"> <input type="text" name="City" id="City" size="30" maxlength="30" value="{$smarty.session.jCity}" class="notRequired" {if $smarty.session.jTelework eq 'true'} disabled {/if} > </td>
 </tr>
 <tr>
-<td align="right">{t}State / Province{/t} : </td>
-<td colspan="3"> <input type="text" name="StateProvince" size="30" maxlength="30" value="{$smarty.session.jStateProvince}" class="notRequired" {if $smarty.session.jTelework eq 'true'} disabled {/if} > </td>
+<td align="right"><label for="StateProvince">{t}State / Province{/t} : </label></td>
+<td colspan="3"> <input type="text" name="StateProvince" id="StateProvince" size="30" maxlength="30" value="{$smarty.session.jStateProvince}" class="notRequired" {if $smarty.session.jTelework eq 'true'} disabled {/if} > </td>
 </tr>
 <tr>
-<td align="right"><span class="must">*</span>{t}Country{/t} : </td>
+<td align="right"><span class="must">*</span><label for="CountryCode">{t}Country{/t} : </label></td>
 <td colspan="3">
-<select name="CountryCode" class="required" {if $smarty.session.jTelework eq 'true'} disabled {/if} >
+<select name="CountryCode" id="CountryCode" class="required" {if $smarty.session.jTelework eq 'true'} disabled {/if} >
 {html_options values=$countryTwoLetter output=$countryNames selected=$smarty.session.jCountryCode}
 </select>
 </td>
 </tr>
 
 <tr valign="top">
-<td align="right">{t}Available to travel{/t} : </td>
-<td colspan="3"> <input type="checkbox" name="AvailableToTravel" class="notRequired" {if $smarty.session.jAvailableToTravel eq 'true'} checked {/if} > </td>
+<td align="right"><label for="AvailableToTravel">{t}Available to travel{/t} : </label></td>
+<td colspan="3"> <input type="checkbox" name="AvailableToTravel" id="AvailableToTravel" class="notRequired" {if $smarty.session.jAvailableToTravel eq 'true'} checked {/if} > </td>
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr> 

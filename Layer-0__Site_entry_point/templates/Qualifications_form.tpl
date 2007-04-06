@@ -47,46 +47,46 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td> </tr>
 
 <tr>
-<td align="right"><span class="must">*</span>{'Professional experience since'|gettext|strip:'&nbsp;'}&nbsp;: </td>
+<td align="right"><span class="must">*</span><label for="ProfessionalExperienceSinceYear">{'Professional experience since'|gettext|strip:'&nbsp;'}&nbsp;: </label></td>
 <td colspan="3">
 {if $smarty.session.ProfessionalExperienceSinceYear eq ''}
 	{assign var=ProfessionalExperienceSinceYear value='--'}
 {else}
 	{assign var=ProfessionalExperienceSinceYear value="01-01-`$smarty.session.ProfessionalExperienceSinceYear`"}
 {/if}
-{html_select_date prefix="ProfessionalExperienceSince" time="$ProfessionalExperienceSinceYear" start_year="-82" end_year="+0" display_days=false display_months=false year_empty="" year_extra="class=required"}
+{html_select_date prefix="ProfessionalExperienceSince" time="$ProfessionalExperienceSinceYear" start_year="-82" end_year="+0" display_days=false display_months=false year_empty="" year_extra="id=ProfessionalExperienceSinceYear class=required"}
 </td>
 </tr>
 
 {if $smarty.session.LoginType eq 'Person' }
 <tr valign="top">
-<td align="right">{t}Academic qualification{/t} : </td>
+<td align="right"><label for="AcademicQualification">{t}Academic qualification{/t} : </label></td>
 <td colspan="3">
-<select name="AcademicQualification" class="notRequired">
+<select name="AcademicQualification" id="AcademicQualification" class="notRequired">
 {html_options values=$academicQualificationsId output=$academicQualificationsIdTranslated selected=$smarty.session.AcademicQualification}
 </select> <br>
-{t}Description{/t}: <input type="text" name="AcademicQualificationDescription" size="35" maxlength="80" value="{$smarty.session.AcademicQualificationDescription}" class="notRequired">
+<label for="AcademicQualificationDescription">{t}Description{/t}: </label><input type="text" name="AcademicQualificationDescription" id="AcademicQualificationDescription" size="35" maxlength="80" value="{$smarty.session.AcademicQualificationDescription}" class="notRequired">
 </td>
 </tr>
 {/if}
 
 <tr valign="top">
-<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t}</label> : </td>
+<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t} : </label></td>
 
-<td>{t}Product profiles{/t}<br>
-<select name="ProductProfileList[]" size="{$productProfiles|@count}" multiple="multiple" class="notRequired">
+<td><label for="ProductProfileList">{t}Product profiles{/t}</label><br>
+<select name="ProductProfileList[]" id="ProductProfileList" size="{$productProfiles|@count}" multiple="multiple" class="notRequired">
 {html_options values=$productProfiles output=$productProfiles selected=$smarty.session.ProductProfileList}
 </select>
 </td>
 
-<td>{t}Professional profiles{/t}<br>
-<select name="ProfessionalProfileList[]" size="{$professionalProfilesId|@count}" multiple="multiple" class="notRequired">
+<td><label for="ProfessionalProfileList">{t}Professional profiles{/t}</label><br>
+<select name="ProfessionalProfileList[]" id="ProfessionalProfileList" size="{$professionalProfilesId|@count}" multiple="multiple" class="notRequired">
 {html_options values=$professionalProfilesId output=$professionalProfilesName selected=$smarty.session.ProfessionalProfileList}
 </select>
 </td>
 
-<td>{t}Field profiles{/t}<br>
-<select name="FieldProfileList[]" size="{$fieldProfilesId|@count}" multiple="multiple" class="notRequired">
+<td><label for="FieldProfileList" >{t}Field profiles{/t}</label><br>
+<select name="FieldProfileList[]" id="FieldProfileList" size="{$fieldProfilesId|@count}" multiple="multiple" class="notRequired">
 {html_options values=$fieldProfilesId output=$fieldProfilesName selected=$smarty.session.FieldProfileList}
 </select>
 </td>
@@ -98,17 +98,17 @@ Suite 225, San Francisco, CA 94107, USA
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</label> : </td>
+}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t} : </label></td>
 <td colspan="3">
 
 <table cellpadding="0" cellspacing="0" width="100%">
 {foreach from=$skillsBySets item=skillIds key=skillSetTypeId}
 <tr>
 <td>
-{$skillSetTypeId|gettext|strip:'&nbsp;'}:&nbsp;
+<label for="Skill_{$skillSetTypeId|strip:'_'}">{$skillSetTypeId|gettext|strip:'&nbsp;'}:&nbsp;</label>
 </td>
 <td>
-<select name="Skill_{$skillSetTypeId|strip:'_'}" class="notRequired" onChange="{foreach from=$skillsBySets item=s key=setId}{if $setId neq $skillSetTypeId} document.qualificationsForm.Skill_{$setId|strip:'_'}.value=''; {/if}{/foreach} document.qualificationsForm.Skill.value = document.qualificationsForm.Skill_{$skillSetTypeId|strip:'_'}.value; ResetSkillLevels();"> <!-- We raise it here due it is not automatically raised with the previous line ^ -->
+<select name="Skill_{$skillSetTypeId|strip:'_'}" id="Skill_{$skillSetTypeId|strip:'_'}" class="notRequired" onChange="{foreach from=$skillsBySets item=s key=setId}{if $setId neq $skillSetTypeId} document.qualificationsForm.Skill_{$setId|strip:'_'}.value=''; {/if}{/foreach} document.qualificationsForm.Skill.value = document.qualificationsForm.Skill_{$skillSetTypeId|strip:'_'}.value; ResetSkillLevels();"> <!-- We raise it here due it is not automatically raised with the previous line ^ -->
 {html_options values=$skillIds output=$skillIds selected=$smarty.session.SkillList[0]}
 </select><br>
 </td>
@@ -138,13 +138,13 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td>
 <br>
-{t}Knowledge level{/t}:
-<select name="skillKnowledgeLevel" class="notRequired" disabled onChange="UpdateSkill();">
+<label for="skillKnowledgeLevel">{t}Knowledge level{/t}:</label>
+<select name="skillKnowledgeLevel" id="skillKnowledgeLevel" class="notRequired" disabled onChange="UpdateSkill();">
 {html_options values=$skillKnowledgeLevelsId output=$skillKnowledgeLevelsName}
 </select><br>
 
-{t}Experience level{/t}:
-<select name="skillExperienceLevel" class="notRequired" disabled onChange="UpdateSkill();">
+<label for="skillExperienceLevel">{t}Experience level{/t}:</label>
+<select name="skillExperienceLevel" id="skillExperienceLevel" class="notRequired" disabled onChange="UpdateSkill();">
 {html_options values=$skillExperienceLevelsId output=$skillExperienceLevelsName}
 </select> <br>
 <br>
@@ -177,27 +177,27 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t escape='no'
+<td align="right"><span class="must">*</span><label for="Language" class="raisePopUp" OnMouseOver="popup('{t escape='no'
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Languages{/t}</label> : </td>
+}Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Languages{/t} : </label></td>
 <td colspan="3">
 <table cellpadding="0" cellspacing="0" width="100%">
 <tr valign="top">
 <td>
 
-<select name="Language" class="required" onChange="ResetLevels();">
+<select name="Language" id="Language" class="required" onChange="ResetLevels();">
 {html_options values=$languagesName output=$languagesNameTranslated}
 </select><br>
 
-{t}Spoken level{/t}:
-<select name="languageSpokenLevel" class="required" disabled onChange="UpdateIdiom();">
+<label for="languageSpokenLevel">{t}Spoken level{/t}:</label>
+<select name="languageSpokenLevel" id="languageSpokenLevel" class="required" disabled onChange="UpdateIdiom();">
 {html_options values=$languagesSpokenLevelsId output=$languagesSpokenLevelsName}
 </select><br>
 
-{t}Written level{/t}:
-<select name="languageWrittenLevel" class="required" disabled onChange="UpdateIdiom();">
+<label for="languageWrittenLevel">{t}Written level{/t}:</label>
+<select name="languageWrittenLevel" id="languageWrittenLevel" class="required" disabled onChange="UpdateIdiom();">
 {html_options values=$languagesWrittenLevelsId output=$languagesWrittenLevelsName}
 </select>
 
@@ -229,23 +229,23 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if $smarty.session.CertificationsList|@count >= 1 or $notYetRequestedCertifications|@count >= 1}
 <tr valign="top">
-<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}Request your certifications{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Certifications{/t}</label> : <br> </td>
+<td align="right"><label for="NotYetRequestedCertificationsList" class="raisePopUp" OnMouseOver="popup('{t}Request your certifications{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Certifications{/t} : </label><br> </td>
 <td colspan="3">
 
 <table cellspacing="0" cellpadding="0">
 
 {foreach from=$smarty.session.CertificationsList item=certification key=i}
 <tr>
-	<td> <input type="checkbox" name="CertificationsList[]" value="{$certification}" class="notRequired" disabled checked>{$certification} &nbsp; <span class="footnote">(state: {$smarty.session.CertificationsStateList[$i]})</span> </td>
+	<td> <input type="checkbox" name="CertificationsList[]" id="CertificationsList" value="{$certification}" class="notRequired" disabled checked>{$certification} &nbsp; <span class="footnote">(state: {$smarty.session.CertificationsStateList[$i]})</span> </td>
 </tr>
 {/foreach}
 
 {foreach from=$notYetRequestedCertifications item=certification}
 <tr>
 {if is_array($smarty.session.NotYetRequestedCertificationsList) and in_array($certification, $smarty.session.NotYetRequestedCertificationsList) }
-	<td> <input type="checkbox" name="NotYetRequestedCertificationsList[]" value="{$certification}" class="notRequired" checked>{$certification} </td>
+	<td> <input type="checkbox" name="NotYetRequestedCertificationsList[]" id="NotYetRequestedCertificationsList" value="{$certification}" class="notRequired" checked>{$certification} </td>
 {else}
-	<td> <input type="checkbox" name="NotYetRequestedCertificationsList[]" value="{$certification}" class="notRequired">{$certification} </td>
+	<td> <input type="checkbox" name="NotYetRequestedCertificationsList[]" id="NotYetRequestedCertificationsList" value="{$certification}" class="notRequired">{$certification} </td>
 {/if}
 </tr>
 {/foreach}
@@ -257,15 +257,15 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr valign="top">
-<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}URIs which prove your contritution to FS projects. For example: CVS web reference, email with patch or advices, etc.{/t}','lightyellow',300);" OnMouseOut="kill()">{'Contributions to FS projects'|gettext|strip:'&nbsp;'}</label>&nbsp;: <br> </td>
+<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}URIs which prove your contritution to FS projects. For example: CVS web reference, email with patch or advices, etc.{/t}','lightyellow',300);" OnMouseOut="kill()">{'Contributions to FS projects'|gettext|strip:'&nbsp;'}&nbsp;: </label><br> </td>
 <td colspan="3"> 
 
 <table cellpadding="0" cellspacing="0">
 <tr valign="middle">
 <td width="63%">
-{t}Project{/t}: <input type="text" name="ContributionProject" maxlength="20" value="" class="notRequired"><br>
-{t}Description{/t}: <input type="text" name="ContributionDescription" maxlength="30" value="" class="notRequired"><br>
-URI: <input type="text" name="ContributionURI" maxlength="255" value="http://" class="notRequired"><br>
+<label for="ContributionProject">{t}Project{/t}: </label><input type="text" name="ContributionProject" id="ContributionProject" maxlength="20" value="" class="notRequired"><br>
+<label for="ContributionDescription">{t}Description{/t}: </label><input type="text" name="ContributionDescription" id="ContributionDescription" maxlength="30" value="" class="notRequired"><br>
+<label for="ContributionURI">URI: </label><input type="text" name="ContributionURI" id="ContributionURI" maxlength="255" value="http://" class="notRequired"><br>
 <input type="hidden" name="ContributionErrorMessage" value="{t}The Project and URI fields are required. Please, try again.{/t}">
 </td>
 <td width="90%" align="center">
@@ -303,18 +303,18 @@ URI: <input type="text" name="ContributionURI" maxlength="255" value="http://" c
 <tr> <td colspan="4" class="subsection">{t}CONTRACT{/t}</td> </tr>
 
 <tr>
-<td align="right"><span class="must">*</span>{t}Desired contract type{/t} : </td>
+<td align="right"><span class="must">*</span><label for="DesiredContractType">{t}Desired contract type{/t} : </label></td>
 <td colspan="3">
-<select name="DesiredContractType" class="required">
+<select name="DesiredContractType" id="DesiredContractType" class="required">
 {html_options values=$contractTypesId output=$contractTypesIdTranslated selected=$smarty.session.DesiredContractType}
 </select>
 </td>
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}The format has to be: Minimum-Optimum. For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Desired wage rank{/t}</label> : </td>
+<td align="right"><span class="must">*</span><label for="DesiredWageRank" class="raisePopUp" OnMouseOver="popup('{t}The format has to be: Minimum-Optimum. For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Desired wage rank{/t} : </label></td>
 <td colspan="3">
-<input type="text" name="DesiredWageRank" size="15" maxlength="30" class="required" value="{$smarty.session.DesiredWageRank}">
+<input type="text" name="DesiredWageRank" id="DesiredWageRank" size="15" maxlength="30" class="required" value="{$smarty.session.DesiredWageRank}">
 <select name="WageRankCurrency" class="required">
 {html_options values=$currenciesThreeLetter output=$currenciesName selected=$smarty.session.WageRankCurrency}
 </select>
@@ -325,9 +325,9 @@ URI: <input type="text" name="ContributionURI" maxlength="255" value="http://" c
 </tr>
 
 <tr>
-<td align="right"><span class="must">*</span>{t}Currently you are{/t} : </td>
+<td align="right"><span class="must">*</span><label for="CurrentEmployability">{t}Currently you are{/t} : </label></td>
 <td colspan="3">
-<select name="CurrentEmployability" class="required">
+<select name="CurrentEmployability" id="CurrentEmployability" class="required">
 {html_options values=$employabilityId output=$employabilityIdTranslated selected=$smarty.session.CurrentEmployability}
 </select>
 </td>
@@ -338,13 +338,13 @@ URI: <input type="text" name="ContributionURI" maxlength="255" value="http://" c
 <tr> <td colspan="4" class="subsection">{t}LOCATION{/t}</td> </tr>
 
 <tr valign="bottom">
-<td align="right">{t}Available to travel{/t} : </td>
-<td colspan="3"> <input type="checkbox" name="AvailableToTravel" class="notRequired" {if $smarty.session.AvailableToTravel eq 'true'} checked {/if} > </td>
+<td align="right"><label for="AvailableToTravel">{t}Available to travel{/t} : </label></td>
+<td colspan="3"> <input type="checkbox" name="AvailableToTravel" id="AvailableToTravel" class="notRequired" {if $smarty.session.AvailableToTravel eq 'true'} checked {/if} > </td>
 </tr>
 
 <tr valign="bottom">
-<td align="right">{'Available to change residence'|gettext|strip:'&nbsp;'}&nbsp;: </td>
-<td colspan="3"> <input type="checkbox" name="AvailableToChangeResidence" class="notRequired" {if $smarty.session.AvailableToChangeResidence eq 'true'} checked {/if} > </td>
+<td align="right"><label for="AvailableToChangeResidence">{'Available to change residence'|gettext|strip:'&nbsp;'}&nbsp;: </label></td>
+<td colspan="3"> <input type="checkbox" name="AvailableToChangeResidence" id="AvailableToChangeResidence" class="notRequired" {if $smarty.session.AvailableToChangeResidence eq 'true'} checked {/if} > </td>
 </tr>
 
 {/if}
