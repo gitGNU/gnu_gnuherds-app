@@ -25,7 +25,6 @@ Suite 225, San Francisco, CA 94107, USA
 var Xoffset=-300;       // modify these values to ...
 var Yoffset= 20;        // change the popup position.
 var popwidth=130;       // popup width
-var bcolor="darkgray";  // popup border color
 var fcolor="black";     // popup font color
 var fface="verdana";    // popup font face
 
@@ -120,7 +119,7 @@ function popup(msg,bak,ancho)
 {
   var content;
   popwidth = ancho;
-  content = "<TABLE WIDTH='"+popwidth+"' BORDER='1' BORDERCOLOR="+bcolor+" CELLPADDING=2 CELLSPACING=0 "+"BGCOLOR="+bak+"><TD class='popup'>"+msg+"</TD></TABLE>";
+  content = "<TABLE WIDTH='"+popwidth+"' BORDER='1' CELLPADDING=2 CELLSPACING=0 "+"BGCOLOR="+bak+"><TD class='popup'>"+msg+"</TD></TABLE>";
 
   if(old)
   {
