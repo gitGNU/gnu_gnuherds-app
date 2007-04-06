@@ -26,25 +26,25 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr>
 <td nowrap align="left" class="login">
-E-mail:
+<label for="loginBox_Email">E-mail:</label>
 </td>
 </tr>
 
 <tr>
 <td nowrap>
-<input type="text" name="Email" size="22" class="loginControls"> <br>
+<input type="text" name="Email" id="loginBox_Email" size="22" class="loginControls"> <br>
 </td>
 </tr>
 
 <tr>
 <td nowrap align="left" class="login">
-{'Password'|gettext}:
+<label for="loginBox_Password">{'Password'|gettext}:</label>
 </td>
 </tr>
 
 <tr>
 <td nowrap>
-<input type="password" name="Password" size="22" class="loginControls"><br>
+<input type="password" name="Password" id="loginBox_Password" size="22" class="loginControls"><br>
 </td>
 </tr>
 
