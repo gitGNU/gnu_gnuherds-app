@@ -27,6 +27,8 @@ Suite 225, San Francisco, CA 94107, USA
 <script type="text/javascript" src="scripts/utils.js"></script>
 
 
+<form name="jobOfferForm" method="post" action="/Job_Offer.php?JobOfferId={$smarty.get.JobOfferId}">
+
 <table align="center">
 
 {if $smarty.get.JobOfferId }
@@ -42,8 +44,6 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="footnote">{t}To demand any form reorganization: the addition to the lists, update, deletion of a profile, skill, etc., you can send an email to{/t} {mailto address='form-options@gnuherds.org'}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
-
-<form name="jobOfferForm" method="post" action="/Job_Offer.php?JobOfferId={$smarty.get.JobOfferId}">
 
 <tr> <td colspan="4" class="subsection">{t}GENERAL{/t}</td> </tr>
 
@@ -164,19 +164,19 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="right"><span class="must">*</span><label class="raisePopUp" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t}</label> : </td>
 
 <td>{t}Product profiles{/t}<br>
-<select name="ProductProfileList[]" size="{$productProfiles|@count}" multiple="true" class="notRequired">
+<select name="ProductProfileList[]" size="{$productProfiles|@count}" multiple="multiple" class="notRequired">
 {html_options values=$productProfiles output=$productProfiles selected=$smarty.session.jProductProfileList}
 </select>
 </td>
 
 <td>{t}Professional profiles{/t}<br>
-<select name="ProfessionalProfileList[]" id="ProfessionalProfileList" size="{$professionalProfilesId|@count}" multiple="true" class="required" onChange="UpdateVacancyTitle();">
+<select name="ProfessionalProfileList[]" id="ProfessionalProfileList" size="{$professionalProfilesId|@count}" multiple="multiple" class="required" onChange="UpdateVacancyTitle();">
 {html_options values=$professionalProfilesId output=$professionalProfilesName selected=$smarty.session.jProfessionalProfileList}
 </select>
 </td>
 
 <td>{t}Field profiles{/t}<br>
-<select name="FieldProfileList[]" id="FieldProfileList" size="{$fieldProfilesId|@count}" multiple="true" class="notRequired" onChange="UpdateVacancyTitle();">
+<select name="FieldProfileList[]" id="FieldProfileList" size="{$fieldProfilesId|@count}" multiple="multiple" class="notRequired" onChange="UpdateVacancyTitle();">
 {html_options values=$fieldProfilesId output=$fieldProfilesName selected=$smarty.session.jFieldProfileList}
 </select>
 </td>
@@ -188,7 +188,7 @@ Suite 225, San Francisco, CA 94107, USA
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</label> : <br>(<a href="javascript:openPopUp('Skills','/Skills_Guide.php?heading&menu&loging_box',670,780);">{t}guide{/t}</a>) &nbsp; </td>
+}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</label> : <br>(<a href="javascript:openPopUp('Skills','/Skills_Guide.php?heading&amp;menu&amp;loging_box',670,780);">{t}guide{/t}</a>) &nbsp; </td>
 <td colspan="3">
 
 <table cellpadding="0" cellspacing="0" width="100%">
@@ -243,18 +243,18 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td align="center">
 
-<select name="ViewSkillList[]" id="ViewSkillList" size="3" multiple="true" class="notRequired" OnClick="document.jobOfferForm.skillKnowledgeLevel.focus(); document.jobOfferForm.ViewSkillList.focus(); {foreach from=$skillsBySets item=s key=setId} document.jobOfferForm.Skill_{$setId|strip:'_'}.value=''; {/foreach} {foreach from=$skillsBySets item=s key=setId} document.jobOfferForm.Skill_{$setId|strip:'_'}.value=document.jobOfferForm.SkillList[document.jobOfferForm.ViewSkillList.selectedIndex].value; {/foreach}  UpdateWithSelectedSkill(true);">
+<select name="ViewSkillList[]" id="ViewSkillList" size="3" multiple="multiple" class="notRequired" OnClick="document.jobOfferForm.skillKnowledgeLevel.focus(); document.jobOfferForm.ViewSkillList.focus(); {foreach from=$skillsBySets item=s key=setId} document.jobOfferForm.Skill_{$setId|strip:'_'}.value=''; {/foreach} {foreach from=$skillsBySets item=s key=setId} document.jobOfferForm.Skill_{$setId|strip:'_'}.value=document.jobOfferForm.SkillList[document.jobOfferForm.ViewSkillList.selectedIndex].value; {/foreach}  UpdateWithSelectedSkill(true);">
 </select><br>
 <a href="javascript://" OnClick="DeleteSkill(document.jobOfferForm.ViewSkillList.selectedIndex); UpdateVacancyTitle();"><strong>{t}Delete{/t}</strong></a>
 
 <div id="SkillLists" style="display:none">
-<select name="SkillList[]" id="SkillList" size="4" multiple="true"> <!-- Note: Commented due to it only raise the event if the new Object is selected.  onChange="UpdateVacancyTitle();"> -->
+<select name="SkillList[]" id="SkillList" size="4" multiple="multiple"> <!-- Note: Commented due to it only raise the event if the new Object is selected.  onChange="UpdateVacancyTitle();"> -->
 {html_options values=$smarty.session.jSkillList output=$smarty.session.jSkillList}
 </select><br>
-<select name="SkillKnowledgeLevelList[]" id="SkillKnowledgeLevelList" size="4" multiple="true">
+<select name="SkillKnowledgeLevelList[]" id="SkillKnowledgeLevelList" size="4" multiple="multiple">
 {html_options values=$smarty.session.jSkillKnowledgeLevelList output=$smarty.session.jSkillKnowledgeLevelList}
 </select><br>
-<select name="SkillExperienceLevelList[]" id="SkillExperienceLevelList" size="4" multiple="true">
+<select name="SkillExperienceLevelList[]" id="SkillExperienceLevelList" size="4" multiple="multiple">
 {html_options values=$smarty.session.jSkillExperienceLevelList output=$smarty.session.jSkillExperienceLevelList}
 </select><br>
 </div>
@@ -295,18 +295,18 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 <td align="center">
-<select name="ViewLanguageList[]" id="ViewLanguageList" size="4" multiple="true" class="required" OnClick="UpdateWithSelectedItem(true);">
+<select name="ViewLanguageList[]" id="ViewLanguageList" size="4" multiple="multiple" class="required" OnClick="UpdateWithSelectedItem(true);">
 </select><br>
 <a href="javascript://" OnClick="DeleteItem(document.jobOfferForm.ViewLanguageList.selectedIndex); UpdateVacancyTitle();"><strong>{t}Delete{/t}</strong></a>
 
 <div id="LanguageLists" style="display:none">
-<select name="LanguageList[]" id="LanguageList" size="4" multiple="true">
+<select name="LanguageList[]" id="LanguageList" size="4" multiple="multiple">
 {html_options values=$smarty.session.jLanguageList output=$smarty.session.jLanguageList}
 </select><br>
-<select name="LanguageSpokenLevelList[]" id="LanguageSpokenLevelList" size="4" multiple="true">
+<select name="LanguageSpokenLevelList[]" id="LanguageSpokenLevelList" size="4" multiple="multiple">
 {html_options values=$smarty.session.jLanguageSpokenLevelList output=$smarty.session.jLanguageSpokenLevelList}
 </select><br>
-<select name="LanguageWrittenLevelList[]" id="LanguageWrittenLevelList" size="4" multiple="true">
+<select name="LanguageWrittenLevelList[]" id="LanguageWrittenLevelList" size="4" multiple="multiple">
 {html_options values=$smarty.session.jLanguageWrittenLevelList output=$smarty.session.jLanguageWrittenLevelList}
 </select><br>
 </div>
@@ -392,8 +392,6 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
-</form>
-
 {if $smarty.get.JobOfferId } <!-- update -->
 <tr align="center">
 <td colspan="4" align="center">
@@ -404,4 +402,6 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 </table>
+
+</form>
 
