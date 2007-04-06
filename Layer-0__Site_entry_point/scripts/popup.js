@@ -25,8 +25,6 @@ Suite 225, San Francisco, CA 94107, USA
 var Xoffset=-300;       // modify these values to ...
 var Yoffset= 20;        // change the popup position.
 var popwidth=130;       // popup width
-var fcolor="black";     // popup font color
-var fface="verdana";    // popup font face
 
 // create content box
 document.write("<DIV ID='pup'></DIV>");
