@@ -82,7 +82,7 @@ Suite 225, San Francisco, CA 94107, USA
 	</p>
 
 	<table>
-	<tr> <td><a href="http://www.w3.org/TR/xhtml1/" target="_top">XHTML 1.0</a> <td>
+	<tr> <td><a href="http://www.w3.org/TR/html401/" target="_top">HTML</a> 4.01 Strict <td>
 	<tr> <td><a href="http://www.php.net/" target="_top">PHP</a> >= 5.1 <td>
 	<tr> <td><a href="http://smarty.php.net/" target="_top">Smarty</a> <td>
 	<tr> <td><a href="http://smarty.incutio.com/?page=SmartyGettext" target="_top">Smarty-Gettext</a> <td>
@@ -116,9 +116,9 @@ Suite 225, San Francisco, CA 94107, USA
 	</p>
 
 	<table>
-	<tr> <td><b>Layer 0.</b> <td>Site entry point (<a href="http://www.w3.org/TR/xhtml1/" target="_top">XHTML</a>, <a href="http://www.w3.org/Style/CSS/" target="_top">CSS</a>, <a href="http://smarty.php.net/" target="_top">Smarty</a>, <a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/" target="_top">JavaScript</a>, <a href="http://httpd.apache.org/docs/2.0/howto/ssi.html" target="_top">Apache SSI</a> and <a href="http://www.php.net/" target="_top">PHP</a> ).
+	<tr> <td><b>Layer 0.</b> <td>Site entry point (<a href="http://www.w3.org/TR/html401/" target="_top">HTML</a>, <a href="http://www.w3.org/Style/CSS/" target="_top">CSS</a>, <a href="http://smarty.php.net/" target="_top">Smarty</a>, <a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/" target="_top">JavaScript</a>, <a href="http://httpd.apache.org/docs/2.0/howto/ssi.html" target="_top">Apache SSI</a> and <a href="http://www.php.net/" target="_top">PHP</a> ).
 	<tr> <td><b>Layer 1.</b> <td>GUI page builder and themes (PHP)
-	<tr> <td><b>Layer 2.</b> <td>GUI business logic: content section, others (checking & processing forms) (PHP, XHTML)
+	<tr> <td><b>Layer 2.</b> <td>GUI business logic: content section, others (checking & processing forms) (PHP, HTML)
 	<tr> <td><b>Layer 4.</b> <td>Data base Manager class, PHP Tools class and Mailer class (PHP)
 	<tr> <td><b>Layer 5.</b> <td>Data base Operation classes (PHP, SQL)
 	<tr> <td><b>Layer 6.</b> <td><a href="http://adodb.sourceforge.net/" target="_top">ADOdb</a> Database Abstraction Library (PHP)
