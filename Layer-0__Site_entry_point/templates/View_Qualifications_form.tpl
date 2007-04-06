@@ -17,9 +17,9 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-<table align="center">
-
 <form name="qualificationsForm" method="post" action="Qualifications.php">
+
+<table align="center">
 
 <tr valign="top">
 <td>
@@ -299,7 +299,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {/if}
 
-</form>
-
 </table>
+
+</form>
 
