@@ -1084,7 +1084,6 @@ INSERT INTO LU_Currencies VALUES ( 'PGK', 'Kina',      'Kina', 'Papua New Guinea
 INSERT INTO LU_Currencies VALUES ( 'PYG', 'Guaraní',   'Guaraníes', 'Paraguay' );
 INSERT INTO LU_Currencies VALUES ( 'PEN', 'Nuevo Sol', 'Nuevos Soles', 'Peru' );
 
-INSERT INTO LU_Currencies VALUES ( 'PLN', 'Zloty, Poland', 'Zlotych, Poland', 'Poland' );
 INSERT INTO LU_Currencies VALUES ( 'PLN', 'Złoty, Poland', 'Złotych, Poland', 'Poland' );
 
 INSERT INTO LU_Currencies VALUES ( 'QAR', 'Riyal, Qatar',        'Riyals, Qatar', 'Qatar' );
