@@ -556,6 +556,7 @@ msgfmt result.po
 	<tr> <td><b>Gabriel</b>  <td>Data base Adviser.
 	<tr> <td><b>Jonas</b>    <td>GNU Business Network.
 	<tr> <td><b>Jose</b>     <td>Architecture Adviser.
+	<tr> <td><b>Klaus</b>    <td>Web developer, Code Auditor
 	<tr> <td><b>Lars</b>     <td>Romanian Translator and maybe some coding.
 	<tr> <td><b>Martin</b>   <td>Auditor and Quality Assurance; he evaluates the project as a whole. Public Relations.
 	<tr> <td><b>Neal</b>     <td>Initial proposal, project Chapter, Public Relations, etc.
