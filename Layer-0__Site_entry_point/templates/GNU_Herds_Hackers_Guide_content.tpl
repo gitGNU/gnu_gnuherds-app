@@ -239,6 +239,13 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<img src="/doc/How_the_development_team_and_production_is_integrated.png" align="middle" alt="" border="0" hspace="0" vspace="0">
 
+	<p>
+	{t escape='no'
+	  1='<i>cvs diff -c3p</i>'
+	  2='<i>diff -up OLD NEW</i>'
+	}The suggested formats to share source code among the developers are %1 or %2.{/t}
+	</p>
+
 <center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
