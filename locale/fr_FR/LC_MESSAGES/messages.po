@@ -451,6 +451,9 @@ msgstr "Comment s'intègrent l'équipe de développement et la production ?"
 msgid "CVS is used as repository. The HTTP server gets a tagged release via 'update' from the CVS server."
 msgstr "CVS est le dépôt de fichiers. Le serveur HTTP obtient une version taguée par un « update » depuis le serveur CVS."
 
+msgid "The suggested formats to share source code among the developers are %1 or %2."
+msgstr "Les formats %1 et %2 sont recommandés pour échanger du code source entre développeurs."
+
 msgid "The TODO task list"
 msgstr "Liste des tâches à faire"
 
