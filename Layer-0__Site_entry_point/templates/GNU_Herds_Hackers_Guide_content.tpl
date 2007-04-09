@@ -241,8 +241,8 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<i>cvs diff -c3p</i>'
-	  2='<i>diff -up OLD NEW</i>'
+	  1='"<i>cvs diff -c3p</i>"'
+	  2='"<i>diff -up OLD NEW</i>"'
 	}The suggested formats to share source code among the developers are %1 or %2.{/t}
 	</p>
 
