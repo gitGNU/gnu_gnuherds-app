@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: GNU Herds\n"
 "Report-Msgid-Bugs-To: davi@leals.com\n"
 "POT-Creation-Date: 2006-04-10 19:12+0200\n"
-"PO-Revision-Date: 2007-02-21 19:36+0100\n"
+"PO-Revision-Date: 2007-04-09 13:56+0100\n"
 "Last-Translator: Davi Leal <davi@leals.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -450,6 +450,9 @@ msgstr "¿Cómo se integra el equipo de desarrollo y el entorno de producción?"
 
 msgid "CVS is used as repository. The HTTP server gets a tagged release via 'update' from the CVS server."
 msgstr "CVS se usa como almacén. El servidor HTTP obtiene una release etiquetada vía 'update' del servidor CVS."
+
+msgid "The suggested formats to share source code among the developers are %1 or %2."
+msgstr "Para compartir código fuente entre los desarrolladores se sugieren los siguientes formatos: %1 o %2."
 
 msgid "The TODO task list"
 msgstr "La lista de tareas (TODO)"
