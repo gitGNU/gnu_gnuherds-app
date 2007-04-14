@@ -89,7 +89,9 @@ Suite 225, San Francisco, CA 94107, USA
 <p class="footnote">
 {t escape='no'
   1='<a href="http://gnuherds.org" target="_top">gnuherds.org</a>'
-}To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the %1 domain to offices managed by FSF staff.{/t}
+  2='<a href="http://www.fsf.org/" target="_top">'
+  3='</a>'
+}To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the %1 domain to offices managed by %2FSF%3 staff.{/t}
 
 &nbsp;
 
