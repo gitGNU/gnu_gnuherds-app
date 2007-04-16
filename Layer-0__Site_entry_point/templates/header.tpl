@@ -1,8 +1,9 @@
 {*
-Authors: Neal Coombes, Davi Leal
+Authors: Neal Coombes, Davi Leal, Victor Engmark
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Neal Coombes <Neal.Coombes at attbi dot com>
               2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -20,7 +21,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <table width="100%" cellpadding="0" cellspacing="0" rules="none" border="0">
 <tr valign="top">
-<td width="160" style="background: url({$webpage->theme->headBackgroundImage})"><a href="/images/gnus-desc.html" target="_top"><img src="/images/gnus_90.jpg" align="left" alt="" border="0" hspace="0" vspace="0"></a></td>
+<td width="160" style="background: url({$webpage->theme->headBackgroundImage})"><a href="/images/gnus-desc.html"><img src="/images/gnus_90.jpg" align="left" alt="" border="0" hspace="0" vspace="0"></a></td>
 
 <td style="background: url({$webpage->theme->headBackgroundImage})">
 

@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -87,7 +88,7 @@ Suite 225, San Francisco, CA 94107, USA
 {mailto address=$smarty.session.ViewEmail}<br>
 
 {if trim($smarty.session.ViewWebsite) neq ''}
-	{t}web site{/t} <a href="{$smarty.session.ViewWebsite}" target="_top">{$smarty.session.ViewWebsite}</a><br>
+	{t}web site{/t} <a href="{$smarty.session.ViewWebsite}">{$smarty.session.ViewWebsite}</a><br>
 {/if}
 
 
@@ -238,7 +239,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td colspan="3" class="greenDark">
 {if is_array($smarty.session.ViewContributionsListProject) and count($smarty.session.ViewContributionsListProject) > 0 }
 	{foreach from=$smarty.session.ViewContributionsListProject item=project key=i}
-		<a href="{$smarty.session.ViewContributionsListURI[$i]}" target="_top">{$project}</a>{if $smarty.session.ViewContributionsListDescription[$i] neq ''}: {$smarty.session.ViewContributionsListDescription[$i]}{/if}<br>
+		<a href="{$smarty.session.ViewContributionsListURI[$i]}">{$project}</a>{if $smarty.session.ViewContributionsListDescription[$i] neq ''}: {$smarty.session.ViewContributionsListDescription[$i]}{/if}<br>
 	{/foreach}
 {else}
 	{t}none{/t}

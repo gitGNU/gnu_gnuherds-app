@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -21,23 +22,23 @@ Suite 225, San Francisco, CA 94107, USA
 
 <p>{t}Index{/t}</p>
 <ol>
-<li> <a href="#Introduction" style='text-decoration: none;' target="_top">{t}Introduction{/t}</a>
-<li> <a href="#Technologies" style='text-decoration: none;' target="_top">{t}Technologies{/t}</a>
-<li> <a href="#Web_application_Architecture" style='text-decoration: none;' target="_top">{t}Web application Architecture{/t}</a>
-<li> <a href="#Web_application_Design" style='text-decoration: none;' target="_top">{t}Web application Design{/t}</a>
-<li> <a href="#Coding_Standards" style='text-decoration: none;' target="_top">{t}Coding Standards{/t}</a>
-<li> <a href="#Internationalization_and_Localization" style='text-decoration: none;' target="_top">{t}Internationalization and Localization{/t}</a>
-<li> <a href="#How_the_development_team_and_production_is_integrated" style='text-decoration: none;' target="_top">{t}How the development team and production is integrated?{/t}</a>
-<li> <a href="#The_TODO_task_list" style='text-decoration: none;' target="_top">{t}The TODO task list{/t}</a>
-<li> <a href="#Wikis" style='text-decoration: none;' target="_top">Wikis</a>
-<li> <a href="#The_source_code" style='text-decoration: none;' target="_top">{t}The source code{/t}</a>
-<li> <a href="#The_CVS_server" style='text-decoration: none;' target="_top">{t}The CVS server{/t}</a>
-<li> <a href="#The_web_site" style='text-decoration: none;' target="_top">{t}The web site{/t}</a>
-<li> <a href="#The_PostgreSQL_data_base" style='text-decoration: none;' target="_top">{t}The PostgreSQL data base{/t}</a>
-<li> <a href="#Email_lists" style='text-decoration: none;' target="_top">{t}Email lists{/t}</a>
-<li> <a href="#How_to_install_a_development_environment" style='text-decoration: none;' target="_top">{t}How to install a development environment?{/t}</a>
-<!-- XXX <li> <a href="#How_to_kill_spam_by_hand_at_our_email_lists" style='text-decoration: none;' target="_top">{t}How to kill spam by hand at our email lists{/t}</a> -->
-<li> <a href="#Current_work_team" style='text-decoration: none;' target="_top">{t}Current work team{/t}</a>
+<li> <a href="#Introduction" style='text-decoration: none;'>{t}Introduction{/t}</a>
+<li> <a href="#Technologies" style='text-decoration: none;'>{t}Technologies{/t}</a>
+<li> <a href="#Web_application_Architecture" style='text-decoration: none;'>{t}Web application Architecture{/t}</a>
+<li> <a href="#Web_application_Design" style='text-decoration: none;'>{t}Web application Design{/t}</a>
+<li> <a href="#Coding_Standards" style='text-decoration: none;'>{t}Coding Standards{/t}</a>
+<li> <a href="#Internationalization_and_Localization" style='text-decoration: none;'>{t}Internationalization and Localization{/t}</a>
+<li> <a href="#How_the_development_team_and_production_is_integrated" style='text-decoration: none;'>{t}How the development team and production is integrated?{/t}</a>
+<li> <a href="#The_TODO_task_list" style='text-decoration: none;'>{t}The TODO task list{/t}</a>
+<li> <a href="#Wikis" style='text-decoration: none;'>Wikis</a>
+<li> <a href="#The_source_code" style='text-decoration: none;'>{t}The source code{/t}</a>
+<li> <a href="#The_CVS_server" style='text-decoration: none;'>{t}The CVS server{/t}</a>
+<li> <a href="#The_web_site" style='text-decoration: none;'>{t}The web site{/t}</a>
+<li> <a href="#The_PostgreSQL_data_base" style='text-decoration: none;'>{t}The PostgreSQL data base{/t}</a>
+<li> <a href="#Email_lists" style='text-decoration: none;'>{t}Email lists{/t}</a>
+<li> <a href="#How_to_install_a_development_environment" style='text-decoration: none;'>{t}How to install a development environment?{/t}</a>
+<!-- XXX <li> <a href="#How_to_kill_spam_by_hand_at_our_email_lists" style='text-decoration: none;'>{t}How to kill spam by hand at our email lists{/t}</a> -->
+<li> <a href="#Current_work_team" style='text-decoration: none;'>{t}Current work team{/t}</a>
 </ol>
 
 <p>&nbsp;</p>
@@ -51,26 +52,26 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev" target="_top">'
+	  1='<a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev">'
 	  2='</a>'
 	}If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!.{/t}
 	</p>
 
 	<p>
 	{t escape='no'
-	  1='<a href="#The_source_code" target="_top">'
+	  1='<a href="#The_source_code">'
 	  2='</a>'
 	}To play with the web application, %1download%2 the code and install it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this Hackers' Guide. If you need support ask for it at{/t} {mailto address='gnuherds-app-dev@nongnu.org'}
 	</p>
 
 	<p>
 	{t escape='no'
-	  1='<a href="/Charter.php" target="_top">'
+	  1='<a href="/Charter.php">'
 	  2='</a>'
 	}Read the current draft of %1GNU Herds' Charter%2.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -82,27 +83,27 @@ Suite 225, San Francisco, CA 94107, USA
 	</p>
 
 	<table>
-	<tr> <td><a href="http://www.w3.org/TR/html401/" target="_top">HTML</a> 4.01 Strict <td>
-	<tr> <td><a href="http://www.php.net/" target="_top">PHP</a> >= 5.1 <td>
-	<tr> <td><a href="http://smarty.php.net/" target="_top">Smarty</a> <td>
-	<tr> <td><a href="http://smarty.incutio.com/?page=SmartyGettext" target="_top">Smarty-Gettext</a> <td>
-	<tr> <td><a href="http://www.gnu.org/software/gettext/" target="_top">gettext</a> <td>
-	<tr> <td><a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/" target="_top">JavaScript 1.x</a> <td>
-	<tr> <td><a href="http://www.w3.org/Style/CSS/" target="_top">CSS x.y</a> <td>
-	<tr> <td><a href="http://httpd.apache.org/" target="_top">Apache x.y</a> <td>
-	<tr> <td><a href="http://www.postgresql.org/" target="_top">PostgreSQL</a> >= 7.4.x <td>
-	<tr> <td><a href="http://www.maxmind.com/" target="_top">GeoIP</a> <td>
+	<tr> <td><a href="http://www.w3.org/TR/html401/">HTML</a> 4.01 Strict <td>
+	<tr> <td><a href="http://www.php.net/">PHP</a> >= 5.1 <td>
+	<tr> <td><a href="http://smarty.php.net/">Smarty</a> <td>
+	<tr> <td><a href="http://smarty.incutio.com/?page=SmartyGettext">Smarty-Gettext</a> <td>
+	<tr> <td><a href="http://www.gnu.org/software/gettext/">gettext</a> <td>
+	<tr> <td><a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/">JavaScript 1.x</a> <td>
+	<tr> <td><a href="http://www.w3.org/Style/CSS/">CSS x.y</a> <td>
+	<tr> <td><a href="http://httpd.apache.org/">Apache x.y</a> <td>
+	<tr> <td><a href="http://www.postgresql.org/">PostgreSQL</a> >= 7.4.x <td>
+	<tr> <td><a href="http://www.maxmind.com/">GeoIP</a> <td>
 	<tr> <td>
 	{t escape='no'
-	  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/" target="_top">'
-	  2='<a href="http://savannah.gnu.org/" target="_top">'
+	  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/">'
+	  2='<a href="http://savannah.gnu.org/">'
 	  3='</a>'
 	}%1CVS%3 server at %2Savannah%3{/t}
 	<td>
-	<!-- XXX: <tr> <td><a href="http://www.openbsd.org/" target="_top">OpenBSD 3.x</a> <td>The gnuherds.org host is a 633MHZ DEC Alpha 64-bit CPU running OpenBSD. -->
+	<!-- XXX: <tr> <td><a href="http://www.openbsd.org/">OpenBSD 3.x</a> <td>The gnuherds.org host is a 633MHZ DEC Alpha 64-bit CPU running OpenBSD. -->
 	</table>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -116,20 +117,20 @@ Suite 225, San Francisco, CA 94107, USA
 	</p>
 
 	<table>
-	<tr> <td><b>Layer 0.</b> <td>Site entry point (<a href="http://www.w3.org/TR/html401/" target="_top">HTML</a>, <a href="http://www.w3.org/Style/CSS/" target="_top">CSS</a>, <a href="http://smarty.php.net/" target="_top">Smarty</a>, <a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/" target="_top">JavaScript</a>, <a href="http://httpd.apache.org/docs/2.0/howto/ssi.html" target="_top">Apache SSI</a> and <a href="http://www.php.net/" target="_top">PHP</a> ).
+	<tr> <td><b>Layer 0.</b> <td>Site entry point (<a href="http://www.w3.org/TR/html401/">HTML</a>, <a href="http://www.w3.org/Style/CSS/">CSS</a>, <a href="http://smarty.php.net/">Smarty</a>, <a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/">JavaScript</a>, <a href="http://httpd.apache.org/docs/2.0/howto/ssi.html">Apache SSI</a> and <a href="http://www.php.net/">PHP</a> ).
 	<tr> <td><b>Layer 1.</b> <td>GUI page builder and themes (PHP)
 	<tr> <td><b>Layer 2.</b> <td>GUI business logic: content section, others (checking & processing forms) (PHP, HTML)
 	<tr> <td><b>Layer 4.</b> <td>Data base Manager class, PHP Tools class and Mailer class (PHP)
 	<tr> <td><b>Layer 5.</b> <td>Data base Operation classes (PHP, SQL)
-	<tr> <td><b>Layer 6.</b> <td><a href="http://adodb.sourceforge.net/" target="_top">ADOdb</a> Database Abstraction Library (PHP)
+	<tr> <td><b>Layer 6.</b> <td><a href="http://adodb.sourceforge.net/">ADOdb</a> Database Abstraction Library (PHP)
 	<tr> <td><b>..... ..</b> <td>NO stored procedures layer.
-	<tr> <td><b>Layer 7.</b> <td><a href="http://www.postgresql.org/" target="_top">PostgreSQL</a> data base server (PostgreSQL, SQL)
-	<tr> <td><b>locale</b> <td>Here are the files which translate the webapp (<a href="http://www.gnu.org/software/gettext/" target="_top">gettext</a>)
+	<tr> <td><b>Layer 7.</b> <td><a href="http://www.postgresql.org/">PostgreSQL</a> data base server (PostgreSQL, SQL)
+	<tr> <td><b>locale</b> <td>Here are the files which translate the webapp (<a href="http://www.gnu.org/software/gettext/">gettext</a>)
 	</table>
 
 	<p><img src="/doc/Layers_1_2_3_4_5_and_6.png" align="middle" alt="" border="0" hspace="0" vspace="0"> <span class="modification">({t}outdated{/t})</span> </p>  <!-- XXX Update this image -->
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -139,7 +140,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<table border="0">
 	<tbody>
 	<tr><td><p><b>Layers 0, 1, 2, 4 and 5.</b> GUI, Forms, DBManager, PHPTools, and Mailer <span class="modification">({t}outdated{/t})</span> </p>
-	<tr><td><p><a href="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.png" target="_top"><img src="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.scaled.png" align="middle" alt="" border="0" hspace="0" vspace="0"></a> </p>  <!-- XXX Update this image -->
+	<tr><td><p><a href="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.png"><img src="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.scaled.png" align="middle" alt="" border="0" hspace="0" vspace="0"></a> </p>  <!-- XXX Update this image -->
 	<p>{t}The Smarty templates could be moved outside this layer.{/t}</p>
 	<p>&nbsp;</p>
 
@@ -148,7 +149,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr><td>
 	<p>
 	{t escape='no'
-	  1='<a href="http://php.net/pdo" target="_top">'
+	  1='<a href="http://php.net/pdo">'
 	  2='</a>'
 	}ADOdb is an external library. It is not being used yet. We give up about using a data base abstraction library, and this proposal will use instead just %1PDO%2.{/t}
 	</p>
@@ -158,16 +159,16 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr><td><p><b>Layer 7.</b> PostgreSQL data base server (PostgreSQL, SQL)</p>
 	<tr><td><p>{t}Documentation of the new Data Base design:{/t}</p>
 	<ul>
-		<li><a href="/doc/GNUHerds__ER__Logical-model.png" target="_top">{t}Entity Relation logical model{/t}</a><br>
-		&nbsp; Diagram editor (Dia) image <a href="/doc/GNUHerds__ER__Logical-model.dia" target="_top">source</a><br>
+		<li><a href="/doc/GNUHerds__ER__Logical-model.png">{t}Entity Relation logical model{/t}</a><br>
+		&nbsp; Diagram editor (Dia) image <a href="/doc/GNUHerds__ER__Logical-model.dia">source</a><br>
 		<br>
-		<a href="/doc/GNUHerds__ER__Logical-model.png" target="_top"><img src="/doc/GNUHerds__ER__Logical-model.scaled.png" align="middle" alt="" border="0" hspace="0" vspace="0"></a>
-		<li><a href="/doc/GNUHerds__Physical-model.png" target="_top">{t}Physical model{/t}</a> <span class="modification">({t}outdated{/t})</span> <br>
-		<li><a href="/doc/GNUHerds__SQL_Implementation.psql" target="_top">{t}SQL Implementation{/t}</a>
+		<a href="/doc/GNUHerds__ER__Logical-model.png"><img src="/doc/GNUHerds__ER__Logical-model.scaled.png" align="middle" alt="" border="0" hspace="0" vspace="0"></a>
+		<li><a href="/doc/GNUHerds__Physical-model.png">{t}Physical model{/t}</a> <span class="modification">({t}outdated{/t})</span> <br>
+		<li><a href="/doc/GNUHerds__SQL_Implementation.psql">{t}SQL Implementation{/t}</a>
 	</ul>
 	</table>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -177,13 +178,13 @@ Suite 225, San Francisco, CA 94107, USA
 	<p>
 	<STRIKE>
 	{t escape='no'
-	  1='<a href="http://docs.clawphp.org/standards/index" target="_top">'
+	  1='<a href="http://docs.clawphp.org/standards/index">'
 	  2='</a>'
 	}We will try to follow these %1Coding Standards%2.{/t}
 	</STRIKE>
 	</p>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -228,7 +229,7 @@ Suite 225, San Francisco, CA 94107, USA
   mbstring.http_output = UTF-8
 </pre>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -246,7 +247,7 @@ Suite 225, San Francisco, CA 94107, USA
 	}The suggested formats to share source code among the developers are %1 or %2.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -255,12 +256,12 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="http://savannah.nongnu.org/task/?group=gnuherds-app" target="_top">'
+	  1='<a href="http://savannah.nongnu.org/task/?group=gnuherds-app">'
 	  2='</a>'
 	}See the %1Task Manager%2 at Savannah.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -269,12 +270,12 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=146" target="_top">'
+	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=146">'
 	  2='</a>'
 	}See the %1Wiki HOWTO%2 at Savannah.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -283,24 +284,24 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="http://download.savannah.gnu.org/releases/gnuherds-app/" target="_top">'
+	  1='<a href="http://download.savannah.gnu.org/releases/gnuherds-app/">'
 	  2='</a>'
 	}If you do not like play with CVS, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2.{/t}
 	{t escape='no'
-	  1='<a href="/gnuherds-online.tar.gz" target="_top">'
+	  1='<a href="/gnuherds-online.tar.gz">'
 	  2='</a>'
 	}Or much better, you can %1download%2 the code which is running this site right now!.{/t}
 
 	</p><p>
 	{t escape='no'
-	  1='<a href="#Technologies" target="_top">'
+	  1='<a href="#Technologies">'
 	  2='</a>'
 	}You could set up all the required %1Technologies%2 on your host, to be used as your development environment.{/t}
 	</p><p>
 	{t}The source code can have 'XXX' flags, which are used to mark pending tasks, etc.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -309,7 +310,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="http://savannah.gnu.org" target="_top">'
+	  1='<a href="http://savannah.gnu.org">'
 	  2='</a>'
 	}The CVS of gnuherds-app is at %1Savannah%2. The PostgreSQL database and the website is at the gnuherds.org host.{/t}
 	</p><p>
@@ -322,26 +323,26 @@ Suite 225, San Francisco, CA 94107, USA
 	<ul>
 		<li>
 		{t escape='no'
-		  1='<a href="https://savannah.nongnu.org//account/register.php" target="_top">'
-		  2='<a href="http://savannah.gnu.org/" target="_top">'
+		  1='<a href="https://savannah.nongnu.org//account/register.php">'
+		  2='<a href="http://savannah.gnu.org/">'
 		  3='</a>'
 		}%1Register%3 at %2Savannah%3{/t}
 
 		<li>
 		{t escape='no'
-		  1='<a href="https://savannah.gnu.org/my/groups.php" target="_top">'
+		  1='<a href="https://savannah.gnu.org/my/groups.php">'
 		  2='</a>'
 		}%1Request%2 for inclusion to the project{/t}
 
 		<li>
 		{t escape='no'
-		  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/" target="_top">'
+		  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/">'
 		  2='</a>'
 		}gnuherds-app %1CVS%2 view{/t}
 
 		<li>
 		{t escape='no'
-		  1='<a href="http://savannah.nongnu.org/cvs/?group=gnuherds-app" target="_top">'
+		  1='<a href="http://savannah.nongnu.org/cvs/?group=gnuherds-app">'
 		  2='</a>'
 		}CVS %1HOW TO%2{/t}
 	</ul>
@@ -390,7 +391,7 @@ Suite 225, San Francisco, CA 94107, USA
     $ ssh-add
 </pre>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -401,7 +402,7 @@ Suite 225, San Francisco, CA 94107, USA
 	{t}It is in the gnuherds.org host.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -484,7 +485,7 @@ Suite 225, San Francisco, CA 94107, USA
     http://www.postgresql.org/docs/8.0/interactive/tutorial-fk.html
 </pre>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -492,11 +493,11 @@ Suite 225, San Francisco, CA 94107, USA
 <h4>14. {t}Email lists{/t} <a name="Email_lists"></a> </h4>
 
 <ul>
-	<li><a href="https://lists.gnuherds.org/mailman/listinfo/association" target="_top">association</a> {t}is the project main list.{/t}</li>
-	<li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev" target="_top">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
+	<li><a href="https://lists.gnuherds.org/mailman/listinfo/association">association</a> {t}is the project main list.{/t}</li>
+	<li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
 </ul>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -541,7 +542,7 @@ msgfmt result.po
 
 </ul>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -571,7 +572,7 @@ msgfmt result.po
 	<tr> <td><b>Victor</b>   <td>Web developer.
 	</table>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 

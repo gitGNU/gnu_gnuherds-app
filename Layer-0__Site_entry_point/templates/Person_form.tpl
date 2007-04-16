@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -27,7 +28,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $smarty.session.Logged != '1' }
 <tr align="center"> <td colspan="4" align="center" class="mainsection">{t}NEW PERSON{/t}</td> </tr>
 <tr> <td colspan="4">&nbsp;</td> </tr>
-<tr> <td colspan="4" class="footnote">{t escape=no 1='<a href="http://' 2=$smarty.server.HTTP_HOST 3='/Charter.php#Membership" target="_top">' 4='</a>'}Read the %1%2%3Membership%4 Charter section.{/t}</td> </tr>
+<tr> <td colspan="4" class="footnote">{t escape=no 1='<a href="http://' 2=$smarty.server.HTTP_HOST 3='/Charter.php#Membership">' 4='</a>'}Read the %1%2%3Membership%4 Charter section.{/t}</td> </tr>
 {/if}
 
 {if $smarty.session.Logged == '1' }

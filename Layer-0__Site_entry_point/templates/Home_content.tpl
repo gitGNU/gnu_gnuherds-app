@@ -1,8 +1,9 @@
 {*
-Authors: Neal Coombes, Davi Leal
+Authors: Neal Coombes, Davi Leal, Victor Engmark
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Neal Coombes <Neal.Coombes at attbi dot com>
               2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -19,16 +20,16 @@ Suite 225, San Francisco, CA 94107, USA
 *}
 
 <p>{t escape='no'
-  1='<a href="/Charter.php#Committee" target="_top">'
-  2='<a href="/Charter.php#Aims" target="_top">'
-  3='<a href="/GNU_Herds_Hackers_Guide.php#Current_work_team" target="_top">'
+  1='<a href="/Charter.php#Committee">'
+  2='<a href="/Charter.php#Aims">'
+  3='<a href="/GNU_Herds_Hackers_Guide.php#Current_work_team">'
   4='</a>'
-  5='<a href="/FAQ.php#Why_another_Job_Site?" target="_top">'
+  5='<a href="/FAQ.php#Why_another_Job_Site?">'
 }GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors.{/t}</p>
 <p>{t escape='no'
-  1='<a href="/FAQ.php#Why_another_Job_Site?" target="_top">'
+  1='<a href="/FAQ.php#Why_another_Job_Site?">'
   2='</a>'
-  3='<a href="/FS_Business_Networks.php" target="_top">'
+  3='<a href="/FS_Business_Networks.php">'
 }The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:{/t}</p>
 <ul>
   <li>{t}Controlled by its own users{/t}</li>
@@ -43,12 +44,12 @@ Suite 225, San Francisco, CA 94107, USA
 </ul>
 <p>&nbsp;</p>
 <p>{t escape='no'
-  1='<a href="/GNU_Herds_Hackers_Guide.php#Current_work_team" target="_top">'
+  1='<a href="/GNU_Herds_Hackers_Guide.php#Current_work_team">'
   2='</a>'
 }This project has been put together by a small %1team%2 of members of the Free Software community.{/t}</p>
 <ul>
-<li><a href="https://lists.gnuherds.org/mailman/listinfo/association" target="_top">association</a> {t}is the project main list.{/t}</li>
-<li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev" target="_top">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
+<li><a href="https://lists.gnuherds.org/mailman/listinfo/association">association</a> {t}is the project main list.{/t}</li>
+<li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
 </ul>
 <p>&nbsp;</p>
 <p class="footnote">{t}For more information:{/t} {mailto address='association@gnuherds.org'}</p>

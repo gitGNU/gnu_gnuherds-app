@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -32,7 +33,7 @@ Suite 225, San Francisco, CA 94107, USA
 {foreach from=$jobOfferId item=Id key=i}
 <tr valign="top">
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="/View_Job_Offer.php?JobOfferId={$Id}" target="_top">
+<a href="/View_Job_Offer.php?JobOfferId={$Id}">
 {$vacancyTitle[$i]}
 </a>
 </td>

@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -62,11 +63,11 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr>
 <td align="center" class="login">
-<a href="https://{$smarty.server.HTTP_HOST}/Lost_Password.php" target="_top">{'Lost password?'|gettext|strip:'&nbsp;'}</a><br>
+<a href="https://{$smarty.server.HTTP_HOST}/Lost_Password.php">{'Lost password?'|gettext|strip:'&nbsp;'}</a><br>
 <br>
-<a href="https://{$smarty.server.HTTP_HOST}/Person.php" target="_top">{'New person?'|gettext}</a><br>
-<a href="https://{$smarty.server.HTTP_HOST}/Company.php" target="_top">{'New company?'|gettext}</a><br>
-<a href="https://{$smarty.server.HTTP_HOST}/non-profit_Organization.php" target="_top">{'New non-profit?'|gettext}</a>
+<a href="https://{$smarty.server.HTTP_HOST}/Person.php">{'New person?'|gettext}</a><br>
+<a href="https://{$smarty.server.HTTP_HOST}/Company.php">{'New company?'|gettext}</a><br>
+<a href="https://{$smarty.server.HTTP_HOST}/non-profit_Organization.php">{'New non-profit?'|gettext}</a>
 </td>
 </tr>
 </table>

@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -56,32 +57,32 @@ Suite 225, San Francisco, CA 94107, USA
 {t}There are several projects which try to solve the e-Voting trouble. The goal of each project can be different. Some of them has modified its aims or are stalled:{/t}
 </p>
 	<ul>
-		<li><a href="http://www.gnu.org/software/free/" target="_top">GNU.FREE</a>: {t}The development has been discontinued due to{/t} <i>"creating an Internet Voting system sufficiently secure, reliable and anonymous is extremely difficult, if not impossible"</i>.
+		<li><a href="http://www.gnu.org/software/free/">GNU.FREE</a>: {t}The development has been discontinued due to{/t} <i>"creating an Internet Voting system sufficiently secure, reliable and anonymous is extremely difficult, if not impossible"</i>.
 		</li>
-		<li><a href="http://glasnost.entrouvert.org" target="_top">Glasnot</a>. {t escape='no'
+		<li><a href="http://glasnost.entrouvert.org">Glasnot</a>. {t escape='no'
 		  1='<i>'
 		  2='</i>'
 		}It seems to support the %1Condorcet method%2 and even "a mix of secret and public ballots".{/t}
 		</li>
-		<li><a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2006-12/msg00055.html" target="_top">demexp</a>
+		<li><a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2006-12/msg00055.html">demexp</a>
 		</li>
 		<li>{t}Some free GNU/Linux distributions use it own voting system.{/t}</li>
-		<li><a href="http://www.nongnu.org/ampu/" target="_top">AMPU</a>. {t}Stalled since March 2002.{/t}</li>
+		<li><a href="http://www.nongnu.org/ampu/">AMPU</a>. {t}Stalled since March 2002.{/t}</li>
 	</ul>
 <p>
 {t escape='no'
-  1='<i><a href="http://lwn.net/Articles/44077/" target="_top">'
+  1='<i><a href="http://lwn.net/Articles/44077/">'
   2='</a></i>'
-  3='<a href="http://lwn.net/" target="_top">'
+  3='<a href="http://lwn.net/">'
   4='</a>'
 }We have added the below links from the %1"Bringing free software to voting booths"%2 %3LWN%4 article:{/t}
 </p>
 	<ul>
-		<li><a href="http://votesystem.sourceforge.net/" target="_top">Voting Systems Toolbox</a>. {t}It is dormant.{/t}</li>
-		<li><a href="http://electionmethods.org/GVI.htm" target="_top">GVI</a>. {t}It is interested in exploring alternative voting methods.{/t}</li>
-		<li><a href="http://lwn.net/Articles/43600/" target="_top">EVM</a>. {t}It is too young to have released any useful code.{/t}</li>
-		<li><a href="http://www.softimp.com.au/evacs/index.html" target="_top">eVACS</a>. {t}It has already been used in at least one election for the Legislative Assembly in the Australian Capitol Territory in October 2001 and is approved for use in future elections.{/t}</li>
-		<li><a href="http://jfreevote.hispalinux.es/" target="_top">JFreeVote</a>. {t}It is a already implemented, working solution for electronic voting.{/t}</li>
+		<li><a href="http://votesystem.sourceforge.net/">Voting Systems Toolbox</a>. {t}It is dormant.{/t}</li>
+		<li><a href="http://electionmethods.org/GVI.htm">GVI</a>. {t}It is interested in exploring alternative voting methods.{/t}</li>
+		<li><a href="http://lwn.net/Articles/43600/">EVM</a>. {t}It is too young to have released any useful code.{/t}</li>
+		<li><a href="http://www.softimp.com.au/evacs/index.html">eVACS</a>. {t}It has already been used in at least one election for the Legislative Assembly in the Australian Capitol Territory in October 2001 and is approved for use in future elections.{/t}</li>
+		<li><a href="http://jfreevote.hispalinux.es/">JFreeVote</a>. {t}It is a already implemented, working solution for electronic voting.{/t}</li>
 	</ul>
 
 <!--
@@ -94,7 +95,7 @@ are poor. Others have been rejected. If you have any comment ...
 
 <ol>
 
-	<li>[Central server] &nbsp; <a href="http://www.gnu.org/software/free/" target="_top">GNU.FREE</a> &nbsp; <b>(State:&nbsp;REJECTED&nbsp;?&nbsp;)</b>
+	<li>[Central server] &nbsp; <a href="http://www.gnu.org/software/free/">GNU.FREE</a> &nbsp; <b>(State:&nbsp;REJECTED&nbsp;?&nbsp;)</b>
 		<p><i>Disadventage</i>: Central server. Jose's opinion:
 		"The GNU.FREE voting system is not the solution to all
 		voting problems any more than any system could be. In
@@ -143,19 +144,19 @@ are poor. Others have been rejected. If you have any comment ...
 <ul>
 
 <li>
-	<a href="http://www.thebell.net/papers/vote-req.pdf" target="_top">Voting System Requirements</a>.
+	<a href="http://www.thebell.net/papers/vote-req.pdf">Voting System Requirements</a>.
 	{t}A 16 page nontechnical paper, on 16 requirements that a voting system "must" meet. Read it to know a bit more about efforts underway at coming up with secure voting (and what may constitute a definition of secure voting). Consider in particular the requirement that anonimity be maintained.{/t}
 </li>
 
 <li>
-	<a href="http://www.gnu.org/software/free/" target="_top">GNU.FREE links</a>. {t}We want remark:{/t}<br>
-	<!-- &nbsp; &nbsp; <a href="http://www.votehere.net/products.htm" target="_top">E-voting Solutions</a> The list of requirements of the above reference can be useful to check any design. Anyway, we think the "<i>Revisability: A voter can change their vote in a given period of time</i>" feature is not necessary and even no convenient. What do you think?. <br> -->
-	&nbsp; &nbsp; <a href="http://lorrie.cranor.org/" target="_top">Lorrie Faith Cranor</a> <br>
-	&nbsp; &nbsp; <a href="http://www.vote.caltech.edu/" target="_top">Caltech</a> <br>
-	&nbsp; &nbsp; <a href="http://www.notablesoftware.com/evote.html" target="_top">Electronic Voting</a> <br>
+	<a href="http://www.gnu.org/software/free/">GNU.FREE links</a>. {t}We want remark:{/t}<br>
+	<!-- &nbsp; &nbsp; <a href="http://www.votehere.net/products.htm">E-voting Solutions</a> The list of requirements of the above reference can be useful to check any design. Anyway, we think the "<i>Revisability: A voter can change their vote in a given period of time</i>" feature is not necessary and even no convenient. What do you think?. <br> -->
+	&nbsp; &nbsp; <a href="http://lorrie.cranor.org/">Lorrie Faith Cranor</a> <br>
+	&nbsp; &nbsp; <a href="http://www.vote.caltech.edu/">Caltech</a> <br>
+	&nbsp; &nbsp; <a href="http://www.notablesoftware.com/evote.html">Electronic Voting</a> <br>
 	{t}Note that all those systems are country voting oriented.{/t}<br>
 </li>
 
-<li><a href="http://grouper.ieee.org/groups/scc38/1583/" target="_top">IEEE, Voting Equipment Standards</a></li>
+<li><a href="http://grouper.ieee.org/groups/scc38/1583/">IEEE, Voting Equipment Standards</a></li>
 
 </ul>

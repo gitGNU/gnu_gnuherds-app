@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -26,13 +27,13 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<li>
 		<p>
-		<a href="http://www.libre-entreprise.org/" target="_top">Libre-entreprise</a> ({t}French{/t})
+		<a href="http://www.libre-entreprise.org/">Libre-entreprise</a> ({t}French{/t})
 		</p>
 	</li>
 
 	<li>
 		<p>
-		<a href="http://www.menttes.com/contact-us" target="_top">Menttes</a> ({t}English{/t}, {t}Spanish{/t}) <br>
+		<a href="http://www.menttes.com/contact-us">Menttes</a> ({t}English{/t}, {t}Spanish{/t}) <br>
 		{t}Menttes provides training, consulting, web sites, portals, extranets, intranets and custom web application development with Plone, Zope and Python. These services are provided for end-users, companies and consulting firms of any country.{/t}
 		</p>
 	</li>
@@ -40,16 +41,16 @@ Suite 225, San Francisco, CA 94107, USA
 	<li>
 		<p>
 		GNU Business Network<br>
-		{t}Its{/t} <a href="http://mail.fsfeurope.org/pipermail/gnubiz-disc/2000-December/000014.html" target="_top">Definition</a> ({t}draft{/t}) - ({t}December{/t} 01, 2000)<br>
+		{t}Its{/t} <a href="http://mail.fsfeurope.org/pipermail/gnubiz-disc/2000-December/000014.html">Definition</a> ({t}draft{/t}) - ({t}December{/t} 01, 2000)<br>
 		</p>
 	</li>
 
 	<li>
 		<p>
-		<a href="http://www.cio.com/sourcing/outsourcing/" target="_top">{t}Flexible Business Networks{/t}</a><br>
+		<a href="http://www.cio.com/sourcing/outsourcing/">{t}Flexible Business Networks{/t}</a><br>
 		{t escape='no'
 		  1='<i>'
-		  2='<a href="http://www.outsourcing.com/" target="_top">'
+		  2='<a href="http://www.outsourcing.com/">'
 		  3='</a>'
 		  4='</i>'
 		}If your company is not able to undertake fully a project, instead of losing the contract, you %1could choose to work with %2outsourcers%3. You can cut costs and foster competition between vendors, while taking advantage of vendor specialization and technical expertise%4.{/t}
@@ -60,10 +61,10 @@ Suite 225, San Francisco, CA 94107, USA
 		<p>
 		{t}Cooperatives & non-profit Franchises{/t}<br>
 		{t escape='no'
-		  1='<a href="http://www.answers.com/topic/best-western" target="_top">'
+		  1='<a href="http://www.answers.com/topic/best-western">'
 		  2='</a>'
-		  3='<a href="http://en.wikipedia.org/wiki/Mondrag%F3n_Cooperative_Corporation" target="_top">'
-		  4='<a href="http://mail.fsfeurope.org/pipermail/gnubiz-disc/2005-May/thread.html" target="_top">GBN discussion</a>'
+		  3='<a href="http://en.wikipedia.org/wiki/Mondrag%F3n_Cooperative_Corporation">'
+		  4='<a href="http://mail.fsfeurope.org/pipermail/gnubiz-disc/2005-May/thread.html">GBN discussion</a>'
 		}Following the way of successful organizations as %1Best Western%2 or %3Mondragon Cooperative Corporation%2. You can read comments at the %4 email list.{/t}
 		</p>
 	</li>

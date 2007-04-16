@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -88,16 +89,16 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="tdNote" width="650">
 <p class="footnote">
 {t escape='no'
-  1='<a href="http://gnuherds.org" target="_top">gnuherds.org</a>'
-  2='<a href="http://www.fsf.org/" target="_top">'
+  1='<a href="http://gnuherds.org">gnuherds.org</a>'
+  2='<a href="http://www.fsf.org/">'
   3='</a>'
 }To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the %1 domain to offices managed by %2FSF%3 staff.{/t}
 
 &nbsp;
 
 {t escape='no'
-  1='<a href="http://www.gnu.org" target="_top">'
-  2='<a href="http://www.gnuherds.org" target="_top">'
+  1='<a href="http://www.gnu.org">'
+  2='<a href="http://www.gnuherds.org">'
   3='</a>'
 }The %2GNU Herds%3 project is not an official part of %1the GNU Project%3.{/t}
 </p>

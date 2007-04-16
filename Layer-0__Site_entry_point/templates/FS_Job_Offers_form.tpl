@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -39,7 +40,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr valign="top">
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="/View_Job_Offer.php?JobOfferId={$Id}" target="_top">
+<a href="/View_Job_Offer.php?JobOfferId={$Id}">
 {$VacancyTitle[$i]}
 </a>
 </td>
@@ -60,7 +61,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $EP_FirstName[$i]}<strong>{t}Person{/t}</strong>: {/if}
 {if $EC_CompanyName[$i]}<strong>{t}Company{/t}</strong>: {/if}
 {if $EO_OrganizationName[$i]}<strong>{t}non-profit Organization{/t}</strong>: {/if}
-{if trim($Website[$i]) neq ''}<a href="{$Website[$i]}" target="_top">{/if}
+{if trim($Website[$i]) neq ''}<a href="{$Website[$i]}">{/if}
 {if $EP_FirstName[$i]}{$EP_LastName[$i]} {$EP_MiddleName[$i]}{if $EP_LastName[$i] or $EP_MiddleName[$i]},{/if} {$EP_FirstName[$i]}{/if}
 {if $EC_CompanyName[$i]}{$EC_CompanyName[$i]}{/if}
 {if $EO_OrganizationName[$i]}{$EO_OrganizationName[$i]}{/if}

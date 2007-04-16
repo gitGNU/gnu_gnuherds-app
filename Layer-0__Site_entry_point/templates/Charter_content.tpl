@@ -72,7 +72,7 @@ Non-executive committee members?:  The number of non-executive committee members
 {t escape='no'
   1='<i>'
   2='</i>'
-  3='<i><a href="/FS_Business_Networks.php" target="_top">'
+  3='<i><a href="/FS_Business_Networks.php">'
   4='</a></i>'
 }The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc.{/t}
 </p>
@@ -82,7 +82,7 @@ Non-executive committee members?:  The number of non-executive committee members
   1='</p><ul>'
   2='<li>'
   3='</li>'
-  4='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
+  4='<a href="http://www.gnu.org/philosophy/free-sw.html">'
   5='</a>'
   6='</ul>'
 }The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6{/t}
@@ -122,7 +122,7 @@ Non-executive committee members?:  The number of non-executive committee members
 
 <p>
 {t escape='no'
-  1='<a href="/e-Voting_SIG.php" target="_top">'
+  1='<a href="/e-Voting_SIG.php">'
   2='</a>'
 }See the %1e-Voting%2 Special Interest Group section. We could work on the design of the official voting mechanism.{/t} <!-- XXX: This phrase could be deleted from the final charter. -->
 </p>

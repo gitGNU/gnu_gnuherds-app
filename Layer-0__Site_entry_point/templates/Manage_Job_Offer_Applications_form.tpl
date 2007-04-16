@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -42,7 +43,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 <strong>{t}{$entityType[$i]}{/t}</strong>
 
-<a href="/View_Qualifications.php?EntityId={$Id}" target="_top">
+<a href="/View_Qualifications.php?EntityId={$Id}">
 {if $firstName[$i]}{$lastName[$i]} {$middleName[$i]}{if $lastName[$i] or $middleName[$i]},{/if} {$firstName[$i]}{/if}
 {if $companyName[$i]}{$companyName[$i]}{/if}
 {if $organizationName[$i]}{$organizationName[$i]}{/if}

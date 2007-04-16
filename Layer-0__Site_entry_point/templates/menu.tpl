@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -26,11 +27,11 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td>
 <p>
-<a href="http://{$smarty.server.HTTP_HOST}/Home.php" class="menu1" target="_top">{'Home'|gettext}</a><br>
-<a href="http://{$smarty.server.HTTP_HOST}/Charter.php" class="menu1" target="_top">{'Charter (draft)'|gettext}</a><br>
-<a href="http://{$smarty.server.HTTP_HOST}/Timeline.php" class="menu1" target="_top">{'Timeline'|gettext}</a><br>
-<a href="http://{$smarty.server.HTTP_HOST}/GNU_Herds_Hackers_Guide.php" class="menu1" target="_top">{"Hackers' Guide"|gettext}</a><br>
-<a href="http://{$smarty.server.HTTP_HOST}/FAQ.php" class="menu1" target="_top">{'FAQ'|gettext}</a><br>
+<a href="http://{$smarty.server.HTTP_HOST}/Home.php" class="menu1">{'Home'|gettext}</a><br>
+<a href="http://{$smarty.server.HTTP_HOST}/Charter.php" class="menu1">{'Charter (draft)'|gettext}</a><br>
+<a href="http://{$smarty.server.HTTP_HOST}/Timeline.php" class="menu1">{'Timeline'|gettext}</a><br>
+<a href="http://{$smarty.server.HTTP_HOST}/GNU_Herds_Hackers_Guide.php" class="menu1">{"Hackers' Guide"|gettext}</a><br>
+<a href="http://{$smarty.server.HTTP_HOST}/FAQ.php" class="menu1">{'FAQ'|gettext}</a><br>
 </p>
 
 {if $smarty.session.Logged eq '1'}
@@ -38,22 +39,22 @@ Suite 225, San Francisco, CA 94107, USA
 <span class="menu1noactive">{'Manage your data'|gettext|strip:'&nbsp;'}</span><br>
 
 {if $smarty.session.LoginType eq 'Person' }
-	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Person.php" class="menu3" target="_top">{'Person (Member)'|gettext}</a><br>
+	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Person.php" class="menu3">{'Person (Member)'|gettext}</a><br>
 {/if}
 
 {if $smarty.session.LoginType eq 'Company' }
-	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Company.php" class="menu3" target="_top">{'Company'|gettext}</a><br>
+	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Company.php" class="menu3">{'Company'|gettext}</a><br>
 {/if}
 
 {if $smarty.session.LoginType eq 'non-profit Organization' }
-	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/non-profit_Organization.php" class="menu3" target="_top">{'non-profit Organization'|gettext|strip:'&nbsp;'}</a><br>
+	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/non-profit_Organization.php" class="menu3">{'non-profit Organization'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
 
 {if $smarty.session.Logged eq '1' }
 {if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Qualifications.php" class="menu3" target="_top">{'My qualifications'|gettext|strip:'&nbsp;'}</a><br>
+	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Qualifications.php" class="menu3">{'My qualifications'|gettext|strip:'&nbsp;'}</a><br>
 {else}
-	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Qualifications.php" class="menu3" target="_top">{'Our qualifications'|gettext|strip:'&nbsp;'}</a><br>
+	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Qualifications.php" class="menu3">{'Our qualifications'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
 {else}
 	&nbsp;&nbsp;<span class="menu3noactive">{'Your qualifications'|gettext|strip:'&nbsp;'}</span><br>
@@ -61,9 +62,9 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if $smarty.session.Logged eq '1' }
 {if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Manage_Job_Offers.php" class="menu3" target="_top">{'My job offers'|gettext|strip:'&nbsp;'}</a><br>
+	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Manage_Job_Offers.php" class="menu3">{'My job offers'|gettext|strip:'&nbsp;'}</a><br>
 {else}
-	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Manage_Job_Offers.php" class="menu3" target="_top">{'Our job offers'|gettext|strip:'&nbsp;'}</a><br>
+	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/Manage_Job_Offers.php" class="menu3">{'Our job offers'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
 {else}
 	&nbsp;&nbsp;<span class="menu3noactive">{'Your job offers'|gettext|strip:'&nbsp;'}</span><br>
@@ -71,9 +72,9 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if $smarty.session.Logged eq '1' }
 {if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/View_Job_Applications_State.php" class="menu3" target="_top">{'My job applications'|gettext|strip:'&nbsp;'}</a><br>
+	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/View_Job_Applications_State.php" class="menu3">{'My job applications'|gettext|strip:'&nbsp;'}</a><br>
 {else}
-	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/View_Job_Applications_State.php" class="menu3" target="_top">{'Our job applications'|gettext|strip:'&nbsp;'}</a><br>
+	&nbsp;&nbsp;<a href="https://{$smarty.server.HTTP_HOST}/View_Job_Applications_State.php" class="menu3">{'Our job applications'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
 {else}
 	&nbsp;&nbsp;<span class="menu3noactive">{'Your job applications'|gettext|strip:'&nbsp;'}</span><br>
@@ -97,12 +98,12 @@ Suite 225, San Francisco, CA 94107, USA
 <p>
 <span class="menu1noactive">{'Resources'|gettext}</span><br>
 	&nbsp;&nbsp;<span class="menu2noactive">{'Careers'|gettext}</span><br>
-	&nbsp;&nbsp;<a href="http://{$smarty.server.HTTP_HOST}/FS_Job_Offers.php" class="menu3" target="_top">{'FS Job Offers'|gettext|strip:'&nbsp;'}</a><br>
-	&nbsp;&nbsp;<a href="http://{$smarty.server.HTTP_HOST}/FS_Business_Networks.php" class="menu3" target="_top">{'FS Business Networks'|gettext|strip:'&nbsp;'}</a><br>
+	&nbsp;&nbsp;<a href="http://{$smarty.server.HTTP_HOST}/FS_Job_Offers.php" class="menu3">{'FS Job Offers'|gettext|strip:'&nbsp;'}</a><br>
+	&nbsp;&nbsp;<a href="http://{$smarty.server.HTTP_HOST}/FS_Business_Networks.php" class="menu3">{'FS Business Networks'|gettext|strip:'&nbsp;'}</a><br>
 </p>
 <p>
 <span class="menu1noactive">{'Special Interest Groups'|gettext|strip:'&nbsp;'}</span><br>
-	&nbsp; <a href="http://{$smarty.server.HTTP_HOST}/e-Voting_SIG.php" class="menu3" target="_top">{'e-Voting'|gettext}</a><br>
+	&nbsp; <a href="http://{$smarty.server.HTTP_HOST}/e-Voting_SIG.php" class="menu3">{'e-Voting'|gettext}</a><br>
 </p>
 </td>
 

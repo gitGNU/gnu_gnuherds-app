@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -53,7 +54,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="/Job_Offer.php?JobOfferId={$Id}" target="_top">{$smarty.session.M_VacancyTitle[$i]}</a>
+<a href="/Job_Offer.php?JobOfferId={$Id}">{$smarty.session.M_VacancyTitle[$i]}</a>
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
@@ -79,7 +80,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $ReceivedMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}" target="_top">
+<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
 {$ReceivedMeter[$i]}
 </a>
 {/if}
@@ -89,7 +90,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $InProcessMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}" target="_top">
+<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
 {$InProcessMeter[$i]}
 </a>
 {/if}
@@ -99,7 +100,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $RuledOutMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}" target="_top">
+<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
 {$RuledOutMeter[$i]}
 </a>
 {/if}
@@ -109,7 +110,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $FinalistMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}" target="_top">
+<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
 {$FinalistMeter[$i]}
 </a>
 {/if}
@@ -119,7 +120,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $SelectedMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}" target="_top">
+<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
 {$SelectedMeter[$i]}
 </a>
 {/if}

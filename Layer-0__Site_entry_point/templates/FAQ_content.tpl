@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -21,11 +22,11 @@ Suite 225, San Francisco, CA 94107, USA
 
 <p>{t}Index{/t}</p>
 <ol>
-<li><a href="#Why_another_Job_Site?" style='text-decoration: none;' target="_top">{t}Why another Job Site?{/t}</a>
-<li><a href="#How_to_subscribe_to_a_job_offer?" style='text-decoration: none;' target="_top">{t}How to subscribe to a job offer?{/t}</a>
-<li><a href="#Who_can_subscribe_to_a_job_offer?" style='text-decoration: none;' target="_top">{t}Who can subscribe to a job offer?{/t}</a>
-<li><a href="#Who_can_post_a_job_offer?" style='text-decoration: none;' target="_top">{t}Who can post a job offer?{/t}</a>
-<li><a href="#How_is_the_Job_Site_module_related_to_the_GNU_Herds_Association?" style='text-decoration: none;' target="_top">{t}How is the Job Site module related to the GNU Herds Association?{/t}</a>
+<li><a href="#Why_another_Job_Site?" style='text-decoration: none;'>{t}Why another Job Site?{/t}</a>
+<li><a href="#How_to_subscribe_to_a_job_offer?" style='text-decoration: none;'>{t}How to subscribe to a job offer?{/t}</a>
+<li><a href="#Who_can_subscribe_to_a_job_offer?" style='text-decoration: none;'>{t}Who can subscribe to a job offer?{/t}</a>
+<li><a href="#Who_can_post_a_job_offer?" style='text-decoration: none;'>{t}Who can post a job offer?{/t}</a>
+<li><a href="#How_is_the_Job_Site_module_related_to_the_GNU_Herds_Association?" style='text-decoration: none;'>{t}How is the Job Site module related to the GNU Herds Association?{/t}</a>
 </ol>
 
 <p>&nbsp;</p>
@@ -41,7 +42,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<ul>
 		<li> {t escape='no'
-		  1='<a href="http://www.gnu.org/licenses/agpl.html" target="_top">'
+		  1='<a href="http://www.gnu.org/licenses/agpl.html">'
 		  2='</a>'
 		}Use a license to cover use of the software over a computer network. The current %1Affero GPL%2 license will be replaced by the GPL v3 license when it be released. Anyhow, the project is always open to discuss this and any other subject.{/t}
 
@@ -49,7 +50,7 @@ Suite 225, San Francisco, CA 94107, USA
 		  1='<a href="/doc/GNUHerds__ER__Logical-model.png">'
 		  2='</a>'
 		  3='<a href="/Charter.php#Committee">'
-		  4='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
+		  4='<a href="http://www.gnu.org/philosophy/free-sw.html">'
 		}Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users.{/t}
 
 		<li> {t}Supplying support to engage among companies and persons, it doesn't matter the which or the order, helping the raise of a diversity of business models.  That is flexibility.{/t}
@@ -61,12 +62,12 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="/Charter.php#Aims" target="_top">'
+	  1='<a href="/Charter.php#Aims">'
 	  2='</a>'
 	}All this taking into account that: "The %1aims%2 of the Association shall be to encourage the professional development of Free Software contributors."{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -95,7 +96,7 @@ Suite 225, San Francisco, CA 94107, USA
 	{t}Note that some offers could allow to subscribe only to some entity types: Persons, Companies or non-profit Organizations.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -103,7 +104,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>{t}Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly.{/t}</p>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -114,32 +115,32 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<ul>
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html">'
 			2='</a>'
 		    }Development or maintenance of software for distribution to the public, if all the software to be developed or maintained is %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html">'
 			2='</a>'
 		    }Writing or maintenance of documentation for software, if all the software to be documented is %1Free Software%2, and all the documentation to be written or maintained is free in the same sense.{/t} </li>
 
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html">'
 			2='</a>'
 		    }Development or maintenance of software for private use by specific clients, if the clients will have the source code and rights to modify and distribute it, and if the software to be used for the development is all %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html">'
 			2='</a>'
 		    }Providing support of software, if all the software to be supported is %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html">'
 			2='</a>'
 		    }Promotion or marketing of software, if all the software to be promoted and/or marketed is %1Free Software%2.{/t} </li>
 
 		<li>{t escape='no'
-			1='<a href="http://www.gnu.org/philosophy/free-sw.html" target="_top">'
+			1='<a href="http://www.gnu.org/philosophy/free-sw.html">'
 			2='</a>'
 		    }Installation of software, if all the software to be installed is %1Free Software%2.{/t} </li>
 	</ul>
@@ -148,7 +149,7 @@ Suite 225, San Francisco, CA 94107, USA
 		1='<a href="mailto:joboffer@gnuherds.org" >joboffer@gnuherds.org</a>'
 	   }Report to %1 about any offer that seems improper.{/t}</p>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
@@ -164,7 +165,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>&nbsp;</p>
 
-	<a href="/doc/GNUHerds__ER__Logical-model.png" target="_top"><img src="/doc/GNUHerds__ER__Logical-model.scaled.png" align="middle" alt="" border="0" hspace="0" vspace="0"></a>
+	<a href="/doc/GNUHerds__ER__Logical-model.png"><img src="/doc/GNUHerds__ER__Logical-model.scaled.png" align="middle" alt="" border="0" hspace="0" vspace="0"></a>
 
-<center><a href="#" style='text-decoration: none;' target="_top">{t}Back to top{/t}</a></center>
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 

@@ -1,7 +1,8 @@
 {*
-Authors: Davi Leal
+Authors: Davi Leal, Victor Engmark
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
+              2007 Victor Engmark <victor dot engmark at gmail dot com>
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the Affero General Public License as published by Affero Inc.,
@@ -389,7 +390,7 @@ Reference: http://es.php.net/types.array
 <tr align="center">
 <td colspan="4" align="center">
 <br>
-<a href="/View_Qualifications.php?EntityId={$smarty.session.EntityId}" target="_top">{t}Check qualifications view{/t}</a>
+<a href="/View_Qualifications.php?EntityId={$smarty.session.EntityId}">{t}Check qualifications view{/t}</a>
 </td>
 </tr>
 {/if}
