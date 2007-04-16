@@ -36,15 +36,6 @@ Suite 225, San Francisco, CA 94107, USA
 
 <body OnLoad="if ('InitializationOnLoad' in window) InitializationOnLoad();">
 
-{literal}
-<script type="text/javascript">
-	if (parent.location != this.location)
-	{
-		parent.location = this.location; // I hate getting stuck in someone else's frames
-	}
-</script>
-{/literal}
-
 {if !isset($smarty.get.heading)}
 {include file="header.tpl"}
 {/if}
