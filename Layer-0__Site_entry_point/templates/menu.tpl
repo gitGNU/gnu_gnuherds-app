@@ -80,18 +80,6 @@ Suite 225, San Francisco, CA 94107, USA
 	&nbsp;&nbsp;<span class="menu3noactive">{'Your job applications'|gettext|strip:'&nbsp;'}</span><br>
 {/if}
 
-{* Disabled. Maybe we will remove this feature.
-{if $smarty.session.Logged eq '1' }
-{if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;<span class="menu3noactive">{'My qualif. searches'|gettext|strip:'&nbsp;'}</span><br>
-{else}
-	&nbsp;&nbsp;<span class="menu3noactive">{'Our qualif. searches'|gettext|strip:'&nbsp;'}</span><br>
-{/if}
-{else}
-	&nbsp;&nbsp;<span class="menu3noactive">{'Your qualif. searches'|gettext|strip:'&nbsp;'}</span><br>
-{/if}
-*}
-
 </p>
 {/if}
 
