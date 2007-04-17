@@ -60,11 +60,7 @@ class LostPassword
 
 				$message .= gettext("To get your new password follow the below link:")."\n\n";
 
-				if ( !$_SERVER['HTTPS'] or $_SERVER['HTTPS'] != 'on' )
-					$message .= "http://";
-				else	$message .= "https://";
-
-				$message .= $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".$_POST['Email']."&magic=".$magic;
+				$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".$_POST['Email']."&magic=".$magic;
 
 				$message .= "\n\n";
 				$message .= gettext("If you have not asked for a new password, ignore it and your password will not be changed.")."\n\n";
