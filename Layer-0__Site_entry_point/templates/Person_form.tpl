@@ -28,7 +28,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $smarty.session.Logged != '1' }
 <tr align="center"> <td colspan="4" align="center" class="mainsection">{t}NEW PERSON{/t}</td> </tr>
 <tr> <td colspan="4">&nbsp;</td> </tr>
-<tr> <td colspan="4" class="footnote">{t escape=no 1='<a href="http://' 2=$smarty.server.HTTP_HOST 3='/Charter.php#Membership">' 4='</a>'}Read the %1%2%3Membership%4 Charter section.{/t}</td> </tr>
+<tr> <td colspan="4" class="footnote">{t escape=no 1='<a href="Charter.php#Membership">' 2='</a>'}Read the %1Membership%2 Charter section.{/t}</td> </tr>
 {/if}
 
 {if $smarty.session.Logged == '1' }
@@ -90,7 +90,7 @@ Suite 225, San Francisco, CA 94107, USA
 <th colspan="3">
 <td align="center">
 {if $smarty.session.ViewPhotoOrLogo eq 'true' }
-	<a href="/Delete_Photo_or_Logo.php"><strong>{t}Delete{/t}</strong></a>
+	<a href="Delete_Photo_or_Logo.php"><strong>{t}Delete{/t}</strong></a>
 {/if}
 </td>
 </tr>
