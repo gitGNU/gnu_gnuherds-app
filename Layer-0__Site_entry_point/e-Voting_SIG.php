@@ -17,6 +17,16 @@
 // Suite 225, San Francisco, CA 94107, USA
 
 
+// We have to use SSL for encryption of the password, PHPSESSID, etc., because else
+// it is sent to the web server as plain text.
+// Insert the following code snipet into the top of secure page.
+if ( !isset($_SERVER['HTTPS']) || $_SERVER['HTTPS']!="on" )
+{
+	header("Location: https://$_SERVER[SERVER_NAME]$_SERVER[REQUEST_URI]");
+	exit;
+}
+
+
 session_start();
 
 require_once "../Layer-1__Page_builder/Themes.php";
