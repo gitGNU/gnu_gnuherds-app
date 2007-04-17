@@ -68,7 +68,7 @@ Suite 225, San Francisco, CA 94107, USA
 			{if $webpage->contentExceptionCode }
 				<p>&nbsp;</p>
 				<center>
-				<form name="backForm" method="post" action="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
+				<form name="backForm" method="post" action="{$smarty.server.REQUEST_URI}">
 				<input type="submit" name="back" value="{'Back'|gettext}">
 				</form>
 				</center>
@@ -89,7 +89,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="tdNote" width="650">
 <p class="footnote">
 {t escape='no'
-  1='<a href="http://gnuherds.org">gnuherds.org</a>'
+  1='<a href="https://www.gnuherds.org">gnuherds.org</a>'
   2='<a href="http://www.fsf.org/">'
   3='</a>'
 }To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the %1 domain to offices managed by %2FSF%3 staff.{/t}
@@ -98,7 +98,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {t escape='no'
   1='<a href="http://www.gnu.org">'
-  2='<a href="http://www.gnuherds.org">'
+  2='<a href="https://www.gnuherds.org">'
   3='</a>'
 }The %2GNU Herds%3 project is not an official part of %1the GNU Project%3.{/t}
 </p>

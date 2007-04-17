@@ -17,7 +17,7 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-<form name="LogForm" method="post" action="{if not isset($smarty.server.HTTPS) || $smarty.server.HTTPS neq 'on' }http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
+<form name="LogForm" method="post" action="{$smarty.server.REQUEST_URI}">
 <table width="155" border="0" cellspacing="0" cellpadding="2" bgcolor="{$webpage->theme->loginBoxBGcolor}">
 <tr>
 <td colspan="2" align="center"><span class="footnote">{'Now, you can go to the menu to manage your data'|gettext}</span><br>
