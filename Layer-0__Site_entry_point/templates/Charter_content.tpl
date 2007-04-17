@@ -33,7 +33,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <p>
 {t escape='no'
-  1='<a href="/FAQ.php#Why_another_Job_Site?">'
+  1='<a href="FAQ.php#Why_another_Job_Site?">'
   2='</a>
 }The aims of the Association shall be to %1encourage%2 the professional development of Free Software contributors.{/t}
 </p>
@@ -72,7 +72,7 @@ Non-executive committee members?:  The number of non-executive committee members
 {t escape='no'
   1='<i>'
   2='</i>'
-  3='<i><a href="/FS_Business_Networks.php">'
+  3='<i><a href="FS_Business_Networks.php">'
   4='</a></i>'
 }The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc.{/t}
 </p>
@@ -122,7 +122,7 @@ Non-executive committee members?:  The number of non-executive committee members
 
 <p>
 {t escape='no'
-  1='<a href="/e-Voting_SIG.php">'
+  1='<a href="e-Voting_SIG.php">'
   2='</a>'
 }See the %1e-Voting%2 Special Interest Group section. We could work on the design of the official voting mechanism.{/t} <!-- XXX: This phrase could be deleted from the final charter. -->
 </p>
