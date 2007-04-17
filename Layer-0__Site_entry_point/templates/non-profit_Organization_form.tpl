@@ -93,7 +93,7 @@ Suite 225, San Francisco, CA 94107, USA
 <th colspan="3">
 <td align="center">
 {if $smarty.session.ViewPhotoOrLogo eq 'true' }
-	<a href="/Delete_Photo_or_Logo.php"><strong>{t}Delete{/t}</strong></a>
+	<a href="Delete_Photo_or_Logo.php"><strong>{t}Delete{/t}</strong></a>
 {/if}
 </td>
 </tr>
