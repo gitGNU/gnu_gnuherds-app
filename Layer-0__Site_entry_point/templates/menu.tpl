@@ -80,6 +80,16 @@ Suite 225, San Francisco, CA 94107, USA
 	&nbsp;&nbsp;<span class="menu3noactive">{'Your job applications'|gettext|strip:'&nbsp;'}</span><br>
 {/if}
 
+{if $smarty.session.Logged eq '1' }
+{if $smarty.session.LoginType eq "Person" }
+	&nbsp;&nbsp;<a href="Alerts.php" class="menu3" target="_top">{'My Alerts'|gettext|strip:'&nbsp;'}</a><br>
+{else}
+	&nbsp;&nbsp;<a href="Alerts.php" class="menu3" target="_top">{'Our Alerts'|gettext|strip:'&nbsp;'}</a><br>
+{/if}
+{else}
+	&nbsp;&nbsp;<span class="menu3noactive">{'Your Alerts'|gettext|strip:'&nbsp;'}</span><br>
+{/if}
+
 </p>
 {/if}
 
