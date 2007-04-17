@@ -60,7 +60,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<form name="changeApplicationStateForm{$Id}" id="changeApplicationStateForm{$Id}" method="post" action="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
+<form name="changeApplicationStateForm{$Id}" id="changeApplicationStateForm{$Id}" method="post" action="{$smarty.server.REQUEST_URI}">
 <input type="hidden" name="EntityId" value="{$Id}">
 <select name="ApplicationState" onChange="javascript:document.getElementById('changeApplicationStateForm{$Id}').submit();">
 {html_options values=$applicationStatesId output=$applicationStatesIdTranslated selected=$applicationState[$i]}
