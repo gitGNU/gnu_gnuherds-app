@@ -65,7 +65,7 @@ class LostPassword
 				$message .= "\n\n";
 				$message .= gettext("If you have not asked for a new password, ignore it and your password will not be changed.")."\n\n";
 
-				mail($_POST['Email'], "GNU Herds: Lost password", "$message", "From: association@gnuherds.org");
+				mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
 
 				// Report to the user
 				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('An email has been sent to such address with the instructions to change the password.')."<p>\n";
