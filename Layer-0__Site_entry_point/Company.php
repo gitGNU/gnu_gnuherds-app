@@ -17,7 +17,8 @@
 // Suite 225, San Francisco, CA 94107, USA
 
 
-// My solution to use SSL for password encryption, because the password is sent to web server as plain text.
+// We have to use SSL for encryption of the password, PHPSESSID, etc., because else
+// it is sent to the web server as plain text.
 // Insert the following code snipet into the top of secure page.
 if ( !isset($_SERVER['HTTPS']) || $_SERVER['HTTPS']!="on" )
 {
