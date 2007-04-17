@@ -49,6 +49,7 @@ DROP TABLE E2_EntityFreeSoftwareExperiences; -- Contributions to Free Software p
 DROP TABLE E3_EntityJobLicenseAt; -- List the countries where the entity has license to work.
 DROP TABLE E4_EntityRequireCertifications; -- List the Certifications which this entity requires to its contractors entities or contracted entities. Take into account that some certifications can be only applyed to some entity types; See the content of the LC_Certifications table. For example a certification which is only applied to Persons, of course, is not required to Companies.
 DROP TABLE J1_JobOffers;
+DROP TABLE A1_Alerts;
 DROP TABLE E1_Entities;
 
 -- Lists:
@@ -220,6 +221,7 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         E1_Magic           varchar(512) CHECK (E1_Magic <> ''), -- Code which a user must supply to allow the password change.
         E1_Revoked         bool NOT NULL DEFAULT 'false', -- Account disabled due to the members does not adhere to the Code of Ethics.
         E1_EntityType      varchar(23) NOT NULL CHECK (E1_EntityType <> ''), -- We have to add this field due to we can not use OO PostgreSQL features. Values will be: "Person", "Company" or "non-profit Organization". 
+	E1_Locale          char(5) NOT NULL CHECK (E1_Locale <> '') DEFAULT 'en_US', -- To be used for the cron jobs to send mensages to each entity with its own locale.
 
         --------------------------------------------------------------------------
         -- Address (Specific Location)
@@ -294,6 +296,13 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         --------------------------------------------------------------------------
         -- Organization Name
         EO_OrganizationName  varchar(30) -- NOT NULL CHECK (EO_OrganizationName <> '')
+);
+
+
+CREATE TABLE A1_Alerts ( -- Alerts about anything: job offers, etc.
+        A1_E1_Id           integer PRIMARY KEY REFERENCES E1_Entities(E1_Id) NOT NULL,
+
+        A1_NewJobOffer     bool NOT NULL DEFAULT 'false' -- Alert me when _any_ new job offer is added.
 );
 
 
@@ -446,7 +455,12 @@ CREATE TABLE J1_JobOffers (
         J1_AvailableToTravel bool, -- DEFAULT 'false', -- NOT NULL,
 
 	-- Nationalities                                  (R17_JobOffer2Nationalities)  -- Only interested on applicants of that nationalities.
-        J1_LO_JobLicenseAt   char(2) -- REFERENCES LO_Countries(LO_TwoLetter) -- NOT NULL -- Required license to work at least at that country.
+        J1_LO_JobLicenseAt   char(2), -- REFERENCES LO_Countries(LO_TwoLetter) -- NOT NULL -- Required license to work at least at that country.
+
+	-- Flags about alerts on job offers
+        J1_NewJobOfferAlert          bool NOT NULL DEFAULT 'true' -- Must the new-job-offer alert be raised on this job offer?: true=Yes, false=No.
+        -- J1_FitMyQualificationsAlert  bool NOT NULL DEFAULT 'true', -- Must the fit-my-qualifications alert be raised on this job offer?: true=Yes, false=No.
+        -- J1_CustomAlert               bool NOT NULL DEFAULT 'true' -- Must the custom alerts be raised on this job offer?: true=Yes, false=No.
 );
 
 
