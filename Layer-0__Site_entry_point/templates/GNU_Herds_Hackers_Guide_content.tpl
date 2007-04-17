@@ -66,7 +66,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="/Charter.php">'
+	  1='<a href="Charter.php">'
 	  2='</a>'
 	}Read the current draft of %1GNU Herds' Charter%2.{/t}
 	</p>
@@ -288,7 +288,7 @@ Suite 225, San Francisco, CA 94107, USA
 	  2='</a>'
 	}If you do not like play with CVS, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2.{/t}
 	{t escape='no'
-	  1='<a href="/gnuherds-online.tar.gz">'
+	  1='<a href="gnuherds-online.tar.gz">'
 	  2='</a>'
 	}Or much better, you can %1download%2 the code which is running this site right now!.{/t}
 
@@ -506,7 +506,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <ul>
 	<li>{t}Install{/t}: PostgreSQL
-	<li><a href="/GNU_Herds_Hackers_Guide.php#The_PostgreSQL_data_base">{t}Configure{/t}</a>: PostgreSQL
+	<li><a href="GNU_Herds_Hackers_Guide.php#The_PostgreSQL_data_base">{t}Configure{/t}</a>: PostgreSQL
 	<li>{t}Install{/t}: Apache HTTP server
 	<li>{t}Install{/t}: PHP
 	<li>{t}Install{/t}: GeoIP

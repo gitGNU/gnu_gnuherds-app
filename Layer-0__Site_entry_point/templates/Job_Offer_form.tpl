@@ -397,7 +397,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr align="center">
 <td colspan="4" align="center">
 <br>
-<a href="/View_Job_Offer.php?JobOfferId={$smarty.get.JobOfferId}">{t}Check job offer view{/t}</a>
+<a href="View_Job_Offer.php?JobOfferId={$smarty.get.JobOfferId}">{t}Check job offer view{/t}</a>
 </td>
 </tr>
 {/if}
