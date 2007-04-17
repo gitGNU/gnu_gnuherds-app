@@ -56,8 +56,6 @@ Suite 225, San Francisco, CA 94107, USA
 {else}
 	&nbsp;&nbsp;<a href="Qualifications.php" class="menu3">{'Our qualifications'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
-{else}
-	&nbsp;&nbsp;<span class="menu3noactive">{'Your qualifications'|gettext|strip:'&nbsp;'}</span><br>
 {/if}
 
 {if $smarty.session.Logged eq '1' }
@@ -66,8 +64,6 @@ Suite 225, San Francisco, CA 94107, USA
 {else}
 	&nbsp;&nbsp;<a href="Manage_Job_Offers.php" class="menu3">{'Our job offers'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
-{else}
-	&nbsp;&nbsp;<span class="menu3noactive">{'Your job offers'|gettext|strip:'&nbsp;'}</span><br>
 {/if}
 
 {if $smarty.session.Logged eq '1' }
@@ -76,8 +72,6 @@ Suite 225, San Francisco, CA 94107, USA
 {else}
 	&nbsp;&nbsp;<a href="View_Job_Applications_State.php" class="menu3">{'Our job applications'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
-{else}
-	&nbsp;&nbsp;<span class="menu3noactive">{'Your job applications'|gettext|strip:'&nbsp;'}</span><br>
 {/if}
 
 {if $smarty.session.Logged eq '1' }
@@ -86,8 +80,6 @@ Suite 225, San Francisco, CA 94107, USA
 {else}
 	&nbsp;&nbsp;<a href="Alerts.php" class="menu3" target="_top">{'Our Alerts'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
-{else}
-	&nbsp;&nbsp;<span class="menu3noactive">{'Your Alerts'|gettext|strip:'&nbsp;'}</span><br>
 {/if}
 
 </p>

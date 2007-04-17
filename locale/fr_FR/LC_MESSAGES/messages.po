@@ -76,26 +76,17 @@ msgstr "Mes qualifications"
 msgid "Our qualifications"
 msgstr "Nos qualifications"
 
-msgid "Your qualifications"
-msgstr "Vos qualifications"
-
 msgid "My job offers"
 msgstr "Mes offres d'emplois"
 
 msgid "Our job offers"
 msgstr "Nos offres d'emplois"
 
-msgid "Your job offers"
-msgstr "Vos offres d'emplois"
-
 msgid "My job applications"
 msgstr "Mes candidatures"
 
 msgid "Our job applications"
 msgstr "Nos candidatures"
-
-msgid "Your job applications"
-msgstr "Vos candidatures"
 
 msgid "Resources"
 msgstr "Ressources"

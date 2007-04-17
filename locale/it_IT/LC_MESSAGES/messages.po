@@ -75,26 +75,17 @@ msgstr "Le mie qualifiche"
 msgid "Our qualifications"
 msgstr "Le nostre qualifiche"
 
-msgid "Your qualifications"
-msgstr "Le tue qualifiche"
-
 msgid "My job offers"
 msgstr "Le mie offerte di impiego"
 
 msgid "Our job offers"
 msgstr "Le nostre offerte di lavoro"
 
-msgid "Your job offers"
-msgstr "Le tue offerte di impiego"
-
 msgid "My job applications"
 msgstr "Le mie candidature"
 
 msgid "Our job applications"
 msgstr "Le nostre candidature"
-
-msgid "Your job applications"
-msgstr "Le tue candidature"
 
 msgid "Resources"
 msgstr "Risorse"
