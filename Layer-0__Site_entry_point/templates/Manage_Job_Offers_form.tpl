@@ -26,7 +26,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<p>{t}You do not have any defined job offer.{/t}</p><p>&nbsp;</p>
 {else}
 
-<form name="deleteJobOffersForm" method="post" action="{if !isset($smarty.server.HTTPS) or $smarty.server.HTTPS != 'on'}http://{else}https://{/if}{$smarty.server.HTTP_HOST}{$smarty.server.REQUEST_URI}">
+<form name="deleteJobOffersForm" method="post" action="{$smarty.server.REQUEST_URI}">
 
 <table align="center" border="0" width="100%">
 
@@ -54,7 +54,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="/Job_Offer.php?JobOfferId={$Id}">{$smarty.session.M_VacancyTitle[$i]}</a>
+<a href="Job_Offer.php?JobOfferId={$Id}">{$smarty.session.M_VacancyTitle[$i]}</a>
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
@@ -80,7 +80,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $ReceivedMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
+<a href="Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
 {$ReceivedMeter[$i]}
 </a>
 {/if}
@@ -90,7 +90,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $InProcessMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
+<a href="Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
 {$InProcessMeter[$i]}
 </a>
 {/if}
@@ -100,7 +100,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $RuledOutMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
+<a href="Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
 {$RuledOutMeter[$i]}
 </a>
 {/if}
@@ -110,7 +110,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $FinalistMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
+<a href="Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
 {$FinalistMeter[$i]}
 </a>
 {/if}
@@ -120,7 +120,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $SelectedMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
+<a href="Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
 {$SelectedMeter[$i]}
 </a>
 {/if}
