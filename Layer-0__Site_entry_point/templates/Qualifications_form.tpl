@@ -390,7 +390,7 @@ Reference: http://es.php.net/types.array
 <tr align="center">
 <td colspan="4" align="center">
 <br>
-<a href="/View_Qualifications.php?EntityId={$smarty.session.EntityId}">{t}Check qualifications view{/t}</a>
+<a href="View_Qualifications.php?EntityId={$smarty.session.EntityId}">{t}Check qualifications view{/t}</a>
 </td>
 </tr>
 {/if}

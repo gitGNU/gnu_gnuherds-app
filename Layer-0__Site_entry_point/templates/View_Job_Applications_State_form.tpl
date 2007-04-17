@@ -33,7 +33,7 @@ Suite 225, San Francisco, CA 94107, USA
 {foreach from=$jobOfferId item=Id key=i}
 <tr valign="top">
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="/View_Job_Offer.php?JobOfferId={$Id}">
+<a href="View_Job_Offer.php?JobOfferId={$Id}">
 {$vacancyTitle[$i]}
 </a>
 </td>
