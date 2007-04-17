@@ -44,12 +44,18 @@ class LogForm
 		$_SESSION['EntityId'] = $array[1];
 		$_SESSION['LoginEmail'] = $_POST['Email'];
 
-		if ($_SESSION['LoginType'] == false)  $_SESSION['Logged'] = false;
-		else                                  $_SESSION['Logged'] = '1';
-
-		if ( $_SESSION['Logged'] != '1')
+		if ($_SESSION['LoginType'] == false)
+		{
+			$_SESSION['Logged'] = false;
 			$phpTools->resetPHPsession();
-		// else, there is not need of to update the state of the LogForm box.
+		}
+		else
+		{
+			$_SESSION['Logged'] = '1';
+
+			// We always save the last locale used by the entity, to be used to translate the Alert emails
+			$manager->updateEntityLocale();
+		}
 	}
 
 

@@ -50,9 +50,9 @@ class JobOffer
 		return $array;
 	}
 
-	public function getJobOffers()
+	public function getJobOffers($extra_condition = '')
 	{
-		$sqlQuery = "SELECT J1_Id, J1_Telework, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CompanyName, EO_OrganizationName FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_Closed='f' AND J1_ExpirationDate > 'now'";
+		$sqlQuery = "SELECT J1_Id, J1_Telework, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CompanyName, EO_OrganizationName FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
 		$array = array();
@@ -610,6 +610,18 @@ class JobOffer
 	{
 		$sqlQuery = "PREPARE query(integer) AS  SELECT count(*) FROM J1_JobOffers WHERE J1_Id=$1 AND J1_Closed='f' AND J1_ExpirationDate > 'now';  EXECUTE query('$J1_Id');";
 		$result = $this->postgresql->getOneField($sqlQuery,1);
+
+		if ( intval($result[0]) >= 1 )
+			return true;
+		else
+			return false;
+	}
+
+
+	public function pendingNewJobOfferAlerts()
+	{
+		$sqlQuery = "SELECT count(*) FROM J1_JobOffers WHERE J1_Closed='f' AND J1_ExpirationDate > 'now' AND J1_NewJobOfferAlert='t';";
+		$result = $this->postgresql->getOneField($sqlQuery,0);
 
 		if ( intval($result[0]) >= 1 )
 			return true;

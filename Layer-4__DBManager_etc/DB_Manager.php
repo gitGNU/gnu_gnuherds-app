@@ -22,6 +22,7 @@ require_once "../Layer-5__DB_operation/Authenticate.php";
 require_once "../Layer-5__DB_operation/Entity.php";
 require_once "../Layer-5__DB_operation/Qualifications.php";
 require_once "../Layer-5__DB_operation/Job_Offer.php";
+require_once "../Layer-5__DB_operation/Alerts.php";
 
 // Lists
 require_once "../Layer-5__DB_operation/Countries.php";
@@ -106,6 +107,14 @@ class DBManager
 		$entity->updateEntity();
 	}
 
+	public function updateEntityLocale()
+	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
+		$entity = new Entity();
+		$entity->updateEntityLocale();
+	}
+
 	public function lookForEntity()
 	{
 		// This method does not need ACL check
@@ -128,6 +137,22 @@ class DBManager
 
 		$entity = new Entity();
 		return $entity->setNewPasswordForEntity();
+	}
+
+	public function getNewJobOfferAlertsLocales()
+	{
+		// This method does not need ACL check because of the information that it gets is not associated to any personal information. It get an abstract of statistical information.
+
+		$entity = new Entity();
+		return $entity->getNewJobOfferAlertsLocales();
+	}
+
+	public function getNewJobOfferAlertsEmails($locale)
+	{
+		//XXX: ACL: This method gets entities' emails.  Add support to check sysadmin authentication for website-frontend + DB-backend.
+
+		$entity = new Entity();
+		return $entity->getNewJobOfferAlertsEmails($locale);
 	}
 
 
@@ -188,6 +213,14 @@ class DBManager
 
 		$jobOffer = new JobOffer();
 		return $jobOffer->getJobOffers();
+	}
+
+	public function getNewJobOffers()
+	{
+		// This method does not need ACL check. It gets public information.
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->getJobOffers(" AND J1_NewJobOfferAlert='t' ");
 	}
 
 	public function getJobOffer($Id)
@@ -284,6 +317,31 @@ class DBManager
 
 		$jobOffer = new JobOffer();
 		return $jobOffer->getJobApplicationsForEntity();
+	}
+
+	public function pendingNewJobOfferAlerts()
+	{
+		// This method does not need ACL check because of it works with JobOffer's public information.
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->pendingNewJobOfferAlerts();
+	}
+
+
+	public function getAlertsForEntity()
+	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
+		$alerts = new Alerts();
+		return $alerts->getAlertsForEntity();
+	}
+
+	public function saveAlertsForEntity()
+	{
+		// This method does not need ACL check because of it works with SESSION[EntityId]
+
+		$alerts = new Alerts();
+		return $alerts->saveAlertsForEntity();
 	}
 
 

@@ -17,10 +17,15 @@
 // Suite 225, San Francisco, CA 94107, USA
 
 
+require_once "../Layer-4__DBManager_etc/DB_Manager.php";
+
+
 class LanguageForm
 {
 	public function processForm()
 	{
+		$manager = new DBManager();
+
 		if ($_GET['language'] != '' )
 			$_SESSION['Language'] = $_GET['language'];
 
@@ -155,28 +160,33 @@ class LanguageForm
 		}
 
 		// We use the previously set SESSION Language to init the gettext environment
-		$this->setLocale();
+		$this->setLocale($_SESSION['Language']);
+
+		// We always save the last locale used by the entity, to be used to translate the Alert emails
+		if ( $_SESSION['Logged'] == '1' )
+			$manager->updateEntityLocale();
 	}
 
 
-	private function setLocale()
+	public function setLocale($language)
 	{
 		// I18N support information here
-		if ($_SESSION['Language'] == "en_US")
-			$language = 'en_US.utf8';
-		if ($_SESSION['Language'] == "es_ES")
-			$language = 'es_ES.utf8';
-		if ($_SESSION['Language'] == "fr_FR")
-			$language = 'fr_FR.utf8';
-		if ($_SESSION['Language'] == "it_IT")
-			$language = 'it_IT.utf8';
-		if ($_SESSION['Language'] == "pt_PT")
-			$language = 'pt_PT.utf8';
-		if ($_SESSION['Language'] == "ru_RU")
-			$language = 'ru_RU.utf8';
+		if ($language == "en_US")
+			$locale = 'en_US.utf8';
+		if ($language == "es_ES")
+			$locale = 'es_ES.utf8';
+		if ($language == "fr_FR")
+			$locale = 'fr_FR.utf8';
+		if ($language == "it_IT")
+			$locale = 'it_IT.utf8';
+		if ($language == "pt_PT")
+			$locale = 'pt_PT.utf8';
+		if ($language == "ru_RU")
+			$locale = 'ru_RU.utf8';
 
-		putenv("LANG=$language");
-		setlocale(LC_ALL, $language);
+		putenv("LANG=$locale");
+		putenv("LANGUAGE=$locale"); // Needed when running command line tools, as the cron jobs alerts
+		setlocale(LC_ALL, $locale);
 
 		// Set the text domain as 'messages'
 		$domain = 'messages';

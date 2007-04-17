@@ -19,6 +19,7 @@
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
 require_once "../Layer-5__DB_operation/lib/PasswordHash.php";
+require_once "../Layer-5__DB_operation/Alerts.php";
 
 // Methods take the values form the global $_POST[] array.
 
@@ -126,6 +127,9 @@ class Entity
 
 		$this->savePhotoOrLogo($E1_Id);
 
+		$alerts = new Alerts();
+		$alerts->initAlertsForEntity($E1_Id);
+
 		$this->postgresql->execute("COMMIT",0); // We do not commit if savePhotoOrLogo fails.
 	}
 
@@ -142,6 +146,10 @@ class Entity
 		// Delete its qualifications
 		$qualifications = new Qualifications();
 		$qualifications->deleteQualifications();
+
+		// Delete the Alerts
+		$alerts = new Alerts();
+		$alerts->deleteAlertsForEntity();
 
 		// Delete the entity itself
 		$sqlQuery = "PREPARE query(integer) AS  DELETE FROM E1_Entities WHERE E1_Id=$1;  EXECUTE query('{$_SESSION["EntityId"]}');";
@@ -174,6 +182,12 @@ class Entity
 		$this->savePhotoOrLogo($_SESSION['EntityId']);
 
 		$this->postgresql->execute("COMMIT",0); // We do not commit if savePhotoOrLogo fails.
+	}
+
+	public function updateEntityLocale()
+	{
+		$sqlQuery = "PREPARE query(text,integer) AS  UPDATE E1_Entities SET E1_Locale=$1 WHERE E1_Id=$2;  EXECUTE query('{$_SESSION['Language']}','{$_SESSION['EntityId']}');";
+		$this->postgresql->execute($sqlQuery,1);
 	}
 
 	public function lookForEntity()
@@ -306,6 +320,22 @@ class Entity
 				throw new Exception($error,false);
 			}
 		}
+	}
+
+
+	public function getNewJobOfferAlertsLocales()
+	{
+		$sqlQuery = "SELECT DISTINCT E1_Locale FROM E1_Entities,A1_Alerts WHERE E1_Id=A1_E1_Id AND A1_NewJobOffer='t';";
+		$result = $this->postgresql->getOneField($sqlQuery,0);
+		return $result;
+	}
+
+
+	public function getNewJobOfferAlertsEmails($locale)
+	{
+		$sqlQuery = "SELECT E1_Email FROM E1_Entities,A1_Alerts WHERE E1_Id=A1_E1_Id AND A1_NewJobOffer='t' AND E1_Locale='$locale';";
+		$result = $this->postgresql->getOneField($sqlQuery,0);
+		return $result;
 	}
 }
 ?> 
