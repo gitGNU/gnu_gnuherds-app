@@ -21,7 +21,15 @@ Suite 225, San Francisco, CA 94107, USA
 
 <table width="100%" cellpadding="0" cellspacing="0" rules="none" border="0">
 <tr valign="top">
-<td width="160" style="background: url({$webpage->theme->headBackgroundImage})"><a href="/images/gnus-desc.html"><img src="/images/gnus_90.jpg" align="left" alt="" border="0" hspace="0" vspace="0"></a></td>
+<td width="160" style="background: url({$webpage->theme->headBackgroundImage})">
+{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}
+<a href="/">
+{/if}
+<img src="/images/gnus_90.jpg" align="left" alt="" border="0" hspace="0" vspace="0">
+{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}
+</a>
+{/if}
+</td>
 
 <td style="background: url({$webpage->theme->headBackgroundImage})">
 
