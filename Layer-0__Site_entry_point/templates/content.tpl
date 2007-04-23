@@ -89,18 +89,16 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="tdNote" width="650">
 <p class="footnote">
 {t escape='no'
-  1='<a href="https://www.gnuherds.org">gnuherds.org</a>'
-  2='<a href="http://www.fsf.org/">'
-  3='</a>'
-}To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the %1 domain to offices managed by %2FSF%3 staff.{/t}
+  1='<a href="http://www.fsf.org/">'
+  2='</a>'
+}To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the gnuherds.org domain to offices managed by %1FSF%2 staff.{/t}
 
 &nbsp;
 
 {t escape='no'
   1='<a href="http://www.gnu.org">'
-  2='<a href="https://www.gnuherds.org">'
-  3='</a>'
-}The %2GNU Herds%3 project is not an official part of %1the GNU Project%3.{/t}
+  2='</a>'
+}The GNU Herds project is not an official part of %1the GNU Project%2.{/t}
 </p>
 </td>
 </tr>

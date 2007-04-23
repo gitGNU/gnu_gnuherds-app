@@ -368,16 +368,6 @@ textarea
 	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	text-decoration: none;
-	color: #557744;
-}
-
-.menu3noactive
-{
-	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	text-decoration: none;
-	color: #888855;
-	cursor: default;
 }
 
 .footnote

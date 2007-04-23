@@ -52,17 +52,17 @@ Suite 225, San Francisco, CA 94107, USA
 	{assign var='startParameter' value='?'}
 {/if}
 
-{if $smarty.session.Language eq 'en_US'}<strong>{/if}<a href="{$cleanURI}{$startParameter}language=en_US" lang="en_US" hreflang="en_US" title="{t}Change language{/t}">English</a>{if $smarty.session.Language eq 'en_US'}</strong>{/if},
+{if $smarty.session.Language eq 'en_US'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=en_US" lang="en_US" hreflang="en_US" title="{t}Change language{/t}">{/if}English{if $smarty.session.Language eq 'en_US'}</strong>{else}</a>{/if},
 
-{if $smarty.session.Language eq 'es_ES'}<strong>{/if}<a href="{$cleanURI}{$startParameter}language=es_ES" lang="es_ES" hreflang="es_ES" title="{t}Change language{/t}">Español</a>{if $smarty.session.Language eq 'es_ES'}</strong>{/if},
+{if $smarty.session.Language eq 'es_ES'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=es_ES" lang="es_ES" hreflang="es_ES" title="{t}Change language{/t}">{/if}Español{if $smarty.session.Language eq 'es_ES'}</strong>{else}</a>{/if},
 
-{if $smarty.session.Language eq 'fr_FR'}<strong>{/if}<a href="{$cleanURI}{$startParameter}language=fr_FR" lang="fr_FR" hreflang="fr_FR" title="{t}Change language{/t}">Français</a>{if $smarty.session.Language eq 'fr_FR'}</strong>{/if},
+{if $smarty.session.Language eq 'fr_FR'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=fr_FR" lang="fr_FR" hreflang="fr_FR" title="{t}Change language{/t}">{/if}Français{if $smarty.session.Language eq 'fr_FR'}</strong>{else}</a>{/if},
 
-{if $smarty.session.Language eq 'it_IT'}<strong>{/if}<a href="{$cleanURI}{$startParameter}language=it_IT" lang="it_IT" hreflang="it_IT" title="{t}Change language{/t}">Italiano</a>{if $smarty.session.Language eq 'it_IT'}</strong>{/if},
+{if $smarty.session.Language eq 'it_IT'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=it_IT" lang="it_IT" hreflang="it_IT" title="{t}Change language{/t}">{/if}Italiano{if $smarty.session.Language eq 'it_IT'}</strong>{else}</a>{/if},
 
-{if $smarty.session.Language eq 'pt_PT'}<strong>{/if}<a href="{$cleanURI}{$startParameter}language=pt_PT" lang="pt_PT" hreflang="pt_PT" title="{t}Change language{/t}">Português</a>{if $smarty.session.Language eq 'pt_PT'}</strong>{/if},
+{if $smarty.session.Language eq 'pt_PT'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=pt_PT" lang="pt_PT" hreflang="pt_PT" title="{t}Change language{/t}">{/if}Português{if $smarty.session.Language eq 'pt_PT'}</strong>{else}</a>{/if},
 
-{if $smarty.session.Language eq 'ru_RU'}<strong>{/if}<a href="{$cleanURI}{$startParameter}language=ru_RU" lang="ru_RU" hreflang="ru_RU" title="{t}Change language{/t}">Русский</a>{if $smarty.session.Language eq 'ru_RU'}</strong>{/if}
+{if $smarty.session.Language eq 'ru_RU'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=ru_RU" lang="ru_RU" hreflang="ru_RU" title="{t}Change language{/t}">{/if}Русский{if $smarty.session.Language eq 'ru_RU'}</strong>{else}</a>{/if}
 
 <br>
 <span class="hidden2">______________________________</span>
