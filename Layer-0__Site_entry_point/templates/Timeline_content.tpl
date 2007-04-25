@@ -21,7 +21,11 @@ Suite 225, San Francisco, CA 94107, USA
 <li><p><span class="modification">{t}DONE!{/t}</span>: {t}Add the member support.{/t}</p></li>
 <li><p><span class="modification">{t}DONE!{/t}</span>: {t}Add the FS Job Offers support.{/t}</p></li>
 <li><p><span class="modification">{t}DONE!{/t}</span>: {t}Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed.{/t}</p></li>
-<li><p> {t}Move to offices managed by FSF staff.{/t}</p></li>
+<li><p> {t escape='no'
+  1='<a href="http://www.fsf.org/">'
+  2='</a>'
+}To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the gnuherds.org domain to offices managed by %1FSF%2 staff.{/t}
+</p></li>
 <li><p> <span class="modification">{t}ONGOING PROCESS{/t}</span>: {t}Association announcement.{/t}</p></li>
 <li><p><span class="modification">{t}ONGOING PROCESS{/t}</span>: {t}Translate the web site to other languages.{/t}</p></li>
 <li><p>{t}Work on e-Vote subjects:{/t}</p>
