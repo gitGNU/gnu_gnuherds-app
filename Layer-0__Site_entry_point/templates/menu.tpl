@@ -27,7 +27,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td>
 <p>
-{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}<a href="Home.php" class="menu1">{/if}{'Home'|gettext}{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}</a>{/if}<br>
+{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}<a href="/" class="menu1">{/if}{'Home'|gettext}{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}</a>{/if}<br>
 {if $smarty.server.REQUEST_URI neq "/Charter.php"}<a href="Charter.php" class="menu1">{/if}{'Charter (draft)'|gettext}{if $smarty.server.REQUEST_URI neq "/Charter.php"}</a>{/if}<br>
 {if $smarty.server.REQUEST_URI neq "/Timeline.php"}<a href="Timeline.php" class="menu1">{/if}{'Timeline'|gettext}{if $smarty.server.REQUEST_URI neq "/Timeline.php"}</a>{/if}<br>
 {if $smarty.server.REQUEST_URI neq "/GNU_Herds_Hackers_Guide.php"}<a href="GNU_Herds_Hackers_Guide.php" class="menu1">{/if}{"Hackers' Guide"|gettext}{if $smarty.server.REQUEST_URI neq "/GNU_Herds_Hackers_Guide.php"}</a>{/if}<br>
