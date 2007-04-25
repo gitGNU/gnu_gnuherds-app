@@ -68,16 +68,7 @@ Suite 225, San Francisco, CA 94107, USA
 		</li>
 		<li>{t}Some free GNU/Linux distributions use it own voting system.{/t}</li>
 		<li><a href="http://www.nongnu.org/ampu/">AMPU</a>. {t}Stalled since March 2002.{/t}</li>
-	</ul>
-<p>
-{t escape='no'
-  1='<i><a href="http://lwn.net/Articles/44077/">'
-  2='</a></i>'
-  3='<a href="http://lwn.net/">'
-  4='</a>'
-}We have added the below links from the %1"Bringing free software to voting booths"%2 %3LWN%4 article:{/t}
-</p>
-	<ul>
+
 		<li><a href="http://votesystem.sourceforge.net/">Voting Systems Toolbox</a>. {t}It is dormant.{/t}</li>
 		<li><a href="http://electionmethods.org/GVI.htm">GVI</a>. {t}It is interested in exploring alternative voting methods.{/t}</li>
 		<li><a href="http://lwn.net/Articles/43600/">EVM</a>. {t}It is too young to have released any useful code.{/t}</li>
@@ -149,14 +140,12 @@ are poor. Others have been rejected. If you have any comment ...
 </li>
 
 <li>
-	<a href="http://www.gnu.org/software/free/">GNU.FREE links</a>. {t}We want remark:{/t}<br>
+	{t}We want remark:{/t}<br>
 	<!-- &nbsp; &nbsp; <a href="http://www.votehere.net/products.htm">E-voting Solutions</a> The list of requirements of the above reference can be useful to check any design. Anyway, we think the "<i>Revisability: A voter can change their vote in a given period of time</i>" feature is not necessary and even no convenient. What do you think?. <br> -->
 	&nbsp; &nbsp; <a href="http://lorrie.cranor.org/">Lorrie Faith Cranor</a> <br>
 	&nbsp; &nbsp; <a href="http://www.vote.caltech.edu/">Caltech</a> <br>
 	&nbsp; &nbsp; <a href="http://www.notablesoftware.com/evote.html">Electronic Voting</a> <br>
 	{t}Note that all those systems are country voting oriented.{/t}<br>
 </li>
-
-<li><a href="http://grouper.ieee.org/groups/scc38/1583/">IEEE, Voting Equipment Standards</a></li>
 
 </ul>
