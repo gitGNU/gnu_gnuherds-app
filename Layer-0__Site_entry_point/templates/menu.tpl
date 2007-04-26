@@ -18,7 +18,7 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-<table bgcolor="{$webpage->theme->menuBGcolor}" cellpadding="0" cellspacing="0" rules="none" border="0">
+<table bgcolor="{$webpage->theme->menuBGcolor}" width="155" cellpadding="0" cellspacing="0" rules="none" border="0">
 <tr>
 <td><img src="{$webpage->theme->borderLeftUpImage}"  width="2" height="2" align="left"  alt="" border="0" hspace="0" vspace="0"></td>
 <td><img src="{$webpage->theme->borderRightUpImage}" width="2" height="2" align="right" alt="" border="0" hspace="0" vspace="0"></td>
@@ -29,7 +29,6 @@ Suite 225, San Francisco, CA 94107, USA
 <p>
 {if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}<a href="/" class="menu1">{/if}{'Home'|gettext}{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}</a>{/if}<br>
 {if $smarty.server.REQUEST_URI neq "/Charter.php"}<a href="Charter.php" class="menu1">{/if}{'Charter (draft)'|gettext}{if $smarty.server.REQUEST_URI neq "/Charter.php"}</a>{/if}<br>
-{if $smarty.server.REQUEST_URI neq "/Timeline.php"}<a href="Timeline.php" class="menu1">{/if}{'Timeline'|gettext}{if $smarty.server.REQUEST_URI neq "/Timeline.php"}</a>{/if}<br>
 {if $smarty.server.REQUEST_URI neq "/GNU_Herds_Hackers_Guide.php"}<a href="GNU_Herds_Hackers_Guide.php" class="menu1">{/if}{"Hackers' Guide"|gettext}{if $smarty.server.REQUEST_URI neq "/GNU_Herds_Hackers_Guide.php"}</a>{/if}<br>
 {if $smarty.server.REQUEST_URI neq "/FAQ.php"}<a href="FAQ.php" class="menu1">{/if}{'FAQ'|gettext}{if $smarty.server.REQUEST_URI neq "/FAQ.php"}</a>{/if}<br>
 </p>
@@ -87,13 +86,8 @@ Suite 225, San Francisco, CA 94107, USA
 
 <p>
 <span class="menu1noactive">{'Resources'|gettext}</span><br>
-	&nbsp;&nbsp;<span class="menu2noactive">{'Careers'|gettext}</span><br>
 	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/FS_Job_Offers.php"}<a href="FS_Job_Offers.php" class="menu3">{/if}<span class="menu3">{'FS Job Offers'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/FS_Job_Offers.php"}</a>{/if}<br>
 	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/FS_Business_Networks.php"}<a href="FS_Business_Networks.php" class="menu3">{/if}<span class="menu3">{'FS Business Networks'|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/FS_Business_Networks.php"}</span></a>{/if}<br>
-</p>
-<p>
-<span class="menu1noactive">{'Special Interest Groups'|gettext|strip:'&nbsp;'}</span><br>
-	&nbsp;{if $smarty.server.REQUEST_URI neq "/e-Voting_SIG.php"}<a href="e-Voting_SIG.php" class="menu3">{/if}<span class="menu3">{'e-Voting'|gettext}</span>{if $smarty.server.REQUEST_URI neq "/e-Voting_SIG.php"}</a>{/if}<br>
 </p>
 </td>
 
