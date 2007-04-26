@@ -23,6 +23,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>{t}Index{/t}</p>
 <ol>
 <li> <a href="#Introduction" style='text-decoration: none;'>{t}Introduction{/t}</a>
+<li> <a href="#Roadmap" style='text-decoration: none;'>{t}Roadmap{/t}</a>
 <li> <a href="#Technologies" style='text-decoration: none;'>{t}Technologies{/t}</a>
 <li> <a href="#Web_application_Architecture" style='text-decoration: none;'>{t}Web application Architecture{/t}</a>
 <li> <a href="#Web_application_Design" style='text-decoration: none;'>{t}Web application Design{/t}</a>
@@ -76,7 +77,40 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>2. {t}Technologies{/t} <a name="Technologies"></a> </h4>
+<h4>2. {t}Roadmap{/t} <a name="Roadmap"></a> </h4>
+	<ul>
+	<li><p><span class="modification">{t}DONE!{/t}</span>: {t}Add the member support.{/t}</p></li>
+	<li><p><span class="modification">{t}DONE!{/t}</span>: {t}Add the FS Job Offers support.{/t}</p></li>
+	<li><p><span class="modification">{t}DONE!{/t}</span>: {t}Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed.{/t}</p></li>
+	<li><p> {t escape='no'
+	  1='<a href="http://www.fsf.org/">'
+	  2='</a>'
+	}To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the gnuherds.org domain to offices managed by %1FSF%2 staff.{/t}
+	</p></li>
+	<li><p> <span class="modification">{t}ONGOING PROCESS{/t}</span>: {t}Association announcement.{/t}</p></li>
+	<li><p><span class="modification">{t}ONGOING PROCESS{/t}</span>: {t}Translate the web site to other languages.{/t}</p></li>
+	<li><p>{t}Work on e-Vote subjects:{/t}</p>
+		<ul>
+		<li> {t}Be ready to use at least a primitive e-Vote system, as for example, to count emails.{/t}</li>
+		<li> {t}Work on others e-Vote proposals.{/t}</li>
+		<li> {t}Finish and show the draft of the P2P based e-Vote system proposal.{/t}
+			<!--
+			Davi develops a draft and check it with Lorenzo and a friend who is interested in e-Voting (Gabriel).
+			We ask for the opinion of the rest of this email list.
+			We ask for the opinion of Jason Kitcat, though we know he is very busy.
+			We check with the security experts community.
+			-->
+		</li>
+		</ul>
+	</li>
+	</ul>
+
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+
+<p>&nbsp;</p>
+
+
+<h4>3. {t}Technologies{/t} <a name="Technologies"></a> </h4>
 
 	<p>
 	{t}The project depends on the below technologies. Though it is and must be open to any proposal.{/t}
@@ -108,7 +142,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>3. {t}Web application Architecture{/t}<a name="Web_application_Architecture"></a> </h4>
+<h4>4. {t}Web application Architecture{/t}<a name="Web_application_Architecture"></a> </h4>
 
 	<p>
 	{t}As a Free Software project we look for a modular and extensible design. We hope it could be easy to change the technology of a specific layer if it is needed.{/t}
@@ -135,7 +169,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>4. {t}Web application Design{/t}<a name="Web_application_Design"></a> </h4>
+<h4>5. {t}Web application Design{/t}<a name="Web_application_Design"></a> </h4>
 
 	<table border="0">
 	<tbody>
@@ -173,7 +207,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>5. {t}Coding Standards{/t} <a name="Coding_Standards"></a> </h4>
+<h4>6. {t}Coding Standards{/t} <a name="Coding_Standards"></a> </h4>
 
 	<p>
 	<STRIKE>
@@ -189,7 +223,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>6. {t}Internationalization and Localization{/t} <a name="Internationalization_and_Localization"></a> </h4>
+<h4>7. {t}Internationalization and Localization{/t} <a name="Internationalization_and_Localization"></a> </h4>
 
 <pre>
   &lt;meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"&gt;
@@ -234,7 +268,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>7. {t}How the development team and production is integrated?{/t} <a name="How_the_development_team_and_production_is_integrated"></a> </h4>
+<h4>8. {t}How the development team and production is integrated?{/t} <a name="How_the_development_team_and_production_is_integrated"></a> </h4>
 
 	<p>{t}CVS is used as repository. The HTTP server gets a tagged release via 'update' from the CVS server.{/t}</p>
 
@@ -252,7 +286,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>8. {t}The TODO task list{/t} <a name="The_TODO_task_list"></a> </h4>
+<h4>9. {t}The TODO task list{/t} <a name="The_TODO_task_list"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -266,7 +300,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>9. Wikis <a name="Wikis"></a> </h4>
+<h4>10. Wikis <a name="Wikis"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -280,7 +314,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>10. {t}The source code{/t} <a name="The_source_code"></a> </h4>
+<h4>11. {t}The source code{/t} <a name="The_source_code"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -306,7 +340,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>11. {t}The CVS server{/t} <a name="The_CVS_server"></a> </h4>
+<h4>12. {t}The CVS server{/t} <a name="The_CVS_server"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -396,7 +430,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>12. {t}The web site{/t} <a name="The_web_site"></a> </h4>
+<h4>13. {t}The web site{/t} <a name="The_web_site"></a> </h4>
 
 	<p>
 	{t}It is in the gnuherds.org host.{/t}
@@ -407,7 +441,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>13. {t}The PostgreSQL data base{/t} <a name="The_PostgreSQL_data_base"></a> </h4>
+<h4>14. {t}The PostgreSQL data base{/t} <a name="The_PostgreSQL_data_base"></a> </h4>
 
 	<p>
 	{t}Creating from scratch. Follow the below steps:{/t}
@@ -490,7 +524,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>14. {t}Email lists{/t} <a name="Email_lists"></a> </h4>
+<h4>15. {t}Email lists{/t} <a name="Email_lists"></a> </h4>
 
 <ul>
 	<li><a href="https://lists.gnuherds.org/mailman/listinfo/association">association</a> {t}is the project main list.{/t}</li>
@@ -502,7 +536,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>15. {t}How to install a development environment?{/t} <a name="How_to_install_a_development_environment"></a> </h4>
+<h4>16. {t}How to install a development environment?{/t} <a name="How_to_install_a_development_environment"></a> </h4>
 
 <ul>
 	<li>{t}Install{/t}: PostgreSQL
@@ -547,7 +581,7 @@ msgfmt result.po
 <p>&nbsp;</p>
 
 
-<h4>16. {t}Current work team{/t} <a name="Current_work_team"></a> </h4>
+<h4>17. {t}Current work team{/t} <a name="Current_work_team"></a> </h4>
 
 	<p>
 	{t}The list could be outdated:{/t}<br>
