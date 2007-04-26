@@ -122,7 +122,7 @@ Non-executive committee members?:  The number of non-executive committee members
 
 <p>
 {t escape='no'
-  1='<a href="e-Voting_SIG.php">'
+  1='<a href="FAQ.php#e-Voting">'
   2='</a>'
 }See the %1e-Voting%2 Special Interest Group section. We could work on the design of the official voting mechanism.{/t} <!-- XXX: This phrase could be deleted from the final charter. -->
 </p>
