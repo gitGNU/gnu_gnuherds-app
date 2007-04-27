@@ -34,7 +34,6 @@ Suite 225, San Francisco, CA 94107, USA
 <li> <a href="#Wikis" style='text-decoration: none;'>Wikis</a>
 <li> <a href="#The_source_code" style='text-decoration: none;'>{t}The source code{/t}</a>
 <li> <a href="#The_CVS_server" style='text-decoration: none;'>{t}The CVS server{/t}</a>
-<li> <a href="#The_web_site" style='text-decoration: none;'>{t}The web site{/t}</a>
 <li> <a href="#The_PostgreSQL_data_base" style='text-decoration: none;'>{t}The PostgreSQL data base{/t}</a>
 <li> <a href="#Email_lists" style='text-decoration: none;'>{t}Email lists{/t}</a>
 <li> <a href="#How_to_install_a_development_environment" style='text-decoration: none;'>{t}How to install a development environment?{/t}</a>
@@ -225,43 +224,12 @@ Suite 225, San Francisco, CA 94107, USA
 
 <h4>7. {t}Internationalization and Localization{/t} <a name="Internationalization_and_Localization"></a> </h4>
 
-<pre>
-  &lt;meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"&gt;
-
-  $ iconv --from-code=ISO-8859-1 --to-code=UTF-8 ./oldfile.htm > ./newfile.html
-
-  # edit the gettext messages.po files
-  "Content-Type: text/plain; charset=UTF-8\n"
-  "Content-Transfer-Encoding: 8bit\n"
-
-  $ edit your .emacs
-  (setq locale-coding-system 'UTF-8)
-  (set-terminal-coding-system 'UTF-8)
-  (set-keyboard-coding-system 'UTF-8)
-  (set-selection-coding-system 'UTF-8)
-  (prefer-coding-system 'UTF-8)
-
-  ;; remove all the stuff like
-  ;; (standard-display-european 1)
-
-  ;; manually you can
-  ;; M-x prefer-coding-system  UTF-8
-
-  # Set your LC_TYPE locally and start vim
-  $ LC_CTYPE=it_IT.UTF-8  vim
-
-  # Or you can execute a terminal window with the LC_TYPE set to UTF-8 like this, and start vim inside it
-  $ LC_CTYPE=it_IT.UTF-8  xterm -u8 -fn '-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1'
-  $ vim
-
-  $ edit your httpd.conf
-  AddDefaultCharset Off
-
-  # install the php5.0-mbstring module
-  $ edit your php.ini
-  output_handler = mb_output_handler
-  mbstring.http_output = UTF-8
-</pre>
+	<p>
+	{t escape='no'
+	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=152">'
+	  2='</a>'
+	}See its %1wiki page%2 at Savannah.{/t}
+	</p>
 
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
@@ -306,7 +274,7 @@ Suite 225, San Francisco, CA 94107, USA
 	{t escape='no'
 	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=146">'
 	  2='</a>'
-	}See the %1Wiki HOWTO%2 at Savannah.{/t}
+	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
 
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
@@ -344,96 +312,9 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="http://savannah.gnu.org">'
+	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=153">'
 	  2='</a>'
-	}The CVS of gnuherds-app is at %1Savannah%2. The PostgreSQL database and the website is at the gnuherds.org host.{/t}
-	</p><p>
-	{t}Though before getting write permision to the CVS repository it is usual to prove the interest with some patch, you can register at the Savannah development site and ask to join the project. Do not fear, if you join, nobody will force you to contribute :) {/t}
-	</p>
-
-	<p>
-	{t}Hints{/t}:
-	</p>
-	<ul>
-		<li>
-		{t escape='no'
-		  1='<a href="https://savannah.nongnu.org//account/register.php">'
-		  2='<a href="http://savannah.gnu.org/">'
-		  3='</a>'
-		}%1Register%3 at %2Savannah%3{/t}
-
-		<li>
-		{t escape='no'
-		  1='<a href="https://savannah.gnu.org/my/groups.php">'
-		  2='</a>'
-		}%1Request%2 for inclusion to the project{/t}
-
-		<li>
-		{t escape='no'
-		  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/">'
-		  2='</a>'
-		}gnuherds-app %1CVS%2 view{/t}
-
-		<li>
-		{t escape='no'
-		  1='<a href="http://savannah.nongnu.org/cvs/?group=gnuherds-app">'
-		  2='</a>'
-		}CVS %1HOW TO%2{/t}
-	</ul>
-
-	<p>
-	{t}Note: If you register at Savannah and join the project, both checkout and checkin will work in spite of the message "Your savannah password is useless for cvs".  When you register, take note of your passphrase. Savannah will ask for it at each cvs operation. For example, my first checkout was as follows:{/t}
-	</p>
-
-<pre>
-    $ cvs -z3 -d:ext:USER@cvs.savannah.nongnu.org:/sources/gnuherds-app co gnuherds-app
-
-      The authenticity of host 'savannah.nongnu.org (199.232.41.4)' can't be 
-      established.
-      RSA key fingerprint is 80:5a:b0:0c:ec:93:66:29:49:7e:04:2b:fd:ba:2c:d5.
-      Are you sure you want to continue connecting (yes/no)? yes
-
-      Warning: Permanently added 'savannah.nongnu.org,199.232.41.4' (RSA) to the 
-      list of known hosts.
-
-      Enter passphrase for key '/home/USER/.ssh/id_dsa': 
-
-      cvs checkout: Updating gnuherds-app
-        U gnuherds-app/AfferoGPL
-        U gnuherds-app/Charter.php
-        ...
-    $ 
-
-
-  {t}Now you can work:{/t}
-
-
-    $ cvs log Charter.php
-    $ cvs diff
-    $ cvs diff Charter.php
-    $ cvs diff -r 1.4 -r 1.3 Charter.php
-    $ cvs update
-    $ cvs ci Charter.php
-
-    $ man cvs
-
-
-  {t}To avoid writing the pass phrase at every cvs command:{/t}
-
-
-    $ ssh-agent
-    $ ssh-add
-</pre>
-
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
-
-<p>&nbsp;</p>
-
-
-<h4>13. {t}The web site{/t} <a name="The_web_site"></a> </h4>
-
-	<p>
-	{t}It is in the gnuherds.org host.{/t}
+	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
 
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
@@ -441,90 +322,21 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>14. {t}The PostgreSQL data base{/t} <a name="The_PostgreSQL_data_base"></a> </h4>
+<h4>13. {t}The PostgreSQL data base{/t} <a name="The_PostgreSQL_data_base"></a> </h4>
 
 	<p>
-	{t}Creating from scratch. Follow the below steps:{/t}
+	{t escape='no'
+	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=154">'
+	  2='</a>'
+	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
-
-<pre>
-  a) {t}Create the data base{/t}
-
-
-    peter@server:/home/user:~$ su -
-    root@server:/home/user# su - postgres
-    postgres@server:~$
-    postgres@server:~$ createdb gnuherds
-    CREATE DATABASE
-    postgres@server:~$ 
-
-      {t}Reference{/t}: http://www.postgresql.org/docs/8.0/static/app-createdb.html
-
-
-  b) {t}Create the user, as super user{/t}
-
-
-    postgres@server:~$ psql gnuherds
-    gnuherds=#
-    gnuherds=# CREATE USER peter CREATEUSER ;
-    CREATE USER
-    gnuherds=# 
-
-      {t}Reference{/t}: http://www.postgresql.org/docs/8.0/interactive/user-manag.html#DATABASE-USERS
-
-
-  c) {t}Grant permissions{/t}
-
-
-    gnuherds=# GRANT ALL ON DATABASE gnuherds TO peter ;
-    GRANT
-    gnuherds=# 
-
-      {t}References{/t}: http://www.postgresql.org/docs/8.0/interactive/sql-grant.html
-                  http://www.postgresql.org/docs/8.0/interactive/privileges.html
-
-
-  d) {t}Quit{/t}
-
-
-    gnuherds=# \q
-    postgres@server:~$ 
-    postgres@server:~$ exit
-    peter@server:/home/user:~$
-
-
-  e) {t}Create the initial state of the data base{/t}
-
-
-       Layer-0__Site_entry_point/doc/GNUHerds__SQL_Implementation.psql
-
-     Edit the GRANT lines of that file to fit with your Apache's user.
-     Warning: Note the DROPs at the head. All data will be deleted.
-
-    peter@server:/home/user:~$ psql gnuherds < GNUHerds__SQL_Implementation.psql > stdout 2> stderr
-    peter@server:/home/user:~$ 
-
-
-  f) {t}Check that 'stderr' and 'stdout' do not show errors{/t}
-
-
-
-
-  {t}General references:{/t}
-
-    http://www.postgresql.org/docs/8.0/interactive/index.html
-    http://www.postgresql.org/
-
-  Foreign Keys & Primary Keys
-    http://www.postgresql.org/docs/8.0/interactive/tutorial-fk.html
-</pre>
 
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
 
-<h4>15. {t}Email lists{/t} <a name="Email_lists"></a> </h4>
+<h4>14. {t}Email lists{/t} <a name="Email_lists"></a> </h4>
 
 <ul>
 	<li><a href="https://lists.gnuherds.org/mailman/listinfo/association">association</a> {t}is the project main list.{/t}</li>
@@ -536,52 +348,21 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>16. {t}How to install a development environment?{/t} <a name="How_to_install_a_development_environment"></a> </h4>
+<h4>15. {t}How to install a development environment?{/t} <a name="How_to_install_a_development_environment"></a> </h4>
 
-<ul>
-	<li>{t}Install{/t}: PostgreSQL
-	<li><a href="GNU_Herds_Hackers_Guide.php#The_PostgreSQL_data_base">{t}Configure{/t}</a>: PostgreSQL
-	<li>{t}Install{/t}: Apache HTTP server
-	<li>{t}Install{/t}: PHP
-	<li>{t}Install{/t}: GeoIP
-	<li>{t}Install{/t}: Smarty
-	<li>{t}Install{/t}: Smarty-Gettext
-<li>
-<pre>
-cd Layer-0__Site_entry_point
-mkdir templates_c
-chown user.www-data templates_c
-chmod 770 templates_c
-</pre>
-	<li>{t}Install{/t}: PHP PEAR module for HTTP related stuff
-	<li>{t}Configure{/t}: Apache HTTP server -- <a href="/doc/conf/apache_virtual_domain.conf">virtual domain</a>
-	<li>{t}Configure{/t}: PHP -- <a href="/doc/conf/php.ini">php.ini</a>
-<li>
-<pre>
-cd Layer-0__Site_entry_point
-ln -s Home.php index.php
-</pre>
-
-<li>
-<pre>
-cd locale/es_ES/LC_MESSAGES
-msgcat messages.po iso_639.po iso_4217.po iso_3166.po > result.po
-msgfmt result.po
-locale/it_IT/LC_MESSAGES
-msgcat messages.po iso_639.po iso_4217.po iso_3166.po > result.po
-msgfmt result.po
-...
-/etc/init.d/apache2 reload
-</pre>
-
-</ul>
+	<p>
+	{t escape='no'
+	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=155">'
+	  2='</a>'
+	}See its %1wiki page%2 at Savannah.{/t}
+	</p>
 
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
 
-<h4>17. {t}Current work team{/t} <a name="Current_work_team"></a> </h4>
+<h4>16. {t}Current work team{/t} <a name="Current_work_team"></a> </h4>
 
 	<p>
 	{t}The list could be outdated:{/t}<br>
