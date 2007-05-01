@@ -75,7 +75,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $smarty.server.REQUEST_URI neq "/Person.php"}
 <a href="Person.php">
 {/if}
-{'New person?'|gettext}
+{'Register person'|gettext}
 {if $smarty.server.REQUEST_URI neq "/Person.php"}
 </a>
 {/if}
@@ -83,7 +83,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $smarty.server.REQUEST_URI neq "/Company.php"}
 <a href="Company.php">
 {/if}
-{'New company?'|gettext}
+{'Register company'|gettext}
 {if $smarty.server.REQUEST_URI neq "/Company.php"}
 </a>
 {/if}
@@ -91,7 +91,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $smarty.server.REQUEST_URI neq "/non-profit_Organization.php"}
 <a href="non-profit_Organization.php">
 {/if}
-{'New non-profit?'|gettext}
+{'Register non-profit'|gettext}
 {if $smarty.server.REQUEST_URI neq "/non-profit_Organization.php"}
 </a>
 {/if}
