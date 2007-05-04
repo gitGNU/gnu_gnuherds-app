@@ -38,10 +38,13 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 <tr> <td colspan="4" class="subsection">{t}ACCOUNT IDENTIFICATION{/t}</td> </tr>
-<tr>
+<tr valign="top">
 <td align="right"><span class="must">*</span><label for="Email">email : </label></td>
-<td colspan="3"> <input type="text" name="Email" id="Email" size="60" maxlength="60" class="required" value="{$smarty.session.Email}"> </td>
+<td colspan="3"> <input type="text" name="Email" id="Email" size="40" maxlength="60" class="required" value="{$smarty.session.Email}">
+{if $smarty.session.WantEmail neq ''}<strong>[</strong>{$smarty.session.WantEmail}<strong>]</strong>{/if}
+</td>
 </tr>
+{if $smarty.session.Logged eq '1'}
 <tr>
 <td align="right"><span class="must">*</span><label for="Password">{t}Password{/t} : </label></td>
 <td colspan="3"> <input type="password" name="Password" id="Password" size="20" maxlength="20" class="required" value="{$smarty.session.Password}"> </td>
@@ -50,6 +53,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="right"><span class="must">*</span><label for="RetypePassword">{t}Retype Password{/t} : </label></td>
 <td colspan="3"> <input type="password" name="RetypePassword" id="RetypePassword" size="20" maxlength="20" class="required" value="{$smarty.session.Password}"> </td>
 </tr>
+{/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 <tr> <td colspan="4" class="subsection">{t}COMPANY{/t}</td> </tr>

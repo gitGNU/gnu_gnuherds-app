@@ -39,9 +39,9 @@ class NonprofitOrganizationForm
 
 	public function processForm()
 	{
-		// Check the log in state
 		$phpTools = new PHPTools();
 
+		// Check the log in state
 		if ( $_SESSION['Logged'] == '1' ) // update
 		{
 			if ( $_SESSION['LoginType'] != 'non-profit Organization' )
@@ -81,12 +81,22 @@ class NonprofitOrganizationForm
 		{
 			$this->saveNonprofitForm();
 		}
+		elseif ( isset($_GET['email']) and $_GET['email'] != '' )
+		{
+			// Process the "register account" or "change account's email" operations.
+			// It is not needed to check the log-in state. If it is needed, it is checked later.
+
+			if ( isset($_GET['action']) and $_GET['action'] == "register" )
+				$this->register(); // Register account
+			else
+				$this->changeEmail(); // Modify account's email
+		}
 	}
 
 
 	public function printOutput()
 	{
-		if ( $_POST['delete'] == gettext('Delete me') || $_POST['save'] == gettext('Save') )
+		if ( $_POST['delete'] == gettext('Delete me') || $_POST['save'] == gettext('Save') || $_GET['email'] != '' )
 			echo $this->processingResult;
 		else
 			$this->printNonprofitForm();
@@ -110,9 +120,25 @@ class NonprofitOrganizationForm
 
 	private function saveNonprofitForm()
 	{
-		$_SESSION['EntityType'] = 'non-profit Organization';
+		// First check, later process
+
+		// Checks
+		$this->checkNonprofitForm();
+
 
 		// Save the values in the session variables
+		$_SESSION['EntityType'] = 'non-profit Organization';
+
+		if ( $_SESSION['Email'] != $_POST['Email'] )
+		{
+			$_SESSION['WantEmail'] = $_POST['Email'];
+			$changeEmail = true;
+		}
+		else
+		{
+			$changeEmail = false;
+		}
+
 		$_SESSION['Email'] = trim($_POST['Email']);
 		$_SESSION['Password'] = $_POST['Password'];
 		$_SESSION['RetypePassword'] = $_POST['RetypePassword'];
@@ -136,41 +162,29 @@ class NonprofitOrganizationForm
 
 		//XXX $_SESSION['PhotoOrLogo'] = 
 
-		// Checks
-		$this->checkNonprofitForm();
-
 		// Update or insert the values
 		if ( $_SESSION['Logged'] == '1' ) // update
 		{
 			$this->manager->updateEntity();
-			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
+			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p>\n";
 
 			// * $_SESSION variables have been saved previously.
 			// * Do not destroy the session, so as to next time the values will be loaded from the $_SESSION variables. 
+
+			if ( $changeEmail == true )
+				$this->requestChangeEmail();
 		}
 		else // new
 		{
-			$this->manager->addEntity();
-			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. You have been logged automatically. You can realize others operations in the left menu.')."<p>\n";
-
-			// Set the three 'Login state' variables: $_SESSION['Logged'], $_SESSION['EntityId'], $_SESSION['LoginType']
-			$logForm = new LogForm();
-			$logForm->logIn();
+			$this->requestRegister();
 		}
 	}
 
 
 	private function checkNonprofitForm()
 	{
-		// Check if there is already a member with this email in the data base
-		if (  ( $_SESSION['Logged'] != '1' and $this->manager->lookForEntity() == true )  or  ( $_SESSION['Logged'] == '1' and $_POST['Email'] != $_SESSION['LoginEmail'] and $this->manager->lookForEntity() == true )  )
-		{
-			$error = "<p>".gettext('There is already a member with this email in the data base. If that email is yours, get the password via the "Lost Password" form, else choose a different email.')."</p>";
-			throw new Exception($error,true);
-		}
-
 		// Both Password fields have to be equal. This check has be executed first to avoid to recover the mistaken password, if for example the Email is empty.
-		if ( trim($_POST['Password']) != trim($_POST['RetypePassword']) )
+		if ( $_SESSION['Logged'] == '1' and $_POST['Password'] != $_POST['RetypePassword'] )
 		{
 			$_SESSION['Password'] = ''; // We are not sure what is right 'Password' or 'RetypePassword', so we empty both.
 
@@ -179,14 +193,17 @@ class NonprofitOrganizationForm
 		}
 
 		// Some field can not be empty
-		if ( trim($_POST['Email'])=='' or trim($_POST['Password'])=='' or trim($_POST['NonprofitName'])=='' or trim($_POST['CountryCode'])=='' )
+		if ( trim($_POST['Email'])=='' or ($_SESSION['Logged'] == '1' and trim($_POST['Password'])=='') or trim($_POST['NonprofitName'])=='' or trim($_POST['CountryCode'])=='' )
 		{
 			$error = "
 				<p>".gettext('Some required fields are empty!. You have to fill them:')."</p>
 				<table>
-				<tr><td><b>Email</b>:</td><td> '$_POST[Email]'</td></tr>
-				<tr><td><b>".gettext('Password')."</b>:</td><td> (<i>not showed</i>)</td></tr>
-				<tr><td><b>".gettext('Name')."</b>:</td><td> '$_POST[NonprofitName]'</td></tr>
+				<tr><td><b>Email</b>:</td><td> '$_POST[Email]'</td></tr>";
+
+			if ( $_SESSION['Logged'] == '1' )
+				$error .= "<tr><td><b>".gettext('Password')."</b>:</td><td> (<i>not showed</i>)</td></tr>";
+
+			$error.="<tr><td><b>".gettext('Name')."</b>:</td><td> '$_POST[NonprofitName]'</td></tr>
 				<tr><td><b>".gettext('Country')."</b>:</td><td> '$_POST[CountryCode]'</td></tr>
 				</table>\n";
 			throw new Exception($error,true); // The parameter 'true' is used to note that the 'Back' button must be shown.
@@ -211,6 +228,8 @@ class NonprofitOrganizationForm
 		$_SESSION['Email'] = $result[0][0];
 		// The Password is not exposed in the form.
 
+		$_SESSION['WantEmail'] = $result[20][0];
+
 		$_SESSION['Street'] = $result[3][0];
 		$_SESSION['Suite'] = $result[4][0];
 		$_SESSION['City'] = $result[5][0];
@@ -234,6 +253,125 @@ class NonprofitOrganizationForm
 			$_SESSION['ViewPhotoOrLogo'] = "false";
 
 		return true;
+	}
+
+
+
+	private function register()
+	{
+		if ( $this->manager->lookForEntity($_GET['email']) == true )
+		{
+			// Check to avoid spam
+			if ( $this->manager->allowActivateAccountEmail($_GET['email']) == true )
+			{
+				// Send a warning email
+				$message = gettext("An attempt was made to activate a new GNU Herds account with this email address.")." ".gettext("However, you have already an active account! Follow the below link to get your lost password if it is needed:")."\n\n";
+
+				$message .= "https://".$_SERVER['HTTP_HOST']."/Lost_Password.php";
+
+				$message .= "\n\n";
+				$message .= gettext("If you have not asked for this new account, someone else has asked for it with your email!")."\n\n";
+
+				mail($_GET['email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
+			}
+
+			// Raise the usual error message
+			$error = "<p>".gettext("ERROR: Wrong magic number!.")."</p>";
+			throw new Exception($error,false);
+		}
+		else
+		{
+			// Try to activate a pending account
+			$new_password = $this->manager->activateAccountForEntity();
+
+			if ( $new_password != false )
+			{
+				$this->processingResult .= "<p>&nbsp;</p>\n";
+				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your account has been activated!")."</p>\n";
+
+				// Show the password
+				$this->processingResult .= "<p>&nbsp;</p>\n";
+				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your new password is:")." <strong>".$new_password."</strong></p>\n";
+				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("To improve your security, you should change your password after loging in.")."</p>";
+			}
+		}
+	}
+
+	private function changeEmail()
+	{
+		// Try to change the account's email
+		// The entity has to be logged, else it will fail at the Layer-5.
+		if ( $this->manager->changeEmailForEntity() == true )
+		{
+			$this->processingResult .= "<p>&nbsp;</p>\n";
+			$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("The email has been changed!")."</p>\n";
+		}
+	}
+
+	private function requestChangeEmail()
+	{
+		// Make the 'magic' flag
+		$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
+
+		// Keep the 'magic' in the data base
+		$this->manager->saveWantEmailMagicForEntity($magic);
+
+		// Spam is not possible due to this operation is only raised by the entity when he/she is logged.
+		// Send the email
+		$message .= gettext("To change your GNU Herds account's email, first log in and then follow the below link.")." ".gettext("That link will expire in 7 days:")."\n\n";
+
+		$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".$_POST['Email']."&magic=".$magic;
+
+		$message .= "\n\n";
+		$message .= gettext("If you have not asked for it, just ignore this email.")."\n\n";
+
+		mail($_POST['Email'], "GNU Herds: ".gettext("Change account's email"), "$message", "From: association@gnuherds.org");
+
+		// Report to the user
+		$this->processingResult .= "<p>&nbsp;</p><p>".gettext('An email has been sent to the new email address to validate it.')."<p>\n";
+	}
+
+	private function requestRegister()
+	{
+		if ( $this->manager->lookForEntity($_POST['Email']) == true )
+		{
+			// Check to avoid spam
+			if ( $this->manager->allowRegisterAccountDuplicatedEmail($_POST['Email']) == true )
+			{
+				$message = gettext("An attempt was made to register a new GNU Herds account with this email address.")." ".gettext("However, you have already an active account! Follow the below link to get your lost password if it is needed:")."\n\n";
+
+				$message .= "https://".$_SERVER['HTTP_HOST']."/Lost_Password.php";
+
+				$message .= "\n\n";
+				$message .= gettext("If you have not asked for this new account, someone else has asked for it with your email!")."\n\n";
+
+				mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
+			}
+		}
+		else
+		{
+			// Make the 'magic' flag
+			$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
+
+			$this->manager->addEntity($magic);
+
+			// Send the email
+			$message = gettext("Your email has been used to create an account at GNU Herds.")."\n\n";
+
+			$message .= gettext("To activate it follow the below link.")." ".gettext("That link will expire in 24 hours:")."\n\n";
+
+			$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?action=register&email=".$_POST['Email']."&magic=".$magic;
+
+			$message .= "\n\n";
+			$message .= gettext("If you have not asked for this new account, ignore this email.")."\n\n";
+
+			$message .= gettext("Note: To avoid 'Spam' you can only get this email at the most once each 48 hours. If this email is Spam for you, please let it knows to  association AT gnuherds.org")."\n\n";
+
+			mail($_POST['Email'], "GNU Herds: ".gettext("Activate account"), "$message", "From: association@gnuherds.org");
+		}
+
+		// Report to the user
+		$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. An email has been sent to such email address with the instructions to activate the account.')."<p>\n";
 	}
 }
 ?> 

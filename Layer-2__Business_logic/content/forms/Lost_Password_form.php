@@ -47,33 +47,34 @@ class LostPassword
 		// Process each button event
 		if ( $_POST['send'] == gettext('Send') )
 		{
-			if ( $this->manager->lookForEntity() == true )
+			if ( $this->manager->lookForEntity($_POST['Email']) == true )
 			{
-				// Make the 'magic' flag
-				$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
+				// Check to avoid spam
+				// If we do not send the email, to avoid possible spam, we do not add the 'magic' to the data base because of without that email the user will not be able to use the 'magic' to get a new password.
+				if ( $this->manager->allowLostPasswordEmail($_POST['Email']) == true )
+				{
+					// Make the 'magic' flag
+					$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
 
-				// Keep the 'magic' in the data base
-				$this->manager->saveMagicForEntity($magic);
+					// Keep the 'magic' in the data base
+					$this->manager->saveLostPasswordMagicForEntity($magic);
 
-				// Send the email
-				$message = gettext("For security reasons, GNU Herds does not send passwords by electronic mail.")."\n\n";
+					// Send the email
+					$message = gettext("For security reasons, GNU Herds does not send passwords by electronic mail.")."\n\n";
 
-				$message .= gettext("To get your new password follow the below link:")."\n\n";
+					$message .= gettext("To get your new password follow the below link.")." ".gettext("That link will expire in 30 minutes:")."\n\n";
 
-				$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".$_POST['Email']."&magic=".$magic;
+					$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".$_POST['Email']."&magic=".$magic;
 
-				$message .= "\n\n";
-				$message .= gettext("If you have not asked for a new password, ignore it and your password will not be changed.")."\n\n";
+					$message .= "\n\n";
+					$message .= gettext("If you have not asked for a new password, ignore it and your password will not be changed.")."\n\n";
 
-				mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
-
-				// Report to the user
-				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('An email has been sent to such address with the instructions to change the password.')."<p>\n";
+					mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
+				}
 			}
-			else
-			{
-				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('There is not member with that email!. Try again.')."</p>";
-			}
+
+			// Report to the user
+			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('An email has been sent to such address with the instructions to change the password.')."<p>\n";
 		}
 		elseif ( isset($_GET['email']) and $_GET['email'] != '' )
 		{
@@ -93,23 +94,24 @@ class LostPassword
 
 	public function printOutput()
 	{
-		if ( $_POST['send'] == gettext('Send') and $this->manager->lookForEntity() == true )
+		if ( $_POST['send'] == gettext('Send') )
 		{
-			// Show just the processingResult
+			// Show the form
+			$this->printPersonForm();
 		}
 		elseif ( isset($_GET['email']) and $_GET['email'] != '' )
 		{
 			// Show just the processingResult
 		}
-		elseif( ( $_POST['send'] == gettext('Send') and $this->manager->lookForEntity() == false ) or count($_POST)==0 )
-		{
-			// Show the form and the processingResult
-			$this->printPersonForm();
-		}
 		elseif( isset($_GET['language']) )
 		{
-			// POST request: Submit from the language change form.
+			// GET request from the language change form.
 
+			// Show the form
+			$this->printPersonForm();
+		}
+		else
+		{
 			// Show the form
 			$this->printPersonForm();
 		}
@@ -125,4 +127,4 @@ class LostPassword
 		$smarty->display("Lost_Password_form.tpl");
 	}
 }
-?> 
+?>
