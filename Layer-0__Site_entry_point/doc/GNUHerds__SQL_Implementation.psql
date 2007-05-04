@@ -216,12 +216,34 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
 
         --------------------------------------------------------------------------
         -- Account identification
-        E1_Email           varchar(60) UNIQUE CHECK (E1_Email <> ''), -- Person's email, or Company's or non-profit Organization contact email. It is used as identifier to log in.
-        E1_Password        varchar(512) NOT NULL CHECK (E1_Password <> ''),
-        E1_Magic           varchar(512) CHECK (E1_Magic <> ''), -- Code which a user must supply to allow the password change.
+        E1_Email           varchar(60) DEFAULT NULL CHECK (E1_Email <> ''), -- Person's email, or Company's or non-profit Organization contact email. It is used as identifier to log in.
+        E1_Password        varchar(512) DEFAULT NULL CHECK (E1_Password <> ''),
+
+	-- Others
         E1_Revoked         bool NOT NULL DEFAULT 'false', -- Account disabled due to the members does not adhere to the Code of Ethics.
         E1_EntityType      varchar(23) NOT NULL CHECK (E1_EntityType <> ''), -- We have to add this field due to we can not use OO PostgreSQL features. Values will be: "Person", "Company" or "non-profit Organization". 
-	E1_Locale          char(5) NOT NULL CHECK (E1_Locale <> '') DEFAULT 'en_US', -- To be used for the cron jobs to send mensages to each entity with its own locale.
+
+	-- Saved configuration
+	E1_Locale          char(5) NOT NULL CHECK (E1_Locale <> '') DEFAULT 'en_US', -- To be used by the cron jobs to send mensages to each entity with its own locale.
+
+	-- Wanted email
+	E1_WantEmail       varchar(60), -- This field keeps the email which the entity want to use. It will be copied to E1_Email if the registration or change-email operations are rightly concluded.
+
+	-- Magic
+	E1_LostPasswordMagic        varchar(512) DEFAULT NULL CHECK (E1_LostPasswordMagic <> ''), -- Code which a user must supply to allow the password change.
+	E1_RegisterMagic            varchar(512) DEFAULT NULL CHECK (E1_RegisterMagic <> ''), -- Code which a user must supply to allow register an account on that email.
+	E1_WantEmailMagic           varchar(512) DEFAULT NULL CHECK (E1_WantEmailMagic <> ''), -- Code which a user must supply to allow the change to use that email.
+
+	-- Magic expiration
+	E1_LostPasswordMagicExpire  timestamp NOT NULL DEFAULT 'now',
+	E1_RegisterMagicExpire      timestamp NOT NULL DEFAULT 'now',
+	E1_WantEmailMagicExpire     timestamp NOT NULL DEFAULT 'now',
+
+	-- To avoid Spam
+	-- Each email which needs to avoid Spam has a flag
+	E1_ActivateAccountEmail           bool NOT NULL DEFAULT 'true',
+	E1_RegisterAccountDuplicatedEmail bool NOT NULL DEFAULT 'true',
+	E1_LostPasswordEmail              bool NOT NULL DEFAULT 'true',
 
         --------------------------------------------------------------------------
         -- Address (Specific Location)

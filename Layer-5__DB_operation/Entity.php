@@ -39,7 +39,7 @@ class Entity
 
 	public function getEntity($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT E1_Email,E1_Revoked,E1_EntityType,E1_Street,E1_Suite,E1_City,E1_StateProvince,E1_PostalCode,E1_LO_Country,E1_LO_Nationality,E1_BirthYear,E1_IpPhoneOrVideo,E1_Landline,E1_MobilePhone,E1_Website,EP_FirstName,EP_LastName,EP_MiddleName,EC_CompanyName,EO_OrganizationName FROM E1_Entities WHERE E1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT E1_Email,E1_Revoked,E1_EntityType,E1_Street,E1_Suite,E1_City,E1_StateProvince,E1_PostalCode,E1_LO_Country,E1_LO_Nationality,E1_BirthYear,E1_IpPhoneOrVideo,E1_Landline,E1_MobilePhone,E1_Website,EP_FirstName,EP_LastName,EP_MiddleName,EC_CompanyName,EO_OrganizationName, E1_WantEmail FROM E1_Entities WHERE E1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array = array();
@@ -64,6 +64,7 @@ class Entity
 		$array[17] = pg_fetch_all_columns($result, 17); // EP_MiddleName
 		$array[18] = pg_fetch_all_columns($result, 18); // EC_CompanyName
 		$array[19] = pg_fetch_all_columns($result, 19); // EO_OrganizationName
+		$array[20] = pg_fetch_all_columns($result, 20); // E1_WantEmail
 
 		for( $i=0; $i < count($array[0]); $i++) // LO_Name for E1_LO_Country
 		{
@@ -110,13 +111,13 @@ class Entity
 		return $array;
 	}
 
-	public function addEntity()
+	public function addEntity($magic)
 	{
 		// There are not several tables involved, however we use a transaction to be able to get the E1_Id, and to be sure the PhotoOrLogo has been saved rightly.
 		$this->postgresql->execute("SET TRANSACTION   ISOLATION LEVEL  SERIALIZABLE  READ WRITE",0);
 		$this->postgresql->execute("BEGIN",0);
 
-		$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text) AS  INSERT INTO E1_Entities (E1_Email,E1_Password,E1_EntityType,EP_FirstName,EP_LastName,EP_MiddleName,E1_Street,E1_Suite,E1_City,E1_StateProvince,E1_PostalCode,E1_LO_Country,E1_IpPhoneOrVideo,E1_Landline,E1_MobilePhone,E1_Website,E1_LO_Nationality,E1_BirthYear,EC_CompanyName,EO_OrganizationName) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20);  EXECUTE query('{$_POST['Email']}','{$this->hasher->HashPassword($_POST['Password'])}','{$_SESSION['EntityType']}','{$_POST['FirstName']}','{$_POST['LastName']}','{$_POST['MiddleName']}','{$_POST['Street']}','{$_POST['Suite']}','{$_POST['City']}','{$_POST['StateProvince']}','{$_POST['PostalCode']}','{$_POST['CountryCode']}','{$_POST['IpPhoneOrVideo']}','{$_POST['Landline']}','{$_POST['MobilePhone']}','{$_POST['Website']}','{$_POST['Nationality']}','{$_POST['BirthYear']}','{$_POST['CompanyName']}','{$_POST['NonprofitName']}');";
+		$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text) AS  INSERT INTO E1_Entities (E1_WantEmail,E1_EntityType,EP_FirstName,EP_LastName,EP_MiddleName,E1_Street,E1_Suite,E1_City,E1_StateProvince,E1_PostalCode,E1_LO_Country,E1_IpPhoneOrVideo,E1_Landline,E1_MobilePhone,E1_Website,E1_LO_Nationality,E1_BirthYear,EC_CompanyName,EO_OrganizationName) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19);  EXECUTE query('{$_POST['Email']}','{$_SESSION['EntityType']}','{$_POST['FirstName']}','{$_POST['LastName']}','{$_POST['MiddleName']}','{$_POST['Street']}','{$_POST['Suite']}','{$_POST['City']}','{$_POST['StateProvince']}','{$_POST['PostalCode']}','{$_POST['CountryCode']}','{$_POST['IpPhoneOrVideo']}','{$_POST['Landline']}','{$_POST['MobilePhone']}','{$_POST['Website']}','{$_POST['Nationality']}','{$_POST['BirthYear']}','{$_POST['CompanyName']}','{$_POST['NonprofitName']}');";
 		$this->postgresql->execute($sqlQuery,1);
 
 		// Get the Id of the insert to the E1_Entities table // Ref.: http://www.postgresql.org/docs/current/static/functions-sequence.html
@@ -124,6 +125,11 @@ class Entity
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 		$array = pg_fetch_all_columns($result,0);
 		$E1_Id = $array[0];
+
+		// Set the RegisterMagic
+		// Security: The magic is only overriden for this entity.
+		$sqlQuery = "PREPARE query(text,integer) AS  UPDATE E1_Entities SET E1_RegisterMagic=$1, E1_RegisterMagicExpire= now() + '1 days'::interval WHERE E1_Id=$2;  EXECUTE query('$magic',$E1_Id);";
+		$this->postgresql->execute($sqlQuery,1);
 
 		$this->savePhotoOrLogo($E1_Id);
 
@@ -176,7 +182,7 @@ class Entity
 
 		$BirthYear = isset($_POST['BirthYear']) ? $_POST['BirthYear'] : '';
 
-		$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,integer) AS  UPDATE E1_Entities SET E1_Email=$1,E1_Password=$2,EP_FirstName=$3,EP_LastName=$4,EP_MiddleName=$5,E1_Street=$6,E1_Suite=$7,E1_City=$8,E1_StateProvince=$9,E1_PostalCode=$10,E1_LO_Country=$11,E1_IpPhoneOrVideo=$12,E1_Landline=$13,E1_MobilePhone=$14,E1_Website=$15,E1_LO_Nationality=$16,E1_BirthYear=$17,EC_CompanyName=$18,EO_OrganizationName=$19 WHERE E1_Id=$20;  EXECUTE query('{$_POST['Email']}','{$this->hasher->HashPassword($_POST['Password'])}','{$FirstName}','{$LastName}','{$MiddleName}','{$_POST['Street']}','{$_POST['Suite']}','{$_POST['City']}','{$_POST['StateProvince']}','{$_POST['PostalCode']}','{$_POST['CountryCode']}','{$_POST['IpPhoneOrVideo']}','{$_POST['Landline']}','{$_POST['MobilePhone']}','{$_POST['Website']}','{$_POST['Nationality']}','{$BirthYear}','{$CompanyName}','{$NonprofitName}','{$_SESSION['EntityId']}');";
+		$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,integer) AS  UPDATE E1_Entities SET E1_WantEmail=$1,E1_Password=$2,EP_FirstName=$3,EP_LastName=$4,EP_MiddleName=$5,E1_Street=$6,E1_Suite=$7,E1_City=$8,E1_StateProvince=$9,E1_PostalCode=$10,E1_LO_Country=$11,E1_IpPhoneOrVideo=$12,E1_Landline=$13,E1_MobilePhone=$14,E1_Website=$15,E1_LO_Nationality=$16,E1_BirthYear=$17,EC_CompanyName=$18,EO_OrganizationName=$19 WHERE E1_Id=$20;  EXECUTE query('{$_SESSION['WantEmail']}','{$this->hasher->HashPassword($_POST['Password'])}','{$FirstName}','{$LastName}','{$MiddleName}','{$_POST['Street']}','{$_POST['Suite']}','{$_POST['City']}','{$_POST['StateProvince']}','{$_POST['PostalCode']}','{$_POST['CountryCode']}','{$_POST['IpPhoneOrVideo']}','{$_POST['Landline']}','{$_POST['MobilePhone']}','{$_POST['Website']}','{$_POST['Nationality']}','{$BirthYear}','{$CompanyName}','{$NonprofitName}','{$_SESSION['EntityId']}');";
 		$this->postgresql->execute($sqlQuery,1);
 
 		$this->savePhotoOrLogo($_SESSION['EntityId']);
@@ -190,9 +196,9 @@ class Entity
 		$this->postgresql->execute($sqlQuery,1);
 	}
 
-	public function lookForEntity()
+	public function lookForEntity($email)
 	{
-		$sqlQuery = "PREPARE query(text) AS  SELECT E1_Id FROM E1_Entities WHERE E1_Email=$1;  EXECUTE query('$_POST[Email]');";
+		$sqlQuery = "PREPARE query(text) AS  SELECT E1_Id FROM E1_Entities WHERE E1_Email=$1;  EXECUTE query('$email');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery, 1);
 
 		$array = pg_fetch_all_columns($result, 0);
@@ -213,16 +219,24 @@ class Entity
 		}
 	}
 
-	public function saveMagicForEntity($magic)
+	public function saveLostPasswordMagicForEntity($magic)
 	{
-		$sqlQuery = "PREPARE query(text,text) AS  UPDATE E1_Entities SET E1_Magic=$1 WHERE E1_Email=$2;  EXECUTE query('$magic','$_POST[Email]');";
+		// Security: The magic is only overriden for the entity with that email.
+		$sqlQuery = "PREPARE query(text,text) AS  UPDATE E1_Entities SET E1_LostPasswordMagic=$1, E1_LostPasswordMagicExpire= now() + '00:30'::interval WHERE E1_Email=$2;  EXECUTE query('$magic','{$_POST['Email']}');";
+		$this->postgresql->execute($sqlQuery,1);
+	}
+
+	public function saveWantEmailMagicForEntity($magic)
+	{
+		// Security: The magic is only overriden for the entity with that email.
+		$sqlQuery = "PREPARE query(text,text) AS  UPDATE E1_Entities SET E1_WantEmailMagic=$1, E1_WantEmailMagicExpire= now() + '7 days'::interval WHERE E1_Id=$2;  EXECUTE query('$magic','{$_SESSION['EntityId']}');";
 		$this->postgresql->execute($sqlQuery,1);
 	}
 
 	public function setNewPasswordForEntity()
 	{
 		// Check the validity of the GET parameters
-		$sqlQuery = "PREPARE query(text,text) AS  SELECT count(E1_Id) FROM E1_Entities WHERE E1_Email=$1 AND E1_Magic=$2;  EXECUTE query('$_GET[email]','$_GET[magic]');";
+		$sqlQuery = "PREPARE query(text,text) AS  SELECT count(E1_Id) FROM E1_Entities WHERE E1_Email=$1 AND E1_LostPasswordMagic=$2 AND E1_LostPasswordMagicExpire > 'now';  EXECUTE query('{$_GET['email']}','{$_GET['magic']}');";
 		$result = $this->postgresql->getOneField($sqlQuery,1);
 		if ( $result[0] == "1" )
 		{
@@ -231,7 +245,7 @@ class Entity
 
 			// Set the new password
 			$hash = $this->hasher->HashPassword($new_password);
-			$sqlQuery = "PREPARE query(text,text,text) AS  UPDATE E1_Entities SET E1_Password=$1, E1_Magic=null WHERE E1_Email=$2 AND E1_Magic=$3;  EXECUTE query('$hash','$_GET[email]','$_GET[magic]');";
+			$sqlQuery = "PREPARE query(text,text,text) AS  UPDATE E1_Entities SET E1_Password=$1, E1_LostPasswordMagic=null WHERE E1_Email=$2 AND E1_LostPasswordMagic=$3;  EXECUTE query('$hash','{$_GET['email']}','{$_GET['magic']}');";
 			$this->postgresql->execute($sqlQuery,1);
 
 			return $new_password;
@@ -241,6 +255,80 @@ class Entity
 			$error = "<p>".gettext("ERROR: Wrong magic number!.")."</p>";
 			throw new Exception($error,false);
 		}
+	}
+
+	public function changeEmailForEntity()
+	{
+		// Check the validity of the GET parameters
+		$sqlQuery = "PREPARE query(text,text,text) AS  SELECT count(E1_Id) FROM E1_Entities WHERE E1_WantEmail=$1 AND E1_WantEmailMagic=$2 AND E1_WantEmailMagicExpire > 'now' AND E1_Id=$3;  EXECUTE query('{$_GET['email']}','{$_GET['magic']}','{$_SESSION['EntityId']}');";
+		$result = $this->postgresql->getOneField($sqlQuery,1);
+		if ( $result[0] == "1" )
+		{
+			// Change the email
+			$sqlQuery = "PREPARE query(text,integer) AS  UPDATE E1_Entities SET E1_Email=$1, E1_WantEmail=null, E1_WantEmailMagic=null WHERE E1_Id=$2;  EXECUTE query('{$_GET['email']}','{$_SESSION['EntityId']}');";
+			$this->postgresql->execute($sqlQuery,1);
+
+			return true;
+		}
+		else
+		{
+			$error = "<p>".gettext("ERROR: Wrong magic number!.")."</p>";
+			throw new Exception($error,false);
+		}
+	}
+
+	public function activateAccountForEntity()
+	{
+		// Check the validity of the GET parameters
+		$sqlQuery = "PREPARE query(text,text) AS  SELECT count(E1_Id) FROM E1_Entities WHERE E1_WantEmail=$1 AND E1_RegisterMagic=$2 AND E1_RegisterMagicExpire > 'now';  EXECUTE query('{$_GET['email']}','{$_GET['magic']}');";
+		$result = $this->postgresql->getOneField($sqlQuery,1);
+		if ( $result[0] == "1" )
+		{
+			// Make new password
+			$new_password = rand(0,9999);
+
+			// Set the new password
+			$hash = $this->hasher->HashPassword($new_password);
+			$sqlQuery = "PREPARE query(text,text,text) AS  UPDATE E1_Entities SET E1_Email=E1_WantEmail, E1_WantEmail=null, E1_Password=$1, E1_RegisterMagic=null WHERE E1_WantEmail=$2 AND E1_RegisterMagic=$3;  EXECUTE query('$hash','{$_GET['email']}','{$_GET['magic']}');";
+			$this->postgresql->execute($sqlQuery,1);
+
+			return $new_password;
+		}
+		else
+		{
+			$error = "<p>".gettext("ERROR: Wrong magic number!.")."</p>";
+			throw new Exception($error,false);
+		}
+	}
+
+	public function allowActivateAccountEmail($email)
+	{
+		$sqlQuery = "PREPARE query(text) AS  SELECT count(E1_Id) FROM E1_Entities WHERE E1_Email=$1 AND E1_ActivateAccountEmail='t';  EXECUTE query('$email');";
+		$result = $this->postgresql->getOneField($sqlQuery,1);
+		if ( $result[0] == "1" )
+			return true;
+		else
+			return false;
+	}
+
+	public function allowRegisterAccountDuplicatedEmail($email)
+	{
+		$sqlQuery = "PREPARE query(text) AS  SELECT count(E1_Id) FROM E1_Entities WHERE E1_Email=$1 AND E1_RegisterAccountDuplicatedEmail='t';  EXECUTE query('$email');";
+		$result = $this->postgresql->getOneField($sqlQuery,1);
+		if ( $result[0] == "1" )
+			return true;
+		else
+			return false;
+	}
+
+	public function allowLostPasswordEmail($email)
+	{
+		$sqlQuery = "PREPARE query(text) AS  SELECT count(E1_Id) FROM E1_Entities WHERE E1_Email=$1 AND E1_LostPasswordEmail='t';  EXECUTE query('$email');";
+		$result = $this->postgresql->getOneField($sqlQuery,1);
+		if ( $result[0] == "1" )
+			return true;
+		else
+			return false;
 	}
 
 	public function getEntityPhotoOrLogo($Id)

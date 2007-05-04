@@ -75,12 +75,12 @@ class DBManager
 		return $entity->getEntityPhotoOrLogo($Id);
 	}
 
-	public function addEntity()
+	public function addEntity($magic)
 	{
 		// This method does not need ACL check
 
 		$entity = new Entity();
-		$entity->addEntity();
+		$entity->addEntity($magic);
 	}
 
 	public function deleteEntity()
@@ -115,20 +115,28 @@ class DBManager
 		$entity->updateEntityLocale();
 	}
 
-	public function lookForEntity()
+	public function lookForEntity($email)
 	{
 		// This method does not need ACL check
 
 		$entity = new Entity();
-		return $entity->lookForEntity();
+		return $entity->lookForEntity($email);
 	}
 
-	public function saveMagicForEntity($magic)
+	public function saveLostPasswordMagicForEntity($magic)
 	{
 		// This method does not need ACL check
 
 		$entity = new Entity();
-		return $entity->saveMagicForEntity($magic);
+		return $entity->saveLostPasswordMagicForEntity($magic);
+	}
+
+	public function saveWantEmailMagicForEntity($magic)
+	{
+		// This method does not need ACL check
+
+		$entity = new Entity();
+		return $entity->saveWantEmailMagicForEntity($magic);
 	}
 
 	public function setNewPasswordForEntity()
@@ -137,6 +145,46 @@ class DBManager
 
 		$entity = new Entity();
 		return $entity->setNewPasswordForEntity();
+	}
+
+	public function changeEmailForEntity()
+	{
+		// This method does not need ACL check
+
+		$entity = new Entity();
+		return $entity->changeEmailForEntity();
+	}
+
+	public function activateAccountForEntity()
+	{
+		// This method does not need ACL check
+
+		$entity = new Entity();
+		return $entity->activateAccountForEntity();
+	}
+
+	public function allowActivateAccountEmail($email)
+	{
+		// This method does not need ACL check
+
+		$entity = new Entity();
+		return $entity->allowActivateAccountEmail($email);
+	}
+
+	public function allowRegisterAccountDuplicatedEmail($email)
+	{
+		// This method does not need ACL check
+
+		$entity = new Entity();
+		return $entity->allowRegisterAccountDuplicatedEmail($email);
+	}
+
+	public function allowLostPasswordEmail($email)
+	{
+		// This method does not need ACL check
+
+		$entity = new Entity();
+		return $entity->allowLostPasswordEmail($email);
 	}
 
 	public function getNewJobOfferAlertsLocales()
