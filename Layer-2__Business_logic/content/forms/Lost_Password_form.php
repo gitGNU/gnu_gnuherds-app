@@ -74,7 +74,7 @@ class LostPassword
 			}
 
 			// Report to the user
-			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('An email has been sent to such address with the instructions to change the password.')."<p>\n";
+			$this->processingResult .= "<p>&nbsp;</p><p>".vsprintf(gettext('An email has been sent to %s with the instructions to change the password.'),"<span class='must'>{$_POST['Email']}</span>")."<p>\n";
 		}
 		elseif ( isset($_GET['email']) and $_GET['email'] != '' )
 		{
