@@ -38,46 +38,46 @@ Suite 225, San Francisco, CA 94107, USA
 <span class="menu1noactive">{'Manage your data'|gettext|strip:'&nbsp;'}</span><br>
 
 {if $smarty.session.LoginType eq 'Person' }
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/Person.php"}<a href="Person.php" class="menu3">{/if}<span class="menu3">{'Person (Member)'|gettext}</span>{if $smarty.server.REQUEST_URI neq "/Person.php"}</a>{/if}<br>
+	&nbsp;&nbsp;<a href="Person.php" class="menu3">{'Person (Member)'|gettext}</a><br>
 {/if}
 
 {if $smarty.session.LoginType eq 'Company' }
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/Company.php"}<a href="Company.php" class="menu3">{/if}<span class="menu3">{'Company'|gettext}</span>{if $smarty.server.REQUEST_URI neq "/Company.php"}</a>{/if}<br>
+	&nbsp;&nbsp;<a href="Company.php" class="menu3">{'Company'|gettext}</a><br>
 {/if}
 
 {if $smarty.session.LoginType eq 'non-profit Organization' }
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/non-profit_Organization.php"}<a href="non-profit_Organization.php" class="menu3">{/if}<span class="menu3">{'non-profit Organization'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/non-profit_Organization.php"}</a>{/if}<br>
+	&nbsp;&nbsp;<a href="non-profit_Organization.php" class="menu3">{'non-profit Organization'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
 
 {if $smarty.session.Logged eq '1' }
 {if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/Qualifications.php"}<a href="Qualifications.php" class="menu3">{/if}<span class="menu3">{'My qualifications'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/Qualifications.php"}</a>{/if}<br>
+	&nbsp;&nbsp;<a href="Qualifications.php" class="menu3">{'My qualifications'|gettext|strip:'&nbsp;'}</a><br>
 {else}
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/Qualifications.php"}<a href="Qualifications.php" class="menu3">{/if}<span class="menu3">{'Our qualifications'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/Qualifications.php"}</a>{/if}<br>
-{/if}
-{/if}
-
-{if $smarty.session.Logged eq '1' }
-{if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/Manage_Job_Offers.php"}<a href="Manage_Job_Offers.php" class="menu3">{/if}<span class="menu3">{'My job offers'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/Manage_Job_Offers.php"}</a>{/if}<br>
-{else}
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/Manage_Job_Offers.php"}<a href="Manage_Job_Offers.php" class="menu3">{/if}<span class="menu3">{'Our job offers'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/Manage_Job_Offers.php"}</a>{/if}<br>
+	&nbsp;&nbsp;<a href="Qualifications.php" class="menu3">{'Our qualifications'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
 {/if}
 
 {if $smarty.session.Logged eq '1' }
 {if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/View_Job_Applications_State.php"}<a href="View_Job_Applications_State.php" class="menu3">{/if}<span class="menu3">{'My job applications'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/View_Job_Applications_State.php"}</a>{/if}<br>
+	&nbsp;&nbsp;<a href="Manage_Job_Offers.php" class="menu3">{'My job offers'|gettext|strip:'&nbsp;'}</a><br>
 {else}
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/View_Job_Applications_State.php"}<a href="View_Job_Applications_State.php" class="menu3">{/if}<span class="menu3">{'Our job applications'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/View_Job_Applications_State.php"}</a>{/if}<br>
+	&nbsp;&nbsp;<a href="Manage_Job_Offers.php" class="menu3">{'Our job offers'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
 {/if}
 
 {if $smarty.session.Logged eq '1' }
 {if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/Alerts.php"}<a href="Alerts.php" class="menu3" target="_top">{/if}<span class="menu3">{'My Alerts'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/Alerts.php"}</a>{/if}<br>
+	&nbsp;&nbsp;<a href="View_Job_Applications_State.php" class="menu3">{'My job applications'|gettext|strip:'&nbsp;'}</a><br>
 {else}
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/Alerts.php"}<a href="Alerts.php" class="menu3" target="_top">{/if}<span class="menu3">{'Our Alerts'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/Alerts.php"}</a>{/if}<br>
+	&nbsp;&nbsp;<a href="View_Job_Applications_State.php" class="menu3">{'Our job applications'|gettext|strip:'&nbsp;'}</a><br>
+{/if}
+{/if}
+
+{if $smarty.session.Logged eq '1' }
+{if $smarty.session.LoginType eq "Person" }
+	&nbsp;&nbsp;<a href="Alerts.php" class="menu3" target="_top">{'My Alerts'|gettext|strip:'&nbsp;'}</a><br>
+{else}
+	&nbsp;&nbsp;<a href="Alerts.php" class="menu3" target="_top">{'Our Alerts'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
 {/if}
 

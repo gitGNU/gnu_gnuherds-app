@@ -63,38 +63,11 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr>
 <td align="center" class="login">
-{if $smarty.server.REQUEST_URI neq "/Lost_Password.php"}
-<a href="Lost_Password.php">
-{/if}
-{'Lost password?'|gettext|strip:'&nbsp;'}
-{if $smarty.server.REQUEST_URI neq "/Lost_Password.php"}
-</a>
-{/if}
+<a href="Lost_Password.php">{'Lost password?'|gettext|strip:'&nbsp;'}</a><br>
 <br>
-<br>
-{if $smarty.server.REQUEST_URI neq "/Person.php"}
-<a href="Person.php">
-{/if}
-{'Register person'|gettext}
-{if $smarty.server.REQUEST_URI neq "/Person.php"}
-</a>
-{/if}
-<br>
-{if $smarty.server.REQUEST_URI neq "/Company.php"}
-<a href="Company.php">
-{/if}
-{'Register company'|gettext}
-{if $smarty.server.REQUEST_URI neq "/Company.php"}
-</a>
-{/if}
-<br>
-{if $smarty.server.REQUEST_URI neq "/non-profit_Organization.php"}
-<a href="non-profit_Organization.php">
-{/if}
-{'Register non-profit'|gettext}
-{if $smarty.server.REQUEST_URI neq "/non-profit_Organization.php"}
-</a>
-{/if}
+<a href="Person.php">{'Register person'|gettext}</a><br>
+<a href="Company.php">{'Register company'|gettext}</a><br>
+<a href="non-profit_Organization.php">{'Register non-profit'|gettext}</a>
 </td>
 </tr>
 </table>
