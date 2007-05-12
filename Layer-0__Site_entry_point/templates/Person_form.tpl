@@ -43,18 +43,18 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}ACCOUNT IDENTIFICATION{/t}</td> </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><label for="Email">Email : </label></td>
+<td align="right"><span class="must">*</span><label for="Email">Email</label></td>
 <td colspan="3"> <input type="text" name="Email" id="Email" size="40" maxlength="60" class="required" value="{$smarty.session.Email}">
 {if $smarty.session.WantEmail neq ''}<strong>[</strong>{$smarty.session.WantEmail}<strong>]</strong>{/if}
 </td>
 </tr>
 {if $smarty.session.Logged eq '1'}
 <tr>
-<td align="right"><span class="must">*</span><label for="Password">{t}Password{/t} : </label></td>
+<td align="right"><span class="must">*</span><label for="Password">{t}Password{/t}</label></td>
 <td colspan="3"> <input type="password" name="Password" id="Password" size="20" maxlength="20" class="required" value="{$smarty.session.Password}"> </td>
 </tr>
 <tr>
-<td align="right"><span class="must">*</span><label for="RetypePassword">{t}Retype Password{/t} : </label></td>
+<td align="right"><span class="must">*</span><label for="RetypePassword">{t}Retype Password{/t}</label></td>
 <td colspan="3"> <input type="password" name="RetypePassword" id="RetypePassword" size="20" maxlength="20" class="required" value="{$smarty.session.Password}"> </td>
 </tr>
 {/if}
@@ -64,7 +64,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}PERSON{/t}</td> </tr>
 
 <tr>
-<td align="right"><span class="must">*</span><label for="FirstName">{t}First name{/t} : </label></td>
+<td align="right"><span class="must">*</span><label for="FirstName">{t}First name{/t}</label></td>
 <td> <input type="text" name="FirstName" id="FirstName" size="20" maxlength="20" class="required" value="{$smarty.session.FirstName}"> </td>
 <th rowspan="5" width="100%">
 <th rowspan="5">
@@ -75,15 +75,15 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 </tr>
 <tr>
-<td align="right"><label for="MiddleName">{t}Middle name{/t} : </label></td>
+<td align="right"><label for="MiddleName">{t}Middle name{/t}</label></td>
 <td> <input type="text" name="MiddleName" id="MiddleName" size="20" maxlength="20" class="notRequired" value="{$smarty.session.MiddleName}"> </td>
 </tr>
 <tr valign="top">
-<td align="right"><label for="LastName">{t}Last name{/t} : </label></td>
+<td align="right"><label for="LastName">{t}Last name{/t}</label></td>
 <td> <input type="text" name="LastName" id="LastName" size="20" maxlength="20" class="notRequired" value="{$smarty.session.LastName}"> </td>
 </tr>
 <tr>
-<td align="right"><label for="PhotoOrLogo" class="raisePopUp" OnMouseOver="popup('{t}Default image size{/t}: 90x120','lightyellow',300);" OnMouseOut="kill()">{t}Photo{/t} : </label></td>
+<td align="right"><label for="PhotoOrLogo" class="raisePopUp" OnMouseOver="popup('{t}Default image size{/t}: 90x120','lightyellow',300);" OnMouseOut="kill()">{t}Photo{/t}</label></td>
 <td> <input type="file" name="PhotoOrLogo" id="PhotoOrLogo" class="notRequired" value="{$smarty.session.PhotoOrLogo}"> </td>
 </tr>
 <tr>
@@ -102,27 +102,27 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}ADDRESS{/t}</td> </tr>
 
 <tr>
-<td align="right"><label for="Street">{t}Street{/t} : </label></td>
+<td align="right"><label for="Street">{t}Street{/t}</label></td>
 <td colspan="3"> <input type="text" name="Street" id="Street" size="60" maxlength="80" class="notRequired" value="{$smarty.session.Street}"> </td>
 </tr>
 <tr>
-<td align="right"><label for="Suite">{t}Suite{/t} : </label></td>
+<td align="right"><label for="Suite">{t}Suite{/t}</label></td>
 <td colspan="3"> <input type="text" name="Suite" id="Suite" size="10" maxlength="10" class="notRequired" value="{$smarty.session.Suite}"> </td>
 </tr>
 <tr>
-<td align="right"><label for="City">{t}City{/t} : </label></td>
+<td align="right"><label for="City">{t}City{/t}</label></td>
 <td colspan="3"> <input type="text" name="City" id="City" size="30" maxlength="30" class="notRequired" value="{$smarty.session.City}"> </td>
 </tr>
 <tr>
-<td align="right"><label for="StateProvince">{t}State / Province{/t} : </label></td>
+<td align="right"><label for="StateProvince">{t}State / Province{/t}</label></td>
 <td colspan="3"> <input type="text" name="StateProvince" id="StateProvince" size="30" maxlength="30" class="notRequired" value="{$smarty.session.StateProvince}"> </td>
 </tr>
 <tr>
-<td align="right"><label for="PostalCode">{t}Postal code{/t} : </label></td>
+<td align="right"><label for="PostalCode">{t}Postal code{/t}</label></td>
 <td colspan="3"> <input type="text" name="PostalCode" id="PostalCode" size="15" maxlength="15" class="notRequired" value="{$smarty.session.PostalCode}"> </td>
 </tr>
 <tr>
-<td align="right"><span class="must">*</span><label for="CountryCode">{t}Country{/t} : </label></td>
+<td align="right"><span class="must">*</span><label for="CountryCode">{t}Country{/t}</label></td>
 <td colspan="3">
 <select name="CountryCode" id="CountryCode" class="required">
 {html_options values=$countryTwoLetter output=$countryNames selected=$smarty.session.CountryCode}
@@ -135,15 +135,15 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}INTERACTIVE COMMUNICATION MEDIAS{/t}</td> </tr>
 
 <tr>
-<td align="right"><label for="IpPhoneOrVideo">{'IP phone or videophone'|gettext|strip:'&nbsp;'}&nbsp;: </label></td>
+<td align="right"><label for="IpPhoneOrVideo">{'IP phone or videophone'|gettext|strip:'&nbsp;'}</label></td>
 <td colspan="3"> <input type="text" name="IpPhoneOrVideo" id="IpPhoneOrVideo" size="60" maxlength="255" class="notRequired" value="{$smarty.session.IpPhoneOrVideo}"> </td>
 </tr>
 <tr>
-<td align="right"><label for="Landline">{t}Landline{/t} : </label></td>
+<td align="right"><label for="Landline">{t}Landline{/t}</label></td>
 <td colspan="3"> <input type="text" name="Landline" id="Landline" size="30" maxlength="30" class="notRequired" value="{$smarty.session.Landline}"> </td>
 </tr>
 <tr>
-<td align="right"><label for="MobilePhone">{t}Mobile phone{/t} : </label></td>
+<td align="right"><label for="MobilePhone">{t}Mobile phone{/t}</label></td>
 <td colspan="3"> <input type="text" name="MobilePhone" id="MobilePhone" size="30" maxlength="30" class="notRequired" value="{$smarty.session.MobilePhone}"> </td>
 </tr>
 
@@ -152,7 +152,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}OTHER INFORMATION{/t}</td> </tr>
 
 <tr>
-<td align="right"><label for="BirthYear">{t}Year of birth{/t} : </label></td>
+<td align="right"><label for="BirthYear">{t}Year of birth{/t}</label></td>
 <td colspan="3">
 {if $smarty.session.BirthYear eq ''}
 	{assign var=BirthYear value='--'}
@@ -164,7 +164,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr>
-<td align="right"><label for="Nationality">{t}Nationality{/t} : </label></td>
+<td align="right"><label for="Nationality">{t}Nationality{/t}</label></td>
 <td colspan="3">
 <select name="Nationality" id="Nationality" class="notRequired">
 {html_options values=$countryTwoLetter output=$countryNames selected=$smarty.session.Nationality}
@@ -173,7 +173,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr>
-<td align="right"><label for="Website">{t}Web site{/t} : </label></td>
+<td align="right"><label for="Website">{t}Web site{/t}</label></td>
 <td colspan="3"> <input type="text" name="Website" id="Website" size="60" maxlength="255" class="notRequired" value="{$smarty.session.Website}"> </td>
 </tr>
 
