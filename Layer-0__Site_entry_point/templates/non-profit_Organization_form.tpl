@@ -39,7 +39,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4">&nbsp;</td> </tr>
 <tr> <td colspan="4" class="subsection">{t}ACCOUNT IDENTIFICATION{/t}</td> </tr>
 <tr valign="top">
-<td align="right"><span class="must">*</span><label for="Email">email : </label></td>
+<td align="right"><span class="must">*</span><label for="Email">Email : </label></td>
 <td colspan="3"> <input type="text" name="Email" id="Email" size="40" maxlength="60" class="required" value="{$smarty.session.Email}">
 {if $smarty.session.WantEmail neq ''}<strong>[</strong>{$smarty.session.WantEmail}<strong>]</strong>{/if}
 </td>
