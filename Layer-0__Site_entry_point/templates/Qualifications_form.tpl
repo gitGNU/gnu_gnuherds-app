@@ -48,7 +48,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td> </tr>
 
 <tr>
-<td align="right"><span class="must">*</span><label for="ProfessionalExperienceSinceYear">{'Professional experience since'|gettext|strip:'&nbsp;'}&nbsp;: </label></td>
+<td align="right"><span class="must">*</span><label for="ProfessionalExperienceSinceYear">{'Professional experience since'|gettext|strip:'&nbsp;'}</label></td>
 <td colspan="3">
 {if $smarty.session.ProfessionalExperienceSinceYear eq ''}
 	{assign var=ProfessionalExperienceSinceYear value='--'}
@@ -61,18 +61,18 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if $smarty.session.LoginType eq 'Person' }
 <tr valign="top">
-<td align="right"><label for="AcademicQualification">{t}Academic qualification{/t} : </label></td>
+<td align="right"><label for="AcademicQualification">{t}Academic qualification{/t}</label></td>
 <td colspan="3">
 <select name="AcademicQualification" id="AcademicQualification" class="notRequired">
 {html_options values=$academicQualificationsId output=$academicQualificationsIdTranslated selected=$smarty.session.AcademicQualification}
 </select> <br>
-<label for="AcademicQualificationDescription">{t}Description{/t}: </label><input type="text" name="AcademicQualificationDescription" id="AcademicQualificationDescription" size="35" maxlength="80" value="{$smarty.session.AcademicQualificationDescription}" class="notRequired">
+<label for="AcademicQualificationDescription">{t}Description{/t} </label><input type="text" name="AcademicQualificationDescription" id="AcademicQualificationDescription" size="35" maxlength="80" value="{$smarty.session.AcademicQualificationDescription}" class="notRequired">
 </td>
 </tr>
 {/if}
 
 <tr valign="top">
-<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t} : </label></td>
+<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}Press Ctrl key to choose more than one Profile{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Profiles{/t}</label></td>
 
 <td><label for="ProductProfileList">{t}Product profiles{/t}</label><br>
 <select name="ProductProfileList[]" id="ProductProfileList" size="{$productProfiles|@count}" multiple="multiple" class="notRequired">
@@ -99,14 +99,14 @@ Suite 225, San Francisco, CA 94107, USA
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t} : </label></td>
+}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</label></td>
 <td colspan="3">
 
 <table cellpadding="0" cellspacing="0" width="100%">
 {foreach from=$skillsBySets item=skillIds key=skillSetTypeId}
 <tr>
 <td>
-<label for="Skill_{$skillSetTypeId|strip:'_'}">{$skillSetTypeId|gettext|strip:'&nbsp;'}:&nbsp;</label>
+<label for="Skill_{$skillSetTypeId|strip:'_'}">{$skillSetTypeId|gettext|strip:'&nbsp;'}&nbsp;</label>
 </td>
 <td>
 <select name="Skill_{$skillSetTypeId|strip:'_'}" id="Skill_{$skillSetTypeId|strip:'_'}" class="notRequired" onChange="{foreach from=$skillsBySets item=s key=setId}{if $setId neq $skillSetTypeId} document.qualificationsForm.Skill_{$setId|strip:'_'}.value=''; {/if}{/foreach} document.qualificationsForm.Skill.value = document.qualificationsForm.Skill_{$skillSetTypeId|strip:'_'}.value; ResetSkillLevels();"> <!-- We raise it here due it is not automatically raised with the previous line ^ -->
@@ -139,12 +139,12 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td>
 <br>
-<label for="skillKnowledgeLevel">{t}Knowledge level{/t}:</label>
+<label for="skillKnowledgeLevel">{t}Knowledge level{/t}</label>
 <select name="skillKnowledgeLevel" id="skillKnowledgeLevel" class="notRequired" disabled onChange="UpdateSkill();">
 {html_options values=$skillKnowledgeLevelsId output=$skillKnowledgeLevelsName}
 </select><br>
 
-<label for="skillExperienceLevel">{t}Experience level{/t}:</label>
+<label for="skillExperienceLevel">{t}Experience level{/t}</label>
 <select name="skillExperienceLevel" id="skillExperienceLevel" class="notRequired" disabled onChange="UpdateSkill();">
 {html_options values=$skillExperienceLevelsId output=$skillExperienceLevelsName}
 </select> <br>
@@ -182,7 +182,7 @@ Suite 225, San Francisco, CA 94107, USA
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Languages{/t} : </label></td>
+}Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Languages{/t}</label></td>
 <td colspan="3">
 <table cellpadding="0" cellspacing="0" width="100%">
 <tr valign="top">
@@ -192,12 +192,12 @@ Suite 225, San Francisco, CA 94107, USA
 {html_options values=$languagesName output=$languagesNameTranslated}
 </select><br>
 
-<label for="languageSpokenLevel">{t}Spoken level{/t}:</label>
+<label for="languageSpokenLevel">{t}Spoken level{/t}</label>
 <select name="languageSpokenLevel" id="languageSpokenLevel" class="required" disabled onChange="UpdateIdiom();">
 {html_options values=$languagesSpokenLevelsId output=$languagesSpokenLevelsName}
 </select><br>
 
-<label for="languageWrittenLevel">{t}Written level{/t}:</label>
+<label for="languageWrittenLevel">{t}Written level{/t}</label>
 <select name="languageWrittenLevel" id="languageWrittenLevel" class="required" disabled onChange="UpdateIdiom();">
 {html_options values=$languagesWrittenLevelsId output=$languagesWrittenLevelsName}
 </select>
@@ -230,7 +230,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if $smarty.session.CertificationsList|@count >= 1 or $notYetRequestedCertifications|@count >= 1}
 <tr valign="top">
-<td align="right"><label for="NotYetRequestedCertificationsList" class="raisePopUp" OnMouseOver="popup('{t}Request your certifications{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Certifications{/t} : </label><br> </td>
+<td align="right"><label for="NotYetRequestedCertificationsList" class="raisePopUp" OnMouseOver="popup('{t}Request your certifications{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Certifications{/t}</label><br> </td>
 <td colspan="3">
 
 <table cellspacing="0" cellpadding="0">
@@ -258,15 +258,15 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr valign="top">
-<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}URIs which prove your contritution to FS projects. For example: CVS web reference, email with patch or advices, etc.{/t}','lightyellow',300);" OnMouseOut="kill()">{'Contributions to FS projects'|gettext|strip:'&nbsp;'}&nbsp;: </label><br> </td>
+<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}URIs which prove your contritution to FS projects. For example: CVS web reference, email with patch or advices, etc.{/t}','lightyellow',300);" OnMouseOut="kill()">{'Contributions to FS projects'|gettext|strip:'&nbsp;'}</label><br> </td>
 <td colspan="3"> 
 
 <table cellpadding="0" cellspacing="0">
 <tr valign="middle">
 <td width="63%">
-<label for="ContributionProject">{t}Project{/t}: </label><input type="text" name="ContributionProject" id="ContributionProject" maxlength="20" value="" class="notRequired"><br>
-<label for="ContributionDescription">{t}Description{/t}: </label><input type="text" name="ContributionDescription" id="ContributionDescription" maxlength="30" value="" class="notRequired"><br>
-<label for="ContributionURI">URI: </label><input type="text" name="ContributionURI" id="ContributionURI" maxlength="255" value="http://" class="notRequired"><br>
+<label for="ContributionProject">{t}Project{/t} </label><input type="text" name="ContributionProject" id="ContributionProject" maxlength="20" value="" class="notRequired"><br>
+<label for="ContributionDescription">{t}Description{/t} </label><input type="text" name="ContributionDescription" id="ContributionDescription" maxlength="30" value="" class="notRequired"><br>
+<label for="ContributionURI">URI </label><input type="text" name="ContributionURI" id="ContributionURI" maxlength="255" value="http://" class="notRequired"><br>
 <input type="hidden" name="ContributionErrorMessage" value="{t}The Project and URI fields are required. Please, try again.{/t}">
 </td>
 <td width="90%" align="center">
@@ -304,7 +304,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}CONTRACT{/t}</td> </tr>
 
 <tr>
-<td align="right"><span class="must">*</span><label for="DesiredContractType">{t}Desired contract type{/t} : </label></td>
+<td align="right"><span class="must">*</span><label for="DesiredContractType">{t}Desired contract type{/t}</label></td>
 <td colspan="3">
 <select name="DesiredContractType" id="DesiredContractType" class="required">
 {html_options values=$contractTypesId output=$contractTypesIdTranslated selected=$smarty.session.DesiredContractType}
@@ -313,7 +313,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><label for="DesiredWageRank" class="raisePopUp" OnMouseOver="popup('{t}The format has to be: Minimum-Optimum. For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Desired wage rank{/t} : </label></td>
+<td align="right"><span class="must">*</span><label for="DesiredWageRank" class="raisePopUp" OnMouseOver="popup('{t}The format has to be: Minimum-Optimum. For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Desired wage rank{/t}</label></td>
 <td colspan="3">
 <input type="text" name="DesiredWageRank" id="DesiredWageRank" size="15" maxlength="30" class="required" value="{$smarty.session.DesiredWageRank}">
 <select name="WageRankCurrency" class="required">
@@ -326,7 +326,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr>
-<td align="right"><span class="must">*</span><label for="CurrentEmployability">{t}Currently you are{/t} : </label></td>
+<td align="right"><span class="must">*</span><label for="CurrentEmployability">{t}Currently you are{/t}</label></td>
 <td colspan="3">
 <select name="CurrentEmployability" id="CurrentEmployability" class="required">
 {html_options values=$employabilityId output=$employabilityIdTranslated selected=$smarty.session.CurrentEmployability}
@@ -339,12 +339,12 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="subsection">{t}LOCATION{/t}</td> </tr>
 
 <tr valign="bottom">
-<td align="right"><label for="AvailableToTravel">{t}Available to travel{/t} : </label></td>
+<td align="right"><label for="AvailableToTravel">{t}Available to travel{/t}</label></td>
 <td colspan="3"> <input type="checkbox" name="AvailableToTravel" id="AvailableToTravel" class="notRequired" {if $smarty.session.AvailableToTravel eq 'true'} checked {/if} > </td>
 </tr>
 
 <tr valign="bottom">
-<td align="right"><label for="AvailableToChangeResidence">{'Available to change residence'|gettext|strip:'&nbsp;'}&nbsp;: </label></td>
+<td align="right"><label for="AvailableToChangeResidence">{'Available to change residence'|gettext|strip:'&nbsp;'}</label></td>
 <td colspan="3"> <input type="checkbox" name="AvailableToChangeResidence" id="AvailableToChangeResidence" class="notRequired" {if $smarty.session.AvailableToChangeResidence eq 'true'} checked {/if} > </td>
 </tr>
 
