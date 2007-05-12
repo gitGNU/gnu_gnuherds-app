@@ -74,13 +74,13 @@ Suite 225, San Francisco, CA 94107, USA
 	<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
 {/if}
 </tr>
-<tr valign="top">
-<td align="right"><label for="LastName">{t}Last name{/t} : </label></td>
-<td> <input type="text" name="LastName" id="LastName" size="20" maxlength="20" class="notRequired" value="{$smarty.session.LastName}"> </td>
-</tr>
 <tr>
 <td align="right"><label for="MiddleName">{t}Middle name{/t} : </label></td>
 <td> <input type="text" name="MiddleName" id="MiddleName" size="20" maxlength="20" class="notRequired" value="{$smarty.session.MiddleName}"> </td>
+</tr>
+<tr valign="top">
+<td align="right"><label for="LastName">{t}Last name{/t} : </label></td>
+<td> <input type="text" name="LastName" id="LastName" size="20" maxlength="20" class="notRequired" value="{$smarty.session.LastName}"> </td>
 </tr>
 <tr>
 <td align="right"><label for="PhotoOrLogo" class="raisePopUp" OnMouseOver="popup('{t}Default image size{/t}: 90x120','lightyellow',300);" OnMouseOut="kill()">{t}Photo{/t} : </label></td>
