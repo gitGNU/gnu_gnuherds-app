@@ -27,7 +27,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr>
 <td nowrap align="left" class="login">
-<label for="loginBox_Email">Email:</label>
+<label for="loginBox_Email">Email</label>
 </td>
 </tr>
 
@@ -39,7 +39,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr>
 <td nowrap align="left" class="login">
-<label for="loginBox_Password">{'Password'|gettext}:</label>
+<label for="loginBox_Password">{'Password'|gettext}</label>
 </td>
 </tr>
 
