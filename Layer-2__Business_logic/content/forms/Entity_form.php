@@ -23,6 +23,7 @@ require_once "../Layer-4__DBManager_etc/DB_Manager.php";
 abstract class EntityForm
 {
 	protected $manager;
+	protected $checks;
 	protected $processingResult;
 
 

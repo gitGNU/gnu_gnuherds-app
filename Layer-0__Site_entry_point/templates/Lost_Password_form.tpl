@@ -29,5 +29,11 @@ Suite 225, San Francisco, CA 94107, USA
 <input type=submit name="send" value="{t}Send{/t}">
 </p>
 
+{if $checks.Email neq '' }
+<p class="must">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {$checks.Email}
+</p>
+{/if}
+
 </form>
 

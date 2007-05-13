@@ -25,6 +25,7 @@ require_once "../Layer-4__DBManager_etc/DB_Manager.php";
 class LostPassword
 {
 	private $manager;
+	private $checks;
 	private $processingResult;
 
 
@@ -47,34 +48,40 @@ class LostPassword
 		// Process each button event
 		if ( $_POST['send'] == gettext('Send') )
 		{
-			if ( $this->manager->lookForEntity($_POST['Email']) == true )
+			// Checks
+			$this->checkLostPasswordForm();
+
+			if ($this->checks['result'] == "pass" )
 			{
-				// Check to avoid spam
-				// If we do not send the email, to avoid possible spam, we do not add the 'magic' to the data base because of without that email the user will not be able to use the 'magic' to get a new password.
-				if ( $this->manager->allowLostPasswordEmail($_POST['Email']) == true )
+				if ( $this->manager->lookForEntity($_POST['Email']) == true )
 				{
-					// Make the 'magic' flag
-					$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
+					// Check to avoid spam
+					// If we do not send the email, to avoid possible spam, we do not add the 'magic' to the data base because of without that email the user will not be able to use the 'magic' to get a new password.
+					if ( $this->manager->allowLostPasswordEmail($_POST['Email']) == true )
+					{
+						// Make the 'magic' flag
+						$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
 
-					// Keep the 'magic' in the data base
-					$this->manager->saveLostPasswordMagicForEntity($magic);
+						// Keep the 'magic' in the data base
+						$this->manager->saveLostPasswordMagicForEntity($magic);
 
-					// Send the email
-					$message = gettext("For security reasons, GNU Herds does not send passwords by electronic mail.")."\n\n";
+						// Send the email
+						$message = gettext("For security reasons, GNU Herds does not send passwords by electronic mail.")."\n\n";
 
-					$message .= gettext("To get your new password follow the below link.")." ".gettext("That link will expire in 30 minutes:")."\n\n";
+						$message .= gettext("To get your new password follow the below link.")." ".gettext("That link will expire in 30 minutes:")."\n\n";
 
-					$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".$_POST['Email']."&magic=".$magic;
+						$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".$_POST['Email']."&magic=".$magic;
 
-					$message .= "\n\n";
-					$message .= gettext("If you have not asked for a new password, ignore it and your password will not be changed.")."\n\n";
+						$message .= "\n\n";
+						$message .= gettext("If you have not asked for a new password, ignore it and your password will not be changed.")."\n\n";
 
-					mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
+						mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
+					}
 				}
-			}
 
-			// Report to the user
-			$this->processingResult .= "<p>&nbsp;</p><p>".vsprintf(gettext('An email has been sent to %s with the instructions to change the password.'),"<span class='must'>{$_POST['Email']}</span>")."<p>\n";
+				// Report to the user
+				$this->processingResult .= "<p>&nbsp;</p><p>".vsprintf(gettext('An email has been sent to %s with the instructions to change the password.'),"<span class='must'>{$_POST['Email']}</span>")."<p>\n";
+			}
 		}
 		elseif ( isset($_GET['email']) and $_GET['email'] != '' )
 		{
@@ -116,7 +123,7 @@ class LostPassword
 			$this->printPersonForm();
 		}
 
-		if ( $_POST['send'] == gettext('Send') or $_GET['email'] != '' )
+		if ( ( $_POST['send'] == gettext('Send') and $this->checks['result'] == "pass" )  or $_GET['email'] != '' )
 			echo $this->processingResult;
 	}
 
@@ -124,7 +131,31 @@ class LostPassword
 	private function printPersonForm()
 	{
 		$smarty = new Smarty;
+
+		$smarty->assign('checks', $this->checks);
+
 		$smarty->display("Lost_Password_form.tpl");
+	}
+
+
+	private function checkLostPasswordForm()
+	{
+		$this->checks['result'] = "pass"; // By default the checks pass
+
+		if ( trim($_POST['Email'])=='' )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['Email'] = gettext('Please fill in here');
+		}
+		else
+		{
+			// The Email field have to keep the right syntax
+			if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST["Email"]))
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['Email'] = gettext('Invalid email address');
+			}
+		}
 	}
 }
 ?>
