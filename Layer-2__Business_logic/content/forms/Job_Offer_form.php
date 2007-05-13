@@ -25,6 +25,7 @@ require_once "../Layer-4__DBManager_etc/DB_Manager.php";
 class JobOfferForm
 {
 	private $manager;
+	private $checks;
 	private $processingResult;
 
 
@@ -91,7 +92,7 @@ class JobOfferForm
 
 	public function printOutput()
 	{
-		if ( $_POST['save'] == gettext('Save') )
+		if ( $_POST['save'] == gettext('Save') and $this->checks['result'] == "pass" )
 			echo $this->processingResult;
 		else
 			$this->printJobOfferForm();
@@ -209,6 +210,9 @@ class JobOfferForm
 
 		$smarty->assign('countryTwoLetter', $countryTwoLetter);
 		$smarty->assign('countryNames', $countryNames);
+
+
+		$smarty->assign('checks', $this->checks);
 
 
 		$smarty->display("Job_Offer_form.tpl");
@@ -354,81 +358,106 @@ class JobOfferForm
 
 
 		// Update or insert the values
-		if ( $_GET['JobOfferId'] != '' ) // update
+		if ($this->checks['result'] == "pass" )
 		{
-			$this->manager->updateJobOffer($_GET['JobOfferId']);
-			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
+			if ( $_GET['JobOfferId'] != '' ) // update
+			{
+				$this->manager->updateJobOffer($_GET['JobOfferId']);
+				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
 
-			$this->processingResult .= "<center>\n";
-			$this->processingResult .= "<a href='/View_Job_Offer.php?JobOfferId=".$_GET[JobOfferId]."' target='_top'>".gettext("Check job offer view")."</a>\n";
-			$this->processingResult .= "</center>\n";
+				$this->processingResult .= "<center>\n";
+				$this->processingResult .= "<a href='/View_Job_Offer.php?JobOfferId=".$_GET[JobOfferId]."' target='_top'>".gettext("Check job offer view")."</a>\n";
+				$this->processingResult .= "</center>\n";
 
-			// $_SESSION variables have been saved previously.
-			// Do not destroy the session, so as to next time the values will be loaded from the $_SESSION variables. 
-		}
-		else // new
-		{
-			$J1_Id = $this->manager->addJobOffer();
-			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. Your job offer have been saved.')."<p><p>&nbsp;</p>\n";
+				// $_SESSION variables have been saved previously.
+				// Do not destroy the session, so as to next time the values will be loaded from the $_SESSION variables. 
+			}
+			else // new
+			{
+				$J1_Id = $this->manager->addJobOffer();
+				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. Your job offer have been saved.')."<p><p>&nbsp;</p>\n";
 
-			$this->processingResult .= "<center>\n";
-			$this->processingResult .= "<a href='/View_Job_Offer.php?JobOfferId=".$J1_Id."' target='_top'>".gettext("Check job offer view")."</a>\n";
-			$this->processingResult .= "</center>\n";
+				$this->processingResult .= "<center>\n";
+				$this->processingResult .= "<a href='/View_Job_Offer.php?JobOfferId=".$J1_Id."' target='_top'>".gettext("Check job offer view")."</a>\n";
+				$this->processingResult .= "</center>\n";
+			}
 		}
 	}
 
 
 	private function checkJobOfferForm()
 	{
+		$this->checks['result'] = "pass"; // By default the checks pass
+
 		// Note that the POST values has been saved on the SESSION before calling this method. We use SESSION instead POST due to they have the isset check done, and we want to avoid to repeat it.  :P
 
 		// Some field can not be empty
-		if ( $_SESSION['jExpirationDate']=='' or ($_SESSION['jAllowPersonApplications']=="false" and $_SESSION['jAllowCompanyApplications']=="false" and $_SESSION['jAllowOrganizationApplications']=="false") or $_SESSION['jVacancies']=='' or $_SESSION['jContractType']=='' or $_SESSION['jWageRank']=='' or $_SESSION['jWageRankCurrency']=='' or $_SESSION['jWageRankByPeriod']=='' or count($_SESSION['jProfessionalProfileList'])<1 or count($_SESSION['jLanguageList'])<1 or ($_SESSION['jWageRankByPeriod']=="by project" and ($_SESSION['jEstimatedEffort']=='' or $_SESSION['jTimeUnit']=='')) )
+
+		if ( $_SESSION['jExpirationDate']=='' )
 		{
-			$AllowApplications = ( $_SESSION['jAllowPersonApplications']=="true" or $_SESSION['jAllowCompanyApplications']=="true" or $_SESSION['jAllowOrganizationApplications']=="true" ) ? "$_SESSION[jAllowPersonApplications] $_SESSION[jAllowCompanyApplications] $_SESSION[jAllowOrganizationApplications]" : '';
-			$ProfessionalProfileList = count($_SESSION['jProfessionalProfileList'])<1 ? '' : count($_SESSION['jProfessionalProfileList']);
-			$LanguageList = count($_SESSION['jLanguageList'])<1 ? '' : count($_SESSION['jLanguageList']);
+			$this->checks['result'] = "fail";
+			$this->checks['jExpirationDate'] = gettext('Please fill in here');
+		}
+		else
+		{
+			// Date format
+			if ( ( !preg_match('/(\d\d)\-(\d\d)\-(\d\d\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+			     ( !preg_match('/(\d\d\d\d)\-(\d\d)\-(\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+			     ( !preg_match('/(\d\d)\/(\d\d)\/(\d\d\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+			     ( !preg_match('/(\d\d\d\d)\/(\d\d)\/(\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['jExpirationDate'] = gettext('Incorrect date format');
+			}
+		}
 
-			$error = "
-				<p>".gettext('Some required fields are empty!. You have to fill them:')."</p>
-				<table>
-				<tr><td><b>".gettext('Expiration date')."</b>:</td><td> '$_SESSION[jExpirationDate]'</td></tr>
+		if ( $_SESSION['jAllowPersonApplications']=="false" and $_SESSION['jAllowCompanyApplications']=="false" and $_SESSION['jAllowOrganizationApplications']=="false" )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['jAllowApplications'] = gettext('Please fill in here');
+		}
 
-				<tr><td><b>".gettext('Allow applications from')."</b>:</td><td> '$AllowApplications'</td></tr>
-				<tr><td><b>".gettext('Vacancies')."</b>:</td><td> '$_SESSION[jVacancies]'</td></tr>
+		if ( $_SESSION['jVacancies']=='' )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['jVacancies'] = gettext('Please fill in here');
+		}
 
-				<tr><td><b>".gettext('Contract type')."</b>:</td><td> '$_SESSION[jContractType]'</td></tr>
+		if ( $_SESSION['jContractType']=='' )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['jContractType'] = gettext('Please fill in here');
+		}
 
-				<tr><td><b>".gettext('Wage rank')."</b>:</td><td> '$_SESSION[jWageRank]'</td></tr>
-				<tr><td><b>".gettext('Wage rank')." (currency)</b>:</td><td> '$_SESSION[jWageRankCurrency]'</td></tr>
-				<tr><td><b>".gettext('Wage rank')." (by)</b>:</td><td> '$_SESSION[jWageRankByPeriod]'</td></tr>\n";
+		if ( $_SESSION['jWageRank']=='' or $_SESSION['jWageRankCurrency']=='' or $_SESSION['jWageRankByPeriod']=='' )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['jWageRank'] = gettext('Please fill in here');
+		}
 
-			if ($_SESSION['jWageRankByPeriod']=="by project")
-				$error .= "<tr><td><b>".gettext('Estimated effort')."</b>:</td><td> '$_SESSION[jEstimatedEffort]'</td></tr>
-					<tr><td><b>".gettext('Estimated effort')." (time unit)</b>:</td><td> '$_SESSION[jTimeUnit]'</td></tr>";
+		if ( count($_SESSION['jProfessionalProfileList'])<1 )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['jProfessionalProfileList'] = gettext('Please fill in here');
+		}
 
-			$error .= "
-				<tr><td><b>".gettext('Professional profiles')."</b>:</td><td> '$ProfessionalProfileList'</td></tr>
-				<tr><td><b>".gettext('Required languages')."</b>:</td><td> '$LanguageList'</td></tr>
-				</table>\n";
-			throw new Exception($error,true); // The parameter 'true' is used to note that the 'Back' button must be shown.
+		if ( count($_SESSION['jLanguageList'])<1 )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['jLanguageList'] = gettext('Please fill in here');
+		}
+
+		if ( $_SESSION['jWageRankByPeriod']=="by project" and ($_SESSION['jEstimatedEffort']=='' or $_SESSION['jTimeUnit']=='') )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['jEstimatedEffort'] = gettext('Please fill in here');
 		}
 
 		// Telework or Country have to be filled
 		if ( $_SESSION['jTelework']=="false" and $_SESSION['jCountryCode']=='' )
 		{
-			$error = "<p>".gettext('In the RESIDENCE LOCATION subsection, you have to fill an address (at least the Country), or activate the "Telework" checkbox.')."</p>\n";
-			throw new Exception($error,true);
-		}
-
-		// Date format
-		if ( ( !preg_match('/(\d\d)\-(\d\d)\-(\d\d\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-		     ( !preg_match('/(\d\d\d\d)\-(\d\d)\-(\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
-		     ( !preg_match('/(\d\d)\/(\d\d)\/(\d\d\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-		     ( !preg_match('/(\d\d\d\d)\/(\d\d)\/(\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
-		{
-			$error = "<p>".gettext('Expiration date').": ".gettext('Incorrect format.')."</p>\n";
-			throw new Exception($error,true);
+			$this->checks['result'] = "fail";
+			$this->checks['jLocation'] = gettext('Please fill in the country field or activate the telework checkbox');
 		}
 	}
 

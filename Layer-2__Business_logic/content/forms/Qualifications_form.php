@@ -26,6 +26,7 @@ require_once "../Layer-4__DBManager_etc/PHP_Tools.php";
 class QualificationsForm
 {
 	private $manager;
+	private $checks;
 	private $processingResult;
 
 
@@ -85,7 +86,7 @@ class QualificationsForm
 
 	public function printOutput()
 	{
-		if ( $_POST['delete'] == gettext('Delete qualifications') || $_POST['save'] == gettext('Save') )
+		if ( $_POST['delete'] == gettext('Delete qualifications') or  ( $_POST['save'] == gettext('Save') and $this->checks['result'] == "pass" ) )
 			echo $this->processingResult;
 		else
 			$this->printQualificationsForm();
@@ -195,6 +196,9 @@ class QualificationsForm
 		$smarty->assign('employabilityIdTranslated', array_merge( array(""), array_values($employability) ) );
 
 
+		$smarty->assign('checks', $this->checks);
+
+
 		$smarty->display("Qualifications_form.tpl");
 	}
 
@@ -249,58 +253,69 @@ class QualificationsForm
 
 
 		// Update or insert the values
-		if ( $_SESSION['HasQualifications'] ) // update
+		if ($this->checks['result'] == "pass" )
 		{
-			$this->manager->updateQualifications();
-			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
+			if ( $_SESSION['HasQualifications'] ) // update
+			{
+				$this->manager->updateQualifications();
+				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
 
-			$this->processingResult .= "<center>\n";
-			$this->processingResult .= "<a href='/View_Qualifications.php?EntityId=".$_SESSION[EntityId]."' target='_top'>".gettext("Check qualifications view")."</a>\n";
-			$this->processingResult .= "</center>\n";
+				$this->processingResult .= "<center>\n";
+				$this->processingResult .= "<a href='/View_Qualifications.php?EntityId=".$_SESSION[EntityId]."' target='_top'>".gettext("Check qualifications view")."</a>\n";
+				$this->processingResult .= "</center>\n";
 
-			// $_SESSION variables have been saved previously.
-			// Do not destroy the session, so as to next time the values will be loaded from the $_SESSION variables. 
-		}
-		else // new
-		{
-			$this->manager->addQualifications();
-			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. Your qualifications have been saved.')."<p><p>&nbsp;</p>\n";
+				// $_SESSION variables have been saved previously.
+				// Do not destroy the session, so as to next time the values will be loaded from the $_SESSION variables. 
+			}
+			else // new
+			{
+				$this->manager->addQualifications();
+				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. Your qualifications have been saved.')."<p><p>&nbsp;</p>\n";
 
-			$this->processingResult .= "<center>\n";
-			$this->processingResult .= "<a href='/View_Qualifications.php?EntityId=".$_SESSION[EntityId]."' target='_top'>".gettext("Check qualifications view")."</a>\n";
-			$this->processingResult .= "</center>\n";
+				$this->processingResult .= "<center>\n";
+				$this->processingResult .= "<a href='/View_Qualifications.php?EntityId=".$_SESSION[EntityId]."' target='_top'>".gettext("Check qualifications view")."</a>\n";
+				$this->processingResult .= "</center>\n";
+			}
 		}
 	}
 
 
 	private function checkQualificationsForm()
 	{
+		$this->checks['result'] = "pass"; // By default the checks pass
+
 		// Note that the POST values has been saved on the SESSION before calling this method. We use SESSION instead POST due to they have the isset check done, and we want to avoid to repeat it.  :P
 
 		// Some field can not be empty
-		if ( $_SESSION['ProfessionalExperienceSinceYear']=='' or count($_SESSION['LanguageList'])<1 or
-			$_SESSION['LoginType']=='Person' and
-			  ( $_SESSION['DesiredContractType']=='' or $_SESSION['DesiredWageRank']=='' or $_SESSION['WageRankCurrency']=='' or $_SESSION['WageRankByPeriod']=='' or $_SESSION['CurrentEmployability']=='' )
-		   )
+
+		if ( $_SESSION['ProfessionalExperienceSinceYear']=='' )
 		{
-			$LanguageList = count($_SESSION['LanguageList'])<1 ? '' : count($_SESSION['LanguageList']);
-				
-			$error = "
-				<p>".gettext('Some required fields are empty!. You have to fill them:').":</p>
-				<table>
-				<tr><td><b>".gettext('Professional experience since')."</b>:</td><td> '{$_SESSION['ProfessionalExperienceSinceYear']}'</td></tr>
-				<tr><td><b>".gettext('Languages')."</b>:</td><td> '{$LanguageList}'</td></tr>";
-			if ($_SESSION['LoginType']=='Person')
-				$error .= "
-				<tr><td><b>".gettext('Desired contract type')."</b>:</td><td> '{$_SESSION['DesiredContractType']}'</td></tr>
-				<tr><td><b>".gettext('Desired wage rank')."</b>:</td><td> '{$_SESSION['DesiredWageRank']}'</td></tr>
-				<tr><td><b>".gettext('Wage rank')." (currency)</b>:</td><td> '{$_SESSION['WageRankCurrency']}'</td></tr>
-				<tr><td><b>".gettext('Wage rank')." (by)</b>:</td><td> '{$_SESSION['WageRankByPeriod']}'</td></tr>
-				<tr><td><b>".gettext('Currently you are')."</b>:</td><td> '{$_SESSION['CurrentEmployability']}'</td></tr>
-				</table>\n";
-			else
-				$error .= "</table>\n";
-			throw new Exception($error,true); // The parameter 'true' is used to note that the 'Back' button must be shown.
+			$this->checks['result'] = "fail";
+			$this->checks['ProfessionalExperienceSinceYear'] = gettext('Please fill in here');
+		}
+
+		if ( count($_SESSION['LanguageList'])<1 )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['LanguageList'] = gettext('Please fill in here');
+		}
+
+		if ( $_SESSION['LoginType']=='Person' and $_SESSION['DesiredContractType']=='' )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['DesiredContractType'] = gettext('Please fill in here');
+		}
+
+		if ( $_SESSION['LoginType']=='Person' and  ( $_SESSION['DesiredWageRank']=='' or $_SESSION['WageRankCurrency']=='' or $_SESSION['WageRankByPeriod']=='' ) )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['DesiredWageRank'] = gettext('Please fill in here');
+		}
+
+		if ( $_SESSION['LoginType']=='Person' and $_SESSION['CurrentEmployability']=='' )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['CurrentEmployability'] = gettext('Please fill in here');
 		}
 	}
 

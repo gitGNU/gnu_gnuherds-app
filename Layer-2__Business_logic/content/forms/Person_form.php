@@ -84,7 +84,7 @@ class PersonForm extends EntityForm
 
 	public function printOutput()
 	{
-		if ( $_POST['delete'] == gettext('Delete me from this Association') || $_POST['save'] == gettext('Save') || $_GET['email'] != '' )
+		if ( $_POST['delete'] == gettext('Delete me from this Association') or  ( $_POST['save'] == gettext('Save') and $this->checks['result'] == "pass" )  or $_GET['email'] != '' )
 			echo $this->processingResult;
 		else
 			$this->printPersonForm();
@@ -101,6 +101,8 @@ class PersonForm extends EntityForm
 
 		$smarty->assign('countryTwoLetter', $countryTwoLetter);
 		$smarty->assign('countryNames', $countryNames);
+
+		$smarty->assign('checks', $this->checks);
 
 		$smarty->display("Person_form.tpl");
 	}
@@ -155,57 +157,73 @@ class PersonForm extends EntityForm
 		//XXX $_SESSION['PhotoOrLogo'] = 
 
 		// Update or insert the values
-		if ( $_SESSION['Logged'] == '1' ) // update
+		if ($this->checks['result'] == "pass" )
 		{
-			$this->manager->updateEntity();
-			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p>\n";
+			if ( $_SESSION['Logged'] == '1' ) // update
+			{
+				$this->manager->updateEntity();
+				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p>\n";
 
-			// * $_SESSION variables have been saved previously.
-			// * Do not destroy the session, so as to next time the values will be loaded from the $_SESSION variables. 
+				// * $_SESSION variables have been saved previously.
+				// * Do not destroy the session, so as to next time the values will be loaded from the $_SESSION variables. 
 
-			if ( $changeEmail == true )
-				$this->requestChangeEmail();
-		}
-		else // new
-		{
-			$this->requestRegister();
+				if ( $changeEmail == true )
+					$this->requestChangeEmail();
+			}
+			else // new
+			{
+				$this->requestRegister();
+			}
 		}
 	}
 
 
 	private function checkPersonForm()
 	{
-		// Both Password fields have to be equal. This check has be executed first to avoid to recover the mistaken password, if for example the Email is empty.
+		$this->checks['result'] = "pass"; // By default the checks pass
+
+		// Both Password fields have to be equal
 		if ( $_SESSION['Logged'] == '1' and $_POST['Password'] != $_POST['RetypePassword'] )
 		{
+			$this->checks['result'] = "fail";
+			$this->checks['Password'] = gettext("Password fields differ"); // This message has priority over the below one, about the Password field too.
+
 			$_SESSION['Password'] = ''; // We are not sure what is right 'Password' or 'RetypePassword', so we empty both.
-
-			$error = "<p>".gettext("The Password fields differ:")." '".trim($_POST['Password'])."' '".trim($_POST['RetypePassword'])."'. ".gettext('Please, write it again.')."</p>\n";
-			throw new Exception($error,true);
+		}
+		else
+		{
+			if ( $_SESSION['Logged'] == '1' and ( trim($_POST['Password'])=='' or trim($_POST['RetypePassword'])=='' ) )
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['Password'] = gettext('Please fill in here');
+			}
 		}
 
-		// Some field can not be empty
-		if ( trim($_POST['Email'])=='' or ($_SESSION['Logged'] == '1' and trim($_POST['Password'])=='') or trim($_POST['FirstName'])=='' or trim($_POST['CountryCode'])=='' )
+		if ( trim($_POST['Email'])=='' )
 		{
-			$error = "
-				<p>".gettext('Some required fields are empty!. You have to fill them:')."</p>
-				<table>
-				<tr><td><b>Email</b>:</td><td> '$_POST[Email]'</td></tr>";
-
-			if ( $_SESSION['Logged'] == '1' )
-				$error .= "<tr><td><b>".gettext('Password')."</b>:</td><td> (<i>not showed</i>)</td></tr>";
-
-			$error.="<tr><td><b>".gettext('First name')."</b>:</td><td> '$_POST[FirstName]'</td></tr>
-				<tr><td><b>".gettext('Country')."</b>:</td><td> '$_POST[CountryCode]'</td></tr>
-				</table>\n";
-			throw new Exception($error,true); // The parameter 'true' is used to note that the 'Back' button must be shown.
+			$this->checks['result'] = "fail";
+			$this->checks['Email'] = gettext('Please fill in here');
+		}
+		else
+		{
+			// The Email field have to keep the right syntax
+			if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST["Email"]))
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['Email'] = gettext('Invalid email address');
+			}
 		}
 
-		// The Email field have to keep the right syntax
-		if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST["Email"]))
+		if ( trim($_POST['FirstName'])=='' )
 		{
-			$error = "<p>".gettext('The Email field is not an email address.')."</p>\n";
-			throw new Exception($error,true);
+			$this->checks['result'] = "fail";
+			$this->checks['FirstName'] = gettext('Please fill in here');
+		}
+
+		if ( trim($_POST['CountryCode'])=='' )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['CountryCode'] = gettext('Please fill in here');
 		}
 	}
 

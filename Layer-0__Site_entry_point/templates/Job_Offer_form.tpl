@@ -40,9 +40,15 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
+{if $checks.result eq 'fail' }
+<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td> </tr>
+{/if}
+
 <tr> <td colspan="4" class="footnote">{t escape=no 1='<span class="must">' 2='</span>'}The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional.{/t}</td> </tr>
 
+{if $checks.result neq 'fail' }
 <tr> <td colspan="4" class="footnote">{t}To demand any form reorganization: the addition to the lists, update, deletion of a profile, skill, etc., you can send an email to{/t} {mailto address='form-options@gnuherds.org'}</td> </tr>
+{/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
@@ -65,6 +71,13 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="right"><span class="must">*</span><label for="ExpirationDate" class="raisePopUp" OnMouseOver="popup('{t}The format could be for example{/t} \'dd/mm/yyyy\'.','lightyellow',300);" OnMouseOut="kill()">{t}Expiration date{/t}</label></td> <!-- XXX: It should be checked that the format is one of the accepted formats by de Data Base. 2007-12-12 seems to be accepted too. -->
 <td colspan="3"> <input type="text" name="ExpirationDate" id="ExpirationDate" class="required" value="{$smarty.session.jExpirationDate}"> </td>
 </tr>
+
+{if $checks.jExpirationDate neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.jExpirationDate}</p></td>
+</tr>
+{/if}
 
 <tr valign="top">
 <td align="right"><label for="Closed">{t}The offer is closed{/t}</label></td>
@@ -93,12 +106,26 @@ Suite 225, San Francisco, CA 94107, USA
 <td colspan="3"> <input type="checkbox" name="AllowOrganizationApplications" id="AllowOrganizationApplications" class="required" {if $smarty.session.jAllowOrganizationApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();"><label for="AllowOrganizationApplications">{t}non-profit Organizations{/t}</label></td>
 </tr>
 
+{if $checks.jAllowApplications neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.jAllowApplications}</p></td>
+</tr>
+{/if}
+
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr>
 <td align="right"><span class="must">*</span><label for="Vacancies">{t}Vacancies{/t}</label></td>
 <td colspan="3"> <input type="text" name="Vacancies" id="Vacancies" size="3" maxlength="3" class="required" value="{$smarty.session.jVacancies}"> </td>
 </tr>
+
+{if $checks.jVacancies neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.jVacancies}</p></td>
+</tr>
+{/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
 
@@ -113,6 +140,13 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
+{if $checks.jContractType neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.jContractType}</p></td>
+</tr>
+{/if}
+
 <tr valign="top">
 <td align="right"><span class="must">*</span><label for="WageRank" class="raisePopUp" OnMouseOver="popup('{t}The format has to be:{/t} {t}Minimum{/t}-{t}Optimum{/t}. {t}For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Wage rank{/t}</label></td>
 <td colspan="3">
@@ -126,6 +160,13 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
+{if $checks.jWageRank neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.jWageRank}</p></td>
+</tr>
+{/if}
+
 <tr valign="top" id="EstimatedEffortDivision" style="display:none">
 <td align="right"><span class="must">*</span><label for="EstimatedEffort" class="raisePopUp" OnMouseOver="popup('{t}For example:{/t} 48-56 {t}hours{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Estimated effort{/t}</label></td>
 <td colspan="3">
@@ -135,6 +176,13 @@ Suite 225, San Francisco, CA 94107, USA
 </select>
 </td>
 </tr>
+
+{if $checks.jEstimatedEffort neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.jEstimatedEffort}</p></td>
+</tr>
+{/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
@@ -171,6 +219,11 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 <td><label for="ProfessionalProfileList">{t}Professional profiles{/t}</label><br>
+{if $checks.jProfessionalProfileList neq '' }
+<span class="must">{$checks.jProfessionalProfileList}</span>
+<br>
+{/if}
+
 <select name="ProfessionalProfileList[]" id="ProfessionalProfileList" size="{$professionalProfilesId|@count}" multiple="multiple" class="required" onChange="UpdateVacancyTitle();">
 {html_options values=$professionalProfilesId output=$professionalProfilesName selected=$smarty.session.jProfessionalProfileList}
 </select>
@@ -293,6 +346,11 @@ Suite 225, San Francisco, CA 94107, USA
 {html_options values=$languagesWrittenLevelsId output=$languagesWrittenLevelsName}
 </select>
 
+{if $checks.jLanguageList neq '' }
+<br>
+<span class="must">{$checks.jLanguageList}</span>
+{/if}
+
 </td>
 
 <td align="center">
@@ -377,6 +435,13 @@ Suite 225, San Francisco, CA 94107, USA
 </select>
 </td>
 </tr>
+
+{if $checks.jLocation neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.jLocation}</p></td>
+</tr>
+{/if}
 
 <tr valign="top">
 <td align="right"><label for="AvailableToTravel">{t}Available to travel{/t}</label></td>

@@ -39,9 +39,15 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
+{if $checks.result eq 'fail' }
+<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td> </tr>
+{/if}
+
 <tr> <td colspan="4" class="footnote">{t escape=no 1='<span class="must">' 2='</span>'}The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional.{/t}</td> </tr>
 
+{if $checks.result neq 'fail' }
 <tr> <td colspan="4" class="footnote">{t}To demand any form reorganization: the addition to the lists, update, deletion of a profile, skill, etc., you can send an email to{/t} {mailto address='form-options@gnuherds.org'}</td> </tr>
+{/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
@@ -58,6 +64,13 @@ Suite 225, San Francisco, CA 94107, USA
 {html_select_date prefix="ProfessionalExperienceSince" time="$ProfessionalExperienceSinceYear" start_year="-82" end_year="+0" display_days=false display_months=false year_empty="" year_extra="id=ProfessionalExperienceSinceYear class=required"}
 </td>
 </tr>
+
+{if $checks.ProfessionalExperienceSinceYear neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.ProfessionalExperienceSinceYear}</p></td>
+</tr>
+{/if}
 
 {if $smarty.session.LoginType eq 'Person' }
 <tr valign="top">
@@ -202,6 +215,11 @@ Suite 225, San Francisco, CA 94107, USA
 {html_options values=$languagesWrittenLevelsId output=$languagesWrittenLevelsName}
 </select>
 
+{if $checks.LanguageList neq '' }
+<br>
+<span class="must">{$checks.LanguageList}</span>
+{/if}
+
 </td>
 
 <td align="center">
@@ -312,6 +330,13 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
+{if $checks.DesiredContractType neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.DesiredContractType}</p></td>
+</tr>
+{/if}
+
 <tr valign="top">
 <td align="right"><span class="must">*</span><label for="DesiredWageRank" class="raisePopUp" OnMouseOver="popup('{t}The format has to be: Minimum-Optimum. For example:{/t} 18000-30000','lightyellow',300);" OnMouseOut="kill()">{t}Desired wage rank{/t}</label></td>
 <td colspan="3">
@@ -325,6 +350,13 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
+{if $checks.DesiredWageRank neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.DesiredWageRank}</p></td>
+</tr>
+{/if}
+
 <tr>
 <td align="right"><span class="must">*</span><label for="CurrentEmployability">{t}Currently you are{/t}</label></td>
 <td colspan="3">
@@ -333,6 +365,13 @@ Suite 225, San Francisco, CA 94107, USA
 </select>
 </td>
 </tr>
+
+{if $checks.CurrentEmployability neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.CurrentEmployability}</p></td>
+</tr>
+{/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
 
