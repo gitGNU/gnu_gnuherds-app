@@ -26,12 +26,16 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if $smarty.session.Logged != '1' }
 <tr align="center"> <td colspan="4" align="center" class="mainsection">{t}NEW NONPROFIT ORGANIZATION{/t}</td> </tr>
-<tr> <td colspan="4">&nbsp;</td> </tr>
 {/if}
 
 {if $smarty.session.Logged == '1' }
 <tr align="center"> <td colspan="4" align="center" class="mainsection">{t}UPDATE NONPROFIT ORGANIZATION{/t}</td> </tr>
+{/if}
+
 <tr> <td colspan="4">&nbsp;</td> </tr>
+
+{if $checks.result eq 'fail' }
+<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td> </tr>
 {/if}
 
 <tr> <td colspan="4" class="footnote">{t escape=no 1='<span class="must">' 2='</span>'}The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional.{/t}</td> </tr>
@@ -44,6 +48,14 @@ Suite 225, San Francisco, CA 94107, USA
 {if $smarty.session.WantEmail neq ''}<strong>[</strong>{$smarty.session.WantEmail}<strong>]</strong>{/if}
 </td>
 </tr>
+
+{if $checks.Email neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.Email}</p></td>
+</tr>
+{/if}
+
 {if $smarty.session.Logged eq '1'}
 <tr>
 <td align="right"><span class="must">*</span><label for="Password">{t}Password{/t}</label></td>
@@ -52,6 +64,13 @@ Suite 225, San Francisco, CA 94107, USA
 <tr>
 <td align="right"><span class="must">*</span><label for="RetypePassword">{t}Retype Password{/t}</label></td>
 <td colspan="3"> <input type="password" name="RetypePassword" id="RetypePassword" size="20" maxlength="20" class="required" value="{$smarty.session.Password}"> </td>
+</tr>
+{/if}
+
+{if $checks.Password neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.Password}</p></td>
 </tr>
 {/if}
 
@@ -68,6 +87,13 @@ Suite 225, San Francisco, CA 94107, USA
 	<img src="/images/default/Company_or_non-profit_Organization.png" width="180" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
 {/if}
 </tr>
+
+{if $checks.NonprofitName neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.NonprofitName}</p></td>
+</tr>
+{/if}
 
 <tr valign="top">
 <td align="right"><label for="Website">{t}Web site{/t}</label></td>
@@ -131,6 +157,13 @@ Suite 225, San Francisco, CA 94107, USA
 </select>
 </td>
 </tr>
+
+{if $checks.CountryCode neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.CountryCode}</p></td>
+</tr>
+{/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
