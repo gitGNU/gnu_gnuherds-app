@@ -27,10 +27,6 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if $smarty.session.Logged != '1' }
 <tr align="center"> <td colspan="4" align="center" class="mainsection">{t}NEW PERSON{/t}</td> </tr>
-
-{if $checks.result eq '' }
-<tr> <td colspan="4" class="footnote">{t escape=no 1='<a href="Charter.php#Membership">' 2='</a>'}Read the %1Membership%2 Charter section.{/t}</td> </tr>
-{/if}
 {/if}
 
 {if $smarty.session.Logged == '1' }
@@ -38,6 +34,10 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
+
+{if $smarty.session.Logged != '1' and $checks.result eq '' }
+<tr> <td colspan="4" class="footnote">{t escape=no 1='<a href="Charter.php#Membership">' 2='</a>'}Read the %1Membership%2 Charter section.{/t}</td> </tr>
+{/if}
 
 {if $checks.result eq 'fail' }
 <tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td> </tr>
