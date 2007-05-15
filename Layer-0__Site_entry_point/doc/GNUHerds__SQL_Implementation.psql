@@ -253,7 +253,7 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         E1_StateProvince   varchar(30), -- NOT NULL CHECK (E1_StateProvince <> ''),
 
         E1_PostalCode      varchar(15),
-        E1_LO_Country      char(2) REFERENCES LO_Countries(LO_TwoLetter) NOT NULL,
+        E1_LO_Country      char(2), -- REFERENCES LO_Countries(LO_TwoLetter) NOT NULL,
 
         --------------------------------------------------------------------------
         -- Nationality (Location of birth for Persons, or Location for Companies and non-profit Organizations)
