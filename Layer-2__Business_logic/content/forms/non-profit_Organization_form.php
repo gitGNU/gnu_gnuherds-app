@@ -209,18 +209,6 @@ class NonprofitOrganizationForm extends EntityForm
 				$this->checks['Email'] = gettext('Invalid email address');
 			}
 		}
-
-		if ( trim($_POST['NonprofitName'])=='' )
-		{
-			$this->checks['result'] = "fail";
-			$this->checks['NonprofitName'] = gettext('Please fill in here');
-		}
-
-		if ( trim($_POST['CountryCode'])=='' )
-		{
-			$this->checks['result'] = "fail";
-			$this->checks['CountryCode'] = gettext('Please fill in here');
-		}
 	}
 
 

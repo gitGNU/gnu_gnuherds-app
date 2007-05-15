@@ -213,18 +213,6 @@ class PersonForm extends EntityForm
 				$this->checks['Email'] = gettext('Invalid email address');
 			}
 		}
-
-		if ( trim($_POST['FirstName'])=='' )
-		{
-			$this->checks['result'] = "fail";
-			$this->checks['FirstName'] = gettext('Please fill in here');
-		}
-
-		if ( trim($_POST['CountryCode'])=='' )
-		{
-			$this->checks['result'] = "fail";
-			$this->checks['CountryCode'] = gettext('Please fill in here');
-		}
 	}
 
 
