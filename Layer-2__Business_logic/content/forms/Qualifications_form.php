@@ -261,7 +261,7 @@ class QualificationsForm
 				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
 
 				$this->processingResult .= "<center>\n";
-				$this->processingResult .= "<a href='/View_Qualifications.php?EntityId=".$_SESSION[EntityId]."' target='_top'>".gettext("Check qualifications view")."</a>\n";
+				$this->processingResult .= "<a href='resume?id=".$_SESSION[EntityId]."' target='_top'>".gettext("Check qualifications view")."</a>\n";
 				$this->processingResult .= "</center>\n";
 
 				// $_SESSION variables have been saved previously.
@@ -273,7 +273,7 @@ class QualificationsForm
 				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. Your qualifications have been saved.')."<p><p>&nbsp;</p>\n";
 
 				$this->processingResult .= "<center>\n";
-				$this->processingResult .= "<a href='/View_Qualifications.php?EntityId=".$_SESSION[EntityId]."' target='_top'>".gettext("Check qualifications view")."</a>\n";
+				$this->processingResult .= "<a href='resume?id=".$_SESSION[EntityId]."' target='_top'>".gettext("Check qualifications view")."</a>\n";
 				$this->processingResult .= "</center>\n";
 			}
 		}

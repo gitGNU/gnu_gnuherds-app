@@ -366,7 +366,7 @@ class JobOfferForm
 				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
 
 				$this->processingResult .= "<center>\n";
-				$this->processingResult .= "<a href='/View_Job_Offer.php?JobOfferId=".$_GET[JobOfferId]."' target='_top'>".gettext("Check job offer view")."</a>\n";
+				$this->processingResult .= "<a href='offers?id=".$_GET[JobOfferId]."' target='_top'>".gettext("Check job offer view")."</a>\n";
 				$this->processingResult .= "</center>\n";
 
 				// $_SESSION variables have been saved previously.
@@ -378,7 +378,7 @@ class JobOfferForm
 				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. Your job offer have been saved.')."<p><p>&nbsp;</p>\n";
 
 				$this->processingResult .= "<center>\n";
-				$this->processingResult .= "<a href='/View_Job_Offer.php?JobOfferId=".$J1_Id."' target='_top'>".gettext("Check job offer view")."</a>\n";
+				$this->processingResult .= "<a href='offers?id=".$J1_Id."' target='_top'>".gettext("Check job offer view")."</a>\n";
 				$this->processingResult .= "</center>\n";
 			}
 		}

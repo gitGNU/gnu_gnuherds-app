@@ -70,7 +70,7 @@ class ViewJobOfferForm
 						}
 						else
 						{
-							$error = "<p>".gettext("To be able to subscribe your application, you have to fill the Qualification form.")."<br>".gettext("See the").' <a href="/FAQ.php#How_to_subscribe_to_a_job_offer?">'.gettext("FAQ")."</a>.</p>";
+							$error = "<p>".gettext("To be able to subscribe your application, you have to fill the Qualification form.")."<br>".gettext("See the").' <a href="faq#How_to_subscribe_to_a_job_offer?">'.gettext("FAQ")."</a>.</p>";
 							throw new Exception($error,false);
 						}
 					}
@@ -83,7 +83,7 @@ class ViewJobOfferForm
 			}
 			else
 			{
-				$error = "<p>".gettext("To be able to subscribe your application, you have to log in first.")."<br>".gettext("See the").' <a href="/FAQ.php#How_to_subscribe_to_a_job_offer?">'.gettext("FAQ")."</a>.</p>";
+				$error = "<p>".gettext("To be able to subscribe your application, you have to log in first.")."<br>".gettext("See the").' <a href="faq#How_to_subscribe_to_a_job_offer?">'.gettext("FAQ")."</a>.</p>";
 				throw new Exception($error,false);
 			}
 		}

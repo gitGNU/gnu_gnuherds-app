@@ -25,11 +25,11 @@ class DeletePhotoOrLogo
 	private function goBack()
 	{
 		if ( $_SESSION['LoginType'] == 'Person' )
-			$request_uri = "Person.php"; // The request come from that URI
+			$request_uri = "person"; // The request come from that URI
 		elseif ( $_SESSION['LoginType'] == 'Company' )
-			$request_uri = "Company.php";
+			$request_uri = "company";
 		elseif ( $_SESSION['LoginType'] == 'non-profit Organization' )
-			$request_uri = "non-profit_Organization.php";
+			$request_uri = "nonprofit";
 
 		header("Location: https://$_SERVER[HTTP_HOST]/$request_uri");
 	}
