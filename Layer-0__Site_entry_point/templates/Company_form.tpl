@@ -77,8 +77,8 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4">&nbsp;</td> </tr>
 <tr> <td colspan="4" class="subsection">{t}COMPANY{/t}</td> </tr>
 <tr>
-<td align="right"><span class="must">*</span><label for="CompanyName">{t}Name{/t}</label></td>
-<td> <input type="text" name="CompanyName" id="CompanyName" size="20" maxlength="30" class="required" value="{$smarty.session.CompanyName}"> </td>
+<td align="right"><label for="CompanyName">{t}Name{/t}</label></td>
+<td> <input type="text" name="CompanyName" id="CompanyName" size="20" maxlength="30" class="notRequired" value="{$smarty.session.CompanyName}"> </td>
 <th rowspan="5" width="100%">
 <th rowspan="5">
 {if $smarty.session.ViewPhotoOrLogo eq 'true' }
@@ -87,13 +87,6 @@ Suite 225, San Francisco, CA 94107, USA
 	<img src="/images/default/Company_or_non-profit_Organization.png" width="180" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
 {/if}
 </tr>
-
-{if $checks.CompanyName neq '' }
-<tr>
-<td></td>
-<td colspan="3"><p class="must">{$checks.CompanyName}</p></td>
-</tr>
-{/if}
 
 <tr valign="top">
 <td align="right"><label for="Website">{t}Web site{/t}</label></td>
@@ -150,20 +143,13 @@ Suite 225, San Francisco, CA 94107, USA
 <td colspan="3"> <input type="text" name="PostalCode" id="PostalCode" size="15" maxlength="15" class="notRequired" value="{$smarty.session.PostalCode}"> </td>
 </tr>
 <tr>
-<td align="right"><span class="must">*</span><label for="CountryCode">{t}Country{/t}</label></td>
+<td align="right"><label for="CountryCode">{t}Country{/t}</label></td>
 <td colspan="3">
-<select name="CountryCode" id="CountryCode" class="required">
+<select name="CountryCode" id="CountryCode" class="notRequired">
 {html_options values=$countryTwoLetter output=$countryNames selected=$smarty.session.CountryCode}
 </select>
 </td>
 </tr>
-
-{if $checks.CountryCode neq '' }
-<tr>
-<td></td>
-<td colspan="3"><p class="must">{$checks.CountryCode}</p></td>
-</tr>
-{/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
