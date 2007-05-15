@@ -66,7 +66,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="Charter.php">'
+	  1='<a href="charter">'
 	  2='</a>'
 	}Read the current draft of %1GNU Herds' Charter%2.{/t}
 	</p>

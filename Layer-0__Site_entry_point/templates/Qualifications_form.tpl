@@ -25,7 +25,7 @@ Suite 225, San Francisco, CA 94107, USA
 <script type="text/javascript" src="scripts/popup.js"></script>
 
 
-<form name="qualificationsForm" method="post" action="Qualifications.php">
+<form name="qualificationsForm" method="post" action="resume">
 
 <table align="center">
 
@@ -429,7 +429,7 @@ Reference: http://es.php.net/types.array
 <tr align="center">
 <td colspan="4" align="center">
 <br>
-<a href="View_Qualifications.php?EntityId={$smarty.session.EntityId}">{t}Check qualifications view{/t}</a>
+<a href="resume?id={$smarty.session.EntityId}">{t}Check qualifications view{/t}</a>
 </td>
 </tr>
 {/if}

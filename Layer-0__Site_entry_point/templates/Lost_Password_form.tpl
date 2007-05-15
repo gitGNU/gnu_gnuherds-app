@@ -21,7 +21,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <p>{t}Write your email and click the Send button.{/t}</p>
 
-<form name="formLogin" method="post" action="Lost_Password.php">
+<form name="formLogin" method="post" action="password">
 
 <p>
 &nbsp; &nbsp; &nbsp; &nbsp; <label for="Email">{t}Email{/t}</label>

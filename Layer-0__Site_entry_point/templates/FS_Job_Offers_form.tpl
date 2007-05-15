@@ -40,7 +40,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr valign="top">
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="View_Job_Offer.php?JobOfferId={$Id}">
+<a href="offers?id={$Id}">
 {$VacancyTitle[$i]}
 </a>
 </td>

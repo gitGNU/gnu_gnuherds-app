@@ -20,16 +20,16 @@ Suite 225, San Francisco, CA 94107, USA
 *}
 
 <p>{t escape='no'
-  1='<a href="Charter.php#Committee">'
-  2='<a href="Charter.php#Aims">'
-  3='<a href="GNU_Herds_Hackers_Guide.php#Current_work_team">'
+  1='<a href="charter#Committee">'
+  2='<a href="charter#Aims">'
+  3='<a href="development#Current_work_team">'
   4='</a>'
-  5='<a href="FAQ.php#Why_another_Job_Site?">'
+  5='<a href="faq#Why_another_Job_Site?">'
 }GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors.{/t}</p>
 <p>{t escape='no'
-  1='<a href="FAQ.php#Why_another_Job_Site?">'
+  1='<a href="faq#Why_another_Job_Site?">'
   2='</a>'
-  3='<a href="FS_Business_Networks.php">'
+  3='<a href="business_models">'
 }The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:{/t}</p>
 <ul>
   <li>{t}Controlled by its own users{/t}</li>
@@ -44,7 +44,7 @@ Suite 225, San Francisco, CA 94107, USA
 </ul>
 <p>&nbsp;</p>
 <p>{t escape='no'
-  1='<a href="GNU_Herds_Hackers_Guide.php#Current_work_team">'
+  1='<a href="development#Current_work_team">'
   2='</a>'
 }This project has been put together by a small %1team%2 of members of the Free Software community.{/t}</p>
 <ul>

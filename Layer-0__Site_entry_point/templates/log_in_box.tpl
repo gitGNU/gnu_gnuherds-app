@@ -63,11 +63,11 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr>
 <td align="center" class="login">
-<a href="Lost_Password.php">{'Lost password?'|gettext|strip:'&nbsp;'}</a><br>
+<a href="password">{'Lost password?'|gettext|strip:'&nbsp;'}</a><br>
 <br>
-<a href="Person.php">{'Register person'|gettext}</a><br>
-<a href="Company.php">{'Register company'|gettext}</a><br>
-<a href="non-profit_Organization.php">{'Register non-profit'|gettext}</a>
+<a href="person">{'Register person'|gettext}</a><br>
+<a href="company">{'Register company'|gettext}</a><br>
+<a href="nonprofit">{'Register non-profit'|gettext}</a>
 </td>
 </tr>
 </table>

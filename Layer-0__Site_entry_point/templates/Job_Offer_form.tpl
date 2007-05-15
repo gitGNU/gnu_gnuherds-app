@@ -28,7 +28,7 @@ Suite 225, San Francisco, CA 94107, USA
 <script type="text/javascript" src="scripts/utils.js"></script>
 
 
-<form name="jobOfferForm" method="post" action="/Job_Offer.php?JobOfferId={$smarty.get.JobOfferId}">
+<form name="jobOfferForm" method="post" action="offers?action=edit&id={$smarty.get.JobOfferId}">
 
 <table align="center">
 
@@ -242,7 +242,7 @@ Suite 225, San Francisco, CA 94107, USA
   1='<br> <br>'
   2='<strong>'
   3='</strong>'
-}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</label><br>(<a href="javascript:openPopUp('Skills','/Skills_Guide.php?heading&amp;menu&amp;loging_box',670,780);">{t}guide{/t}</a>) &nbsp; </td>
+}Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3.{/t}','lightyellow',300);" OnMouseOut="kill()">{t}Skills{/t}</label><br>(<a href="javascript:openPopUp('Skills','skills',670,780);">{t}guide{/t}</a>) &nbsp; </td>
 <td colspan="3">
 
 <table cellpadding="0" cellspacing="0" width="100%">
@@ -462,7 +462,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr align="center">
 <td colspan="4" align="center">
 <br>
-<a href="View_Job_Offer.php?JobOfferId={$smarty.get.JobOfferId}">{t}Check job offer view{/t}</a>
+<a href="offers?id={$smarty.get.JobOfferId}">{t}Check job offer view{/t}</a>
 </td>
 </tr>
 {/if}

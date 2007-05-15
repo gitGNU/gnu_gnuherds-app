@@ -54,7 +54,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="/Job_Offer.php?JobOfferId={$Id}">{$smarty.session.M_VacancyTitle[$i]}</a>
+<a href="offers?action=edit&id={$Id}">{$smarty.session.M_VacancyTitle[$i]}</a>
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
@@ -80,7 +80,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $ReceivedMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
+<a href="applications?action=edit&id={$Id}">
 {$ReceivedMeter[$i]}
 </a>
 {/if}
@@ -90,7 +90,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $InProcessMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
+<a href="applications?action=edit&id={$Id}">
 {$InProcessMeter[$i]}
 </a>
 {/if}
@@ -100,7 +100,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $RuledOutMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
+<a href="applications?action=edit&id={$Id}">
 {$RuledOutMeter[$i]}
 </a>
 {/if}
@@ -110,7 +110,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $FinalistMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
+<a href="applications?action=edit&id={$Id}">
 {$FinalistMeter[$i]}
 </a>
 {/if}
@@ -120,7 +120,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $SelectedMeter[$i] eq '0'}
 {t}none{/t}
 {else}
-<a href="/Manage_Job_Offer_Applications.php?JobOfferId={$Id}">
+<a href="applications?action=edit&id={$Id}">
 {$SelectedMeter[$i]}
 </a>
 {/if}
@@ -148,7 +148,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {/if}
 
-<form name="newJobOffersForm" method="post" action="Job_Offer.php">
+<form name="newJobOffersForm" method="post" action="offers?action=edit&id=">
 <input type="submit" name="new" value="{t}New offer{/t}">
 </form>
 

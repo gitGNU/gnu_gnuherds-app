@@ -18,14 +18,14 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-<form name="qualificationsForm" method="post" action="Qualifications.php">
+<form name="qualificationsForm" method="post" action="resume">
 
 <table align="center">
 
 <tr valign="top">
 <td>
 {if $smarty.session.ViewPhotoOrLogo eq 'true' }
-		<img src="/View_Photo_or_Logo.php?Data=Qualifications&EntityId={$smarty.get.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
+		<img src="photo?acl=resume&id={$smarty.get.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
 {else}
 	{if $smarty.session.ViewEntityType eq 'Person' }
 		<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">

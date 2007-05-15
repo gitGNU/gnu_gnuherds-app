@@ -43,7 +43,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 <strong>{t}{$entityType[$i]}{/t}</strong>
 
-<a href="/View_Qualifications.php?EntityId={$Id}">
+<a href="resume?id={$Id}">
 {if $firstName[$i]}{$lastName[$i]} {$middleName[$i]}{if $lastName[$i] or $middleName[$i]},{/if} {$firstName[$i]}{/if}
 {if $companyName[$i]}{$companyName[$i]}{/if}
 {if $organizationName[$i]}{$organizationName[$i]}{/if}

@@ -50,7 +50,7 @@ Suite 225, San Francisco, CA 94107, USA
 		<li> {t escape='no'
 		  1='<a href="/doc/GNUHerds__ER__Logical-model.png">'
 		  2='</a>'
-		  3='<a href="Charter.php#Committee">'
+		  3='<a href="charter#Committee">'
 		  4='<a href="http://www.gnu.org/philosophy/free-sw.html">'
 		}Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users.{/t}
 
@@ -63,7 +63,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="Charter.php#Aims">'
+	  1='<a href="charter#Aims">'
 	  2='</a>'
 	}All this taking into account that: "The %1aims%2 of the Association shall be to encourage the professional development of Free Software contributors."{/t}
 	</p>
@@ -77,14 +77,14 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<ul>
 		<li> {t escape='no'
-		  1='<a href="Person.php">'
-		  2='<a href="Company.php">'
-		  3='<a href="non-profit_Organization.php">'
+		  1='<a href="person">'
+		  2='<a href="company">'
+		  3='<a href="nonprofit">'
 		  4='</a>'
 		}Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4.{/t}
 
 		<li> {t escape='no'
-		  1='<a href="Qualifications.php">'
+		  1='<a href="resume">'
 		  2='</a>'
 		}Fill the %1Qualifications%2 form.{/t}
 

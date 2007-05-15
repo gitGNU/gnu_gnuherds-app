@@ -19,7 +19,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <h3>{t}Alerts{/t}</h3>
 
-<form name="formLogin" method="post" action="Alerts.php">
+<form name="formLogin" method="post" action="settings">
 
 <p>{t}Alerts via email on:{/t}</p>
 

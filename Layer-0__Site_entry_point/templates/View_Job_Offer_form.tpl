@@ -33,7 +33,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr valign="top">
 <td>
 {if $smarty.session.ViewPhotoOrLogo eq 'true' }
-		<img src="/View_Photo_or_Logo.php?Data=JobOffer&EntityId={$smarty.session.ViewEntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
+		<img src="photo?acl=offers&id={$smarty.session.ViewEntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
 {else}
 	{if $smarty.session.ViewEntityType eq 'Person' }
 		<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
@@ -390,7 +390,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 		<tr align="center">
 		<td colspan="4" align="center">
-		<form name="subscriteJobOfferForm" method="post" action="/View_Job_Offer.php?JobOfferId={$smarty.get.JobOfferId}">
+		<form name="subscriteJobOfferForm" method="post" action="offers?id={$smarty.get.JobOfferId}">
 		<input type="submit" name="subscribe" value="{t}Subscribe to this job offer{/t}">
 		</form>
 		</td>
