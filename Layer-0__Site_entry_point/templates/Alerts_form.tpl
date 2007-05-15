@@ -17,7 +17,7 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-<h3>{t}Alerts{/t}</h3>
+<h3>{t}Settings{/t}</h3>
 
 <form name="formLogin" method="post" action="settings">
 
