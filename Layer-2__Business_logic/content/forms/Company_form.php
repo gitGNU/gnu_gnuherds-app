@@ -209,18 +209,6 @@ class CompanyForm extends EntityForm
 				$this->checks['Email'] = gettext('Invalid email address');
 			}
 		}
-
-		if ( trim($_POST['CompanyName'])=='' )
-		{
-			$this->checks['result'] = "fail";
-			$this->checks['CompanyName'] = gettext('Please fill in here');
-		}
-
-		if ( trim($_POST['CountryCode'])=='' )
-		{
-			$this->checks['result'] = "fail";
-			$this->checks['CountryCode'] = gettext('Please fill in here');
-		}
 	}
 
 
