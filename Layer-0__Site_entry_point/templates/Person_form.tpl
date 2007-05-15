@@ -21,7 +21,7 @@ Suite 225, San Francisco, CA 94107, USA
 <script type="text/javascript" src="scripts/popup.js"></script>
 
 
-<form enctype="multipart/form-data" name="personForm" method="post" action="Person.php">
+<form enctype="multipart/form-data" name="personForm" method="post" action="person">
 
 <table align="center">
 
@@ -91,7 +91,7 @@ Suite 225, San Francisco, CA 94107, USA
 <th rowspan="5" width="100%">
 <th rowspan="5">
 {if $smarty.session.ViewPhotoOrLogo eq 'true' }
-	<img src="/View_Photo_or_Logo.php?Data=Me&EntityId={$smarty.session.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
+	<img src="photo?acl=me&id={$smarty.session.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
 {else}
 	<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
 {/if}
@@ -124,7 +124,7 @@ Suite 225, San Francisco, CA 94107, USA
 <th colspan="3">
 <td align="center">
 {if $smarty.session.ViewPhotoOrLogo eq 'true' }
-	<a href="Delete_Photo_or_Logo.php"><strong>{t}Delete{/t}</strong></a>
+	<a href="photo?action=delete"><strong>{t}Delete{/t}</strong></a>
 {/if}
 </td>
 </tr>
