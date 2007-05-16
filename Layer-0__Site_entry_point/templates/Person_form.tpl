@@ -26,7 +26,7 @@ Suite 225, San Francisco, CA 94107, USA
 <table align="center">
 
 {if $smarty.session.Logged != '1' }
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}NEW PERSON{/t}</td> </tr>
+<tr align="center"> <td colspan="4" align="center"><h3>{t}Register person{/t}</h3></td> </tr>
 {/if}
 
 {if $smarty.session.Logged == '1' }
@@ -35,7 +35,9 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-{if $smarty.session.Logged != '1' and $checks.result eq '' }
+{if $smarty.session.Logged == '1' }
+
+{if $checks.result eq '' }
 <tr> <td colspan="4" class="footnote">{t escape=no 1='<a href="charter#Membership">' 2='</a>'}Read the %1Membership%2 Charter section.{/t}</td> </tr>
 {/if}
 
@@ -48,6 +50,8 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr> <td colspan="4" class="subsection">{t}ACCOUNT IDENTIFICATION{/t}</td> </tr>
+
+{/if}
 
 <tr valign="top">
 <td align="right"><span class="must">*</span><label for="Email">Email</label></td>
@@ -64,6 +68,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 {if $smarty.session.Logged eq '1'}
+
 <tr>
 <td align="right"><span class="must">*</span><label for="Password">{t}Password{/t}</label></td>
 <td colspan="3"> <input type="password" name="Password" id="Password" size="20" maxlength="20" class="required" value="{$smarty.session.Password}"> </td>
@@ -72,7 +77,6 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="right"><span class="must">*</span><label for="RetypePassword">{t}Retype Password{/t}</label></td>
 <td colspan="3"> <input type="password" name="RetypePassword" id="RetypePassword" size="20" maxlength="20" class="required" value="{$smarty.session.Password}"> </td>
 </tr>
-{/if}
 
 {if $checks.Password neq '' }
 <tr>
@@ -198,6 +202,8 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="right"><label for="Website">{t}Web site{/t}</label></td>
 <td colspan="3"> <input type="text" name="Website" id="Website" size="60" maxlength="255" class="notRequired" value="{$smarty.session.Website}"> </td>
 </tr>
+
+{/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
 <tr> <td colspan="4">&nbsp;</td> </tr> 

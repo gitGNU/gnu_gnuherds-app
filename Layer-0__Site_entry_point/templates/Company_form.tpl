@@ -25,7 +25,7 @@ Suite 225, San Francisco, CA 94107, USA
 <table align="center">
 
 {if $smarty.session.Logged != '1' }
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}NEW COMPANY{/t}</td> </tr>
+<tr align="center"> <td colspan="4" align="center"><h3>{t}Register company{/t}</h3></td> </tr>
 {/if}
 
 {if $smarty.session.Logged == '1' }
@@ -33,6 +33,8 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
+
+{if $smarty.session.Logged == '1' }
 
 {if $checks.result eq 'fail' }
 <tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td> </tr>
@@ -42,6 +44,9 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 <tr> <td colspan="4" class="subsection">{t}ACCOUNT IDENTIFICATION{/t}</td> </tr>
+
+{/if}
+
 <tr valign="top">
 <td align="right"><span class="must">*</span><label for="Email">Email</label></td>
 <td colspan="3"> <input type="text" name="Email" id="Email" size="40" maxlength="60" class="required" value="{$smarty.session.Email}">
@@ -57,6 +62,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 {if $smarty.session.Logged eq '1'}
+
 <tr>
 <td align="right"><span class="must">*</span><label for="Password">{t}Password{/t}</label></td>
 <td colspan="3"> <input type="password" name="Password" id="Password" size="20" maxlength="20" class="required" value="{$smarty.session.Password}"> </td>
@@ -65,7 +71,6 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="right"><span class="must">*</span><label for="RetypePassword">{t}Retype Password{/t}</label></td>
 <td colspan="3"> <input type="password" name="RetypePassword" id="RetypePassword" size="20" maxlength="20" class="required" value="{$smarty.session.Password}"> </td>
 </tr>
-{/if}
 
 {if $checks.Password neq '' }
 <tr>
@@ -167,6 +172,8 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="right"><label for="MobilePhone">{t}Mobile phone{/t}</label></td>
 <td colspan="3"> <input type="text" name="MobilePhone" id="MobilePhone" size="30" maxlength="30" class="notRequired" value="{$smarty.session.MobilePhone}"> </td>
 </tr>
+
+{/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
