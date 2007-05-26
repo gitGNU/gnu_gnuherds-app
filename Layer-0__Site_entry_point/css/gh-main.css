@@ -489,6 +489,7 @@ textarea
 .required
 {
 	background-color: #fff5e3;
+	border: 2px inset #6f5543;
 }
 
 .notRequired
