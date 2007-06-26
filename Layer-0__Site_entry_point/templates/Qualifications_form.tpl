@@ -276,7 +276,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr valign="top">
-<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}URIs which prove your contritution to FS projects. For example: CVS web reference, email with patch or advices, etc.{/t}','lightyellow',300);" OnMouseOut="kill()">{'Contributions to FS projects'|gettext|strip:'&nbsp;'}</label><br> </td>
+<td align="right"><label class="raisePopUp" OnMouseOver="popup('{t}URIs which prove your contritutions to FS projects. That is to say, links to web pages: CVS web, emails which contribute patches or advices accessible from web mail listing archives, etc.{/t}','lightyellow',300);" OnMouseOut="kill()">{'Contributions to FS projects'|gettext|strip:'&nbsp;'}</label><br> </td>
 <td colspan="3"> 
 
 <table cellpadding="0" cellspacing="0">
