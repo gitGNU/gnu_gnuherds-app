@@ -927,7 +927,7 @@ msgid "Street"
 msgstr "Rue"
 
 msgid "Suite"
-msgstr "Interno"
+msgstr "Etage"
 
 msgid "City"
 msgstr "Ville"
