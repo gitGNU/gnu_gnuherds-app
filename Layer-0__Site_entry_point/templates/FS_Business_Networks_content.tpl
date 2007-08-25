@@ -21,9 +21,15 @@ Suite 225, San Francisco, CA 94107, USA
 <h3>{t}FS Business Networks{/t}</h3>
 
 <p>
-{t}These are the networks, or ways to set up one, which we know about:{/t}
+{t}These are the 'networks', or ways to set up one, which we know about:{/t}
 </p>
 <ul>
+
+	<li>
+		<p>
+		<a href="http://blue-gnu.biz/node/99">AdaCore</a> ({t}English{/t})
+		</p>
+	</li>
 
 	<li>
 		<p>
