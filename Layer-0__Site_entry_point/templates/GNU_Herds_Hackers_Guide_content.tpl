@@ -369,19 +369,18 @@ Suite 225, San Francisco, CA 94107, USA
 	<br>
 	</p>
 	<table>
-	<tr> <td><b>Antenore</b> <td>Localization architecture Adviser, Auditor, Italian Translator, etc.
+	<tr> <td><b>Antenore</b> <td>Localization architecture Adviser, Auditor, initial Italian Translator, etc.
 	<tr> <td><b>Bill</b>     <td>System administrator, architecture Adviser, etc.
 	<tr> <td><b>Charles</b>  <td>Auditor, Quality Assurance, etc.
 	<tr> <td><b>Davi</b>     <td>Web developer, CVS, Spanish Translator, etc.
-	<tr> <td><b>David</b>    <td>Web developer, Italian Translator.
+	<tr> <td><b>David</b>    <td>Web developer, main Italian Translator.
 	<tr> <td><b>Duarte</b>   <td>Portuguese Translator.
-	<tr> <td><b>Fatima</b>   <td>Functional Auditor.
-	<tr> <td><b>Gabriel</b>  <td>Data base Adviser.
+	<tr> <td><b>Fatima</b>   <td>Quality Assurance and Functional Auditor.
+	<tr> <td><b>Gabriel</b>  <td>Data Base arquitecture Adviser.
 	<tr> <td><b>Jonas</b>    <td>GNU Business Network.
 	<tr> <td><b>Jose</b>     <td>Architecture Adviser.
 	<tr> <td><b>Klaus</b>    <td>Web developer, Code Auditor.
-	<tr> <td><b>Lars</b>     <td>Romanian Translator and maybe some coding.
-	<tr> <td><b>Martin</b>   <td>Auditor and Quality Assurance; he evaluates the project as a whole. Public Relations.
+	<tr> <td><b>Martin</b>   <td>Auditor and Quality Assurance. Public Relations.
 	<tr> <td><b>Neal</b>     <td>Initial proposal, project Chapter, Public Relations, etc.
 	<tr> <td><b>RMS</b>      <td>Ethics Officer; he evaluates the project as a whole.
 	<tr> <td><b>Victor</b>   <td>Web developer.
