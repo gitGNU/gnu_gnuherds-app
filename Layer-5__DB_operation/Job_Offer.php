@@ -593,6 +593,15 @@ class JobOffer
 
 	// methods to check the Access Control List
 
+	// Check if the request comes from the JobOffer owner
+	public function isOwner($E1_Id)
+	{
+		if ( $_SESSION['EntityId'] == $E1_Id )  // There is not need to query the Data Base  :-)
+			return true;
+		else
+			return false;
+	}
+
 	// Check if the E1_Id entity has some job offer published
 	public function hasJobOfferPublished($E1_Id)
 	{
