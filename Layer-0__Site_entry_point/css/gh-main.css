@@ -274,15 +274,6 @@ label.raisePopUp
 	color: #808000;
 }
 
-#pup
-{
-	position: absolute;
-	visibility: hidden;
-	z-index: 200;
-	width: 130px;
-	border: #e7e6ce;
-}
-
 select
 {
 	font-size: 12px;
@@ -291,6 +282,13 @@ select
 input
 {
 	font-size: 12px;
+}
+
+button
+{
+	font-size: 11px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 textarea
@@ -406,15 +404,6 @@ textarea
 	text-decoration: none
 }
 
-.popup
-{
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	font-weight: normal;
-	color: #000000;
-	text-decoration: none
-}
-
 .modification
 {
 	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
@@ -522,3 +511,7 @@ textarea
 	background-color: #dbffd9;
 }
 
+.edit
+{
+	background-color: #f9f8f5;
+}
