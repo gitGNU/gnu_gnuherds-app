@@ -236,10 +236,10 @@ Suite 225, San Francisco, CA 94107, USA
 {/foreach}
 </td>
 
-{if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=skills" title="{t}Edit section{/t}: {t}Skills{/t}">{t}edit{/t}</a></td>
 {/if}
 
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=skills" title="{t}Edit section{/t}: {t}Skills{/t}">{t}edit{/t}</a></td>
 {/if}
 
 </tr>
