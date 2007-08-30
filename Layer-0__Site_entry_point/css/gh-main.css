@@ -23,7 +23,6 @@ Suite 225, San Francisco, CA 94107, USA
 body
 {
 	color: #000000;
-	/* background: #999999; */
 	margin-top: 0;
 	margin-left: 0;
 	margin-right: 0;
@@ -42,104 +41,6 @@ a:visited
 a:active
 {
 	color: #a00000;
-}
-
-
-/* miscellaneous settings */
-
-.mainheading
-{
-	font-family: Arial, Helvetica, Georgia, sans-serif;
-	font-weight: bold;
-	font-size: 38px;
-	padding-left: 5px;
-	text-align: left;
-	text-decoration: none;
-	color: #008080;
-}
-
-.mainsubheading
-{
-	font-size: 14px;
-}
-
-.maincontent
-{
-	margin-left: 25px;
-	margin-right: 25px;
-}
-
-.news
-{
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
-.heading
-{
-	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 16px;
-	text-align: left;
-	padding-left: 5px;
-	text-decoration: none;
-	color: #008080;
-}
-
-.body
-{
-	text-align: justify;
-	padding-left: 5px;
-	padding-right: 5px;
-	font-size: 14px;
-	font-family: Arial, Helvetica, Georgia, sans-serif;
-}
-
-.linksheading
-{
-	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 14px;
-	text-align: center;
-	text-decoration: none;
-	color: #008080;
-}
-
-.linksbody
-{
-	text-align: center;
-	font-size: 14px;
-	font-family: Arial, Helvetica, Georgia, sans-serif;
-}
-
-a.linksheading
-{
-	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 14px;
-	text-align: center;
-	text-decoration: none;
-	color: #008080;
-}
-
-a.linksbody
-{
-	text-decoration: none;
-}
-
-a.html2
-{
-	font-size: 12px;
-	font-family: Arial, Helvetica, Georgia, sans-serif;
-	color: #000080;
-	text-decoration: underline;
-}
-
-p.credits
-{
-	font-size: 12px;
-	font-family: Arial, Helvetica, Georgia, sans-serif;
-	text-align: center;
 }
 
 
@@ -235,15 +136,6 @@ pre
 	padding-right: 5px;
 }
 
-blockquote
-{
-	text-align: justify;
-	font-size: 14px;
-	font-family: Arial, Helvetica, Georgia, sans-serif;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
 
 /* Setting to the forms */
 
@@ -289,11 +181,6 @@ button
 	font-size: 11px;
 	padding-left: 0px;
 	padding-right: 0px;
-}
-
-textarea
-{
-	font-size: 12px;
 }
 
 .mainsection
@@ -415,11 +302,6 @@ textarea
 	color: #00aa00;
 }
 
-.translate
-{
-	background-color: #ecf2fd;
-}
-
 
 .tdTitle
 {	
@@ -515,3 +397,4 @@ textarea
 {
 	background-color: #f9f8f5;
 }
+
