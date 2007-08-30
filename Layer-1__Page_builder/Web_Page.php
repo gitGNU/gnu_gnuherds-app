@@ -57,7 +57,7 @@ class WebPage
 		}
 		catch (Exception $e) {
 			$this->contentExceptionOutput = $e->getMessage();
-			$this->contentExceptionCode = $e->getCode(); // getCode() is used to note if the 'Back' button must be shown or not.
+			$this->contentExceptionCode = $e->getCode();
 		}
 
 		// logForm: Create and process the LogForm object, which depend on the Language and the content form processing.
