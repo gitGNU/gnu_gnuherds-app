@@ -21,29 +21,27 @@ Suite 225, San Francisco, CA 94107, USA
 
 <table width="100%" cellpadding="0" cellspacing="0" rules="none" border="0">
 <tr valign="top">
-<td width="160" style="background: url({$webpage->theme->headBackgroundImage})">
+
+<td style="background: {$webpage->theme->logoBGcolor}">
 {if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}
 <a href="/">
 {/if}
-<img src="/images/gnus_90.jpg" align="left" alt="" border="0" hspace="0" vspace="0">
+<img src="/images/logo.png" align="left" alt="" border="0" hspace="0" vspace="0">
 {if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}
 </a>
 {/if}
 </td>
 
-<td style="background: url({$webpage->theme->headBackgroundImage})">
+<td width="10%" style="background: {$webpage->theme->headBGcolor}"></td>
 
-<table>
-<tr valign="top">
-
-<td>
-<h1>GNU Herds</h1>
-<h2>{$webpage->theme->headSubtitle|gettext|strip:'&nbsp;'}</h2>
+<td style="background: {$webpage->theme->headBGcolor}">
+<p><br></p>
+<h1>{$webpage->theme->headSubtitle|gettext|strip:'&nbsp;'}</h1>
 </td>
 
-<td width="100%"></td>
+<td width="100%" style="background: {$webpage->theme->headBGcolor}"></td>
 
-<td>
+<td style="background: {$webpage->theme->headBGcolor}">
 {assign var='cleanURI' value=$smarty.server.REQUEST_URI|regex_replace:"/.language=.._../":""}
 
 {if strpos($cleanURI,"?") !== false}
@@ -52,27 +50,25 @@ Suite 225, San Francisco, CA 94107, USA
 	{assign var='startParameter' value='?'}
 {/if}
 
-{if $smarty.session.Language eq 'en_US'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=en_US" lang="en_US" hreflang="en_US" title="{t}Change language{/t}">{/if}English{if $smarty.session.Language eq 'en_US'}</strong>{else}</a>{/if},
+<span class="heading">
+{if $smarty.session.Language eq 'en_US'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=en_US" lang="en_US" hreflang="en_US" title="{t}Change language{/t}">{/if}<span class="heading">English</span>{if $smarty.session.Language eq 'en_US'}</strong>{else}</a>{/if},
 
-{if $smarty.session.Language eq 'es_ES'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=es_ES" lang="es_ES" hreflang="es_ES" title="{t}Change language{/t}">{/if}Español{if $smarty.session.Language eq 'es_ES'}</strong>{else}</a>{/if},
+{if $smarty.session.Language eq 'es_ES'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=es_ES" lang="es_ES" hreflang="es_ES" title="{t}Change language{/t}">{/if}<span class="heading">Español</span>{if $smarty.session.Language eq 'es_ES'}</strong>{else}</a>{/if},
 
-{if $smarty.session.Language eq 'fr_FR'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=fr_FR" lang="fr_FR" hreflang="fr_FR" title="{t}Change language{/t}">{/if}Français{if $smarty.session.Language eq 'fr_FR'}</strong>{else}</a>{/if},
+{if $smarty.session.Language eq 'fr_FR'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=fr_FR" lang="fr_FR" hreflang="fr_FR" title="{t}Change language{/t}">{/if}<span class="heading">Français</span>{if $smarty.session.Language eq 'fr_FR'}</strong>{else}</a>{/if},
 
-{if $smarty.session.Language eq 'it_IT'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=it_IT" lang="it_IT" hreflang="it_IT" title="{t}Change language{/t}">{/if}Italiano{if $smarty.session.Language eq 'it_IT'}</strong>{else}</a>{/if},
+{if $smarty.session.Language eq 'it_IT'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=it_IT" lang="it_IT" hreflang="it_IT" title="{t}Change language{/t}">{/if}<span class="heading">Italiano</span>{if $smarty.session.Language eq 'it_IT'}</strong>{else}</a>{/if},
 
-{if $smarty.session.Language eq 'pt_PT'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=pt_PT" lang="pt_PT" hreflang="pt_PT" title="{t}Change language{/t}">{/if}Português{if $smarty.session.Language eq 'pt_PT'}</strong>{else}</a>{/if},
+{if $smarty.session.Language eq 'pt_PT'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=pt_PT" lang="pt_PT" hreflang="pt_PT" title="{t}Change language{/t}">{/if}<span class="heading">Português</span>{if $smarty.session.Language eq 'pt_PT'}</strong>{else}</a>{/if},
 
-{if $smarty.session.Language eq 'ru_RU'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=ru_RU" lang="ru_RU" hreflang="ru_RU" title="{t}Change language{/t}">{/if}Русский{if $smarty.session.Language eq 'ru_RU'}</strong>{else}</a>{/if}
+{if $smarty.session.Language eq 'ru_RU'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=ru_RU" lang="ru_RU" hreflang="ru_RU" title="{t}Change language{/t}">{/if}<span class="heading">Русский</span>{if $smarty.session.Language eq 'ru_RU'}</strong>{else}</a>{/if}
+</span>
 
 <br>
-<span class="hidden2">______________________________</span>
+<span class="heading">______________________________</span>
 <br>
-{t}Project state{/t}: Beta
+<span class="heading">{t}Project state{/t}: Beta</span>
 </td>
 
-</tr>
-</table>
-
-</td>
 </tr>
 </table>
