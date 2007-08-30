@@ -20,11 +20,12 @@
 class Theme
 {
 	// default values
+	// Properties could be overwritten in each web page.
 
-	public $headBackgroundImage	= '/images/themes/cyclical-green-sky_90.png';
+	public $logoBGcolor		= '#73625b';
+	public $headBGcolor		= '#bd0000';
+
 	public $headSubtitle		= 'Free Software Association';
-	public $headNoticeStyle		= 'hidden1';
-	public $headNotice		= ' '; // This and other properties can be overwritten in each web page.
 
 	public $borderLeftUpImage 	= '/images/themes/1--left-up.png';
 	public $borderRightUpImage 	= '/images/themes/1--right-up.png';
@@ -34,7 +35,6 @@ class Theme
 	public $pageBGcolor		= '#ddddaa';
 	public $menuBGcolor		= '#d0c482';
 	public $contentBGcolor		= '#e8eecb';
-
 	public $loginBoxBGcolor		= '#d0d0a0';
 }
 
@@ -43,5 +43,4 @@ class Theme
 //   You could overwrite it to personalize each section set.
 $initialTheme	= new Theme();
 $resourcesTheme	= new Theme();
-$SIGTheme	= new Theme();
 ?>
