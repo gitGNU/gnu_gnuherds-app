@@ -60,8 +60,9 @@ Suite 225, San Francisco, CA 94107, USA
 	<p>
 	{t escape='no'
 	  1='<a href="#The_source_code">'
-	  2='</a>'
-	}To play with the web application, %1download%2 the code and install it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this Hackers' Guide. If you need support ask for it at{/t} {mailto address='gnuherds-app-dev@nongnu.org'}
+	  2='<a href="#How_to_install_a_development_environment">'
+	  3='</a>'
+	}To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this Hackers' Guide. If you need support ask for it at{/t} {mailto address='gnuherds-app-dev@nongnu.org'}
 	</p>
 
 	<p>
