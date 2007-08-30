@@ -55,6 +55,14 @@ class LogForm
 
 			// We always save the last locale used by the entity, to be used to translate the Alert emails
 			$manager->updateEntityLocale();
+
+			// Set the "has/do-not-has qualifications" flag in a SESSION variable. It is used to build the menu at menu.tpl
+			$result = $manager->getQualificationsForEntity($_SESSION['EntityId']);
+
+			if ( count($result[0]) == 1 )
+				$_SESSION['HasQualifications'] = true;
+			else
+				$_SESSION['HasQualifications'] = false;
 		}
 	}
 

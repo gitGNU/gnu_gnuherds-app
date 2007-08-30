@@ -61,7 +61,7 @@ class ViewJobOfferForm
 					else
 					{
 						$result = $this->manager->getQualificationsForEntity($_SESSION['EntityId']);
-						if ( count($result[0]) ==1 )
+						if ( count($result[0]) == 1 and $result[10][0] == 't' )
 						{
 							$_SESSION['IsAlreadySubscribed'] = $this->manager->IsAlreadySubscribed( $_SESSION['EntityId'], $_GET['JobOfferId'] );
 
@@ -118,13 +118,13 @@ class ViewJobOfferForm
 	private function loadJobOfferForm()
 	{
 		// This function will not override the SESSION variables while the user is working in its form, because of before calling this function the 'Back' button value is checked. 
-
 		$result = $this->manager->getJobOffer($_GET['JobOfferId']);
 
 
 		// J1_JobOffers table
 
 		$_SESSION['ViewEntityId'] = $result[26][0];
+		$_SESSION['ViewCompletedEdition'] = $result[27][0];
 
 		$_SESSION['ViewEmployerJobOfferReference'] = trim($result[0][0]);
 		$_SESSION['ViewOfferDate'] = trim($result[1][0]);
@@ -176,6 +176,31 @@ class ViewJobOfferForm
 		$_SESSION['ViewSkillList'] = $result[43];
 		$_SESSION['ViewKnowledgeLevelList'] = $result[44];
 		$_SESSION['ViewExperienceLevelList'] = $result[45];
+		$_SESSION['ViewCheckList'] = $result[46];
+
+		// Do not show Non-Free or Pending skills
+		$count = count($_SESSION['ViewCheckList']);
+		for ($i=0,$j=0; $i < $count; $i++)
+		{
+			if ( $_SESSION['ViewCheckList'][$i]=='Non-Free' or $_SESSION['ViewCheckList'][$i]=='Pending' )
+			{
+			}
+			else
+			{
+				$_SESSION['ViewSkillList'][$j] = $_SESSION['ViewSkillList'][$i];
+				$_SESSION['ViewKnowledgeLevelList'][$j] = $_SESSION['ViewKnowledgeLevelList'][$i];
+				$_SESSION['ViewExperienceLevelList'][$j] = $_SESSION['ViewExperienceLevelList'][$i];
+				$_SESSION['ViewCheckList'][$j] = $_SESSION['ViewCheckList'][$i];
+				$j++;
+			}
+		}
+		for( $i=$j; $i < $count; $i++)
+		{
+			unset( $_SESSION['ViewSkillList'][$i] );
+			unset( $_SESSION['ViewKnowledgeLevelList'][$i] );
+			unset( $_SESSION['ViewExperienceLevelList'][$i] );
+			unset( $_SESSION['ViewCheckList'][$i] );
+		}
 
 		$_SESSION['ViewCertificationsList'] = $result[50];
 
