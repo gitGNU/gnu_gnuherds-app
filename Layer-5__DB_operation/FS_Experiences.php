@@ -49,11 +49,11 @@ class FreeSoftwareExperiences
 		$this->delFreeSoftwareExperiencesForEntity();
 
 		// set
-		for( $i=0; $i < count($_SESSION['ContributionsListProject']); $i++)
+		for( $i=0; $i < count($_POST['ContributionsListProject']); $i++)
 		{
-			$contributionProject = trim($_SESSION['ContributionsListProject'][$i]);
-			$contributionDescrition = trim($_SESSION['ContributionsListDescription'][$i]);
-			$contributionURI = trim($_SESSION['ContributionsListURI'][$i]);
+			$contributionProject = trim($_POST['ContributionsListProject'][$i]);
+			$contributionDescrition = trim($_POST['ContributionsListDescription'][$i]);
+			$contributionURI = trim($_POST['ContributionsListURI'][$i]);
 			$sqlQuery = "PREPARE query(integer,text,text,text) AS  INSERT INTO E2_EntityFreeSoftwareExperiences (E2_E1_Id,E2_Project,E2_Description,E2_URI) VALUES ($1,$2,$3,$4);  EXECUTE query('$_SESSION[EntityId]','$contributionProject','$contributionDescrition','$contributionURI');";
 			$this->postgresql->execute($sqlQuery,1);
 		}

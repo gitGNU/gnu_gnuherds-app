@@ -222,12 +222,12 @@ class DBManager
 		return $entity->getEntityPhotoOrLogo($Id);
 	}
 
-	public function addQualifications()
+	public function addQualifications($completedEdition)
 	{
 		// This method does not need ACL check because of it works with SESSION[EntityId]
 
 		$qualifications = new Qualifications();
-		return $qualifications->addQualifications();
+		return $qualifications->addQualifications($completedEdition);
 	}
 
 	public function deleteQualifications()
@@ -238,12 +238,12 @@ class DBManager
 		return $qualifications->deleteQualifications();
 	}
 
-	public function updateQualifications()
+	public function updateQualifications($section,$completedEdition)
 	{
 		// This method does not need ACL check because of it works with SESSION[EntityId]
 
 		$qualifications = new Qualifications();
-		return $qualifications->updateQualifications();
+		return $qualifications->updateQualifications($section,$completedEdition);
 	}
 
 
@@ -289,12 +289,12 @@ class DBManager
 		return $entity->getEntityPhotoOrLogo($Id);
 	}
 
-	public function addJobOffer()
+	public function addJobOffer($completedEdition)
 	{
 		// This method does not need ACL check because of it works with SESSION[EntityId]
 
 		$jobOffer = new JobOffer();
-		return $jobOffer->addJobOffer();
+		return $jobOffer->addJobOffer($completedEdition);
 	}
 
 	public function deleteSelectedJobOffers()
@@ -307,13 +307,13 @@ class DBManager
 		return $jobOffer->deleteSelectedJobOffers();
 	}
 
-	public function updateJobOffer($Id)
+	public function updateJobOffer($Id,$section,$completedEdition)
 	{
 		$acl = new AccessControlList();
 		$acl->checkJobOfferAccess("WRITE",$Id);
 
 		$jobOffer = new JobOffer();
-		return $jobOffer->updateJobOffer($Id);
+		return $jobOffer->updateJobOffer($Id,$section,$completedEdition);
 	}
 
 	public function getApplicationsMeterForJobOffer($Id,$meter)
@@ -479,6 +479,24 @@ class DBManager
 
 		$skills = new Skills();
 		return $skills->getSkillExperienceLevelsList();
+	}
+
+	public function getSuggestedSkillsLists($skillList)
+	{
+		$acl = new AccessControlList();
+		$acl->checkProperlyLogged();
+
+		$skills = new Skills();
+		return $skills->getSuggestedSkillsLists($skillList);
+	}
+
+	public function addSkill($skill)
+	{
+		$acl = new AccessControlList();
+		$acl->checkProperlyLogged();
+
+		$skills = new Skills();
+		return $skills->addSkill($skill);
 	}
 
 	public function getRequestedCertificationsForEntity()

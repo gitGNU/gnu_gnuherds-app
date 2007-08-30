@@ -31,23 +31,5 @@ class PHPTools
 
 		$_SESSION['Language'] = $language;
 	}
-
-	public function cleanPHPsession()
-	{
-		$language = $_SESSION['Language'];
-		$loginType = $_SESSION['LoginType'];
-		$entityId = $_SESSION['EntityId'];
-
-		// Unset all of the session variables.
-		session_unset();
-
-		// We do not destroy the session with session_destroy()
-		// due to we want to recover the $language.
-
-		$_SESSION['Language'] = $language;
-		$_SESSION['LoginType'] = $loginType;
-		$_SESSION['EntityId'] = $entityId;
-		$_SESSION['Logged'] = '1';
-	}
 }
 ?>

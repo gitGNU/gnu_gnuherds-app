@@ -52,16 +52,14 @@ class JobOffer
 
 	public function getJobOffers($extra_condition = '')
 	{
-		$sqlQuery = "SELECT J1_Id, J1_Telework, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CompanyName, EO_OrganizationName FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
+		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CompanyName, EO_OrganizationName FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
 		$array = array();
 
 		$array[0] = pg_fetch_all_columns($result, 0); // J1_Id
 
-		$array[1] = pg_fetch_all_columns($result, 1); // J1_Telework
-
-		$array[2] = pg_fetch_all_columns($result, 2); // J1_LO_Country --> LO_Name
+		$array[2] = pg_fetch_all_columns($result, 1); // J1_LO_Country --> LO_Name
 		for( $i=0; $i < count($array[2]); $i++)
 		{
 			if ( trim($array[2][$i]) != '' )
@@ -83,22 +81,22 @@ class JobOffer
 				$array[2][$i] = '';
 		}
 
-		$array[3] = pg_fetch_all_columns($result, 3); // J1_StateProvince
-		$array[4] = pg_fetch_all_columns($result, 4); // J1_City
+		$array[3] = pg_fetch_all_columns($result, 2); // J1_StateProvince
+		$array[4] = pg_fetch_all_columns($result, 3); // J1_City
 
-		$array[5] = pg_fetch_all_columns($result, 5); // J1_OfferDate
+		$array[5] = pg_fetch_all_columns($result, 4); // J1_OfferDate
 
-		$array[6] = pg_fetch_all_columns($result, 6); // E1_Id
-		$array[7] = pg_fetch_all_columns($result, 7); // E1_EntityType
+		$array[6] = pg_fetch_all_columns($result, 5); // E1_Id
+		$array[7] = pg_fetch_all_columns($result, 6); // E1_EntityType
 
-		$array[8] = pg_fetch_all_columns($result, 8); // E1_Website
+		$array[8] = pg_fetch_all_columns($result, 7); // E1_Website
 
-		$array[9] = pg_fetch_all_columns($result, 9); // EP_FirstName
-		$array[10] = pg_fetch_all_columns($result, 10); // EP_LastName
-		$array[11] = pg_fetch_all_columns($result, 11); // EP_MiddleName
+		$array[9] = pg_fetch_all_columns($result, 8); // EP_FirstName
+		$array[10] = pg_fetch_all_columns($result, 9); // EP_LastName
+		$array[11] = pg_fetch_all_columns($result, 10); // EP_MiddleName
 
-		$array[12] = pg_fetch_all_columns($result, 12); // EC_CompanyName
-		$array[13] = pg_fetch_all_columns($result, 13); // EO_OrganizationName
+		$array[12] = pg_fetch_all_columns($result, 11); // EC_CompanyName
+		$array[13] = pg_fetch_all_columns($result, 12); // EO_OrganizationName
 
 		for( $i=0; $i < count($array[0]); $i++)
 			$array[14][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
@@ -109,12 +107,13 @@ class JobOffer
 
 	public function getJobOffer($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,LU_PluralName,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_EstimatedEffort,J1_LM_TimeUnit,J1_E1_Id FROM J1_JobOffers,LU_Currencies WHERE J1_LU_Currency=LU_ThreeLetter AND J1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_EstimatedEffort,J1_LM_TimeUnit,J1_E1_Id,J1_CompletedEdition FROM J1_JobOffers WHERE J1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array = array();
 
-		$array[26] = pg_fetch_all_columns($result, 25); // J1_E1_Id
+		$array[26] = pg_fetch_all_columns($result, 23); // J1_E1_Id
+		$array[27] = pg_fetch_all_columns($result, 24); // J1_CompletedEdition
 
 		$array[0] = pg_fetch_all_columns($result, 0); // J1_EmployerJobOfferReference
 		$array[1] = pg_fetch_all_columns($result, 1); // J1_OfferDate
@@ -130,25 +129,42 @@ class JobOffer
 
 		$array[9] = pg_fetch_all_columns($result, 9); // J1_LK_ContractType
 		$array[10] = pg_fetch_all_columns($result, 10); // J1_WageRank
+
 		$array[11] = pg_fetch_all_columns($result, 11); // J1_LU_Currency
-		$array[12] = pg_fetch_all_columns($result, 12); // LU_PluralName
-		$array[13] = pg_fetch_all_columns($result, 13); // J1_LB_WageRankByPeriod
-		$array[23] = pg_fetch_all_columns($result, 23); // J1_EstimatedEffort
-		$array[24] = pg_fetch_all_columns($result, 24); // J1_LM_TimeUnit
 
-		$array[14] = pg_fetch_all_columns($result, 14); // J1_ProfessionalExperienceSinceYear
-		$array[15] = pg_fetch_all_columns($result, 15); // J1_LA_Id
-		$array[16] = pg_fetch_all_columns($result, 16); // J1_FreeSoftwareProjects
+		if ( trim($array[11][0]) != '' )
+		{
+			$j1_lu_currency = $array[11][0];
+			$sqlQuery = "SELECT LU_PluralName FROM LU_Currencies WHERE LU_ThreeLetter='$j1_lu_currency'";
+			$luResult = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
-		$array[17] = pg_fetch_all_columns($result, 17); // J1_Telework
+			$numrows = pg_num_rows($luResult);
+			if ($numrows!=1) throw new Exception("ERROR:<pre> ASSERT raised: {$sqlQuery} </pre>",false);
 
-		$array[18] = pg_fetch_all_columns($result, 18); // J1_City
-		$array[19] = pg_fetch_all_columns($result, 19); // J1_StateProvince
-		$array[20] = pg_fetch_all_columns($result, 20); // J1_LO_Country
+			if ( pg_num_rows($luResult) == '1' )
+			{
+				$row = pg_fetch_object($luResult, 0);
+				$array[12][0] = trim($row->lu_pluralname); // LU_PluralName
+			}
+		}
+		else
+			$array[12][0] = '';
 
-		$array[21] = pg_fetch_all_columns($result, 21); // J1_AvailableToTravel
+		$array[13] = pg_fetch_all_columns($result, 12); // J1_LB_WageRankByPeriod
+		$array[23] = pg_fetch_all_columns($result, 21); // J1_EstimatedEffort
+		$array[24] = pg_fetch_all_columns($result, 22); // J1_LM_TimeUnit
 
-		$array[22] = pg_fetch_all_columns($result, 22); // J1_LO_JobLicenseAt
+		$array[14] = pg_fetch_all_columns($result, 13); // J1_ProfessionalExperienceSinceYear
+		$array[15] = pg_fetch_all_columns($result, 14); // J1_LA_Id
+		$array[16] = pg_fetch_all_columns($result, 15); // J1_FreeSoftwareProjects
+
+		$array[18] = pg_fetch_all_columns($result, 16); // J1_City
+		$array[19] = pg_fetch_all_columns($result, 17); // J1_StateProvince
+		$array[20] = pg_fetch_all_columns($result, 18); // J1_LO_Country
+
+		$array[21] = pg_fetch_all_columns($result, 19); // J1_AvailableToTravel
+
+		$array[22] = pg_fetch_all_columns($result, 20); // J1_LO_JobLicenseAt
 
 		for( $i=0; $i < count($array[20]); $i++) // LO_Name
 		{
@@ -200,6 +216,7 @@ class JobOffer
 		$array[43] = $arrayLS[0];
 		$array[44] = $arrayLS[1];
 		$array[45] = $arrayLS[2];
+		$array[46] = $arrayLS[3];
 
 		$array[60][0] = $this->makeUp_VacancyTitle($Id);
 
@@ -207,7 +224,7 @@ class JobOffer
 	}
 
 
-	public function addJobOffer()
+	public function addJobOffer($completedEdition)
 	{
 		// As there are several tables involved, we use a transaction to be sure, all operations are done, or nothing is done.
 		$this->postgresql->execute("SET TRANSACTION   ISOLATION LEVEL  SERIALIZABLE  READ WRITE",0);
@@ -244,31 +261,7 @@ class JobOffer
 
 		$Vacancies = isset($_POST['Vacancies']) ? trim($_POST['Vacancies']) : '';
 
-		$ContractType = isset($_POST['ContractType']) ? trim($_POST['ContractType']) : '';
-		$WageRank = isset($_POST['WageRank']) ? trim($_POST['WageRank']) : '';
-		$WageRankCurrency = isset($_POST['WageRankCurrency']) ? trim($_POST['WageRankCurrency']) : '';
-		$WageRankByPeriod = isset($_POST['WageRankByPeriod']) ? trim($_POST['WageRankByPeriod']) : '';
-		$EstimatedEffort = isset($_POST['EstimatedEffort']) ? trim($_POST['EstimatedEffort']) : '';
-		$TimeUnit = isset($_POST['TimeUnit']) ? trim($_POST['TimeUnit']) : '';
-
-		$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
-		$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
-
-		$FreeSoftwareExperiences = isset($_POST['FreeSoftwareExperiences']) ? trim($_POST['FreeSoftwareExperiences']) : '';
-
-		if (isset($_POST['Telework']) and $_POST['Telework'] == 'on')
-			$Telework = 'true';
-		else	$Telework = 'false';
-
-		$City = isset($_POST['City']) ? trim($_POST['City']) : '';
-		$StateProvince = isset($_POST['StateProvince']) ? trim($_POST['StateProvince']) : '';
-		$CountryCode = isset($_POST['CountryCode']) ? trim($_POST['CountryCode']) : '';
-
-		if (isset($_POST['AvailableToTravel']) and $_POST['AvailableToTravel'] == 'on')
-			$AvailableToTravel = 'true';
-		else	$AvailableToTravel = 'false';
-
-		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,text,text,text,text,text,text,text,text,text,text,bool,text,text,text,bool) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_EstimatedEffort,J1_LM_TimeUnit,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_Telework,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23);  EXECUTE query('$EntityId','$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$EstimatedEffort','$TimeUnit','$ProfessionalExperienceSinceYear','$AcademicQualification','$FreeSoftwareExperiences','$Telework','$City','$StateProvince','$CountryCode','$AvailableToTravel');";
+		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,text) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9);  EXECUTE query('$EntityId','$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies');";
 		$this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 
@@ -278,27 +271,7 @@ class JobOffer
 		$array = pg_fetch_all_columns($result,0);
 		$J1_Id = $array[0];
 
-		// Certifications
-		$certifications = new Certifications();
-		$certifications->setCertificationsForJobOffer($J1_Id);
-
-		// Profiles
-		$productProfiles = new ProductProfiles();
-		$productProfiles->setProductProfilesForJobOffer($J1_Id);
-
-		$professionalProfiles = new ProfessionalProfiles();
-		$professionalProfiles->setProfessionalProfilesForJobOffer($J1_Id);
-
-		$fieldProfiles = new FieldProfiles();
-		$fieldProfiles->setFieldProfilesForJobOffer($J1_Id);
-
-		// Languages table
-		$languages = new Languages();
-		$languages->setLanguagesForJobOffer($J1_Id);
-
-		// Skills table
-		$skills = new Skills();
-		$skills->setSkillsForJobOffer($J1_Id);
+		// Saving only the first section. It is not need to update the J1_CompletedEdition flag due to it is 'false' by default.
 
 
 		$this->postgresql->execute("COMMIT",0);
@@ -364,90 +337,131 @@ class JobOffer
 	}
 
 
-	public function updateJobOffer($J1_Id)
+	public function updateJobOffer($J1_Id,$section,$completedEdition)
 	{
 		// As there are several tables involved, we use a transaction to be sure, all operations are done, or nothing is done.
 		$this->postgresql->execute("SET TRANSACTION   ISOLATION LEVEL  SERIALIZABLE  READ WRITE",0);
 		$this->postgresql->execute("BEGIN",0);
 
 
-		// J1_JobOffers table
+		switch($section)
+		{
+			case 'general':
+				// J1_JobOffers table
 
-		$EmployerJobOfferReference = isset($_POST['EmployerJobOfferReference']) ? trim($_POST['EmployerJobOfferReference']) : '';
+				$EmployerJobOfferReference = isset($_POST['EmployerJobOfferReference']) ? trim($_POST['EmployerJobOfferReference']) : '';
 
-		$ExpirationDate = isset($_POST['ExpirationDate']) ? trim($_POST['ExpirationDate']) : '';
+				$ExpirationDate = isset($_POST['ExpirationDate']) ? trim($_POST['ExpirationDate']) : '';
 
-		if (isset($_POST['Closed']) and $_POST['Closed'] == 'on')
-			$Closed = 'true';
-		else	$Closed = 'false';
+				if (isset($_POST['Closed']) and $_POST['Closed'] == 'on')
+					$Closed = 'true';
+				else	$Closed = 'false';
 
-		if (isset($_POST['HideEmployer']) and $_POST['HideEmployer'] == 'on')
-			$HideEmployer = 'true';
-		else	$HideEmployer = 'false';
+				if (isset($_POST['HideEmployer']) and $_POST['HideEmployer'] == 'on')
+					$HideEmployer = 'true';
+				else	$HideEmployer = 'false';
 
-		if (isset($_POST['AllowPersonApplications']) and $_POST['AllowPersonApplications'] == 'on')
-			$AllowPersonApplications = 'true';
-		else	$AllowPersonApplications = 'false';
+				if (isset($_POST['AllowPersonApplications']) and $_POST['AllowPersonApplications'] == 'on')
+					$AllowPersonApplications = 'true';
+				else	$AllowPersonApplications = 'false';
 
-		if (isset($_POST['AllowCompanyApplications']) and $_POST['AllowCompanyApplications'] == 'on')
-			$AllowCompanyApplications = 'true';
-		else	$AllowCompanyApplications = 'false';
+				if (isset($_POST['AllowCompanyApplications']) and $_POST['AllowCompanyApplications'] == 'on')
+					$AllowCompanyApplications = 'true';
+				else	$AllowCompanyApplications = 'false';
 
-		if (isset($_POST['AllowOrganizationApplications']) and $_POST['AllowOrganizationApplications'] == 'on')
-			$AllowOrganizationApplications = 'true';
-		else	$AllowOrganizationApplications = 'false';
+				if (isset($_POST['AllowOrganizationApplications']) and $_POST['AllowOrganizationApplications'] == 'on')
+					$AllowOrganizationApplications = 'true';
+				else	$AllowOrganizationApplications = 'false';
 
-		$Vacancies = isset($_POST['Vacancies']) ? trim($_POST['Vacancies']) : '';
+				$Vacancies = isset($_POST['Vacancies']) ? trim($_POST['Vacancies']) : '';
 
-		$ContractType = isset($_POST['ContractType']) ? trim($_POST['ContractType']) : '';
-		$WageRank = isset($_POST['WageRank']) ? trim($_POST['WageRank']) : '';
-		$WageRankCurrency = isset($_POST['WageRankCurrency']) ? trim($_POST['WageRankCurrency']) : '';
-		$WageRankByPeriod = isset($_POST['WageRankByPeriod']) ? trim($_POST['WageRankByPeriod']) : '';
-		$EstimatedEffort = isset($_POST['EstimatedEffort']) ? trim($_POST['EstimatedEffort']) : '';
-		$TimeUnit = isset($_POST['TimeUnit']) ? trim($_POST['TimeUnit']) : '';
+				$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCompanyApplications=$6,J1_AllowOrganizationApplications=$7,J1_Vacancies=$8,J1_CompletedEdition=$9 WHERE J1_Id=$10;  EXECUTE query('$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$completedEdition','$J1_Id');";
+				$this->postgresql->execute($sqlQuery,1);
+			break;
 
-		$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
-		$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
+			case 'profiles_etc':
+				$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
+				$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
 
-		$FreeSoftwareExperiences = isset($_POST['FreeSoftwareExperiences']) ? trim($_POST['FreeSoftwareExperiences']) : '';
+				$sqlQuery = "PREPARE query(text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_ProfessionalExperienceSinceYear=$1,J1_LA_Id=$2,J1_CompletedEdition=$3 WHERE J1_Id=$4;  EXECUTE query('$ProfessionalExperienceSinceYear','$AcademicQualification','$completedEdition','$J1_Id');";
+				$this->postgresql->execute($sqlQuery,1);
 
-		if (isset($_POST['Telework']) and $_POST['Telework'] == 'on')
-			$Telework = 'true';
-		else	$Telework = 'false';
+				// Profiles
+				$productProfiles = new ProductProfiles();
+				$productProfiles->setProductProfilesForJobOffer($J1_Id);
 
-		$City = isset($_POST['City']) ? trim($_POST['City']) : '';
-		$StateProvince = isset($_POST['StateProvince']) ? trim($_POST['StateProvince']) : '';
-		$CountryCode = isset($_POST['CountryCode']) ? trim($_POST['CountryCode']) : '';
+				$professionalProfiles = new ProfessionalProfiles();
+				$professionalProfiles->setProfessionalProfilesForJobOffer($J1_Id);
 
-		if (isset($_POST['AvailableToTravel']) and $_POST['AvailableToTravel'] == 'on')
-			$AvailableToTravel = 'true';
-		else	$AvailableToTravel = 'false';
+				$fieldProfiles = new FieldProfiles();
+				$fieldProfiles->setFieldProfilesForJobOffer($J1_Id);
+			break;
 
-		$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,text,text,text,text,text,text,text,text,text,text,bool,text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCompanyApplications=$6,J1_AllowOrganizationApplications=$7,J1_Vacancies=$8,J1_LK_ContractType=$9,J1_WageRank=$10,J1_LU_Currency=$11,J1_LB_WageRankByPeriod=$12,J1_EstimatedEffort=$13,J1_LM_TimeUnit=$14,J1_ProfessionalExperienceSinceYear=$15,J1_LA_Id=$16,J1_FreeSoftwareProjects=$17,J1_Telework=$18,J1_City=$19,J1_StateProvince=$20,J1_LO_Country=$21,J1_AvailableToTravel=$22 WHERE J1_Id=$23;  EXECUTE query('$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$EstimatedEffort','$TimeUnit','$ProfessionalExperienceSinceYear','$AcademicQualification','$FreeSoftwareExperiences','$Telework','$City','$StateProvince','$CountryCode','$AvailableToTravel','$J1_Id');";
-		$this->postgresql->execute($sqlQuery,1);
+			case 'skills':
+				// Skills table
+				$skills = new Skills();
+				$result = $skills->setSkillsForJobOffer($J1_Id);
 
+				// Saving this section does not need to update the J1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+			break;
 
-		// Certifications
-		$certifications = new Certifications();
-		$certifications->setCertificationsForJobOffer($J1_Id);
+			case 'languages':
+				// Languages table
+				$languages = new Languages();
+				$languages->setLanguagesForJobOffer($J1_Id);
 
-		// Profiles
-		$productProfiles = new ProductProfiles();
-		$productProfiles->setProductProfilesForJobOffer($J1_Id);
+				$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE J1_JobOffers SET J1_CompletedEdition=$1 WHERE J1_Id=$2;  EXECUTE query('$completedEdition','$J1_Id');";
+				$this->postgresql->execute($sqlQuery,1);
+			break;
 
-		$professionalProfiles = new ProfessionalProfiles();
-		$professionalProfiles->setProfessionalProfilesForJobOffer($J1_Id);
+			case 'certifications':
+				// Certifications
+				$certifications = new Certifications();
+				$certifications->setCertificationsForJobOffer($J1_Id);
 
-		$fieldProfiles = new FieldProfiles();
-		$fieldProfiles->setFieldProfilesForJobOffer($J1_Id);
+				// Saving this section does not need to update the J1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+			break;
 
-		// Languages table
-		$languages = new Languages();
-		$languages->setLanguagesForJobOffer($J1_Id);
+			case 'projects':
+				$FreeSoftwareExperiences = isset($_POST['FreeSoftwareExperiences']) ? trim($_POST['FreeSoftwareExperiences']) : '';
 
-		// Skills table
-		$skills = new Skills();
-		$skills->setSkillsForJobOffer($J1_Id);
+				$sqlQuery = "PREPARE query(text,integer) AS  UPDATE J1_JobOffers SET J1_FreeSoftwareProjects=$1 WHERE J1_Id=$2;  EXECUTE query('$FreeSoftwareExperiences','$J1_Id');";
+				$this->postgresql->execute($sqlQuery,1);
+
+				// Saving this section does not need to update the J1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+			break;
+
+			case 'location':
+				$City = isset($_POST['City']) ? trim($_POST['City']) : '';
+				$StateProvince = isset($_POST['StateProvince']) ? trim($_POST['StateProvince']) : '';
+				$CountryCode = isset($_POST['CountryCode']) ? trim($_POST['CountryCode']) : '';
+
+				if (isset($_POST['AvailableToTravel']) and $_POST['AvailableToTravel'] == 'on')
+					$AvailableToTravel = 'true';
+				else	$AvailableToTravel = 'false';
+
+				$sqlQuery = "PREPARE query(text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_City=$1,J1_StateProvince=$2,J1_LO_Country=$3,J1_AvailableToTravel=$4 WHERE J1_Id=$5;  EXECUTE query('$City','$StateProvince','$CountryCode','$AvailableToTravel','$J1_Id');";
+				$this->postgresql->execute($sqlQuery,1);
+
+				// Saving this section does not need to update the J1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+			break;
+
+			case 'contract':
+				$ContractType = isset($_POST['ContractType']) ? trim($_POST['ContractType']) : '';
+				$WageRank = isset($_POST['WageRank']) ? trim($_POST['WageRank']) : '';
+				$WageRankCurrency = isset($_POST['WageRankCurrency']) ? trim($_POST['WageRankCurrency']) : '';
+				$WageRankByPeriod = isset($_POST['WageRankByPeriod']) ? trim($_POST['WageRankByPeriod']) : '';
+				$EstimatedEffort = isset($_POST['EstimatedEffort']) ? trim($_POST['EstimatedEffort']) : '';
+				$TimeUnit = isset($_POST['TimeUnit']) ? trim($_POST['TimeUnit']) : '';
+
+				$sqlQuery = "PREPARE query(text,text,text,text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_LK_ContractType=$1,J1_WageRank=$2,J1_LU_Currency=$3,J1_LB_WageRankByPeriod=$4,J1_EstimatedEffort=$5,J1_LM_TimeUnit=$6,J1_CompletedEdition=$7 WHERE J1_Id=$8;  EXECUTE query('$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$EstimatedEffort','$TimeUnit','$completedEdition','$J1_Id');";
+				$this->postgresql->execute($sqlQuery,1);
+			break;
+
+			default:
+				$error = "<p>".$_SERVER["REQUEST_URI"].": ".gettext('ERROR: Unexpected condition')."</p>";
+				throw new Exception($error,false);
+		}
 
 
 		$this->postgresql->execute("COMMIT",0);
@@ -573,19 +587,29 @@ class JobOffer
 		$languages = new Languages();
 		$arrayLL = $languages->getLanguagesForJobOffer($J1_Id);
 
-		$VacancyTitle = gettext($arrayLP[0]);
+		$VacancyTitle = '';
+
+		if ( trim($arrayLP[0]) != '')
+			$VacancyTitle .= gettext($arrayLP[0]);
 
 		for( $i=1; $i < count($arrayLP); $i++)
-			$VacancyTitle .= ", ".gettext($arrayLP[$i]);
+			if ( trim($arrayLP[$i]) != '')
+				$VacancyTitle .= ", ".gettext($arrayLP[$i]);
 
 		for( $i=0; $i < count($arrayLF); $i++)
-			$VacancyTitle .= ", ".gettext($arrayLF[$i]);
+			if ( trim($arrayLF[$i]) != '')
+				$VacancyTitle .= ", ".gettext($arrayLF[$i]);
 
 		for( $i=0; $i < count($arrayLS[0]); $i++)
-			$VacancyTitle .= ", ".$arrayLS[0][$i];
+			if ( trim($arrayLS[0][$i]) != '' and $arrayLS[3][$i] != 'Non-Free' and $arrayLS[3][$i] != 'Pending' )
+				$VacancyTitle .= ", ".$arrayLS[0][$i];
 
 		for( $i=0; $i < count($arrayLL[0]); $i++)
-			$VacancyTitle .= ", ".gettext($arrayLL[0][$i]);
+			if ( trim($arrayLL[0][$i]) != '')
+				$VacancyTitle .= ", ".gettext($arrayLL[0][$i]);
+
+		if ( $VacancyTitle == '')
+			$VacancyTitle = gettext("not specified");
 
 		return $VacancyTitle;
 	}

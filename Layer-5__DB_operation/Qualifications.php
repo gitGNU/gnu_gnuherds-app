@@ -36,7 +36,7 @@ class Qualifications
 
 	public function getQualificationsForEntity($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT Q1_ProfessionalExperienceSinceYear,Q1_LA_Id,QP_LK_DesiredContractType,QP_DesiredWageRank,QP_LU_WageRankCurrency,QP_LB_WageRankByPeriod,QP_CurrentEmployability,QP_AvailableToTravel,QP_AvailableToChangeResidence,Q1_AcademicQualificationDescription FROM Q1_Qualifications WHERE Q1_E1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT Q1_ProfessionalExperienceSinceYear,Q1_LA_Id,QP_LK_DesiredContractType,QP_DesiredWageRank,QP_LU_WageRankCurrency,QP_LB_WageRankByPeriod,QP_CurrentEmployability,QP_AvailableToTravel,QP_AvailableToChangeResidence,Q1_AcademicQualificationDescription,Q1_CompletedEdition FROM Q1_Qualifications WHERE Q1_E1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array = array();
@@ -51,6 +51,7 @@ class Qualifications
 		$array[7] = pg_fetch_all_columns($result, 7); // QP_AvailableToTravel
 		$array[8] = pg_fetch_all_columns($result, 8); // QP_AvailableToChangeResidence
 		$array[9] = pg_fetch_all_columns($result, 9); // Q1_AcademicQualificationDescription
+		$array[10] = pg_fetch_all_columns($result, 10); // Q1_CompletedEdition
 
  		// The curreny name.
 		$currencies = new Currencies();
@@ -96,11 +97,12 @@ class Qualifications
 		$array[31] = $arrayLS[0];
 		$array[32] = $arrayLS[1];
 		$array[33] = $arrayLS[2];
+		$array[34] = $arrayLS[3];
 
 		return $array;
 	}
 
-	public function addQualifications()
+	public function addQualifications($completedEdition)
 	{
 		// As there are several tables involved, we use a transaction to be sure, all operations are done, or nothing is done.
 		$this->postgresql->execute("SET TRANSACTION   ISOLATION LEVEL  SERIALIZABLE  READ WRITE",0);
@@ -109,33 +111,14 @@ class Qualifications
 
 		// Qualifications
 
-		if (isset($_POST['AvailableToTravel']) and $_POST['AvailableToTravel'] == 'on')
-			$AvailableToTravel = 'true';
-		else	$AvailableToTravel = 'false';
-
-		if (isset($_POST['AvailableToChangeResidence']) and $_POST['AvailableToChangeResidence'] == 'on')
-			$AvailableToChangeResidence = 'true';
-		else	$AvailableToChangeResidence = 'false';
-
 		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : '';
 		$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
 		$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
-		$DesiredContractType = isset($_POST['DesiredContractType']) ? trim($_POST['DesiredContractType']) : '';
-		$DesiredWageRank = isset($_POST['DesiredWageRank']) ? trim($_POST['DesiredWageRank']) : '';
-		$WageRankCurrency = isset($_POST['WageRankCurrency']) ? trim($_POST['WageRankCurrency']) : '';
-		$WageRankByPeriod = isset($_POST['WageRankByPeriod']) ? trim($_POST['WageRankByPeriod']) : '';
-		$CurrentEmployability = isset($_POST['CurrentEmployability']) ? trim($_POST['CurrentEmployability']) : '';
-		$AvailableToTravel = trim($AvailableToTravel);
-		$AvailableToChangeResidence = trim($AvailableToChangeResidence);
 		$AcademicQualificationDescription = trim($_POST['AcademicQualificationDescription']);
 
-		$sqlQuery = "PREPARE query(integer,text,text,text,text,text,text,text,bool,bool,text) AS  INSERT INTO Q1_Qualifications (Q1_E1_Id,Q1_ProfessionalExperienceSinceYear,Q1_LA_Id,QP_LK_DesiredContractType,QP_DesiredWageRank,QP_LU_WageRankCurrency,QP_LB_WageRankByPeriod,QP_CurrentEmployability,QP_AvailableToTravel,QP_AvailableToChangeResidence,Q1_AcademicQualificationDescription) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11);  EXECUTE query('$EntityId','$ProfessionalExperienceSinceYear','$AcademicQualification','$DesiredContractType','$DesiredWageRank','$WageRankCurrency','$WageRankByPeriod','$CurrentEmployability','$AvailableToTravel','$AvailableToChangeResidence','$AcademicQualificationDescription');";
+		$sqlQuery = "PREPARE query(integer,text,text,text) AS  INSERT INTO Q1_Qualifications (Q1_E1_Id,Q1_ProfessionalExperienceSinceYear,Q1_LA_Id,Q1_AcademicQualificationDescription) VALUES ($1,$2,$3,$4);  EXECUTE query('$EntityId','$ProfessionalExperienceSinceYear','$AcademicQualification','$AcademicQualificationDescription');";
 		$this->postgresql->execute($sqlQuery,1);
 
-
-		// NotYetRequestedCertifications to requested certifications
-		$certifications = new Certifications();
-		$certifications->setRequestedCertificationsForEntity();
 
 		// Profiles
 		$productProfiles = new ProductProfiles();
@@ -147,17 +130,7 @@ class Qualifications
 		$fieldProfiles = new FieldProfiles();
 		$fieldProfiles->setFieldProfilesForEntity();
 
-		// Contributions, FreeSoftwareExperiences
-		$freeSoftwareExperiences = new FreeSoftwareExperiences();
-		$freeSoftwareExperiences->setFreeSoftwareExperiencesForEntity();
-
-		// Languages table
-		$languages = new Languages();
-		$languages->setLanguagesForEntity();
-
-		// Skills table
-		$skills = new Skills();
-		$skills->setSkillsForEntity();
+		// Saving only the first section. It is not need to update the Q1_CompletedEdition flag due to it is 'false' by default.
 
 
 		$this->postgresql->execute("COMMIT",0); // Note: The result is not checked, but any error is managed by the 'query' fuction.
@@ -200,59 +173,105 @@ class Qualifications
 		$result = $this->postgresql->execute($sqlQuery,1);
 	}
 
-	public function updateQualifications()
+	public function updateQualifications($section,$completedEdition)
 	{
-		// Qualifications
-
-		if (isset($_POST['AvailableToTravel']) and $_POST['AvailableToTravel'] == 'on')
-			$AvailableToTravel = 'true';
-		else	$AvailableToTravel = 'false';
-
-		if (isset($_POST['AvailableToChangeResidence']) and $_POST['AvailableToChangeResidence'] == 'on')
-			$AvailableToChangeResidence = 'true';
-		else	$AvailableToChangeResidence = 'false';
-
-		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : '';
-		$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
-		$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
-		$DesiredContractType = isset($_POST['DesiredContractType']) ? trim($_POST['DesiredContractType']) : '';
-		$DesiredWageRank = isset($_POST['DesiredWageRank']) ? trim($_POST['DesiredWageRank']) : '';
-		$WageRankCurrency = isset($_POST['WageRankCurrency']) ? trim($_POST['WageRankCurrency']) : '';
-		$WageRankByPeriod = isset($_POST['WageRankByPeriod']) ? trim($_POST['WageRankByPeriod']) : '';
-		$CurrentEmployability = isset($_POST['CurrentEmployability']) ? trim($_POST['CurrentEmployability']) : '';
-		$AvailableToTravel = trim($AvailableToTravel);
-		$AvailableToChangeResidence = trim($AvailableToChangeResidence);
-		$AcademicQualificationDescription = trim($_POST['AcademicQualificationDescription']);
-
-		$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,bool,bool,text,integer) AS  UPDATE Q1_Qualifications SET Q1_ProfessionalExperienceSinceYear=$1,Q1_LA_Id=$2,QP_LK_DesiredContractType=$3,QP_DesiredWageRank=$4,QP_LU_WageRankCurrency=$5,QP_LB_WageRankByPeriod=$6,QP_CurrentEmployability=$7,QP_AvailableToTravel=$8,QP_AvailableToChangeResidence=$9,Q1_AcademicQualificationDescription=$10 WHERE Q1_E1_Id=$11;  EXECUTE query('$ProfessionalExperienceSinceYear','$AcademicQualification','$DesiredContractType','$DesiredWageRank','$WageRankCurrency','$WageRankByPeriod','$CurrentEmployability','$AvailableToTravel','$AvailableToChangeResidence','$AcademicQualificationDescription','$EntityId');";
-		$this->postgresql->execute($sqlQuery,1);
+		// As there are several tables involved, we use a transaction to be sure, all operations are done, or nothing is done.
+		$this->postgresql->execute("SET TRANSACTION   ISOLATION LEVEL  SERIALIZABLE  READ WRITE",0);
+		$this->postgresql->execute("BEGIN",0);
 
 
-		// NotYetRequestedCertifications to requested certifications
-		$certifications = new Certifications();
-		$certifications->setRequestedCertificationsForEntity();
+		switch($section)
+		{
+			case 'profiles_etc':
+				// Q1_Qualifications table
 
-		// Profiles
-		$productProfiles = new ProductProfiles();
-		$productProfiles->setProductProfilesForEntity();
+				$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
+				$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
+				$AcademicQualificationDescription = trim($_POST['AcademicQualificationDescription']);
 
-		$professionalProfiles = new ProfessionalProfiles();
-		$professionalProfiles->setProfessionalProfilesForEntity();
+				$sqlQuery = "PREPARE query(text,text,text,bool,integer) AS  UPDATE Q1_Qualifications SET Q1_ProfessionalExperienceSinceYear=$1,Q1_LA_Id=$2,Q1_AcademicQualificationDescription=$3,Q1_CompletedEdition=$4 WHERE Q1_E1_Id=$5;  EXECUTE query('$ProfessionalExperienceSinceYear','$AcademicQualification','$AcademicQualificationDescription','$completedEdition','{$_SESSION['EntityId']}');";
+				$this->postgresql->execute($sqlQuery,1);
 
-		$fieldProfiles = new FieldProfiles();
-		$fieldProfiles->setFieldProfilesForEntity();
+				// Profiles
+				$productProfiles = new ProductProfiles();
+				$productProfiles->setProductProfilesForEntity();
 
-		// Contributions, FreeSoftwareExperiences
-		$freeSoftwareExperiences = new FreeSoftwareExperiences();
-		$freeSoftwareExperiences->setFreeSoftwareExperiencesForEntity();
+				$professionalProfiles = new ProfessionalProfiles();
+				$professionalProfiles->setProfessionalProfilesForEntity();
 
-		// Languages table
-		$languages = new Languages();
-		$languages->setLanguagesForEntity();
+				$fieldProfiles = new FieldProfiles();
+				$fieldProfiles->setFieldProfilesForEntity();
+			break;
 
-		// Skills table
-		$skills = new Skills();
-		$skills->setSkillsForEntity();
+			case 'certifications':
+				// NotYetRequestedCertifications to requested certifications
+				$certifications = new Certifications();
+				$certifications->setRequestedCertificationsForEntity();
+
+				// Saving this section does not need to update the Q1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+			break;
+
+			case 'projects':
+				// Contributions, FreeSoftwareExperiences
+				$freeSoftwareExperiences = new FreeSoftwareExperiences();
+				$freeSoftwareExperiences->setFreeSoftwareExperiencesForEntity();
+
+				// Saving this section does not need to update the Q1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+			break;
+
+			case 'languages':
+				// Languages table
+				$languages = new Languages();
+				$languages->setLanguagesForEntity();
+
+				$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE Q1_Qualifications SET Q1_CompletedEdition=$1 WHERE Q1_E1_Id=$2;  EXECUTE query('$completedEdition','{$_SESSION['EntityId']}');";
+				$this->postgresql->execute($sqlQuery,1);
+			break;
+
+			case 'skills':
+				// Skills table
+				$skills = new Skills();
+				$skills->setSkillsForEntity();
+
+				// Saving this section does not need to update the Q1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+			break;
+
+			case 'location':
+				if (isset($_POST['AvailableToTravel']) and $_POST['AvailableToTravel'] == 'on')
+					$AvailableToTravel = 'true';
+				else	$AvailableToTravel = 'false';
+
+				if (isset($_POST['AvailableToChangeResidence']) and $_POST['AvailableToChangeResidence'] == 'on')
+					$AvailableToChangeResidence = 'true';
+				else	$AvailableToChangeResidence = 'false';
+
+				$AvailableToTravel = trim($AvailableToTravel);
+				$AvailableToChangeResidence = trim($AvailableToChangeResidence);
+
+				$sqlQuery = "PREPARE query(bool,bool,integer) AS  UPDATE Q1_Qualifications SET QP_AvailableToTravel=$1,QP_AvailableToChangeResidence=$2 WHERE Q1_E1_Id=$3;  EXECUTE query('$AvailableToTravel','$AvailableToChangeResidence','{$_SESSION['EntityId']}');";
+				$this->postgresql->execute($sqlQuery,1);
+
+				// Saving this section does not need to update the Q1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+			break;
+
+			case 'contract':
+				$DesiredContractType = isset($_POST['DesiredContractType']) ? trim($_POST['DesiredContractType']) : '';
+				$DesiredWageRank = isset($_POST['DesiredWageRank']) ? trim($_POST['DesiredWageRank']) : '';
+				$WageRankCurrency = isset($_POST['WageRankCurrency']) ? trim($_POST['WageRankCurrency']) : '';
+				$WageRankByPeriod = isset($_POST['WageRankByPeriod']) ? trim($_POST['WageRankByPeriod']) : '';
+				$CurrentEmployability = isset($_POST['CurrentEmployability']) ? trim($_POST['CurrentEmployability']) : '';
+
+				$sqlQuery = "PREPARE query(text,text,text,text,text,bool,integer) AS  UPDATE Q1_Qualifications SET QP_LK_DesiredContractType=$1,QP_DesiredWageRank=$2,QP_LU_WageRankCurrency=$3,QP_LB_WageRankByPeriod=$4,QP_CurrentEmployability=$5,Q1_CompletedEdition=$6 WHERE Q1_E1_Id=$7;  EXECUTE query('$DesiredContractType','$DesiredWageRank','$WageRankCurrency','$WageRankByPeriod','$CurrentEmployability','$completedEdition','{$_SESSION['EntityId']}');";
+				$this->postgresql->execute($sqlQuery,1);
+			break;
+
+			default:
+				$error = "<p>".$_SERVER["REQUEST_URI"].": ".gettext('ERROR: Unexpected condition')."</p>";
+				throw new Exception($error,false);
+		}
+
+
+		$this->postgresql->execute("COMMIT",0);
 	}
 
 
