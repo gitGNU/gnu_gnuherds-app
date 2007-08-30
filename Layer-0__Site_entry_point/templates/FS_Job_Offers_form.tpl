@@ -46,10 +46,18 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if trim($CountryName[$i]) eq ''}
+{if trim($City[$i]) eq '' and trim($StateProvince[$i]) eq '' and trim($CountryName[$i]) eq ''}
 <strong>{t}Any{/t}</strong>, {t}telework{/t}
 {else}
+{if trim($CountryName[$i]) neq ''}
 <strong>{t}{$CountryName[$i]}{/t}</strong>{if $StateProvince[$i]}, {$StateProvince[$i]}{/if}{if $City[$i]}, {$City[$i]}{/if}
+{else}
+{if trim($StateProvince[$i]) neq ''}
+{$StateProvince[$i]}{if $City[$i]}, {$City[$i]}{/if}
+{else}
+{$City[$i]}
+{/if}
+{/if}
 {/if}
 </td>
 

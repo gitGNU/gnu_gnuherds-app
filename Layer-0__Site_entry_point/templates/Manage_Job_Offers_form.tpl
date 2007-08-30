@@ -52,9 +52,8 @@ Suite 225, San Francisco, CA 94107, USA
 <input type="checkbox" name="DeleteJobOffers[]" value="{$Id}">
 </td>
 
-
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="offers?action=edit&id={$Id}">{$smarty.session.M_VacancyTitle[$i]}</a>
+<a href="offers?id={$Id}">{$smarty.session.M_VacancyTitle[$i]}</a>
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
@@ -148,7 +147,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {/if}
 
-<form name="newJobOffersForm" method="post" action="offers?action=edit&id=">
+<form name="newJobOffersForm" method="post" action="offers?action=edit&id=&section=general">{* This could be a GET request instead of a POST one. I have used a POST to be able to use a button, due to it is near of the delete button. *}
 <input type="submit" name="new" value="{t}New offer{/t}">
 </form>
 

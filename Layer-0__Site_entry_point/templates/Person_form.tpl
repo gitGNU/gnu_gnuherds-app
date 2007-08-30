@@ -18,9 +18,6 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-<script type="text/javascript" src="scripts/popup.js"></script>
-
-
 <form enctype="multipart/form-data" name="personForm" method="post" action="person">
 
 <table align="center">
@@ -109,7 +106,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td> <input type="text" name="LastName" id="LastName" size="20" maxlength="20" class="notRequired" value="{$smarty.session.LastName}"> </td>
 </tr>
 <tr>
-<td align="right"><label for="PhotoOrLogo" class="raisePopUp" OnMouseOver="popup('{t}Default image size{/t}: 90x120','lightyellow',300);" OnMouseOut="kill()">{t}Photo{/t}</label></td>
+<td align="right"><label for="PhotoOrLogo" class="raisePopUp" title="{t}Default image size{/t}: 90x120">{t}Photo{/t}</label></td>
 <td> <input type="file" name="PhotoOrLogo" id="PhotoOrLogo" class="notRequired" value="{$smarty.session.PhotoOrLogo}"> </td>
 </tr>
 <tr>
