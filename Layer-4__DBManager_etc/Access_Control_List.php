@@ -86,7 +86,12 @@ class AccessControlList
 
 		switch ($mode) {
 			case "READ": // Data Base operations: get
-				if ( $jobOffer->hasJobOfferPublished($E1_Id) == true ) // Check if the E1_Id entity has some job offer published
+				if ( // Check if the request comes from the JobOffer owner
+				     $jobOffer->isOwner($E1_Id) == true
+					or
+				     // Check if the E1_Id entity has some job offer published
+				     $jobOffer->hasJobOfferPublished($E1_Id) == true
+				   )
 					$this->granted();
 				else
 					$this->notGranted();
