@@ -90,7 +90,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>
 <span class="menu1noactive">{'Resources'|gettext}</span><br>
 	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/offers"}<a href="offers" class="menu3">{/if}<span class="menu3">{'FS Job Offers'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/offers"}</a>{/if}<br>
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/business_models"}<a href="business_models" class="menu3">{/if}<span class="menu3">{'FS Business Networks'|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/business_models"}</span></a>{/if}<br>
+	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/business_models"}<a href="business_models" class="menu3">{/if}<span class="menu3">{'FS Business Models'|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/business_models"}</span></a>{/if}<br>
 </p>
 </td>
 
