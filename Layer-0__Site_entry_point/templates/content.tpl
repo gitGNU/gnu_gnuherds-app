@@ -65,14 +65,6 @@ Suite 225, San Francisco, CA 94107, USA
 			</td>
 			</tr>
 			</table>
-			{if $webpage->contentExceptionCode }
-				<p>&nbsp;</p>
-				<center>
-				<form name="backForm" method="post" action="{$smarty.server.REQUEST_URI}">
-				<input type="submit" name="back" value="{'Back'|gettext}">
-				</form>
-				</center>
-			{/if}
 		{/if}
 	{/if}
 {/if}
