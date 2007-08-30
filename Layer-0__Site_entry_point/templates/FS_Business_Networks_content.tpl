@@ -18,10 +18,10 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-<h3>{t}FS Business Networks{/t}</h3>
+<h3>{t}FS Business Models{/t}</h3>
 
 <p>
-{t}These are the 'networks', or ways to set up one, which we know about:{/t}
+{t}These are the business models which we know about:{/t}
 </p>
 <ul>
 
