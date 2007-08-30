@@ -50,10 +50,17 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 {if $smarty.session.Logged eq '1' }
-{if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;<a href="resume" class="menu3">{'My qualifications'|gettext|strip:'&nbsp;'}</a><br>
+
+{if $smarty.session.HasQualifications eq '1' }
+	{assign var="url" value="resume?id=`$smarty.session.EntityId`"}
 {else}
-	&nbsp;&nbsp;<a href="resume" class="menu3">{'Our qualifications'|gettext|strip:'&nbsp;'}</a><br>
+	{assign var="url" value="resume?action=edit&id=&section=profiles_etc"}
+{/if}
+
+{if $smarty.session.LoginType eq "Person" }
+	&nbsp;&nbsp;<a href="{$url}" class="menu3">{'My qualifications'|gettext|strip:'&nbsp;'}</a><br>
+{else}
+	&nbsp;&nbsp;<a href="{$url}" class="menu3">{'Our qualifications'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
 {/if}
 
