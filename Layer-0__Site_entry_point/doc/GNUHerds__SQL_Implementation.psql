@@ -72,6 +72,7 @@ DROP TABLE LX_ProductProfiles; -- Due to the general use, the words keep into th
 
 -- Lists of Skills:
 DROP TABLE LI_Skills;
+DROP TABLE LH_Skills;
 DROP TABLE LT_SkillSetTypes;
 DROP TABLE LG_KnowledgeLevel;
 DROP TABLE LN_ExperienceLevel;
@@ -189,9 +190,14 @@ CREATE TABLE LT_SkillSetTypes (
 	LT_Id	varchar(35) PRIMARY KEY CHECK (LT_Id <> '')
 );
 
+CREATE TABLE LH_Skills (
+	LH_Id	varchar(8) PRIMARY KEY CHECK (LH_Id <> '')
+);
+
 CREATE TABLE LI_Skills (
-	LI_Id	varchar(53) PRIMARY KEY CHECK (LI_Id <> ''),
-	LI_LT_Id varchar(35) REFERENCES LT_SkillSetTypes(LT_Id) NOT NULL
+	LI_Id	varchar(153) PRIMARY KEY CHECK (LI_Id <> ''),
+	LI_LH_Id varchar(8) REFERENCES LH_Skills(LH_Id) NOT NULL,
+	LI_LT_Id varchar(35) -- REFERENCES LT_SkillSetTypes(LT_Id) NOT NULL
 );
 
 CREATE TABLE LG_KnowledgeLevel (
@@ -299,7 +305,7 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         --------------------------------------------------------------------------
         -- To qualify for voting membership one must show a contribution  
         -- to the Free Software movement and supply her/his public key.
-        EP_PublicKey       varchar(255),
+        EP_PublicKey       varchar(255), -- XXX: What is the maximum lenght of a public key. Is it unlimited?. If so, should we allow a unlimited lenght? Yes, I think so.
         EP_Vote            bool, -- NOT NULL DEFAULT 'false', -- The vote feature is enabled by the committee based on the Contributions to FS (E2_EntityFreeSoftwareExperiences).
         EP_ReEvaluate      bool, -- NOT NULL DEFAULT 'true', -- At a new insert EP_ReEvaluate is set to 'true' automatically.
 
@@ -330,6 +336,7 @@ CREATE TABLE A1_Alerts ( -- Alerts about anything: job offers, etc.
 
 CREATE TABLE Q1_Qualifications (
         Q1_E1_Id                           integer PRIMARY KEY REFERENCES E1_Entities(E1_Id) NOT NULL,
+        Q1_CompletedEdition                bool DEFAULT 'false', -- The edition has been successfully completed. All checks pass.
 
         Q1_ProfessionalExperienceSinceYear varchar(4), -- NOT NULL CHECK (Q1_ProfessionalExperienceSinceYear <> ''),
 
@@ -392,7 +399,7 @@ CREATE TABLE R23_Qualification2ProductProfiles (
 
 CREATE TABLE R24_Qualification2Skills (
 	R24_Q1_E1_Id    integer REFERENCES Q1_Qualifications(Q1_E1_Id) NOT NULL,
-	R24_LI_Id       varchar(53) REFERENCES LI_Skills(LI_Id) NOT NULL,
+	R24_LI_Id       varchar(153) REFERENCES LI_Skills(LI_Id) NOT NULL,
 	R24_LG_Id       varchar(9) REFERENCES LG_KnowledgeLevel(LG_Id) NOT NULL,
 	R24_LN_Id       varchar(18) REFERENCES LN_ExperienceLevel(LN_Id) NOT NULL
 );
@@ -425,21 +432,22 @@ CREATE TABLE E4_EntityRequireCertifications ( -- List the Certifications which t
 
 
 CREATE TABLE J1_JobOffers (
-        -- General data
         J1_Id              SERIAL PRIMARY KEY, -- Job Offer identifier
-
         J1_E1_Id           integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Employer identity: being a Person, a Company or a non-profit Organization.
+        J1_CompletedEdition bool DEFAULT 'false', -- The edition has been successfully completed. All checks pass.
+
+        -- General data
 
         J1_EmployerJobOfferReference varchar(30), -- Id used by some entities to identify internally its job offers.
-        J1_OfferDate       date NOT NULL,
-        J1_ExpirationDate  date NOT NULL, -- An offer is active or filed. You can change the state editing the J1_ExpirationDate field. Initially, the expiration date will be 30 days more than the J1_OfferDate. It could be modified later if this web site is well-known and intensively used.
-	J1_Closed          bool NOT NULL DEFAULT 'false', -- An offer is active or closed, that is to say, it does not accept more applicants.
+        J1_OfferDate       date, -- NOT NULL,
+        J1_ExpirationDate  date, -- NOT NULL, -- An offer is active or filed. You can change the state editing the J1_ExpirationDate field. Initially, the expiration date will be 30 days more than the J1_OfferDate. It could be modified later if this web site is well-known and intensively used.
+	J1_Closed          bool DEFAULT 'false', -- An offer is active or closed, that is to say, it does not accept more applicants. -- NOT NULL
 
-        J1_HideEmployer    bool NOT NULL DEFAULT 'false', -- To hide the identity of the job supplier.
+        J1_HideEmployer    bool DEFAULT 'false', -- To hide the identity of the job supplier. -- NOT NULL
 
-        J1_AllowPersonApplications       bool NOT NULL DEFAULT 'false',
-        J1_AllowCompanyApplications      bool NOT NULL DEFAULT 'false',
-        J1_AllowOrganizationApplications bool NOT NULL DEFAULT 'false',
+        J1_AllowPersonApplications       bool DEFAULT 'false', -- NOT NULL
+        J1_AllowCompanyApplications      bool DEFAULT 'false', -- NOT NULL
+        J1_AllowOrganizationApplications bool DEFAULT 'false', -- NOT NULL
 
         -- Offer:
 
@@ -467,10 +475,7 @@ CREATE TABLE J1_JobOffers (
         J1_FreeSoftwareProjects            varchar(60), -- NOT NULL CHECK (J1_FreeSoftwareProjects <> ''),
 
         -- Residence Location
-
-	J1_Telework        bool,
-
-        J1_City            varchar(30),
+        J1_City            varchar(30), -- Do not fill any address field if the offer is Telework.
         J1_StateProvince   varchar(30),
         J1_LO_Country      char(2), -- REFERENCES LO_Countries(LO_TwoLetter) NOT NULL,
 
@@ -480,9 +485,9 @@ CREATE TABLE J1_JobOffers (
         J1_LO_JobLicenseAt   char(2), -- REFERENCES LO_Countries(LO_TwoLetter) -- NOT NULL -- Required license to work at least at that country.
 
 	-- Flags about alerts on job offers
-        J1_NewJobOfferAlert          bool NOT NULL DEFAULT 'true' -- Must the new-job-offer alert be raised on this job offer?: true=Yes, false=No.
-        -- J1_FitMyQualificationsAlert  bool NOT NULL DEFAULT 'true', -- Must the fit-my-qualifications alert be raised on this job offer?: true=Yes, false=No.
-        -- J1_CustomAlert               bool NOT NULL DEFAULT 'true' -- Must the custom alerts be raised on this job offer?: true=Yes, false=No.
+        J1_NewJobOfferAlert          bool DEFAULT 'true' -- Must the new-job-offer alert be raised on this job offer?: true=Yes, false=No. -- NOT NULL
+        -- J1_FitMyQualificationsAlert  bool DEFAULT 'true', -- Must the fit-my-qualifications alert be raised on this job offer?: true=Yes, false=No. -- NOT NULL
+        -- J1_CustomAlert               bool DEFAULT 'true' -- Must the custom alerts be raised on this job offer?: true=Yes, false=No. -- NOT NULL
 );
 
 
@@ -506,7 +511,7 @@ CREATE TABLE R13_JobOffer2ProductProfiles (
 
 CREATE TABLE R14_JobOffer2Skills (
 	R14_J1_Id    integer REFERENCES J1_JobOffers(J1_Id) NOT NULL,
-	R14_LI_Id    varchar(53) REFERENCES LI_Skills(LI_Id) NOT NULL,
+	R14_LI_Id    varchar(153) REFERENCES LI_Skills(LI_Id) NOT NULL,
 	R14_LG_Id    varchar(9) REFERENCES LG_KnowledgeLevel(LG_Id) NOT NULL,
 	R14_LN_Id    varchar(18) REFERENCES LN_ExperienceLevel(LN_Id) NOT NULL
 );
@@ -1275,429 +1280,14 @@ INSERT INTO LT_SkillSetTypes VALUES ( '17', 'Desktop applications' );
 INSERT INTO LT_SkillSetTypes VALUES ( '18', 'Documentation tools' );
 INSERT INTO LT_SkillSetTypes VALUES ( '19', 'Translation tools' );
 
-INSERT INTO LI_Skills VALUES ( 'FreeBSD',							'Operating systems' );
-INSERT INTO LI_Skills VALUES ( 'NetBSD',							'Operating systems' );
-INSERT INTO LI_Skills VALUES ( 'OpenBSD',							'Operating systems' );
-INSERT INTO LI_Skills VALUES ( 'GNU/Hurd',							'Operating systems' );
-INSERT INTO LI_Skills VALUES ( 'GNU/Linux',							'Operating systems' );
-INSERT INTO LI_Skills VALUES ( 'Darwin',							'Operating systems' );
 
-INSERT INTO LI_Skills VALUES ( 'FreeBSD kernel',						'Operating system kernels' );
-INSERT INTO LI_Skills VALUES ( 'NetBSD kernel',							'Operating system kernels' );
-INSERT INTO LI_Skills VALUES ( 'OpenBSD kernel',						'Operating system kernels' );
-INSERT INTO LI_Skills VALUES ( 'GNU Hurd',							'Operating system kernels' );
-INSERT INTO LI_Skills VALUES ( 'Linux',								'Operating system kernels' );
-INSERT INTO LI_Skills VALUES ( 'XNU',								'Operating system kernels' );
 
-INSERT INTO LI_Skills VALUES ( 'Intel x86 / IA-32 (i386)',					'Hardware architectures' );
-INSERT INTO LI_Skills VALUES ( 'Motorola 68k (m68k)',						'Hardware architectures' );
-INSERT INTO LI_Skills VALUES ( 'Sun SPARC (sparc)',						'Hardware architectures' );
-INSERT INTO LI_Skills VALUES ( 'Alpha (alpha)',							'Hardware architectures' );
-INSERT INTO LI_Skills VALUES ( 'Motorola/IBM PowerPC (powerpc)',				'Hardware architectures' );
-INSERT INTO LI_Skills VALUES ( 'ARM (arm)',							'Hardware architectures' );
-INSERT INTO LI_Skills VALUES ( 'MIPS CPUs (mips and mipsel)',					'Hardware architectures' );
-INSERT INTO LI_Skills VALUES ( 'HP PA-RISC (hppa)',						'Hardware architectures' );
-INSERT INTO LI_Skills VALUES ( 'IA-64 (ia64)',							'Hardware architectures' );
-INSERT INTO LI_Skills VALUES ( 'S/390 (s390)',							'Hardware architectures' );
+INSERT INTO LH_Skills VALUES ( 'Free' );
+INSERT INTO LH_Skills VALUES ( 'Non-Free' );
+INSERT INTO LH_Skills VALUES ( 'Pending' );
+INSERT INTO LH_Skills VALUES ( 'Unknown' );
 
-INSERT INTO LI_Skills VALUES ( 'Extreme Programming (XP)',					'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'Industrial Extreme Programming(IXP)',				'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'Scrum',								'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'Agile Modeling (AM)',						'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'Adaptive Software Development (ASD)',				'Software engineering methodologies' );
--- INSERT INTO LI_Skills VALUES ( 'Rapid Application Development (RAD)',			'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'Crystal Clear',							'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'Dynamic Systems Development Method (DSDM)',			'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'Feature Driven Development (FDD)',				'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'Lean Software Development',					'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'Agile Unified Process (AUP)',					'Software engineering methodologies' );
--- INSERT INTO LI_Skills VALUES ( 'Rational Unified Process (RUP)',				'Software engineering methodologies' );
-   -- INSERT INTO LI_Skills VALUES ( 'Enterprise Unified Process (EUP)',			'Software engineering methodologies' );
--- INSERT INTO LI_Skills VALUES ( 'Open Unified Process (OpenUP)',				'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'Dialogue-Driven Development (d3)',				'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'Structured Systems Analysis and Design Method (SSADM)',		'Software engineering methodologies' );
-INSERT INTO LI_Skills VALUES ( 'PRojects IN Controlled Environments (PRINCE2)',			'Software engineering methodologies' );
 
--- Patterns: Reference: http://www.cmcrossroads.com/bradapp/docs/patterns-intro.html
-INSERT INTO LI_Skills VALUES ( 'Model View Controller (MVC)',					'Architectural Patterns' );
-INSERT INTO LI_Skills VALUES ( 'Presentation-abstraction-control (PAC)',			'Architectural Patterns' );
-INSERT INTO LI_Skills VALUES ( 'Hierarchical-Model-View-Controller (HMVC)',			'Architectural Patterns' );
-
-INSERT INTO LI_Skills VALUES ( 'Client/Server',							'Architectural Patterns' );
-INSERT INTO LI_Skills VALUES ( 'Client/SOA',							'Architectural Patterns' );
-INSERT INTO LI_Skills VALUES ( 'Multi-Tier (n-tier)',						'Architectural Patterns' );
-INSERT INTO LI_Skills VALUES ( 'Peer-to-Peer (P2P)',						'Architectural Patterns' );
-INSERT INTO LI_Skills VALUES ( 'Thin client',							'Architectural Patterns' );
-
-INSERT INTO LI_Skills VALUES ( 'Open Systems Interconnection (OSI)',				'Architectural Patterns' ); -- XXX: We are not sure if this is an Architectural Patterns
-INSERT INTO LI_Skills VALUES ( 'Common Object Request Broker Architecture (CORBA)',		'Architectural Patterns' ); -- XXX: We are not sure if this is an Architectural Patterns
-INSERT INTO LI_Skills VALUES ( 'Service-Oriented Architecture (SOA)',				'Architectural Patterns' ); -- XXX: We are not sure if this is an Architectural Patterns
-
-INSERT INTO LI_Skills VALUES ( 'Representational State Transfer (REST)',			'Architectural Patterns' );
-
-INSERT INTO LI_Skills VALUES ( 'All Design Patterns',						'Design Patterns' );
--- INSERT INTO LI_Skills VALUES ( 'Creational Patterns',					'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Abstract Factory',					'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Builder',							'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Factory Method',						'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Prototype',						'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Singlenton',						'Design Patterns' );
--- INSERT INTO LI_Skills VALUES ( 'Structural Patterns',					'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Adapter',							'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Bridge',							'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Composite',						'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Decorator',						'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Facade',							'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Flyweight',						'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Proxy',							'Design Patterns' );
--- INSERT INTO LI_Skills VALUES ( 'Behavioral Patterns',					'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Chain of Responsibility',					'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Command',							'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Interpreter',						'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Iterator',						'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Mediator',						'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Memento',							'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Observer',						'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'State',							'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Strategy',						'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Template Method',						'Design Patterns' );
-   -- INSERT INTO LI_Skills VALUES ( 'Visitor',							'Design Patterns' );
-
-INSERT INTO LI_Skills VALUES ( 'AWK',								'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Ada',								'Development formal languages' ); -- Ada83 is not the same than Ada95.
-INSERT INTO LI_Skills VALUES ( 'Assembler (ASM)',						'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'C',								'Development formal languages' ); -- FP  -- ANSI C is not the same than ... XXX: Think about it.
-INSERT INTO LI_Skills VALUES ( 'C#',								'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'C++',								'Development formal languages' ); -- OOP
-INSERT INTO LI_Skills VALUES ( 'Caml',								'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'COBOL',								'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Eiffel',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Forth',								'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Fortran',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Haskell',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Java',								'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'JavaScript',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Lisp',								'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Objective C',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Objective Caml',						'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Pascal',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Perl',								'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'PHP',								'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Prolog',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Python',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Ruby',								'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Scheme',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Shell script',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'SmallEiffel',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'SmallTalk',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Standard ML (SML)',						'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Structured Query Language (SQL)',				'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'Tcl/Tk',							'Development formal languages' );
-INSERT INTO LI_Skills VALUES ( 'OTcl',								'Development formal languages' );
-
-INSERT INTO LI_Skills VALUES ( 'Unified Modeling Language (UML)',				'Development specification languages' );
-INSERT INTO LI_Skills VALUES ( 'Interface Description Language (IDL)',				'Development specification languages' );
-
-INSERT INTO LI_Skills VALUES ( 'ANTLR',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'GNU Autoconf',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'GNU Automake',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'GNU Libtool',							'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'CMake',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'GNU Make',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'SCons',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Apache Ant',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Apache Maven',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Apache Gump',							'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'GDB',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Valgrind',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'GProf',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'KProf',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Graphviz',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'User-Mode Linux',						'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'JMeter',							'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'Lex',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Yacc',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Flex',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Bison',								'Development tools' );
-
--- Configuration management tools including revision control
-INSERT INTO LI_Skills VALUES ( 'RCS',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'CVS',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'GNU Arch',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Git',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Cogito',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Subversion',							'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'Bugzilla',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'GNU GNATS',							'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'ht://Dig',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'SWISH++',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'SWISH-E',							'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'GNU Emacs',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'vi',								'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'Anjuta',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Eclipse',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'MonoDevelop',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'KDevelop',							'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'Qt Designer',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Glade',								'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'i18n tools',							'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'Propel',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Hibernate',							'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'JGroups',							'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'HttpComponents',						'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'BCEL',								'Development tools' );
-INSERT INTO LI_Skills VALUES ( 'Apache XMLBeans',						'Development tools' );
-
-INSERT INTO LI_Skills VALUES ( 'ADOdb',								'Development libraries' );
-
-INSERT INTO LI_Skills VALUES ( 'Apache Portable Runtime (APR)',					'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'neon',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'Netscape Portable Runtime (NSPR)',				'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'SpiderMonkey',							'Development libraries' );
-
-INSERT INTO LI_Skills VALUES ( 'ECS',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'Taglibs',							'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'Apache Xerces',							'Development libraries' );
-
-INSERT INTO LI_Skills VALUES ( 'GNU C Library',							'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'GNU mifluz',							'Development libraries' );
-
-INSERT INTO LI_Skills VALUES ( 'KDE',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'GNOME',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'GTK+',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'Motif/LessTiff',						'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'OpenGL',							'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'Qt',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'Xaw',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'X11',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'Xt',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'wxWidgets',							'Development libraries' );
-
-INSERT INTO LI_Skills VALUES ( 'GMime',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'GDOME',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'MCrypt',							'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'Mhash',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'ORBit',								'Development libraries' );
-
-INSERT INTO LI_Skills VALUES ( 'GRASS GIS library',						'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'GNU Scientific Library (GSL)',					'Development libraries' );
-
-INSERT INTO LI_Skills VALUES ( 'Standard Template Library (STL)',				'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'XPToolkit',							'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'GSL',								'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'Threads',							'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'Sockets',							'Development libraries' );
-INSERT INTO LI_Skills VALUES ( 'Inter-Process Communication (IPC)',				'Development libraries' );
-
-INSERT INTO LI_Skills VALUES ( 'Regular Expressions',						'Development libraries' );
-
-INSERT INTO LI_Skills VALUES ( 'Apache Excalibur Fortress',					'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Apache Avalon',							'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'BSF',								'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Cactus',							'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Apache Cocoon',							'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'HiveMind',							'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'iBATIS',							'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Keel',								'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Apache MyFaces',						'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Apache Shale',							'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Smarty',							'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Apache Struts',							'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Apache Tapestry',						'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Turbine',							'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Spring',							'Development frameworks' ); -- Apache License, Version 2.0
-INSERT INTO LI_Skills VALUES ( 'Velocity',							'Development frameworks' );
-
-INSERT INTO LI_Skills VALUES ( 'GridSphere',							'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Apache Jetspeed',						'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Apache Jakarta Slide',						'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'Stringbeans',							'Development frameworks' );
-
-INSERT INTO LI_Skills VALUES ( 'GNUstep',							'Development frameworks' );
-INSERT INTO LI_Skills VALUES ( 'PRADO',								'Development frameworks' );
-
-INSERT INTO LI_Skills VALUES ( 'Asynchronous JavaScript and XML (AJAX)',			'Development techniques' );
-
-INSERT INTO LI_Skills VALUES ( 'TestNG',							'Testing frameworks' ); -- Apache License, Version 2.0
-
--- Specifications
-   -- Note that a Specification can be Standarized, but it is anyway a Specification.
-
-INSERT INTO LI_Skills VALUES ( 'Common Gateway Interface (CGI)',				'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Hypertext Markup Language (HTML)',				'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'eXtended HyperText Markup Language (XHTML)',			'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Standard Generalized Markup Language (SGML)',			'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Extensible Markup Language (XML)',				'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Extensible Stylesheet Language (XSL)',				'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Extensible Stylesheet Language Transformations (XSLT)',		'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Scalable Vector Graphics (SVG)',				'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Document Object Model (DOM)',					'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Cascading Style Sheets (CSS)',					'Specifications' );
-
-INSERT INTO LI_Skills VALUES ( 'XML Path Language (XPath)',					'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'XML Query Language (XQuery)',					'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'XML Pointer Language (XPointer)',				'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'XPointer Framework',						'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'XML Linking Language (XLink)',					'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'XML Binding Language (XBL)',					'Specifications' );
-
-INSERT INTO LI_Skills VALUES ( 'XForms',							'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'XFrames',							'Specifications' );
-
-INSERT INTO LI_Skills VALUES ( 'Voice Extensible Markup Language (VoiceXML)',			'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Voice Browser Call Control (CCXML)',				'Specifications' );
-
-INSERT INTO LI_Skills VALUES ( 'Dynamic HTML (DHTML)',						'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'XML Schema',							'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Document Type Definition (DTD)',				'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Resource Description Framework (RDF)',				'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'XML User-Interface Language (XUL)',				'Specifications' );
-
-INSERT INTO LI_Skills VALUES ( 'Simple Object Access Protocol (SOAP)',				'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Web Services Description Language (WSDL)',			'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Enterprise Java Beans (EJB)',					'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Java Servlet',							'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Java Server Pages (JSP)',					'Specifications' );
-INSERT INTO LI_Skills VALUES ( 'Portlet',							'Specifications' );
-
-INSERT INTO LI_Skills VALUES ( 'Web Services for Remote Portlets (WSRP)',			'Specifications' );
-
-INSERT INTO LI_Skills VALUES ( 'Unicode',							'Specifications' );
-
--- OSI Application layer
-INSERT INTO LI_Skills VALUES ( 'Domain Name System (DNS)',					'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Transport Layer Security (TLS)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Secure Socket Layer (SSL)',					'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Trivial File Transfer Protocol (TFTP)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'File Transfer Protocol (FTP)',					'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Hypertext Transfer Protocol (HTTP)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Internet Message Access Protocol (IMAP)',			'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Internet Relay Chat (IRC)',					'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Network News Transfer Protocol (NNTP)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Post Office Protocol 3 (POP3)',					'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Simple Mail Transfer Protocol (SMTP)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Simple Network Management Protocol (SNMP)',			'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Secure SHell (SSH)',						'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'TELNET',							'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'BitTorrent',							'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'RLOGIN',							'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Network Information Service (NIS)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Network File System (NFS)',					'Network protocols' );
-
--- OSI Presentation layer
-   -- Codecs
-
--- OSI Session layer
-INSERT INTO LI_Skills VALUES ( 'Session Initiation Protocol (SIP)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Media Gateway Control Protocol (MGCP)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Simple Gateway Control Protocol (SGCP)',			'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Inter-Asterisk eXchange (IAX)',					'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'H.323',								'Network protocols' );
-
-INSERT INTO LI_Skills VALUES ( 'Remote Procedure Call (RPC)',					'Network protocols' );
-
--- OSI Transport layer
-INSERT INTO LI_Skills VALUES ( 'Transmission Control Protocol (TCP)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'User Datagram Protocol (UDP)',					'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Datagram Congestion Control Protocol (DCCP)',			'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Stream Control Transmission Protocol (SCTP)',			'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'IL',								'Network protocols' );
--- INSERT INTO LI_Skills VALUES ( 'Reliable User Datagram Protocol (RUDP)',			'Network protocols' ); -- This is a Cisco-proprietary protocol
-INSERT INTO LI_Skills VALUES ( 'Sequenced Packet eXchange (SPX)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Real-Time Transport Protocol (RTP)',				'Network protocols' );
-
--- OSI Network layer
-INSERT INTO LI_Skills VALUES ( 'Internet Protocol (IP)',					'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Internet Control Message Protocol (ICMP)',			'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Internet Group Management Protocol (IGMP)',			'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Address Resolution Protocol (ARP)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Reverse Address Resolution Protocol (RARP)',			'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Dynamic Host Configuration Protocol (DHCP)',			'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Internetwork Packet eXchange (IPX)',				'Network protocols' );
-
--- OSI Data Link layer
-INSERT INTO LI_Skills VALUES ( 'Ethernet',							'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Wi-Fi',								'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Token ring',							'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Point-to-Point Protocol (PPP)',					'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'MultiLink Point-to-Point Protocol (MLP)',			'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Serial Line Internet Protocol (SLIP)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Fiber Distributed Data Interface (FDDI)',			'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Asynchronous Transfer Mode (ATM)',				'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'DTM',								'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Frame Relay',							'Network protocols' );
-INSERT INTO LI_Skills VALUES ( 'Switched Multimegabit Data Service (SMDS)',			'Network protocols' );
-
-INSERT INTO LI_Skills VALUES ( 'Apache Geronimo',						'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'Apache HTTP',							'Network servers' );
--- INSERT INTO LI_Skills VALUES ( 'Server Side Includes (SSI)',					'???' );
-INSERT INTO LI_Skills VALUES ( 'ApacheDS',							'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'BIND',								'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'INN',								'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'JBoss',								'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'JCS',								'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'OpenLDAP',							'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'Samba',								'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'Squid',								'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'Apache Tomcat',							'Network servers' );
-
-INSERT INTO LI_Skills VALUES ( 'Asterisk',							'Network servers' );
-
--- Mail Transport Agent (MTA)
-INSERT INTO LI_Skills VALUES ( 'Exim',								'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'Postfix',							'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'Sendmail',							'Network servers' );
-
--- Relational databases
-INSERT INTO LI_Skills VALUES ( 'Firebird',							'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'MySQL',								'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'PostgreSQL',							'Network servers' );
-
---  XML-based databases  or  XML-enabled databases ?
-INSERT INTO LI_Skills VALUES ( 'eXist',								'Network servers' );
-INSERT INTO LI_Skills VALUES ( '4suite',							'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'Sedna',								'Network servers' );
-INSERT INTO LI_Skills VALUES ( 'Apache Xindice',						'Network servers' );
-
-INSERT INTO LI_Skills VALUES ( 'Firewalls',							'Network tools' );
-INSERT INTO LI_Skills VALUES ( 'Monitoring',							'Network tools' ); -- XXX: Nagios, etc.
-INSERT INTO LI_Skills VALUES ( 'OpenSSL',							'Network tools' );
-INSERT INTO LI_Skills VALUES ( 'Sniffers',							'Network tools' ); -- XXX: These entries are abstract descriptions
-INSERT INTO LI_Skills VALUES ( 'Scanners',							'Network tools' );
-
--- graphics
-INSERT INTO LI_Skills VALUES ( 'Blender',							'Desktop applications' );
-INSERT INTO LI_Skills VALUES ( 'The Gimp',							'Desktop applications' );
-
-INSERT INTO LI_Skills VALUES ( 'Gnuplot',							'Desktop applications' ); -- Applications for graphic visualization
-INSERT INTO LI_Skills VALUES ( 'GNU Octave',							'Desktop applications' );
-INSERT INTO LI_Skills VALUES ( 'MayaVi',							'Desktop applications' );
-INSERT INTO LI_Skills VALUES ( 'Maxima',							'Desktop applications' );
-
--- INSERT INTO LI_Skills VALUES ( 'UML editors',						'Analisys and Design tools' );
-   -- INSERT INTO LI_Skills VALUES ( 'ArgoUML',							'Analisys and Design tools' );
-   -- INSERT INTO LI_Skills VALUES ( 'BOUML',							'Analisys and Design tools' );
-   -- INSERT INTO LI_Skills VALUES ( 'Umbrello',						'Analisys and Design tools' );
-   -- INSERT INTO LI_Skills VALUES ( 'Dia',							'Analisys and Design tools' );
--- INSERT INTO LI_Skills VALUES ( 'Computer Aided Software Engineering (CASE)',			'Analisys and Design tools' );
-
-INSERT INTO LI_Skills VALUES ( 'Doxygen',							'Documentation tools' );
-INSERT INTO LI_Skills VALUES ( 'LaTeX',								'Documentation tools' );
-INSERT INTO LI_Skills VALUES ( 'Texinfo',							'Documentation tools' );
-
-INSERT INTO LI_Skills VALUES ( 'gettext',							'Translation tools' );
 
 -- These registers must be inserted in sort according to the value of the first field:
 INSERT INTO LG_KnowledgeLevel VALUES ( 'Null',                '00' );
