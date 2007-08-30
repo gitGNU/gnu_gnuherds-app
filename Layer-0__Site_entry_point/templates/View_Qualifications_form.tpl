@@ -61,12 +61,12 @@ Suite 225, San Francisco, CA 94107, USA
 	{/if}
 {/if}
 
-{if $smarty.session.ViewEntityType eq 'Company' }
+{if $smarty.session.ViewEntityType eq 'Company' and trim($smarty.session.ViewCompanyName) neq ''}
 	<!-- Company's name -->
 	<strong>{$smarty.session.ViewCompanyName}</strong><br>
 {/if}
 
-{if $smarty.session.ViewEntityType eq 'non-profit Organization' }
+{if $smarty.session.ViewEntityType eq 'non-profit Organization' and trim($smarty.session.ViewNonprofitName) neq ''}
 	<!-- non-profit Organization's name -->
 	<strong>{$smarty.session.ViewNonprofitName}</strong><br>
 {/if}
@@ -79,14 +79,14 @@ Suite 225, San Francisco, CA 94107, USA
 <br>
 
 <!-- Address -->
-{$smarty.session.ViewStreet}{if trim($smarty.session.ViewStreet) neq '' and trim($smarty.session.ViewSuite) neq ''}, {/if}{$smarty.session.ViewSuite}<br>
+{if trim($smarty.session.ViewStreet) neq ''}{$smarty.session.ViewStreet}{if trim($smarty.session.ViewStreet) neq '' and trim($smarty.session.ViewSuite) neq ''}, {/if}{$smarty.session.ViewSuite}<br>{/if}
 
-{$smarty.session.ViewPostalCode}
+{if trim($smarty.session.ViewPostalCode) neq ''}{$smarty.session.ViewPostalCode}{/if}
 {if trim($smarty.session.ViewPostalCode) neq '' and trim($smarty.session.ViewCity) neq ''} - {/if}
-{$smarty.session.ViewCity}
+{if trim($smarty.session.ViewCity) neq ''}{$smarty.session.ViewCity}{/if}
 {if trim($smarty.session.ViewPostalCode) neq '' or  trim($smarty.session.ViewCity) neq ''} <br> {/if}
 
-{$smarty.session.ViewStateProvince}{if trim($smarty.session.ViewStateProvince) neq ''}, {/if}<strong>{t}{$smarty.session.ViewCountryName}{/t}</strong><br>
+{if trim($smarty.session.ViewStateProvince) neq ''}{$smarty.session.ViewStateProvince}{if trim($smarty.session.ViewStateProvince) neq ''}, {/if}{if trim($smarty.session.ViewCountryName) neq ''}<strong>{t}{$smarty.session.ViewCountryName}{/t}</strong><br>{/if}{/if}
 
 <br>
 
