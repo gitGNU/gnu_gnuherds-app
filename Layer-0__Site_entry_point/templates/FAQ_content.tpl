@@ -26,7 +26,7 @@ Suite 225, San Francisco, CA 94107, USA
 <li><a href="#How_to_subscribe_to_a_job_offer?" style='text-decoration: none;'>{t}How to subscribe to a job offer?{/t}</a>
 <li><a href="#Who_can_subscribe_to_a_job_offer?" style='text-decoration: none;'>{t}Who can subscribe to a job offer?{/t}</a>
 <li><a href="#Who_can_post_a_job_offer?" style='text-decoration: none;'>{t}Who can post a job offer?{/t}</a>
-<li><a href="#How_is_the_Job_Site_module_related_to_the_GNU_Herds_Association?" style='text-decoration: none;'>{t}How is the Job Site module related to the GNU Herds Association?{/t}</a>
+<li><a href="#How_is_the_Job_Site_module_related_to_the_GNU_Herds_association?" style='text-decoration: none;'>{t}How is the Job Site module related to the GNU Herds association?{/t}</a>
 <li><a href="#e-Voting" style='text-decoration: none;'>{t}e-Voting{/t}</a>
 </ol>
 
@@ -45,7 +45,7 @@ Suite 225, San Francisco, CA 94107, USA
 		<li> {t escape='no'
 		  1='<a href="http://www.gnu.org/licenses/agpl.html">'
 		  2='</a>'
-		}Use a license to cover use of the software over a computer network. The current %1Affero GPL%2 license will be replaced by the GPL v3 license when it be released. Anyhow, the project is always open to discuss this and any other subject.{/t}
+		}Use a license to cover use of the software over a computer network. The current %1Affero GPL%2 license will be upgraded to the GNU AGPL license when it be released. Anyhow, the project is always open to discuss this and any other subject.{/t}
 
 		<li> {t escape='no'
 		  1='<a href="/doc/GNUHerds__ER__Logical-model.png">'
@@ -65,7 +65,7 @@ Suite 225, San Francisco, CA 94107, USA
 	{t escape='no'
 	  1='<a href="charter#Aims">'
 	  2='</a>'
-	}All this taking into account that: "The %1aims%2 of the Association shall be to encourage the professional development of Free Software contributors."{/t}
+	}All this taking into account that: "The %1aims%2 of the Association shall be to assist and encourage persons in their professional capacity as Free Software contributors."{/t}
 	</p>
 
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
@@ -155,18 +155,14 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>5. {t}How is the Job Site module related to the GNU Herds Association?{/t}<a name="How_is_the_Job_Site_module_related_to_the_GNU_Herds_Association?"></a> </h4>
+<h4>5. {t}How is the Job Site module related to the GNU Herds association?{/t}<a name="How_is_the_Job_Site_module_related_to_the_GNU_Herds_association?"></a> </h4>
 
 	<p>
 	{t escape='no'
 	  1='<a href="#Why_another_Job_Site?">'
 	  2='</a>'
-	}The Job Site module is %1controlled%2 by the Association.{/t}
+	}The Job Site module is %1controlled%2 by the association. Any new module will be controlled by the association too.{/t}
 	</p>
-
-	<p>&nbsp;</p>
-
-	<a href="/doc/GNUHerds__ER__Logical-model.png"><img src="/doc/GNUHerds__ER__Logical-model.scaled.png" align="middle" alt="" border="0" hspace="0" vspace="0"></a>
 
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
