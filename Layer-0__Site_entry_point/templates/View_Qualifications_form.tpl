@@ -18,9 +18,16 @@ software in the ./AfferoGPL file; if not, write to Affero Inc., 510 Third Street
 Suite 225, San Francisco, CA 94107, USA
 *}
 
-<form name="qualificationsForm" method="post" action="resume">
-
 <table align="center">
+
+{if $smarty.get.EntityId eq $smarty.session.EntityId and $smarty.session.ViewCompletedEdition eq 'f' }
+	<tr align="center">
+	<td colspan="5" align="center"><span class="modification">{t}The edition of these qualifications is not finished! It does not comply the minimum requisites to allow it subscribe to offers.{/t}</span></td>
+	</tr>
+
+	<tr> <td colspan="5">&nbsp;</td> </tr> 
+	<tr> <td colspan="5">&nbsp;</td> </tr> 
+{/if}
 
 <tr valign="top">
 <td>
@@ -107,16 +114,47 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 </td>
+
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+
+{if $smarty.session.LoginType eq 'Person' }
+	{assign var="Entity" value="person"}
+{/if}
+{if $smarty.session.LoginType eq 'Company' }
+	{assign var="Entity" value="company"}
+{/if}
+{if $smarty.session.LoginType eq 'non-profit Organization' }
+	{assign var="Entity" value="nonprofit"}
+{/if}
+
+<td class="edit"><a href="{$Entity}" title="{t}Edit section{/t}: {t}{$smarty.session.ViewEntityType}{/t}">{t}edit{/t}</a></td>
+
+{/if}
+
 </tr>
 
 
-<tr> <td colspan="4">&nbsp;</td> </tr> 
+<tr>
+<td colspan="4">&nbsp;</td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr> 
 
-<tr> <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td> </tr>
+<tr>
+<td colspan="4" class="subsection">{t}TECHNICAL{/t}</td>
+
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=profiles_etc" title="{t}Edit section{/t}: {t}TECHNICAL{/t}">{t}edit{/t}</a></td>
+{/if}
+</tr>
 
 <tr>
 <td align="right"><strong>{'Professional experience since'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="greenLight">{$smarty.session.ViewProfessionalExperienceSinceYear}</td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Professional experience since{/t}">{t}edit{/t}</a></td>
+{/if}
 </tr>
 
 {if $smarty.session.ViewEntityType eq 'Person' }
@@ -129,6 +167,9 @@ Suite 225, San Francisco, CA 94107, USA
 	{t}none{/t}
 {/if}
 </td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Academic qualification{/t}">{t}edit{/t}</a></td>
+{/if}
 </tr>
 {/if}
 
@@ -165,6 +206,10 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 </td>
 
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Profiles{/t}">{t}edit{/t}</a></td>
+{/if}
+
 </tr>
 
 <tr valign="top">
@@ -190,6 +235,11 @@ Suite 225, San Francisco, CA 94107, USA
 	{$experienceLevel|gettext|strip:'&nbsp;'}<br>
 {/foreach}
 </td>
+
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=skills" title="{t}Edit section{/t}: {t}Skills{/t}">{t}edit{/t}</a></td>
+{/if}
+
 {/if}
 
 </tr>
@@ -215,8 +265,13 @@ Suite 225, San Francisco, CA 94107, USA
 {/foreach}
 </td>
 
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=languages" title="{t}Edit section{/t}: {t}Languages{/t}">{t}edit{/t}</a></td>
+{/if}
+
 </tr>
-{*
+
+{* The certifications feature is disabled
 <tr valign="top">
 <td align="right"><strong>{t}Certifications{/t}</strong> : <br> </td>
 <td colspan="3" class="greenDark">
@@ -232,8 +287,14 @@ Suite 225, San Francisco, CA 94107, USA
 	{t}none{/t}
 {/if}
 </td>
+
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=certifications" title="{t}Edit section{/t}: {t}Certifications{/t}">{t}edit{/t}</a></td>
+{/if}
+
 </tr>
 *}
+
 <tr valign="top">
 <td align="right"><strong>{'Contributions to FS projects'|gettext|strip:'&nbsp;'}</strong>&nbsp;: <br> </td>
 <td colspan="3" class="greenDark">
@@ -245,17 +306,30 @@ Suite 225, San Francisco, CA 94107, USA
 	{t}none{/t}
 {/if}
 </td>
+
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=projects" title="{t}Edit section{/t}: {t}Contributions to FS projects{/t}">{t}edit{/t}</a></td>
+{/if}
+
 </tr>
 
 {if $smarty.session.ViewEntityType eq 'Person' }
 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
 
-<tr> <td colspan="4" class="subsection">{t}CONTRACT{/t}</td> </tr>
+<tr>
+<td colspan="4" class="subsection">{t}CONTRACT{/t}</td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=contract" title="{t}Edit section{/t}: {t}CONTRACT{/t}">{t}edit{/t}</a></td>
+{/if}
+</tr>
 
 <tr>
 <td align="right"><strong>{t}Desired contract type{/t}</strong> : </td>
 <td colspan="3" class="greenLight">{t}{$smarty.session.ViewDesiredContractType}{/t}</td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
 </tr>
 
 <tr>
@@ -265,16 +339,32 @@ Suite 225, San Francisco, CA 94107, USA
 ({t}{$smarty.session.ViewWageRankCurrencyName}{/t})
 {t}{$smarty.session.ViewWageRankByPeriod}{/t}{if trim($smarty.session.ViewDesiredWageRank) neq ''}. [{t}Minimum{/t}-{t}Optimum{/t}]{/if}
 </td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
 </tr>
 
 <tr>
 <td align="right"><strong>{t}Current employability{/t}</strong> : </td>
 <td colspan="3" class="greenLight">{t}{$smarty.session.ViewCurrentEmployability}{/t}</td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
 </tr>
 
-<tr> <td colspan="4">&nbsp;</td> </tr> 
+<tr>
+<td colspan="4">&nbsp;</td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr> 
 
-<tr> <td colspan="4" class="subsection">{t}LOCATION{/t}</td> </tr>
+<tr>
+<td colspan="4" class="subsection">{t}LOCATION{/t}</td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=location" title="{t}Edit section{/t}: {t}LOCATION{/t}">{t}edit{/t}</a></td>
+{/if}
+</tr>
 
 <tr valign="top">
 <td align="right"><strong>{t}Available to travel{/t}</strong> : </td>
@@ -285,6 +375,9 @@ Suite 225, San Francisco, CA 94107, USA
 {t}Yes{/t}
 {/if}
 </td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
 </tr>
 
 <tr valign="top">
@@ -296,11 +389,26 @@ Suite 225, San Francisco, CA 94107, USA
 {t}Yes{/t}
 {/if}
 </td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
 </tr>
 
 {/if}
 
-</table>
 
-</form>
+{if $smarty.get.EntityId eq $smarty.session.EntityId }
+		<tr> <td colspan="5">&nbsp;</td> </tr> 
+		<tr> <td colspan="5">&nbsp;</td> </tr> 
+
+		<tr align="center">
+		<td colspan="5" align="center">
+		<form name="deleteQualificationsForm" method="post" action="resume?id={$smarty.get.EntityId}">
+		<input type="submit" name="delete" value="{t}Delete qualifications{/t}" title="{t}Delete qualifications from the data base{/t}">
+		</form>
+		</td>
+		</tr>
+{/if}
+
+</table>
 
