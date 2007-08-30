@@ -26,18 +26,55 @@ class JobOfferForm
 {
 	private $manager;
 	private $checks;
-	private $processingResult;
+	private $checkresults;
+	private $section2view;
+	private $section2control;
+	private $data;
 
 
 	function __construct()
 	{
 		$this->manager = new DBManager();
-		$this->processingResult = '';
 	}
 
 
 	public function processForm()
 	{
+		// Find out the section we have to show to the user
+		if ( $_POST['jump'] != '' )
+			$this->section2view = $_POST['jump'];
+		elseif ( $_POST['previous'] == gettext('Previous') )
+			$this->section2view = $_POST['jump2previous'];
+		elseif ( $_POST['next'] == gettext('Next') )
+			$this->section2view = $_POST['jump2next'];
+		elseif ( $_POST['finish'] == gettext('Finish') )
+			$this->section2view = $_POST['section2control']; // The section to show is the same than the section to process
+		elseif ( $_POST['more'] == gettext('More') )
+			$this->section2view = $_POST['section2control'];
+		elseif ( $_GET['section'] != '' )
+			$this->section2view = $_GET['section']; // Edit section via GET request
+		elseif ( $_GET['JobOfferId'] == '' )
+			$this->section2view = 'general'; // GET request: Submit from the language change form. Updating job offer
+		else
+			$this->section2view = 'general'; // GET request: Submit from the language change form. Creating job offer
+
+		// Find out the section to process
+		if ( $_POST['section2control'] != '' )
+			$this->section2control = $_POST['section2control'];
+		else
+			$this->section2control = ''; // GET request from language change, POST request from "New offer", etc.
+
+		// Find out the JobOfferId. It is used at saveJobOfferForm() and at the Smarty templates
+		if ( $_GET['JobOfferId'] != '' )
+			$_SESSION['JobOfferId'] = $_GET['JobOfferId']; // Updating a job offer
+		elseif ( $_POST['new'] == gettext('New offer') )
+			$_SESSION['JobOfferId'] = ''; // Create the first section of a new job offer
+		elseif ( $_SESSION['JobOfferId'] != '' )
+			; // After being created at least the first section of a new job offer
+		else
+			; // We are trying to create the first section of a job offer
+
+
 		// Check the log in state
 		if ( $_SESSION['Logged'] == '1' )
 		{
@@ -47,8 +84,18 @@ class JobOfferForm
 				throw new Exception($error,false);
 			}
 
-			if ( $_POST['back'] != gettext('Back') and $_GET['JobOfferId'] != '' ) // $back='Back' exposes we are along a no finished operation, so we do not overrride the transitional $_SESSION variable values loading from the data base table.
+			if ( $_SESSION['JobOfferId'] != '' ) // We load the data from the data base and later overwrite it with the POST variables if it is needed. If JobOfferId comes from $_SESSION['JobOfferId'] we have to call to the loadJobOfferForm method too.
+			{
 			 	$this->loadJobOfferForm();
+			}
+			else
+			{
+				// Reset the visited-marks set by a previous qualifications edition
+				$_SESSION['VisitedJobOffer_skills'] = false;
+				$_SESSION['VisitedJobOffer_certifications'] = false;
+				$_SESSION['VisitedJobOffer_projects'] = false;
+				$_SESSION['VisitedJobOffer_location'] = false;
+			}
 		}
 		else
 		{
@@ -57,30 +104,21 @@ class JobOfferForm
 		}
 
 		// Process each button event
-		if     ( count($_GET)==0 ) // new
+		if ( isset($_POST['new']) and $_POST['new'] == gettext('New offer') ) // new
 		{
-			// No GET request: A simple request to this URI has arrived.
-			$this->resetFormSessionVars();
 		}
-		elseif ( isset($_POST['new']) and $_POST['new'] == gettext('New offer') ) // new
+		elseif ( $_POST['previous'] == gettext('Previous') or $_POST['next'] == gettext('Next') or $_POST['jump'] != '' or $_POST['finish'] == gettext('Finish') or $_POST['more'] == gettext('More') ) // update
 		{
-			$this->resetFormSessionVars();
-		}
-		elseif ( isset($_POST['save']) and $_POST['save'] == gettext('Save') ) // update
-		{
+			// POST request from *_form.tpl: Edit JobOfferId
 			$this->saveJobOfferForm();
 		}
-		elseif ( count($_GET)==1 and isset($_GET['JobOfferId']) and $_GET['JobOfferId'] != '' )
+		elseif ( count($_GET)==2 and isset($_GET['JobOfferId']) and $_GET['JobOfferId'] != '' and isset($_GET['section']) and $_GET['section'] != '' ) // edit
 		{
-			// GET request from Manage_Job_Offers_form.tpl: Edit JobOfferId
+			// GET request from View_Job_Offer_form.tpl: Edit JobOfferId
 		}
-		elseif ( isset($_POST['back']) and $_POST['back'] == gettext('Back') )
+		elseif ( isset($_GET['language']) ) // change language
 		{
-			// POST request: The 'Back' button has been clicked.
-		}
-		elseif ( isset($_GET['language']) )
-		{
-			// POST request: Submit from the language change form.
+			// GET request: Submit from the language change form
 		}
 		else
 		{
@@ -92,11 +130,16 @@ class JobOfferForm
 
 	public function printOutput()
 	{
-		if ( $_POST['save'] == gettext('Save') and $this->checks['result'] == "pass" )
-			echo $this->processingResult;
+		if ( $_POST['finish'] == gettext('Finish') and $this->checks['result'] == "pass" )
+		{
+			header('Location: /offers?id='.$_SESSION['JobOfferId']); // We reditect to the view-offer web page
+			exit;
+		}
 		else
+		{
 			$this->printJobOfferForm();
-	}
+		}
+        }
 
 
 	private function printJobOfferForm()
@@ -110,277 +153,286 @@ class JobOfferForm
 		//   3. It is set in the smarty templates.
 
 
-		$academicQualifications = $this->manager->getAcademicQualificationsList();
+		$section = $this->section2view;
 
-		$smarty->assign('academicQualificationsId', array_merge( array(""), array_keys($academicQualifications) ) );
-		$smarty->assign('academicQualificationsIdTranslated', array_merge( array(""), array_values($academicQualifications) ) );
+		// If there is section to control and its checks has failed, we do not show the section to view but instead we show
+		// the section to control so that the user can fix the mistake and pass the checks rightly.
+		if ( $this->section2control != '' and $this->checks['result'] == "fail" )
+			$section = $this->section2control;
 
+		switch($section)
+		{
+			case 'general':
+			break;
 
-		$productProfiles = $this->manager->getProductProfilesList();
-		$smarty->assign('productProfiles', array_values($productProfiles) );
+			case 'profiles_etc':
+				$academicQualifications = $this->manager->getAcademicQualificationsList();
+				$smarty->assign('academicQualificationsId', array_merge( array(""), array_keys($academicQualifications) ) );
+				$smarty->assign('academicQualificationsIdTranslated', array_merge( array(""), array_values($academicQualifications) ) );
 
+				$productProfiles = $this->manager->getProductProfilesList();
+				$smarty->assign('productProfiles', array_values($productProfiles) );
 
-		$professionalProfiles = $this->manager->getProfessionalProfilesList();
+				$professionalProfiles = $this->manager->getProfessionalProfilesList();
+				$smarty->assign('professionalProfilesId', array_keys($professionalProfiles) );
+				$smarty->assign('professionalProfilesName', array_values($professionalProfiles) );
 
-		$smarty->assign('professionalProfilesId', array_keys($professionalProfiles) );
-		$smarty->assign('professionalProfilesName', array_values($professionalProfiles) );
+				$fieldProfiles = $this->manager->getFieldProfilesList();
+				$smarty->assign('fieldProfilesId', array_keys($fieldProfiles) );
+				$smarty->assign('fieldProfilesName', array_values($fieldProfiles) );
+			break;
 
+			case 'skills':
+				$skills = $this->manager->getSkillsList();
+				$smarty->assign('skills', array_merge( array(""), array_values($skills) ) );
 
-		$fieldProfiles = $this->manager->getFieldProfilesList();
+				$skillKnowledgeLevels = $this->manager->getSkillKnowledgeLevelsList();
+				$smarty->assign('skillKnowledgeLevelsId', array_merge( array(""), array_keys($skillKnowledgeLevels) ) );
+				$smarty->assign('skillKnowledgeLevelsName', array_merge( array(""), array_values($skillKnowledgeLevels) ) );
 
-		$smarty->assign('fieldProfilesId', array_keys($fieldProfiles) );
-		$smarty->assign('fieldProfilesName', array_values($fieldProfiles) );
+				$skillExperienceLevels = $this->manager->getSkillExperienceLevelsList();
+				$smarty->assign('skillExperienceLevelsId', array_merge( array(""), array_keys($skillExperienceLevels) ) );
+				$smarty->assign('skillExperienceLevelsName', array_merge( array(""), array_values($skillExperienceLevels) ) );
+			break;
 
+			case 'languages':
+				$languages = $this->manager->getLanguagesList();
+				$smarty->assign('languagesName', array_merge( array(""), array_keys($languages) ) );
+				$smarty->assign('languagesNameTranslated', array_merge( array(""), array_values($languages) ) );
 
-		$skillsBySets = $this->manager->getSkillsListsBySets();
-		$smarty->assign('skillsBySets', $skillsBySets );
+				$languagesSpokenLevels = $this->manager->getLanguagesSpokenLevelsList();
+				$smarty->assign('languagesSpokenLevelsId', array_merge( array(""), array_keys($languagesSpokenLevels) ) );
+				$smarty->assign('languagesSpokenLevelsName', array_merge( array(""), array_values($languagesSpokenLevels) ) );
 
+				$languagesWrittenLevels = $this->manager->getLanguagesWrittenLevelsList();
+				$smarty->assign('languagesWrittenLevelsId', array_merge( array(""), array_keys($languagesWrittenLevels) ) );
+				$smarty->assign('languagesWrittenLevelsName', array_merge( array(""), array_values($languagesWrittenLevels) ) );
+			break;
 
-		$skills = $this->manager->getSkillsList();
-		$smarty->assign('skills', array_merge( array(""), array_values($skills) ) );
+			case 'certifications':
+				$certificationsList = $this->manager->getCertificationsList();
+				$smarty->assign('certificationsList', array_values($certificationsList) );
+			break;
 
+			case 'projects':
+			break;
 
-		$skillKnowledgeLevels = $this->manager->getSkillKnowledgeLevelsList();
+			case 'location':
+				$countries = $this->manager->getCountryList();
+				$countryTwoLetter = array_merge( array(""), array_keys($countries) );
+				$countryNames = array_merge( array(""), array_values($countries) );
+				$smarty->assign('countryTwoLetter', $countryTwoLetter);
+				$smarty->assign('countryNames', $countryNames);
+			break;
 
-		$smarty->assign('skillKnowledgeLevelsId', array_keys($skillKnowledgeLevels) );
-		$smarty->assign('skillKnowledgeLevelsName', array_values($skillKnowledgeLevels) );
+			case 'contract':
+				$contractTypes = $this->manager->getContractTypesList();
+				$smarty->assign('contractTypesId', array_merge( array(""), array_keys($contractTypes) ) );
+				$smarty->assign('contractTypesIdTranslated', array_merge( array(""), array_values($contractTypes) ) );
 
+				$byPeriod = $this->manager->getByPeriodList();
+				$byPeriodId = array_merge( array(""), array_keys($byPeriod) );
+				$byPeriodName = array_merge( array(""), array_values($byPeriod) );
+				$smarty->assign('byPeriodId', $byPeriodId );
+				$smarty->assign('byPeriodName', $byPeriodName );
 
-		$skillExperienceLevels = $this->manager->getSkillExperienceLevelsList();
+				$timeUnits = $this->manager->getTimeUnitsList();
+				$timeUnitsId = array_merge( array(""), array_keys($timeUnits) );
+				$timeUnitsName = array_merge( array(""), array_values($timeUnits) );
+				$smarty->assign('timeUnitsId', $timeUnitsId );
+				$smarty->assign('timeUnitsName', $timeUnitsName );
 
-		$smarty->assign('skillExperienceLevelsId', array_keys($skillExperienceLevels) );
-		$smarty->assign('skillExperienceLevelsName', array_values($skillExperienceLevels) );
+				$currencies = $this->manager->getCurrenciesList();
+				$currenciesThreeLetter = array_merge( array(""), array_keys($currencies) );
+				$currenciesName = array_merge( array(""), array_values($currencies) );
+				$smarty->assign('currenciesThreeLetter', $currenciesThreeLetter);
+				$smarty->assign('currenciesName', $currenciesName);
+			break;
 
+			default:
+				$error = "<p>".gettext("Unexpected error")."</p>";
+				throw new Exception($error,false);
+		}
 
-		$certificationsList = $this->manager->getCertificationsList();
-		$smarty->assign('certificationsList', array_values($certificationsList) );
-
-
-		$languages = $this->manager->getLanguagesList();
-
-		$smarty->assign('languagesName', array_merge( array(""), array_keys($languages) ) );
-		$smarty->assign('languagesNameTranslated', array_merge( array(""), array_values($languages) ) );
-
-
-		$languagesSpokenLevels = $this->manager->getLanguagesSpokenLevelsList();
-
-		$smarty->assign('languagesSpokenLevelsId', array_keys($languagesSpokenLevels) );
-		$smarty->assign('languagesSpokenLevelsName', array_values($languagesSpokenLevels) );
-
-
-		$languagesWrittenLevels = $this->manager->getLanguagesWrittenLevelsList();
-
-		$smarty->assign('languagesWrittenLevelsId', array_keys($languagesWrittenLevels) );
-		$smarty->assign('languagesWrittenLevelsName', array_values($languagesWrittenLevels) );
-
-
-		$contractTypes = $this->manager->getContractTypesList();
-
-		$smarty->assign('contractTypesId', array_merge( array(""), array_keys($contractTypes) ) );
-		$smarty->assign('contractTypesIdTranslated', array_merge( array(""), array_values($contractTypes) ) );
-
-
-		$byPeriod = $this->manager->getByPeriodList();
-		$byPeriodId = array_merge( array(""), array_keys($byPeriod) );
-		$byPeriodName = array_merge( array(""), array_values($byPeriod) );
-
-		$smarty->assign('byPeriodId', $byPeriodId );
-		$smarty->assign('byPeriodName', $byPeriodName );
-
-
-		$timeUnits = $this->manager->getTimeUnitsList();
-		$timeUnitsId = array_merge( array(""), array_keys($timeUnits) );
-		$timeUnitsName = array_merge( array(""), array_values($timeUnits) );
-
-		$smarty->assign('timeUnitsId', $timeUnitsId );
-		$smarty->assign('timeUnitsName', $timeUnitsName );
-
-
-		$currencies = $this->manager->getCurrenciesList();
-		$currenciesThreeLetter = array_merge( array(""), array_keys($currencies) );
-		$currenciesName = array_merge( array(""), array_values($currencies) );
-
-		$smarty->assign('currenciesThreeLetter', $currenciesThreeLetter);
-		$smarty->assign('currenciesName', $currenciesName);
-
-
-		$countries = $this->manager->getCountryList();
-		$countryTwoLetter = array_merge( array(""), array_keys($countries) );
-		$countryNames = array_merge( array(""), array_values($countries) );
-
-		$smarty->assign('countryTwoLetter', $countryTwoLetter);
-		$smarty->assign('countryNames', $countryNames);
-
-
+		$smarty->assign('data', $this->data);
 		$smarty->assign('checks', $this->checks);
-
-
-		$smarty->display("Job_Offer_form.tpl");
-	}
-
-
-	private function resetFormSessionVars()
-	{
-		$_SESSION['jEmployerJobOfferReference'] = '';
-
-		$_SESSION['jExpirationDate'] = '';
-
-		$_SESSION['jClosed'] = 'false';
-		$_SESSION['jHideEmployer'] = 'false';
-
-		$_SESSION['jAllowPersonApplications'] = 'false';
-		$_SESSION['jAllowCompanyApplications'] = 'false';
-		$_SESSION['jAllowOrganizationApplications'] = 'false';
-
-		$_SESSION['jVacancies'] = '';
-
-		$_SESSION['jContractType'] = '';
-		$_SESSION['jWageRank'] = '';
-		$_SESSION['jWageRankCurrency'] = '';
-		$_SESSION['jWageRankByPeriod'] = '';
-		$_SESSION['jEstimatedEffort'] = '';
-		$_SESSION['jTimeUnit'] = '';
-
-		$_SESSION['jProfessionalExperienceSinceYear'] = '';
-		$_SESSION['jAcademicQualification'] = '';
-
-		$_SESSION['jProductProfileList'] = array();
-		$_SESSION['jProfessionalProfileList'] = array();
-		$_SESSION['jFieldProfileList'] = array();
-
-		$_SESSION['jSkillList'] = array();
-		$_SESSION['jSkillKnowledgeLevelList'] = array();
-		$_SESSION['jSkillExperienceLevelList'] = array();
-
-		$_SESSION['jCertificationsList'] = array();
-
-		$_SESSION['jFreeSoftwareExperiences'] = '';
-
-		$_SESSION['jLanguageList'] = array();
-		$_SESSION['jLanguageSpokenLevelList'] = array();
-		$_SESSION['jLanguageWrittenLevelList'] = array();
-
-		$_SESSION['jTelework'] = '';
-
-		$_SESSION['jCity'] = '';
-		$_SESSION['jStateProvince'] = '';
-		$_SESSION['jPostalCode'] = '';
-		$_SESSION['jCountryCode'] = '';
-
-		$_SESSION['jAvailableToTravel'] = 'false';
-	}
-
-
-	private function saveToSessionVars()
-	{
-		// Save the values in the session variables
-
-		$_SESSION['jEmployerJobOfferReference'] = isset($_POST['EmployerJobOfferReference']) ? trim($_POST['EmployerJobOfferReference']) : '';
-
-		$_SESSION['jExpirationDate'] = isset($_POST['ExpirationDate']) ? trim($_POST['ExpirationDate']) : '';
-
-		if (isset($_POST['Closed']) and $_POST['Closed']=='on')
-			$_SESSION['jClosed'] = "true";
-		else
-			$_SESSION['jClosed'] = "false";
-
-		if (isset($_POST['HideEmployer']) and $_POST['HideEmployer']=='on')
-			$_SESSION['jHideEmployer'] = "true";
-		else
-			$_SESSION['jHideEmployer'] = "false";
-
-		if (isset($_POST['AllowPersonApplications']) and $_POST['AllowPersonApplications']=='on')
-			$_SESSION['jAllowPersonApplications'] = "true";
-		else
-			$_SESSION['jAllowPersonApplications'] = "false";
-
-		if (isset($_POST['AllowCompanyApplications']) and $_POST['AllowCompanyApplications']=='on')
-			$_SESSION['jAllowCompanyApplications'] = "true";
-		else
-			$_SESSION['jAllowCompanyApplications'] = "false";
-
-		if (isset($_POST['AllowOrganizationApplications']) and $_POST['AllowOrganizationApplications']=='on')
-			$_SESSION['jAllowOrganizationApplications'] = "true";
-		else
-			$_SESSION['jAllowOrganizationApplications'] = "false";
-
-		$_SESSION['jVacancies'] = isset($_POST['Vacancies']) ? trim($_POST['Vacancies']) : '';
-
-		$_SESSION['jContractType'] = isset($_POST['ContractType']) ? $_POST['ContractType'] : '';
-		$_SESSION['jWageRank'] = isset($_POST['WageRank']) ? $_POST['WageRank'] : '';
-		$_SESSION['jWageRankCurrency'] = isset($_POST['WageRankCurrency']) ? $_POST['WageRankCurrency'] : '';
-		$_SESSION['jWageRankByPeriod'] = isset($_POST['WageRankByPeriod']) ? $_POST['WageRankByPeriod'] : '';
-		$_SESSION['jEstimatedEffort'] = isset($_POST['EstimatedEffort']) ? trim($_POST['EstimatedEffort']) : '';
-		$_SESSION['jTimeUnit'] = isset($_POST['TimeUnit']) ? $_POST['TimeUnit'] : '';
-
-		$_SESSION['jProfessionalExperienceSinceYear'] = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
-		$_SESSION['jAcademicQualification'] = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
-
-		$_SESSION['jProductProfileList'] = isset($_POST['ProductProfileList']) ?  $_POST['ProductProfileList'] : array();
-		$_SESSION['jProfessionalProfileList'] = isset($_POST['ProfessionalProfileList']) ? $_POST['ProfessionalProfileList'] : array();
-		$_SESSION['jFieldProfileList'] = isset($_POST['FieldProfileList']) ? $_POST['FieldProfileList'] : array();
-
-		$_SESSION['jSkillList'] = isset($_POST['SkillList']) ? $_POST['SkillList'] : array();
-		$_SESSION['jSkillKnowledgeLevelList'] = isset($_POST['SkillKnowledgeLevelList']) ? $_POST['SkillKnowledgeLevelList'] : array();
-		$_SESSION['jSkillExperienceLevelList'] = isset($_POST['SkillExperienceLevelList']) ? $_POST['SkillExperienceLevelList'] : array();
-
-		$_SESSION['jCertificationsList'] = isset($_POST['CertificationsList']) ? $_POST['CertificationsList'] : array();
-
-		$_SESSION['jFreeSoftwareExperiences'] = isset($_POST['FreeSoftwareExperiences']) ? trim($_POST['FreeSoftwareExperiences']) : '';
-
-		$_SESSION['jLanguageList'] = isset($_POST['LanguageList']) ? $_POST['LanguageList'] : array();
-		$_SESSION['jLanguageSpokenLevelList'] = isset($_POST['LanguageSpokenLevelList']) ? $_POST['LanguageSpokenLevelList'] : array();
-		$_SESSION['jLanguageWrittenLevelList'] = isset($_POST['LanguageWrittenLevelList']) ? $_POST['LanguageWrittenLevelList'] : array();
-
-		if (isset($_POST['Telework']) and $_POST['Telework']=='on')
-			$_SESSION['jTelework'] = "true";
-		else
-			$_SESSION['jTelework'] = "false";
-
-		$_SESSION['jCity'] = isset($_POST['City']) ? trim($_POST['City']) : '';
-		$_SESSION['jStateProvince'] = isset($_POST['StateProvince']) ? trim($_POST['StateProvince']) : '';
-		$_SESSION['jPostalCode'] = isset($_POST['PostalCode']) ? $_POST['PostalCode'] : '';
-		$_SESSION['jCountryCode'] = isset($_POST['CountryCode']) ? $_POST['CountryCode'] : '';
-
-		if (isset($_POST['AvailableToTravel']) and $_POST['AvailableToTravel']=='on')
-			$_SESSION['jAvailableToTravel'] = "true";
-		else
-			$_SESSION['jAvailableToTravel'] = "false";
+		$smarty->assign('checkresults', $this->checkresults);
+		$smarty->assign('section', $section);
+		$smarty->display("Job_Offer_".$section."_form.tpl");
 	}
 
 
 	private function saveJobOfferForm()
 	{
-		$this->saveToSessionVars();
+		// Prepare data for view: $this->data  and  $_POST  array.
+		$this->prepareData4View();
 
-		// Checks
+		// Set the check marks
 		$this->checkJobOfferForm();
 
-
-		// Update or insert the values
 		if ($this->checks['result'] == "pass" )
 		{
-			if ( $_GET['JobOfferId'] != '' ) // update
+			$this->can_save = $this->manageSuggestions(); // Get and process new suggestions
+			if ( $this->can_save)
 			{
-				$this->manager->updateJobOffer($_GET['JobOfferId']);
-				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
-
-				$this->processingResult .= "<center>\n";
-				$this->processingResult .= "<a href='offers?id=".$_GET[JobOfferId]."' target='_top'>".gettext("Check job offer view")."</a>\n";
-				$this->processingResult .= "</center>\n";
-
-				// $_SESSION variables have been saved previously.
-				// Do not destroy the session, so as to next time the values will be loaded from the $_SESSION variables. 
+				// Update or insert the values
+				if ( $_SESSION['JobOfferId'] != '' ) // update
+				{
+					$this->manager->updateJobOffer($_SESSION['JobOfferId'],$this->section2control,$this->checks['completed_edition']);
+				}
+				else // new
+				{
+					$_SESSION['JobOfferId'] = $this->manager->addJobOffer($this->checks['completed_edition']); // Add a new job offer with the data from the 'general' section
+					// We set this SESSION variable as a hack to be able to pass the J1_Id to the next form section
+				}
 			}
-			else // new
-			{
-				$J1_Id = $this->manager->addJobOffer();
-				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Success. Your job offer have been saved.')."<p><p>&nbsp;</p>\n";
+		}
+	}
 
-				$this->processingResult .= "<center>\n";
-				$this->processingResult .= "<a href='offers?id=".$J1_Id."' target='_top'>".gettext("Check job offer view")."</a>\n";
-				$this->processingResult .= "</center>\n";
-			}
+
+	private function prepareData4View()
+	{
+		// Save the section values in the $data variable
+
+		switch($this->section2control)
+		{
+			case 'general':
+				if (isset($_POST['AllowPersonApplications']) and $_POST['AllowPersonApplications']=='on')
+					$this->data['AllowPersonApplications'] = "true";
+				else
+					$this->data['AllowPersonApplications'] = "false";
+
+				if (isset($_POST['AllowCompanyApplications']) and $_POST['AllowCompanyApplications']=='on')
+					$this->data['AllowCompanyApplications'] = "true";
+				else
+					$this->data['AllowCompanyApplications'] = "false";
+
+				if (isset($_POST['AllowOrganizationApplications']) and $_POST['AllowOrganizationApplications']=='on')
+					$this->data['AllowOrganizationApplications'] = "true";
+				else
+					$this->data['AllowOrganizationApplications'] = "false";
+
+				$this->data['Vacancies'] = isset($_POST['Vacancies']) ? trim($_POST['Vacancies']) : '';
+
+				if (isset($_POST['Closed']) and $_POST['Closed']=='on')
+					$this->data['Closed'] = "true";
+				else
+					$this->data['Closed'] = "false";
+
+				$this->data['ExpirationDate'] = isset($_POST['ExpirationDate']) ? trim($_POST['ExpirationDate']) : '';
+
+				$this->data['EmployerJobOfferReference'] = isset($_POST['EmployerJobOfferReference']) ? trim($_POST['EmployerJobOfferReference']) : '';
+
+				if (isset($_POST['HideEmployer']) and $_POST['HideEmployer']=='on')
+					$this->data['HideEmployer'] = "true";
+				else
+					$this->data['HideEmployer'] = "false";
+			break;
+
+			case 'profiles_etc':
+				$this->data['ProfessionalExperienceSinceYear'] = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
+				$this->data['AcademicQualification'] = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
+
+				$this->data['ProductProfileList'] = isset($_POST['ProductProfileList']) ?  $_POST['ProductProfileList'] : array();
+				$this->data['ProfessionalProfileList'] = isset($_POST['ProfessionalProfileList']) ? $_POST['ProfessionalProfileList'] : array();
+				$this->data['FieldProfileList'] = isset($_POST['FieldProfileList']) ? $_POST['FieldProfileList'] : array();
+			break;
+
+			case 'skills':
+				// Clean empty rows and the one marked to be deleted
+				$count = count($_POST['SkillList']);
+				for( $i=0,$j=0; $i < $count; $i++)
+				{
+					if ( ( $_POST['SkillList'][$i] == '' and $_POST['SkillKnowledgeLevelList'][$i] == '' and $_POST['SkillExperienceLevelList'][$i] == '' ) or
+					     ( isset($_POST['DeleteSkillList']) and in_array("$i",$_POST['DeleteSkillList']) ) )
+					{
+					}
+					else
+					{
+						$_POST['SkillList'][$j] = $_POST['SkillList'][$i];
+						$_POST['ShadowSkillList'][$j] = $_POST['ShadowSkillList'][$i];
+						$_POST['SkillsToInsert'][$j] = $_POST['SkillsToInsert'][$i];
+						$_POST['SuggestionSet'.$j] = $_POST['SuggestionSet'.$i];
+						$_POST['SkillKnowledgeLevelList'][$j] = $_POST['SkillKnowledgeLevelList'][$i];
+						$_POST['SkillExperienceLevelList'][$j] = $_POST['SkillExperienceLevelList'][$i];
+						$j++;
+					}
+				}
+
+				for( $i=$j; $i < $count; $i++)
+				{
+					unset( $_POST['SkillList'][$i] );
+					unset( $_POST['ShadowSkillList'][$i] );
+					unset( $_POST['SkillsToInsert'][$i] );
+					unset( $_POST['SuggestionSet'.$i] );
+					unset( $_POST['SkillKnowledgeLevelList'][$i] );
+					unset( $_POST['SkillExperienceLevelList'][$i] );
+				}
+			break;
+
+			case 'languages':
+				// Clean empty rows and the one marked to be deleted
+				$count = count($_POST['LanguageList']);
+				for( $i=0,$j=0; $i < $count; $i++)
+				{
+					if ( ( $_POST['LanguageList'][$i] == '' and $_POST['LanguageSpokenLevelList'][$i] == '' and $_POST['LanguageWrittenLevelList'][$i] == '' and count($_POST['LanguageList']) > 1 ) or
+					     ( isset($_POST['DeleteLanguageList']) and in_array("$i",$_POST['DeleteLanguageList']) ) ) // DeleteLanguageList is not saved at $data variable
+					{
+					}
+					else
+					{
+						$_POST['LanguageList'][$j] = $_POST['LanguageList'][$i];
+						$_POST['LanguageSpokenLevelList'][$j] = $_POST['LanguageSpokenLevelList'][$i];
+						$_POST['LanguageWrittenLevelList'][$j] = $_POST['LanguageWrittenLevelList'][$i];
+						$j++;
+					}
+				}
+
+				for( $i=$j; $i < $count; $i++)
+				{
+					unset( $_POST['LanguageList'][$i] );
+					unset( $_POST['LanguageSpokenLevelList'][$i] );
+					unset( $_POST['LanguageWrittenLevelList'][$i] );
+				}
+
+				// Now, copy to the $data variable
+				$this->data['LanguageList'] = isset($_POST['LanguageList']) ? $_POST['LanguageList'] : array();
+				$this->data['LanguageSpokenLevelList'] = isset($_POST['LanguageSpokenLevelList']) ? $_POST['LanguageSpokenLevelList'] : array();
+				$this->data['LanguageWrittenLevelList'] = isset($_POST['LanguageWrittenLevelList']) ? $_POST['LanguageWrittenLevelList'] : array();
+			break;
+
+			case 'certifications':
+				$this->data['CertificationsList'] = isset($_POST['CertificationsList']) ? $_POST['CertificationsList'] : array(); //XXX pending
+			break;
+
+			case 'projects':
+				$this->data['FreeSoftwareExperiences'] = isset($_POST['FreeSoftwareExperiences']) ? trim($_POST['FreeSoftwareExperiences']) : '';
+			break;
+
+			case 'location':
+				$this->data['City'] = isset($_POST['City']) ? trim($_POST['City']) : '';
+				$this->data['StateProvince'] = isset($_POST['StateProvince']) ? trim($_POST['StateProvince']) : '';
+				$this->data['PostalCode'] = isset($_POST['PostalCode']) ? $_POST['PostalCode'] : '';
+				$this->data['CountryCode'] = isset($_POST['CountryCode']) ? $_POST['CountryCode'] : '';
+
+				if (isset($_POST['AvailableToTravel']) and $_POST['AvailableToTravel']=='on')
+					$this->data['AvailableToTravel'] = "true";
+				else
+					$this->data['AvailableToTravel'] = "false";
+			break;
+
+			case 'contract':
+				$this->data['ContractType'] = isset($_POST['ContractType']) ? $_POST['ContractType'] : '';
+				$this->data['WageRank'] = isset($_POST['WageRank']) ? $_POST['WageRank'] : '';
+				$this->data['WageRankCurrency'] = isset($_POST['WageRankCurrency']) ? $_POST['WageRankCurrency'] : '';
+				$this->data['WageRankByPeriod'] = isset($_POST['WageRankByPeriod']) ? $_POST['WageRankByPeriod'] : '';
+				$this->data['EstimatedEffort'] = isset($_POST['EstimatedEffort']) ? trim($_POST['EstimatedEffort']) : '';
+				$this->data['TimeUnit'] = isset($_POST['TimeUnit']) ? $_POST['TimeUnit'] : '';
+			break;
+
+			default:
+				$error = "<p>".gettext("Unexpected error")."</p>";
+				throw new Exception($error,false);
 		}
 	}
 
@@ -389,162 +441,614 @@ class JobOfferForm
 	{
 		$this->checks['result'] = "pass"; // By default the checks pass
 
-		// Note that the POST values has been saved on the SESSION before calling this method. We use SESSION instead POST due to they have the isset check done, and we want to avoid to repeat it.  :P
+		// Note that the POST values has been saved in $data before calling this method. We use $data instead POST due to they have the isset check done, and we want to avoid to repeat it.  :P
+
+		// Set the marks of non-required sections. The user has already viewed them in the previous edition when she set the JobOfferId.
+		if ( $_GET['JobOfferId'] != '')
+		{
+			$_SESSION['VisitedJobOffer_skills'] = false;
+			$_SESSION['VisitedJobOffer_certifications'] = false;
+			$_SESSION['VisitedJobOffer_projects'] = false;
+			$_SESSION['VisitedJobOffer_location'] = false;
+		}
+
 
 		// Some field can not be empty
 
-		if ( $_SESSION['jExpirationDate']=='' )
+
+		// 'general' section
+		$this->checkresults['general'] = "pass";
+
+		if ( ($this->data['AllowPersonApplications']=="false" or $this->data['AllowPersonApplications']=='') and ($this->data['AllowCompanyApplications']=="false" or $this->data['AllowCompanyApplications']=='') and ($this->data['AllowOrganizationApplications']=="false" or $this->data['AllowOrganizationApplications']=='') )
 		{
-			$this->checks['result'] = "fail";
-			$this->checks['jExpirationDate'] = gettext('Please fill in here');
+			$this->checkresults['general'] = "fail";
+
+			if ( $this->section2control == 'general' )
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['AllowApplications'] = gettext('Please fill in here');
+			}
+		}
+		else
+		{
+			$this->checks['AllowApplications'] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
+		}
+
+		if ( $this->data['Vacancies']=='' )
+		{
+			$this->checkresults['general'] = "fail";
+
+			if ( $this->section2control == 'general' )
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['Vacancies'] = gettext('Please fill in here');
+			}
+		}
+		else
+		{
+			$this->checks['Vacancies'] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
+		}
+
+		if ( $this->data['ExpirationDate']=='' )
+		{
+			$this->checkresults['general'] = "fail";
+
+			if ( $this->section2control == 'general' )
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['ExpirationDate'] = gettext('Please fill in here');
+			}
 		}
 		else
 		{
 			// Date format
-			if ( ( !preg_match('/(\d\d)\-(\d\d)\-(\d\d\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-			     ( !preg_match('/(\d\d\d\d)\-(\d\d)\-(\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
-			     ( !preg_match('/(\d\d)\/(\d\d)\/(\d\d\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-			     ( !preg_match('/(\d\d\d\d)\/(\d\d)\/(\d\d)/',$_SESSION['jExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+			if ( ( !preg_match('/(\d\d)\-(\d\d)\-(\d\d\d\d)/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	     		( !preg_match('/(\d\d\d\d)\-(\d\d)\-(\d\d)/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+	     		( !preg_match('/(\d\d)\/(\d\d)\/(\d\d\d\d)/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	     		( !preg_match('/(\d\d\d\d)\/(\d\d)\/(\d\d)/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
 			{
-				$this->checks['result'] = "fail";
-				$this->checks['jExpirationDate'] = gettext('Incorrect date format');
+				$this->checkresults['general'] = "fail";
+
+				if ( $this->section2control == 'general' )
+				{
+					$this->checks['result'] = "fail";
+					$this->checks['ExpirationDate'] = gettext('Incorrect date format');
+				}
+			}
+			else
+			{
+				$this->checks['ExpirationDate'] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 			}
 		}
 
-		if ( $_SESSION['jAllowPersonApplications']=="false" and $_SESSION['jAllowCompanyApplications']=="false" and $_SESSION['jAllowOrganizationApplications']=="false" )
+
+		// 'profiles_etc' section
+		$this->checkresults['profiles_etc'] = "pass";
+
+		if ( count($this->data['ProfessionalProfileList'])<1 )
 		{
-			$this->checks['result'] = "fail";
-			$this->checks['jAllowApplications'] = gettext('Please fill in here');
+			$this->checkresults['profiles_etc'] = "fail";
+
+			if ( $this->section2control == 'profiles_etc' )
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['ProfessionalProfileList'] = gettext('Please fill in here');
+			}
+		}
+		else
+		{
+			$this->checks['ProfessionalProfileList'] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 		}
 
-		if ( $_SESSION['jVacancies']=='' )
+
+		// 'skills' section
+		if ( $this->section2control == 'skills' )
+			$_SESSION['VisitedJobOffer_skills'] = true; // Mark we have visited this section
+
+		if ( $_GET['JobOfferId'] != '' or ($_GET['JobOfferId'] == '' and $_SESSION['JobOfferId'] != '' and $_SESSION['VisitedJobOffer_skills'] == true) )
+			$this->checkresults['skills'] = "pass";   // If it has been visited then set check to pass.
+
+		// Check all the 3xN matrix,  3 = (Skill,KnowledgeLevel,ExperienceLevel)
+		for( $i=0; $i < count($_POST['SkillList']); $i++)
 		{
-			$this->checks['result'] = "fail";
-			$this->checks['jVacancies'] = gettext('Please fill in here');
+			if ( $_POST['SkillList'][$i] == '' )
+			{
+				$this->checkresults['skills'] = "fail";
+
+				if ( $this->section2control == 'skills' )
+				{
+					$this->checks['result'] = "fail";
+					$this->checks['SkillList'][$i] = gettext('Please fill in here');
+				}
+			}
+			else
+			{
+				$this->checks['SkillList'][$i] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
+			}
+
+			if ( $_POST['SkillKnowledgeLevelList'][$i] == '' )
+			{
+				$this->checkresults['skills'] = "fail";
+
+				if ( $this->section2control == 'skills' )
+				{
+					$this->checks['result'] = "fail";
+					$this->checks['SkillKnowledgeLevelList'][$i] = gettext('Please fill in here');
+				}
+			}
+			else
+			{
+				$this->checks['SkillKnowledgeLevelList'][$i] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
+			}
+
+			if ( $_POST['SkillExperienceLevelList'][$i] == '' )
+			{
+				$this->checkresults['skills'] = "fail";
+
+				if ( $this->section2control == 'skills' )
+				{
+					$this->checks['result'] = "fail";
+					$this->checks['SkillExperienceLevelList'][$i] = gettext('Please fill in here');
+				}
+			}
+			else
+			{
+				$this->checks['SkillExperienceLevelList'][$i] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
+			}
+
+			if ( $_POST['SkillKnowledgeLevelList'][$i] == 'Null' and $_POST['SkillExperienceLevelList'][$i] == 'Null' )
+			{
+				$this->checkresults['skills'] = "fail";
+
+				if ( $this->section2control == 'skills' )
+				{
+					$this->checks['result'] = "fail";
+					$this->checks['SkillKnowledgeLevelList'][$i] = gettext('Please fill in here');
+					$this->checks['SkillExperienceLevelList'][$i] = gettext('Please fill in here');
+				}
+			}
+			// else do not reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 		}
 
-		if ( $_SESSION['jContractType']=='' )
+		// 'languages' section
+		$this->checkresults['languages'] = "pass";
+
+		if ( count($this->data['LanguageList']) < 1 )
 		{
-			$this->checks['result'] = "fail";
-			$this->checks['jContractType'] = gettext('Please fill in here');
+			$this->checkresults['languages'] = "fail";
+
+				if ( $this->section2control == 'languages' )
+				{
+					$this->checks['result'] = "fail";
+
+					$this->checks['LanguageList'][0] = gettext('Please fill in here');
+					$this->checks['LanguageSpokenLevelList'][0] = gettext('Please fill in here');
+					$this->checks['LanguageWrittenLevelList'][0] = gettext('Please fill in here');
+				}
+		}
+		else
+		{
+			// Check all the 3xN matrix,  3 = (Language,SpokenLevel,WrittenLevel)
+			for( $i=0; $i < count($this->data['LanguageList']); $i++)
+			{
+				if ( $this->data['LanguageList'][$i] == '' )
+				{
+					$this->checkresults['languages'] = "fail";
+
+					if ( $this->section2control == 'languages' )
+					{
+						$this->checks['result'] = "fail";
+						$this->checks['LanguageList'][$i] = gettext('Please fill in here');
+					}
+				}
+				else
+				{
+					$this->checks['LanguageList'][$i] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
+				}
+
+				if ( $this->data['LanguageSpokenLevelList'][$i] == '' )
+				{
+					$this->checkresults['languages'] = "fail";
+
+					if ( $this->section2control == 'languages' )
+					{
+						$this->checks['result'] = "fail";
+						$this->checks['LanguageSpokenLevelList'][$i] = gettext('Please fill in here');
+					}
+				}
+				else
+				{
+					$this->checks['LanguageSpokenLevelList'][$i] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
+				}
+
+				if ( $this->data['LanguageWrittenLevelList'][$i] == '' )
+				{
+					$this->checkresults['languages'] = "fail";
+
+					if ( $this->section2control == 'languages' )
+					{
+						$this->checks['result'] = "fail";
+						$this->checks['LanguageWrittenLevelList'][$i] = gettext('Please fill in here');
+					}
+				}
+				else
+				{
+					$this->checks['LanguageWrittenLevelList'][$i] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
+				}
+
+				if ( $this->data['LanguageSpokenLevelList'][$i] == 'Null' and $this->data['LanguageWrittenLevelList'][$i] == 'Null' )
+				{
+					$this->checkresults['languages'] = "fail";
+
+					if ( $this->section2control == 'languages' )
+					{
+						$this->checks['result'] = "fail";
+						$this->checks['LanguageSpokenLevelList'][$i] = gettext('Please fill in here');
+						$this->checks['LanguageWrittenLevelList'][$i] = gettext('Please fill in here');
+					}
+				}
+				// else do not reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
+			}
 		}
 
-		if ( $_SESSION['jWageRank']=='' or $_SESSION['jWageRankCurrency']=='' or $_SESSION['jWageRankByPeriod']=='' )
+
+		// 'certifications' section
+		if ( $this->section2control == 'certifications' )
+			$_SESSION['VisitedJobOffer_certifications'] = true; // Mark we have visited this section
+
+		if ( $_GET['JobOfferId'] != '' or ($_GET['JobOfferId'] == '' and $_SESSION['JobOfferId'] != '' and $_SESSION['VisitedJobOffer_certifications'] == true) )
+			$this->checkresults['certifications'] = "pass";
+
+
+		// 'projects' section
+		if ( $this->section2control == 'projects' )
+			$_SESSION['VisitedJobOffer_projects'] = true; // Mark we have visited this section
+
+		if ( $_GET['JobOfferId'] != '' or ($_GET['JobOfferId'] == '' and $_SESSION['JobOfferId'] != '' and $_SESSION['VisitedJobOffer_projects'] == true) )
+			$this->checkresults['projects'] = "pass";
+
+
+		// 'location' section
+		if ( $this->section2control == 'location' )
+			$_SESSION['VisitedJobOffer_location'] = true; // Mark we have visited this section
+
+		if ( $_GET['JobOfferId'] != '' or ($_GET['JobOfferId'] == '' and $_SESSION['JobOfferId'] != '' and $_SESSION['VisitedJobOffer_location'] == true) )
+			$this->checkresults['location'] = "pass";
+
+
+		// 'contract' section
+		$this->checkresults['contract'] = "pass";
+
+		if ( $this->data['ContractType']=='' )
 		{
-			$this->checks['result'] = "fail";
-			$this->checks['jWageRank'] = gettext('Please fill in here');
+			$this->checkresults['contract'] = "fail";
+
+			if ( $this->section2control == 'contract' )
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['ContractType'] = gettext('Please fill in here');
+			}
+		}
+		else
+		{
+			$this->checks['ContractType'] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 		}
 
-		if ( count($_SESSION['jProfessionalProfileList'])<1 )
+		if ( $this->data['WageRank']=='' or $this->data['WageRankCurrency']=='' or $this->data['WageRankByPeriod']=='' )
 		{
-			$this->checks['result'] = "fail";
-			$this->checks['jProfessionalProfileList'] = gettext('Please fill in here');
+			$this->checkresults['contract'] = "fail";
+
+			if ( $this->section2control == 'contract' )
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['WageRank'] = gettext('Please fill in here');
+			}
+		}
+		else
+		{
+			$this->checks['WageRank'] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 		}
 
-		if ( count($_SESSION['jLanguageList'])<1 )
+		if ( $this->data['WageRankByPeriod']=="by project" and ($this->data['EstimatedEffort']=='' or $this->data['TimeUnit']=='') )
 		{
-			$this->checks['result'] = "fail";
-			$this->checks['jLanguageList'] = gettext('Please fill in here');
+			$this->checkresults['contract'] = "fail";
+
+			if ( $this->section2control == 'contract' )
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['EstimatedEffort'] = gettext('Please fill in here');
+			}
+		}
+		else
+		{
+			$this->checks['EstimatedEffort'] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 		}
 
-		if ( $_SESSION['jWageRankByPeriod']=="by project" and ($_SESSION['jEstimatedEffort']=='' or $_SESSION['jTimeUnit']=='') )
-		{
-			$this->checks['result'] = "fail";
-			$this->checks['jEstimatedEffort'] = gettext('Please fill in here');
-		}
 
-		// Telework or Country have to be filled
-		if ( $_SESSION['jTelework']=="false" and $_SESSION['jCountryCode']=='' )
+		if ( $this->checkresults['general'] == "pass" and $this->checkresults['profiles_etc'] == "pass" and $this->checkresults['skills'] == "pass" and $this->checkresults['languages'] == "pass" and
+		     $this->checkresults['projects'] == "pass" and $this->checkresults['location'] == "pass" and $this->checkresults['contract'] == "pass" )
+			$this->checks['completed_edition'] = "true";
+		else
+			$this->checks['completed_edition'] = "false";
+	}
+
+
+	private function manageSuggestions()
+	{
+		$can_save = true; // Default value
+
+		switch($this->section2control)
 		{
-			$this->checks['result'] = "fail";
-			$this->checks['jLocation'] = gettext('Please fill in the country field or activate the telework checkbox');
+			case 'general':
+				// There are no suggestions for this section
+				return $can_save;
+			break;
+
+			case 'profiles_etc':
+				// There are no suggestions for this section
+				return $can_save;
+			break;
+
+			case 'skills':
+				// If there is shadow change or the new-one-to-add is filled, then check them before saving to avoid crash
+				$shadow_change = array();
+				for( $i=0; $i < count($_POST['SkillList']); $i++)  // Both, updated and new entries are processed
+				{
+					if ( $_POST['SkillList'][$i] != $_POST['ShadowSkillList'][$i] )
+					{
+						$shadow_change[$i] = $_POST['SkillList'][$i];
+					}
+				}
+
+				// Get the suggestions to be shown in the output, etc.
+				if ( count($shadow_change) > 0 )
+				{
+					// Query the Expert System
+					$suggestions = $this->manager->getSuggestedSkillsLists($shadow_change);
+
+					if ( count($suggestions) == 0 )
+					{
+						$_POST['SuggestedSkills'] = array();
+						$can_save = true;
+					}
+					else
+					{
+						// Check all is ready to be saved
+						$can_save = true;
+						foreach ($suggestions as $i => $value)
+						{
+							foreach ($value as $key)
+								;
+
+							$letters = array('/');
+							$escape = array('\/');
+							$skillList_ = strtolower( str_replace($letters,$escape,quotemeta($_POST['SkillList'][$i])) );
+							$skills_ = strtolower( $key );
+							if ( count($suggestions[$i]) == 1 and ( preg_match("/^".$skillList_."$/", $skills_) or //   /^text$/
+											        preg_match("/^.+\(".$skillList_."\)$/", $skills_) or //   /^.+\(text\)$/
+											        ( preg_match("/^(.*) ".$skillList_."$/", $skills_, $matches) and substr_count($matches[1],' ') == 0 ) or //   /^.* text$/
+											        preg_match("/^".$skillList_." \(.+\)$/", $skills_) or //   /^text[ \(.+\)]$/
+											        ( preg_match("/^(.*) ".$skillList_." \(.+\)$/", $skills_, $matches) and substr_count($matches[1],' ') == 0 )//   /^.* text[ \(.+\)]$/
+											      ) )
+							{
+								// Automatic suggestion selection
+
+								$_POST['SkillList'][$i] = $key; // It is $suggestions[$i][$key];
+								$_POST['ShadowSkillList'][$i] = $key; // It is $suggestions[$i][$key];
+
+								unset( $suggestions[$i] );
+							}
+							else
+							{
+								// Force user to select an option
+								$can_save = false;
+							}
+						}
+
+						// Show new set of options to be shown in the view
+						$_POST['SuggestedSkills'] = $suggestions;
+					}
+				}
+
+				// Process the selected-suggestions which arrive on the request we are processing
+				for( $i=0; $i < count($_POST['SkillList']); $i++)
+				{
+					if ( isset($_POST['SuggestionSet'.$i]) and $_POST['SkillList'][$i] == $_POST['SuggestionShadow'][$i] )
+					{
+						// Replace POST forms values
+						if ( $_POST['SuggestionSet'.$i] == "Keep as is" )
+						{
+							$_POST['SkillsToInsert'][$i] = $_POST['SkillList'][$i];
+							$_POST['ShadowSkillList'][$i] = $_POST['SkillList'][$i];
+						}
+						else
+						{
+							$_POST['SkillList'][$i] = $_POST['SuggestionSet'.$i];
+							$_POST['ShadowSkillList'][$i] = $_POST['SuggestionSet'.$i];
+						}
+
+						// Delete that suggestions set
+						unset( $suggestions[$i] );
+						$_POST['SuggestedSkills'] = $suggestions; // copy again
+					}
+				}
+
+				// Check if, after processing the selected-suggestions, the form can be saved to the data base, that is to say, is there yet some suggestions-set which the user have to choose from
+				if ( $can_save == false )
+				{
+					$can_save = true;
+					for( $i=0; $i < count($_POST['SkillList']); $i++)
+					{
+						if ( count($_POST['SuggestedSkills'][$i]) > 0 )
+						{
+							$can_save = false;
+						}
+					}
+				}
+
+				// Insert new skills in the data base if it is needed
+				if ( $can_save == true and is_array($_POST['SkillsToInsert']) )
+				{
+					foreach ( array_unique($_POST['SkillsToInsert']) as $skill2insert )
+					{
+						if ( $skill2insert != '' )
+						{
+							$this->manager->addSkill($skill2insert);
+						}
+					}
+
+					// Clean all the SkillsToInsert marks
+					for( $i=0; $i < count($_POST['SkillsToInsert']); $i++)
+					{
+						$_POST['SkillsToInsert'][$i] = '';
+					}
+				}
+
+				return $can_save;
+			break;
+
+			case 'languages':
+				// There are no suggestions for this section
+				return $can_save;
+			break;
+
+			case 'certifications':
+				// There are no suggestions for this section
+				return $can_save;
+			break;
+
+			case 'projects':
+				// There are no suggestions for this section
+				return $can_save;
+			break;
+
+			case 'location':
+				// There are no suggestions for this section
+				return $can_save;
+			break;
+
+			case 'contract':
+				// There are no suggestions for this section
+				return $can_save;
+			break;
+
+			default:
+				$error = "<p>".gettext("Unexpected error")."</p>";
+				throw new Exception($error,false);
 		}
 	}
 
 
 	private function loadJobOfferForm()
 	{
-		// This function will not override the SESSION variables while the user is working in its form, because of before calling this function the 'Back' button value is checked. 
+		// We load the data of all the sections, but only process and show one of them.
 
-		$result = $this->manager->getJobOffer($_GET['JobOfferId']);
+		$result = $this->manager->getJobOffer($_SESSION['JobOfferId']);
 
 
-		// J1_JobOffers table
+		// JobOffers table
 
-		$_SESSION['jEmployerJobOfferReference'] = $result[0][0];
+		$this->data['EmployerJobOfferReference'] = $result[0][0];
 
-		$_SESSION['jExpirationDate'] = $result[2][0];
+		$this->data['ExpirationDate'] = $result[2][0];
 
 		if ($result[3][0]=='t')
-			$_SESSION['jClosed'] = "true";
+			$this->data['Closed'] = "true";
 		else
-			$_SESSION['jClosed'] = "false";
+			$this->data['Closed'] = "false";
 
 		if ($result[4][0]=='t')
-			$_SESSION['jHideEmployer'] = "true";
+			$this->data['HideEmployer'] = "true";
 		else
-			$_SESSION['jHideEmployer'] = "false";
+			$this->data['HideEmployer'] = "false";
 
 		if ($result[5][0]=='t')
-			$_SESSION['jAllowPersonApplications'] = "true";
+			$this->data['AllowPersonApplications'] = "true";
 		else
-			$_SESSION['jAllowPersonApplications'] = "false";
+			$this->data['AllowPersonApplications'] = "false";
 
 		if ($result[6][0]=='t')
-			$_SESSION['jAllowCompanyApplications'] = "true";
+			$this->data['AllowCompanyApplications'] = "true";
 		else
-			$_SESSION['jAllowCompanyApplications'] = "false";
+			$this->data['AllowCompanyApplications'] = "false";
 
 		if ($result[7][0]=='t')
-			$_SESSION['jAllowOrganizationApplications'] = "true";
+			$this->data['AllowOrganizationApplications'] = "true";
 		else
-			$_SESSION['jAllowOrganizationApplications'] = "false";
+			$this->data['AllowOrganizationApplications'] = "false";
 
-		$_SESSION['jVacancies'] = trim($result[8][0]);
+		$this->data['Vacancies'] = trim($result[8][0]);
 
-		$_SESSION['jContractType'] = $result[9][0];
-		$_SESSION['jWageRank'] = $result[10][0];
-		$_SESSION['jWageRankCurrency'] = $result[11][0];
-		$_SESSION['jWageRankCurrencyName'] = $result[12][0];
-		$_SESSION['jWageRankByPeriod'] = $result[13][0];
-		$_SESSION['jEstimatedEffort'] = $result[23][0];
-		$_SESSION['jTimeUnit'] = $result[24][0];
+		$this->data['ContractType'] = $result[9][0];
+		$this->data['WageRank'] = $result[10][0];
+		$this->data['WageRankCurrency'] = $result[11][0];
+		$this->data['WageRankCurrencyName'] = $result[12][0];
+		$this->data['WageRankByPeriod'] = $result[13][0];
+		$this->data['EstimatedEffort'] = $result[23][0];
+		$this->data['TimeUnit'] = $result[24][0];
 
-		$_SESSION['jProfessionalExperienceSinceYear'] = $result[14][0];
-		$_SESSION['jAcademicQualification'] = $result[15][0];
+		$this->data['ProfessionalExperienceSinceYear'] = $result[14][0];
+		$this->data['AcademicQualification'] = $result[15][0];
 
-		// Profiles tables
-		$_SESSION['jProductProfileList'] = $result[30];
-		$_SESSION['jProfessionalProfileList'] = $result[31];
-		$_SESSION['jFieldProfileList'] = $result[32];
+		// JobOffer Profiles tables
+		$this->data['ProductProfileList'] = $result[30];
+		$this->data['ProfessionalProfileList'] = $result[31];
+		$this->data['FieldProfileList'] = $result[32];
 
-		// Skills tables
-		$_SESSION['jSkillList'] = $result[43];
-		$_SESSION['jSkillKnowledgeLevelList'] = $result[44];
-		$_SESSION['jSkillExperienceLevelList'] = $result[45];
+		// JobOffer Skills table
+		$this->data['SkillList'] = $result[43];
+		$this->data['SkillKnowledgeLevelList'] = $result[44];
+		$this->data['SkillExperienceLevelList'] = $result[45];
 
-		$_SESSION['jCertificationsList'] = $result[50];
-
-		$_SESSION['jFreeSoftwareExperiences'] = trim($result[16][0]);
-
-		// Languages table
-		$_SESSION['jLanguageList'] = $result[40];
-		$_SESSION['jLanguageSpokenLevelList'] = $result[41];
-		$_SESSION['jLanguageWrittenLevelList'] = $result[42];
-
-		if ($result[17][0]=='t')
-			$_SESSION['jTelework'] = "true";
+		// The POST sort is different than the data base sort, $result[46], so we search and set the sort of the $this->data['CheckList'] array according to the POST sort
+		if (isset($_POST['SkillList'][0]))
+		{
+			foreach ($result[46] as $i => $value)
+			{
+				$this->data['CheckList'][$i] = $result[46][ array_search($_POST['SkillList'][$i],$this->data['SkillList']) ];
+			}
+		}
 		else
-			$_SESSION['jTelework'] = "false";
+		{
+			// There is not need to sort due to all come from the data base
+			$this->data['CheckList'] = $result[46];
+		}
 
-		$_SESSION['jCity'] = $result[18][0];
-		$_SESSION['jStateProvince'] = $result[19][0];
-		$_SESSION['jCountryCode'] = $result[20][0];
+		if ( $this->section2view == 'skills' and $this->section2control != 'skills' )
+		{
+			$_POST['SkillList'] = $this->data['SkillList'];
+			$_POST['ShadowSkillList'] = $this->data['SkillList'];
+			$_POST['SkillKnowledgeLevelList'] = $this->data['SkillKnowledgeLevelList'];
+			$_POST['SkillExperienceLevelList'] = $this->data['SkillExperienceLevelList'];
+		}
+		elseif (  ( $this->section2view != 'skills' and $this->section2control == 'skills') or
+			  ( $this->section2view == 'skills' and $this->section2control == 'skills')  )
+		{
+		}
+
+		// JobOffer Certifications table
+		$this->data['CertificationsList'] = $result[50];
+
+		// JobOffer Contributions/FreeSoftwareExperiences table
+		$this->data['FreeSoftwareExperiences'] = trim($result[16][0]);
+
+		// JobOffer Languages table
+		$this->data['LanguageList'] = $result[40];
+		$this->data['LanguageSpokenLevelList'] = $result[41];
+		$this->data['LanguageWrittenLevelList'] = $result[42];
+
+		$this->data['City'] = $result[18][0];
+		$this->data['StateProvince'] = $result[19][0];
+		$this->data['CountryCode'] = $result[20][0];
 
 		if ($result[21][0]=='t')
-			$_SESSION['jAvailableToTravel'] = "true";
+			$this->data['AvailableToTravel'] = "true";
 		else
-			$_SESSION['jAvailableToTravel'] = "false";
+			$this->data['AvailableToTravel'] = "false";
+
+
+		// Set the check marks
+		$this->checkJobOfferForm();
 	}
 }
 ?> 
