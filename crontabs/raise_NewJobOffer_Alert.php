@@ -84,7 +84,7 @@ function raiseNewJobOfferAlerts() // Alerts on any NewJobOffer
 
 			$message .= "\n";
 
-			$message .= "  https://gnuherds.org/offers?id=".$result[0][$j]."\n";
+			$message .= "  http://gnuherds.org/offers?id=".$result[0][$j]."\n";
 
 			$message .= "\n";
 			$message .= "\n";
