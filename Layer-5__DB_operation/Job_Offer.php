@@ -653,7 +653,7 @@ class JobOffer
 
 	public function pendingNewJobOfferAlerts()
 	{
-		$sqlQuery = "SELECT count(*) FROM J1_JobOffers WHERE J1_Closed='f' AND J1_ExpirationDate > 'now' AND J1_NewJobOfferAlert='t';";
+		$sqlQuery = "SELECT count(*) FROM J1_JobOffers WHERE J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' AND J1_NewJobOfferAlert='t';";
 		$result = $this->postgresql->getOneField($sqlQuery,0);
 
 		if ( intval($result[0]) >= 1 )
