@@ -375,6 +375,14 @@ class DBManager
 		return $jobOffer->pendingNewJobOfferAlerts();
 	}
 
+	public function resetNewJobOfferAlerts()
+	{
+		// XXX: Add the check needed to be sure that this method is only used by the 'alerts' cron job.
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->resetNewJobOfferAlerts();
+	}
+
 
 	public function getAlertsForEntity()
 	{

@@ -661,5 +661,11 @@ class JobOffer
 		else
 			return false;
 	}
+
+	public function resetNewJobOfferAlerts()
+	{
+		$sqlQuery = "UPDATE J1_JobOffers SET J1_NewJobOfferAlert='f' WHERE J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' AND J1_NewJobOfferAlert='t';";
+		$this->postgresql->execute($sqlQuery,0);
+	}
 }
 ?> 

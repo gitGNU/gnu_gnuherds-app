@@ -95,6 +95,9 @@ function raiseNewJobOfferAlerts() // Alerts on any NewJobOffer
 			mail($emails[$j], "GNU Herds: ".gettext("Alert on new job offers"), "$message", "From: association@gnuherds.org\r\nContent-Type: Text/plain; \r\nContent-Transfer-Encoding: 8bit\r\n"); //XXX Add UTF-8 support to the subject.
 
 	}
+
+	// We disable the NewJoOffer alerts due to they are already been processed
+	$manager->resetNewJobOfferAlerts();
 }
 
 
