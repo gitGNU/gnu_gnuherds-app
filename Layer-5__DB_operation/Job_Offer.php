@@ -602,7 +602,16 @@ class JobOffer
 
 		for( $i=0; $i < count($arrayLS[0]); $i++)
 			if ( trim($arrayLS[0][$i]) != '' and $arrayLS[3][$i] != 'Non-Free' and $arrayLS[3][$i] != 'Pending' )
-				$VacancyTitle .= ", ".$arrayLS[0][$i];
+			{
+				if ( preg_match("/^.+ \((.+)\)$/", $arrayLS[0][$i], $matches ) )//   /^.+ (.+)$/
+				{
+					$VacancyTitle .= ", ".$matches[1];
+				}
+				else
+				{
+					$VacancyTitle .= ", ".$arrayLS[0][$i];
+				}
+			}
 
 		for( $i=0; $i < count($arrayLL[0]); $i++)
 			if ( trim($arrayLL[0][$i]) != '')
