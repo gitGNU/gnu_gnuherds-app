@@ -51,7 +51,7 @@ class Alerts
 	public function saveAlertsForEntity()
 	{
 		// The row have to be present in the data base, else we can be sure the data base is corrupted.
-		$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE A1_Alerts SET A1_NewJobOffer=$1 WHERE A1_E1_Id=$2;  EXECUTE query('{$_SESSION['NewJobOffer']}','{$_SESSION['EntityId']}');";
+		$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE A1_Alerts SET A1_NewJobOffer=$1 WHERE A1_E1_Id=$2;  EXECUTE query('{$_POST['NewJobOffer']}','{$_SESSION['EntityId']}');";
 		$this->postgresql->execute($sqlQuery,1);
 	}
 
