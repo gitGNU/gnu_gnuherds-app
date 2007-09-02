@@ -35,7 +35,7 @@ Suite 225, San Francisco, CA 94107, USA
 {t escape='no'
   1='<a href="faq#Why_another_Job_Site?">'
   2='</a>
-}The aims of the Association shall be to %1assist and encourage%2 persons in their professional capacity as Free Software contributors.{/t}
+}The aims of the Association shall be to %1assist and encourage%2 people in their capacity as Free Software producers.{/t}
 </p>
 
 

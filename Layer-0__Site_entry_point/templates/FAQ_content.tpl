@@ -65,7 +65,7 @@ Suite 225, San Francisco, CA 94107, USA
 	{t escape='no'
 	  1='<a href="charter#Aims">'
 	  2='</a>'
-	}All this taking into account that: "The %1aims%2 of the Association shall be to assist and encourage persons in their professional capacity as Free Software contributors."{/t}
+	}All this taking into account that: "The %1aims%2 of the Association shall be to assist and encourage people in their capacity as Free Software producers."{/t}
 	</p>
 
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
