@@ -146,10 +146,10 @@ class JobOfferForm
 	{
 		$smarty = new Smarty;
 
-		// This function draw the form, with its controls. Note that the specific values of form controls are set via SESSION variables.
-		// The SESSION variables are loaded from the Data Base:
+		// This function draw the form, with its controls. Note that the specific values of form controls are set via the $data array.
+		// The $data array is loaded from the Data Base:
 		//   1. It is in the Data Base.
-		//   2. It is in SESSION variables.
+		//   2. It is in $data array.
 		//   3. It is set in the smarty templates.
 
 
