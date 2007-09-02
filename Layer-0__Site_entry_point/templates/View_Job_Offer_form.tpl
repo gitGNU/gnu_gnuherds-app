@@ -28,7 +28,7 @@ Suite 225, San Francisco, CA 94107, USA
 		<tr> <td colspan="5">&nbsp;</td> </tr> 
 		<tr> <td colspan="5">&nbsp;</td> </tr> 
 {else}
-	{if $smarty.session.ViewEntityId eq $smarty.session.EntityId and $smarty.session.ViewCompletedEdition eq 'f' }
+	{if $data.EntityId eq $smarty.session.EntityId and $data.CompletedEdition eq 'f' }
 		<tr align="center">
 		<td colspan="5" align="center"><span class="modification">{t}The edition of this offer is not finished! It is not ready to be published.{/t}</span></td>
 		</tr>
@@ -41,10 +41,10 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr valign="top">
 <td>
-{if $smarty.session.ViewPhotoOrLogo eq 'true' }
-		<img src="photo?acl=offers&id={$smarty.session.ViewEntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
+{if $data.PhotoOrLogo eq 'true' }
+		<img src="photo?acl=offers&id={$data.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
 {else}
-	{if $smarty.session.ViewEntityType eq 'Person' }
+	{if $data.EntityType eq 'Person' }
 		<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
 	{else}
 		<img src="/images/default/Company_or_non-profit_Organization.png" width="180" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
@@ -54,38 +54,38 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 <td colspan="3">
 
-{t}{$smarty.session.ViewEntityType}{/t}:
+{t}{$data.EntityType}{/t}:
 
-{if $smarty.session.ViewEntityType eq 'Person' }
+{if $data.EntityType eq 'Person' }
 	<!-- Person's name -->
 	<strong>
-	{if trim($smarty.session.ViewWebsite) neq ''}<a href="{$smarty.session.ViewWebsite}">{/if}
-	{if trim($smarty.session.ViewLastName) neq '' or trim($smarty.session.ViewMiddleName) neq ''}
-		{$smarty.session.ViewLastName} {$smarty.session.ViewMiddleName},
+	{if trim($data.Website) neq ''}<a href="{$data.Website}">{/if}
+	{if trim($data.LastName) neq '' or trim($data.MiddleName) neq ''}
+		{$data.LastName} {$data.MiddleName},
 	{/if}
-	{$smarty.session.ViewFirstName}{if trim($smarty.session.ViewWebsite) neq ''}</a>{/if}
+	{$data.FirstName}{if trim($data.Website) neq ''}</a>{/if}
 	</strong>
 	<br>
 
 	<!-- Person's birth year -->
-	{if trim($smarty.session.ViewBirthYear) neq ''}
-		{t}been born in{/t} <strong>{$smarty.session.ViewBirthYear}</strong><br>
+	{if trim($data.BirthYear) neq ''}
+		{t}been born in{/t} <strong>{$data.BirthYear}</strong><br>
 	{/if}
 {/if}
 
-{if $smarty.session.ViewEntityType eq 'Company' }
+{if $data.EntityType eq 'Company' }
 	<!-- Company's name -->
-	<strong>{$smarty.session.ViewCompanyName}</strong><br>
+	<strong>{$data.CompanyName}</strong><br>
 {/if}
 
-{if $smarty.session.ViewEntityType eq 'non-profit Organization' }
+{if $data.EntityType eq 'non-profit Organization' }
 	<!-- non-profit Organization's name -->
-	<strong>{$smarty.session.ViewNonprofitName}</strong><br>
+	<strong>{$data.NonprofitName}</strong><br>
 {/if}
 
-{if trim($smarty.session.ViewEntityNationality) neq ''}
+{if trim($data.EntityNationality) neq ''}
 	<!-- Nationality -->
-	{t}Nationality{/t} <strong>{t}{$smarty.session.ViewEntityNationalityName}{/t}</strong><br>
+	{t}Nationality{/t} <strong>{t}{$data.EntityNationalityName}{/t}</strong><br>
 {/if}
 
 {*
@@ -94,38 +94,38 @@ Suite 225, San Francisco, CA 94107, USA
 {if $smarty.post.ViewContactInformation eq 't'}
 
 	<!-- Address -->
-	{$smarty.session.ViewEntityStreet}{if trim($smarty.session.ViewEntityStreet) neq '' and trim($smarty.session.ViewEntitySuite) neq ''}, {/if}{$smarty.session.ViewEntitySuite}<br>
+	{$data.EntityStreet}{if trim($data.EntityStreet) neq '' and trim($data.EntitySuite) neq ''}, {/if}{$data.EntitySuite}<br>
 
-	{$smarty.session.ViewEntityPostalCode}
-	{if trim($smarty.session.ViewEntityPostalCode) neq '' and trim($smarty.session.ViewEntityCity) neq ''} - {/if}
-	{$smarty.session.ViewEntityCity}
-	{if trim($smarty.session.ViewEntityPostalCode) neq '' or  trim($smarty.session.ViewEntityCity) neq ''} <br> {/if}
+	{$data.EntityPostalCode}
+	{if trim($data.EntityPostalCode) neq '' and trim($data.EntityCity) neq ''} - {/if}
+	{$data.EntityCity}
+	{if trim($data.EntityPostalCode) neq '' or  trim($data.EntityCity) neq ''} <br> {/if}
 
-	{$smarty.session.ViewEntityStateProvince}{if trim($smarty.session.ViewEntityStateProvince) neq ''}, {/if}<strong>{$smarty.session.ViewEntityCountryName}</strong><br>
+	{$data.EntityStateProvince}{if trim($data.EntityStateProvince) neq ''}, {/if}<strong>{$data.EntityCountryName}</strong><br>
 
 	<br>
 
 	<!-- Other contact information -->
 
-	{mailto address=$smarty.session.ViewEmail}<br>
+	{mailto address=$data.Email}<br>
 
-	{if trim($smarty.session.ViewWebsite) neq ''}
-		{t}web site{/t} <a href="{$smarty.session.ViewWebsite}">{$smarty.session.ViewWebsite}</a><br>
+	{if trim($data.Website) neq ''}
+		{t}web site{/t} <a href="{$data.Website}">{$data.Website}</a><br>
 	{/if}
 
 
 	<br>
 
-	{if trim($smarty.session.ViewLandline) neq ''}
-		<strong>{t}Landline{/t}</strong>: {$smarty.session.ViewLandline}<br>
+	{if trim($data.Landline) neq ''}
+		<strong>{t}Landline{/t}</strong>: {$data.Landline}<br>
 	{/if}
 
-	{if trim($smarty.session.ViewMobilePhone) neq ''}
-		<strong>{t}Mobile phone{/t}</strong>: {$smarty.session.ViewMobilePhone}<br>
+	{if trim($data.MobilePhone) neq ''}
+		<strong>{t}Mobile phone{/t}</strong>: {$data.MobilePhone}<br>
 	{/if}
 
-	{if trim($smarty.session.ViewIpPhoneOrVideo) neq ''}
-		<strong>{t}IP phone or videophone{/t}</strong>: {$smarty.session.ViewIpPhoneOrVideo}
+	{if trim($data.IpPhoneOrVideo) neq ''}
+		<strong>{t}IP phone or videophone{/t}</strong>: {$data.IpPhoneOrVideo}
 	{/if}
 
 {else}
@@ -135,7 +135,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 </td>
 
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 
 {if $smarty.session.LoginType eq 'Person' }
 	{assign var="Entity" value="person"}
@@ -147,7 +147,7 @@ Suite 225, San Francisco, CA 94107, USA
 	{assign var="Entity" value="nonprofit"}
 {/if}
 
-<td class="edit"><a href="{$Entity}" title="{t}Edit section{/t}: {t}{$smarty.session.ViewEntityType}{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="{$Entity}" title="{t}Edit section{/t}: {t}{$data.EntityType}{/t}">{t}edit{/t}</a></td>
 
 {/if}
 
@@ -156,7 +156,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr>
 <td colspan="4">&nbsp;</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr>
@@ -164,22 +164,22 @@ Suite 225, San Francisco, CA 94107, USA
 <tr>
 <td colspan="4" class="subsection">{t}IS LOOKING FOR{/t}</td>
 
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=general" title="{t}Edit section{/t}: {t}IS LOOKING FOR{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
 <tr valign="top">
 <td align="right"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
-<td colspan="3" class="tdDark">{$smarty.session.ViewVacancyTitle}</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+<td colspan="3" class="tdDark">{$data.VacancyTitle}</td>
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr>
 
 <tr>
 <td colspan="4">&nbsp;</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr> 
@@ -187,11 +187,11 @@ Suite 225, San Francisco, CA 94107, USA
 <tr valign="top">
 <td align="right"><strong>{'Entity type'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="greenLight">
-{if $smarty.session.ViewAllowPersonApplications eq 'true'}
+{if $data.AllowPersonApplications eq 'true'}
 	{assign var="entityTypeAAA" value="Persons"}
 {/if}
 
-{if $smarty.session.ViewAllowCompanyApplications eq 'true'}
+{if $data.AllowCompanyApplications eq 'true'}
 	{if trim($entityTypeAAA) eq ''}
 		{assign var="entityTypeAAA" value="Companies"}
 	{else}
@@ -199,7 +199,7 @@ Suite 225, San Francisco, CA 94107, USA
 	{/if}
 {/if}
 
-{if $smarty.session.ViewAllowOrganizationApplications eq 'true'}
+{if $data.AllowOrganizationApplications eq 'true'}
 	{if trim($entityTypeAAA) eq ''}
 		{assign var="entityTypeAAA" value="non-profit Organizations"}
 	{else}
@@ -214,32 +214,32 @@ Suite 225, San Francisco, CA 94107, USA
 {t}{$entityTypeAAA}{/t}{if $entityTypeBBB neq ''}{if $entityTypeCCC neq ''}, {else} {t}or{/t} {/if} {t}{$entityTypeBBB}{/t} {/if}
 {if $entityTypeCCC neq ''} {t}or{/t} {t}{$entityTypeCCC}{/t}{/if}
 </td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr>
 
 <tr>
 <td align="right"><strong>{t}Vacancies{/t}</strong> : </td>
-<td colspan="3" class="greenLight">{$smarty.session.ViewVacancies}</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+<td colspan="3" class="greenLight">{$data.Vacancies}</td>
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr>
 
 <tr>
 <td align="right"><strong>{'Offer date'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
-<td colspan="3" class="greenLight">{$smarty.session.ViewOfferDate}</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+<td colspan="3" class="greenLight">{$data.OfferDate}</td>
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr>
 
-{if $smarty.session.ViewEmployerJobOfferReference neq ''}
+{if $data.EmployerJobOfferReference neq ''}
 <tr>
 <td align="right"><strong>{t}Ref.{/t}</strong> : </td>
-<td colspan="3" class="greenLight">{$smarty.session.ViewEmployerJobOfferReference}</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+<td colspan="3" class="greenLight">{$data.EmployerJobOfferReference}</td>
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr>
@@ -247,158 +247,158 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr>
 <td colspan="4">&nbsp;</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr> 
 
 <tr>
 <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=profiles_etc" title="{t}Edit section{/t}: {t}TECHNICAL{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
-{if trim($smarty.session.ViewProfessionalExperienceSinceYear) neq ''}
+{if trim($data.ProfessionalExperienceSinceYear) neq ''}
 	<tr>
 	<td align="right"><strong>{'Professional experience since'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
-	<td colspan="3" class="greenLight">{$smarty.session.ViewProfessionalExperienceSinceYear}</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+	<td colspan="3" class="greenLight">{$data.ProfessionalExperienceSinceYear}</td>
+{if $data.EntityId eq $smarty.session.EntityId}
 	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Professional experience since{/t}">{t}edit{/t}</a></td>
 {/if}
 	</tr>
 {/if}
 
-{if trim($smarty.session.ViewAcademicQualification) neq ''}
+{if trim($data.AcademicQualification) neq ''}
 	<tr>
 	<td align="right"><strong>{'Academic qualification'|gettext|strip:'&nbsp;'}</strong> : </td>
-	<td colspan="3" class="greenLight">{t}{$smarty.session.ViewAcademicQualification}{/t}</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+	<td colspan="3" class="greenLight">{t}{$data.AcademicQualification}{/t}</td>
+{if $data.EntityId eq $smarty.session.EntityId}
 	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Academic qualification{/t}">{t}edit{/t}</a></td>
 {/if}
 	</tr>
 {/if}
 
-{if ( is_array($smarty.session.ViewProductProfileList) and count($smarty.session.ViewProductProfileList) > 0 ) or
-    ( is_array($smarty.session.ViewProfessionalProfileList) and count($smarty.session.ViewProfessionalProfileList) > 0 ) or
-    ( is_array($smarty.session.ViewFieldProfileList) and count($smarty.session.ViewFieldProfileList) > 0 )
+{if ( is_array($data.ProductProfileList) and count($data.ProductProfileList) > 0 ) or
+    ( is_array($data.ProfessionalProfileList) and count($data.ProfessionalProfileList) > 0 ) or
+    ( is_array($data.FieldProfileList) and count($data.FieldProfileList) > 0 )
 }
 	<tr valign="top">
 	<td align="right"><strong>{t}Profiles{/t}</strong> : </td>
 
 	<td class="greenLight"><u>{'Product profiles'|gettext|strip:'&nbsp;'}</u><br>
-	{if not is_array($smarty.session.ViewProductProfileList) or count($smarty.session.ViewProductProfileList) == 0}
+	{if not is_array($data.ProductProfileList) or count($data.ProductProfileList) == 0}
 		{'not specified'|gettext|strip:'&nbsp;'}
 	{else}
-		{foreach from=$smarty.session.ViewProductProfileList item=profile}
+		{foreach from=$data.ProductProfileList item=profile}
 			{$profile|gettext|strip:'&nbsp;'}<br>
 		{/foreach}
 	{/if}
 	</td>
 
 	<td class="greenLight"><u>{'Professional profiles'|gettext|strip:'&nbsp;'}</u><br>
-	{if not is_array($smarty.session.ViewProfessionalProfileList) or count($smarty.session.ViewProfessionalProfileList) == 0}
+	{if not is_array($data.ProfessionalProfileList) or count($data.ProfessionalProfileList) == 0}
 		{'not specified'|gettext|strip:'&nbsp;'}
 	{else}
-		{foreach from=$smarty.session.ViewProfessionalProfileList item=profile}
+		{foreach from=$data.ProfessionalProfileList item=profile}
 			{$profile|gettext|strip:'&nbsp;'}<br>
 		{/foreach}
 	{/if}
 	</td>
 
 	<td class="greenLight"><u>{'Field profiles'|gettext|strip:'&nbsp;'}</u><br>
-	{if not is_array($smarty.session.ViewFieldProfileList) or count($smarty.session.ViewFieldProfileList) == 0}
+	{if not is_array($data.FieldProfileList) or count($data.FieldProfileList) == 0}
 		{'not specified'|gettext|strip:'&nbsp;'}
 	{else}
-		{foreach from=$smarty.session.ViewFieldProfileList item=profile}
+		{foreach from=$data.FieldProfileList item=profile}
 			{$profile|gettext|strip:'&nbsp;'}<br>
 		{/foreach}
 	{/if}
 	</td>
 
-	{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+	{if $data.EntityId eq $smarty.session.EntityId}
 	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Profiles{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
 
-{if is_array($smarty.session.ViewSkillList) and count($smarty.session.ViewSkillList) > 0 }
+{if is_array($data.SkillList) and count($data.SkillList) > 0 }
 	<tr valign="top">
 	<td align="right"><strong>{t}Skills{/t}</strong> : </td>
 
 	<td class="greenLight"><u>{t}Skill{/t}</u><br>
-	{foreach from=$smarty.session.ViewSkillList item=skill}
+	{foreach from=$data.SkillList item=skill}
 		{$skill|strip:'&nbsp;'}<br>
 	{/foreach}
 	</td>
 
 	<td class="greenLight"><u>{'Knowledge level'|gettext|strip:'&nbsp;'}</u><br>
-	{foreach from=$smarty.session.ViewKnowledgeLevelList item=knowledgeLevel}
+	{foreach from=$data.KnowledgeLevelList item=knowledgeLevel}
 		{$knowledgeLevel|gettext|strip:'&nbsp;'}<br>
 	{/foreach}
 	</td>
 
 	<td class="greenLight"><u>{'Experience level'|gettext|strip:'&nbsp;'}</u><br>
-	{foreach from=$smarty.session.ViewExperienceLevelList item=experienceLevel}
+	{foreach from=$data.ExperienceLevelList item=experienceLevel}
 		{$experienceLevel|gettext|strip:'&nbsp;'}<br>
 	{/foreach}
 	</td>
 
-	{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+	{if $data.EntityId eq $smarty.session.EntityId}
 	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=skills" title="{t}Edit section{/t}: {t}Skills{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
 
-{if is_array($smarty.session.ViewLanguageList) and count($smarty.session.ViewLanguageList) > 0 }
+{if is_array($data.LanguageList) and count($data.LanguageList) > 0 }
 	<tr valign="top">
 	<td align="right"><strong>{t}Languages{/t}</strong> : </td>
 
 	<td class="greenLight"><u>{t}Language{/t}</u><br>
-	{foreach from=$smarty.session.ViewLanguageList item=language}
+	{foreach from=$data.LanguageList item=language}
 		{$language|gettext|strip:'&nbsp;'}<br>
 	{/foreach}
 	</td>
 
 	<td class="greenLight"><u>{'Spoken level'|gettext|strip:'&nbsp;'}</u><br>
-	{foreach from=$smarty.session.ViewLanguageSpokenLevelList item=spokenLevel}
+	{foreach from=$data.LanguageSpokenLevelList item=spokenLevel}
 		{$spokenLevel|gettext|strip:'&nbsp;'}<br>
 	{/foreach}
 	</td>
 
 	<td class="greenLight"><u>{'Written level'|gettext|strip:'&nbsp;'}</u><br>
-	{foreach from=$smarty.session.ViewLanguageWrittenLevelList item=writtenLevel}
+	{foreach from=$data.LanguageWrittenLevelList item=writtenLevel}
 		{$writtenLevel|gettext|strip:'&nbsp;'}<br>
 	{/foreach}
 	</td>
 
-	{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+	{if $data.EntityId eq $smarty.session.EntityId}
 	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=languages" title="{t}Edit section{/t}: {t}Languages{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
 
 {* The certifications feature is disabled
-{if is_array($smarty.session.ViewCertificationsList) and count($smarty.session.ViewCertificationsList) > 0}
+{if is_array($data.CertificationsList) and count($data.CertificationsList) > 0}
 	<tr valign="top">
 	<td align="right"><strong>{t}Certifications{/t}</strong> : <br> </td>
 	<td colspan="3" class="greenLight">
-		{foreach from=$smarty.session.ViewCertificationsList item=certification}
+		{foreach from=$data.CertificationsList item=certification}
 			{$certification}<br>
 		{/foreach}
 	</td>
-	{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+	{if $data.EntityId eq $smarty.session.EntityId}
 	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=certifications" title="{t}Edit section{/t}: {t}Certifications{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
 *}
 
-{if trim($smarty.session.ViewFreeSoftwareExperiences) neq ''}
+{if trim($data.FreeSoftwareExperiences) neq ''}
 	<tr valign="top">
 	<td align="right"><strong>{'Experience with FS projects'|gettext|strip:'&nbsp;'}</strong> : <br> </td>
-	<td colspan="3" class="greenLight">{$smarty.session.ViewFreeSoftwareExperiences}</td>
-	{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+	<td colspan="3" class="greenLight">{$data.FreeSoftwareExperiences}</td>
+	{if $data.EntityId eq $smarty.session.EntityId}
 	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=projects" title="{t}Edit section{/t}: {t}Experience with FS projects{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
@@ -406,62 +406,62 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr>
 <td colspan="4">&nbsp;</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr> 
 
 <tr>
 <td colspan="4" class="subsection">{t}RESIDENCE LOCATION{/t}</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=location" title="{t}Edit section{/t}: {t}RESIDENCE LOCATION{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
-{if trim($smarty.session.ViewJobOfferCity) eq '' and trim($smarty.session.ViewJobOfferStateProvince) eq '' and trim($smarty.session.ViewJobOfferCountryName) eq ''}
+{if trim($data.JobOfferCity) eq '' and trim($data.JobOfferStateProvince) eq '' and trim($data.JobOfferCountryName) eq ''}
 		<tr valign="top">
 		<td align="right"><strong>{t}Telework{/t}</strong> : </td>
 		<td colspan="3" class="greenLight">{t}any location{/t}</td>
-		{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+		{if $data.EntityId eq $smarty.session.EntityId}
 		<td class="edit"></td>
 		{/if}
 		</tr>
 {else}
-	{if trim($smarty.session.ViewJobOfferCity) neq ''}
+	{if trim($data.JobOfferCity) neq ''}
 		<tr>
 		<td align="right"><strong>{t}City{/t}</strong> : </td>
-		<td colspan="3" class="greenLight">{$smarty.session.ViewJobOfferCity}</td>
-		{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+		<td colspan="3" class="greenLight">{$data.JobOfferCity}</td>
+		{if $data.EntityId eq $smarty.session.EntityId}
 		<td class="edit"></td>
 		{/if}
 		</tr>
 	{/if}
 
-	{if trim($smarty.session.ViewJobOfferStateProvince) neq ''}
+	{if trim($data.JobOfferStateProvince) neq ''}
 		<tr>
 		<td align="right"><strong>{'State / Province'|gettext|strip:'&nbsp;'}</strong> : </td>
-		<td colspan="3" class="greenLight">{$smarty.session.ViewJobOfferStateProvince}</td>
-		{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+		<td colspan="3" class="greenLight">{$data.JobOfferStateProvince}</td>
+		{if $data.EntityId eq $smarty.session.EntityId}
 		<td class="edit"></td>
 		{/if}
 		</tr>
 	{/if}
 
-	{if trim($smarty.session.ViewJobOfferCountryName) neq ''}
+	{if trim($data.JobOfferCountryName) neq ''}
 		<tr>
 		<td align="right"><strong>{t}Country{/t}</strong> : </td>
-		<td colspan="3" class="greenLight">{t}{$smarty.session.ViewJobOfferCountryName}{/t}</td>
-		{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+		<td colspan="3" class="greenLight">{t}{$data.JobOfferCountryName}{/t}</td>
+		{if $data.EntityId eq $smarty.session.EntityId}
 		<td class="edit"></td>
 		{/if}
 		</tr>
 	{/if}
 
-	{if $smarty.session.ViewAvailableToTravel eq 'true'}
+	{if $data.AvailableToTravel eq 'true'}
 		<tr valign="top">
 		<td align="right"><strong>{'Available to travel'|gettext|strip:'&nbsp;'}</strong> : </td>
 		<td colspan="3" class="greenLight">{t}required{/t}</td>
-		{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+		{if $data.EntityId eq $smarty.session.EntityId}
 		<td class="edit"></td>
 		{/if}
 		</tr>
@@ -470,24 +470,24 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr>
 <td colspan="4">&nbsp;</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr> 
 
 <tr>
 <td colspan="4" class="subsection">{t}CONTRACT{/t}</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=contract" title="{t}Edit section{/t}: {t}CONTRACT{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
-{if $smarty.session.ViewContractType neq ''}
+{if $data.ContractType neq ''}
 
 <tr>
 <td align="right"><strong>{'Contract type'|gettext|strip:'&nbsp;'}</strong> : </td>
-<td colspan="3" class="greenLight">{t}{$smarty.session.ViewContractType}{/t}</td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+<td colspan="3" class="greenLight">{t}{$data.ContractType}{/t}</td>
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr>
@@ -495,23 +495,23 @@ Suite 225, San Francisco, CA 94107, USA
 <tr>
 <td align="right"><strong>{'Wage rank'|gettext|strip:'&nbsp;'}</strong> : </td>
 <td colspan="3" class="greenLight">
-{$smarty.session.ViewWageRank}
-{t}{$smarty.session.ViewWageRankCurrencyName}{/t} 
-{t}{$smarty.session.ViewWageRankByPeriod}{/t}
+{$data.WageRank}
+{t}{$data.WageRankCurrencyName}{/t} 
+{t}{$data.WageRankByPeriod}{/t}
 </td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr>
 
-{if trim($smarty.session.ViewEstimatedEffort) neq '' and $smarty.session.ViewTimeUnit neq ''}
+{if trim($data.EstimatedEffort) neq '' and $data.TimeUnit neq ''}
 <tr>
 <td align="right"><strong>{'Estimated effort'|gettext|strip:'&nbsp;'}</strong> : </td>
 <td colspan="3" class="greenLight">
-{$smarty.session.ViewEstimatedEffort}
-{t}{$smarty.session.ViewTimeUnit}{/t}
+{$data.EstimatedEffort}
+{t}{$data.TimeUnit}{/t}
 </td>
-{if $smarty.session.ViewEntityId eq $smarty.session.EntityId}
+{if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
 </tr>
@@ -520,7 +520,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 
-{if $smarty.session.ViewEntityId neq $smarty.session.EntityId and $smarty.session.IsAlreadySubscribed neq 't' }
+{if $data.EntityId neq $smarty.session.EntityId and $smarty.session.IsAlreadySubscribed neq 't' }
 		<tr> <td colspan="4">&nbsp;</td> </tr> 
 		<tr> <td colspan="4">&nbsp;</td> </tr> 
 

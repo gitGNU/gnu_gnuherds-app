@@ -26,6 +26,7 @@ class ManageJobOffersForm
 {
 	private $manager;
 	private $processingResult;
+	private $data;
 
 
 	function __construct()
@@ -86,11 +87,11 @@ class ManageJobOffersForm
 
 		$result = $this->manager->getJobOffersForEntity();
 
-		$_SESSION['M_JobOfferId'] = $result[0];
-		$_SESSION['M_OfferDate'] = $result[1];
-		$_SESSION['M_ExpirationDate'] = $result[2];
-		$_SESSION['M_Closed'] = $result[3];
-		$_SESSION['M_VacancyTitle'] = isset($result[4]) ? $result[4] : '';
+		$this->data['JobOfferId'] = $result[0];
+		$this->data['OfferDate'] = $result[1];
+		$this->data['ExpirationDate'] = $result[2];
+		$this->data['Closed'] = $result[3];
+		$this->data['VacancyTitle'] = isset($result[4]) ? $result[4] : '';
 
 
 		// Meters
@@ -117,6 +118,7 @@ class ManageJobOffersForm
 		$smarty->assign('SelectedMeter', $selectedMeter);
 
 
+		$smarty->assign('data', $this->data);
 		$smarty->display("Manage_Job_Offers_form.tpl");
 	}
 }
