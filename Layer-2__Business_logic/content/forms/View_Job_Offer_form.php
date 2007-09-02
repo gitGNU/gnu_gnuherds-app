@@ -25,6 +25,7 @@ require_once "../Layer-4__DBManager_etc/DB_Manager.php";
 class ViewJobOfferForm
 {
 	private $manager;
+	private $data;
 
 
 	function __construct()
@@ -51,9 +52,9 @@ class ViewJobOfferForm
 		{
 			if ( isset($_SESSION['Logged']) and $_SESSION['Logged'] == '1' )
 			{
-				if ( ($_SESSION['LoginType']=='Person' and $_SESSION['ViewAllowPersonApplications']=="true") or ($_SESSION['LoginType']=='Company' and $_SESSION['ViewAllowCompanyApplications']=="true") or ($_SESSION['LoginType']=='non-profit Organization' and $_SESSION['ViewAllowOrganizationApplications']=="true") )
+				if ( ($_SESSION['LoginType']=='Person' and $this->data['AllowPersonApplications']=="true") or ($_SESSION['LoginType']=='Company' and $this->data['AllowCompanyApplications']=="true") or ($_SESSION['LoginType']=='non-profit Organization' and $this->data['AllowOrganizationApplications']=="true") )
 				{
-					if ($_SESSION['ViewEmail'] == $_SESSION['LoginEmail'] )
+					if ($this->data['Email'] == $_SESSION['LoginEmail'] )
 					{
 						$error = "<p>".gettext("You can not subscribe to you own offer.")."</p>";
 						throw new Exception($error,false);
@@ -104,171 +105,172 @@ class ViewJobOfferForm
 
 	private function printViewJobOfferForm()
 	{
-		// This function draw the form, with its controls. Note that the specific values of form controls are set via SESSION variables.
-		// The SESSION variables are loaded from the Data Base:
+		// This function draw the form, with its controls. Note that the specific values of form controls are set via the $data array.
+		// The $data array is loaded from the Data Base:
 		//   1. It is in the Data Base.
-		//   2. It is in SESSION variables.
+		//   2. It is in $data array.
 		//   3. It is set in the smarty templates.
 
 		$smarty = new Smarty;
+
+		$smarty->assign('data', $this->data);
 		$smarty->display("View_Job_Offer_form.tpl");
 	}
 
 
 	private function loadJobOfferForm()
 	{
-		// This function will not override the SESSION variables while the user is working in its form, because of before calling this function the 'Back' button value is checked. 
 		$result = $this->manager->getJobOffer($_GET['JobOfferId']);
 
 
 		// J1_JobOffers table
 
-		$_SESSION['ViewEntityId'] = $result[26][0];
-		$_SESSION['ViewCompletedEdition'] = $result[27][0];
+		$this->data['EntityId'] = $result[26][0];
+		$this->data['CompletedEdition'] = $result[27][0];
 
-		$_SESSION['ViewEmployerJobOfferReference'] = trim($result[0][0]);
-		$_SESSION['ViewOfferDate'] = trim($result[1][0]);
+		$this->data['EmployerJobOfferReference'] = trim($result[0][0]);
+		$this->data['OfferDate'] = trim($result[1][0]);
 
 		if ($result[3][0]=='t')
-			$_SESSION['ViewClosed'] = "true";
+			$this->data['Closed'] = "true";
 		else
-			$_SESSION['ViewClosed'] = "false";
+			$this->data['Closed'] = "false";
 
 		if ($result[4][0]=='t')
-			$_SESSION['ViewHideEmployer'] = "true";
+			$this->data['HideEmployer'] = "true";
 		else
-			$_SESSION['ViewHideEmployer'] = "false";
+			$this->data['HideEmployer'] = "false";
 
 		if ($result[5][0]=='t')
-			$_SESSION['ViewAllowPersonApplications'] = "true";
+			$this->data['AllowPersonApplications'] = "true";
 		else
-			$_SESSION['ViewAllowPersonApplications'] = "false";
+			$this->data['AllowPersonApplications'] = "false";
 
 		if ($result[6][0]=='t')
-			$_SESSION['ViewAllowCompanyApplications'] = "true";
+			$this->data['AllowCompanyApplications'] = "true";
 		else
-			$_SESSION['ViewAllowCompanyApplications'] = "false";
+			$this->data['AllowCompanyApplications'] = "false";
 
 		if ($result[7][0]=='t')
-			$_SESSION['ViewAllowOrganizationApplications'] = "true";
+			$this->data['AllowOrganizationApplications'] = "true";
 		else
-			$_SESSION['ViewAllowOrganizationApplications'] = "false";
+			$this->data['AllowOrganizationApplications'] = "false";
 
-		$_SESSION['ViewVacancies'] = trim($result[8][0]);
+		$this->data['Vacancies'] = trim($result[8][0]);
 
-		$_SESSION['ViewContractType'] = $result[9][0];
-		$_SESSION['ViewWageRank'] = $result[10][0];
-		$_SESSION['ViewWageRankCurrency'] = $result[11][0];
-		$_SESSION['ViewWageRankCurrencyName'] = $result[12][0];
-		$_SESSION['ViewWageRankByPeriod'] = $result[13][0];
-		$_SESSION['ViewEstimatedEffort'] = $result[23][0];
-		$_SESSION['ViewTimeUnit'] = $result[24][0];
+		$this->data['ContractType'] = $result[9][0];
+		$this->data['WageRank'] = $result[10][0];
+		$this->data['WageRankCurrency'] = $result[11][0];
+		$this->data['WageRankCurrencyName'] = $result[12][0];
+		$this->data['WageRankByPeriod'] = $result[13][0];
+		$this->data['EstimatedEffort'] = $result[23][0];
+		$this->data['TimeUnit'] = $result[24][0];
 
-		$_SESSION['ViewProfessionalExperienceSinceYear'] = trim($result[14][0]);
-		$_SESSION['ViewAcademicQualification'] = trim($result[15][0]);
+		$this->data['ProfessionalExperienceSinceYear'] = trim($result[14][0]);
+		$this->data['AcademicQualification'] = trim($result[15][0]);
 
 		// Profiles tables
-		$_SESSION['ViewProductProfileList'] = $result[30];
-		$_SESSION['ViewProfessionalProfileList'] = $result[31];
-		$_SESSION['ViewFieldProfileList'] = $result[32];
+		$this->data['ProductProfileList'] = $result[30];
+		$this->data['ProfessionalProfileList'] = $result[31];
+		$this->data['FieldProfileList'] = $result[32];
 
 		// Skills tables
-		$_SESSION['ViewSkillList'] = $result[43];
-		$_SESSION['ViewKnowledgeLevelList'] = $result[44];
-		$_SESSION['ViewExperienceLevelList'] = $result[45];
-		$_SESSION['ViewCheckList'] = $result[46];
+		$this->data['SkillList'] = $result[43];
+		$this->data['KnowledgeLevelList'] = $result[44];
+		$this->data['ExperienceLevelList'] = $result[45];
+		$this->data['CheckList'] = $result[46];
 
 		// Do not show Non-Free or Pending skills
-		$count = count($_SESSION['ViewCheckList']);
+		$count = count($this->data['CheckList']);
 		for ($i=0,$j=0; $i < $count; $i++)
 		{
-			if ( $_SESSION['ViewCheckList'][$i]=='Non-Free' or $_SESSION['ViewCheckList'][$i]=='Pending' )
+			if ( $this->data['CheckList'][$i]=='Non-Free' or $this->data['CheckList'][$i]=='Pending' )
 			{
 			}
 			else
 			{
-				$_SESSION['ViewSkillList'][$j] = $_SESSION['ViewSkillList'][$i];
-				$_SESSION['ViewKnowledgeLevelList'][$j] = $_SESSION['ViewKnowledgeLevelList'][$i];
-				$_SESSION['ViewExperienceLevelList'][$j] = $_SESSION['ViewExperienceLevelList'][$i];
-				$_SESSION['ViewCheckList'][$j] = $_SESSION['ViewCheckList'][$i];
+				$this->data['SkillList'][$j] = $this->data['SkillList'][$i];
+				$this->data['KnowledgeLevelList'][$j] = $this->data['KnowledgeLevelList'][$i];
+				$this->data['ExperienceLevelList'][$j] = $this->data['ExperienceLevelList'][$i];
+				$this->data['CheckList'][$j] = $this->data['CheckList'][$i];
 				$j++;
 			}
 		}
 		for( $i=$j; $i < $count; $i++)
 		{
-			unset( $_SESSION['ViewSkillList'][$i] );
-			unset( $_SESSION['ViewKnowledgeLevelList'][$i] );
-			unset( $_SESSION['ViewExperienceLevelList'][$i] );
-			unset( $_SESSION['ViewCheckList'][$i] );
+			unset( $this->data['SkillList'][$i] );
+			unset( $this->data['KnowledgeLevelList'][$i] );
+			unset( $this->data['ExperienceLevelList'][$i] );
+			unset( $this->data['CheckList'][$i] );
 		}
 
-		$_SESSION['ViewCertificationsList'] = $result[50];
+		$this->data['CertificationsList'] = $result[50];
 
-		$_SESSION['ViewFreeSoftwareExperiences'] = trim($result[16][0]);
+		$this->data['FreeSoftwareExperiences'] = trim($result[16][0]);
 
 		// Languages table
-		$_SESSION['ViewLanguageList'] = $result[40];
-		$_SESSION['ViewLanguageSpokenLevelList'] = $result[41];
-		$_SESSION['ViewLanguageWrittenLevelList'] = $result[42];
+		$this->data['LanguageList'] = $result[40];
+		$this->data['LanguageSpokenLevelList'] = $result[41];
+		$this->data['LanguageWrittenLevelList'] = $result[42];
 
 		if ($result[17][0]=='t')
-			$_SESSION['ViewTelework'] = "true";
+			$this->data['Telework'] = "true";
 		else
-			$_SESSION['ViewTelework'] = "false";
+			$this->data['Telework'] = "false";
 
-		$_SESSION['ViewJobOfferCity'] = $result[18][0];
-		$_SESSION['ViewJobOfferStateProvince'] = $result[19][0];
-		$_SESSION['ViewJobOfferCountryName'] = $result[25][0];
+		$this->data['JobOfferCity'] = $result[18][0];
+		$this->data['JobOfferStateProvince'] = $result[19][0];
+		$this->data['JobOfferCountryName'] = $result[25][0];
 
 		if ($result[21][0]=='t')
-			$_SESSION['ViewAvailableToTravel'] = "true";
+			$this->data['AvailableToTravel'] = "true";
 		else
-			$_SESSION['ViewAvailableToTravel'] = "false";
+			$this->data['AvailableToTravel'] = "false";
 
-		$_SESSION['ViewVacancyTitle'] = $result[60][0];
+		$this->data['VacancyTitle'] = $result[60][0];
 
 
 		// Entity table
 
-		$result = $this->manager->getEntity($_SESSION['ViewEntityId']); // EntityId, owner of the JobOffer, to be shown at the template.
+		$result = $this->manager->getEntity($this->data['EntityId']); // EntityId, owner of the JobOffer, to be shown at the template.
 
-		$_SESSION['ViewEmail'] = $result[0][0];
+		$this->data['Email'] = $result[0][0];
 
-		$_SESSION['ViewEntityType'] = $result[2][0];
+		$this->data['EntityType'] = $result[2][0];
 
-		$_SESSION['ViewEntityStreet'] = $result[3][0];
-		$_SESSION['ViewEntitySuite'] = $result[4][0];
-		$_SESSION['ViewEntityCity'] = $result[5][0];
-		$_SESSION['ViewEntityStateProvince'] = $result[6][0];
-		$_SESSION['ViewEntityPostalCode'] = $result[7][0];
-		$_SESSION['ViewEntityCountryCode'] = $result[8][0];
+		$this->data['EntityStreet'] = $result[3][0];
+		$this->data['EntitySuite'] = $result[4][0];
+		$this->data['EntityCity'] = $result[5][0];
+		$this->data['EntityStateProvince'] = $result[6][0];
+		$this->data['EntityPostalCode'] = $result[7][0];
+		$this->data['EntityCountryCode'] = $result[8][0];
 
-		$_SESSION['ViewEntityNationality'] = $result[9][0];
+		$this->data['EntityNationality'] = $result[9][0];
 
-		$_SESSION['ViewBirthYear'] = $result[10][0];
-		$_SESSION['ViewPhotoOrLogo'] = '';
+		$this->data['BirthYear'] = $result[10][0];
+		$this->data['PhotoOrLogo'] = '';
 
-		$_SESSION['ViewIpPhoneOrVideo'] = $result[11][0];
-		$_SESSION['ViewLandline'] = $result[12][0];
-		$_SESSION['ViewMobilePhone'] = $result[13][0];
+		$this->data['IpPhoneOrVideo'] = $result[11][0];
+		$this->data['Landline'] = $result[12][0];
+		$this->data['MobilePhone'] = $result[13][0];
 
-		$_SESSION['ViewWebsite'] = $result[14][0];
+		$this->data['Website'] = $result[14][0];
 
-		$_SESSION['ViewFirstName'] = $result[15][0];
-		$_SESSION['ViewLastName'] = $result[16][0];
-		$_SESSION['ViewMiddleName'] = $result[17][0];
+		$this->data['FirstName'] = $result[15][0];
+		$this->data['LastName'] = $result[16][0];
+		$this->data['MiddleName'] = $result[17][0];
 
-		$_SESSION['ViewCompanyName'] = $result[18][0];
+		$this->data['CompanyName'] = $result[18][0];
 
-		$_SESSION['ViewNonprofitName'] = $result[19][0];
+		$this->data['NonprofitName'] = $result[19][0];
 
-		$_SESSION['ViewEntityCountryName'] = $result[30][0];
-		$_SESSION['ViewEntityNationalityName'] = $result[31][0];
+		$this->data['EntityCountryName'] = $result[30][0];
+		$this->data['EntityNationalityName'] = $result[31][0];
 
-		if ( file_exists("../entity_photos/".$_SESSION['ViewEntityId']) )
-			$_SESSION['ViewPhotoOrLogo'] = "true";
+		if ( file_exists("../entity_photos/".$this->data['EntityId']) )
+			$this->data['PhotoOrLogo'] = "true";
 		else
-			$_SESSION['ViewPhotoOrLogo'] = "false";
+			$this->data['PhotoOrLogo'] = "false";
 	}
 }
 ?> 
