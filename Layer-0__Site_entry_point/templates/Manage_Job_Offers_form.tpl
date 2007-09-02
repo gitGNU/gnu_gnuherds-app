@@ -21,7 +21,7 @@ Suite 225, San Francisco, CA 94107, USA
 <h3>{t}Manage Job Offers{/t}</h3>
 
 
-{if count($smarty.session.M_JobOfferId) == 0 }
+{if count($data.JobOfferId) == 0 }
 	<p>&nbsp;</p>
 	<p>{t}You do not have any defined job offer.{/t}</p><p>&nbsp;</p>
 {else}
@@ -44,7 +44,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="tdTitle">{'Selected'|gettext|strip:'&nbsp;'}</td>
 </tr>
 
-{foreach from=$smarty.session.M_JobOfferId item=Id key=i}
+{foreach from=$data.JobOfferId item=Id key=i}
 
 <tr valign="top">
 
@@ -53,19 +53,19 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="offers?id={$Id}">{$smarty.session.M_VacancyTitle[$i]}</a>
+<a href="offers?id={$Id}">{$data.VacancyTitle[$i]}</a>
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$smarty.session.M_OfferDate[$i]}
+{$data.OfferDate[$i]}
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$smarty.session.M_ExpirationDate[$i]}
+{$data.ExpirationDate[$i]}
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $smarty.session.M_Closed[$i] eq 'f'}
+{if $data.Closed[$i] eq 'f'}
 {t}No{/t}
 {else}
 {t}Yes{/t}
@@ -135,7 +135,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr>
 <td colspan="5">
-{if count($smarty.session.M_JobOfferId) > 0 }
+{if count($data.JobOfferId) > 0 }
 <input type="submit" name="delete" value="{t}Delete selected offers{/t}">
 {/if}
 </td>
