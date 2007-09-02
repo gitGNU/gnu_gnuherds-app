@@ -25,6 +25,9 @@ require_once "../Layer-4__DBManager_etc/PHP_Tools.php";
 
 class PersonForm extends EntityForm
 {
+	private $data;
+
+
 	public function processForm()
 	{
 		$phpTools = new PHPTools();
@@ -38,23 +41,15 @@ class PersonForm extends EntityForm
 				throw new Exception($error,true);
 			}
 
-			if ( $_POST['back'] != gettext('Back') ) // $back='Back' exposes we are along a no finished operation, so we do not overrride the transitional $_SESSION variable values loading from the data base table.
+			if ( $this->loadPersonForm() != true )
 			{
-				if ( $this->loadPersonForm() != true )
-				{
-					$error = "<p>Exception at [Person.php]: loadPersonForm() != true</p>\n";
-					throw new Exception($error,false);
-				}
+				$error = "<p>Exception at [Person.php]: loadPersonForm() != true</p>\n";
+				throw new Exception($error,false);
 			}
 		}
 		else // new
 		{
-			$_SESSION['ViewPhotoOrLogo'] = "false"; // Initialization
-
-			// If this HTTP request is not realizing any form operation, clear the session variables of this form to
-			// show the user a clean form. The action is the same than the previous Cancel operation, which was removed.
-			if ( $_POST['save'] != gettext('Save') and $_POST['back'] != gettext('Back') )
-				$phpTools->resetPHPsession();
+			// Reset the PHP session is not needed because we have done it at logout and delete-entity time, leaving so a clean state.
 		}
 
 		// Process each button event
@@ -98,10 +93,11 @@ class PersonForm extends EntityForm
 		$countries = $this->manager->getCountryList();
 		$countryTwoLetter = array_merge( array(""), array_keys($countries) );
 		$countryNames = array_merge( array(""), array_values($countries) );
-
 		$smarty->assign('countryTwoLetter', $countryTwoLetter);
 		$smarty->assign('countryNames', $countryNames);
 
+
+		$smarty->assign('data', $this->data);
 		$smarty->assign('checks', $this->checks);
 
 		$smarty->display("Person_form.tpl");
@@ -116,10 +112,10 @@ class PersonForm extends EntityForm
 		$this->checkPersonForm();
 
 
-		// Save the values in the session variables
+		// Save the values in $data variable
 		$_SESSION['EntityType'] = 'Person';
 
-		if ( $_SESSION['Email'] != $_POST['Email'] )
+		if ( $this->data['Email'] != $_POST['Email'] )
 		{
 			$_SESSION['WantEmail'] = $_POST['Email'];
 			$changeEmail = true;
@@ -129,32 +125,32 @@ class PersonForm extends EntityForm
 			$changeEmail = false;
 		}
 
-		$_SESSION['Email'] = trim($_POST['Email']);
-		$_SESSION['Password'] = $_POST['Password'];
-		$_SESSION['RetypePassword'] = $_POST['RetypePassword'];
+		$this->data['Email'] = trim($_POST['Email']);
+		$this->data['Password'] = $_POST['Password'];
+		$this->data['RetypePassword'] = $_POST['RetypePassword'];
 
-		$_SESSION['Street'] = trim($_POST['Street']);
-		$_SESSION['Suite'] = trim($_POST['Suite']);
-		$_SESSION['City'] = trim($_POST['City']);
-		$_SESSION['StateProvince'] = trim($_POST['StateProvince']);
-		$_SESSION['PostalCode'] = $_POST['PostalCode'];
-		$_SESSION['CountryCode'] = $_POST['CountryCode'];
+		$this->data['Street'] = trim($_POST['Street']);
+		$this->data['Suite'] = trim($_POST['Suite']);
+		$this->data['City'] = trim($_POST['City']);
+		$this->data['StateProvince'] = trim($_POST['StateProvince']);
+		$this->data['PostalCode'] = $_POST['PostalCode'];
+		$this->data['CountryCode'] = $_POST['CountryCode'];
 
-		$_SESSION['Nationality'] = $_POST['Nationality'];
+		$this->data['Nationality'] = $_POST['Nationality'];
 
-		$_SESSION['BirthYear'] = $_POST['BirthYear'];
+		$this->data['BirthYear'] = $_POST['BirthYear'];
 
-		$_SESSION['IpPhoneOrVideo'] = trim($_POST['IpPhoneOrVideo']);
-		$_SESSION['Landline'] = trim($_POST['Landline']);
-		$_SESSION['MobilePhone'] = trim($_POST['MobilePhone']);
+		$this->data['IpPhoneOrVideo'] = trim($_POST['IpPhoneOrVideo']);
+		$this->data['Landline'] = trim($_POST['Landline']);
+		$this->data['MobilePhone'] = trim($_POST['MobilePhone']);
 
-		$_SESSION['Website'] = trim($_POST['Website']);
+		$this->data['Website'] = trim($_POST['Website']);
 
-		$_SESSION['FirstName'] = trim($_POST['FirstName']);
-		$_SESSION['LastName'] = trim($_POST['LastName']);
-		$_SESSION['MiddleName'] = trim($_POST['MiddleName']);
+		$this->data['FirstName'] = trim($_POST['FirstName']);
+		$this->data['LastName'] = trim($_POST['LastName']);
+		$this->data['MiddleName'] = trim($_POST['MiddleName']);
 
-		//XXX $_SESSION['PhotoOrLogo'] = 
+		//XXX $this->data['PhotoOrLogo'] = 
 
 		// Update or insert the values
 		if ($this->checks['result'] == "pass" )
@@ -163,9 +159,6 @@ class PersonForm extends EntityForm
 			{
 				$this->manager->updateEntity();
 				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p>\n";
-
-				// * $_SESSION variables have been saved previously.
-				// * Do not destroy the session, so as to next time the values will be loaded from the $_SESSION variables. 
 
 				if ( $changeEmail == true )
 					$this->requestChangeEmail();
@@ -188,7 +181,7 @@ class PersonForm extends EntityForm
 			$this->checks['result'] = "fail";
 			$this->checks['Password'] = gettext("Password fields differ"); // This message has priority over the below one, about the Password field too.
 
-			$_SESSION['Password'] = ''; // We are not sure what is right 'Password' or 'RetypePassword', so we empty both.
+			$this->data['Password'] = ''; // We are not sure what is right 'Password' or 'RetypePassword', so we empty both.
 		}
 		else
 		{
@@ -223,36 +216,36 @@ class PersonForm extends EntityForm
 		if ( count($result[0]) !=1 )
 			return false;
 
-		$_SESSION['Email'] = $result[0][0];
+		$this->data['Email'] = $result[0][0];
 		// The Password is not exposed in the form.
 
 		$_SESSION['WantEmail'] = $result[20][0];
 
-		$_SESSION['Street'] = $result[3][0];
-		$_SESSION['Suite'] = $result[4][0];
-		$_SESSION['City'] = $result[5][0];
-		$_SESSION['StateProvince'] = $result[6][0];
-		$_SESSION['PostalCode'] = $result[7][0];
-		$_SESSION['CountryCode'] = $result[8][0];
+		$this->data['Street'] = $result[3][0];
+		$this->data['Suite'] = $result[4][0];
+		$this->data['City'] = $result[5][0];
+		$this->data['StateProvince'] = $result[6][0];
+		$this->data['PostalCode'] = $result[7][0];
+		$this->data['CountryCode'] = $result[8][0];
 
-		$_SESSION['Nationality'] = $result[9][0];
+		$this->data['Nationality'] = $result[9][0];
 
-		$_SESSION['BirthYear'] = $result[10][0];
+		$this->data['BirthYear'] = $result[10][0];
 
-		$_SESSION['IpPhoneOrVideo'] = $result[11][0];
-		$_SESSION['Landline'] = $result[12][0];
-		$_SESSION['MobilePhone'] = $result[13][0];
+		$this->data['IpPhoneOrVideo'] = $result[11][0];
+		$this->data['Landline'] = $result[12][0];
+		$this->data['MobilePhone'] = $result[13][0];
 
-		$_SESSION['Website'] = $result[14][0];
+		$this->data['Website'] = $result[14][0];
 
-		$_SESSION['FirstName'] = $result[15][0];
-		$_SESSION['LastName'] = $result[16][0];
-		$_SESSION['MiddleName'] = $result[17][0];
+		$this->data['FirstName'] = $result[15][0];
+		$this->data['LastName'] = $result[16][0];
+		$this->data['MiddleName'] = $result[17][0];
 
 		if ( file_exists("../entity_photos/".$_SESSION['EntityId']) )
-			$_SESSION['ViewPhotoOrLogo'] = "true";
+			$this->data['ViewPhotoOrLogo'] = "true";
 		else
-			$_SESSION['ViewPhotoOrLogo'] = "false";
+			$this->data['ViewPhotoOrLogo'] = "false";
 
 		return true;
 	}
