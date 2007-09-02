@@ -30,14 +30,14 @@ Suite 225, San Francisco, CA 94107, USA
 
 &nbsp; &nbsp; &nbsp; &nbsp;
 <label>
-<input type="checkbox" name="NewJobOffer" id="NewJobOffer" class="notRequired" {if $smarty.session.NewJobOffer eq 'true'} checked {/if}>
+<input type="checkbox" name="NewJobOffer" id="NewJobOffer" class="notRequired" {if $data.NewJobOffer eq 'true'} checked {/if}>
 {t}any new job offer{/t}
 </label>
 <br>
 
 &nbsp; &nbsp; &nbsp; &nbsp;
 <label>
-<input type="checkbox" name="MyQualifications" id="MyQualifications" class="notRequired" {if $smarty.session.MyQualifications eq 'true'} checked {/if} disabled>
+<input type="checkbox" name="MyQualifications" id="MyQualifications" class="notRequired" {if $data.MyQualifications eq 'true'} checked {/if} disabled>
 <STRIKE>{t}any new job offer which fits my qualifications{/t}</STRIKE>
 </label>
 <br>

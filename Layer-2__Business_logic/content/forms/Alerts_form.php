@@ -24,6 +24,7 @@ class AlertsForm
 {
 	private $manager;
 	private $processingResult;
+	private $data;
 
 
 	function __construct()
@@ -64,6 +65,8 @@ class AlertsForm
 	private function printAlertsForm()
 	{
 		$smarty = new Smarty;
+
+		$smarty->assign('data', $this->data);
 		$smarty->display("Alerts_form.tpl");
 	}
 
@@ -71,9 +74,9 @@ class AlertsForm
 	private function saveAlertsForm()
 	{
 		if (isset($_POST['NewJobOffer']) and $_POST['NewJobOffer']=='on')
-			$_SESSION['NewJobOffer'] = "true";
+			$_POST['NewJobOffer'] = "true";
 		else
-			$_SESSION['NewJobOffer'] = "false";
+			$_POST['NewJobOffer'] = "false";
 
 		$this->manager->saveAlertsForEntity();
 		$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
@@ -85,9 +88,9 @@ class AlertsForm
 		$result = $this->manager->getAlertsForEntity();
 
 		if ($result[0][0]=='t')
-			$_SESSION['NewJobOffer'] = "true";
+			$this->data['NewJobOffer'] = "true";
 		else
-			$_SESSION['NewJobOffer'] = "false";
+			$this->data['NewJobOffer'] = "false";
 
 		return true;
 	}
