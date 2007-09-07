@@ -35,7 +35,7 @@ Suite 225, San Francisco, CA 94107, USA
 {t escape='no'
   1='<a href="faq#Why_another_Job_Site?">'
   2='</a>
-}The aims of the Association shall be to %1assist and encourage%2 people in their capacity as Free Software producers.{/t}
+}The aims of the Association shall be to %1assist and encourage%2 people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.{/t}
 </p>
 
 
@@ -100,14 +100,14 @@ Non-executive committee members?:  The number of non-executive committee members
 </p>
 
 
-<h4>{t}Decisions{/t}</h4>
+<h4>{t}Decisions{/t} <a name="Decisions"></a> </h4>
 
 <p>
 {t}The goal of the committee is to administer the Association and execute the decisions taken by the members.  Therefore, all decisions will be voted upon by the membership.{/t}
 </p>
 
 
-<h4>{t}Voting{/t}</h4>
+<h4>{t}Voting{/t} <a name="Voting"></a> </h4>
 
 <p>
 {t}In addition to the issues at hand in a vote, the option to abstain, delegate your vote to another individual, and delegate your vote to the committee shall be present.  Through membership options a member can set one of these to be the default if they do not vote.  The option will initially be set to abstain.  Officer elections, amendments or dissolutions may not be delegated.{/t}
