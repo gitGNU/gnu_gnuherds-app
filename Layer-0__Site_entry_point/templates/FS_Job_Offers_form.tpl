@@ -21,6 +21,17 @@ Suite 225, San Francisco, CA 94107, USA
 <h3>{t}FS Job Offers{/t}</h3>
 
 
+<p>
+{t}Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc.{/t}
+</p>
+
+{if $smarty.session.Logged neq '1' }
+<p>
+{t}Are you a Free Software author?. You could register and add your qualifications.{/t}
+</p>
+{/if}
+
+
 {if count($JobOfferId) == 0 }
 	<p>&nbsp;</p>
 	<p>{t}There are not active job offers{/t}.</p><p>&nbsp;</p>
