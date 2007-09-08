@@ -137,6 +137,31 @@ class ViewQualificationsForm
 		$this->data['SkillList'] = $result[31];
 		$this->data['KnowledgeLevelList'] = $result[32];
 		$this->data['ExperienceLevelList'] = $result[33];
+		$this->data['CheckList'] = $result[34];
+
+		// Do not show Non-Free or Pending skills
+		$count = count($this->data['CheckList']);
+		for ($i=0,$j=0; $i < $count; $i++)
+		{
+			if ( $this->data['CheckList'][$i]=='Non-Free' or $this->data['CheckList'][$i]=='Pending' )
+			{
+			}
+			else
+			{
+				$this->data['SkillList'][$j] = $this->data['SkillList'][$i];
+				$this->data['KnowledgeLevelList'][$j] = $this->data['KnowledgeLevelList'][$i];
+				$this->data['ExperienceLevelList'][$j] = $this->data['ExperienceLevelList'][$i];
+				$this->data['CheckList'][$j] = $this->data['CheckList'][$i];
+				$j++;
+			}
+		}
+		for( $i=$j; $i < $count; $i++)
+		{
+			unset( $this->data['SkillList'][$i] );
+			unset( $this->data['KnowledgeLevelList'][$i] );
+			unset( $this->data['ExperienceLevelList'][$i] );
+			unset( $this->data['CheckList'][$i] );
+		}
 
 		// Certifications
 		$this->data['CertificationsList'] = $result[23];
