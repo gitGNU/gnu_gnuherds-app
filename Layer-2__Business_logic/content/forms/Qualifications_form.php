@@ -108,6 +108,7 @@ class QualificationsForm
 		else
 		{
 			$error = "<p>".$_SERVER["REQUEST_URI"].": ".gettext('ERROR: Unexpected condition')."</p>";
+			throw new Exception($error,false);
 		}
 	}
 
@@ -117,6 +118,7 @@ class QualificationsForm
 		if ( $_POST['finish'] == gettext('Finish') and $this->checks['result'] == "pass" )
 		{
 			header('Location: /resume?id='.$_SESSION['EntityId']); // We reditect to the view-offer web page
+			exit;
 		}
 		else
 		{
