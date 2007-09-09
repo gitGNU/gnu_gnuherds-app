@@ -118,7 +118,7 @@ class QualificationsForm
 
 	public function printOutput()
 	{
-		if ( $_POST['finish'] == gettext('Finish') and $this->checks['result'] == "pass" )
+		if ( $_POST['finish'] == gettext('Finish') and $this->checks['result'] == "pass" and $this->can_save == true )
 		{
 			header('Location: /resume?id='.$_SESSION['EntityId']); // We reditect to the view-offer web page
 			exit;
@@ -145,7 +145,7 @@ class QualificationsForm
 
 		// If there is section to control and its checks has failed, we do not show the section to view but instead we show
 		// the section to control so that the user can fix the mistake and pass the checks rightly.
-		if ( $this->section2control != '' and $this->checks['result'] == "fail" )
+		if ( $this->section2control != '' and ( $this->checks['result'] == "fail" or $this->can_save == false ) )
 			$section = $this->section2control;
 
 		switch($section)

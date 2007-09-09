@@ -130,7 +130,7 @@ class JobOfferForm
 
 	public function printOutput()
 	{
-		if ( $_POST['finish'] == gettext('Finish') and $this->checks['result'] == "pass" )
+		if ( $_POST['finish'] == gettext('Finish') and $this->checks['result'] == "pass" and $this->can_save == true )
 		{
 			header('Location: /offers?id='.$_SESSION['JobOfferId']); // We reditect to the view-offer web page
 			exit;
@@ -139,7 +139,7 @@ class JobOfferForm
 		{
 			$this->printJobOfferForm();
 		}
-        }
+	}
 
 
 	private function printJobOfferForm()
@@ -157,7 +157,7 @@ class JobOfferForm
 
 		// If there is section to control and its checks has failed, we do not show the section to view but instead we show
 		// the section to control so that the user can fix the mistake and pass the checks rightly.
-		if ( $this->section2control != '' and $this->checks['result'] == "fail" )
+		if ( $this->section2control != '' and ( $this->checks['result'] == "fail" or $this->can_save == false ) )
 			$section = $this->section2control;
 
 		switch($section)
@@ -1051,4 +1051,4 @@ class JobOfferForm
 		$this->checkJobOfferForm();
 	}
 }
-?> 
+?>
