@@ -92,7 +92,10 @@ class QualificationsForm
 		}
 
 		// Process each button event
-		if ( $_POST['previous'] == gettext('Previous') or $_POST['next'] == gettext('Next') or $_POST['jump'] != '' or $_POST['finish'] == gettext('Finish') or $_POST['more'] == gettext('More') ) // update
+		if ( count($_GET)==2 and isset($_GET['EntityId']) and $_GET['EntityId'] == '' and isset($_GET['section']) and $_GET['section'] != '' ) // new
+		{
+		}
+		elseif ( $_POST['previous'] == gettext('Previous') or $_POST['next'] == gettext('Next') or $_POST['jump'] != '' or $_POST['finish'] == gettext('Finish') or $_POST['more'] == gettext('More') ) // update
 		{
 			// POST request from *_form.tpl: Edit EntityId qualifications
 			$this->saveQualificationsForm();
