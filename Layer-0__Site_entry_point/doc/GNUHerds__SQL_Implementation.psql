@@ -197,7 +197,11 @@ CREATE TABLE LH_Skills (
 CREATE TABLE LI_Skills (
 	LI_Id	varchar(153) PRIMARY KEY CHECK (LI_Id <> ''),
 	LI_LH_Id varchar(8) REFERENCES LH_Skills(LH_Id) NOT NULL,
-	LI_LT_Id varchar(35) -- REFERENCES LT_SkillSetTypes(LT_Id) NOT NULL
+	LI_LT_Id varchar(35), -- REFERENCES LT_SkillSetTypes(LT_Id) NOT NULL
+
+	-- To make the audit and maintenance of the LI_LH_Id skill tags easier.
+	LI_LicenseName varchar(255),
+	LI_LicenseURL  varchar(255)
 );
 
 CREATE TABLE LG_KnowledgeLevel (
