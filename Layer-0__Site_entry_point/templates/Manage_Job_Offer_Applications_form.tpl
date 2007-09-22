@@ -20,7 +20,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <h3>{t}Manage the Job Offer applications{/t}</h3>
 
-<p class="footnote"><strong>{t}Offer title{/t}</strong>: {$vacancyTitle}</p>
+<p class="footnote"><strong>{t}Offer title{/t}</strong>: <a href="offers?id={$smarty.get.JobOfferId}">{$vacancyTitle}</a></p>
 
 {if count($entityId) == 0 }
 	<p>&nbsp;</p>
