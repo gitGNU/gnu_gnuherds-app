@@ -30,7 +30,7 @@ Suite 225, San Francisco, CA 94107, USA
   1='<a href="faq#Why_another_Job_Site?">'
   2='</a>'
   3='<a href="business_models">'
-}The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:{/t}</p>
+}The first step has been to develop the %1Job Site%2 modules and gather together several %3business models%2. Some of the JobSite's features are:{/t}</p>
 <ul>
   <li>{t}Controlled by its own users{/t}</li>
   <li>{t}FS skills data base{/t}</li>
