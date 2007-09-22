@@ -1282,9 +1282,11 @@ INSERT INTO LT_SkillSetTypes VALUES ( '19', 'Translation tools' );
 
 
 
+INSERT INTO LH_Skills VALUES ( 'Pending' );
+
 INSERT INTO LH_Skills VALUES ( 'Free' );
 INSERT INTO LH_Skills VALUES ( 'Non-Free' );
-INSERT INTO LH_Skills VALUES ( 'Pending' );
+INSERT INTO LH_Skills VALUES ( 'Abstract' );
 INSERT INTO LH_Skills VALUES ( 'Unknown' );
 
 

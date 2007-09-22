@@ -80,6 +80,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td>
 {if $data.CheckList[$i] eq "Free"}<label class="raisePopUp" title="{t}This skill is Free{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 {if $data.CheckList[$i] eq "Non-Free"}<label class="raisePopUp" title="{t}This skill is not Free{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Abstract"}<label class="raisePopUp" title="{t}This skill is abstract{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 {if $data.CheckList[$i] eq "Pending"}<label class="raisePopUp" title="{t}This skill is pending for checking{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 {if $data.CheckList[$i] eq "Unknown"}<label class="raisePopUp" title="{t}This skill is unknown{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 </td>
