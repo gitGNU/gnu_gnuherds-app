@@ -61,7 +61,7 @@ Suite 225, San Francisco, CA 94107, USA
 <h4>{t}Committee{/t} <a name="Committee"></a> </h4>
 
 <p>
-{t}The Committee shall consist of the following: the members of the system administrator team, the web master team, the translator teams, the Public Relations team and the Ethics Officer.{/t}
+{t}The Committee shall consist of the following: the members of the system administrator team, the web master team, the development team, the translator teams, the Public Relations team and the Ethics Officer.{/t}
 </p>
 
 <!--
