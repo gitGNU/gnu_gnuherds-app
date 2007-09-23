@@ -64,10 +64,10 @@ Suite 225, San Francisco, CA 94107, USA
 {t}The Committee shall consist of the following: the members of the system administrator team, the web master team, the translator teams, the Public Relations team and the Ethics Officer.{/t}
 </p>
 
-<p>
 <!--
+<p>
 Non-executive committee members?:  The number of non-executive committee members shall never exceed the number of Officers.  There will be a maximum of one non-executive committee member for each ?two hundred?  members?.
-</p><p>
+</p>
 -->
 
 <p>
