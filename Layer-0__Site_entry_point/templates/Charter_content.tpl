@@ -61,7 +61,7 @@ Suite 225, San Francisco, CA 94107, USA
 <h4>{t}Committee{/t} <a name="Committee"></a> </h4>
 
 <p>
-{t}The Committee shall consist of the following: the members of the system administrator team, the web master team, the certifications team, the translator teams, the Public Relations team and the Ethics Officer.{/t}
+{t}The Committee shall consist of the following: the members of the system administrator team, the web master team, the translator teams, the Public Relations team and the Ethics Officer.{/t}
 </p>
 
 <p>
@@ -69,13 +69,6 @@ Suite 225, San Francisco, CA 94107, USA
 Non-executive committee members?:  The number of non-executive committee members shall never exceed the number of Officers.  There will be a maximum of one non-executive committee member for each ?two hundred?  members?.
 </p><p>
 -->
-{t escape='no'
-  1='<i>'
-  2='</i>'
-  3='<i><a href="business_models">'
-  4='</a></i>'
-}The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc.{/t}
-</p>
 
 <p>
 {t escape='no'
