@@ -123,6 +123,7 @@ Non-executive committee members?:  The number of non-executive committee members
 
 <!--
 <h4>Chapters</h4>
+
 <p>
 Chapters may be formed in any local area.  There must be ten or more people in a local area interested in forming a chapter to do so.
 </p>
