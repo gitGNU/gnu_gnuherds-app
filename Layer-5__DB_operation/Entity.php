@@ -117,7 +117,34 @@ class Entity
 		$this->postgresql->execute("SET TRANSACTION   ISOLATION LEVEL  SERIALIZABLE  READ WRITE",0);
 		$this->postgresql->execute("BEGIN",0);
 
-		$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text) AS  INSERT INTO E1_Entities (E1_WantEmail,E1_EntityType,EP_FirstName,EP_LastName,EP_MiddleName,E1_Street,E1_Suite,E1_City,E1_StateProvince,E1_PostalCode,E1_LO_Country,E1_IpPhoneOrVideo,E1_Landline,E1_MobilePhone,E1_Website,E1_LO_Nationality,E1_BirthYear,EC_CompanyName,EO_OrganizationName) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19);  EXECUTE query('{$_POST['Email']}','{$_SESSION['EntityType']}','{$_POST['FirstName']}','{$_POST['LastName']}','{$_POST['MiddleName']}','{$_POST['Street']}','{$_POST['Suite']}','{$_POST['City']}','{$_POST['StateProvince']}','{$_POST['PostalCode']}','{$_POST['CountryCode']}','{$_POST['IpPhoneOrVideo']}','{$_POST['Landline']}','{$_POST['MobilePhone']}','{$_POST['Website']}','{$_POST['Nationality']}','{$_POST['BirthYear']}','{$_POST['CompanyName']}','{$_POST['NonprofitName']}');";
+		$Email = trim($_POST['Email']);
+
+		$FirstName = isset($_POST['FirstName']) ? trim($_POST['FirstName']) : '';
+		$LastName = isset($_POST['LastName']) ? trim($_POST['LastName']) : '';
+		$MiddleName = isset($_POST['MiddleName']) ? trim($_POST['MiddleName']) : '';
+
+		$CompanyName = isset($_POST['CompanyName']) ? trim($_POST['CompanyName']) : '';
+
+		$NonprofitName = isset($_POST['NonprofitName']) ? trim($_POST['NonprofitName']) : '';
+
+		$BirthYear = isset($_POST['BirthYear']) ? trim($_POST['BirthYear']) : '';
+
+		$Street = trim($_POST['Street']);
+		$Suite = trim($_POST['Suite']);
+		$City = trim($_POST['City']);
+		$StateProvince = trim($_POST['StateProvince']);
+		$PostalCode = trim($_POST['PostalCode']);
+		$CountryCode = trim($_POST['CountryCode']);
+
+		$IpPhoneOrVideo = trim($_POST['IpPhoneOrVideo']);
+		$Landline = trim($_POST['Landline']);
+		$MobilePhone = trim($_POST['MobilePhone']);
+
+		$Website = trim($_POST['Website']);
+
+		$Nationality = trim($_POST['Nationality']);
+
+		$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text) AS  INSERT INTO E1_Entities (E1_WantEmail,E1_EntityType,EP_FirstName,EP_LastName,EP_MiddleName,E1_Street,E1_Suite,E1_City,E1_StateProvince,E1_PostalCode,E1_LO_Country,E1_IpPhoneOrVideo,E1_Landline,E1_MobilePhone,E1_Website,E1_LO_Nationality,E1_BirthYear,EC_CompanyName,EO_OrganizationName) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19);  EXECUTE query('{$Email}','{$_SESSION['EntityType']}','{$FirstName}','{$LastName}','{$MiddleName}','{$Street}','{$Suite}','{$City}','{$StateProvince}','{$PostalCode}','{$CountryCode}','{$IpPhoneOrVideo}','{$Landline}','{$MobilePhone}','{$Website}','{$Nationality}','{$BirthYear}','{$CompanyName}','{$NonprofitName}');";
 		$this->postgresql->execute($sqlQuery,1);
 
 		// Get the Id of the insert to the E1_Entities table // Ref.: http://www.postgresql.org/docs/current/static/functions-sequence.html
@@ -172,17 +199,32 @@ class Entity
 		$this->postgresql->execute("SET TRANSACTION   ISOLATION LEVEL  SERIALIZABLE  READ WRITE",0);
 		$this->postgresql->execute("BEGIN",0);
 
-		$FirstName = isset($_POST['FirstName']) ? $_POST['FirstName'] : '';
-		$LastName = isset($_POST['LastName']) ? $_POST['LastName'] : '';
-		$MiddleName = isset($_POST['MiddleName']) ? $_POST['MiddleName'] : '';
+		$FirstName = isset($_POST['FirstName']) ? trim($_POST['FirstName']) : '';
+		$LastName = isset($_POST['LastName']) ? trim($_POST['LastName']) : '';
+		$MiddleName = isset($_POST['MiddleName']) ? trim($_POST['MiddleName']) : '';
 
-		$CompanyName = isset($_POST['CompanyName']) ? $_POST['CompanyName'] : '';
+		$CompanyName = isset($_POST['CompanyName']) ? trim($_POST['CompanyName']) : '';
 
-		$NonprofitName = isset($_POST['NonprofitName']) ? $_POST['NonprofitName'] : '';
+		$NonprofitName = isset($_POST['NonprofitName']) ? trim($_POST['NonprofitName']) : '';
 
-		$BirthYear = isset($_POST['BirthYear']) ? $_POST['BirthYear'] : '';
+		$BirthYear = isset($_POST['BirthYear']) ? trim($_POST['BirthYear']) : '';
 
-		$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,integer) AS  UPDATE E1_Entities SET E1_WantEmail=$1,E1_Password=$2,EP_FirstName=$3,EP_LastName=$4,EP_MiddleName=$5,E1_Street=$6,E1_Suite=$7,E1_City=$8,E1_StateProvince=$9,E1_PostalCode=$10,E1_LO_Country=$11,E1_IpPhoneOrVideo=$12,E1_Landline=$13,E1_MobilePhone=$14,E1_Website=$15,E1_LO_Nationality=$16,E1_BirthYear=$17,EC_CompanyName=$18,EO_OrganizationName=$19 WHERE E1_Id=$20;  EXECUTE query('{$_SESSION['WantEmail']}','{$this->hasher->HashPassword($_POST['Password'])}','{$FirstName}','{$LastName}','{$MiddleName}','{$_POST['Street']}','{$_POST['Suite']}','{$_POST['City']}','{$_POST['StateProvince']}','{$_POST['PostalCode']}','{$_POST['CountryCode']}','{$_POST['IpPhoneOrVideo']}','{$_POST['Landline']}','{$_POST['MobilePhone']}','{$_POST['Website']}','{$_POST['Nationality']}','{$BirthYear}','{$CompanyName}','{$NonprofitName}','{$_SESSION['EntityId']}');";
+		$Street = trim($_POST['Street']);
+		$Suite = trim($_POST['Suite']);
+		$City = trim($_POST['City']);
+		$StateProvince = trim($_POST['StateProvince']);
+		$PostalCode = trim($_POST['PostalCode']);
+		$CountryCode = trim($_POST['CountryCode']);
+
+		$IpPhoneOrVideo = trim($_POST['IpPhoneOrVideo']);
+		$Landline = trim($_POST['Landline']);
+		$MobilePhone = trim($_POST['MobilePhone']);
+
+		$Website = trim($_POST['Website']);
+
+		$Nationality = trim($_POST['Nationality']);
+
+		$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,integer) AS  UPDATE E1_Entities SET E1_WantEmail=$1,E1_Password=$2,EP_FirstName=$3,EP_LastName=$4,EP_MiddleName=$5,E1_Street=$6,E1_Suite=$7,E1_City=$8,E1_StateProvince=$9,E1_PostalCode=$10,E1_LO_Country=$11,E1_IpPhoneOrVideo=$12,E1_Landline=$13,E1_MobilePhone=$14,E1_Website=$15,E1_LO_Nationality=$16,E1_BirthYear=$17,EC_CompanyName=$18,EO_OrganizationName=$19 WHERE E1_Id=$20;  EXECUTE query('{$_SESSION['WantEmail']}','{$this->hasher->HashPassword($_POST['Password'])}','{$FirstName}','{$LastName}','{$MiddleName}','{$Street}','{$Suite}','{$City}','{$StateProvince}','{$PostalCode}','{$CountryCode}','{$IpPhoneOrVideo}','{$Landline}','{$MobilePhone}','{$Website}','{$Nationality}','{$BirthYear}','{$CompanyName}','{$NonprofitName}','{$_SESSION['EntityId']}');";
 		$this->postgresql->execute($sqlQuery,1);
 
 		$this->savePhotoOrLogo($_SESSION['EntityId']);
