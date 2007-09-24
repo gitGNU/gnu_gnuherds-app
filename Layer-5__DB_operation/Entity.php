@@ -224,7 +224,14 @@ class Entity
 
 		$Nationality = trim($_POST['Nationality']);
 
-		$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,integer) AS  UPDATE E1_Entities SET E1_WantEmail=$1,E1_Password=$2,EP_FirstName=$3,EP_LastName=$4,EP_MiddleName=$5,E1_Street=$6,E1_Suite=$7,E1_City=$8,E1_StateProvince=$9,E1_PostalCode=$10,E1_LO_Country=$11,E1_IpPhoneOrVideo=$12,E1_Landline=$13,E1_MobilePhone=$14,E1_Website=$15,E1_LO_Nationality=$16,E1_BirthYear=$17,EC_CompanyName=$18,EO_OrganizationName=$19 WHERE E1_Id=$20;  EXECUTE query('{$_SESSION['WantEmail']}','{$this->hasher->HashPassword($_POST['Password'])}','{$FirstName}','{$LastName}','{$MiddleName}','{$Street}','{$Suite}','{$City}','{$StateProvince}','{$PostalCode}','{$CountryCode}','{$IpPhoneOrVideo}','{$Landline}','{$MobilePhone}','{$Website}','{$Nationality}','{$BirthYear}','{$CompanyName}','{$NonprofitName}','{$_SESSION['EntityId']}');";
+		if ( $_POST['Password'] != '' ) // Request change password too
+		{
+			$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,integer) AS  UPDATE E1_Entities SET E1_WantEmail=$1,E1_Password=$2,EP_FirstName=$3,EP_LastName=$4,EP_MiddleName=$5,E1_Street=$6,E1_Suite=$7,E1_City=$8,E1_StateProvince=$9,E1_PostalCode=$10,E1_LO_Country=$11,E1_IpPhoneOrVideo=$12,E1_Landline=$13,E1_MobilePhone=$14,E1_Website=$15,E1_LO_Nationality=$16,E1_BirthYear=$17,EC_CompanyName=$18,EO_OrganizationName=$19 WHERE E1_Id=$20;  EXECUTE query('{$_SESSION['WantEmail']}','{$this->hasher->HashPassword($_POST['Password'])}','{$FirstName}','{$LastName}','{$MiddleName}','{$Street}','{$Suite}','{$City}','{$StateProvince}','{$PostalCode}','{$CountryCode}','{$IpPhoneOrVideo}','{$Landline}','{$MobilePhone}','{$Website}','{$Nationality}','{$BirthYear}','{$CompanyName}','{$NonprofitName}','{$_SESSION['EntityId']}');";
+		}
+		else // Do not request change password, so we avoid to overwrite it with an empty string do not updating the E1_Password field
+		{
+			$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,integer) AS  UPDATE E1_Entities SET E1_WantEmail=$1,EP_FirstName=$2,EP_LastName=$3,EP_MiddleName=$4,E1_Street=$5,E1_Suite=$6,E1_City=$7,E1_StateProvince=$8,E1_PostalCode=$9,E1_LO_Country=$10,E1_IpPhoneOrVideo=$11,E1_Landline=$12,E1_MobilePhone=$13,E1_Website=$14,E1_LO_Nationality=$15,E1_BirthYear=$16,EC_CompanyName=$17,EO_OrganizationName=$18 WHERE E1_Id=$19;  EXECUTE query('{$_SESSION['WantEmail']}','{$FirstName}','{$LastName}','{$MiddleName}','{$Street}','{$Suite}','{$City}','{$StateProvince}','{$PostalCode}','{$CountryCode}','{$IpPhoneOrVideo}','{$Landline}','{$MobilePhone}','{$Website}','{$Nationality}','{$BirthYear}','{$CompanyName}','{$NonprofitName}','{$_SESSION['EntityId']}');";
+		}
 		$this->postgresql->execute($sqlQuery,1);
 
 		$this->savePhotoOrLogo($_SESSION['EntityId']);
