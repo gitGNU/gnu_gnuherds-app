@@ -175,21 +175,11 @@ class PersonForm extends EntityForm
 	{
 		$this->checks['result'] = "pass"; // By default the checks pass
 
-		// Both Password fields have to be equal
+		// When the user request a Password modification both Password fields have to be equal
 		if ( $_SESSION['Logged'] == '1' and $_POST['Password'] != $_POST['RetypePassword'] )
 		{
 			$this->checks['result'] = "fail";
 			$this->checks['Password'] = gettext("Password fields differ"); // This message has priority over the below one, about the Password field too.
-
-			$this->data['Password'] = ''; // We are not sure what is right 'Password' or 'RetypePassword', so we empty both.
-		}
-		else
-		{
-			if ( $_SESSION['Logged'] == '1' and ( trim($_POST['Password'])=='' or trim($_POST['RetypePassword'])=='' ) )
-			{
-				$this->checks['result'] = "fail";
-				$this->checks['Password'] = gettext('Please fill in here');
-			}
 		}
 
 		if ( trim($_POST['Email'])=='' )

@@ -51,7 +51,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><label for="Email">Email</label></td>
+<td align="right"><span class="must">*</span><label for="Email" class="raisePopUp" title="{t}Change the account email{/t}">Email</label></td>
 <td colspan="3"> <input type="text" name="Email" id="Email" size="40" maxlength="60" class="required" value="{$data.Email}">
 {if $smarty.session.WantEmail neq '' and $smarty.session.Logged eq '1'}<strong>[</strong>{$smarty.session.WantEmail}<strong>]</strong>{/if}
 </td>
@@ -67,12 +67,12 @@ Suite 225, San Francisco, CA 94107, USA
 {if $smarty.session.Logged eq '1'}
 
 <tr>
-<td align="right"><span class="must">*</span><label for="Password">{t}Password{/t}</label></td>
-<td colspan="3"> <input type="password" name="Password" id="Password" size="20" maxlength="20" class="required" value="{$data.Password}"> </td>
+<td align="right"><label for="Password" class="raisePopUp" title="{t}Change the account password{/t}">{t}Password{/t}</label></td>
+<td colspan="3"> <input type="password" name="Password" id="Password" size="20" maxlength="20" class="notRequired" value=""> </td>
 </tr>
 <tr>
-<td align="right"><span class="must">*</span><label for="RetypePassword">{t}Retype Password{/t}</label></td>
-<td colspan="3"> <input type="password" name="RetypePassword" id="RetypePassword" size="20" maxlength="20" class="required" value="{$data.Password}"> </td>
+<td align="right"><label for="RetypePassword" class="raisePopUp" title="{t}Change the account password{/t}">{t}Retype Password{/t}</label></td>
+<td colspan="3"> <input type="password" name="RetypePassword" id="RetypePassword" size="20" maxlength="20" class="notRequired" value=""> </td>
 </tr>
 
 {if $checks.Password neq '' }
