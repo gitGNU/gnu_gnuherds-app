@@ -53,14 +53,14 @@ class PersonForm extends EntityForm
 		}
 
 		// Process each button event
-		if ( isset($_POST['delete']) and $_POST['delete'] == gettext('Delete me from this Association') )
+		if ( isset($_POST['delete']) and $_POST['delete'] != '' )
 		{
 			$this->manager->deleteEntity();
 			$phpTools->resetPHPsession();
 
 			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Your information has been deleted from the data base. You have been logout automatically.')."<p>\n";
 		}
-		elseif ( isset($_POST['save']) and $_POST['save'] == gettext('Save') )
+		elseif ( isset($_POST['save']) and $_POST['save'] != '' )
 		{
 			$this->savePersonForm();
 		}
@@ -79,7 +79,7 @@ class PersonForm extends EntityForm
 
 	public function printOutput()
 	{
-		if ( $_POST['delete'] == gettext('Delete me from this Association') or  ( $_POST['save'] == gettext('Save') and $this->checks['result'] == "pass" )  or $_GET['email'] != '' )
+		if ( $_POST['delete'] != '' or  ( $_POST['save'] != '' and $this->checks['result'] == "pass" )  or $_GET['email'] != '' )
 			echo $this->processingResult;
 		else
 			$this->printPersonForm();
