@@ -207,7 +207,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr align="center">
 <td colspan="4" align="center">
-<input type="submit" name="save" value="{t}Save{/t}">
+<input type="submit" name="save" value="{t}{if $smarty.session.Logged == '1'}Save{else}Register{/if}{/t}">
 
 {if $smarty.session.Logged == '1' } <!-- update -->
 <br><br>
