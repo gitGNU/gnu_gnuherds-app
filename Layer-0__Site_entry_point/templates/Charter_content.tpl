@@ -54,7 +54,10 @@ Suite 225, San Francisco, CA 94107, USA
 </p>
 
 <p>
-{t}Memberships will be on a yearly basis.  Even though membership is free of charge membership must be renewed.{/t}
+{t escape='no'
+  1='<a href="faq#yearly_basis">'
+  2='</a>'
+}Voting memberships and associate memberships are both free of charge. However, voting memberships %1expire yearly%2 but they can be renewed.{/t}
 </p>
 
 
