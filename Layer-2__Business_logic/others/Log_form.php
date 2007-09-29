@@ -26,9 +26,9 @@ class LogForm
 	public function processForm()
 	{
 		// We process the LogForm only if there is a submit, else nothing is done.
-		if ( isset($_POST['login']) && $_POST['login'] == gettext('Log in') ) // The user is asking for testing him/her account-password.
+		if ( isset($_POST['login']) && $_POST['login'] != '' ) // The user is asking for testing him/her account-password.
 			$this->logIn();
-  		else if ( isset($_POST['login']) && $_POST['login'] == gettext('Log out') ) // The user is asking for closing the session.
+  		else if ( isset($_POST['logout']) && $_POST['logout'] != '' ) // The user is asking for closing the session.
 			$this->logOut();
 	}
 
