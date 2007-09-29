@@ -289,7 +289,7 @@
         <dia:string>#has#</dia:string>
       </dia:attribute>
       <dia:attribute name="left_card">
-        <dia:string>#1#</dia:string>
+        <dia:string>#1..N#</dia:string>
       </dia:attribute>
       <dia:attribute name="right_card">
         <dia:string>#1#</dia:string>
