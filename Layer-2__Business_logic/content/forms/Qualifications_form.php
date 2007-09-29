@@ -43,13 +43,13 @@ class QualificationsForm
 		// Find out the section we have to show to the user
 		if ( $_POST['jump'] != '' )
 			$this->section2view = $_POST['jump'];
-		elseif ( $_POST['previous'] == gettext('Previous') )
+		elseif ( $_POST['previous'] != '' )
 			$this->section2view = $_POST['jump2previous'];
-		elseif ( $_POST['next'] == gettext('Next') )
+		elseif ( $_POST['next'] != '' )
 			$this->section2view = $_POST['jump2next'];
-		elseif ( $_POST['finish'] == gettext('Finish') )
+		elseif ( $_POST['finish'] != '' )
 			$this->section2view = $_POST['section2control']; // The section to show is the same than the section to process
-		elseif ( $_POST['more'] == gettext('More') )
+		elseif ( $_POST['more'] != '' )
 			$this->section2view = $_POST['section2control'];
 		elseif ( $_GET['section'] != '' )
 			$this->section2view = $_GET['section']; // Edit section via GET request
@@ -95,7 +95,7 @@ class QualificationsForm
 		if ( count($_GET)==2 and isset($_GET['EntityId']) and $_GET['EntityId'] == '' and isset($_GET['section']) and $_GET['section'] != '' ) // new
 		{
 		}
-		elseif ( $_POST['previous'] == gettext('Previous') or $_POST['next'] == gettext('Next') or $_POST['jump'] != '' or $_POST['finish'] == gettext('Finish') or $_POST['more'] == gettext('More') ) // update
+		elseif ( $_POST['previous'] != '' or $_POST['next'] != '' or $_POST['jump'] != '' or $_POST['finish'] != '' or $_POST['more'] != '' ) // update
 		{
 			// POST request from *_form.tpl: Edit EntityId qualifications
 			$this->saveQualificationsForm();
@@ -118,7 +118,7 @@ class QualificationsForm
 
 	public function printOutput()
 	{
-		if ( $_POST['finish'] == gettext('Finish') and $this->checks['result'] == "pass" and $this->can_save == true )
+		if ( $_POST['finish'] != '' and $this->checks['result'] == "pass" and $this->can_save == true )
 		{
 			header('Location: /resume?id='.$_SESSION['EntityId']); // We reditect to the view-offer web page
 			exit;

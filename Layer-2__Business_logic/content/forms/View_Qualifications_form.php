@@ -61,7 +61,7 @@ class ViewQualificationsForm
 		}
 
 		// Process each button event
-		if ( isset($_POST['delete']) and $_POST['delete'] == gettext('Delete qualifications') )
+		if ( isset($_POST['delete']) and $_POST['delete'] != '' )
 		{
 			$this->manager->deleteQualifications();
 			$_SESSION['HasQualifications'] = 'f'; // Update the HasQualifications SESSION flag used to set the URL at the webapp menu
@@ -71,7 +71,7 @@ class ViewQualificationsForm
 
 	public function printOutput()
 	{
-		if ( $_POST['delete'] == gettext('Delete qualifications') )
+		if ( $_POST['delete'] != '' )
 			echo "<p>&nbsp;</p><p>".gettext('The qualifications information has been deleted from the data base.')."<p>\n";
 		else
 			$this->printQualificationsForm();

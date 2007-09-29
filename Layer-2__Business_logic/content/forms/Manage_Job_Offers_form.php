@@ -54,7 +54,7 @@ class ManageJobOffersForm
 		}
 
 		// Process each button event
-		if ( $_POST['delete'] == gettext('Delete selected offers') )
+		if ( $_POST['delete'] != '' )
 		{
 			if ( count($_POST['DeleteJobOffers']) >= 1 )
 			{
@@ -71,7 +71,7 @@ class ManageJobOffersForm
 
 	public function printOutput()
 	{
-		if ( $_POST['delete'] == gettext('Delete selected offers') )
+		if ( $_POST['delete'] != '' )
 			echo $this->processingResult;
 		else
 			$this->printManageJobOffersForm();

@@ -46,7 +46,7 @@ class LostPassword
 		}
 
 		// Process each button event
-		if ( $_POST['send'] == gettext('Send') )
+		if ( $_POST['send'] != '' )
 		{
 			// Checks
 			$this->checkLostPasswordForm();
@@ -101,7 +101,7 @@ class LostPassword
 
 	public function printOutput()
 	{
-		if ( $_POST['send'] == gettext('Send') )
+		if ( $_POST['send'] != '' )
 		{
 			// Show the form
 			$this->printPersonForm();
@@ -123,7 +123,7 @@ class LostPassword
 			$this->printPersonForm();
 		}
 
-		if ( ( $_POST['send'] == gettext('Send') and $this->checks['result'] == "pass" )  or $_GET['email'] != '' )
+		if ( ( $_POST['send'] != '' and $this->checks['result'] == "pass" )  or $_GET['email'] != '' )
 			echo $this->processingResult;
 	}
 

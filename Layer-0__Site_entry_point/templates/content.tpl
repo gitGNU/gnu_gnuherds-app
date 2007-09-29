@@ -27,7 +27,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr>
 <td valign="top" height="450" width="650"> <!-- Set the max width. Note it resizes to lower when needed. -->
 
-{if $smarty.post.login == gettext('Log in') }{* The user is asking for testing him/her account-password. *}
+{if $smarty.post.login != '' }{* The user is asking for testing him/her account-password. *}
 	{* Show the result of the logForm processing to the user *}
 	<p>&nbsp;</p>
 	<table align="center">
@@ -42,7 +42,7 @@ Suite 225, San Francisco, CA 94107, USA
 	</tr>
 	</table>
 {else}
-	{if $smarty.post.login == gettext('Log out') }
+	{if $smarty.post.logout != '' }
 		<p>&nbsp;</p>
 		<table align="center">
 		<tr>

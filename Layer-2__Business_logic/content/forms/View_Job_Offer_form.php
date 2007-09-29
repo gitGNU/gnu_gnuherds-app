@@ -48,7 +48,7 @@ class ViewJobOfferForm
 		// Process each button event
 		$_SESSION['IsAlreadySubscribed'] = false; // Initialized. It could be overwrite later.
 
-		if ( isset($_POST['subscribe']) and $_POST['subscribe'] == gettext('Subscribe to this job offer') )
+		if ( isset($_POST['subscribe']) and $_POST['subscribe'] != '' )
 		{
 			if ( isset($_SESSION['Logged']) and $_SESSION['Logged'] == '1' )
 			{

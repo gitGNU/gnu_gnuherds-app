@@ -46,7 +46,7 @@ class AlertsForm
 		}
 
 		// Process each button event
-		if ( isset($_POST['save']) and $_POST['save'] == gettext('Save') )
+		if ( isset($_POST['save']) and $_POST['save'] != '' )
 			$this->saveAlertsForm();
 		else
 			$this->loadAlertsForm();
@@ -55,7 +55,7 @@ class AlertsForm
 
 	public function printOutput()
 	{
-		if ( $_POST['save'] == gettext('Save') )
+		if ( $_POST['save'] != '' )
 			echo $this->processingResult;
 		else
 			$this->printAlertsForm();

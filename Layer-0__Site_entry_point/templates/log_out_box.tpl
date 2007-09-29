@@ -21,7 +21,7 @@ Suite 225, San Francisco, CA 94107, USA
 <table width="155" border="0" cellspacing="0" cellpadding="2" bgcolor="{$webpage->theme->loginBoxBGcolor}">
 <tr>
 <td colspan="2" align="center"><span class="footnote">{'Now, you can go to the menu to manage your data'|gettext}</span><br>
-<input type="submit" name="login" value="{'Log out'|gettext}">
+<input type="submit" name="logout" value="{'Log out'|gettext}">
 </td>
 </tr>
 </table>
