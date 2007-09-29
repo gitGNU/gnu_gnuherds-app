@@ -307,11 +307,10 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         EP_MiddleName      varchar(20),
 
         --------------------------------------------------------------------------
-        -- To qualify for voting membership one must show a contribution  
-        -- to the Free Software movement and supply her/his public key.
-        EP_PublicKey       varchar(255), -- XXX: What is the maximum lenght of a public key. Is it unlimited?. If so, should we allow a unlimited lenght? Yes, I think so.
-        EP_Vote            bool, -- NOT NULL DEFAULT 'false', -- The vote feature is enabled by the committee based on the Contributions to FS (E2_EntityFreeSoftwareExperiences).
-        EP_ReEvaluate      bool, -- NOT NULL DEFAULT 'true', -- At a new insert EP_ReEvaluate is set to 'true' automatically.
+        -- To qualify for voting membership, the entity have to show a contribution to the Free Software community.
+        E1_PublicKey       varchar(255), -- XXX: What is the maximum lenght of a public key. Is it unlimited?. If so, should we allow a unlimited lenght? Yes, I think so.
+        E1_Vote            bool, -- NOT NULL DEFAULT 'false', -- The vote feature is enabled by the committee based on the Contributions to FS (E2_EntityFreeSoftwareExperiences).
+        E1_ReEvaluate      bool, -- NOT NULL DEFAULT 'true', -- At a new insert E1_ReEvaluate is set to 'true' automatically.
 
         --------------------------------------------------------------------------
         -- Statistics
