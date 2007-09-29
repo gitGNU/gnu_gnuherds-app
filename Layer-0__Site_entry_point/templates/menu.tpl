@@ -38,7 +38,7 @@ Suite 225, San Francisco, CA 94107, USA
 <span class="menu1noactive">{'Manage your data'|gettext|strip:'&nbsp;'}</span><br>
 
 {if $smarty.session.LoginType eq 'Person' }
-	&nbsp;&nbsp;<a href="person" class="menu3">{'Person (Member)'|gettext}</a><br>
+	&nbsp;&nbsp;<a href="person" class="menu3">{'Person'|gettext}</a><br>
 {/if}
 
 {if $smarty.session.LoginType eq 'Company' }

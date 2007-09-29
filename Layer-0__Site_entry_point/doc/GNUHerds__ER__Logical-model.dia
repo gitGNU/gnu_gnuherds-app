@@ -63,12 +63,12 @@
     </dia:attribute>
   </dia:diagramdata>
   <dia:layer name="Background" visible="true">
-    <dia:object type="Standard - Text" version="0" id="O0">
+    <dia:object type="Standard - Text" version="1" id="O0">
       <dia:attribute name="obj_pos">
         <dia:point val="75.7,-1.6"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="75.7,-2.2;75.7,-1.25"/>
+        <dia:rectangle val="75.7,-2.15;75.7,-1.2"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -91,6 +91,9 @@
             <dia:enum val="0"/>
           </dia:attribute>
         </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
       </dia:attribute>
     </dia:object>
     <dia:object type="ER - Entity" version="0" id="O1">
@@ -139,13 +142,13 @@
         <dia:point val="39.1989,-7.76195"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="39.1489,-7.81195;43.0489,-5.91195"/>
+        <dia:rectangle val="39.1489,-7.81195;43.0989,-5.91195"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="39.1989,-7.76195"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="3.7999999999999998"/>
+        <dia:real val="3.8500000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="1.8"/>
@@ -218,13 +221,13 @@
     </dia:object>
     <dia:object type="ER - Entity" version="0" id="O4">
       <dia:attribute name="obj_pos">
-        <dia:point val="33.8025,-1.66895"/>
+        <dia:point val="38.6025,10.4811"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="33.7525,-1.71895;38.7525,0.18105"/>
+        <dia:rectangle val="38.5525,10.4311;43.5525,12.3311"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="33.8025,-1.66895"/>
+        <dia:point val="38.6025,10.4811"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="4.9000000000000004"/>
@@ -259,13 +262,13 @@
     </dia:object>
     <dia:object type="ER - Relationship" version="0" id="O5">
       <dia:attribute name="obj_pos">
-        <dia:point val="34.7378,-4.76421"/>
+        <dia:point val="39.5378,6.58579"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="34.6878,-5.91421;37.8378,-1.78421"/>
+        <dia:rectangle val="39.4878,5.43579;42.6378,9.56579"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="34.7378,-4.76421"/>
+        <dia:point val="39.5378,6.58579"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="3.0499999999999998"/>
@@ -304,23 +307,26 @@
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O6">
+    <dia:object type="ER - Participation" version="1" id="O6">
       <dia:attribute name="obj_pos">
-        <dia:point val="36.2628,-2.93421"/>
+        <dia:point val="41.0628,8.41579"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="36.2025,-2.98421;36.3128,-1.61895"/>
+        <dia:rectangle val="41.0025,8.36579;41.1128,10.5311"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="36.2628,-2.93421"/>
-        <dia:point val="36.2628,-2.30158"/>
-        <dia:point val="36.2525,-2.30158"/>
-        <dia:point val="36.2525,-1.66895"/>
+        <dia:point val="41.0628,8.41579"/>
+        <dia:point val="41.0628,9.4"/>
+        <dia:point val="41.0525,9.4"/>
+        <dia:point val="41.0525,10.4811"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
@@ -330,12 +336,12 @@
         <dia:connection handle="1" to="O4" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O7">
+    <dia:object type="Standard - Text" version="1" id="O7">
       <dia:attribute name="obj_pos">
         <dia:point val="78.0501,25.35"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="78.0501,24.75;78.0501,25.7"/>
+        <dia:rectangle val="78.0501,24.8;78.0501,25.75"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -359,13 +365,16 @@
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O8">
+    <dia:object type="Standard - Text" version="1" id="O8">
       <dia:attribute name="obj_pos">
         <dia:point val="78.1501,25.25"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="78.1501,24.65;78.1501,25.6"/>
+        <dia:rectangle val="78.1501,24.7;78.1501,25.65"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -389,13 +398,16 @@
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O9">
+    <dia:object type="Standard - Text" version="1" id="O9">
       <dia:attribute name="obj_pos">
         <dia:point val="88.4,19.9"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="88.4,19.3;88.4,20.25"/>
+        <dia:rectangle val="88.4,19.35;88.4,20.3"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -419,13 +431,16 @@
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O10">
+    <dia:object type="Standard - Text" version="1" id="O10">
       <dia:attribute name="obj_pos">
         <dia:point val="92,19.95"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="92,19.35;92,20.3"/>
+        <dia:rectangle val="92,19.4;92,20.35"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -449,13 +464,16 @@
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O11">
+    <dia:object type="Standard - Text" version="1" id="O11">
       <dia:attribute name="obj_pos">
         <dia:point val="23.1426,-18.5"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="23.1426,-19.85;30.7926,-17.5"/>
+        <dia:rectangle val="23.1426,-19.9;30.7926,-17.55"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -463,7 +481,7 @@
             <dia:string>#ER model#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
-            <dia:font family="sans" style="80" name="Helvetica"/>
+            <dia:font family="sans" style="80" name="Helvetica-Bold"/>
           </dia:attribute>
           <dia:attribute name="height">
             <dia:real val="2"/>
@@ -479,13 +497,16 @@
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O12">
+    <dia:object type="Standard - Text" version="1" id="O12">
       <dia:attribute name="obj_pos">
         <dia:point val="76.6426,-18.65"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="76.6426,-19.9;83.9426,-17.75"/>
+        <dia:rectangle val="76.6426,-19.9;83.9926,-17.75"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -509,13 +530,16 @@
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O13">
+    <dia:object type="Standard - Text" version="1" id="O13">
       <dia:attribute name="obj_pos">
         <dia:point val="37.5327,-18.55"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="37.5327,-19.8;47.4327,-17.65"/>
+        <dia:rectangle val="37.5327,-19.8;47.5327,-17.65"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -539,34 +563,40 @@
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O14">
+    <dia:object type="ER - Participation" version="1" id="O14">
       <dia:attribute name="obj_pos">
         <dia:point val="36.2523,-5.94731"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="36.2023,-5.99731;36.3128,-4.71421"/>
+        <dia:rectangle val="36.2023,-5.99731;41.1641,-0.83999"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="36.2523,-5.94731"/>
-        <dia:point val="36.2523,-5.35576"/>
-        <dia:point val="36.2628,-5.35576"/>
-        <dia:point val="36.2628,-4.76421"/>
+        <dia:point val="36.2523,-5.05"/>
+        <dia:point val="41.1141,-5.05"/>
+        <dia:point val="41.1141,-0.88999"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O1" connection="6"/>
-        <dia:connection handle="1" to="O5" connection="2"/>
+        <dia:connection handle="1" to="O28" connection="2"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O15">
+    <dia:object type="ER - Participation" version="1" id="O15">
       <dia:attribute name="obj_pos">
         <dia:point val="41.9597,-10.5207"/>
       </dia:attribute>
@@ -595,12 +625,12 @@
         <dia:connection handle="1" to="O2" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O16">
+    <dia:object type="Standard - Text" version="1" id="O16">
       <dia:attribute name="obj_pos">
         <dia:point val="67.449,22.25"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="67.449,21.65;67.449,22.6"/>
+        <dia:rectangle val="67.449,21.7;67.449,22.65"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -624,13 +654,16 @@
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O17">
+    <dia:object type="Standard - Text" version="1" id="O17">
       <dia:attribute name="obj_pos">
         <dia:point val="68.249,21.7"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="68.249,21.1;68.249,22.05"/>
+        <dia:rectangle val="68.249,21.15;68.249,22.1"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -654,13 +687,16 @@
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O18">
+    <dia:object type="Standard - Text" version="1" id="O18">
       <dia:attribute name="obj_pos">
         <dia:point val="68.499,21.8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="68.499,21.2;68.499,22.15"/>
+        <dia:rectangle val="68.499,21.25;68.499,22.2"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -684,13 +720,16 @@
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O19">
+    <dia:object type="Standard - Text" version="1" id="O19">
       <dia:attribute name="obj_pos">
         <dia:point val="44.199,28.7"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="44.199,28.1;90.349,29.05"/>
+        <dia:rectangle val="44.199,28.15;87.449,29.1"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -714,13 +753,16 @@
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O20">
+    <dia:object type="Standard - Text" version="1" id="O20">
       <dia:attribute name="obj_pos">
         <dia:point val="80.2321,-17.3131"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="75.7321,-17.9131;84.7321,-16.1631"/>
+        <dia:rectangle val="76.0321,-17.8631;84.4321,-16.1131"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -745,13 +787,16 @@ Contacts Information System#</dia:string>
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O21">
+    <dia:object type="Standard - Text" version="1" id="O21">
       <dia:attribute name="obj_pos">
         <dia:point val="38.1821,-17.3631"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="38.1821,-17.9631;46.2821,-17.0131"/>
+        <dia:rectangle val="38.1821,-17.9131;45.7321,-16.9631"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -775,13 +820,16 @@ Contacts Information System#</dia:string>
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O22">
+    <dia:object type="Standard - Text" version="1" id="O22">
       <dia:attribute name="obj_pos">
         <dia:point val="84.6991,6.25001"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="84.6991,5.65001;84.6991,6.60001"/>
+        <dia:rectangle val="84.6991,5.70001;84.6991,6.65001"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -805,13 +853,16 @@ Contacts Information System#</dia:string>
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O23">
+    <dia:object type="Standard - Text" version="1" id="O23">
       <dia:attribute name="obj_pos">
         <dia:point val="84.5991,6.45001"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="84.5991,5.85001;84.5991,6.80001"/>
+        <dia:rectangle val="84.5991,5.90001;84.5991,6.85001"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -834,6 +885,9 @@ Contacts Information System#</dia:string>
             <dia:enum val="0"/>
           </dia:attribute>
         </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
       </dia:attribute>
     </dia:object>
     <dia:object type="ER - Entity" version="0" id="O24">
@@ -882,13 +936,13 @@ Contacts Information System#</dia:string>
         <dia:point val="106.439,6.11001"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="106.389,6.06001;111.339,7.96001"/>
+        <dia:rectangle val="106.389,6.06001;111.389,7.96001"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="106.439,6.11001"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.8499999999999996"/>
+        <dia:real val="4.9000000000000004"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="1.8"/>
@@ -918,7 +972,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O26">
+    <dia:object type="ER - Participation" version="1" id="O26">
       <dia:attribute name="obj_pos">
         <dia:point val="103.19,6.99749"/>
       </dia:attribute>
@@ -949,13 +1003,13 @@ Contacts Information System#</dia:string>
     </dia:object>
     <dia:object type="ER - Entity" version="0" id="O27">
       <dia:attribute name="obj_pos">
-        <dia:point val="26.4391,-1.63999"/>
+        <dia:point val="37.7391,3.06001"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="26.3891,-1.68999;33.1391,0.21001"/>
+        <dia:rectangle val="37.6891,3.01001;44.4391,4.91001"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="26.4391,-1.63999"/>
+        <dia:point val="37.7391,3.06001"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="6.6500000000000004"/>
@@ -990,13 +1044,13 @@ Contacts Information System#</dia:string>
     </dia:object>
     <dia:object type="ER - Relationship" version="0" id="O28">
       <dia:attribute name="obj_pos">
-        <dia:point val="28.2391,-4.83999"/>
+        <dia:point val="39.5891,-0.88999"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="28.1891,-5.98999;31.3391,-1.85999"/>
+        <dia:rectangle val="39.5391,-2.03999;42.6891,2.09001"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="28.2391,-4.83999"/>
+        <dia:point val="39.5891,-0.88999"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="3.0499999999999998"/>
@@ -1035,18 +1089,18 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O29">
+    <dia:object type="ER - Participation" version="1" id="O29">
       <dia:attribute name="obj_pos">
-        <dia:point val="40.5926,-10.5"/>
+        <dia:point val="41.0641,4.91029"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="29.7141,-10.55;40.6426,-4.78999"/>
+        <dia:rectangle val="41.0128,4.86029;41.1141,6.63579"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="40.5926,-10.5"/>
-        <dia:point val="40.5926,-9.9125"/>
-        <dia:point val="29.7641,-9.9125"/>
-        <dia:point val="29.7641,-4.83999"/>
+        <dia:point val="41.0641,4.91029"/>
+        <dia:point val="41.0641,5.7"/>
+        <dia:point val="41.0628,5.7"/>
+        <dia:point val="41.0628,6.58579"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -1060,26 +1114,30 @@ Contacts Information System#</dia:string>
         <dia:boolean val="false"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="1" to="O28" connection="2"/>
+        <dia:connection handle="0" to="O27" connection="8"/>
+        <dia:connection handle="1" to="O5" connection="2"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O30">
+    <dia:object type="ER - Participation" version="1" id="O30">
       <dia:attribute name="obj_pos">
-        <dia:point val="29.7641,-3.00999"/>
+        <dia:point val="41.1141,0.94001"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="29.7141,-3.00999;29.8141,-1.56928"/>
+        <dia:rectangle val="41.0141,0.89001;41.1641,3.11001"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="29.7641,-3.00999"/>
-        <dia:point val="29.7641,-3.00999"/>
-        <dia:point val="29.7641,-1.63999"/>
-        <dia:point val="29.7641,-1.63999"/>
+        <dia:point val="41.1141,0.94001"/>
+        <dia:point val="41.1,0.94001"/>
+        <dia:point val="41.1,3.06001"/>
+        <dia:point val="41.0641,3.06001"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="0"/>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
@@ -1265,7 +1323,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O35">
+    <dia:object type="ER - Participation" version="1" id="O35">
       <dia:attribute name="obj_pos">
         <dia:point val="81.5255,-10.5179"/>
       </dia:attribute>
@@ -1282,6 +1340,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
@@ -1561,7 +1622,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O42">
+    <dia:object type="ER - Participation" version="1" id="O42">
       <dia:attribute name="obj_pos">
         <dia:point val="87.1151,18.425"/>
       </dia:attribute>
@@ -1578,6 +1639,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
@@ -1675,7 +1739,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O45">
+    <dia:object type="ER - Participation" version="1" id="O45">
       <dia:attribute name="obj_pos">
         <dia:point val="66.0401,-14.8725"/>
       </dia:attribute>
@@ -1704,7 +1768,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O32" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O46">
+    <dia:object type="ER - Participation" version="1" id="O46">
       <dia:attribute name="obj_pos">
         <dia:point val="61.9401,-14.8725"/>
       </dia:attribute>
@@ -1722,6 +1786,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -1735,16 +1802,16 @@ Contacts Information System#</dia:string>
         <dia:point val="62.0255,11.2371"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="60.2755,11.1871;66.7755,13.7171"/>
+        <dia:rectangle val="60.2755,11.1871;66.8255,13.7471"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="62.0255,11.2371"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.0499999999999998"/>
+        <dia:real val="4.0999999999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="2.4299999999999997"/>
+        <dia:real val="2.46"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000000000001"/>
@@ -1777,7 +1844,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O48">
+    <dia:object type="ER - Participation" version="1" id="O48">
       <dia:attribute name="obj_pos">
         <dia:point val="59.8283,12.44"/>
       </dia:attribute>
@@ -1794,6 +1861,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
@@ -1896,16 +1966,16 @@ Contacts Information System#</dia:string>
         <dia:point val="78.0151,-1.31221"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="76.2651,-1.36221;83.8151,1.16779"/>
+        <dia:rectangle val="76.2651,-1.36221;83.8651,1.19779"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="78.0151,-1.31221"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.0499999999999998"/>
+        <dia:real val="4.0999999999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="2.4299999999999997"/>
+        <dia:real val="2.46"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000000000001"/>
@@ -2383,13 +2453,13 @@ Contacts Information System#</dia:string>
         <dia:point val="75.2276,-8.0025"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="75.1776,-8.0525;79.0776,-6.1525"/>
+        <dia:rectangle val="75.1776,-8.0525;79.1276,-6.1525"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="75.2276,-8.0025"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="3.7999999999999998"/>
+        <dia:real val="3.8500000000000001"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="1.8"/>
@@ -2466,7 +2536,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O64">
+    <dia:object type="ER - Participation" version="1" id="O64">
       <dia:attribute name="obj_pos">
         <dia:point val="71.0255,17.9482"/>
       </dia:attribute>
@@ -2484,6 +2554,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -2492,7 +2565,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O57" connection="2"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O65">
+    <dia:object type="ER - Participation" version="1" id="O65">
       <dia:attribute name="obj_pos">
         <dia:point val="71.0151,20.915"/>
       </dia:attribute>
@@ -2510,6 +2583,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -2518,7 +2594,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O53" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O66">
+    <dia:object type="ER - Participation" version="1" id="O66">
       <dia:attribute name="obj_pos">
         <dia:point val="71.0151,24.0016"/>
       </dia:attribute>
@@ -2536,6 +2612,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -2544,7 +2623,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O59" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O67">
+    <dia:object type="ER - Participation" version="1" id="O67">
       <dia:attribute name="obj_pos">
         <dia:point val="68.9074,-0.609313"/>
       </dia:attribute>
@@ -2754,16 +2833,16 @@ Contacts Information System#</dia:string>
         <dia:point val="78.0327,4.24749"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="76.2827,4.19749;83.8327,6.72749"/>
+        <dia:rectangle val="76.2827,4.19749;83.8827,6.75749"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="78.0327,4.24749"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.0499999999999998"/>
+        <dia:real val="4.0999999999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="2.4299999999999997"/>
+        <dia:real val="2.46"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000000000001"/>
@@ -2801,16 +2880,16 @@ Contacts Information System#</dia:string>
         <dia:point val="77.9827,6.99749"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="76.2327,6.94749;83.7827,9.47749"/>
+        <dia:rectangle val="76.2327,6.94749;83.8327,9.50749"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="77.9827,6.99749"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.0499999999999998"/>
+        <dia:real val="4.0999999999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="2.4299999999999997"/>
+        <dia:real val="2.46"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000000000001"/>
@@ -2848,16 +2927,16 @@ Contacts Information System#</dia:string>
         <dia:point val="78.0327,9.84749"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="77.3327,9.79749;83.8327,12.3275"/>
+        <dia:rectangle val="77.3327,9.79749;83.8827,12.3575"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="78.0327,9.84749"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.0499999999999998"/>
+        <dia:real val="4.0999999999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="2.4299999999999997"/>
+        <dia:real val="2.46"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000000000001"/>
@@ -2890,7 +2969,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O75">
+    <dia:object type="ER - Participation" version="1" id="O75">
       <dia:attribute name="obj_pos">
         <dia:point val="89.9952,-0.10251"/>
       </dia:attribute>
@@ -2908,6 +2987,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -2916,7 +2998,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O68" connection="0"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O76">
+    <dia:object type="ER - Participation" version="1" id="O76">
       <dia:attribute name="obj_pos">
         <dia:point val="87.8901,5.45999"/>
       </dia:attribute>
@@ -2934,6 +3016,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -2942,7 +3027,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O58" connection="0"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O77">
+    <dia:object type="ER - Participation" version="1" id="O77">
       <dia:attribute name="obj_pos">
         <dia:point val="88.2901,8.20999"/>
       </dia:attribute>
@@ -2960,6 +3045,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -2968,7 +3056,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O60" connection="0"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O78">
+    <dia:object type="ER - Participation" version="1" id="O78">
       <dia:attribute name="obj_pos">
         <dia:point val="90.6827,11.035"/>
       </dia:attribute>
@@ -2986,6 +3074,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -2994,7 +3085,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O71" connection="0"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O79">
+    <dia:object type="ER - Participation" version="1" id="O79">
       <dia:attribute name="obj_pos">
         <dia:point val="66.0755,12.4521"/>
       </dia:attribute>
@@ -3023,7 +3114,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O37" connection="5"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O80">
+    <dia:object type="ER - Participation" version="1" id="O80">
       <dia:attribute name="obj_pos">
         <dia:point val="84.0452,-0.10251"/>
       </dia:attribute>
@@ -3041,6 +3132,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -3049,7 +3143,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O51" connection="4"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O81">
+    <dia:object type="ER - Participation" version="1" id="O81">
       <dia:attribute name="obj_pos">
         <dia:point val="84.0401,5.45999"/>
       </dia:attribute>
@@ -3067,6 +3161,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -3075,7 +3172,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O72" connection="4"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O82">
+    <dia:object type="ER - Participation" version="1" id="O82">
       <dia:attribute name="obj_pos">
         <dia:point val="84.0901,8.20999"/>
       </dia:attribute>
@@ -3093,6 +3190,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -3101,7 +3201,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O73" connection="4"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O83">
+    <dia:object type="ER - Participation" version="1" id="O83">
       <dia:attribute name="obj_pos">
         <dia:point val="84.0327,11.035"/>
       </dia:attribute>
@@ -3119,6 +3219,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -3127,7 +3230,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O74" connection="4"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O84">
+    <dia:object type="ER - Participation" version="1" id="O84">
       <dia:attribute name="obj_pos">
         <dia:point val="78.0151,-0.09721"/>
       </dia:attribute>
@@ -3156,7 +3259,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O37" connection="2"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O85">
+    <dia:object type="ER - Participation" version="1" id="O85">
       <dia:attribute name="obj_pos">
         <dia:point val="78.0327,5.46249"/>
       </dia:attribute>
@@ -3174,6 +3277,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -3182,7 +3288,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O37" connection="4"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O86">
+    <dia:object type="ER - Participation" version="1" id="O86">
       <dia:attribute name="obj_pos">
         <dia:point val="77.9827,8.21249"/>
       </dia:attribute>
@@ -3211,7 +3317,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O37" connection="7"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O87">
+    <dia:object type="ER - Participation" version="1" id="O87">
       <dia:attribute name="obj_pos">
         <dia:point val="78.0327,11.0625"/>
       </dia:attribute>
@@ -3240,7 +3346,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O37" connection="7"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O88">
+    <dia:object type="ER - Participation" version="1" id="O88">
       <dia:attribute name="obj_pos">
         <dia:point val="94.3776,5.46249"/>
       </dia:attribute>
@@ -3258,6 +3364,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -3266,7 +3375,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O39" connection="3"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O89">
+    <dia:object type="ER - Participation" version="1" id="O89">
       <dia:attribute name="obj_pos">
         <dia:point val="94.3651,8.21249"/>
       </dia:attribute>
@@ -3295,7 +3404,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O39" connection="5"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O90">
+    <dia:object type="ER - Participation" version="1" id="O90">
       <dia:attribute name="obj_pos">
         <dia:point val="95.6577,11.0625"/>
       </dia:attribute>
@@ -3324,7 +3433,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O39" connection="5"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O91">
+    <dia:object type="ER - Participation" version="1" id="O91">
       <dia:attribute name="obj_pos">
         <dia:point val="71.9901,-6.1775"/>
       </dia:attribute>
@@ -3353,7 +3462,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O38" connection="0"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O92">
+    <dia:object type="ER - Participation" version="1" id="O92">
       <dia:attribute name="obj_pos">
         <dia:point val="79.0276,-7.1025"/>
       </dia:attribute>
@@ -3371,6 +3480,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -3379,7 +3491,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O63" connection="0"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O93">
+    <dia:object type="ER - Participation" version="1" id="O93">
       <dia:attribute name="obj_pos">
         <dia:point val="94.9327,-0.10001"/>
       </dia:attribute>
@@ -3408,7 +3520,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O39" connection="0"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O94">
+    <dia:object type="ER - Participation" version="1" id="O94">
       <dia:attribute name="obj_pos">
         <dia:point val="100.215,7.89749"/>
       </dia:attribute>
@@ -3437,7 +3549,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O40" connection="4"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O95">
+    <dia:object type="ER - Participation" version="1" id="O95">
       <dia:attribute name="obj_pos">
         <dia:point val="85.4151,17.405"/>
       </dia:attribute>
@@ -3466,7 +3578,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O37" connection="7"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O96">
+    <dia:object type="ER - Participation" version="1" id="O96">
       <dia:attribute name="obj_pos">
         <dia:point val="76.1901,-11.5025"/>
       </dia:attribute>
@@ -3484,6 +3596,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -3492,7 +3607,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O33" connection="0"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O97">
+    <dia:object type="ER - Participation" version="1" id="O97">
       <dia:attribute name="obj_pos">
         <dia:point val="74.4401,-10.6025"/>
       </dia:attribute>
@@ -3521,12 +3636,12 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O62" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="UML - Generalization" version="0" id="O98">
+    <dia:object type="UML - Generalization" version="1" id="O98">
       <dia:attribute name="obj_pos">
         <dia:point val="74.4401,-10.6025"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="71.9401,-10.6525;75.2901,-7.90999"/>
+        <dia:rectangle val="71.9401,-10.6525;75.2901,-7.85999"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="74.4401,-10.6025"/>
@@ -3541,6 +3656,9 @@ Contacts Information System#</dia:string>
       </dia:attribute>
       <dia:attribute name="orth_autoroute">
         <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000"/>
       </dia:attribute>
       <dia:attribute name="line_colour">
         <dia:color val="#000000"/>
@@ -3644,7 +3762,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O101">
+    <dia:object type="ER - Participation" version="1" id="O101">
       <dia:attribute name="obj_pos">
         <dia:point val="81.4891,-13.0325"/>
       </dia:attribute>
@@ -3662,6 +3780,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -3670,7 +3791,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O99" connection="3"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O102">
+    <dia:object type="ER - Participation" version="1" id="O102">
       <dia:attribute name="obj_pos">
         <dia:point val="78.0891,-13.0325"/>
       </dia:attribute>
@@ -3687,6 +3808,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
+      </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
@@ -3789,16 +3913,16 @@ Contacts Information System#</dia:string>
         <dia:point val="75.4641,12.555"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="74.7641,12.505;80.2141,15.035"/>
+        <dia:rectangle val="74.7641,12.505;80.2641,15.065"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="75.4641,12.555"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.0499999999999998"/>
+        <dia:real val="4.0999999999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="2.4299999999999997"/>
+        <dia:real val="2.46"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000000000001"/>
@@ -3831,7 +3955,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O106">
+    <dia:object type="ER - Participation" version="1" id="O106">
       <dia:attribute name="obj_pos">
         <dia:point val="75.4641,13.77"/>
       </dia:attribute>
@@ -3860,7 +3984,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O37" connection="7"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O107">
+    <dia:object type="ER - Participation" version="1" id="O107">
       <dia:attribute name="obj_pos">
         <dia:point val="93.1391,13.7675"/>
       </dia:attribute>
@@ -3878,6 +4002,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -3886,7 +4013,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O104" connection="0"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O108">
+    <dia:object type="ER - Participation" version="1" id="O108">
       <dia:attribute name="obj_pos">
         <dia:point val="97.2141,13.77"/>
       </dia:attribute>
@@ -3956,7 +4083,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O110">
+    <dia:object type="ER - Participation" version="1" id="O110">
       <dia:attribute name="obj_pos">
         <dia:point val="79.5141,13.77"/>
       </dia:attribute>
@@ -3992,16 +4119,16 @@ Contacts Information System#</dia:string>
         <dia:point val="65.0392,2.25499"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="63.2892,2.20499;70.8392,4.73499"/>
+        <dia:rectangle val="63.2892,2.20499;70.8892,4.76499"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="65.0392,2.25499"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.0499999999999998"/>
+        <dia:real val="4.0999999999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="2.4299999999999997"/>
+        <dia:real val="2.46"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000000000001"/>
@@ -4034,7 +4161,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O112">
+    <dia:object type="ER - Participation" version="1" id="O112">
       <dia:attribute name="obj_pos">
         <dia:point val="65.0392,3.46999"/>
       </dia:attribute>
@@ -4068,16 +4195,16 @@ Contacts Information System#</dia:string>
         <dia:point val="60.6892,5.65499"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="59.9892,5.60499;66.4892,8.13499"/>
+        <dia:rectangle val="59.9892,5.60499;66.5392,8.16499"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="60.6892,5.65499"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.0499999999999998"/>
+        <dia:real val="4.0999999999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="2.4299999999999997"/>
+        <dia:real val="2.46"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000000000001"/>
@@ -4157,7 +4284,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O115">
+    <dia:object type="ER - Participation" version="1" id="O115">
       <dia:attribute name="obj_pos">
         <dia:point val="72.6901,-11.5025"/>
       </dia:attribute>
@@ -4309,7 +4436,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O119">
+    <dia:object type="ER - Participation" version="1" id="O119">
       <dia:attribute name="obj_pos">
         <dia:point val="72.3074,-0.609313"/>
       </dia:attribute>
@@ -4327,6 +4454,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -4335,7 +4465,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O37" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O120">
+    <dia:object type="ER - Participation" version="1" id="O120">
       <dia:attribute name="obj_pos">
         <dia:point val="69.9901,5.94749"/>
       </dia:attribute>
@@ -4364,7 +4494,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O111" connection="4"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O121">
+    <dia:object type="ER - Participation" version="1" id="O121">
       <dia:attribute name="obj_pos">
         <dia:point val="56.3151,5.24749"/>
       </dia:attribute>
@@ -4382,6 +4512,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -4392,13 +4525,13 @@ Contacts Information System#</dia:string>
     </dia:object>
     <dia:object type="ER - Relationship" version="0" id="O122">
       <dia:attribute name="obj_pos">
-        <dia:point val="54.8283,-9.70999"/>
+        <dia:point val="54.7783,-9.70999"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="54.7783,-10.86;57.9283,-6.72999"/>
+        <dia:rectangle val="54.7283,-10.86;57.8783,-6.72999"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="54.8283,-9.70999"/>
+        <dia:point val="54.7783,-9.70999"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="3.0499999999999998"/>
@@ -4437,23 +4570,26 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O123">
+    <dia:object type="ER - Participation" version="1" id="O123">
       <dia:attribute name="obj_pos">
         <dia:point val="56.3151,-13.9525"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="56.2651,-14.0025;56.4033,-9.65999"/>
+        <dia:rectangle val="56.2533,-14.0025;56.3651,-9.65999"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="56.3151,-13.9525"/>
         <dia:point val="56.3151,-11.8312"/>
-        <dia:point val="56.3533,-11.8312"/>
-        <dia:point val="56.3533,-9.70999"/>
+        <dia:point val="56.3033,-11.8312"/>
+        <dia:point val="56.3033,-9.70999"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
@@ -4463,23 +4599,26 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O122" connection="2"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O124">
+    <dia:object type="ER - Participation" version="1" id="O124">
       <dia:attribute name="obj_pos">
         <dia:point val="56.3151,3.44749"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="56.2651,-7.92999;56.4033,3.49749"/>
+        <dia:rectangle val="56.2533,-7.92999;56.3651,3.49749"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="56.3151,3.44749"/>
         <dia:point val="56.3151,-2.21625"/>
-        <dia:point val="56.3533,-2.21625"/>
-        <dia:point val="56.3533,-7.87999"/>
+        <dia:point val="56.3033,-2.21625"/>
+        <dia:point val="56.3033,-7.87999"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
@@ -4489,7 +4628,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O122" connection="6"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O125">
+    <dia:object type="ER - Participation" version="1" id="O125">
       <dia:attribute name="obj_pos">
         <dia:point val="65.0142,-5.40999"/>
       </dia:attribute>
@@ -4507,6 +4646,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -4515,7 +4657,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O114" connection="6"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O126">
+    <dia:object type="ER - Participation" version="1" id="O126">
       <dia:attribute name="obj_pos">
         <dia:point val="60.6741,-7.8575"/>
       </dia:attribute>
@@ -4533,6 +4675,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -4541,7 +4686,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O116" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O127">
+    <dia:object type="ER - Participation" version="1" id="O127">
       <dia:attribute name="obj_pos">
         <dia:point val="56.3283,11.54"/>
       </dia:attribute>
@@ -4559,6 +4704,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -4567,7 +4715,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O56" connection="6"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O128">
+    <dia:object type="ER - Participation" version="1" id="O128">
       <dia:attribute name="obj_pos">
         <dia:point val="72.6901,-12.4025"/>
       </dia:attribute>
@@ -4596,7 +4744,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O31" connection="2"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O129">
+    <dia:object type="ER - Participation" version="1" id="O129">
       <dia:attribute name="obj_pos">
         <dia:point val="60.6892,6.86999"/>
       </dia:attribute>
@@ -4625,7 +4773,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O116" connection="6"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O130">
+    <dia:object type="ER - Participation" version="1" id="O130">
       <dia:attribute name="obj_pos">
         <dia:point val="69.9901,6.84749"/>
       </dia:attribute>
@@ -4643,6 +4791,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -4651,7 +4802,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O113" connection="4"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O131">
+    <dia:object type="ER - Participation" version="1" id="O131">
       <dia:attribute name="obj_pos">
         <dia:point val="72.2651,7.74749"/>
       </dia:attribute>
@@ -4680,7 +4831,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O50" connection="2"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O132">
+    <dia:object type="ER - Participation" version="1" id="O132">
       <dia:attribute name="obj_pos">
         <dia:point val="71.0255,16.1482"/>
       </dia:attribute>
@@ -4698,6 +4849,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="0"/>
         <dia:enum val="1"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -4706,7 +4860,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O50" connection="6"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O133">
+    <dia:object type="ER - Participation" version="1" id="O133">
       <dia:attribute name="obj_pos">
         <dia:point val="92.2401,-5.42751"/>
       </dia:attribute>
@@ -4735,7 +4889,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O39" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O134">
+    <dia:object type="ER - Participation" version="1" id="O134">
       <dia:attribute name="obj_pos">
         <dia:point val="99.2901,-7.1025"/>
       </dia:attribute>
@@ -4769,13 +4923,13 @@ Contacts Information System#</dia:string>
         <dia:point val="84.0507,1.79706"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="84.0007,1.74706;89.3007,3.64706"/>
+        <dia:rectangle val="84.0007,1.74706;89.3507,3.64706"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="84.0507,1.79706"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="5.2000000000000002"/>
+        <dia:real val="5.25"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="1.8"/>
@@ -4857,16 +5011,16 @@ Contacts Information System#</dia:string>
         <dia:point val="77.9757,1.47206"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="76.2257,1.42206;83.7757,3.95206"/>
+        <dia:rectangle val="76.2257,1.42206;83.8257,3.98206"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="77.9757,1.47206"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.0499999999999998"/>
+        <dia:real val="4.0999999999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="2.4299999999999997"/>
+        <dia:real val="2.46"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000000000001"/>
@@ -4899,7 +5053,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O138">
+    <dia:object type="ER - Participation" version="1" id="O138">
       <dia:attribute name="obj_pos">
         <dia:point val="82.0257,2.68706"/>
       </dia:attribute>
@@ -4917,6 +5071,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -4925,7 +5082,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O135" connection="3"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O139">
+    <dia:object type="ER - Participation" version="1" id="O139">
       <dia:attribute name="obj_pos">
         <dia:point val="74.5401,5.94749"/>
       </dia:attribute>
@@ -4953,7 +5110,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="0" to="O37" connection="2"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O140">
+    <dia:object type="ER - Participation" version="1" id="O140">
       <dia:attribute name="obj_pos">
         <dia:point val="89.2507,2.69706"/>
       </dia:attribute>
@@ -4971,6 +5128,9 @@ Contacts Information System#</dia:string>
         <dia:enum val="1"/>
         <dia:enum val="0"/>
       </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
       <dia:attribute name="total">
         <dia:boolean val="false"/>
       </dia:attribute>
@@ -4979,7 +5139,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O136" connection="0"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O141">
+    <dia:object type="ER - Participation" version="1" id="O141">
       <dia:attribute name="obj_pos">
         <dia:point val="94.9257,2.71206"/>
       </dia:attribute>
@@ -5055,7 +5215,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O143">
+    <dia:object type="ER - Participation" version="1" id="O143">
       <dia:attribute name="obj_pos">
         <dia:point val="69.1891,-10.7"/>
       </dia:attribute>
@@ -5083,7 +5243,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O142" connection="0"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O144">
+    <dia:object type="ER - Participation" version="1" id="O144">
       <dia:attribute name="obj_pos">
         <dia:point val="85.2391,-2.63"/>
       </dia:attribute>
@@ -5117,13 +5277,13 @@ Contacts Information System#</dia:string>
         <dia:point val="80.3891,-8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="80.3391,-8.05;86.3891,-6.15"/>
+        <dia:rectangle val="80.3391,-8.05;86.7391,-6.15"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="80.3891,-8"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="5.9500000000000002"/>
+        <dia:real val="6.2999999999999998"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="1.8"/>
@@ -5153,7 +5313,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O146">
+    <dia:object type="ER - Participation" version="1" id="O146">
       <dia:attribute name="obj_pos">
         <dia:point val="77.0891,-8.65"/>
       </dia:attribute>
@@ -5186,13 +5346,13 @@ Contacts Information System#</dia:string>
         <dia:point val="44.2738,-7.75"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="44.2238,-7.8;50.2738,-5.9"/>
+        <dia:rectangle val="44.2238,-7.8;50.6238,-5.9"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="44.2738,-7.75"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="5.9500000000000002"/>
+        <dia:real val="6.2999999999999998"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="1.8"/>
@@ -5222,18 +5382,18 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O148">
+    <dia:object type="ER - Participation" version="1" id="O148">
       <dia:attribute name="obj_pos">
         <dia:point val="41.9597,-10.5207"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="41.9097,-10.5707;47.2988,-7.7"/>
+        <dia:rectangle val="41.9097,-10.5707;47.4738,-7.7"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="41.9597,-10.5207"/>
         <dia:point val="41.9597,-8.65"/>
-        <dia:point val="47.2488,-8.65"/>
-        <dia:point val="47.2488,-7.75"/>
+        <dia:point val="47.4238,-8.65"/>
+        <dia:point val="47.4238,-7.75"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>
@@ -5251,7 +5411,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O147" connection="1"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="UML - Generalization" version="0" id="O149">
+    <dia:object type="UML - Generalization" version="1" id="O149">
       <dia:attribute name="obj_pos">
         <dia:point val="41.9426,-10.5"/>
       </dia:attribute>
@@ -5272,6 +5432,9 @@ Contacts Information System#</dia:string>
       <dia:attribute name="orth_autoroute">
         <dia:boolean val="false"/>
       </dia:attribute>
+      <dia:attribute name="text_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
       <dia:attribute name="line_colour">
         <dia:color val="#000000"/>
       </dia:attribute>
@@ -5290,13 +5453,13 @@ Contacts Information System#</dia:string>
         <dia:point val="106.439,8.40001"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="106.389,8.35001;113.489,10.25"/>
+        <dia:rectangle val="106.389,8.35001;113.839,10.25"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="106.439,8.40001"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="7"/>
+        <dia:real val="7.3499999999999996"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="1.8"/>
@@ -5326,7 +5489,7 @@ Contacts Information System#</dia:string>
         <dia:real val="0.80000000000000004"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="ER - Participation" version="0" id="O151">
+    <dia:object type="ER - Participation" version="1" id="O151">
       <dia:attribute name="obj_pos">
         <dia:point val="103.19,6.99749"/>
       </dia:attribute>
@@ -5355,7 +5518,7 @@ Contacts Information System#</dia:string>
         <dia:connection handle="1" to="O150" connection="3"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="Standard - ZigZagLine" version="0" id="O152">
+    <dia:object type="Standard - ZigZagLine" version="1" id="O152">
       <dia:attribute name="obj_pos">
         <dia:point val="103.19,6.99749"/>
       </dia:attribute>
@@ -5388,6 +5551,64 @@ Contacts Information System#</dia:string>
       <dia:connections>
         <dia:connection handle="0" to="O39" connection="4"/>
         <dia:connection handle="1" to="O24" connection="3"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="ER - Participation" version="1" id="O153">
+      <dia:attribute name="obj_pos">
+        <dia:point val="47.4238,-5.95"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="41.0641,-6;47.4738,-0.83999"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="47.4238,-5.95"/>
+        <dia:point val="47.4238,-5.05"/>
+        <dia:point val="41.1141,-5.05"/>
+        <dia:point val="41.1141,-0.88999"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="total">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O147" connection="6"/>
+        <dia:connection handle="1" to="O28" connection="2"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object type="ER - Participation" version="1" id="O154">
+      <dia:attribute name="obj_pos">
+        <dia:point val="41.1239,-5.96195"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="41.0641,-6.01195;41.1739,-0.83999"/>
+      </dia:attribute>
+      <dia:attribute name="orth_points">
+        <dia:point val="41.1239,-5.96195"/>
+        <dia:point val="41.1239,-2.75"/>
+        <dia:point val="41.1141,-2.75"/>
+        <dia:point val="41.1141,-0.88999"/>
+      </dia:attribute>
+      <dia:attribute name="orth_orient">
+        <dia:enum val="1"/>
+        <dia:enum val="0"/>
+        <dia:enum val="1"/>
+      </dia:attribute>
+      <dia:attribute name="autorouting">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="total">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection handle="0" to="O2" connection="6"/>
+        <dia:connection handle="1" to="O28" connection="2"/>
       </dia:connections>
     </dia:object>
   </dia:layer>
