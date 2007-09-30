@@ -380,7 +380,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr> <td><b>Jean-Michel</b> <td>French Translator.
 	<tr> <td><b>Jonas</b>    <td>GNU Business Network.
 	<tr> <td><b>Jose</b>     <td>Architecture Adviser.
-	<tr> <td><b>Klaus</b>    <td>Web developer, Code Auditor.
+	<tr> <td><b>Klaus</b>    <td>Web developer, Code Auditor, German Translator.
 	<tr> <td><b>Martin</b>   <td>Auditor and Quality Assurance. Public Relations.
 	<tr> <td><b>Neal</b>     <td>Initial proposal, project Chapter, Public Relations, etc.
 	<tr> <td><b>RMS</b>      <td>Ethics Officer; he evaluates the project as a whole.
