@@ -122,7 +122,6 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr> <td><a href="http://smarty.php.net/">Smarty</a> <td>
 	<tr> <td><a href="http://smarty.incutio.com/?page=SmartyGettext">Smarty-Gettext</a> <td>
 	<tr> <td><a href="http://www.gnu.org/software/gettext/">gettext</a> <td>
-	<tr> <td><a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/">JavaScript 1.x</a> <td>
 	<tr> <td><a href="http://www.w3.org/Style/CSS/">CSS x.y</a> <td>
 	<tr> <td><a href="http://httpd.apache.org/">Apache x.y</a> <td>
 	<tr> <td><a href="http://www.postgresql.org/">PostgreSQL</a> >= 7.4.x <td>
@@ -150,7 +149,7 @@ Suite 225, San Francisco, CA 94107, USA
 	</p>
 
 	<table>
-	<tr> <td><b>Layer 0.</b> <td>Site entry point (<a href="http://www.w3.org/TR/html401/">HTML</a>, <a href="http://www.w3.org/Style/CSS/">CSS</a>, <a href="http://smarty.php.net/">Smarty</a>, <a href="http://wp.netscape.com/eng/mozilla/3.0/handbook/javascript/">JavaScript</a>, <a href="http://httpd.apache.org/docs/2.0/howto/ssi.html">Apache SSI</a> and <a href="http://www.php.net/">PHP</a> ).
+	<tr> <td><b>Layer 0.</b> <td>Site entry point (<a href="http://www.w3.org/TR/html401/">HTML</a>, <a href="http://www.w3.org/Style/CSS/">CSS</a>, <a href="http://smarty.php.net/">Smarty</a>, <a href="http://httpd.apache.org/docs/2.0/howto/ssi.html">Apache SSI</a> and <a href="http://www.php.net/">PHP</a> ).
 	<tr> <td><b>Layer 1.</b> <td>GUI page builder and themes (PHP)
 	<tr> <td><b>Layer 2.</b> <td>GUI business logic: content section, others (checking & processing forms) (PHP, HTML)
 	<tr> <td><b>Layer 4.</b> <td>Data base Manager class, PHP Tools class and Mailer class (PHP)
