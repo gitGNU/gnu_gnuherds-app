@@ -126,7 +126,6 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr> <td><a href="http://www.w3.org/Style/CSS/">CSS x.y</a> <td>
 	<tr> <td><a href="http://httpd.apache.org/">Apache x.y</a> <td>
 	<tr> <td><a href="http://www.postgresql.org/">PostgreSQL</a> >= 7.4.x <td>
-	<tr> <td><a href="http://www.maxmind.com/">GeoIP</a> <td>
 	<tr> <td>
 	{t escape='no'
 	  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/">'
