@@ -40,7 +40,7 @@ msgid "Project state"
 msgstr "Stand des Projektes"
 
 msgid "Look at the %1Hackers' Guide%2"
-msgstr "Folgen Sie der %1Führung der Hacker%2 "
+msgstr "Folgen Sie der %1Hacker Anleitung%2"
 
 msgid "version"
 msgstr "Version"
@@ -49,19 +49,19 @@ msgstr "Version"
 # menu.tpl
 #
 msgid "Home"
-msgstr "Heim"
+msgstr "Startseite"
 
 msgid "Charter (draft)"
-msgstr "Verordnung (Konzept)"
+msgstr "Statuten (Konzept)"
 
 msgid "Timeline"
 msgstr "Stundenplan"
 
 msgid "Hackers' Guide"
-msgstr "Die Führung"
+msgstr "Hacker Anleitung"
 
 msgid "Manage your data"
-msgstr "Manage deine Daten"
+msgstr "Verwalte deine Daten"
 
 msgid "Person"
 msgstr "Person"
@@ -97,10 +97,10 @@ msgid "My job applications"
 msgstr "Meine Job-Anfrage/Meine Kandidatur"
 
 msgid "Our job applications"
-msgstr "Unsere Kandidatur"
+msgstr "Unsere Bewerbungen"
 
 msgid "Your job applications"
-msgstr "Eure/Deine Kandidatur"
+msgstr "Eure/Deine Bewerbung"
 
 msgid "My qualif. searches"
 msgstr "Meine Suche nach Qualifikationen"
@@ -178,7 +178,7 @@ msgid "To keep the access to the user data physically secure, we have proposed t
 msgstr "Um den Zugang zu den Benutzerdaten sicher zu halten, schlagen wir vor, den Service PostgreSQL und HTTP vom Domain %1 zu den  Stellen, die von Personal der FSF kontrolliert werden, zu verschieben ."
 
 msgid "The %2GNU Herds%3 project is not an official part of %1the GNU Project%3."
-msgstr "El proyecto %2GNU Herds%3 no es oficialmente parte de %1El Proyecto GNU%3."
+msgstr "Das %2GNU Herds%3 Projekt ist zur Zeit kein offizielles Projekt des %1GNU Projekt's%3."
 
 #
 # Lost_Password_form.tpl
@@ -253,7 +253,7 @@ msgstr "Zertifikation %1"
 
 #, fuzzy
 msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
-msgstr "Dieses Projekt wird von einer kleinen %1Gruppe%2, die Mitglied von der Free Software sind, geführt."
+msgstr "Dieses Projekt wird von einer kleinen %1Gruppe%2, die Mitglied von der Free Software Bewegung sind, geführt."
 
 msgid "is the project main list."
 msgstr "ist die Hauptseite des Projekts."
@@ -416,7 +416,7 @@ msgstr "Terminar y mostrar el borrador de la propuesta de sistema de voto electr
 # GNU_Herds_Hackers_Guide_content.tpl
 #
 msgid "GNU Herds Hackers' Guide"
-msgstr "Führer für den haccker der GNU Herds"
+msgstr "GNU Herds Hacker Anleitung"
 
 msgid "Introduction"
 msgstr "Einleitung"
@@ -621,7 +621,7 @@ msgid "Configure"
 msgstr "Konfigurieren"
 
 msgid "Current work team"
-msgstr "aktuelles Arbeitsteam"
+msgstr "Aktuelles Arbeitsteam"
 
 msgid "The list could be outdated:"
 msgstr "Die Liste könnte veraltet sein:"
