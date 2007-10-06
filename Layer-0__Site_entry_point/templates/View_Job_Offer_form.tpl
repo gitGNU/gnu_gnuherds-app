@@ -271,7 +271,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if trim($data.AcademicQualification) neq ''}
 	<tr>
-	<td align="right"><strong>{'Academic qualification'|gettext|strip:'&nbsp;'}</strong> : </td>
+	<td align="right"><strong>{'Academic qualification'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 	<td colspan="3" class="greenLight">{t}{$data.AcademicQualification}{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
 	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Academic qualification{/t}">{t}edit{/t}</a></td>
@@ -396,7 +396,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if trim($data.FreeSoftwareExperiences) neq ''}
 	<tr valign="top">
-	<td align="right"><strong>{'Experience with FS projects'|gettext|strip:'&nbsp;'}</strong> : <br> </td>
+	<td align="right"><strong>{'Experience with FS projects'|gettext|strip:'&nbsp;'}</strong>&nbsp;: <br> </td>
 	<td colspan="3" class="greenLight">{$data.FreeSoftwareExperiences}</td>
 	{if $data.EntityId eq $smarty.session.EntityId}
 	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=projects" title="{t}Edit section{/t}: {t}Experience with FS projects{/t}">{t}edit{/t}</a></td>
@@ -439,7 +439,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	{if trim($data.JobOfferStateProvince) neq ''}
 		<tr>
-		<td align="right"><strong>{'State / Province'|gettext|strip:'&nbsp;'}</strong> : </td>
+		<td align="right"><strong>{'State / Province'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 		<td colspan="3" class="greenLight">{$data.JobOfferStateProvince}</td>
 		{if $data.EntityId eq $smarty.session.EntityId}
 		<td class="edit"></td>
@@ -459,7 +459,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	{if $data.AvailableToTravel eq 'true'}
 		<tr valign="top">
-		<td align="right"><strong>{'Available to travel'|gettext|strip:'&nbsp;'}</strong> : </td>
+		<td align="right"><strong>{'Available to travel'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 		<td colspan="3" class="greenLight">{t}required{/t}</td>
 		{if $data.EntityId eq $smarty.session.EntityId}
 		<td class="edit"></td>
@@ -485,7 +485,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $data.ContractType neq ''}
 
 <tr>
-<td align="right"><strong>{'Contract type'|gettext|strip:'&nbsp;'}</strong> : </td>
+<td align="right"><strong>{'Contract type'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="greenLight">{t}{$data.ContractType}{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
@@ -493,7 +493,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr>
-<td align="right"><strong>{'Wage rank'|gettext|strip:'&nbsp;'}</strong> : </td>
+<td align="right"><strong>{'Wage rank'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="greenLight">
 {$data.WageRank}
 {t}{$data.WageRankCurrencyName}{/t} 
@@ -506,7 +506,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if trim($data.EstimatedEffort) neq '' and $data.TimeUnit neq ''}
 <tr>
-<td align="right"><strong>{'Estimated effort'|gettext|strip:'&nbsp;'}</strong> : </td>
+<td align="right"><strong>{'Estimated effort'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="greenLight">
 {$data.EstimatedEffort}
 {t}{$data.TimeUnit}{/t}
