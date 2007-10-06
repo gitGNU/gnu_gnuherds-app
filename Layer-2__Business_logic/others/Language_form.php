@@ -41,7 +41,8 @@ class LanguageForm
 		{
 			$default_language = "en_US"; // The main and default language of this project is the English languge
 
-			if ( $_SESSION["Language"] == "en_US"
+			if ( $_SESSION["Language"] == "de_DE"
+			  or $_SESSION["Language"] == "en_US"
 			  or $_SESSION["Language"] == "es_ES"
 			  or $_SESSION["Language"] == "fr_FR"
 			  or $_SESSION["Language"] == "it_IT"
@@ -53,6 +54,8 @@ class LanguageForm
 			else // The client has not specified a language, so we try to guess the best default language according to the user browser settings.
 			{
 				$supported = array(
+					"de" => true,
+					"de_AT" => true, "de_BE" => true, "de_CH" => true, "de_DE" => true, "de_LU" => true,
 					"en" => true,
 					"en_AU" => true, "en_BW" => true, "en_CA" => true, "en_DK" => true, "en_GB" => true, "en_HK" => true,
 					"en_IE" => true, "en_IN" => true, "en_NZ" => true, "en_PH" => true, "en_SG" => true, "en_US" => true,
@@ -76,7 +79,10 @@ class LanguageForm
 
 				if ( $chosen != "" ) // Process what the user browser has chosen
 				{
-					if ( $chosen == "en"
+					if ( $chosen == "de"
+					  or $chosen == "de_AT" or $chosen == "de_BE" or $chosen == "de_CH" or $chosen == "de_DE" or $chosen == "de_LU" )
+						$this->setLanguage("de_DE");
+					elseif ( $chosen == "en"
 					  or $chosen == "en_AU" or $chosen == "en_BW" or $chosen == "en_CA" or $chosen == "en_DK" or $chosen == "en_GB" or $chosen == "en_HK"
 					  or $chosen == "en_IE" or $chosen == "en_IN" or $chosen == "en_NZ" or $chosen == "en_PH" or $chosen == "en_SG" or $chosen == "en_US"
 					  or $chosen == "en_ZA" or $chosen == "en_ZW" )
@@ -108,6 +114,11 @@ class LanguageForm
 
 					// Official or co-official language. Reference: wikipedia.org
 					if (
+					  // Official
+					     $country_code == "DE" or $country_code == "AT" or $country_code == "LI" or $country_code == "LU" or $country_code == "CH" )
+						$this->setLanguage("de_DE");
+
+					elseif (
 					  // Official
 					     $country_code == "US" or $country_code == "GB" )
 						$this->setLanguage("en_US");
@@ -171,17 +182,19 @@ class LanguageForm
 	public function setLocale($language)
 	{
 		// I18N support information here
-		if ($language == "en_US")
+		if ($language == "de_DE")
+			$locale = 'de_DE.utf8';
+		elseif ($language == "en_US")
 			$locale = 'en_US.utf8';
-		if ($language == "es_ES")
+		elseif ($language == "es_ES")
 			$locale = 'es_ES.utf8';
-		if ($language == "fr_FR")
+		elseif ($language == "fr_FR")
 			$locale = 'fr_FR.utf8';
-		if ($language == "it_IT")
+		elseif ($language == "it_IT")
 			$locale = 'it_IT.utf8';
-		if ($language == "pt_PT")
+		elseif ($language == "pt_PT")
 			$locale = 'pt_PT.utf8';
-		if ($language == "ru_RU")
+		elseif ($language == "ru_RU")
 			$locale = 'ru_RU.utf8';
 
 		putenv("LANG=$locale");

@@ -51,6 +51,8 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <span class="heading">
+{if $smarty.session.Language eq 'de_DE'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=de_DE" lang="de_DE" hreflang="de_DE" title="{t}Change language{/t}">{/if}<span class="heading">Deutsch</span>{if $smarty.session.Language eq 'de_DE'}</strong>{else}</a>{/if},
+
 {if $smarty.session.Language eq 'en_US'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=en_US" lang="en_US" hreflang="en_US" title="{t}Change language{/t}">{/if}<span class="heading">English</span>{if $smarty.session.Language eq 'en_US'}</strong>{else}</a>{/if},
 
 {if $smarty.session.Language eq 'es_ES'}<strong>{else}<a href="{$cleanURI}{$startParameter}language=es_ES" lang="es_ES" hreflang="es_ES" title="{t}Change language{/t}">{/if}<span class="heading">Español</span>{if $smarty.session.Language eq 'es_ES'}</strong>{else}</a>{/if},
