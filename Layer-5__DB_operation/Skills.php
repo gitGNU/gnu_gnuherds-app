@@ -321,7 +321,7 @@ class Skills
 
 	public function addSkill($skill)
 	{
-		$sqlQuery = "PREPARE query(text) AS  INSERT INTO LI_Skills (LI_Id,LI_LH_Id)VALUES ($1,'Pending');  EXECUTE query('$skill');";
+		$sqlQuery = "PREPARE query(text) AS  INSERT INTO LI_Skills (LI_Id,LI_LH_Id) VALUES ($1,'Pending');  EXECUTE query('$skill');";
 		$this->postgresql->execute($sqlQuery,1);
 	}
 
