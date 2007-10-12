@@ -17,25 +17,17 @@
 // Suite 225, San Francisco, CA 94107, USA
 
 
-require_once "../Layer-4__DBManager_etc/DB_Manager.php";
+require_once "../Layer-2__Business_logic/content/forms/Skills_form.php";
 
 // Methods take the values from the global $_POST[] array.
 
 
-class QualificationsForm
+class QualificationsForm extends SkillsForm
 {
-	private $manager;
-	private $checks;
 	private $checkresults;
 	private $section2view;
 	private $section2control;
 	private $data;
-
-
-	function __construct()
-	{
-		$this->manager = new DBManager();
-	}
 
 
 	public function processForm()
@@ -757,7 +749,7 @@ class QualificationsForm
 				if ( count($shadow_change) > 0 )
 				{
 					// Query the Expert System
-					$suggestions = $this->manager->getSuggestedSkillsLists($shadow_change);
+					$suggestions = $this->getSuggestedSkillsLists($shadow_change);
 
 					if ( count($suggestions) == 0 )
 					{

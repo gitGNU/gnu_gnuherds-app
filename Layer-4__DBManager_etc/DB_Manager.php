@@ -489,13 +489,13 @@ class DBManager
 		return $skills->getSkillExperienceLevelsList();
 	}
 
-	public function getSuggestedSkillsLists($skillList)
+	public function getTaggedSkillsList()
 	{
 		$acl = new AccessControlList();
 		$acl->checkProperlyLogged();
 
 		$skills = new Skills();
-		return $skills->getSuggestedSkillsLists($skillList);
+		return $skills->getTaggedSkillsList();
 	}
 
 	public function addSkill($skill)
