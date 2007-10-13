@@ -68,7 +68,7 @@
         <dia:point val="-1.96711,12.132"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-3.26711,9.48197;-0.667115,14.882"/>
+        <dia:rectangle val="-3.26711,9.48197;-0.66711,14.882"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="-3.21711,9.53197"/>
@@ -113,7 +113,7 @@
         <dia:point val="-1.75,4.1"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-3.09144,1.45;-0.45,6.91536"/>
+        <dia:rectangle val="-3.05,1.45;-0.45,6.85"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="-3,1.5"/>
@@ -158,7 +158,7 @@
         <dia:point val="16.5112,3.99699"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="16.4612,3.44699;22.8612,11.7217"/>
+        <dia:rectangle val="16.4612,3.44699;22.8612,11.7216"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="16.5112,3.99699"/>
@@ -225,7 +225,7 @@ gnuherds.org#</dia:string>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#CVS local
+            <dia:string>#own
 repository#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
@@ -244,6 +244,15 @@ repository#</dia:string>
             <dia:enum val="1"/>
           </dia:attribute>
         </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="entry_action">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="do_action">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="exit_action">
+        <dia:string>##</dia:string>
       </dia:attribute>
     </dia:object>
     <dia:object type="UML - State" version="0" id="O4">
@@ -271,7 +280,7 @@ repository#</dia:string>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#CVS local
+            <dia:string>#own
 repository#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
@@ -291,22 +300,31 @@ repository#</dia:string>
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="entry_action">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="do_action">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="exit_action">
+        <dia:string>##</dia:string>
+      </dia:attribute>
     </dia:object>
     <dia:object type="UML - Node" version="0" id="O5">
       <dia:attribute name="obj_pos">
-        <dia:point val="5.6188,7.21962"/>
+        <dia:point val="5.5996,6.55"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="5.5688,6.66962;13.5688,11.7163"/>
+        <dia:rectangle val="5.5496,6;13.9496,10.3"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="5.6188,7.21962"/>
+        <dia:point val="5.5996,6.55"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="7.4000000000000004"/>
+        <dia:real val="7.7999999999999998"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="4.4466599999999943"/>
+        <dia:real val="3.7000000000000002"/>
       </dia:attribute>
       <dia:attribute name="line_colour">
         <dia:color val="#000000"/>
@@ -317,7 +335,7 @@ repository#</dia:string>
       <dia:attribute name="name">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#CVS server
+            <dia:string>#master repository
 
 savannah.gnu.org#</dia:string>
           </dia:attribute>
@@ -328,7 +346,7 @@ savannah.gnu.org#</dia:string>
             <dia:real val="0.90000000000000002"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="6.1188,8.36962"/>
+            <dia:point val="6.0996,7.7"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -354,7 +372,7 @@ savannah.gnu.org#</dia:string>
         <dia:color val="#479d47"/>
       </dia:attribute>
       <dia:attribute name="curve_distance">
-        <dia:real val="-0.21107761568132419"/>
+        <dia:real val="-0.21107761568132433"/>
       </dia:attribute>
       <dia:attribute name="end_arrow">
         <dia:enum val="22"/>
@@ -381,7 +399,7 @@ savannah.gnu.org#</dia:string>
         <dia:color val="#479d47"/>
       </dia:attribute>
       <dia:attribute name="curve_distance">
-        <dia:real val="0.27229082086411327"/>
+        <dia:real val="0.27229082086411283"/>
       </dia:attribute>
       <dia:attribute name="end_arrow">
         <dia:enum val="22"/>
@@ -393,12 +411,12 @@ savannah.gnu.org#</dia:string>
         <dia:real val="0.5"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O8">
+    <dia:object type="Standard - Text" version="1" id="O8">
       <dia:attribute name="obj_pos">
         <dia:point val="1.15877,10.3459"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="1.15877,9.82965;3.02502,10.7284"/>
+        <dia:rectangle val="1.15877,9.8459;3.10877,10.6959"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -422,13 +440,16 @@ savannah.gnu.org#</dia:string>
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O9">
+    <dia:object type="Standard - Text" version="1" id="O9">
       <dia:attribute name="obj_pos">
         <dia:point val="1.06231,6.32086"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="1.06231,5.80461;2.92856,6.70336"/>
+        <dia:rectangle val="1.06231,5.80461;3.02856,6.70336"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -452,13 +473,16 @@ savannah.gnu.org#</dia:string>
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O10">
+    <dia:object type="Standard - Text" version="1" id="O10">
       <dia:attribute name="obj_pos">
-        <dia:point val="13.8263,9.01364"/>
+        <dia:point val="14.1996,8.8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="13.8263,8.51364;15.5263,9.36364"/>
+        <dia:rectangle val="14.1996,8.28375;15.9159,9.1825"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -472,7 +496,7 @@ savannah.gnu.org#</dia:string>
             <dia:real val="0.69999999999999996"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="13.8263,9.01364"/>
+            <dia:point val="14.1996,8.8"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#479d47"/>
@@ -482,13 +506,16 @@ savannah.gnu.org#</dia:string>
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
+      </dia:attribute>
     </dia:object>
     <dia:object type="UML - Actor" version="0" id="O11">
       <dia:attribute name="obj_pos">
         <dia:point val="-8.58513,5.21133"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-9.88513,2.56133;-7.28513,7.95597"/>
+        <dia:rectangle val="-9.88513,2.56133;-7.28513,7.96133"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="-9.83513,2.61133"/>
@@ -533,7 +560,7 @@ savannah.gnu.org#</dia:string>
         <dia:point val="-6.86511,4.10205"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-6.92324,2.96468;-3.22576,4.1736"/>
+        <dia:rectangle val="-6.92325,2.96468;-3.22576,4.1736"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="-6.86511,4.10205"/>
@@ -555,12 +582,12 @@ savannah.gnu.org#</dia:string>
         <dia:real val="0.5"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="0" id="O13">
+    <dia:object type="Standard - Text" version="1" id="O13">
       <dia:attribute name="obj_pos">
         <dia:point val="-6.7381,4.62673"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-6.75435,4.11048;-4.1381,5.00923"/>
+        <dia:rectangle val="-6.7381,4.12673;-4.0381,4.97673"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
@@ -583,6 +610,9 @@ savannah.gnu.org#</dia:string>
             <dia:enum val="0"/>
           </dia:attribute>
         </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
       </dia:attribute>
     </dia:object>
     <dia:object type="UML - State" version="0" id="O14">
@@ -610,7 +640,7 @@ savannah.gnu.org#</dia:string>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#CVS local
+            <dia:string>#local
 repository#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
@@ -630,23 +660,32 @@ repository#</dia:string>
           </dia:attribute>
         </dia:composite>
       </dia:attribute>
+      <dia:attribute name="entry_action">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="do_action">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="exit_action">
+        <dia:string>##</dia:string>
+      </dia:attribute>
     </dia:object>
     <dia:object type="Standard - Arc" version="0" id="O15">
       <dia:attribute name="obj_pos">
-        <dia:point val="13.7855,9.33543"/>
+        <dia:point val="14.1496,9.35"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="13.7309,9.27995;16.395,10.0854"/>
+        <dia:rectangle val="14.0945,9.28606;16.3998,10.0854"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
-        <dia:point val="13.7855,9.33543"/>
+        <dia:point val="14.1496,9.35"/>
         <dia:point val="16.2961,9.58296"/>
       </dia:attribute>
       <dia:attribute name="arc_color">
         <dia:color val="#479d47"/>
       </dia:attribute>
       <dia:attribute name="curve_distance">
-        <dia:real val="-0.083449286986442342"/>
+        <dia:real val="-0.094813815508956484"/>
       </dia:attribute>
       <dia:attribute name="end_arrow">
         <dia:enum val="22"/>
@@ -663,7 +702,7 @@ repository#</dia:string>
         <dia:point val="-10.5504,8.20389"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-10.5504,8.20389;-6.55043,9.90389"/>
+        <dia:rectangle val="-10.5504,8.20389;-6.5504,9.90389"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="-10.5504,8.20389"/>
@@ -692,7 +731,7 @@ repository#</dia:string>
             <dia:real val="0.69999999999999996"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="-8.55043,9.20389"/>
+            <dia:point val="-8.5504,9.20389"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#ce8c12"/>
@@ -701,6 +740,102 @@ repository#</dia:string>
             <dia:enum val="1"/>
           </dia:attribute>
         </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="entry_action">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="do_action">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+      <dia:attribute name="exit_action">
+        <dia:string>##</dia:string>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Arc" version="0" id="O17">
+      <dia:attribute name="obj_pos">
+        <dia:point val="0.8996,9.35"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="0.717712,6.52284;1.55158,9.40265"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="0.8996,9.35"/>
+        <dia:point val="1.0496,6.6"/>
+      </dia:attribute>
+      <dia:attribute name="arc_color">
+        <dia:color val="#479d47"/>
+      </dia:attribute>
+      <dia:attribute name="curve_distance">
+        <dia:real val="-0.19999999999999996"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="22"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.5"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.5"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Arc" version="0" id="O18">
+      <dia:attribute name="obj_pos">
+        <dia:point val="0.3996,7.35"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="0.265342,7.2972;1.05165,10.0287"/>
+      </dia:attribute>
+      <dia:attribute name="conn_endpoints">
+        <dia:point val="0.3996,7.35"/>
+        <dia:point val="0.5496,9.95"/>
+      </dia:attribute>
+      <dia:attribute name="arc_color">
+        <dia:color val="#479d47"/>
+      </dia:attribute>
+      <dia:attribute name="curve_distance">
+        <dia:real val="0.15000000000000002"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="22"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.5"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.5"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="Standard - Text" version="1" id="O19">
+      <dia:attribute name="obj_pos">
+        <dia:point val="-0.9004,8.4"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="-0.9004,7.88375;0.01585,8.7825"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#pull#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="0" name="Helvetica"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.69999999999999996"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="-0.9004,8.4"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#479d47"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="0"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="valign">
+        <dia:enum val="3"/>
       </dia:attribute>
     </dia:object>
   </dia:layer>
