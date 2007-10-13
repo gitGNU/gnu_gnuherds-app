@@ -42,7 +42,7 @@ Suite 225, San Francisco, CA 94107, USA
 </ul>
 <p>&nbsp;</p>
 <p>{t escape='no'
-  1='<a href="development#team">'
+  1='<a href="development#Team">'
   2='</a>'
 }This project has been put together by a small %1team%2 of members of the Free Software community.{/t}</p>
 <ul>
