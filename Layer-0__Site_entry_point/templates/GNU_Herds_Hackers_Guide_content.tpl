@@ -33,7 +33,7 @@ Suite 225, San Francisco, CA 94107, USA
 <li> <a href="#The_TODO_task_list" style='text-decoration: none;'>{t}The TODO task list{/t}</a>
 <li> <a href="#Wikis" style='text-decoration: none;'>Wikis</a>
 <li> <a href="#The_source_code" style='text-decoration: none;'>{t}The source code{/t}</a>
-<li> <a href="#The_CVS_server" style='text-decoration: none;'>{t}The CVS server{/t}</a>
+<li> <a href="#source_repository" style='text-decoration: none;'>{t}The Git master server{/t}</a>
 <li> <a href="#The_PostgreSQL_data_base" style='text-decoration: none;'>{t}The PostgreSQL data base{/t}</a>
 <li> <a href="#Email_lists" style='text-decoration: none;'>{t}Email lists{/t}</a>
 <li> <a href="#How_to_install_a_development_environment" style='text-decoration: none;'>{t}How to install a development environment?{/t}</a>
@@ -127,10 +127,10 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr> <td><a href="http://www.postgresql.org/">PostgreSQL</a> >= 7.4.x <td>
 	<tr> <td>
 	{t escape='no'
-	  1='<a href="http://savannah.nongnu.org/cgi-bin/viewcvs/gnuherds-app/gnuherds-app/">'
+	  1='<a href="http://git.savannah.nongnu.org/gitweb/?p=gnuherds-app.git">'
 	  2='<a href="http://savannah.gnu.org/">'
 	  3='</a>'
-	}%1CVS%3 server at %2Savannah%3{/t}
+	}%1Git%3 server at %2Savannah%3{/t}
 	<td>
 	<!-- XXX: <tr> <td><a href="http://www.openbsd.org/">OpenBSD 3.x</a> <td>The gnuherds.org host is a 633MHZ DEC Alpha 64-bit CPU running OpenBSD. -->
 	</table>
@@ -237,15 +237,15 @@ Suite 225, San Francisco, CA 94107, USA
 
 <h4>8. {t}How the development team and production is integrated?{/t} <a name="How_the_development_team_and_production_is_integrated"></a> </h4>
 
-	<p>{t}CVS is used as repository. The HTTP server gets a tagged release via 'update' from the CVS server.{/t}</p>
+	<p>{t}Git is used as repository. The HTTP server gets a tagged release via 'update' from the Git master server.{/t}</p>
 
 	<img src="/doc/How_the_development_team_and_production_is_integrated.png" align="middle" alt="" border="0" hspace="0" vspace="0">
 
 	<p>
 	{t escape='no'
-	  1='"<i>cvs diff -c3p</i>"'
-	  2='"<i>diff -up OLD NEW</i>"'
-	}The suggested formats to share source code among the developers are %1 or %2.{/t}
+	  1='"<i>git format-patch</i>"'
+	  2='"<i>git send-email</i>"'
+	}To share source code among the developers, publish your repository and let others know where to fetch from, or use %1 or %2.{/t}
 	</p>
 
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
@@ -287,7 +287,7 @@ Suite 225, San Francisco, CA 94107, USA
 	{t escape='no'
 	  1='<a href="http://download.savannah.gnu.org/releases/gnuherds-app/">'
 	  2='</a>'
-	}If you do not like play with CVS, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2.{/t}
+	}If you do not like play with Git, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2.{/t}
 	{t escape='no'
 	  1='<a href="gnuherds-online.tar.gz">'
 	  2='</a>'
@@ -307,7 +307,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>12. {t}The CVS server{/t} <a name="The_CVS_server"></a> </h4>
+<h4>12. {t}The Git master server{/t} <a name="source_repository"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -372,7 +372,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr> <td><b>Antenore</b> <td>Localization architecture Adviser, Auditor, initial Italian Translator, etc.
 	<tr> <td><b>Bill</b>     <td>System administrator, architecture Adviser, etc.
 	<tr> <td><b>Charles</b>  <td>Auditor, Quality Assurance, etc.
-	<tr> <td><b>Davi</b>     <td>Web developer, CVS, Spanish Translator, etc.
+	<tr> <td><b>Davi</b>     <td>Web developer, Spanish Translator, etc.
 	<tr> <td><b>David</b>    <td>Web developer, main Italian Translator.
 	<tr> <td><b>Duarte</b>   <td>Portuguese Translator.
 	<tr> <td><b>Fatima</b>   <td>Quality Assurance and Functional Auditor.
