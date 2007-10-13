@@ -33,7 +33,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <p>
 {t escape='no'
-  1='<a href="faq#Why_another_Job_Site?">'
+  1='<a href="faq#JobSite">'
   2='</a>'
 }The aims of the Association shall be to %1assist and encourage%2 people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.{/t}
 </p>

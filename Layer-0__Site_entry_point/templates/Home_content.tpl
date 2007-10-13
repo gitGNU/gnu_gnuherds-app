@@ -25,7 +25,7 @@ Suite 225, San Francisco, CA 94107, USA
   3='</a>'
 }GNU Herds is a not-for-profit %1true-democratic%3 association which %2aims%3 to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.{/t}</p>
 <p>{t escape='no'
-  1='<a href="faq#Why_another_Job_Site?">'
+  1='<a href="faq#JobSite">'
   2='</a>'
   3='<a href="business_models">'
 }The first step has been to develop the %1Job Site%2 modules and gather together several %3business models%2. Some of the JobSite's features are:{/t}</p>

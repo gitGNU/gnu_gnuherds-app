@@ -22,12 +22,12 @@ Suite 225, San Francisco, CA 94107, USA
 
 <p>{t}Index{/t}</p>
 <ol>
-<li><a href="#Why_another_Job_Site?" style='text-decoration: none;'>{t}Why another Job Site?{/t}</a>
-<li><a href="#How_to_subscribe_to_a_job_offer?" style='text-decoration: none;'>{t}How to subscribe to a job offer?{/t}</a>
-<li><a href="#Who_can_subscribe_to_a_job_offer?" style='text-decoration: none;'>{t}Who can subscribe to a job offer?{/t}</a>
-<li><a href="#Who_can_post_a_job_offer?" style='text-decoration: none;'>{t}Who can post a job offer?{/t}</a>
+<li><a href="#JobSite" style='text-decoration: none;'>{t}Why another Job Site?{/t}</a>
+<li><a href="#How_to_subscribe" style='text-decoration: none;'>{t}How to subscribe to a job offer?{/t}</a>
+<li><a href="#Who_can_subscribe" style='text-decoration: none;'>{t}Who can subscribe to a job offer?{/t}</a>
+<li><a href="#Who_can_post" style='text-decoration: none;'>{t}Who can post a job offer?{/t}</a>
 <li><a href="#FS_criteria" style='text-decoration: none;'>{t}Which criteria are applied to classify a program, language, protocol, specification, software distribution, etc. as Free or Non-Free Software?{/t}</a> <br><br>
-<li><a href="#How_is_the_Job_Site_module_related_to_the_GNU_Herds_association?" style='text-decoration: none;'>{t}How is the Job Site module related to the GNU Herds' association?{/t}</a> <br><br>
+<li><a href="#JobSite_module_related_to_the_GNU_Herds_association" style='text-decoration: none;'>{t}How is the Job Site module related to the GNU Herds' association?{/t}</a> <br><br>
 <li><a href="#membership" style='text-decoration: none;'>{t}Who can join or register?{/t}</a>
 <li><a href="#person_vs_company" style='text-decoration: none;'>{t}Can I not be a member of the association because I am a member of a company?{/t}</a>
 <li><a href="#company_votes" style='text-decoration: none;'>{t}How many votes is able to get a company?{/t}</a>
@@ -41,7 +41,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>1. <a name="Why_another_Job_Site?"></a>{t}Why another Job Site?{/t}</h4>
+<h4>1. <a name="JobSite"></a>{t}Why another Job Site?{/t}</h4>
 
 	<p>
 	{t}Because no one comply the below proposed conditions:{/t}
@@ -81,7 +81,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>2. <a name="How_to_subscribe_to_a_job_offer?"></a>{t}How to subscribe to a job offer?{/t}</h4>
+<h4>2. <a name="How_to_subscribe"></a>{t}How to subscribe to a job offer?{/t}</h4>
 
 	<ul>
 		<li> {t escape='no'
@@ -111,7 +111,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>3. <a name="Who_can_subscribe_to_a_job_offer?"></a>{t}Who can subscribe to a job offer?{/t}</h4>
+<h4>3. <a name="Who_can_subscribe"></a>{t}Who can subscribe to a job offer?{/t}</h4>
 
 	<p>{t}Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly.{/t}</p>
 
@@ -120,7 +120,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>4. <a name="Who_can_post_a_job_offer?"></a>{t}Who can post a job offer?{/t}</h4>
+<h4>4. <a name="Who_can_post"></a>{t}Who can post a job offer?{/t}</h4>
 
 	<p>{t}Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:{/t}</p>
 
@@ -378,11 +378,11 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>6. <a name="How_is_the_Job_Site_module_related_to_the_GNU_Herds_association?"></a>{t}How is the Job Site module related to the GNU Herds' association?{/t}</h4>
+<h4>6. <a name="JobSite_module_related_to_the_GNU_Herds_association"></a>{t}How is the Job Site module related to the GNU Herds' association?{/t}</h4>
 
 	<p>
 	{t escape='no'
-	  1='<a href="#Why_another_Job_Site?">'
+	  1='<a href="#JobSite">'
 	  2='</a>'
 	}The Job Site module is %1controlled%2 by the association. Any new module will be controlled by the association too.{/t}
 	</p>
@@ -409,10 +409,7 @@ Suite 225, San Francisco, CA 94107, USA
 <h4>8. <a name="person_vs_company"></a>{t}Can I not be a member of the association because I am a member of a company?{/t}</h4>
 
 	<p>
-	{t escape='no'
-	  1='<a href="#Why_another_Job_Site?">'
-	  2='</a>'
-	}You can.  You can be in any case an "associate member" or a "voting member".{/t}
+	{t}You can. You can be in any case an "associate member" or a "voting member".{/t}
 	</p>
 
 	<p>
@@ -445,10 +442,7 @@ Suite 225, San Francisco, CA 94107, USA
 <h4>10. <a name="company_voices"></a>{t}A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?{/t}</h4>
 
 	<p>
-	{t escape='no'
-	  1='<a href="#Why_another_Job_Site?">'
-	  2='</a>'
-	}The company gets 100 voting-voices only if each one of its workers has individually contributed to the free software community, and each one of its workers take the personal decision to join and vote at the association.{/t}
+	{t}The company gets 100 voting-voices only if each one of its workers has individually contributed to the free software community, and each one of its workers take the personal decision to join and vote at the association.{/t}
 	</p>
 
 	<p>
