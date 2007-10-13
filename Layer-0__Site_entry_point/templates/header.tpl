@@ -69,7 +69,7 @@ Suite 225, San Francisco, CA 94107, USA
 <br>
 <span class="heading">______________________________</span>
 <br>
-<span class="heading">{t}Project state{/t}: Beta</span>
+<span class="heading">{t}Project state{/t}: <strong>Beta</strong></span>
 </td>
 
 </tr>
