@@ -22,23 +22,22 @@ Suite 225, San Francisco, CA 94107, USA
 
 <p>{t}Index{/t}</p>
 <ol>
-<li> <a href="#Introduction" style='text-decoration: none;'>{t}Introduction{/t}</a>
-<li> <a href="#Roadmap" style='text-decoration: none;'>{t}Roadmap{/t}</a>
-<li> <a href="#Technologies" style='text-decoration: none;'>{t}Technologies{/t}</a>
-<li> <a href="#Web_application_Architecture" style='text-decoration: none;'>{t}Web application Architecture{/t}</a>
-<li> <a href="#Web_application_Design" style='text-decoration: none;'>{t}Web application Design{/t}</a>
-<li> <a href="#Coding_Standards" style='text-decoration: none;'>{t}Coding Standards{/t}</a>
-<li> <a href="#Internationalization_and_Localization" style='text-decoration: none;'>{t}Internationalization and Localization{/t}</a>
-<li> <a href="#How_the_development_team_and_production_is_integrated" style='text-decoration: none;'>{t}How the development team and production is integrated?{/t}</a>
-<li> <a href="#The_TODO_task_list" style='text-decoration: none;'>{t}The TODO task list{/t}</a>
-<li> <a href="#Wikis" style='text-decoration: none;'>Wikis</a>
-<li> <a href="#The_source_code" style='text-decoration: none;'>{t}The source code{/t}</a>
+<li> <a href="#introduction" style='text-decoration: none;'>{t}Introduction{/t}</a>
+<li> <a href="#roadmap" style='text-decoration: none;'>{t}Roadmap{/t}</a>
+<li> <a href="#technology" style='text-decoration: none;'>{t}Technologies{/t}</a>
+<li> <a href="#architecture" style='text-decoration: none;'>{t}Web application Architecture{/t}</a>
+<li> <a href="#design" style='text-decoration: none;'>{t}Web application Design{/t}</a>
+<li> <a href="#coding_standards" style='text-decoration: none;'>{t}Coding Standards{/t}</a>
+<li> <a href="#i18n" style='text-decoration: none;'>{t}Internationalization and Localization{/t}</a>
+<li> <a href="#env_integration" style='text-decoration: none;'>{t}How the development team and production is integrated?{/t}</a>
+<li> <a href="#todo" style='text-decoration: none;'>{t}Task list{/t}</a>
+<li> <a href="#wiki" style='text-decoration: none;'>Wikis</a>
+<li> <a href="#source_code" style='text-decoration: none;'>{t}The source code{/t}</a>
 <li> <a href="#source_repository" style='text-decoration: none;'>{t}The Git master server{/t}</a>
-<li> <a href="#The_PostgreSQL_data_base" style='text-decoration: none;'>{t}The PostgreSQL data base{/t}</a>
-<li> <a href="#Email_lists" style='text-decoration: none;'>{t}Email lists{/t}</a>
-<li> <a href="#How_to_install_a_development_environment" style='text-decoration: none;'>{t}How to install a development environment?{/t}</a>
-<!-- XXX <li> <a href="#How_to_kill_spam_by_hand_at_our_email_lists" style='text-decoration: none;'>{t}How to kill spam by hand at our email lists{/t}</a> -->
-<li> <a href="#Current_work_team" style='text-decoration: none;'>{t}Current work team{/t}</a>
+<li> <a href="#data_base" style='text-decoration: none;'>{t}The PostgreSQL data base{/t}</a>
+<li> <a href="#mailing_lists" style='text-decoration: none;'>{t}Mailing lists{/t}</a>
+<li> <a href="#setup" style='text-decoration: none;'>{t}How to install a development environment?{/t}</a>
+<li> <a href="#team" style='text-decoration: none;'>{t}Current work team{/t}</a>
 </ol>
 
 <p>&nbsp;</p>
@@ -48,7 +47,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>1. {t}Introduction{/t} <a name="Introduction"></a> </h4>
+<h4>1. {t}Introduction{/t} <a name="introduction"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -59,8 +58,8 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="#The_source_code">'
-	  2='<a href="#How_to_install_a_development_environment">'
+	  1='<a href="#source_code">'
+	  2='<a href="#setup">'
 	  3='</a>'
 	}To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this Hackers' Guide. If you need support ask for it at{/t} {mailto address='gnuherds-app-dev@nongnu.org'}
 	</p>
@@ -77,7 +76,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>2. {t}Roadmap{/t} <a name="Roadmap"></a> </h4>
+<h4>2. {t}Roadmap{/t} <a name="roadmap"></a> </h4>
 	<ul>
 	<li><p><span class="modification">{t}DONE!{/t}</span>: {t}Add the member support.{/t}</p></li>
 	<li><p><span class="modification">{t}DONE!{/t}</span>: {t}Add the FS Job Offers support.{/t}</p></li>
@@ -110,7 +109,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>3. {t}Technologies{/t} <a name="Technologies"></a> </h4>
+<h4>3. {t}Technologies{/t} <a name="technology"></a> </h4>
 
 	<p>
 	{t}The project depends on the below technologies. Though it is and must be open to any proposal.{/t}
@@ -140,7 +139,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>4. {t}Web application Architecture{/t}<a name="Web_application_Architecture"></a> </h4>
+<h4>4. {t}Web application Architecture{/t}<a name="architecture"></a> </h4>
 
 	<p>
 	{t}As a Free Software project we look for a modular and extensible design. We hope it could be easy to change the technology of a specific layer if it is needed.{/t}
@@ -167,7 +166,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>5. {t}Web application Design{/t}<a name="Web_application_Design"></a> </h4>
+<h4>5. {t}Web application Design{/t}<a name="design"></a> </h4>
 
 	<table border="0">
 	<tbody>
@@ -205,7 +204,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>6. {t}Coding Standards{/t} <a name="Coding_Standards"></a> </h4>
+<h4>6. {t}Coding Standards{/t} <a name="coding_standards"></a> </h4>
 
 	<p>
 	<STRIKE>
@@ -221,7 +220,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>7. {t}Internationalization and Localization{/t} <a name="Internationalization_and_Localization"></a> </h4>
+<h4>7. {t}Internationalization and Localization{/t} <a name="i18n"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -235,7 +234,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>8. {t}How the development team and production is integrated?{/t} <a name="How_the_development_team_and_production_is_integrated"></a> </h4>
+<h4>8. {t}How the development team and production is integrated?{/t} <a name="env_integration"></a> </h4>
 
 	<p>{t}Git is used as repository. The HTTP server gets a tagged release via 'update' from the Git master server.{/t}</p>
 
@@ -253,7 +252,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>9. {t}The TODO task list{/t} <a name="The_TODO_task_list"></a> </h4>
+<h4>9. {t}Task list{/t} <a name="todo"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -267,7 +266,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>10. Wikis <a name="Wikis"></a> </h4>
+<h4>10. Wikis <a name="wiki"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -281,7 +280,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>11. {t}The source code{/t} <a name="The_source_code"></a> </h4>
+<h4>11. {t}The source code{/t} <a name="source_code"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -295,7 +294,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	</p><p>
 	{t escape='no'
-	  1='<a href="#Technologies">'
+	  1='<a href="#technology">'
 	  2='</a>'
 	}You could set up all the required %1Technologies%2 on your host, to be used as your development environment.{/t}
 	</p><p>
@@ -321,7 +320,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>13. {t}The PostgreSQL data base{/t} <a name="The_PostgreSQL_data_base"></a> </h4>
+<h4>13. {t}The PostgreSQL data base{/t} <a name="data_base"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -335,7 +334,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>14. {t}Email lists{/t} <a name="Email_lists"></a> </h4>
+<h4>14. {t}Mailing lists{/t} <a name="mailing_lists"></a> </h4>
 
 <ul>
 	<li><a href="https://lists.gnuherds.org/mailman/listinfo/association">association</a> {t}is the project main list.{/t}</li>
@@ -348,7 +347,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>15. {t}How to install a development environment?{/t} <a name="How_to_install_a_development_environment"></a> </h4>
+<h4>15. {t}How to install a development environment?{/t} <a name="setup"></a> </h4>
 
 	<p>
 	{t escape='no'
@@ -362,7 +361,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>16. {t}Current work team{/t} <a name="Current_work_team"></a> </h4>
+<h4>16. {t}Current work team{/t} <a name="team"></a> </h4>
 
 	<p>
 	{t}The list could be outdated:{/t}<br>
