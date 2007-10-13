@@ -26,6 +26,7 @@ class SkillsForm
 {
 	protected $manager;
 	protected $checks;
+	protected $data;
 
 
 	function __construct()
@@ -307,11 +308,15 @@ class SkillsForm
 					{
 						if ( count($value) >= 2 ) // suggestions which have to be chosen by the webapp user
 						{
+							$checkList_aux[$j] = ''; // CheckList is reset due to we do not know yet what type of skill it is
+
 							$skillList_aux[$j] = $key;
 							$shadowSkillList_aux[$j] = '';
 							$skillsToInsert_aux[$j] = '';
 							$skillKnowledgeLevelList_aux[$j] = $_POST['SkillKnowledgeLevelList'][$i];
 							$skillExperienceLevelList_aux[$j] = $_POST['SkillExperienceLevelList'][$i];
+
+							// There are not '$checks' for extracted skills
 
 							foreach ( $value as $k => $v )
 								$suggestions_aux[$j][$k] = $v;
@@ -321,11 +326,17 @@ class SkillsForm
 							foreach ($value as $k)
 								;
 
+							$checkList_aux[$j] = ''; // CheckList is reset due to we do not know yet what type of skill it is
+
 							$skillList_aux[$j] = $k;
 							$shadowSkillList_aux[$j] = $k;
 							$skillsToInsert_aux[$j] = '';
 							$skillKnowledgeLevelList_aux[$j] = $_POST['SkillKnowledgeLevelList'][$i];
 							$skillExperienceLevelList_aux[$j] = $_POST['SkillExperienceLevelList'][$i];
+
+							// There are not '$checks' for extracted skills
+
+							// There are not '$suggestions' if we only have one option to choose
 						}
 
 						$j++;
@@ -333,14 +344,13 @@ class SkillsForm
 				}
 				else // It is not an extracted skill. So leave as is.
 				{
+					$checkList_aux[$j] = $this->data['CheckList'][$i];
+
 					$skillList_aux[$j] = $_POST['SkillList'][$i];
 					$shadowSkillList_aux[$j] = $_POST['ShadowSkillList'][$i];
 					$skillsToInsert_aux[$j] = $_POST['SkillsToInsert'][$i];
 					$skillKnowledgeLevelList_aux[$j] = $_POST['SkillKnowledgeLevelList'][$i];
 					$skillExperienceLevelList_aux[$j] = $_POST['SkillExperienceLevelList'][$i];
-
-					if ( isset($suggestions[$i]) )
-						$suggestions_aux[$j] = $suggestions[$i];
 
 					if ( isset($this->checks['SkillList'][$i]) )
 						$checks['SkillList'][$j] = $this->checks['SkillList'][$i];
@@ -349,9 +359,14 @@ class SkillsForm
 					if ( isset($this->checks['SkillExperienceLevelList'][$i]) )
 						$checks['SkillExperienceLevelList'][$j] = $this->checks['SkillExperienceLevelList'][$i];
 
+					if ( isset($suggestions[$i]) )
+						$suggestions_aux[$j] = $suggestions[$i];
+
 					$j++;
 				}
 			}
+
+			$this->data['CheckList'] = $checkList_aux;
 
 			$_POST['SkillList'] = $skillList_aux;
 			$_POST['ShadowSkillList'] = $shadowSkillList_aux;
@@ -359,11 +374,11 @@ class SkillsForm
 			$_POST['SkillKnowledgeLevelList'] = $skillKnowledgeLevelList_aux;
 			$_POST['SkillExperienceLevelList'] = $skillExperienceLevelList_aux;
 
-			$suggestions = $suggestions_aux;
-
 			$this->checks['SkillList'] = $checks['SkillList'];
 			$this->checks['SkillKnowledgeLevelList'] = $checks['SkillKnowledgeLevelList'];
 			$this->checks['SkillExperienceLevelList'] = $checks['SkillExperienceLevelList'];
+
+			$suggestions = $suggestions_aux;
 		}
 
 		return $suggestions;

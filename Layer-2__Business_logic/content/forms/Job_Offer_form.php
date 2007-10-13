@@ -27,7 +27,6 @@ class JobOfferForm extends SkillsForm
 	private $checkresults;
 	private $section2view;
 	private $section2control;
-	private $data;
 
 
 	public function processForm()
@@ -262,10 +261,10 @@ class JobOfferForm extends SkillsForm
 		// Set the check marks
 		$this->checkJobOfferForm();
 
-		if ($this->checks['result'] == "pass" )
+		if ( $this->checks['result'] == "pass" )
 		{
 			$this->can_save = $this->manageSuggestions(); // Get and process new suggestions
-			if ( $this->can_save)
+			if ( $this->can_save )
 			{
 				// Update or insert the values
 				if ( $_SESSION['JobOfferId'] != '' ) // update
@@ -341,24 +340,37 @@ class JobOfferForm extends SkillsForm
 					}
 					else
 					{
+						$this->data['CheckList'][$j] = $this->data['CheckList'][$i];
+
 						$_POST['SkillList'][$j] = $_POST['SkillList'][$i];
 						$_POST['ShadowSkillList'][$j] = $_POST['ShadowSkillList'][$i];
 						$_POST['SkillsToInsert'][$j] = $_POST['SkillsToInsert'][$i];
 						$_POST['SuggestionSet'.$j] = $_POST['SuggestionSet'.$i];
 						$_POST['SkillKnowledgeLevelList'][$j] = $_POST['SkillKnowledgeLevelList'][$i];
 						$_POST['SkillExperienceLevelList'][$j] = $_POST['SkillExperienceLevelList'][$i];
+
+						// '$checks' are generated later
+
+						// '$suggestions' are generated later
+
 						$j++;
 					}
 				}
 
 				for( $i=$j; $i < $count; $i++)
 				{
+					unset( $this->data['CheckList'][$i] );
+
 					unset( $_POST['SkillList'][$i] );
 					unset( $_POST['ShadowSkillList'][$i] );
 					unset( $_POST['SkillsToInsert'][$i] );
 					unset( $_POST['SuggestionSet'.$i] );
 					unset( $_POST['SkillKnowledgeLevelList'][$i] );
 					unset( $_POST['SkillExperienceLevelList'][$i] );
+
+					// '$checks' are generated later
+
+					// '$suggestions' are generated later
 				}
 			break;
 
