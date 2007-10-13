@@ -26,7 +26,13 @@ Suite 225, San Francisco, CA 94107, USA
 <li><a href="#How_to_subscribe_to_a_job_offer?" style='text-decoration: none;'>{t}How to subscribe to a job offer?{/t}</a>
 <li><a href="#Who_can_subscribe_to_a_job_offer?" style='text-decoration: none;'>{t}Who can subscribe to a job offer?{/t}</a>
 <li><a href="#Who_can_post_a_job_offer?" style='text-decoration: none;'>{t}Who can post a job offer?{/t}</a>
-<li><a href="#How_is_the_Job_Site_module_related_to_the_GNU_Herds_association?" style='text-decoration: none;'>{t}How is the Job Site module related to the GNU Herds association?{/t}</a>
+<li><a href="#FS_criteria" style='text-decoration: none;'>{t}Which criteria are applied to classify a program, language, protocol, specification, software distribution, etc. as Free or Non-Free Software?{/t}</a> <br><br>
+<li><a href="#How_is_the_Job_Site_module_related_to_the_GNU_Herds_association?" style='text-decoration: none;'>{t}How is the Job Site module related to the GNU Herds' association?{/t}</a> <br><br>
+<li><a href="#membership" style='text-decoration: none;'>{t}Who can join or register?{/t}</a>
+<li><a href="#person_vs_company" style='text-decoration: none;'>{t}Can I not be a member of the association because I am a member of a company?{/t}</a>
+<li><a href="#company_votes" style='text-decoration: none;'>{t}How many votes is able to get a company?{/t}</a>
+<li><a href="#company_voices" style='text-decoration: none;'>{t}A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?{/t}</a>
+<li><a href="#yearly_basis" style='text-decoration: none;'>{t}Why voting membership is on a yearly basis?{/t}</a>
 <li><a href="#e-Voting" style='text-decoration: none;'>{t}e-Voting{/t}</a>
 </ol>
 
@@ -35,7 +41,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>1. {t}Why another Job Site?{/t} <a name="Why_another_Job_Site?"></a> </h4>
+<h4>1. <a name="Why_another_Job_Site?"></a>{t}Why another Job Site?{/t}</h4>
 
 	<p>
 	{t}Because no one comply the below proposed conditions:{/t}
@@ -65,7 +71,9 @@ Suite 225, San Francisco, CA 94107, USA
 	{t escape='no'
 	  1='<a href="charter#Aims">'
 	  2='</a>'
-	}All this taking into account that: "The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."{/t}
+	  3='<i>'
+	  4='</i>'
+	}All this taking into account that: "%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4"{/t}
 	</p>
 
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
@@ -73,7 +81,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>2. {t}How to subscribe to a job offer?{/t}<a name="How_to_subscribe_to_a_job_offer?"></a> </h4>
+<h4>2. <a name="How_to_subscribe_to_a_job_offer?"></a>{t}How to subscribe to a job offer?{/t}</h4>
 
 	<ul>
 		<li> {t escape='no'
@@ -87,6 +95,7 @@ Suite 225, San Francisco, CA 94107, USA
 		  1='<a href="resume">'
 		  2='</a>'
 		}Fill the %1Qualifications%2 form.{/t}
+		{t}It is recommended provide the more information possible.{/t}
 
 		<li> {t}Log in.{/t}
 
@@ -101,7 +110,8 @@ Suite 225, San Francisco, CA 94107, USA
 
 <p>&nbsp;</p>
 
-<h4>3. {t}Who can subscribe to a job offer?{/t} <a name="Who_can_subscribe_to_a_job_offer?"></a> </h4>
+
+<h4>3. <a name="Who_can_subscribe_to_a_job_offer?"></a>{t}Who can subscribe to a job offer?{/t}</h4>
 
 	<p>{t}Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly.{/t}</p>
 
@@ -110,7 +120,7 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>4. {t}Who can post a job offer?{/t} <a name="Who_can_post_a_job_offer?"></a> </h4>
+<h4>4. <a name="Who_can_post_a_job_offer?"></a>{t}Who can post a job offer?{/t}</h4>
 
 	<p>{t}Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:{/t}</p>
 
@@ -150,12 +160,225 @@ Suite 225, San Francisco, CA 94107, USA
 		1='<a href="mailto:joboffer@gnuherds.org" >joboffer@gnuherds.org</a>'
 	   }Report to %1 about any offer that seems improper.{/t}</p>
 
+	<p>{t}It is recommended provide the more information possible.{/t}</p>
+
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
 
 <p>&nbsp;</p>
 
 
-<h4>5. {t}How is the Job Site module related to the GNU Herds association?{/t}<a name="How_is_the_Job_Site_module_related_to_the_GNU_Herds_association?"></a> </h4>
+<h4>5. <a name="FS_criteria"></a>{t}Which criteria are applied to classify a program, language, protocol, specification, software distribution, etc. as Free or Non-Free Software?{/t}</h4>
+
+	<ul>
+
+	<li>
+	{t escape='no'
+	  1='<a href="http://www.gnu.org/philosophy/free-sw.html">'
+	  2='</a>'
+	}For a program, read the %1Free Software%2 definition to know the criteria.{/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-09/msg00052.html">'
+	  2='<a href="http://www.gnu.org/licenses/license-list.html">'
+	  3='</a>'
+	}For development languages, protocols, specifications, etc. the meaningful question is whether it is %1supported%3 by software licensed under any of the %2Free Software Licenses%3: BSD, GPL, etc.  Can you use it with Free Software exclusively?{/t}
+	</li>
+
+	<li>
+	{t}For software distributions, they must not recommend, promote or grant legitimacy to Non-Free Software.{/t}
+	</li>
+
+	</ul>
+
+	<p>&nbsp;</p>
+
+ 	<p>{t}Currently, the types applyed to classify skills are:{/t}</p>
+	<ul>
+	<li><i>{t}Free Software{/t}</i></li>
+	<li><i>{t}Almost-Free Software{/t}</i>, {t}only for software distributions{/t}.</li>
+	<li><i>{t}Non-Free Software{/t}</i></li>
+	</ul>
+
+ 	<p>{t}For example, applying such criteria to Java:{/t}</p>
+
+	<ul>
+ 	<li>
+	{t escape='no'
+	  1='<strong>'
+	  2='</strong>'
+	  3='<i>'
+	  4='</i>'
+	}The %1Java%2 technology-skill is tagged as %3Free Software%4 due to there are free software Java compilers.{/t}
+	</li>
+	</ul>
+
+	<p>
+	{t escape='no'
+	  1='<i>'
+	  2='</i>'
+	}However the below Sun Java technologies are tagged as %1Non-Free Software%2 because of the license you have to agree to download them is not a Free Software license.  None of the Java Sun technologies are GPL'd at the time.{/t}
+	</p>
+
+	<ul>
+	<li>Java 2 Platform, Standard Edition (<strong>J2SE</strong>)</li>
+	<li>Java 2 Platform, Enterprise Edition (<strong>J2EE</strong>)</li>
+	<li>Java 2 Platform, Micro Edition (<strong>J2ME</strong>)</li>
+	<li>Java Platform, Standard Edition (<strong>Java SE</strong>)</li>
+	<li>Java Platform, Enterprise Edition (<strong>Java EE</strong>)</li>
+	<li>Java Platform, Micro Edition (<strong>Java ME</strong>)</li>
+	</ul>
+
+	<p>&nbsp;</p>
+
+ 	<p>{t}Applying it to .NET:{/t}</p>
+
+	<ul>
+	<li>
+	{t escape='no'
+	  1='<strong>'
+	  2='</strong>'
+	  3='<i>'
+	  4='</i>'
+	}%1Microsoft .NET%2 is tagged as %3Non-Free Software%4.{/t}
+	</li>
+	<li>
+	{t escape='no'
+	  1='<strong>'
+	  2='</strong>'
+	  3='<i>'
+	  4='</i>'
+	}%1Mono .NET%2 is a set of tools under GPL, LGPL and MIT, or dual licenses. It is tagged as %3Free Software%4.{/t}
+	</li>
+	<li>
+	{t escape='no'
+	  1='<strong>'
+	  2='</strong>'
+	  3='<i>'
+	  4='</i>'
+	}%1.NET%2 is tagged as %3Non-Free Software%4 because of the Mono tools are not 100% complete. Mono does not cover all .NET{/t}
+	</li>
+	<li>
+	{t escape='no'
+	  1='<strong>'
+	  2='</strong>'
+	  3='<i>'
+	  4='</i>'
+	}%1C#%2 is tagged as %3Free Software%4 due to there are free software C# compilers.{/t}
+	</li>
+	</ul>
+
+	<p>&nbsp;</p>
+
+ 	<p>{t}Applying it to some software distributions:{/t}</p>
+
+	<ul>
+
+	<li>
+	{t escape='no'
+	  1='<strong>Debian GNU/Linux</strong>'
+	  2='<acronym title="Binary Large OBject">BLOB</acronym>s'
+	  3='<i>'
+	  4='</i>'
+	}%1 is %3Almost-Free Software%4 because it contains Non-Free Software %2 in its kernel.{/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<strong>Debian GNU/Hurd</strong>'
+	  2='<i>'
+	  3='</i>'
+	}%1 is %2Free Software%3 because it does not ship anything that is Non-Free Software.{/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<strong>Debian GNU/NetBSD</strong>'
+	}%1 is not classified yet.{/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<strong>Debian GNU/kFreeBSD</strong>'
+	}%1 is not classified yet.{/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<strong>Debian</strong>'
+	  2='<i>'
+	  3='</i>'
+	  4='<a href="http://www.debian.org/ports/">'
+	  5='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-10/msg00048.html">'
+	  6='</a>'
+	}%1 is %2Almost-Free Software%3 because it is a general term which refer to Debian GNU/Linux and all others Debian %4ports%6. Besides, the Debian organization %5promotes%6 some Non-Free Software packages. {/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<strong>Ubuntu</strong>'
+	  2='<i>'
+	  3='</i>'
+	}%1 is %2Almost-Free Software%3 because it contains Non-Free Software.{/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<strong>gNewSense</strong>'
+	  2='<acronym title="Binary Large OBject">BLOB</acronym>'
+	  3='<i>'
+	  4='</i>'
+	  5='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-10/msg00049.html">'
+	  6='</a>'
+	}%1 is %3Free Software%4 because it does not ship anything that is Non-Free Software neither work to provide easy access to Non-Free Software. A Non-Free Software %2 not removed from gNewSense is a bug. The gNewSense's %5policy%6 is to delete any non-free software found in the Linux kernel or elsewhere in the GNU/Linux system.{/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<strong>OpenBSD</strong>'
+	  2='<i>'
+	  3='</i>'
+	  4='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-10/msg00033.html">'
+	  5='</a>'
+	}%1 is %2Almost-Free Software%3 because although it does not ship anything that is Non-Free Software it provides for easy installation of Non-Free Software through the %4ports system%5. Not many packages though: Java and a few others.{/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<strong>FreeBSD</strong>'
+	  2='<strong>NetBSD</strong>'
+	  3='<acronym title="Binary Large OBject">BLOB</acronym>s'
+	  4='<i>'
+	  5='</i>'
+	  6='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-10/msg00033.html">'
+	  7='</a>'
+	}%1 and %2 are %4Almost-Free Software%5 because provide for easy installation of some Non-Free Software products through the %6ports system%7. Besides both contain Non-Free Software %3 in its kernel too.{/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<strong>'
+	  2='</strong>'
+	  3='<i>'
+	  4='</i>'
+	}%1Microsoft Windows Vista%2 is tagged as %3Non-Free Software%4.{/t}
+	</li>
+
+	</ul>
+
+	<p>
+	{t escape='no'
+	  1='<acronym title="Binary Large OBject">BLOB</acronym>s'
+	}Note that not all %1 are Non-Free Software, because %1 can be data (not compiled source code) licensed under a Free Software license. However, we need to verify that it really is data, because the non-free object code is typically dressed up as data.{/t}
+	</p>
+
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+
+<p>&nbsp;</p>
+
+
+<h4>6. <a name="How_is_the_Job_Site_module_related_to_the_GNU_Herds_association?"></a>{t}How is the Job Site module related to the GNU Herds' association?{/t}</h4>
 
 	<p>
 	{t escape='no'
@@ -169,7 +392,93 @@ Suite 225, San Francisco, CA 94107, USA
 <p>&nbsp;</p>
 
 
-<h4>6. {t}e-Voting{/t}<a name="e-Voting"></a> </h4>
+<h4>7. <a name="membership"></a>{t}Who can join or register?{/t}</h4>
+
+	<p>
+	{t escape='no'
+	  1='<a href="charter#Membership">'
+	  2='</a>'
+	}Any entity type can join the association or just register into the web application and use its services. Showing a Free Software contribution is not a requirement to register or join. It is just a requirement to be able to %1vote%2 at the association.{/t}
+	</p>
+
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+
+<p>&nbsp;</p>
+
+
+<h4>8. <a name="person_vs_company"></a>{t}Can I not be a member of the association because I am a member of a company?{/t}</h4>
+
+	<p>
+	{t escape='no'
+	  1='<a href="#Why_another_Job_Site?">'
+	  2='</a>'
+	}You can.  You can be in any case an "associate member" or a "voting member".{/t}
+	</p>
+
+	<p>
+	{t escape='no'
+	  1='<a href="charter#Membership">'
+	  2='</a>'
+	}The association's %1Charter%2 reads:{/t} "<i>{t}There shall be two kinds of members, voting members, to be known simply as a member, and non-voting members, to be known as an associate member.{/t}</i>"
+	</p>
+
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+
+<p>&nbsp;</p>
+
+
+<h4>9. <a name="company_votes"></a>{t}How many votes is able to get a company?{/t}</h4>
+
+	<p>
+	{t escape='no'
+	  1='</p><ul>'
+	  2='<li>'
+	  3='</li>'
+	  4='</ul>'
+	}A company could be able to get:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4{/t}
+
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+
+<p>&nbsp;</p>
+
+
+<h4>10. <a name="company_voices"></a>{t}A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?{/t}</h4>
+
+	<p>
+	{t escape='no'
+	  1='<a href="#Why_another_Job_Site?">'
+	  2='</a>'
+	}The company gets 100 voting-voices only if each one of its workers has individually contributed to the free software community, and each one of its workers take the personal decision to join and vote at the association.{/t}
+	</p>
+
+	<p>
+	{t escape='no'
+	  1='<a href="charter#Membership">'
+	  2='</a>'
+	}The association's %1Charter%2 reads:{/t} "<i>{t}To qualify for voting membership one must show a contribution to the Free Software movement.{/t}</i>"
+	</p>
+
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+
+<p>&nbsp;</p>
+
+
+<h4>11. <a name="yearly_basis"></a>{t}Why voting membership is on a yearly basis?{/t}</h4>
+
+	<p>
+	{t escape='no'
+	  1='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-09/msg00051.html">'
+	  2='</a>'
+	}Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low.{/t}
+	{t}The renew process is automated to reduce bureaucracy.{/t}
+	</p>
+
+<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+
+<p>&nbsp;</p>
+
+
+<h4>12. <a name="e-Voting"></a>{t}e-Voting{/t}</h4>
 
 	<p>{t}Initially, GNU Herds' members can vote showing their hands, sending an email.{/t}</p>
 
@@ -197,7 +506,7 @@ Suite 225, San Francisco, CA 94107, USA
 			</li>
 		</ul>
 
-	<p>{t}See references to documentation at bottom of this page.{/t}</p>
+	<p>{t}See references to documentation.{/t}</p>
 
 	<p>&nbsp;</p>
 
