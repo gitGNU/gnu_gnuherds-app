@@ -387,8 +387,3 @@ Suite 225, San Francisco, CA 94107, USA
 	</table>
 
 <center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
-
-<p>&nbsp;</p>
-
-<p class="footnote">{t}For more information:{/t} {mailto address='gnuherds-app-dev@nongnu.org'} </p>
-

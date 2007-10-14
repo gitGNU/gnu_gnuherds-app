@@ -49,5 +49,3 @@ Suite 225, San Francisco, CA 94107, USA
 <li><a href="https://lists.gnuherds.org/mailman/listinfo/association">association</a> {t}is the project main list.{/t}</li>
 <li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
 </ul>
-<p>&nbsp;</p>
-<p class="footnote">{t}For more information:{/t} {mailto address='association@gnuherds.org'}</p>
