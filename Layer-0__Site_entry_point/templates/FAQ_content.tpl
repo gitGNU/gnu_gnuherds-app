@@ -201,6 +201,8 @@ Suite 225, San Francisco, CA 94107, USA
 	<li><i>{t}Non-Free Software{/t}</i></li>
 	</ul>
 
+	<p>&nbsp;</p>
+
  	<p>{t}For example, applying such criteria to Java:{/t}</p>
 
 	<ul>
