@@ -80,8 +80,10 @@ Suite 225, San Francisco, CA 94107, USA
 <tr>
 <td class="tdNote" width="650">
 <p class="footnote">
-{t}Send any flame, comment, feedback, etc. to{/t} {mailto address="association@gnuherds.org"}
-<br>
+{t escape='no'
+  1='<a href="mailto:association@gnuherds.org">association@gnuherds.org</a>'
+}Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!{/t}
+<br><br>
 {t escape='no'
   1='<a href="http://www.gnu.org">'
   2='</a>'
