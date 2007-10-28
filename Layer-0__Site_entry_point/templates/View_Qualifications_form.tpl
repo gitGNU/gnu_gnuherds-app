@@ -296,7 +296,7 @@ Suite 225, San Francisco, CA 94107, USA
 *}
 
 <tr valign="top">
-<td align="right"><strong>{'Contributions to FS projects'|gettext|strip:'&nbsp;'}</strong>&nbsp;: <br> </td>
+<td align="right"><strong>{'Contributions to FS projects'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="greenDark">
 {if is_array($data.ContributionsListProject) and count($data.ContributionsListProject) > 0 }
 	{foreach from=$data.ContributionsListProject item=project key=i}

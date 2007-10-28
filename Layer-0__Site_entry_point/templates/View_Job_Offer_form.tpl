@@ -279,7 +279,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if trim($data.FreeSoftwareExperiences) neq ''}
 	<tr valign="top">
-	<td align="right"><strong>{'Experience with FS projects'|gettext|strip:'&nbsp;'}</strong>&nbsp;: <br> </td>
+	<td align="right"><strong>{'Experience with FS projects'|gettext|strip:'&nbsp;'}</strong>&nbsp;:</td>
 	<td colspan="3" class="greenLight">{$data.FreeSoftwareExperiences}</td>
 	{if $data.EntityId eq $smarty.session.EntityId}
 	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=projects" title="{t}Edit section{/t}: {t}Experience with FS projects{/t}">{t}edit{/t}</a></td>
