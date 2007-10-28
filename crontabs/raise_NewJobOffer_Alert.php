@@ -50,9 +50,9 @@ function raiseNewJobOfferAlerts() // Alerts on any NewJobOffer
 		for ( $j=0; $j < count($result[0]); $j++ )
 		{
 			// Create the email text
-			$message .= gettext("Vacancy title").": ".$result[14][$j]."\n";
+			$message .= gettext("Vacancy title").":  ".$result[14][$j]."\n";
 
-			$message .= gettext("Location").": ";
+			$message .= gettext("Location").":  ";
 			if ( trim($result[2][$j]) == '' )
 			{
 				$message .= gettext("Any").", ".gettext("telework");
@@ -68,7 +68,7 @@ function raiseNewJobOfferAlerts() // Alerts on any NewJobOffer
 			//XXX-remove-this-line:  $message .= gettext("Offer date").": ";
 			//XXX-remove-this-line:  $message .= $result[5][$j]."\n";
 
-			$message .= gettext("Employer").": ";
+			$message .= gettext("Employer").":  ";
 			if ($result[9][$j] != '') $message .= gettext("Person").": ";
 			if ($result[12][$j] != '') $message .= gettext("Company").": ";
 			if ($result[13][$j] != '') $message .= gettext("non-profit Organization").": ";
@@ -76,7 +76,7 @@ function raiseNewJobOfferAlerts() // Alerts on any NewJobOffer
 			if ($result[9][$j] != '')
 			{
 				$message .= $result[10][$j].$result[11][$j];
-				if ($result[10][$j] != '' or $result[11][$j] != '') $message .= ",";
+				if ($result[10][$j] != '' or $result[11][$j] != '') $message .= ", ";
 				$message .= $result[9][$j]."\n";
 			}
 			if ($result[12][$j] != '') $message .= $result[12][$j]."\n";
