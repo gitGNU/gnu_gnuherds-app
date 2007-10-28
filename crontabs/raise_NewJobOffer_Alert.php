@@ -88,6 +88,9 @@ function raiseNewJobOfferAlerts() // Alerts on any NewJobOffer
 
 			$message .= "\n";
 			$message .= "\n";
+			$message .= "\n";
+			$message .= "--\n";
+			$message .= vsprintf(gettext('You can disable this type of alerts at  %s'),"http://gnuherds.org/settings \n");
 		}
 
 		// Send emails
