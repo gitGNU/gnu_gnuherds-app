@@ -48,7 +48,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=general" title="{t}Edit section{/t}: {t}LOOKING FOR{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=general" title="{t}Edit section{/t}: {t}LOOKING FOR{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -138,7 +138,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr>
 <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=profiles_etc" title="{t}Edit section{/t}: {t}TECHNICAL{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}TECHNICAL{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -147,7 +147,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<td align="right"><strong>{'Professional experience since'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 	<td colspan="3" class="greenLight">{$data.ProfessionalExperienceSinceYear}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Professional experience since{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Professional experience since{/t}">{t}edit{/t}</a></td>
 {/if}
 	</tr>
 {/if}
@@ -157,7 +157,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<td align="right"><strong>{'Academic qualification'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 	<td colspan="3" class="greenLight">{t}{$data.AcademicQualification}{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Academic qualification{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Academic qualification{/t}">{t}edit{/t}</a></td>
 {/if}
 	</tr>
 {/if}
@@ -200,7 +200,7 @@ Suite 225, San Francisco, CA 94107, USA
 	</td>
 
 	{if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Profiles{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Profiles{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
@@ -228,7 +228,7 @@ Suite 225, San Francisco, CA 94107, USA
 	</td>
 
 	{if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=skills" title="{t}Edit section{/t}: {t}Skills{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=skills" title="{t}Edit section{/t}: {t}Skills{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
@@ -256,7 +256,7 @@ Suite 225, San Francisco, CA 94107, USA
 	</td>
 
 	{if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=languages" title="{t}Edit section{/t}: {t}Languages{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=languages" title="{t}Edit section{/t}: {t}Languages{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
@@ -271,7 +271,7 @@ Suite 225, San Francisco, CA 94107, USA
 		{/foreach}
 	</td>
 	{if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=certifications" title="{t}Edit section{/t}: {t}Certifications{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=certifications" title="{t}Edit section{/t}: {t}Certifications{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
@@ -282,7 +282,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<td align="right"><strong>{'Experience with FS projects'|gettext|strip:'&nbsp;'}</strong>&nbsp;: <br> </td>
 	<td colspan="3" class="greenLight">{$data.FreeSoftwareExperiences}</td>
 	{if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=projects" title="{t}Edit section{/t}: {t}Experience with FS projects{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=projects" title="{t}Edit section{/t}: {t}Experience with FS projects{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
@@ -297,7 +297,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr>
 <td colspan="4" class="subsection">{t}RESIDENCE LOCATION{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=location" title="{t}Edit section{/t}: {t}RESIDENCE LOCATION{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=location" title="{t}Edit section{/t}: {t}RESIDENCE LOCATION{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -361,7 +361,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr>
 <td colspan="4" class="subsection">{t}CONTRACT{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=contract" title="{t}Edit section{/t}: {t}CONTRACT{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=contract" title="{t}Edit section{/t}: {t}CONTRACT{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -463,7 +463,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td>
 {if $data.PhotoOrLogo eq 'true' }
-		<img src="photo?acl=offers&id={$data.EntityId}" align="right" alt="" border="1" hspace="0" vspace="0">
+		<img src="photo?acl=offers&amp;id={$data.EntityId}" align="right" alt="" border="1" hspace="0" vspace="0">
 {else}
 	{if $data.EntityType eq 'Person' }
 		<img src="/images/default/Person.png" width="90" height="120" align="right" alt="" border="1" hspace="0" vspace="0">

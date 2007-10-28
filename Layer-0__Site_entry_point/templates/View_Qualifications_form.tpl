@@ -32,7 +32,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr valign="top">
 <td>
 {if $data.PhotoOrLogo eq 'true' }
-		<img src="photo?acl=resume&id={$smarty.get.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
+		<img src="photo?acl=resume&amp;id={$smarty.get.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
 {else}
 	{if $data.EntityType eq 'Person' }
 		<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
@@ -145,7 +145,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td>
 
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=profiles_etc" title="{t}Edit section{/t}: {t}TECHNICAL{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}TECHNICAL{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -153,7 +153,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="right"><strong>{'Professional experience since'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="greenLight">{$data.ProfessionalExperienceSinceYear}</td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Professional experience since{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Professional experience since{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -168,7 +168,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 </td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Academic qualification{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Academic qualification{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 {/if}
@@ -207,7 +207,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=profiles_etc" title="{t}Edit section{/t}: {t}Profiles{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Profiles{/t}">{t}edit{/t}</a></td>
 {/if}
 
 </tr>
@@ -239,7 +239,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=skills" title="{t}Edit section{/t}: {t}Skills{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=skills" title="{t}Edit section{/t}: {t}Skills{/t}">{t}edit{/t}</a></td>
 {/if}
 
 </tr>
@@ -266,7 +266,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=languages" title="{t}Edit section{/t}: {t}Languages{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=languages" title="{t}Edit section{/t}: {t}Languages{/t}">{t}edit{/t}</a></td>
 {/if}
 
 </tr>
@@ -289,7 +289,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=certifications" title="{t}Edit section{/t}: {t}Certifications{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=certifications" title="{t}Edit section{/t}: {t}Certifications{/t}">{t}edit{/t}</a></td>
 {/if}
 
 </tr>
@@ -308,7 +308,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=projects" title="{t}Edit section{/t}: {t}Contributions to FS projects{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=projects" title="{t}Edit section{/t}: {t}Contributions to FS projects{/t}">{t}edit{/t}</a></td>
 {/if}
 
 </tr>
@@ -320,7 +320,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr>
 <td colspan="4" class="subsection">{t}CONTRACT{/t}</td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=contract" title="{t}Edit section{/t}: {t}CONTRACT{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=contract" title="{t}Edit section{/t}: {t}CONTRACT{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -362,7 +362,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr>
 <td colspan="4" class="subsection">{t}LOCATION{/t}</td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&id={$smarty.get.EntityId}&section=location" title="{t}Edit section{/t}: {t}LOCATION{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=location" title="{t}Edit section{/t}: {t}LOCATION{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
