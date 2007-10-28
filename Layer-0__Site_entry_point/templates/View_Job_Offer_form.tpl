@@ -39,133 +39,16 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 
-<tr valign="top">
-<td>
-{if $data.PhotoOrLogo eq 'true' }
-		<img src="photo?acl=offers&id={$data.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
-{else}
-	{if $data.EntityType eq 'Person' }
-		<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
-	{else}
-		<img src="/images/default/Company_or_non-profit_Organization.png" width="180" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
-	{/if}
-	<br>
-{/if}
-</td>
-<td colspan="3">
-
-{t}{$data.EntityType}{/t}:
-
-{if $data.EntityType eq 'Person' }
-	<!-- Person's name -->
-	<strong>
-	{if trim($data.Website) neq ''}<a href="{$data.Website}">{/if}
-	{if trim($data.LastName) neq '' or trim($data.MiddleName) neq ''}
-		{$data.LastName} {$data.MiddleName},
-	{/if}
-	{$data.FirstName}{if trim($data.Website) neq ''}</a>{/if}
-	</strong>
-	<br>
-
-	<!-- Person's birth year -->
-	{if trim($data.BirthYear) neq ''}
-		{t}been born in{/t} <strong>{$data.BirthYear}</strong><br>
-	{/if}
-{/if}
-
-{if $data.EntityType eq 'Company' }
-	<!-- Company's name -->
-	<strong>{$data.CompanyName}</strong><br>
-{/if}
-
-{if $data.EntityType eq 'non-profit Organization' }
-	<!-- non-profit Organization's name -->
-	<strong>{$data.NonprofitName}</strong><br>
-{/if}
-
-{if trim($data.EntityNationality) neq ''}
-	<!-- Nationality -->
-	{t}Nationality{/t} <strong>{t}{$data.EntityNationalityName}{/t}</strong><br>
-{/if}
-
-{*
-<br>
-
-{if $smarty.post.ViewContactInformation eq 't'}
-
-	<!-- Address -->
-	{$data.EntityStreet}{if trim($data.EntityStreet) neq '' and trim($data.EntitySuite) neq ''}, {/if}{$data.EntitySuite}<br>
-
-	{$data.EntityPostalCode}
-	{if trim($data.EntityPostalCode) neq '' and trim($data.EntityCity) neq ''} - {/if}
-	{$data.EntityCity}
-	{if trim($data.EntityPostalCode) neq '' or  trim($data.EntityCity) neq ''} <br> {/if}
-
-	{$data.EntityStateProvince}{if trim($data.EntityStateProvince) neq ''}, {/if}<strong>{$data.EntityCountryName}</strong><br>
-
-	<br>
-
-	<!-- Other contact information -->
-
-	{mailto address=$data.Email}<br>
-
-	{if trim($data.Website) neq ''}
-		{t}web site{/t} <a href="{$data.Website}">{$data.Website}</a><br>
-	{/if}
-
-
-	<br>
-
-	{if trim($data.Landline) neq ''}
-		<strong>{t}Landline{/t}</strong>: {$data.Landline}<br>
-	{/if}
-
-	{if trim($data.MobilePhone) neq ''}
-		<strong>{t}Mobile phone{/t}</strong>: {$data.MobilePhone}<br>
-	{/if}
-
-	{if trim($data.IpPhoneOrVideo) neq ''}
-		<strong>{t}IP phone or videophone{/t}</strong>: {$data.IpPhoneOrVideo}
-	{/if}
-
-{else}
-	<a href="XXX">{t}View contact information{/t}</a>
-{/if}
-*}
-
+<tr>
+<td colspan="4" class="subsection">
+{t escape='no'
+  1='<strong>'
+  2='</strong>'
+}%1JOB OFFER%2 LOOKING FOR{/t}
 </td>
 
 {if $data.EntityId eq $smarty.session.EntityId}
-
-{if $smarty.session.LoginType eq 'Person' }
-	{assign var="Entity" value="person"}
-{/if}
-{if $smarty.session.LoginType eq 'Company' }
-	{assign var="Entity" value="company"}
-{/if}
-{if $smarty.session.LoginType eq 'non-profit Organization' }
-	{assign var="Entity" value="nonprofit"}
-{/if}
-
-<td class="edit"><a href="{$Entity}" title="{t}Edit section{/t}: {t}{$data.EntityType}{/t}">{t}edit{/t}</a></td>
-
-{/if}
-
-</tr>
-
-
-<tr>
-<td colspan="4">&nbsp;</td>
-{if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"></td>
-{/if}
-</tr>
-
-<tr>
-<td colspan="4" class="subsection">{t}IS LOOKING FOR{/t}</td>
-
-{if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=general" title="{t}Edit section{/t}: {t}IS LOOKING FOR{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&id={$smarty.get.JobOfferId}&section=general" title="{t}Edit section{/t}: {t}LOOKING FOR{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -518,6 +401,125 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 {/if}
+
+<tr>
+<td colspan="4">&nbsp;</td>
+{if $data.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr>
+
+{if $smarty.session.LoginType eq 'Person' }
+	{assign var="Entity" value="person"}
+{/if}
+{if $smarty.session.LoginType eq 'Company' }
+	{assign var="Entity" value="company"}
+{/if}
+{if $smarty.session.LoginType eq 'non-profit Organization' }
+	{assign var="Entity" value="nonprofit"}
+{/if}
+
+<tr>
+<td colspan="4" class="subsection">{t}EMPLOYER{/t}</td>
+{if $data.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="{$Entity}" title="{t}Edit section{/t}: {t}{$data.EntityType}{/t}">{t}edit{/t}</a></td>
+{/if}
+</tr>
+
+<tr valign="top">
+<td align="right">
+<strong>{t}{$data.EntityType}{/t}</strong> :{if trim($data.BirthYear) neq ''}<br>
+<strong>{t}Birthdate{/t}</strong> :{/if}{if trim($data.EntityNationality) neq ''}<br>
+<strong>{t}Nationality{/t}</strong> :{/if}
+</td>
+
+<td colspan="2">
+<strong>
+{if $data.EntityType eq 'Person' }
+	{if trim($data.Website) neq ''}<a href="{$data.Website}">{/if}
+	{if trim($data.LastName) neq '' or trim($data.MiddleName) neq ''}
+		{$data.LastName} {$data.MiddleName},
+	{/if}
+	{$data.FirstName}{if trim($data.Website) neq ''}</a>{/if}
+{/if}
+
+{if $data.EntityType eq 'Company' }
+	{$data.CompanyName}
+{/if}
+
+{if $data.EntityType eq 'non-profit Organization' }
+	{$data.NonprofitName}
+{/if}
+</strong>
+{if trim($data.BirthYear) neq ''}
+<br>
+{$data.BirthYear}
+{/if}
+{if trim($data.EntityNationality) neq ''}
+<br>
+{$data.EntityNationalityName}
+{/if}
+</td>
+
+<td>
+{if $data.PhotoOrLogo eq 'true' }
+		<img src="photo?acl=offers&id={$data.EntityId}" align="right" alt="" border="1" hspace="0" vspace="0">
+{else}
+	{if $data.EntityType eq 'Person' }
+		<img src="/images/default/Person.png" width="90" height="120" align="right" alt="" border="1" hspace="0" vspace="0">
+	{else}
+		<img src="/images/default/Company_or_non-profit_Organization.png" width="180" height="120" align="right" alt="" border="1" hspace="0" vspace="0">
+	{/if}
+{/if}
+
+{if $data.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+
+</tr>
+
+{*
+{if $smarty.post.ViewContactInformation eq 't'}
+
+	<!-- Address -->
+	{$data.EntityStreet}{if trim($data.EntityStreet) neq '' and trim($data.EntitySuite) neq ''}, {/if}{$data.EntitySuite}<br>
+
+	{$data.EntityPostalCode}
+	{if trim($data.EntityPostalCode) neq '' and trim($data.EntityCity) neq ''} - {/if}
+	{$data.EntityCity}
+	{if trim($data.EntityPostalCode) neq '' or  trim($data.EntityCity) neq ''} <br> {/if}
+
+	{$data.EntityStateProvince}{if trim($data.EntityStateProvince) neq ''}, {/if}<strong>{$data.EntityCountryName}</strong><br>
+
+	<br>
+
+	<!-- Other contact information -->
+
+	{mailto address=$data.Email}<br>
+
+	{if trim($data.Website) neq ''}
+		{t}web site{/t} <a href="{$data.Website}">{$data.Website}</a><br>
+	{/if}
+
+
+	<br>
+
+	{if trim($data.Landline) neq ''}
+		<strong>{t}Landline{/t}</strong>: {$data.Landline}<br>
+	{/if}
+
+	{if trim($data.MobilePhone) neq ''}
+		<strong>{t}Mobile phone{/t}</strong>: {$data.MobilePhone}<br>
+	{/if}
+
+	{if trim($data.IpPhoneOrVideo) neq ''}
+		<strong>{t}IP phone or videophone{/t}</strong>: {$data.IpPhoneOrVideo}
+	{/if}
+
+{else}
+	<a href="XXX">{t}View contact information{/t}</a>
+{/if}
+*}
 
 
 {if $data.EntityId neq $smarty.session.EntityId and $smarty.session.IsAlreadySubscribed neq 't' }
