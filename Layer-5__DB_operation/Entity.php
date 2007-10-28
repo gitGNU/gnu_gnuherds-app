@@ -470,7 +470,7 @@ class Entity
 
 	public function getNewJobOfferAlertsEmails($locale)
 	{
-		$sqlQuery = "SELECT E1_Email FROM E1_Entities,A1_Alerts WHERE E1_Id=A1_E1_Id AND A1_NewJobOffer='t' AND E1_Locale='$locale';";
+		$sqlQuery = "SELECT E1_Email FROM E1_Entities,A1_Alerts WHERE E1_Id=A1_E1_Id AND E1_Email IS NOT NULL AND A1_NewJobOffer='t' AND E1_Locale='$locale';";
 		$result = $this->postgresql->getOneField($sqlQuery,0);
 		return $result;
 	}
