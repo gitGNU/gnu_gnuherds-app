@@ -44,7 +44,7 @@ Suite 225, San Francisco, CA 94107, USA
 {t escape='no'
   1='<strong>'
   2='</strong>'
-}%1JOB OFFER%2 LOOKING FOR{/t}
+}%1Vacancy%2 looking for{/t}
 </td>
 
 {if $data.EntityId eq $smarty.session.EntityId}
@@ -67,9 +67,9 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 </tr> 
 
-<tr valign="top">
-<td align="right"><strong>{'Entity type'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
-<td colspan="3" class="greenLight">
+<tr>
+<td align="right"><strong>{t}Vacancies{/t}</strong> : </td>
+<td colspan="3" class="greenLight">{$data.Vacancies}
 {if $data.AllowPersonApplications eq 'true'}
 	{assign var="entityTypeAAA" value="Persons"}
 {/if}
@@ -94,17 +94,9 @@ Suite 225, San Francisco, CA 94107, USA
 	{/if}
 {/if}
 
-{t}{$entityTypeAAA}{/t}{if $entityTypeBBB neq ''}{if $entityTypeCCC neq ''}, {else} {t}or{/t} {/if} {t}{$entityTypeBBB}{/t} {/if}
-{if $entityTypeCCC neq ''} {t}or{/t} {t}{$entityTypeCCC}{/t}{/if}
+({t}{$entityTypeAAA}{/t}{if $entityTypeBBB neq ''}{if $entityTypeCCC neq ''}, {else} {t}or{/t} {/if} {t}{$entityTypeBBB}{/t} {/if}
+{if $entityTypeCCC neq ''} {t}or{/t} {t}{$entityTypeCCC}{/t}{/if})
 </td>
-{if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"></td>
-{/if}
-</tr>
-
-<tr>
-<td align="right"><strong>{t}Vacancies{/t}</strong> : </td>
-<td colspan="3" class="greenLight">{$data.Vacancies}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
@@ -136,7 +128,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr> 
 
 <tr>
-<td colspan="4" class="subsection">{t}TECHNICAL{/t}</td>
+<td colspan="4" class="subsection">{t}Technical{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}TECHNICAL{/t}">{t}edit{/t}</a></td>
 {/if}
@@ -295,7 +287,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr> 
 
 <tr>
-<td colspan="4" class="subsection">{t}RESIDENCE LOCATION{/t}</td>
+<td colspan="4" class="subsection">{t}Residence location{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=location" title="{t}Edit section{/t}: {t}RESIDENCE LOCATION{/t}">{t}edit{/t}</a></td>
 {/if}
@@ -303,7 +295,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if trim($data.JobOfferCity) eq '' and trim($data.JobOfferStateProvince) eq '' and trim($data.JobOfferCountryName) eq ''}
 		<tr valign="top">
-		<td align="right"><strong>{t}Telework{/t}</strong> : </td>
+		<td align="right"><strong>{t}Telecommute{/t}</strong> : </td>
 		<td colspan="3" class="greenLight">{t}any location{/t}</td>
 		{if $data.EntityId eq $smarty.session.EntityId}
 		<td class="edit"></td>
@@ -359,7 +351,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr> 
 
 <tr>
-<td colspan="4" class="subsection">{t}CONTRACT{/t}</td>
+<td colspan="4" class="subsection">{t}Contract{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=contract" title="{t}Edit section{/t}: {t}CONTRACT{/t}">{t}edit{/t}</a></td>
 {/if}
@@ -376,7 +368,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr>
-<td align="right"><strong>{'Wage rank'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
+<td align="right"><strong>{'Salary'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="greenLight">
 {$data.WageRank}
 {t}{$data.WageRankCurrencyName}{/t} 
@@ -420,7 +412,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr>
-<td colspan="4" class="subsection">{t}EMPLOYER{/t}</td>
+<td colspan="4" class="subsection">{t}Employer{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="{$Entity}" title="{t}Edit section{/t}: {t}{$data.EntityType}{/t}">{t}edit{/t}</a></td>
 {/if}
@@ -428,8 +420,8 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr valign="top">
 <td align="right">
-<strong>{t}{$data.EntityType}{/t}</strong> :{if trim($data.BirthYear) neq ''}<br>
-<strong>{t}Birthdate{/t}</strong> :{/if}{if trim($data.EntityNationality) neq ''}<br>
+<strong>{t}{$data.EntityType}{/t}</strong>&nbsp;:{if trim($data.BirthYear) neq ''}<br>
+<strong>{t}Born{/t}</strong> :{/if}{if trim($data.EntityNationality) neq ''}<br>
 <strong>{t}Nationality{/t}</strong> :{/if}
 </td>
 
@@ -465,11 +457,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if $data.PhotoOrLogo eq 'true' }
 		<img src="photo?acl=offers&amp;id={$data.EntityId}" align="right" alt="" border="1" hspace="0" vspace="0">
 {else}
-	{if $data.EntityType eq 'Person' }
-		<img src="/images/default/Person.png" width="90" height="120" align="right" alt="" border="1" hspace="0" vspace="0">
-	{else}
-		<img src="/images/default/Company_or_non-profit_Organization.png" width="180" height="120" align="right" alt="" border="1" hspace="0" vspace="0">
-	{/if}
+		&nbsp;
 {/if}
 
 {if $data.EntityId eq $smarty.session.EntityId}
