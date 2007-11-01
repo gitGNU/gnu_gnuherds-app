@@ -27,7 +27,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 {if $smarty.session.Logged == '1' }
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}UPDATE PERSON DATA{/t}</td> </tr>
+<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}Update person data{/t}</td> </tr>
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
@@ -46,7 +46,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="subsection">{t}ACCOUNT IDENTIFICATION{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Account identification{/t}</td> </tr>
 
 {/if}
 
@@ -84,7 +84,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="subsection">{t}PERSON{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Person{/t}</td> </tr>
 
 <tr>
 <td align="right"><label for="FirstName">{t}First name{/t}</label></td>
@@ -122,7 +122,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
-<tr> <td colspan="4" class="subsection">{t}ADDRESS{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Address{/t}</td> </tr>
 
 <tr>
 <td align="right"><label for="Street">{t}Street{/t}</label></td>
@@ -155,7 +155,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="subsection">{t}INTERACTIVE COMMUNICATION MEDIAS{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Interactive communication medias{/t}</td> </tr>
 
 <tr>
 <td align="right"><label for="IpPhoneOrVideo">{'IP phone or videophone'|gettext|strip:'&nbsp;'}</label></td>
@@ -172,7 +172,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="subsection">{t}OTHER INFORMATION{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Other information{/t}</td> </tr>
 
 <tr>
 <td align="right"><label for="BirthYear">{t}Year of birth{/t}</label></td>

@@ -26,7 +26,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 {if $smarty.session.Logged == '1' }
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}UPDATE COMPANY DATA{/t}</td> </tr>
+<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}Update company data{/t}</td> </tr>
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
@@ -40,7 +40,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr> <td colspan="4" class="footnote">{t escape=no 1='<span class="must">' 2='</span>'}The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional.{/t}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
-<tr> <td colspan="4" class="subsection">{t}ACCOUNT IDENTIFICATION{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Account identification{/t}</td> </tr>
 
 {/if}
 
@@ -77,7 +77,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
-<tr> <td colspan="4" class="subsection">{t}COMPANY{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Company{/t}</td> </tr>
 <tr>
 <td align="right"><label for="CompanyName">{t}Name{/t}</label></td>
 <td> <input type="text" name="CompanyName" id="CompanyName" size="20" maxlength="30" class="notRequired" value="{$data.CompanyName}"> </td>
@@ -123,7 +123,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
-<tr> <td colspan="4" class="subsection">{t}ADDRESS{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Address{/t}</td> </tr>
 <tr>
 <td align="right"><label for="Street">{t}Street{/t}</label></td>
 <td colspan="3"> <input type="text" name="Street" id="Street" size="60" maxlength="80" class="notRequired" value="{$data.Street}"> </td>
@@ -155,7 +155,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="subsection">{t}INTERACTIVE COMMUNICATION MEDIAS{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Interactive communication medias{/t}</td> </tr>
 
 <tr>
 <td align="right"><label for="IpPhoneOrVideo">{'IP phone or videophone'|gettext|strip:'&nbsp;'}</label></td>

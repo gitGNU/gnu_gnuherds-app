@@ -201,6 +201,7 @@ button
 	font-size: 24px;
 	padding-left: 5px;
 	text-decoration: none;
+	text-transform: capitalize;
 	color: #555544;
 }
 
@@ -211,6 +212,7 @@ button
 	padding-left: 5px;
 	padding-right: 0;
 	text-decoration: none;
+	text-transform: capitalize;
 	color: #555544;
 	/* background-color: #e8d9bd; */
 	background-color: #e0e1bf;
