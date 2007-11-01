@@ -220,7 +220,10 @@ Suite 225, San Francisco, CA 94107, USA
 	{t escape='no'
 	  1='<i>'
 	  2='</i>'
-	}However the below Sun Java technologies are tagged as %1Non-Free Software%2 because of the license you have to agree to download them is not a Free Software license.  None of the Java Sun technologies are GPL'd at the time.{/t}
+	  3='<a href="http://icedtea.classpath.org/wiki/Main_Page">'
+	  4='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-09/msg00060.html">'
+	  5='</a>'
+	}However the below Sun Java technologies are tagged as %1Non-Free Software%2 because of the license you have to agree to download them is not a Free Software license. Anyhow, most of the Java Sun technologies are GPL'd. Sun has made substantial progress towards freeing the JDK under the GPL. The %3IcedTea%5 project is filling in the %4gaps%5.{/t}
 	</p>
 
 	<ul>
