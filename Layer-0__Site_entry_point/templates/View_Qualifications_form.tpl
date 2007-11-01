@@ -30,17 +30,9 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr valign="top">
-<td>
 {if $data.PhotoOrLogo eq 'true' }
-		<img src="photo?acl=resume&amp;id={$smarty.get.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
-{else}
-	{if $data.EntityType eq 'Person' }
-		<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
-	{else}
-		<img src="/images/default/Company_or_non-profit_Organization.png" width="180" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
-	{/if}
+<td><img src="photo?acl=resume&amp;id={$smarty.get.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0"></td>
 {/if}
-</td>
 <td colspan="3">
 
 {t}{$data.EntityType}{/t}:
@@ -114,6 +106,10 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 </td>
+
+{if $data.PhotoOrLogo neq 'true' }
+<td>&nbsp;</td>
+{/if}
 
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
 
