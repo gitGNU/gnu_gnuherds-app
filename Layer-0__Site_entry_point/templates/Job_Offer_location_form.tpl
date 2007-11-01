@@ -38,7 +38,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4">{t}Do not fill any address field if the offer is Telework.{/t}</td> </tr>
+<tr> <td colspan="4">{t}Do not fill any address field if the offer is Telecommute.{/t}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 

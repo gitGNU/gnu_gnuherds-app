@@ -32,7 +32,7 @@ Suite 225, San Francisco, CA 94107, USA
 <ul>
   <li>{t}Controlled by its own users{/t}</li>
   <li>{t}FS skills data base{/t}</li>
-  <li>{t}Telework{/t}</li>
+  <li>{t}Telecommute{/t}</li>
 </ul>
 <p>{t escape='no' 1='<a href="mailto:gnuherds-app-dev@nongnu.org">gnuherds-app-dev</a>'}Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled.{/t}</p>
 <ul>

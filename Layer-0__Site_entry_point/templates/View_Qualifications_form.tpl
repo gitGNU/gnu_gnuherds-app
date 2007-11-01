@@ -57,7 +57,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<!-- Person's birth year -->
 	{if trim($data.BirthYear) neq ''}
-		{t}been born in{/t} <strong>{$data.BirthYear}</strong><br>
+		{t}Born{/t}: <strong>{$data.BirthYear}</strong><br>
 	{/if}
 {/if}
 
@@ -73,7 +73,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if trim($data.Nationality) neq ''}
 	<!-- Nationality -->
-	{t}Nationality{/t} <strong>{t}{$data.NationalityName}{/t}</strong><br>
+	{t}Nationality{/t}: <strong>{t}{$data.NationalityName}{/t}</strong><br>
 {/if}
 
 <br>
