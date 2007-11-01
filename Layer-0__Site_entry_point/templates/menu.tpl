@@ -27,10 +27,10 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td>
 <p>
-{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/index.php"}<a href="/" class="menu1">{/if}{'Home'|gettext}{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/index.php"}</a>{/if}<br>
-{if $smarty.server.REQUEST_URI neq "/charter"}<a href="charter" class="menu1">{/if}{'Charter (draft)'|gettext}{if $smarty.server.REQUEST_URI neq "/charter"}</a>{/if}<br>
-{if $smarty.server.REQUEST_URI neq "/development"}<a href="development" class="menu1">{/if}{"Hackers' Guide"|gettext}{if $smarty.server.REQUEST_URI neq "/development"}</a>{/if}<br>
-{if $smarty.server.REQUEST_URI neq "/faq"}<a href="faq" class="menu1">{/if}{'FAQ'|gettext}{if $smarty.server.REQUEST_URI neq "/faq"}</a>{/if}<br>
+{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/index.php"}<a href="/" class="menu1">{/if}{'Home'|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/index.php"}</a>{/if}<br>
+{if $smarty.server.REQUEST_URI neq "/charter"}<a href="charter" class="menu1">{/if}{'Charter (draft)'|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/charter"}</a>{/if}<br>
+{if $smarty.server.REQUEST_URI neq "/development"}<a href="development" class="menu1">{/if}{"Hackers' Guide"|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/development"}</a>{/if}<br>
+{if $smarty.server.REQUEST_URI neq "/faq"}<a href="faq" class="menu1">{/if}{'FAQ'|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/faq"}</a>{/if}<br>
 </p>
 
 {if $smarty.session.Logged eq '1'}
