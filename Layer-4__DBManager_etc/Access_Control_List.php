@@ -32,6 +32,12 @@ class AccessControlList
 		throw new Exception($error,false);
 	}
 
+	private function notActive()
+	{
+		$error = "<p>".gettext('Such job offer is already closed, removed, or never was here.')."</p>";
+		throw new Exception($error,false);
+	}
+
 	public function checkProperlyLogged()
 	{
 		if ( $_SESSION['Logged'] == '1' )
@@ -134,13 +140,13 @@ class AccessControlList
 						$joboffers = $jobOffer->getJobOffersForEntity(); // Job Offers for the logged Entity
 
 						if ( !in_array( $J1_Id, $joboffers[0] ) )
-							$this->notGranted();
+							$this->notActive();
 						else
 							$this->granted();
 					}
 					else
 					{
-						$this->notGranted();
+						$this->notActive();
 					}
 				}
 
