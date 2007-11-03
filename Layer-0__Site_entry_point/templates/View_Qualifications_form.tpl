@@ -311,7 +311,12 @@ Suite 225, San Francisco, CA 94107, USA
 
 {if $data.EntityType eq 'Person' }
 
-<tr> <td colspan="4">&nbsp;</td> </tr> 
+<tr>
+<td colspan="4">&nbsp;</td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr> 
 
 <tr>
 <td colspan="4" class="subsection">{t}Contract{/t}</td>
