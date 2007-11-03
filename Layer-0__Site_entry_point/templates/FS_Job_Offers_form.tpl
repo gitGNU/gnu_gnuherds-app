@@ -43,7 +43,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td class="tdTitle"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong></td>
 <td class="tdTitle"><strong>{'Location'|gettext|strip:'&nbsp;'}</strong></td>
 <td class="tdTitle"><strong>{'Offer date'|gettext|strip:'&nbsp;'}</strong></td>
-<td class="tdTitle"><strong>{'Employer'|gettext|strip:'&nbsp;'}</strong></td>
+<td class="tdTitle"><strong>{'Offered by'|gettext|strip:'&nbsp;'}</strong></td>
 </tr>
 
 {foreach from=$JobOfferId item=Id key=i}
