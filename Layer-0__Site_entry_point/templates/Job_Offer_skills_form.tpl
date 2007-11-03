@@ -79,17 +79,17 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
 {* Skills classification *}
-{if $data.CheckList[$i] eq "Pending"}<label class="raisePopUp" title="{t}This skill is pending for checking{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Unknown"}<label class="raisePopUp" title="{t}This skill is unknown{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Abstract"}<label class="raisePopUp" title="{t}This skill is abstract{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Pending"}<label title="{t}This skill is pending for checking{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Unknown"}<label title="{t}This skill is unknown{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Abstract"}<label title="{t}This skill is abstract{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 {* Classifying Software (programs, languages, protocols, specifications, software distributions, etc.) as Free or Non-Free Software *}
-{if $data.CheckList[$i] eq "Free Software"}<label class="raisePopUp" title="{t}This skill is Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Almost-Free Software"}<label class="raisePopUp" title="{t}This skill is almost Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Non-Free Software"}<label class="raisePopUp" title="{t}This skill is not Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Free Software"}<label title="{t}This skill is Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Almost-Free Software"}<label title="{t}This skill is almost Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Non-Free Software"}<label title="{t}This skill is not Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
 {* Classifying Hardware *}
-{if $data.CheckList[$i] eq "Hardware"}<label class="raisePopUp" title="{t}This skill is hardware{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Hardware"}<label title="{t}This skill is hardware{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 {* Classifying Documentation *}
-{if $data.CheckList[$i] eq "Documentation"}<label class="raisePopUp" title="{t}This skill is documentation{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Documentation"}<label title="{t}This skill is documentation{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 </td>
 
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
