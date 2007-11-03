@@ -83,8 +83,8 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 </td>
 
-<td>
-<select name="LanguageList[]" id="LanguageList" class="required">
+<td class="{if $i % 2}greenDark{else}greenLight{/if}">
+<select name="LanguageList[]" id="LanguageList" class="{if $i % 2}greenDark{else}greenLight{/if}">
 {html_options values=$languagesName output=$languagesNameTranslated selected=$data.LanguageList[$i]}
 </select>
 {if $checks.LanguageList[$i] neq '' }
@@ -93,8 +93,8 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 </td>
 
-<td>
-<select name="LanguageSpokenLevelList[]" id="LanguageSpokenLevelList" class="required">
+<td class="{if $i % 2}greenDark{else}greenLight{/if}">
+<select name="LanguageSpokenLevelList[]" id="LanguageSpokenLevelList" class="{if $i % 2}greenDark{else}greenLight{/if}">
 {html_options values=$languagesSpokenLevelsId output=$languagesSpokenLevelsName selected=$data.LanguageSpokenLevelList[$i]}
 </select>
 {if $checks.LanguageSpokenLevelList[$i] neq '' }
@@ -103,8 +103,8 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 </td>
 
-<td>
-<select name="LanguageWrittenLevelList[]" id="LanguageWrittenLevelList" class="required">
+<td class="{if $i % 2}greenDark{else}greenLight{/if}">
+<select name="LanguageWrittenLevelList[]" id="LanguageWrittenLevelList" class="{if $i % 2}greenDark{else}greenLight{/if}">
 {html_options values=$languagesWrittenLevelsId output=$languagesWrittenLevelsName selected=$data.LanguageWrittenLevelList[$i]}
 </select>
 {if $checks.LanguageWrittenLevelList[$i] neq '' }
@@ -124,19 +124,19 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 
 <td>
-<select name="LanguageList[]" id="LanguageList" class="required">
+<select name="LanguageList[]" id="LanguageList" class="{if $data.LanguageList|@count == 0}required{else}notRequired{/if}">
 {html_options values=$languagesName output=$languagesNameTranslated}
 </select>
 </td>
 
 <td>
-<select name="LanguageSpokenLevelList[]" id="LanguageSpokenLevelList" class="required">
+<select name="LanguageSpokenLevelList[]" id="LanguageSpokenLevelList" class="{if $data.LanguageList|@count == 0}required{else}notRequired{/if}">
 {html_options values=$languagesSpokenLevelsId output=$languagesSpokenLevelsName}
 </select>
 </td>
 
 <td>
-<select name="LanguageWrittenLevelList[]" id="LanguageWrittenLevelList" class="required">
+<select name="LanguageWrittenLevelList[]" id="LanguageWrittenLevelList" class="{if $data.LanguageList|@count == 0}required{else}notRequired{/if}">
 {html_options values=$languagesWrittenLevelsId output=$languagesWrittenLevelsName}
 </select>
 </td>

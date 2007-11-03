@@ -81,7 +81,7 @@ Suite 225, San Francisco, CA 94107, USA
 <input type="checkbox" name="DeleteSkillList[]" id="DeleteSkillList" value="{$i}">
 {/if}
 </td>
-<td>
+<td class="{if $i % 2}greenDark{else}greenLight{/if}">
 {* Skills classification *}
 {if $data.CheckList[$i] eq "Pending"}<label class="raisePopUp" title="{t}This skill is pending for checking{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 {if $data.CheckList[$i] eq "Unknown"}<label class="raisePopUp" title="{t}This skill is unknown{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
@@ -96,8 +96,8 @@ Suite 225, San Francisco, CA 94107, USA
 {if $data.CheckList[$i] eq "Documentation"}<label class="raisePopUp" title="{t}This skill is documentation{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 </td>
 
-<td>
-<input type="text" name="SkillList[]" id="SkillList" size="40" maxlength="153" class="notRequired" value="{$smarty.post.SkillList[$i]}">
+<td class="{if $i % 2}greenDark{else}greenLight{/if}">
+<input type="text" name="SkillList[]" id="SkillList" size="40" maxlength="153" class="{if $i % 2}greenDark{else}greenLight{/if}" value="{$smarty.post.SkillList[$i]}">
 <input type="hidden" name="ShadowSkillList[]" value="{$smarty.post.ShadowSkillList[$i]}">
 <input type="hidden" name="SkillsToInsert[]" value="{$smarty.post.SkillsToInsert[$i]}">
 <input type="hidden" name="SuggestionShadow[]" value="{$smarty.post.SkillList[$i]}">
@@ -116,8 +116,8 @@ Suite 225, San Francisco, CA 94107, USA
 
 </td>
 
-<td>
-<select name="SkillKnowledgeLevelList[]" id="SkillKnowledgeLevelList" class="notRequired">
+<td class="{if $i % 2}greenDark{else}greenLight{/if}">
+<select name="SkillKnowledgeLevelList[]" id="SkillKnowledgeLevelList" class="{if $i % 2}greenDark{else}greenLight{/if}">
 {html_options values=$skillKnowledgeLevelsId output=$skillKnowledgeLevelsName selected=$smarty.post.SkillKnowledgeLevelList[$i]}
 </select>
 {if $checks.SkillKnowledgeLevelList[$i] neq '' }
@@ -126,8 +126,8 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 </td>
 
-<td>
-<select name="SkillExperienceLevelList[]" id="SkillExperienceLevelList" class="notRequired">
+<td class="{if $i % 2}greenDark{else}greenLight{/if}">
+<select name="SkillExperienceLevelList[]" id="SkillExperienceLevelList" class="{if $i % 2}greenDark{else}greenLight{/if}">
 {html_options values=$skillExperienceLevelsId output=$skillExperienceLevelsName selected=$smarty.post.SkillExperienceLevelList[$i]}
 </select>
 {if $checks.SkillExperienceLevelList[$i] neq '' }
