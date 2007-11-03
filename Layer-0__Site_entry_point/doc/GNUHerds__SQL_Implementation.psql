@@ -191,12 +191,12 @@ CREATE TABLE LT_SkillSetTypes (
 );
 
 CREATE TABLE LH_Skills (
-	LH_Id	varchar(11) PRIMARY KEY CHECK (LH_Id <> '')
+	LH_Id	varchar(13) PRIMARY KEY CHECK (LH_Id <> '')
 );
 
 CREATE TABLE LI_Skills (
 	LI_Id	varchar(153) PRIMARY KEY CHECK (LI_Id <> ''),
-	LI_LH_Id varchar(11) REFERENCES LH_Skills(LH_Id) NOT NULL,
+	LI_LH_Id varchar(13) REFERENCES LH_Skills(LH_Id) NOT NULL,
 	LI_LT_Id varchar(35), -- REFERENCES LT_SkillSetTypes(LT_Id) NOT NULL
 
 	-- To make the audit and maintenance of the LI_LH_Id skill tags easier.
@@ -1286,13 +1286,22 @@ INSERT INTO LT_SkillSetTypes VALUES ( '20', 'Translation tools' );
 
 
 
-INSERT INTO LH_Skills VALUES ( 'Pending' );
+-- Skills classification:
 
+INSERT INTO LH_Skills VALUES ( 'Pending' ); -- Pending to classify.
+INSERT INTO LH_Skills VALUES ( 'Unknown' ); -- After trying to classify it, we conclude such skill is unknown.
+INSERT INTO LH_Skills VALUES ( 'Abstract' ); -- After trying to classify it, we conclude such skill does not reference a specific Software (program, language, protocol, specification, software distribution, etc.), Hardware or Documentation. For example, the "IP Networking protocols" skills is classified as 'Abstract'.
+
+-- 1) Classifying Software (programs, languages, protocols, specifications, software distributions, etc.) as Free or Non-Free Software
 INSERT INTO LH_Skills VALUES ( 'Free' );
 INSERT INTO LH_Skills VALUES ( 'Almost-Free' );
 INSERT INTO LH_Skills VALUES ( 'Non-Free' );
-INSERT INTO LH_Skills VALUES ( 'Abstract' );
-INSERT INTO LH_Skills VALUES ( 'Unknown' );
+
+-- 2) Classifying Hardware
+INSERT INTO LH_Skills VALUES ( 'Hardware' );
+
+-- 3) Classifying Documentation
+INSERT INTO LH_Skills VALUES ( 'Documentation' );
 
 
 
