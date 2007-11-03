@@ -84,7 +84,7 @@ Suite 225, San Francisco, CA 94107, USA
 <th rowspan="5" width="100%">
 <th rowspan="5">
 {if $data.ViewPhotoOrLogo eq 'true' }
-	<img src="photo?acl=me&id={$smarty.session.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0">
+	<img src="photo?acl=me&id={$smarty.session.EntityId}" align="left" alt="" border="0" hspace="0" vspace="0">
 {else}
 	<img src="/images/default/Company_or_non-profit_Organization.png" width="180" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
 {/if}

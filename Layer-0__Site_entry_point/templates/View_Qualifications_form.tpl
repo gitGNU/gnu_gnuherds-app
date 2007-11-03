@@ -31,7 +31,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr valign="top">
 {if $data.PhotoOrLogo eq 'true' }
-<td><img src="photo?acl=resume&amp;id={$smarty.get.EntityId}" align="left" alt="" border="1" hspace="0" vspace="0"></td>
+<td><img src="photo?acl=resume&amp;id={$smarty.get.EntityId}" align="left" alt="" border="0" hspace="0" vspace="0"></td>
 {/if}
 <td colspan="3">
 
