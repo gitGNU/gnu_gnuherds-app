@@ -317,7 +317,7 @@ Suite 225, San Francisco, CA 94107, USA
 	  4='<a href="http://www.debian.org/ports/">'
 	  5='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-10/msg00048.html">'
 	  6='</a>'
-	}%1 is %2Almost-Free Software%3 because it is a general term which refer to Debian GNU/Linux and all others Debian %4ports%6. Besides, the Debian organization %5promotes%6 some Non-Free Software packages. {/t}
+	}%1 is %2Almost-Free Software%3. Debian is a general term which refer to Debian GNU/Linux and all Debian %4ports%6. The Debian project %5offers%6 the download of some Non-Free Software packages from its archives and website.{/t}
 	</li>
 
 	<li>
@@ -326,6 +326,18 @@ Suite 225, San Francisco, CA 94107, USA
 	  2='<i>'
 	  3='</i>'
 	}%1 is %2Almost-Free Software%3 because it contains Non-Free Software.{/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<strong>Gobuntu</strong>'
+	  2='<i>'
+	  3='</i>'
+	  4='<a href="http://www.ubuntu.com/products/whatisubuntu/gobuntu">'
+	  5='<a href="http://diveintomark.org/archives/2007/10/18/gobuntu-has-already-failed">'
+	  6='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-10/msg00048.html">'
+	  7='</a>'
+	}%1 is %2Almost-Free Software%3. Although Gobuntu's stated %4policy%7 is to adhere to the Free Software Foundations four freedoms, it presently %5installs%7 Firefox, which encourages installing non-free plugins. Gobuntu enables downloading of non-free software packages from its archives, and the use of the ubuntu.com domain %6promotes%7 non-free software.{/t}
 	</li>
 
 	<li>
