@@ -71,7 +71,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 {foreach from=$smarty.post.SkillList item=Skill key=i}
 
-<tr valign="top">
+<tr>
 <td align="right">
 {if $smarty.post.SkillList|@count >= 1}
 <input type="checkbox" name="DeleteSkillList[]" id="DeleteSkillList" value="{$i}">
