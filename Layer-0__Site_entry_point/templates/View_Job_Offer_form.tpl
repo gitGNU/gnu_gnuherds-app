@@ -412,7 +412,7 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 
 <tr>
-<td colspan="4" class="subsection">{t}Employer{/t}</td>
+<td colspan="4" class="subsection">{t}Offered by{/t} ({t}{$data.EntityType}{/t})</td>
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="{$Entity}" title="{t}Edit section{/t}: {t}{$data.EntityType}{/t}">{t}edit{/t}</a></td>
 {/if}
@@ -420,7 +420,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <tr valign="top">
 <td align="right">
-<strong>{t}{$data.EntityType}{/t}</strong>&nbsp;:{if trim($data.BirthYear) neq ''}<br>
+<strong>{t}Name{/t}</strong>&nbsp;:{if trim($data.BirthYear) neq ''}<br>
 <strong>{t}Born{/t}</strong> :{/if}{if trim($data.EntityNationality) neq ''}<br>
 <strong>{t}Nationality{/t}</strong> :{/if}
 </td>
