@@ -455,7 +455,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 <td>
 {if $data.PhotoOrLogo eq 'true' }
-		<img src="photo?acl=offers&amp;id={$data.EntityId}" align="right" alt="" border="1" hspace="0" vspace="0">
+		<img src="photo?acl=offers&amp;id={$data.EntityId}" align="right" alt="" border="0" hspace="0" vspace="0">
 {else}
 		&nbsp;
 {/if}
