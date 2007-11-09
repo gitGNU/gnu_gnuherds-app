@@ -221,7 +221,7 @@ class SkillsForm
 
 			// extractor rule // Try to extract skills list
 
-			$boundaries = array(',','/',';',':','(',')','[',']','{','}');
+			$boundaries = array(',','/','-',';',':','(',')','[',']','{','}');
 
 			$splitted_string = explode(' ', ereg_replace(' +',' ',str_replace($boundaries,' ',trim($skillList[$i])) ) );
 			$splitted_count = count($splitted_string);
