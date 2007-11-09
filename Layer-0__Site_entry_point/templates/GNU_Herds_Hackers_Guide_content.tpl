@@ -224,7 +224,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=152">'
+	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=152">'
 	  2='</a>'
 	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
@@ -270,7 +270,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=146">'
+	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=146">'
 	  2='</a>'
 	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
@@ -310,7 +310,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=153">'
+	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=153">'
 	  2='</a>'
 	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
@@ -324,7 +324,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=154">'
+	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=154">'
 	  2='</a>'
 	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
@@ -351,7 +351,7 @@ Suite 225, San Francisco, CA 94107, USA
 
 	<p>
 	{t escape='no'
-	  1='<a href="https://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=155">'
+	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=155">'
 	  2='</a>'
 	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
