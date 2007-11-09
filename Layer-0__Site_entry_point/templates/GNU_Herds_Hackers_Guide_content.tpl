@@ -383,6 +383,7 @@ Suite 225, San Francisco, CA 94107, USA
 	<tr> <td><b>Martin</b>   <td>Auditor and Quality Assurance. Public Relations.
 	<tr> <td><b>Neal</b>     <td>Initial proposal, project Chapter, Public Relations, etc.
 	<tr> <td><b>RMS</b>      <td>Ethics Officer; he evaluates the project as a whole.
+	<tr> <td><b>Sameer Naik</b> <td>HTML/CSS Adviser and Developer.
 	<tr> <td><b>Victor</b>   <td>Web developer, Quality Assurance.
 	</table>
 
