@@ -164,7 +164,7 @@ CREATE TABLE LM_TimeUnits(
 
 
 CREATE TABLE LE_Employability (
-	LE_Id	varchar(11) PRIMARY KEY CHECK (LE_Id <> '')
+	LE_Id	varchar(22) PRIMARY KEY CHECK (LE_Id <> '')
 );
 
 
@@ -361,7 +361,7 @@ CREATE TABLE Q1_Qualifications (
         QP_DesiredWageRank             varchar(90), -- point, -- NOT NULL,
         QP_LU_WageRankCurrency         char(3), -- REFERENCES LU_Currencies(LU_ThreeLetter), -- NOT NULL,
 	QP_LB_WageRankByPeriod         varchar(11), -- REFERENCES LB_ByPeriod(LB_Id), -- NOT NULL,
-        QP_CurrentEmployability        varchar(11), --  REFERENCES LE_Employability(LE_Id), -- NOT NULL,
+        QP_CurrentEmployability        varchar(22), --  REFERENCES LE_Employability(LE_Id), -- NOT NULL,
         QP_AvailableToTravel           bool, -- DEFAULT 'false', -- NOT NULL,
         QP_AvailableToChangeResidence  bool -- DEFAULT 'false' -- NOT NULL
         -- The applicant's current location is filled in the E1_Entities table.
@@ -1235,7 +1235,9 @@ INSERT INTO LM_TimeUnits VALUES ( 'years' );
 
 -- These registers must be inserted in sort according to the value of the first field:
 INSERT INTO LE_Employability VALUES ( 'Working' );
+INSERT INTO LE_Employability VALUES ( 'Working and Studying' );
 INSERT INTO LE_Employability VALUES ( 'Freelance' );
+INSERT INTO LE_Employability VALUES ( 'Freelance and Studying' );
 INSERT INTO LE_Employability VALUES ( 'Studying' );
 INSERT INTO LE_Employability VALUES ( 'Without job' );
 
