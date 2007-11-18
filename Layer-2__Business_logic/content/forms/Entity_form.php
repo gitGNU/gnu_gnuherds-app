@@ -155,7 +155,8 @@ abstract class EntityForm
 		}
 
 		// Report to the user
-		$this->processingResult .= "<p>&nbsp;</p><p>".vsprintf(gettext('Success. An email has been sent to %s with the instructions to activate the account.'),"<span class='must'>{$_POST['Email']}</span>")."<p>\n";
+		$this->processingResult .= "<p>&nbsp;</p><p>".vsprintf(gettext('Success. An email has been sent to %s with the instructions to activate the account.'),"<span class='must'>{$_POST['Email']}</span>")."</p>";
+		$this->processingResult .= "<p>".vsprintf(gettext('If you do not receive such email, you can inform about it at %s.'),"<a href='mailto:association@gnuherds.org'>association@gnuherds.org</a>")."</p>";
 	}
 }
 ?>
