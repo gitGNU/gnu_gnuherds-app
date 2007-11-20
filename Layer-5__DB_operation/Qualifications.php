@@ -116,7 +116,7 @@ class Qualifications
 		$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
 		$AcademicQualificationDescription = trim($_POST['AcademicQualificationDescription']);
 
-		$sqlQuery = "PREPARE query(integer,text,text,text) AS  INSERT INTO Q1_Qualifications (Q1_E1_Id,Q1_ProfessionalExperienceSinceYear,Q1_LA_Id,Q1_AcademicQualificationDescription) VALUES ($1,$2,$3,$4);  EXECUTE query('$EntityId','$ProfessionalExperienceSinceYear','$AcademicQualification','$AcademicQualificationDescription');";
+		$sqlQuery = "PREPARE query(integer,text,text,text) AS  INSERT INTO Q1_Qualifications (Q1_E1_Id,Q1_ProfessionalExperienceSinceYear,Q1_LA_Id,Q1_AcademicQualificationDescription) VALUES ($1,$2,$3,$4);  EXECUTE query('$EntityId','".pg_escape_string($ProfessionalExperienceSinceYear)."','$AcademicQualification','".pg_escape_string($AcademicQualificationDescription)."');";
 		$this->postgresql->execute($sqlQuery,1);
 
 
@@ -189,7 +189,7 @@ class Qualifications
 				$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
 				$AcademicQualificationDescription = trim($_POST['AcademicQualificationDescription']);
 
-				$sqlQuery = "PREPARE query(text,text,text,bool,integer) AS  UPDATE Q1_Qualifications SET Q1_ProfessionalExperienceSinceYear=$1,Q1_LA_Id=$2,Q1_AcademicQualificationDescription=$3,Q1_CompletedEdition=$4 WHERE Q1_E1_Id=$5;  EXECUTE query('$ProfessionalExperienceSinceYear','$AcademicQualification','$AcademicQualificationDescription','$completedEdition','{$_SESSION['EntityId']}');";
+				$sqlQuery = "PREPARE query(text,text,text,bool,integer) AS  UPDATE Q1_Qualifications SET Q1_ProfessionalExperienceSinceYear=$1,Q1_LA_Id=$2,Q1_AcademicQualificationDescription=$3,Q1_CompletedEdition=$4 WHERE Q1_E1_Id=$5;  EXECUTE query('".pg_escape_string($ProfessionalExperienceSinceYear)."','$AcademicQualification','".pg_escape_string($AcademicQualificationDescription)."','$completedEdition','{$_SESSION['EntityId']}');";
 				$this->postgresql->execute($sqlQuery,1);
 
 				// Profiles
@@ -261,7 +261,7 @@ class Qualifications
 				$WageRankByPeriod = isset($_POST['WageRankByPeriod']) ? trim($_POST['WageRankByPeriod']) : '';
 				$CurrentEmployability = isset($_POST['CurrentEmployability']) ? trim($_POST['CurrentEmployability']) : '';
 
-				$sqlQuery = "PREPARE query(text,text,text,text,text,bool,integer) AS  UPDATE Q1_Qualifications SET QP_LK_DesiredContractType=$1,QP_DesiredWageRank=$2,QP_LU_WageRankCurrency=$3,QP_LB_WageRankByPeriod=$4,QP_CurrentEmployability=$5,Q1_CompletedEdition=$6 WHERE Q1_E1_Id=$7;  EXECUTE query('$DesiredContractType','$DesiredWageRank','$WageRankCurrency','$WageRankByPeriod','$CurrentEmployability','$completedEdition','{$_SESSION['EntityId']}');";
+				$sqlQuery = "PREPARE query(text,text,text,text,text,bool,integer) AS  UPDATE Q1_Qualifications SET QP_LK_DesiredContractType=$1,QP_DesiredWageRank=$2,QP_LU_WageRankCurrency=$3,QP_LB_WageRankByPeriod=$4,QP_CurrentEmployability=$5,Q1_CompletedEdition=$6 WHERE Q1_E1_Id=$7;  EXECUTE query('$DesiredContractType','".pg_escape_string($DesiredWageRank)."','".pg_escape_string($WageRankCurrency)."','$WageRankByPeriod','$CurrentEmployability','$completedEdition','{$_SESSION['EntityId']}');";
 				$this->postgresql->execute($sqlQuery,1);
 			break;
 

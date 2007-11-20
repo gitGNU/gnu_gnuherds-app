@@ -54,7 +54,7 @@ class FreeSoftwareExperiences
 			$contributionProject = trim($_POST['ContributionsListProject'][$i]);
 			$contributionDescrition = trim($_POST['ContributionsListDescription'][$i]);
 			$contributionURI = trim($_POST['ContributionsListURI'][$i]);
-			$sqlQuery = "PREPARE query(integer,text,text,text) AS  INSERT INTO E2_EntityFreeSoftwareExperiences (E2_E1_Id,E2_Project,E2_Description,E2_URI) VALUES ($1,$2,$3,$4);  EXECUTE query('$_SESSION[EntityId]','$contributionProject','$contributionDescrition','$contributionURI');";
+			$sqlQuery = "PREPARE query(integer,text,text,text) AS  INSERT INTO E2_EntityFreeSoftwareExperiences (E2_E1_Id,E2_Project,E2_Description,E2_URI) VALUES ($1,$2,$3,$4);  EXECUTE query('$_SESSION[EntityId]','".pg_escape_string($contributionProject)."','".pg_escape_string($contributionDescrition)."','".pg_escape_string($contributionURI)."');";
 			$this->postgresql->execute($sqlQuery,1);
 		}
 	}
@@ -68,7 +68,7 @@ class FreeSoftwareExperiences
 
 	public function entityHasThisFSProjectExperience($EntityId,$FSProject)
 	{
-		$sqlQuery = "PREPARE query(integer,text) AS  SELECT E2_E1_Id FROM E2_EntityFreeSoftwareExperiences WHERE E2_E1_Id=$1 AND E2_Project=$2;  EXECUTE query('$EntityId','$FSProject');";
+		$sqlQuery = "PREPARE query(integer,text) AS  SELECT E2_E1_Id FROM E2_EntityFreeSoftwareExperiences WHERE E2_E1_Id=$1 AND E2_Project=$2;  EXECUTE query('$EntityId','".pg_escape_string($FSProject)."');";
 		$result = $this->postgresql->getOneField($sqlQuery,1);
 
 		if ( count($result) == 1 )

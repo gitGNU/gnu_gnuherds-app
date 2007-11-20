@@ -120,7 +120,7 @@ class Skills
 
 	public function addSkill($skill)
 	{
-		$sqlQuery = "PREPARE query(text) AS  INSERT INTO LI_Skills (LI_Id,LI_LH_Id) VALUES ($1,'Pending');  EXECUTE query('$skill');";
+		$sqlQuery = "PREPARE query(text) AS  INSERT INTO LI_Skills (LI_Id,LI_LH_Id) VALUES ($1,'Pending');  EXECUTE query('".pg_escape_string($skill)."');";
 		$this->postgresql->execute($sqlQuery,1);
 	}
 
@@ -149,7 +149,7 @@ class Skills
 			$skillList = trim($_POST['SkillList'][$i]);
 			$skillKnowledgeLevelList = trim($_POST['SkillKnowledgeLevelList'][$i]);
 			$skillExperienceLevelList = trim($_POST['SkillExperienceLevelList'][$i]);
-			$sqlQuery = "PREPARE query(integer,text,text,text) AS  INSERT INTO R24_Qualification2Skills (R24_Q1_E1_Id,R24_LI_Id,R24_LG_Id,R24_LN_Id) VALUES ($1,$2,$3,$4);  EXECUTE query('$_SESSION[EntityId]','$skillList','$skillKnowledgeLevelList','$skillExperienceLevelList');";
+			$sqlQuery = "PREPARE query(integer,text,text,text) AS  INSERT INTO R24_Qualification2Skills (R24_Q1_E1_Id,R24_LI_Id,R24_LG_Id,R24_LN_Id) VALUES ($1,$2,$3,$4);  EXECUTE query('$_SESSION[EntityId]','".pg_escape_string($skillList)."','$skillKnowledgeLevelList','$skillExperienceLevelList');";
 			$this->postgresql->execute($sqlQuery,1);
 		}
 	}
@@ -185,7 +185,7 @@ class Skills
 			$skillList = trim($_POST['SkillList'][$i]);
 			$skillKnowledgeLevelList = trim($_POST['SkillKnowledgeLevelList'][$i]);
 			$skillExperienceLevelList = trim($_POST['SkillExperienceLevelList'][$i]);
-			$sqlQuery = "PREPARE query(integer,text,text,text) AS  INSERT INTO R14_JobOffer2Skills (R14_J1_Id,R14_LI_Id,R14_LG_Id,R14_LN_Id) VALUES ($1,$2,$3,$4);  EXECUTE query('$Id','$skillList','$skillKnowledgeLevelList','$skillExperienceLevelList');";
+			$sqlQuery = "PREPARE query(integer,text,text,text) AS  INSERT INTO R14_JobOffer2Skills (R14_J1_Id,R14_LI_Id,R14_LG_Id,R14_LN_Id) VALUES ($1,$2,$3,$4);  EXECUTE query('$Id','".pg_escape_string($skillList)."','$skillKnowledgeLevelList','$skillExperienceLevelList');";
 			$this->postgresql->execute($sqlQuery,1);
 		}
 	}

@@ -261,7 +261,7 @@ class JobOffer
 
 		$Vacancies = isset($_POST['Vacancies']) ? trim($_POST['Vacancies']) : '';
 
-		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,text) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9);  EXECUTE query('$EntityId','$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies');";
+		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,text) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9);  EXECUTE query('$EntityId','".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."');";
 		$this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 
@@ -375,7 +375,7 @@ class JobOffer
 
 				$Vacancies = isset($_POST['Vacancies']) ? trim($_POST['Vacancies']) : '';
 
-				$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCompanyApplications=$6,J1_AllowOrganizationApplications=$7,J1_Vacancies=$8,J1_CompletedEdition=$9 WHERE J1_Id=$10;  EXECUTE query('$EmployerJobOfferReference','$ExpirationDate','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','$Vacancies','$completedEdition','$J1_Id');";
+				$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCompanyApplications=$6,J1_AllowOrganizationApplications=$7,J1_Vacancies=$8,J1_CompletedEdition=$9 WHERE J1_Id=$10;  EXECUTE query('".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','$completedEdition','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
 			break;
 
@@ -383,7 +383,7 @@ class JobOffer
 				$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
 				$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
 
-				$sqlQuery = "PREPARE query(text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_ProfessionalExperienceSinceYear=$1,J1_LA_Id=$2,J1_CompletedEdition=$3 WHERE J1_Id=$4;  EXECUTE query('$ProfessionalExperienceSinceYear','$AcademicQualification','$completedEdition','$J1_Id');";
+				$sqlQuery = "PREPARE query(text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_ProfessionalExperienceSinceYear=$1,J1_LA_Id=$2,J1_CompletedEdition=$3 WHERE J1_Id=$4;  EXECUTE query('".pg_escape_string($ProfessionalExperienceSinceYear)."','$AcademicQualification','$completedEdition','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
 
 				// Profiles
@@ -425,7 +425,7 @@ class JobOffer
 			case 'projects':
 				$FreeSoftwareExperiences = isset($_POST['FreeSoftwareExperiences']) ? trim($_POST['FreeSoftwareExperiences']) : '';
 
-				$sqlQuery = "PREPARE query(text,integer) AS  UPDATE J1_JobOffers SET J1_FreeSoftwareProjects=$1 WHERE J1_Id=$2;  EXECUTE query('$FreeSoftwareExperiences','$J1_Id');";
+				$sqlQuery = "PREPARE query(text,integer) AS  UPDATE J1_JobOffers SET J1_FreeSoftwareProjects=$1 WHERE J1_Id=$2;  EXECUTE query('".pg_escape_string($FreeSoftwareExperiences)."','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
 
 				// Saving this section does not need to update the J1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
@@ -440,7 +440,7 @@ class JobOffer
 					$AvailableToTravel = 'true';
 				else	$AvailableToTravel = 'false';
 
-				$sqlQuery = "PREPARE query(text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_City=$1,J1_StateProvince=$2,J1_LO_Country=$3,J1_AvailableToTravel=$4 WHERE J1_Id=$5;  EXECUTE query('$City','$StateProvince','$CountryCode','$AvailableToTravel','$J1_Id');";
+				$sqlQuery = "PREPARE query(text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_City=$1,J1_StateProvince=$2,J1_LO_Country=$3,J1_AvailableToTravel=$4 WHERE J1_Id=$5;  EXECUTE query('".pg_escape_string($City)."','".pg_escape_string($StateProvince)."','".pg_escape_string($CountryCode)."','$AvailableToTravel','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
 
 				// Saving this section does not need to update the J1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
@@ -454,7 +454,7 @@ class JobOffer
 				$EstimatedEffort = isset($_POST['EstimatedEffort']) ? trim($_POST['EstimatedEffort']) : '';
 				$TimeUnit = isset($_POST['TimeUnit']) ? trim($_POST['TimeUnit']) : '';
 
-				$sqlQuery = "PREPARE query(text,text,text,text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_LK_ContractType=$1,J1_WageRank=$2,J1_LU_Currency=$3,J1_LB_WageRankByPeriod=$4,J1_EstimatedEffort=$5,J1_LM_TimeUnit=$6,J1_CompletedEdition=$7 WHERE J1_Id=$8;  EXECUTE query('$ContractType','$WageRank','$WageRankCurrency','$WageRankByPeriod','$EstimatedEffort','$TimeUnit','$completedEdition','$J1_Id');";
+				$sqlQuery = "PREPARE query(text,text,text,text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_LK_ContractType=$1,J1_WageRank=$2,J1_LU_Currency=$3,J1_LB_WageRankByPeriod=$4,J1_EstimatedEffort=$5,J1_LM_TimeUnit=$6,J1_CompletedEdition=$7 WHERE J1_Id=$8;  EXECUTE query('$ContractType','".pg_escape_string($WageRank)."','".pg_escape_string($WageRankCurrency)."','$WageRankByPeriod','".pg_escape_string($EstimatedEffort)."','$TimeUnit','$completedEdition','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
 			break;
 
