@@ -85,7 +85,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  2='</a>'
 	}To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the gnuherds.org domain to offices managed by %1FSF%2 staff.{/t}
 	</p></li>
-	<li><p><span class="modification">{t}ONGOING PROCESS{/t}</span>: {t}Association announcement.{/t}</p></li>
+	<li><p>{t}Association announcement.{/t}</p></li>
 	<li><p><span class="modification">{t}ONGOING PROCESS{/t}</span>: {t}Translate the web site to other languages.{/t}</p></li>
 	<li><p>{t}Work on e-Vote subjects:{/t}</p>
 		<ul>
