@@ -230,7 +230,7 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
 
 	-- Others
         E1_Revoked         bool NOT NULL DEFAULT 'false', -- Account disabled due to the members does not adhere to the Code of Ethics.
-        E1_EntityType      varchar(23) NOT NULL CHECK (E1_EntityType <> ''), -- We have to add this field due to we can not use OO PostgreSQL features. Values will be: "Person", "Company" or "non-profit Organization". 
+        E1_EntityType      varchar(23) NOT NULL CHECK (E1_EntityType <> ''), -- We have to add this field due to we can not use Object Oriented PostgreSQL features. Values will be: "Person", "Company" or "non-profit Organization". 
 
 	-- Saved configuration
 	E1_Locale          char(5) NOT NULL CHECK (E1_Locale <> '') DEFAULT 'en_US', -- To be used by the cron jobs to send mensages to each entity with its own locale.
