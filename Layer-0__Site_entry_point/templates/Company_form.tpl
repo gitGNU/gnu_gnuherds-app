@@ -81,11 +81,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td align="right"><label for="CompanyName">{t}Name{/t}</label></td>
 <td> <input type="text" name="CompanyName" id="CompanyName" size="20" maxlength="30" class="notRequired" value="{$data.CompanyName}"> </td>
 <th rowspan="5" width="100%">
-<th rowspan="5">
+<th rowspan="5" valign="top">
 {if $data.ViewPhotoOrLogo eq 'true' }
 	<img src="photo?acl=me&id={$smarty.session.EntityId}" align="left" alt="" border="0" hspace="0" vspace="0">
 {else}
-	<img src="/images/default/Company_or_non-profit_Organization.png" width="180" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
+	<img src="/images/default/Company_or_non-profit_Organization.png" width="110" height="80" align="left" alt="" border="1" hspace="0" vspace="0">
 {/if}
 </tr>
 
