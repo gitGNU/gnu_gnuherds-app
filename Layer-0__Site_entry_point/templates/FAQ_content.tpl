@@ -48,9 +48,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<ul>
 		<li> {t escape='no'
-		  1='<a href="http://www.gnu.org/licenses/agpl.html">'
+		  1='<a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">'
 		  2='</a>'
-		}Use a license to cover use of the software over a computer network. The current %1Affero GPL%2 license will be upgraded to the GNU AGPL license when it be released. Anyhow, the project is always open to discuss this and any other subject.{/t}
+		}Use a license to cover use of the software over a computer network. We are using the %1GNU AGPLv3%2 license. Anyhow, the project is always open to discuss this and any other subject.{/t}
 
 		<li> {t escape='no'
 		  1='<a href="/doc/GNUHerds__ER__Logical-model.png">'
