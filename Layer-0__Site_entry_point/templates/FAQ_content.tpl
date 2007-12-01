@@ -378,6 +378,15 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  2='</strong>'
 	  3='<i>'
 	  4='</i>'
+	}%1Mac OS X%2 is tagged as %3Non-Free Software%4.{/t}
+	</li>
+
+	<li>
+	{t escape='no'
+	  1='<strong>'
+	  2='</strong>'
+	  3='<i>'
+	  4='</i>'
 	}%1Microsoft Windows Vista%2 is tagged as %3Non-Free Software%4.{/t}
 	</li>
 
