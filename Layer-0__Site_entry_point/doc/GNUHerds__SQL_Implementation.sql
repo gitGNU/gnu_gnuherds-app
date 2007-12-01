@@ -190,12 +190,12 @@ CREATE TABLE LT_SkillSetTypes (
 );
 
 CREATE TABLE LH_Skills (
-	LH_Id	varchar(20) PRIMARY KEY CHECK (LH_Id <> '')
+	LH_Id	varchar(23) PRIMARY KEY CHECK (LH_Id <> '')
 );
 
 CREATE TABLE LI_Skills (
 	LI_Id	varchar(153) PRIMARY KEY CHECK (LI_Id <> ''),
-	LI_LH_Id varchar(20) REFERENCES LH_Skills(LH_Id) NOT NULL,
+	LI_LH_Id varchar(23) REFERENCES LH_Skills(LH_Id) NOT NULL,
 	LI_LT_Id varchar(35), -- REFERENCES LT_SkillSetTypes(LT_Id) NOT NULL
 
 	-- To make the audit and maintenance of the LI_LH_Id skill tags easier.
@@ -1296,6 +1296,7 @@ INSERT INTO LH_Skills VALUES ( 'Abstract' ); -- After trying to classify it, we 
 -- 1) Classifying Software (programs, languages, protocols, specifications, software distributions, etc.) as Free or Non-Free Software
 INSERT INTO LH_Skills VALUES ( 'Free Software' );
 INSERT INTO LH_Skills VALUES ( 'Almost-Free Software' );
+INSERT INTO LH_Skills VALUES ( 'Partially-Free Software' );
 INSERT INTO LH_Skills VALUES ( 'Non-Free Software' );
 
 -- 2) Classifying Hardware

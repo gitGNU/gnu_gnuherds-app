@@ -84,6 +84,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {* Classifying Software (programs, languages, protocols, specifications, software distributions, etc.) as Free or Non-Free Software *}
 {if $data.CheckList[$i] eq "Free Software"}<label title="{t}This skill is Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
 {if $data.CheckList[$i] eq "Almost-Free Software"}<label title="{t}This skill is almost Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Partially-Free Software"}<label title="{t}This skill is partially Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
 {if $data.CheckList[$i] eq "Non-Free Software"}<label title="{t}This skill is not Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
 {* Classifying Hardware *}
 {if $data.CheckList[$i] eq "Hardware"}<label title="{t}This skill is hardware{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}

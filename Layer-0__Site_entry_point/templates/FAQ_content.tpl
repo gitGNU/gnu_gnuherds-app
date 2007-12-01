@@ -197,6 +197,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<ul>
 	<li><i>{t}Free Software{/t}</i></li>
 	<li><i>{t}Almost-Free Software{/t}</i>, {t}only for software distributions{/t}.</li>
+	<li><i>{t}Partially-Free Software{/t}</i>, {t}only for software distributions{/t}.</li>
 	<li><i>{t}Non-Free Software{/t}</i></li>
 	</ul>
 
@@ -324,7 +325,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  1='<strong>Ubuntu</strong>'
 	  2='<i>'
 	  3='</i>'
-	}%1 is %2Almost-Free Software%3 because it contains Non-Free Software.{/t}
+	  4='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-11/msg00071.html">'
+	  5='</a>'
+	}%1 is %2Partially-Free Software%3 %4because%5 it is made of many programs; some are free and some are not.{/t}
 	</li>
 
 	<li>
