@@ -55,6 +55,7 @@ class Authenticate
 
 			$authenticationData[0] = $array[0][0];
 			$authenticationData[1] = $array[2][0];
+
 			if ( $array[3][0] == 't' )
 				$authenticationData[2] = true;
 			else
