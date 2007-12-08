@@ -32,7 +32,7 @@ class PostgreSQL
 	public function getPostgreSQLObject($sqlQuery,$prepared=0)
 	{
 		// Connect
-		$GLOBALS["PG_CONNECT"] = pg_connect("dbname=www.gnuherds.org user=www-data");
+		$GLOBALS["PG_CONNECT"] = pg_connect("dbname=gnuherds user=www-data");
 		if (!$GLOBALS["PG_CONNECT"])
 		{
 			$error = "<p>".gettext("ERROR: Connection to database failed!.")."</p>\n";
