@@ -54,6 +54,16 @@ class AccessControlList
     		}
 	}
 
+	public function checkSkillsAdminAccess()
+	{
+		$this->checkProperlyLogged();
+
+		if ( $_SESSION['SkillsAdmin'] == true )
+			$this->granted();
+		else
+			$this->notGranted();
+	}
+
 
 	public function checkQualificationsAccess($mode,$E1_Id)
 	{

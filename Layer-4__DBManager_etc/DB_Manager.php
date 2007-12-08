@@ -497,6 +497,59 @@ class DBManager
 		return $skills->getTaggedSkillsList();
 	}
 
+	public function getPendingSkillsList()
+	{
+		$acl = new AccessControlList();
+		$acl->checkSkillsAdminAccess();
+
+		$skills = new Skills();
+		return $skills->getPendingSkillsList();
+	}
+
+	public function delNotUsedPendingSkills()
+	{
+		//XXX: ACL: This method deletes skills.  Add support to check sysadmin authentication for website-frontend + DB-backend.
+
+		$skills = new Skills();
+		return $skills->delNotUsedPendingSkills();
+	}
+
+	public function getSkillSetTypesList()
+	{
+		$acl = new AccessControlList();
+		$acl->checkProperlyLogged();
+
+		$skills = new Skills();
+		return $skills->getSkillSetTypesList();
+	}
+
+	public function getSkillTagList()
+	{
+		$acl = new AccessControlList();
+		$acl->checkProperlyLogged();
+
+		$skills = new Skills();
+		return $skills->getSkillTagList();
+	}
+
+	public function isSkillAlreadyInDataBase($skill)
+	{
+		$acl = new AccessControlList();
+		$acl->checkSkillsAdminAccess();
+
+		$skills = new Skills();
+		return $skills->isSkillAlreadyInDataBase($skill);
+	}
+
+	public function getSkill($skill)
+	{
+		$acl = new AccessControlList();
+		$acl->checkSkillsAdminAccess();
+
+		$skills = new Skills();
+		return $skills->getSkill($skill);
+	}
+
 	public function addSkill($skill)
 	{
 		$acl = new AccessControlList();
@@ -504,6 +557,33 @@ class DBManager
 
 		$skills = new Skills();
 		return $skills->addSkill($skill);
+	}
+
+	public function delSkill($skill)
+	{
+		$acl = new AccessControlList();
+		$acl->checkSkillsAdminAccess();
+
+		$skills = new Skills();
+		return $skills->delSkill($skill);
+	}
+
+	public function updateSkill($skill,$force)
+	{
+		$acl = new AccessControlList();
+		$acl->checkSkillsAdminAccess();
+
+		$skills = new Skills();
+		return $skills->updateSkill($skill,$force);
+	}
+
+	public function renameJobOffersAndQualificationsSkills($from,$to)
+	{
+		$acl = new AccessControlList();
+		$acl->checkSkillsAdminAccess();
+
+		$skills = new Skills();
+		return $skills->renameJobOffersAndQualificationsSkills($from,$to);
 	}
 
 	public function getRequestedCertificationsForEntity()

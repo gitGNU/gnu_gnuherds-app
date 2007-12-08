@@ -35,16 +35,17 @@ class Authenticate
 
 	public function checkLogin()
 	{
-		$sqlQuery = "PREPARE query(text) AS  SELECT E1_Id,E1_EntityType,E1_Password FROM E1_Entities WHERE E1_Email=$1;  EXECUTE query('$_POST[Email]');";
+		$sqlQuery = "PREPARE query(text) AS  SELECT E1_Id,E1_Password,E1_EntityType,E1_SkillsAdmin FROM E1_Entities WHERE E1_Email=$1;  EXECUTE query('$_POST[Email]');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery, 1);
 
 		$array = array();
 		$array[0] = pg_fetch_all_columns($result, 0);
 		$array[1] = pg_fetch_all_columns($result, 1);
 		$array[2] = pg_fetch_all_columns($result, 2);
+		$array[3] = pg_fetch_all_columns($result, 3);
 
-		if ( isset($array[2][0]) )
-			$stored_hash = $array[2][0];
+		if ( isset($array[1][0]) )
+			$stored_hash = $array[1][0];
 		else
 			return false;
 
@@ -52,8 +53,12 @@ class Authenticate
 		{
 			$authenticationData = array();
 
-			$authenticationData[0] = $array[1][0];
-			$authenticationData[1] = $array[0][0];
+			$authenticationData[0] = $array[0][0];
+			$authenticationData[1] = $array[2][0];
+			if ( $array[3][0] == 't' )
+				$authenticationData[2] = true;
+			else
+				$authenticationData[2] = false;
 
 			return $authenticationData;
 		}

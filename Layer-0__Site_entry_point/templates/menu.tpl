@@ -83,6 +83,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	&nbsp;&nbsp;<a href="settings" class="menu3" target="_top">{'Settings'|gettext|strip:'&nbsp;'}</a><br>
 {/if}
 
+{if $smarty.session.Logged eq '1' and $smarty.session.SkillsAdmin == true }
+	&nbsp;&nbsp;<a href="admin" class="menu3" target="_top">{'Administration'|gettext|strip:'&nbsp;'}</a><br>
+{/if}
+
 </p>
 {/if}
 

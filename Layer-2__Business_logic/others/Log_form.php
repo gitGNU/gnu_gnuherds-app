@@ -39,9 +39,10 @@ class LogForm
 
 		$array = array();
 		$array = $manager->authenticateEntity(); // Methods take the values from the global $_POST[] array.
-		$_SESSION['LoginType'] = $array[0];
-		$_SESSION['EntityId'] = $array[1];
+		$_SESSION['EntityId'] = $array[0];
+		$_SESSION['LoginType'] = $array[1];
 		$_SESSION['LoginEmail'] = $_POST['Email'];
+		$_SESSION['SkillsAdmin'] = $array[2];
 
 		if ($_SESSION['LoginType'] == false)
 		{

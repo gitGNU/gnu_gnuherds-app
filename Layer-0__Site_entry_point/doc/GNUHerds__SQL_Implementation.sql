@@ -199,8 +199,10 @@ CREATE TABLE LI_Skills (
 	LI_LT_Id varchar(35), -- REFERENCES LT_SkillSetTypes(LT_Id) NOT NULL
 
 	-- To make the audit and maintenance of the LI_LH_Id skill tags easier.
-	LI_LicenseName varchar(255),
-	LI_LicenseURL  varchar(255)
+	LI_LicenseName varchar(128), -- XXX: We could add a new table to keep a license list later.
+	LI_LicenseURL  varchar(255),
+
+	LI_ClassificationRationale text -- Rationale about why the skills is tagged as being LI_LH_Id.
 );
 
 CREATE TABLE LG_KnowledgeLevel (
@@ -231,6 +233,9 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
 	-- Others
         E1_Revoked         bool NOT NULL DEFAULT 'false', -- Account disabled due to the members does not adhere to the Code of Ethics.
         E1_EntityType      varchar(23) NOT NULL CHECK (E1_EntityType <> ''), -- We have to add this field due to we can not use Object Oriented PostgreSQL features. Values will be: "Person", "Company" or "non-profit Organization". 
+
+	-- Properties of web application administration roles
+        E1_SkillsAdmin              bool NOT NULL DEFAULT 'false', -- Skills admin with all permission granted.
 
 	-- Saved configuration
 	E1_Locale          char(5) NOT NULL CHECK (E1_Locale <> '') DEFAULT 'en_US', -- To be used by the cron jobs to send mensages to each entity with its own locale.
