@@ -1287,11 +1287,14 @@ INSERT INTO LT_SkillSetTypes VALUES ( '20', 'Translation tools' );
 
 
 
--- Skills classification:
+-- Skills classification:  Read the email thread: http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-11/msg00066.html
 
+-- *) Initial flag
 INSERT INTO LH_Skills VALUES ( 'Pending' ); -- Pending to classify.
+
+-- *) General flags
 INSERT INTO LH_Skills VALUES ( 'Unknown' ); -- After trying to classify it, we conclude such skill is unknown.
-INSERT INTO LH_Skills VALUES ( 'Abstract' ); -- After trying to classify it, we conclude such skill does not reference a specific Software (program, language, protocol, specification, software distribution, etc.), Hardware or Documentation. For example, the "IP Networking protocols" skills is classified as 'Abstract'.
+INSERT INTO LH_Skills VALUES ( 'Abstract' ); -- After trying to classify it, we conclude such skill does not reference a specific Software (program, language, protocol, specification, software distribution, etc.), Hardware, Documentation, Data or Art. For example, the "IP Networking protocols" skills is classified as 'Abstract'.
 
 -- 1) Classifying Software (programs, languages, protocols, specifications, software distributions, etc.) as Free or Non-Free Software
 INSERT INTO LH_Skills VALUES ( 'Free Software' );
@@ -1303,7 +1306,19 @@ INSERT INTO LH_Skills VALUES ( 'Non-Free Software' );
 INSERT INTO LH_Skills VALUES ( 'Hardware' );
 
 -- 3) Classifying Documentation
-INSERT INTO LH_Skills VALUES ( 'Documentation' );
+INSERT INTO LH_Skills VALUES ( 'Documentation' ); -- If we do not want invest time to check if a documentation item is free or not, we can just tag it as Documentation, without specifying its freedomness.
+INSERT INTO LH_Skills VALUES ( 'Free Documentation' );
+INSERT INTO LH_Skills VALUES ( 'Non-Free Documentation' );
+
+-- 4) Classifying Data
+INSERT INTO LH_Skills VALUES ( 'Data' ); -- If we do not want invest time to check if a data item is free or not, we can just tag it as Data, without specifying its freedomness.
+INSERT INTO LH_Skills VALUES ( 'Free Data' );
+INSERT INTO LH_Skills VALUES ( 'Non-Free Data' );
+
+-- 5) Classifying Art
+INSERT INTO LH_Skills VALUES ( 'Art' ); -- If we do not want invest time to check if a art item is sharable or not, we can just tag it as Art, without specifying it.
+INSERT INTO LH_Skills VALUES ( 'Sharable Art' );
+INSERT INTO LH_Skills VALUES ( 'Non-Sharable Art' );
 
 
 
