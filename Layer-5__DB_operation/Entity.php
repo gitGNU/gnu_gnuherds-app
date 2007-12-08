@@ -38,7 +38,7 @@ class Entity
 
 	public function getEntity($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT E1_Email,E1_Revoked,E1_EntityType,E1_Street,E1_Suite,E1_City,E1_StateProvince,E1_PostalCode,E1_LO_Country,E1_LO_Nationality,E1_BirthYear,E1_IpPhoneOrVideo,E1_Landline,E1_MobilePhone,E1_Website,EP_FirstName,EP_LastName,EP_MiddleName,EC_CompanyName,EO_OrganizationName, E1_WantEmail FROM E1_Entities WHERE E1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT E1_Email,E1_Revoked,E1_EntityType,E1_Street,E1_Suite,E1_City,E1_StateProvince,E1_PostalCode,E1_LO_Country,E1_LO_Nationality,E1_BirthYear,E1_IpPhoneOrVideo,E1_Landline,E1_MobilePhone,E1_Website,EP_FirstName,EP_LastName,EP_MiddleName,EC_CompanyName,EO_OrganizationName,E1_WantEmail,E1_Trusted FROM E1_Entities WHERE E1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array = array();
@@ -64,6 +64,7 @@ class Entity
 		$array[18] = pg_fetch_all_columns($result, 18); // EC_CompanyName
 		$array[19] = pg_fetch_all_columns($result, 19); // EO_OrganizationName
 		$array[20] = pg_fetch_all_columns($result, 20); // E1_WantEmail
+		$array[21] = pg_fetch_all_columns($result, 21); // E1_Trusted
 
 		for( $i=0; $i < count($array[0]); $i++) // LO_Name for E1_LO_Country
 		{

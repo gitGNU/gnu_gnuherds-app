@@ -179,32 +179,10 @@ class ViewJobOfferForm
 		$this->data['ExperienceLevelList'] = $result[45];
 		$this->data['CheckList'] = $result[46];
 
-		// Do not show Non-Free Software or Pending skills
-		$count = count($this->data['CheckList']);
-		for ($i=0,$j=0; $i < $count; $i++)
-		{
-			if ( $this->data['CheckList'][$i]=='Non-Free Software' or $this->data['CheckList'][$i]=='Pending' )
-			{
-			}
-			else
-			{
-				$this->data['SkillList'][$j] = $this->data['SkillList'][$i];
-				$this->data['KnowledgeLevelList'][$j] = $this->data['KnowledgeLevelList'][$i];
-				$this->data['ExperienceLevelList'][$j] = $this->data['ExperienceLevelList'][$i];
-				$this->data['CheckList'][$j] = $this->data['CheckList'][$i];
-				$j++;
-			}
-		}
-		for( $i=$j; $i < $count; $i++)
-		{
-			unset( $this->data['SkillList'][$i] );
-			unset( $this->data['KnowledgeLevelList'][$i] );
-			unset( $this->data['ExperienceLevelList'][$i] );
-			unset( $this->data['CheckList'][$i] );
-		}
-
+		// Certifications
 		$this->data['CertificationsList'] = $result[50];
 
+		// Contributions/FreeSoftwareExperiences table
 		$this->data['FreeSoftwareExperiences'] = trim($result[16][0]);
 
 		// Languages table
@@ -270,6 +248,36 @@ class ViewJobOfferForm
 			$this->data['PhotoOrLogo'] = "true";
 		else
 			$this->data['PhotoOrLogo'] = "false";
+
+
+		// Qualifications and JobOffers of 'trusted' entities (FSF accounts, etc.) are not filtered.
+		if ( $result[21][0] == 'f' )
+		{
+			// Do not show Non-Free Software or Pending skills
+
+			$count = count($this->data['CheckList']);
+			for ($i=0,$j=0; $i < $count; $i++)
+			{
+				if ( $this->data['CheckList'][$i]=='Non-Free Software' or $this->data['CheckList'][$i]=='Pending' )
+				{
+				}
+				else
+				{
+					$this->data['SkillList'][$j] = $this->data['SkillList'][$i];
+					$this->data['KnowledgeLevelList'][$j] = $this->data['KnowledgeLevelList'][$i];
+					$this->data['ExperienceLevelList'][$j] = $this->data['ExperienceLevelList'][$i];
+					$this->data['CheckList'][$j] = $this->data['CheckList'][$i];
+					$j++;
+				}
+			}
+			for( $i=$j; $i < $count; $i++)
+			{
+				unset( $this->data['SkillList'][$i] );
+				unset( $this->data['KnowledgeLevelList'][$i] );
+				unset( $this->data['ExperienceLevelList'][$i] );
+				unset( $this->data['CheckList'][$i] );
+			}
+		}
 	}
 }
 ?> 

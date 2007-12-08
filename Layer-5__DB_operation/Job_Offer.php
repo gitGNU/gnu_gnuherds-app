@@ -572,6 +572,17 @@ class JobOffer
 	}
 
 
+	private function isJobOfferOwnerTrusted($J1_Id)
+	{
+		$sqlQuery = "PREPARE query(integer) AS  SELECT E1_Trusted FROM E1_Entities,J1_JobOffers WHERE E1_Id=J1_E1_Id AND J1_Id=$1;  EXECUTE query('$J1_Id');";
+		$result = $this->postgresql->getOneField($sqlQuery,1);
+
+		if ( $result[0] == 't' )
+			return true;
+		else
+			return false;
+	}
+
 	private function makeUp_VacancyTitle($J1_Id)
 	{
 		$professionalProfiles = new ProfessionalProfiles();
@@ -599,8 +610,10 @@ class JobOffer
 			if ( trim($arrayLF[$i]) != '')
 				$VacancyTitle .= ", ".gettext($arrayLF[$i]);
 
+		$trusted = $this->isJobOfferOwnerTrusted($J1_Id);
+
 		for( $i=0; $i < count($arrayLS[0]); $i++)
-			if ( trim($arrayLS[0][$i]) != '' and $arrayLS[3][$i] != 'Non-Free Software' and $arrayLS[3][$i] != 'Pending' )
+			if ( trim($arrayLS[0][$i]) != '' and ( ( $arrayLS[3][$i] != 'Non-Free Software' and $arrayLS[3][$i] != 'Pending' ) or $trusted == true ) )
 			{
 				if ( preg_match("/^.+ \((.+)\)$/", $arrayLS[0][$i], $matches ) )//   /^.+ (.+)$/
 				{

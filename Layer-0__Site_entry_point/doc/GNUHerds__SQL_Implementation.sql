@@ -231,6 +231,7 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         E1_Password        varchar(512) DEFAULT NULL CHECK (E1_Password <> ''),
 
 	-- Others
+        E1_Trusted         bool NOT NULL DEFAULT 'false', -- The web application will not block anything done by trusted entities. For example the web app will publish 'Pending'-to-classify skills present in offers and qualifications/resumes of FSF trusted accounts.
         E1_Revoked         bool NOT NULL DEFAULT 'false', -- Account disabled due to the members does not adhere to the Code of Ethics.
         E1_EntityType      varchar(23) NOT NULL CHECK (E1_EntityType <> ''), -- We have to add this field due to we can not use Object Oriented PostgreSQL features. Values will be: "Person", "Company" or "non-profit Organization". 
 
