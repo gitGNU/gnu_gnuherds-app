@@ -138,11 +138,11 @@ class ViewQualificationsForm
 		$this->data['ExperienceLevelList'] = $result[33];
 		$this->data['CheckList'] = $result[34];
 
-		// Do not show Non-Free or Pending skills
+		// Do not show Non-Free Software or Pending skills
 		$count = count($this->data['CheckList']);
 		for ($i=0,$j=0; $i < $count; $i++)
 		{
-			if ( $this->data['CheckList'][$i]=='Non-Free' or $this->data['CheckList'][$i]=='Pending' )
+			if ( $this->data['CheckList'][$i]=='Non-Free Software' or $this->data['CheckList'][$i]=='Pending' )
 			{
 			}
 			else
