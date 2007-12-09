@@ -61,7 +61,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 <form name="changeApplicationStateForm{$Id}" id="changeApplicationStateForm{$Id}" method="post" action="{$smarty.server.REQUEST_URI}">
 <input type="hidden" name="EntityId" value="{$Id}">
-<select name="ApplicationState" onChange="javascript:document.getElementById('changeApplicationStateForm{$Id}').submit();">
+<select name="ApplicationState">
 {html_options values=$applicationStatesId output=$applicationStatesIdTranslated selected=$applicationState[$i]}
 </select>
 </form>

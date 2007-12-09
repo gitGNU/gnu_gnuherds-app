@@ -51,15 +51,15 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr valign="top">
 <td align="right"><span class="must">*</span>{t}Allow applications from{/t}</td>
-<td colspan="3"> <input type="checkbox" name="AllowPersonApplications" id="AllowPersonApplications" class="required" {if $data.AllowPersonApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();"><label for="AllowPersonApplications">{t}Persons{/t}</label></td>
+<td colspan="3"> <input type="checkbox" name="AllowPersonApplications" id="AllowPersonApplications" class="required" {if $data.AllowPersonApplications eq 'true'} checked {/if}><label for="AllowPersonApplications">{t}Persons{/t}</label></td>
 </tr>
 <tr valign="top">
 <td></td>
-<td colspan="3"> <input type="checkbox" name="AllowCompanyApplications" id="AllowCompanyApplications" class="required" {if $data.AllowCompanyApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();"><label for="AllowCompanyApplications">{t}Companies{/t}</label></td>
+<td colspan="3"> <input type="checkbox" name="AllowCompanyApplications" id="AllowCompanyApplications" class="required" {if $data.AllowCompanyApplications eq 'true'} checked {/if}><label for="AllowCompanyApplications">{t}Companies{/t}</label></td>
 </tr>
 <tr valign="top">
 <td></td>
-<td colspan="3"> <input type="checkbox" name="AllowOrganizationApplications" id="AllowOrganizationApplications" class="required" {if $data.AllowOrganizationApplications eq 'true'} checked {/if} onChange="evalAcademicQualificationDisplay();"><label for="AllowOrganizationApplications">{t}non-profit Organizations{/t}</label></td>
+<td colspan="3"> <input type="checkbox" name="AllowOrganizationApplications" id="AllowOrganizationApplications" class="required" {if $data.AllowOrganizationApplications eq 'true'} checked {/if}><label for="AllowOrganizationApplications">{t}non-profit Organizations{/t}</label></td>
 </tr>
 
 {if $checks.AllowApplications neq '' }

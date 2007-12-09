@@ -81,7 +81,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </select>
 </td>
 <td>
-<select name="WageRankByPeriod" id="WageRankByPeriod" class="required" onChange="evalEstimatedEffortDisplay();">
+<select name="WageRankByPeriod" id="WageRankByPeriod" class="required">
 {html_options values=$byPeriodId output=$byPeriodName selected=$data.WageRankByPeriod}
 </select>
 </td>
