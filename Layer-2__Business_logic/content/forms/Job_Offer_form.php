@@ -506,10 +506,10 @@ class JobOfferForm extends SkillsForm
 		else
 		{
 			// Date format
-			if ( ( !preg_match('/(\d\d)\-(\d\d)\-(\d\d\d\d)/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	     		( !preg_match('/(\d\d\d\d)\-(\d\d)\-(\d\d)/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
-	     		( !preg_match('/(\d\d)\/(\d\d)\/(\d\d\d\d)/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	     		( !preg_match('/(\d\d\d\d)\/(\d\d)\/(\d\d)/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+			if ( ( !preg_match('/^(\d\d)\-(\d\d)\-(\d\d\d\d)$/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	     		( !preg_match('/^(\d\d\d\d)\-(\d\d)\-(\d\d)$/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+	     		( !preg_match('/^(\d\d)\/(\d\d)\/(\d\d\d\d)$/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	     		( !preg_match('/^(\d\d\d\d)\/(\d\d)\/(\d\d)$/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
 			{
 				$this->checkresults['general'] = "fail";
 
@@ -774,10 +774,10 @@ class JobOfferForm extends SkillsForm
 		else
 		{
 			// Date format
-			if ( ( !preg_match('/(\d\d)\-(\d\d)\-(\d\d\d\d)/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	     		( !preg_match('/(\d\d\d\d)\-(\d\d)\-(\d\d)/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
-	     		( !preg_match('/(\d\d)\/(\d\d)\/(\d\d\d\d)/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	     		( !preg_match('/(\d\d\d\d)\/(\d\d)\/(\d\d)/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+			if ( ( !preg_match('/^(\d\d)\-(\d\d)\-(\d\d\d\d)$/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	     		( !preg_match('/^(\d\d\d\d)\-(\d\d)\-(\d\d)$/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+	     		( !preg_match('/^(\d\d)\/(\d\d)\/(\d\d\d\d)$/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	     		( !preg_match('/^(\d\d\d\d)\/(\d\d)\/(\d\d)$/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
 			{
 				$this->checkresults['contract'] = "fail";
 
