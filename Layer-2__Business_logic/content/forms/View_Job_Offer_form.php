@@ -164,6 +164,7 @@ class ViewJobOfferForm
 		$this->data['WageRankByPeriod'] = $result[13][0];
 		$this->data['EstimatedEffort'] = $result[23][0];
 		$this->data['TimeUnit'] = $result[24][0];
+		$this->data['Deadline'] = $result[28][0];
 
 		$this->data['ProfessionalExperienceSinceYear'] = trim($result[14][0]);
 		$this->data['AcademicQualification'] = trim($result[15][0]);

@@ -125,6 +125,18 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 {/if}
 
+<tr>
+<td align="right"><label for="Deadline" class="raisePopUp" title="{t}The format could be for example{/t} 'dd/mm/yyyy'">{'Deadline'|gettext|strip:'&nbsp;'}</label></td>
+<td colspan="3"> <input type="text" name="Deadline" id="Deadline" size="15" class="notRequired" value="{$data.Deadline}"> </td>
+</tr>
+
+{if $checks.Deadline neq '' }
+<tr>
+<td></td>
+<td colspan="3"><p class="must">{$checks.Deadline}</p></td>
+</tr>
+{/if}
+
 <tr> <td colspan="4">&nbsp;</td> </tr> 
 
 <tr> <td colspan="4" class="subsection">&nbsp;</td> </tr>

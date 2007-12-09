@@ -391,6 +391,16 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 {/if}
 
+{if trim($data.Deadline) neq ''}
+<tr>
+<td align="right"><strong>{'Deadline'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
+<td colspan="3" class="greenLight">{$data.Deadline}</td>
+{if $data.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr>
+{/if}
+
 {/if}
 
 <tr>

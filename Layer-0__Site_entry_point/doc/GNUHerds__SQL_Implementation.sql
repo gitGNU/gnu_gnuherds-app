@@ -462,14 +462,15 @@ CREATE TABLE J1_JobOffers (
         J1_Vacancies       varchar(3),
 
         -- Contract
-        J1_LK_ContractType varchar(15), -- REFERENCES LK_ContractType(LK_Id) NOT NULL,
+        J1_LK_ContractType       varchar(15), -- REFERENCES LK_ContractType(LK_Id) NOT NULL,
         -- J1_ContractDuration varchar(255), - - - XXX: Is this field already implicit in the J1_LK_ContractType field?.
-        J1_WageRank        varchar(90), -- point, -- Minimum-Optimum
+        J1_WageRank              varchar(90), -- point, -- Minimum-Optimum
         J1_CommissionsIncentives varchar(255), -- - - - XXX: This fields is not used. If we use it, use a combo box to avoid another free-to-fill field.
-        J1_LU_Currency     char(3), -- REFERENCES LU_Currencies(LU_ThreeLetter), -- NOT NULL,
-	J1_LB_WageRankByPeriod varchar(11), -- REFERENCES LB_ByPeriod(LB_Id), -- NOT NULL,
-	J1_EstimatedEffort varchar(90),
-	J1_LM_TimeUnit varchar(6), -- REFERENCES LM_TimeUnits(LM_Id), -- NOT NULL,
+        J1_LU_Currency           char(3), -- REFERENCES LU_Currencies(LU_ThreeLetter), -- NOT NULL,
+	J1_LB_WageRankByPeriod   varchar(11), -- REFERENCES LB_ByPeriod(LB_Id), -- NOT NULL,
+	J1_EstimatedEffort       varchar(90),
+	J1_LM_TimeUnit           varchar(6), -- REFERENCES LM_TimeUnits(LM_Id), -- NOT NULL,
+	J1_Deadline              date,
         J1_LaborDay_Schedule     varchar(255), -- NOT NULL CHECK (J1_LaborDay_Schedule <> '') -- Days of labor, (e.g.: Monday-Friday), and it schedule. -- The payment can be at finishing the project. - - - XXX: This fields is not used. If we use it, use a combo box to avoid another free-to-fill field.
 
         -- Requirements: The JobOffer demand:

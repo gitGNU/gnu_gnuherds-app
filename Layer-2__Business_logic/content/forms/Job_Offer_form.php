@@ -431,6 +431,7 @@ class JobOfferForm extends SkillsForm
 				$this->data['WageRankByPeriod'] = isset($_POST['WageRankByPeriod']) ? $_POST['WageRankByPeriod'] : '';
 				$this->data['EstimatedEffort'] = isset($_POST['EstimatedEffort']) ? trim($_POST['EstimatedEffort']) : '';
 				$this->data['TimeUnit'] = isset($_POST['TimeUnit']) ? $_POST['TimeUnit'] : '';
+				$this->data['Deadline'] = isset($_POST['Deadline']) ? trim($_POST['Deadline']) : '';
 			break;
 
 			default:
@@ -767,6 +768,31 @@ class JobOfferForm extends SkillsForm
 			$this->checks['EstimatedEffort'] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 		}
 
+		if ( $this->data['Deadline']=='' )
+		{
+		}
+		else
+		{
+			// Date format
+			if ( ( !preg_match('/(\d\d)\-(\d\d)\-(\d\d\d\d)/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	     		( !preg_match('/(\d\d\d\d)\-(\d\d)\-(\d\d)/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+	     		( !preg_match('/(\d\d)\/(\d\d)\/(\d\d\d\d)/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	     		( !preg_match('/(\d\d\d\d)\/(\d\d)\/(\d\d)/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+			{
+				$this->checkresults['contract'] = "fail";
+
+				if ( $this->section2control == 'contract' )
+				{
+					$this->checks['result'] = "fail";
+					$this->checks['Deadline'] = gettext('Incorrect date format');
+				}
+			}
+			else
+			{
+				$this->checks['Deadline'] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
+			}
+		}
+
 
 		if ( $this->checkresults['general'] == "pass" and $this->checkresults['profiles_etc'] == "pass" and $this->checkresults['skills'] == "pass" and $this->checkresults['languages'] == "pass" and
 		     $this->checkresults['projects'] == "pass" and $this->checkresults['location'] == "pass" and $this->checkresults['contract'] == "pass" )
@@ -989,6 +1015,7 @@ class JobOfferForm extends SkillsForm
 		$this->data['WageRankByPeriod'] = $result[13][0];
 		$this->data['EstimatedEffort'] = $result[23][0];
 		$this->data['TimeUnit'] = $result[24][0];
+		$this->data['Deadline'] = $result[28][0];
 
 		$this->data['ProfessionalExperienceSinceYear'] = $result[14][0];
 		$this->data['AcademicQualification'] = $result[15][0];
