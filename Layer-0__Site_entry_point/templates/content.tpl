@@ -82,11 +82,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {t escape='no'
   1='<a href="mailto:association@gnuherds.org">association@gnuherds.org</a>'
 }Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!{/t}
-<br><br>
-{t escape='no'
-  1='<a href="http://www.gnu.org">'
-  2='</a>'
-}The GNU Herds project is not an official part of %1the GNU Project%2.{/t}
 </p>
 </td>
 </tr>
