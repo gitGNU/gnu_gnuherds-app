@@ -276,6 +276,10 @@ class JobOfferForm extends SkillsForm
 					// We set this SESSION variable as a hack to be able to pass the J1_Id to the next form section
 				}
 			}
+			else
+			{
+				$this->checks['result'] = "suggestions";
+			}
 		}
 	}
 

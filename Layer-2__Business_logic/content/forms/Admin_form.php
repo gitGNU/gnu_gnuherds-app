@@ -164,6 +164,10 @@ class AdminForm extends SkillsForm
 
 				// This page does not report to the webapp user (Skills administrator) operation success. It just report if the operation does _not_ success.
 			}
+			else
+			{
+				$this->checks['result'] = "suggestions";
+			}
 		}
 	}
 

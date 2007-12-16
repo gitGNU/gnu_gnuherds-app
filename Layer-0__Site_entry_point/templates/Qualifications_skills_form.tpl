@@ -39,6 +39,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {if $checks.result eq 'fail' }
 <tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td> </tr>
+{elseif $checks.result eq 'suggestions' }
+<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields offer suggestions. The form has not been saved yet. Please, choose.{/t}</span></span></td> </tr>
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>

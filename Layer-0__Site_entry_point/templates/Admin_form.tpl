@@ -88,9 +88,11 @@ Suite 225, San Francisco, CA 94107, USA
 <table align="center">
 
 {if $checks.result eq 'fail' }
-<tr> <td colspan="2" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td> </tr>
-<tr> <td colspan="2">&nbsp;</td> </tr>
-<tr> <td colspan="2">&nbsp;</td> </tr>
+<tr><td colspan="2" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+{elseif $checks.result eq 'suggestions' }
+<tr><td colspan="2" class="footnote"><span class="must">{t}Some fields offer suggestions. The form has not been saved yet. Please, choose.{/t}</span></span></td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
 {/if}
 
 <tr><td colspan="2" class="subsection">{t}Skill properties{/t}</td></tr>

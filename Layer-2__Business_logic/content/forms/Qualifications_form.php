@@ -253,6 +253,10 @@ class QualificationsForm extends SkillsForm
 					$this->manager->addQualifications($this->checks['completed_edition']); // Create the qualifications with the data from the 'profiles_etc' section
 				}
 			}
+			else
+			{
+				$this->checks['result'] = "suggestions";
+			}
 		}
 	}
 
