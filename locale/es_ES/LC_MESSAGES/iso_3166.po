@@ -318,7 +318,7 @@ msgstr "República Popular China"
 
 #. name for CXR
 msgid "Christmas Island"
-msgstr "Isla Navidad"
+msgstr "Isla de Navidad"
 
 #. name for CCK
 msgid "Cocos (Keeling) Islands"
@@ -813,8 +813,8 @@ msgstr "República Kirguiza"
 msgid "Lao People's Democratic Republic"
 msgstr "República Democrática Popular de Lao"
 
-msgid "Lao"
-msgstr "Lao"
+msgid "Laos"
+msgstr "Laos"
 
 #. name for LVA
 msgid "Latvia"
@@ -1167,11 +1167,11 @@ msgstr "República Islámica de Pakistán"
 
 #. name for PLW
 msgid "Palau"
-msgstr "Palau"
+msgstr "Paláu"
 
 #. official_name for PLW
 msgid "Republic of Palau"
-msgstr "República de Palau"
+msgstr "República de Paláu"
 
 #. name for PSE
 msgid "Palestinian Territory, Occupied"
@@ -1278,7 +1278,7 @@ msgstr "Santa Helena"
 
 #. name for KNA
 msgid "Saint Kitts and Nevis"
-msgstr "San Cristobo y Nevis"
+msgstr "San Cristóbal y Nieves"
 
 #. name for LCA
 msgid "Saint Lucia"
@@ -1430,7 +1430,7 @@ msgstr "República de Sudán"
 
 #. name for SUR
 msgid "Suriname"
-msgstr "Surinám"
+msgstr "Surinam"
 
 #. official_name for SUR
 msgid "Republic of Suriname"
@@ -1593,7 +1593,7 @@ msgstr "Reino Unido de Gran Bretaña e Irlanda del Norte"
 
 #. name for USA
 msgid "United States"
-msgstr "Estados Unidos"
+msgstr "Estados Unidos de América"
 
 #. official_name for USA
 msgid "United States of America"
@@ -1696,9 +1696,6 @@ msgstr "República de Zimbabue"
 
 #~ msgid "Congo, The Democratic Republic of"
 #~ msgstr "Congo, República Democrática del (Zaire)"
-
-#~ msgid "Laos"
-#~ msgstr "Laos"
 
 #~ msgid "Libya"
 #~ msgstr "Libia"
