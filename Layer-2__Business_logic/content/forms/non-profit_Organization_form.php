@@ -95,6 +95,12 @@ class NonprofitOrganizationForm extends EntityForm
 		$smarty->assign('countryTwoLetter', $countryTwoLetter);
 		$smarty->assign('countryNames', $countryNames);
 
+		$nationalities = $this->manager->getNationalityList();
+		$nationalityTwoLetter = array_merge( array(""), array_keys($nationalities) );
+		$nationalityNames = array_merge( array(""), array_values($nationalities) );
+		$smarty->assign('nationalityTwoLetter', $nationalityTwoLetter);
+		$smarty->assign('nationalityNames', $nationalityNames);
+
 
 		$smarty->assign('data', $this->data);
 		$smarty->assign('checks', $this->checks);

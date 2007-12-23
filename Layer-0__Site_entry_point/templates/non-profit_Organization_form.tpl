@@ -98,7 +98,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td align="right"><label for="Nationality">{t}Nationality{/t}</label></td>
 <td>
 <select name="Nationality" id="Nationality" class="notRequired">
-{html_options values=$countryTwoLetter output=$countryNames selected=$data.Nationality}
+{html_options values=$nationalityTwoLetter output=$nationalityNames selected=$data.Nationality}
 </select>
 </td>
 </tr>

@@ -200,10 +200,16 @@ class LanguageForm
 		putenv("LANGUAGE=$locale"); // Needed when running command line tools, as the cron jobs alerts
 		setlocale(LC_ALL, $locale);
 
-		// Set the text domain as 'messages'
+		// Bind the 'messages' domain
 		$domain = 'messages';
 		bindtextdomain($domain, "../locale");
-		textdomain($domain);
+
+		// Bind the 'nationalities' domain
+		$domain = 'nationalities';
+		bindtextdomain($domain, "../locale");
+
+		// Set the default text domain as 'messages'
+		textdomain('messages');
 	}
 
 	private function setLanguage($language)

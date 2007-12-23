@@ -53,6 +53,7 @@ DROP TABLE E1_Entities;
 
 -- Lists:
 DROP TABLE LO_Countries;
+DROP TABLE LN_Nationalities; -- Nationalities internationally recognized.
 DROP TABLE LU_Currencies;
 DROP TABLE LA_AcademicQualifications;
 DROP TABLE LC_Certifications; -- We do not translate de certifications. It is better so, in order to keep a unique 'image'. It is as the usual mark image.
@@ -100,6 +101,12 @@ CREATE TABLE LO_Countries (
         LO_Name          varchar(80) NOT NULL,
         LO_Adjective     varchar(80),
         LO_Description   varchar(100)
+);
+
+
+CREATE TABLE LN_Nationalities ( -- Nationalities internationally recognized.
+        LN_LO_TwoLetter  char(2) UNIQUE REFERENCES LO_Countries(LO_TwoLetter) NOT NULL,
+        LN_Name          varchar(80) NOT NULL
 );
 
 
@@ -272,7 +279,7 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
 
         --------------------------------------------------------------------------
         -- Nationality (Location of birth for Persons, or Location for Companies and non-profit Organizations)
-	E1_LO_Nationality  char(2), -- REFERENCES LO_Countries(LO_TwoLetter), -- NOT NULL,
+	E1_LN_Nationality  char(2), -- REFERENCES LN_Nationalities(LN_TwoLetter), -- NOT NULL,
 
         --------------------------------------------------------------------------
         -- List the countries where the entity has license to work. (E3_EntityJobLicenseAt)
@@ -534,7 +541,7 @@ CREATE TABLE R15_JobOffer2Languages (
 
 CREATE TABLE R17_JobOffer2Nationalities (
 	R17_J1_Id    integer REFERENCES J1_JobOffers(J1_Id) NOT NULL,
-        R17_LO_Id    varchar(80) REFERENCES LO_Countries(LO_TwoLetter) NOT NULL
+        R17_LN_Id    char(2) REFERENCES LN_Nationalities(LN_LO_TwoLetter) NOT NULL
 );
 
 
@@ -937,6 +944,249 @@ INSERT INTO LO_Countries VALUES ( 'EH', 'ESH', '732', 'Western Sahara', '','(was
 INSERT INTO LO_Countries VALUES ( 'YE', 'YEM', '887', 'Yemen',          '','');
 INSERT INTO LO_Countries VALUES ( 'ZM', 'ZMB', '894', 'Zambia',         'Republic of','');
 INSERT INTO LO_Countries VALUES ( 'ZW', 'ZWE', '716', 'Zimbabwe',       '','(was Southern Rhodesia)');
+
+
+-- Nationalities
+INSERT INTO LN_Nationalities VALUES ( 'AF', 'Afghan');
+INSERT INTO LN_Nationalities VALUES ( 'AL', 'Albanian');
+INSERT INTO LN_Nationalities VALUES ( 'DZ', 'Algerian');
+INSERT INTO LN_Nationalities VALUES ( 'AS', 'Samoan, American');
+INSERT INTO LN_Nationalities VALUES ( 'AD', 'Andorran');
+INSERT INTO LN_Nationalities VALUES ( 'AO', 'Angolan');
+INSERT INTO LN_Nationalities VALUES ( 'AI', 'Anguillan');
+INSERT INTO LN_Nationalities VALUES ( 'AQ', 'Antarctic');
+INSERT INTO LN_Nationalities VALUES ( 'AG', 'Antiguan');
+INSERT INTO LN_Nationalities VALUES ( 'AR', 'Argentine');
+INSERT INTO LN_Nationalities VALUES ( 'AM', 'Armenian');
+INSERT INTO LN_Nationalities VALUES ( 'AW', 'Aruban');
+INSERT INTO LN_Nationalities VALUES ( 'AU', 'Australian');
+INSERT INTO LN_Nationalities VALUES ( 'AT', 'Austrian');
+INSERT INTO LN_Nationalities VALUES ( 'AZ', 'Azerbaijani');
+INSERT INTO LN_Nationalities VALUES ( 'BS', 'Bahamas');
+INSERT INTO LN_Nationalities VALUES ( 'BH', 'Bahraini');
+INSERT INTO LN_Nationalities VALUES ( 'BD', 'Bangladeshi');
+INSERT INTO LN_Nationalities VALUES ( 'BB', 'Barbadian');
+INSERT INTO LN_Nationalities VALUES ( 'BY', 'Belarusian');
+INSERT INTO LN_Nationalities VALUES ( 'BE', 'Belgian');
+INSERT INTO LN_Nationalities VALUES ( 'BZ', 'Belizean');
+INSERT INTO LN_Nationalities VALUES ( 'BJ', 'Beninese');
+INSERT INTO LN_Nationalities VALUES ( 'BM', 'Bermudian');
+INSERT INTO LN_Nationalities VALUES ( 'BT', 'Bhutanese');
+INSERT INTO LN_Nationalities VALUES ( 'BO', 'Bolivian');
+INSERT INTO LN_Nationalities VALUES ( 'BA', 'Bosnian and Herzegovinian');
+INSERT INTO LN_Nationalities VALUES ( 'BW', 'Batswana');
+INSERT INTO LN_Nationalities VALUES ( 'BV', 'Bouvet');
+INSERT INTO LN_Nationalities VALUES ( 'BR', 'Brazilian');
+INSERT INTO LN_Nationalities VALUES ( 'IO', 'British Indian Ocean Territory');
+INSERT INTO LN_Nationalities VALUES ( 'VG', 'British Virgin Islands');
+INSERT INTO LN_Nationalities VALUES ( 'BN', 'Bruneian');
+INSERT INTO LN_Nationalities VALUES ( 'BG', 'Bulgarian');
+INSERT INTO LN_Nationalities VALUES ( 'BF', 'Burkinabé');
+INSERT INTO LN_Nationalities VALUES ( 'BI', 'Burundian');
+INSERT INTO LN_Nationalities VALUES ( 'KH', 'Cambodian');
+INSERT INTO LN_Nationalities VALUES ( 'CM', 'Cameroonian');
+INSERT INTO LN_Nationalities VALUES ( 'CA', 'Canadian');
+INSERT INTO LN_Nationalities VALUES ( 'CV', 'Cape Verdean');
+INSERT INTO LN_Nationalities VALUES ( 'KY', 'Caymanian');
+INSERT INTO LN_Nationalities VALUES ( 'CF', 'Central African');
+INSERT INTO LN_Nationalities VALUES ( 'TD', 'Chadian');
+INSERT INTO LN_Nationalities VALUES ( 'CL', 'Chilean');
+INSERT INTO LN_Nationalities VALUES ( 'CN', 'Chinese');
+INSERT INTO LN_Nationalities VALUES ( 'CX', 'Christmas Island');
+INSERT INTO LN_Nationalities VALUES ( 'CC', 'Cocos (Keeling) Islands');
+INSERT INTO LN_Nationalities VALUES ( 'CO', 'Colombian');
+INSERT INTO LN_Nationalities VALUES ( 'KM', 'Comorian');
+INSERT INTO LN_Nationalities VALUES ( 'CD', 'Congolese from The Democratic Republic of the Congo');
+INSERT INTO LN_Nationalities VALUES ( 'CG', 'Congolese from the Republic of Congo');
+INSERT INTO LN_Nationalities VALUES ( 'CK', 'Cook Islander');
+INSERT INTO LN_Nationalities VALUES ( 'CR', 'Costa Rican');
+INSERT INTO LN_Nationalities VALUES ( 'CI', 'Ivorian');
+INSERT INTO LN_Nationalities VALUES ( 'CU', 'Cuban');
+INSERT INTO LN_Nationalities VALUES ( 'CY', 'Cypriot');
+INSERT INTO LN_Nationalities VALUES ( 'CZ', 'Czech');
+INSERT INTO LN_Nationalities VALUES ( 'DK', 'Danish');
+INSERT INTO LN_Nationalities VALUES ( 'DJ', 'Djiboutian');
+INSERT INTO LN_Nationalities VALUES ( 'DM', 'Dominican');
+INSERT INTO LN_Nationalities VALUES ( 'DO', 'Dominican from Dominican Republic');
+INSERT INTO LN_Nationalities VALUES ( 'EC', 'Ecuadorian');
+INSERT INTO LN_Nationalities VALUES ( 'EG', 'Egyptian');
+INSERT INTO LN_Nationalities VALUES ( 'SV', 'Salvadorian');
+INSERT INTO LN_Nationalities VALUES ( 'GQ', 'Equatorial Guinean');
+INSERT INTO LN_Nationalities VALUES ( 'ER', 'Eritrean');
+INSERT INTO LN_Nationalities VALUES ( 'EE', 'Estonian');
+INSERT INTO LN_Nationalities VALUES ( 'ET', 'Ethiopian');
+INSERT INTO LN_Nationalities VALUES ( 'FO', 'Faroese');
+INSERT INTO LN_Nationalities VALUES ( 'FK', 'Falkland Islanders');
+INSERT INTO LN_Nationalities VALUES ( 'FJ', 'Fijian');
+INSERT INTO LN_Nationalities VALUES ( 'FI', 'Finnish');
+INSERT INTO LN_Nationalities VALUES ( 'FR', 'French');
+INSERT INTO LN_Nationalities VALUES ( 'GF', 'Guianese');
+INSERT INTO LN_Nationalities VALUES ( 'PF', 'Polynesian');
+INSERT INTO LN_Nationalities VALUES ( 'TF', 'French Southern Territories');
+INSERT INTO LN_Nationalities VALUES ( 'GA', 'Gabonese');
+INSERT INTO LN_Nationalities VALUES ( 'GM', 'Gambian');
+INSERT INTO LN_Nationalities VALUES ( 'GE', 'Georgian');
+INSERT INTO LN_Nationalities VALUES ( 'DE', 'German');
+INSERT INTO LN_Nationalities VALUES ( 'GH', 'Ghanaian');
+INSERT INTO LN_Nationalities VALUES ( 'GI', 'Gibraltarian');
+INSERT INTO LN_Nationalities VALUES ( 'GR', 'Greek');
+INSERT INTO LN_Nationalities VALUES ( 'GL', 'Greenlandic');
+INSERT INTO LN_Nationalities VALUES ( 'GD', 'Grenadian');
+INSERT INTO LN_Nationalities VALUES ( 'GP', 'Guadeloupe');
+INSERT INTO LN_Nationalities VALUES ( 'GU', 'Guam');
+INSERT INTO LN_Nationalities VALUES ( 'GT', 'Guatemalan');
+INSERT INTO LN_Nationalities VALUES ( 'GN', 'Guinean');
+INSERT INTO LN_Nationalities VALUES ( 'GW', 'Guinea-Bissauan');
+INSERT INTO LN_Nationalities VALUES ( 'GY', 'Guyanese');
+INSERT INTO LN_Nationalities VALUES ( 'HT', 'Haitian');
+INSERT INTO LN_Nationalities VALUES ( 'HM', 'Heard Island and McDonald Islands');
+INSERT INTO LN_Nationalities VALUES ( 'VA', 'Holy See (Vatican City State)');
+INSERT INTO LN_Nationalities VALUES ( 'HN', 'Honduran');
+INSERT INTO LN_Nationalities VALUES ( 'HK', 'Hong Kong');
+INSERT INTO LN_Nationalities VALUES ( 'HR', 'Croat');
+INSERT INTO LN_Nationalities VALUES ( 'HU', 'Hungarian');
+INSERT INTO LN_Nationalities VALUES ( 'IS', 'Icelander');
+INSERT INTO LN_Nationalities VALUES ( 'IN', 'Indian');
+INSERT INTO LN_Nationalities VALUES ( 'ID', 'Indonesian');
+INSERT INTO LN_Nationalities VALUES ( 'IR', 'Iranian');
+INSERT INTO LN_Nationalities VALUES ( 'IQ', 'Iraqi');
+INSERT INTO LN_Nationalities VALUES ( 'IE', 'Irish');
+INSERT INTO LN_Nationalities VALUES ( 'IL', 'Israeli');
+INSERT INTO LN_Nationalities VALUES ( 'IT', 'Italian');
+INSERT INTO LN_Nationalities VALUES ( 'JM', 'Jamaican');
+INSERT INTO LN_Nationalities VALUES ( 'JP', 'Japanese');
+INSERT INTO LN_Nationalities VALUES ( 'JO', 'Jordanian');
+INSERT INTO LN_Nationalities VALUES ( 'KZ', 'Kazakh');
+INSERT INTO LN_Nationalities VALUES ( 'KE', 'Kenyan');
+INSERT INTO LN_Nationalities VALUES ( 'KI', 'I-Kiribati');
+INSERT INTO LN_Nationalities VALUES ( 'KP', 'North Korean');
+INSERT INTO LN_Nationalities VALUES ( 'KR', 'South Korean');
+INSERT INTO LN_Nationalities VALUES ( 'KW', 'Kuwaiti');
+INSERT INTO LN_Nationalities VALUES ( 'KG', 'Kyrgyzstani');
+INSERT INTO LN_Nationalities VALUES ( 'LA', 'Laotian');
+INSERT INTO LN_Nationalities VALUES ( 'LV', 'Latvian');
+INSERT INTO LN_Nationalities VALUES ( 'LB', 'Lebanese');
+INSERT INTO LN_Nationalities VALUES ( 'LS', 'Mosotho');
+INSERT INTO LN_Nationalities VALUES ( 'LR', 'Liberian');
+INSERT INTO LN_Nationalities VALUES ( 'LY', 'Libyan');
+INSERT INTO LN_Nationalities VALUES ( 'LI', 'Liechtensteiner');
+INSERT INTO LN_Nationalities VALUES ( 'LT', 'Lithuanian');
+INSERT INTO LN_Nationalities VALUES ( 'LU', 'Luxembourger');
+INSERT INTO LN_Nationalities VALUES ( 'MO', 'Macanese');
+INSERT INTO LN_Nationalities VALUES ( 'MK', 'Macedonian');
+INSERT INTO LN_Nationalities VALUES ( 'MG', 'Malagasy');
+INSERT INTO LN_Nationalities VALUES ( 'MW', 'Malawian');
+INSERT INTO LN_Nationalities VALUES ( 'MY', 'Malaysian');
+INSERT INTO LN_Nationalities VALUES ( 'MV', 'Maldivian');
+INSERT INTO LN_Nationalities VALUES ( 'ML', 'Malian');
+INSERT INTO LN_Nationalities VALUES ( 'MT', 'Maltese');
+INSERT INTO LN_Nationalities VALUES ( 'MH', 'Marshallese');
+INSERT INTO LN_Nationalities VALUES ( 'MQ', 'Martinican');
+INSERT INTO LN_Nationalities VALUES ( 'MR', 'Mauritanian');
+INSERT INTO LN_Nationalities VALUES ( 'MU', 'Mauritian');
+INSERT INTO LN_Nationalities VALUES ( 'YT', 'Mayotte');
+INSERT INTO LN_Nationalities VALUES ( 'MX', 'Mexican');
+INSERT INTO LN_Nationalities VALUES ( 'FM', 'Micronesian');
+INSERT INTO LN_Nationalities VALUES ( 'MD', 'Moldovan');
+INSERT INTO LN_Nationalities VALUES ( 'MC', 'Monegasque');
+INSERT INTO LN_Nationalities VALUES ( 'MN', 'Mongolian');
+INSERT INTO LN_Nationalities VALUES ( 'ME', 'Montenegrin');
+INSERT INTO LN_Nationalities VALUES ( 'MS', 'Montserratian');
+INSERT INTO LN_Nationalities VALUES ( 'MA', 'Moroccan');
+INSERT INTO LN_Nationalities VALUES ( 'MZ', 'Mozambican');
+INSERT INTO LN_Nationalities VALUES ( 'MM', 'Burmese');
+INSERT INTO LN_Nationalities VALUES ( 'NA', 'Namibian');
+INSERT INTO LN_Nationalities VALUES ( 'NR', 'Nauruan');
+INSERT INTO LN_Nationalities VALUES ( 'NP', 'Nepali');
+INSERT INTO LN_Nationalities VALUES ( 'AN', 'Netherlands Antillean');
+INSERT INTO LN_Nationalities VALUES ( 'NL', 'Dutch');
+INSERT INTO LN_Nationalities VALUES ( 'NC', 'New Caledonian');
+INSERT INTO LN_Nationalities VALUES ( 'NZ', 'New Zealander');
+INSERT INTO LN_Nationalities VALUES ( 'NI', 'Nicaraguan');
+INSERT INTO LN_Nationalities VALUES ( 'NE', 'Nigerien');
+INSERT INTO LN_Nationalities VALUES ( 'NG', 'Nigerian');
+INSERT INTO LN_Nationalities VALUES ( 'NU', 'Niuean');
+INSERT INTO LN_Nationalities VALUES ( 'NF', 'Norfolk Island');
+INSERT INTO LN_Nationalities VALUES ( 'MP', 'Northern Mariana Islands');
+INSERT INTO LN_Nationalities VALUES ( 'NO', 'Norwegian');
+INSERT INTO LN_Nationalities VALUES ( 'OM', 'Omani');
+INSERT INTO LN_Nationalities VALUES ( 'PK', 'Pakistani');
+INSERT INTO LN_Nationalities VALUES ( 'PW', 'Palauan');
+INSERT INTO LN_Nationalities VALUES ( 'PS', 'Palestinian');
+INSERT INTO LN_Nationalities VALUES ( 'PA', 'Panamanian');
+INSERT INTO LN_Nationalities VALUES ( 'PG', 'Papua New Guinean');
+INSERT INTO LN_Nationalities VALUES ( 'PY', 'Paraguayan');
+INSERT INTO LN_Nationalities VALUES ( 'PE', 'Peruvian');
+INSERT INTO LN_Nationalities VALUES ( 'PH', 'Filipino');
+INSERT INTO LN_Nationalities VALUES ( 'PN', 'Pitcairn Islander');
+INSERT INTO LN_Nationalities VALUES ( 'PL', 'Polish');
+INSERT INTO LN_Nationalities VALUES ( 'PT', 'Portuguese');
+INSERT INTO LN_Nationalities VALUES ( 'PR', 'Puerto Rican');
+INSERT INTO LN_Nationalities VALUES ( 'QA', 'Qatari');
+INSERT INTO LN_Nationalities VALUES ( 'RE', 'Reunion');
+INSERT INTO LN_Nationalities VALUES ( 'RO', 'Romanian');
+INSERT INTO LN_Nationalities VALUES ( 'RU', 'Russian');
+INSERT INTO LN_Nationalities VALUES ( 'RW', 'Rwandan');
+INSERT INTO LN_Nationalities VALUES ( 'SH', 'Saint Helena');
+INSERT INTO LN_Nationalities VALUES ( 'KN', 'Kittitian');
+INSERT INTO LN_Nationalities VALUES ( 'LC', 'Saint Lucian');
+INSERT INTO LN_Nationalities VALUES ( 'PM', 'Saint Pierre and Miquelon');
+INSERT INTO LN_Nationalities VALUES ( 'VC', 'Vincentian');
+INSERT INTO LN_Nationalities VALUES ( 'WS', 'Samoan');
+INSERT INTO LN_Nationalities VALUES ( 'SM', 'Sammarinese');
+INSERT INTO LN_Nationalities VALUES ( 'ST', 'Santomean');
+INSERT INTO LN_Nationalities VALUES ( 'SA', 'Saudi');
+INSERT INTO LN_Nationalities VALUES ( 'SN', 'Senegalese');
+INSERT INTO LN_Nationalities VALUES ( 'RS', 'Serbian');
+INSERT INTO LN_Nationalities VALUES ( 'SC', 'Seychellois');
+INSERT INTO LN_Nationalities VALUES ( 'SL', 'Sierra Leonean');
+INSERT INTO LN_Nationalities VALUES ( 'SG', 'Singaporean');
+INSERT INTO LN_Nationalities VALUES ( 'SK', 'Slovak');
+INSERT INTO LN_Nationalities VALUES ( 'SI', 'Slovenian');
+INSERT INTO LN_Nationalities VALUES ( 'SB', 'Solomon Islands');
+INSERT INTO LN_Nationalities VALUES ( 'SO', 'Somali');
+INSERT INTO LN_Nationalities VALUES ( 'ZA', 'South African');
+INSERT INTO LN_Nationalities VALUES ( 'GS', 'South Georgia and the South Sandwich Islands');
+INSERT INTO LN_Nationalities VALUES ( 'ES', 'Spanish');
+INSERT INTO LN_Nationalities VALUES ( 'LK', 'Sri Lankan');
+INSERT INTO LN_Nationalities VALUES ( 'SD', 'Sudanese');
+INSERT INTO LN_Nationalities VALUES ( 'SR', 'Surinamese');
+INSERT INTO LN_Nationalities VALUES ( 'SJ', 'Svalbard and Jan Mayen');
+INSERT INTO LN_Nationalities VALUES ( 'SZ', 'Swazi');
+INSERT INTO LN_Nationalities VALUES ( 'SE', 'Swedish');
+INSERT INTO LN_Nationalities VALUES ( 'CH', 'Swiss');
+INSERT INTO LN_Nationalities VALUES ( 'SY', 'Syrian');
+INSERT INTO LN_Nationalities VALUES ( 'TW', 'Taiwan');
+INSERT INTO LN_Nationalities VALUES ( 'TJ', 'Tajik');
+INSERT INTO LN_Nationalities VALUES ( 'TZ', 'Tanzanian');
+INSERT INTO LN_Nationalities VALUES ( 'TH', 'Thai');
+INSERT INTO LN_Nationalities VALUES ( 'TL', 'East Timorese');
+INSERT INTO LN_Nationalities VALUES ( 'TG', 'Togolese');
+INSERT INTO LN_Nationalities VALUES ( 'TK', 'Tokelauan');
+INSERT INTO LN_Nationalities VALUES ( 'TO', 'Tongan');
+INSERT INTO LN_Nationalities VALUES ( 'TT', 'Trinidadian and Tobagonian');
+INSERT INTO LN_Nationalities VALUES ( 'TN', 'Tunisian');
+INSERT INTO LN_Nationalities VALUES ( 'TR', 'Turkish');
+INSERT INTO LN_Nationalities VALUES ( 'TM', 'Turkmenistani');
+INSERT INTO LN_Nationalities VALUES ( 'TC', 'Turks and Caicos Islands');
+INSERT INTO LN_Nationalities VALUES ( 'TV', 'Tuvaluan');
+INSERT INTO LN_Nationalities VALUES ( 'VI', 'US Virgin Islands');
+INSERT INTO LN_Nationalities VALUES ( 'UG', 'Ugandan');
+INSERT INTO LN_Nationalities VALUES ( 'UA', 'Ukrainian');
+INSERT INTO LN_Nationalities VALUES ( 'AE', 'Emirati');
+INSERT INTO LN_Nationalities VALUES ( 'GB', 'British');
+INSERT INTO LN_Nationalities VALUES ( 'UM', 'United States Minor Outlying Islands');
+INSERT INTO LN_Nationalities VALUES ( 'US', 'American');
+INSERT INTO LN_Nationalities VALUES ( 'UY', 'Uruguayan');
+INSERT INTO LN_Nationalities VALUES ( 'UZ', 'Uzbekistani');
+INSERT INTO LN_Nationalities VALUES ( 'VU', 'ni-Vanuatu');
+INSERT INTO LN_Nationalities VALUES ( 'VE', 'Venezuelan');
+INSERT INTO LN_Nationalities VALUES ( 'VN', 'Vietnamese');
+INSERT INTO LN_Nationalities VALUES ( 'WF', 'Wallisian and Futunian');
+INSERT INTO LN_Nationalities VALUES ( 'EH', 'Sahrawi');
+INSERT INTO LN_Nationalities VALUES ( 'YE', 'Yemeni');
+INSERT INTO LN_Nationalities VALUES ( 'ZM', 'Zambian');
+INSERT INTO LN_Nationalities VALUES ( 'ZW', 'Zimbabwean');
 
 
 

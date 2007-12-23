@@ -25,6 +25,7 @@ require_once "../Layer-5__DB_operation/Alerts.php";
 
 // Lists
 require_once "../Layer-5__DB_operation/Countries.php";
+require_once "../Layer-5__DB_operation/Nationalities.php";
 require_once "../Layer-5__DB_operation/Academic_Qualifications.php";
 require_once "../Layer-5__DB_operation/Product_Profiles.php";
 require_once "../Layer-5__DB_operation/Professional_Profiles.php";
@@ -408,7 +409,7 @@ class DBManager
 		return $countries->getCountryList();
 	}
 
-	public function getCountryTwoLetterList()
+	public function getCountryTwoLetterList() //XXX Comprobar si no se estan utilizando estos metodos.
 	{
 		// This method does not need ACL check. It gets public information.
 
@@ -416,12 +417,36 @@ class DBManager
 		return $countries->getCountryTwoLetterList();
 	}
 
-	public function getCountryNameList()
+	public function getCountryNameList() //XXX Comprobar si no se estan utilizando estos metodos.
 	{
 		// This method does not need ACL check. It gets public information.
 
 		$countries = new Countries();
 		return $countries->getCountryNameList();
+	}
+
+	public function getNationalityList()
+	{
+		// This method does not need ACL check. It gets public information.
+
+		$nationalities = new Nationalities();
+		return $nationalities->getNationalityList();
+	}
+
+	public function getNationalityTwoLetterList() //XXX Comprobar si no se estan utilizando estos metodos.
+	{
+		// This method does not need ACL check. It gets public information.
+
+		$nationalities = new Nationalities();
+		return $nationalities->getNationalityTwoLetterList();
+	}
+
+	public function getNationalitiesNameList() //XXX Comprobar si no se estan utilizando estos metodos.
+	{
+		// This method does not need ACL check. It gets public information.
+
+		$nationalities = new Nationalities();
+		return $nationalities->getNationalitiesNameList();
 	}
 
 	public function getAcademicQualificationsList()
