@@ -820,7 +820,7 @@ INSERT INTO LO_Countries VALUES ( 'KP', 'PRK', '408', 'Korea, Democratic People\
 INSERT INTO LO_Countries VALUES ( 'KR', 'KOR', '410', 'Korea, Republic of','','');
 INSERT INTO LO_Countries VALUES ( 'KW', 'KWT', '414', 'Kuwait',        'State of','');
 INSERT INTO LO_Countries VALUES ( 'KG', 'KGZ', '417', 'Kyrgyz Republic','','');
-INSERT INTO LO_Countries VALUES ( 'LA', 'LAO', '418', 'Lao',           'People\'s Democratic Republic','');
+INSERT INTO LO_Countries VALUES ( 'LA', 'LAO', '418', 'Laos',          'Lao People\'s Democratic Republic','');
 INSERT INTO LO_Countries VALUES ( 'LV', 'LVA', '428', 'Latvia',        '','');
 INSERT INTO LO_Countries VALUES ( 'LB', 'LBN', '422', 'Lebanon',       'Lebanese Republic','');
 INSERT INTO LO_Countries VALUES ( 'LS', 'LSO', '426', 'Lesotho',       'Kingdom of','');
