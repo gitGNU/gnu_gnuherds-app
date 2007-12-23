@@ -409,44 +409,12 @@ class DBManager
 		return $countries->getCountryList();
 	}
 
-	public function getCountryTwoLetterList() //XXX Comprobar si no se estan utilizando estos metodos.
-	{
-		// This method does not need ACL check. It gets public information.
-
-		$countries = new Countries();
-		return $countries->getCountryTwoLetterList();
-	}
-
-	public function getCountryNameList() //XXX Comprobar si no se estan utilizando estos metodos.
-	{
-		// This method does not need ACL check. It gets public information.
-
-		$countries = new Countries();
-		return $countries->getCountryNameList();
-	}
-
 	public function getNationalityList()
 	{
 		// This method does not need ACL check. It gets public information.
 
 		$nationalities = new Nationalities();
 		return $nationalities->getNationalityList();
-	}
-
-	public function getNationalityTwoLetterList() //XXX Comprobar si no se estan utilizando estos metodos.
-	{
-		// This method does not need ACL check. It gets public information.
-
-		$nationalities = new Nationalities();
-		return $nationalities->getNationalityTwoLetterList();
-	}
-
-	public function getNationalitiesNameList() //XXX Comprobar si no se estan utilizando estos metodos.
-	{
-		// This method does not need ACL check. It gets public information.
-
-		$nationalities = new Nationalities();
-		return $nationalities->getNationalitiesNameList();
 	}
 
 	public function getAcademicQualificationsList()
