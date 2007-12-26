@@ -34,7 +34,7 @@ msgstr ""
 # Contry list got via:
 #   SELECT LN_LO_TwoLetter, LO_ThreeLetter, LO_Name, LN_Name FROM LN_Nationalities, LO_Countries WHERE LO_TwoLetter=LN_LO_TwoLetter ORDER BY LO_ThreeLetter;
 
-# Translated using wikipedia.org and a dictionary.
+# Translated using the "Inter-institutional Writing Code" defined by several European Union bodies, (http://publications.europa.eu/code/pt/pt-5000500.htm).
 
 #. nationality for "Aruba" (ABW)
 msgid "Aruban"
