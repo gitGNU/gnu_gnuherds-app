@@ -78,7 +78,7 @@ msgstr "Arménio/a"
 
 #. nationality for "American Samoa" (ASM)
 msgid "Samoan, American"
-msgstr "Samoano/a"
+msgstr "Samoano/a (dos Estados Unidos da América)"
 
 #. nationality for "Antarctica" (ATA)
 msgid "Antarctic"
