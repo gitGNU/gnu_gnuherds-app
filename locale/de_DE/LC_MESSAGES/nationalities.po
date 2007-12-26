@@ -1,6 +1,7 @@
-# Authors: Davi Leal
+# Authors: Davi Leal, Klaus Weiss
 #
 # Copyright (C) 2007 Davi Leal <davi at leals dot com>
+#               2007 Klaus Weiss <klaus dot weiss at nanet dot at>
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU Affero General Public License as published by the Free Software Foundation,
@@ -17,11 +18,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GNU Herds\n"
-"Report-Msgid-Bugs-To: davi@leals.com\n"
+"Report-Msgid-Bugs-To: klaus.weiss@nanet.at\n"
 "POT-Creation-Date: 2006-04-10 19:12+0200\n"
 "PO-Revision-Date: 2007-04-09 13:56+0100\n"
-"Last-Translator: Davi Leal <davi@leals.com>\n"
-"Language-Team: German <klaus.weiss@nanet.at>\n"
+"Last-Translator: Klaus Weiss <klaus.weiss@nanet.at>\n"
+"Language-Team: Klaus Weiss <klaus.weiss@nanet.at>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,43 +35,43 @@ msgstr ""
 
 #. nationality for "Aruba" (ABW)
 msgid "Aruban"
-msgstr "Aruba"
+msgstr "Arubanerin"
 
 #. nationality for "Afghanistan" (AFG)
 msgid "Afghan"
-msgstr "Afghanistan"
+msgstr "Afghanin"
 
 #. nationality for "Angola" (AGO)
 msgid "Angolan"
-msgstr "Angola"
+msgstr "Angolanerin"
 
 #. nationality for "Anguilla" (AIA)
 msgid "Anguillan"
-msgstr "Anguilla"
+msgstr "Anguillanerin"
 
 #. nationality for "Albania" (ALB)
 msgid "Albanian"
-msgstr "Albanien"
+msgstr "Albanierin"
 
 #. nationality for "Andorra" (AND)
 msgid "Andorran"
-msgstr "Andorra"
+msgstr "Andoranerin"
 
 #. nationality for "Netherlands Antilles" (ANT)
 msgid "Netherlands Antillean"
-msgstr "Niederländische Antillen"
+msgstr "Niederländischer Antillener"
 
 #. nationality for "United Arab Emirates" (ARE)
 msgid "Emirati"
-msgstr "Vereinigte Arabische Emirate"
+msgstr "Vereinigte Arabische Emiratin"
 
 #. nationality for "Argentina" (ARG)
 msgid "Argentine"
-msgstr "Argentinien"
+msgstr "Argentinierin"
 
 #. nationality for "Armenia" (ARM)
 msgid "Armenian"
-msgstr "Armenien"
+msgstr "Armenierin"
 
 #. nationality for "American Samoa" (ASM)
 msgid "Samoan, American"
@@ -86,87 +87,87 @@ msgstr "Französisches Süd-Territorium"
 
 #. nationality for "Antigua and Barbuda" (ATG)
 msgid "Antiguan"
-msgstr "Antigua und Barbuda"
+msgstr "Antiguanerin (Barbuda)"
 
 #. nationality for "Australia" (AUS)
 msgid "Australian"
-msgstr "Australien"
+msgstr "Australierin"
 
 #. nationality for "Austria" (AUT)
 msgid "Austrian"
-msgstr "Österreich"
+msgstr "Österreicherin"
 
 #. nationality for "Azerbaijan" (AZE)
 msgid "Azerbaijani"
-msgstr "Aserbaidschan"
+msgstr "Aserbaidschanerin"
 
 #. nationality for "Burundi" (BDI)
 msgid "Burundian"
-msgstr "Burundi"
+msgstr "Burundierin"
 
 #. nationality for "Belgium" (BEL)
 msgid "Belgian"
-msgstr "Belgien"
+msgstr "Belgierin"
 
 #. nationality for "Benin" (BEN)
 msgid "Beninese"
-msgstr "Benin"
+msgstr "Beninerin"
 
 #. nationality for "Burkina Faso" (BFA)
 msgid "Burkinabé"
-msgstr "Burkina Faso"
+msgstr "Burkinerin"
 
 #. nationality for "Bangladesh" (BGD)
 msgid "Bangladeshi"
-msgstr "Bangladesh"
+msgstr "Bangladescherin"
 
 #. nationality for "Bulgaria" (BGR)
 msgid "Bulgarian"
-msgstr "Bulgarien"
+msgstr "Bulgarin"
 
 #. nationality for "Bahrain" (BHR)
 msgid "Bahraini"
-msgstr "Bahrain"
+msgstr "Bahrainerin"
 
 #. nationality for "Bahamas" (BHS)
 msgid "Bahamas"
-msgstr "Bahamas"
+msgstr "Bahamerin"
 
 #. nationality for "Bosnia and Herzegovina" (BIH)
 msgid "Bosnian and Herzegovinian"
-msgstr "Bosnien-Herzegowina"
+msgstr "Bosnierin"
 
 #. nationality for "Belarus" (BLR)
 msgid "Belarusian"
-msgstr "Weißrussland"
+msgstr "Belarussin"
 
 #. nationality for "Belize" (BLZ)
 msgid "Belizean"
-msgstr "Belize"
+msgstr "Belizerin"
 
 #. nationality for "Bermuda" (BMU)
 msgid "Bermudian"
-msgstr "Bermudas"
+msgstr "Bermuderin"
 
 #. nationality for "Bolivia" (BOL)
 msgid "Bolivian"
-msgstr "Bolivien"
+msgstr "Bolivianerin"
 
 #. nationality for "Brazil" (BRA)
 msgid "Brazilian"
-msgstr "Brasilien"
+msgstr "Brasilianerin"
 
 #. nationality for "Barbados" (BRB)
 msgid "Barbadian"
-msgstr "Barbados"
+msgstr "Barbadierin"
 
 #. nationality for "Brunei Darussalam" (BRN)
 msgid "Bruneian"
-msgstr "Brunei"
+msgstr "Bruneierin"
 
 #. nationality for "Bhutan" (BTN)
 msgid "Bhutanese"
-msgstr "Buthan"
+msgstr "Bhutanerin"
 
 #. nationality for "Bouvet Island" (BVT)
 msgid "Bouvet Island"
@@ -174,15 +175,15 @@ msgstr "Bouvet Inseln"
 
 #. nationality for "Botswana" (BWA)
 msgid "Batswana"
-msgstr "Botswana"
+msgstr "Botsuanerin"
 
 #. nationality for "Central African Republic" (CAF)
 msgid "Central African"
-msgstr "Zentralafrikanische Republik"
+msgstr "Zentralafrikaner"
 
 #. nationality for "Canada" (CAN)
 msgid "Canadian"
-msgstr "Kanada"
+msgstr "Kanadierin"
 
 #. nationality for "Cocos (Keeling) Islands" (CCK)
 msgid "Cocos (Keeling) Islands"
@@ -190,171 +191,171 @@ msgstr "Kokosinseln"
 
 #. nationality for "Switzerland" (CHE)
 msgid "Swiss"
-msgstr "Schweiz"
+msgstr "Schweizer"
 
 #. nationality for "Chile" (CHL)
 msgid "Chilean"
-msgstr "Chile"
+msgstr "Chilenin"
 
 #. nationality for "China" (CHN)
 msgid "Chinese"
-msgstr "China"
+msgstr "Chinese"
 
 #. nationality for "Côte d'Ivoire" (CIV)
 msgid "Ivorian"
-msgstr "Elfenbeinküste"
+msgstr "Ivorerin"
 
 #. nationality for "Cameroon" (CMR)
 msgid "Cameroonian"
-msgstr "Kamerun"
+msgstr "Kamerunerin"
 
 #. nationality for "Congo, The Democratic Republic of the" (COD),  Reference: http://en.wikipedia.org/wiki/ISO_3166-1m
 msgid "Congolese from The Democratic Republic of the Congo"
-msgstr "Kongo, Demokratische Republik"
+msgstr "Kongolese, Demokratische Republik"
 
 #. nationality for "Congo, People's Republic of" (COG)
 msgid "Congolese from the Republic of Congo"
-msgstr "Kongo"
+msgstr "Kongolese"
 
 #. nationality for "Cook Islands" (COK)
 msgid "Cook Islander"
-msgstr "Cook Inseln"
+msgstr "Cook Insel Bewohnerin"
 
 #. nationality for "Colombia" (COL)
 msgid "Colombian"
-msgstr "Kolumbien"
+msgstr "Kolumbianerin"
 
 #. nationality for "Comoros" (COM)
 msgid "Comorian"
-msgstr "Komoren"
+msgstr "Komorerin"
 
 #. nationality for "Cape Verde" (CPV)
 msgid "Cape Verdean"
-msgstr "Kap Verde"
+msgstr "Kapverdierin"
 
 #. nationality for "Costa Rica" (CRI)
 msgid "Costa Rican"
-msgstr "Costa Rica"
+msgstr "Costa-Ricanerin"
 
 #. nationality for "Cuba" (CUB)
 msgid "Cuban"
-msgstr "Kuba"
+msgstr "Kubanerin"
 
 #. nationality for "Christmas Island" (CXR)
 msgid "Christmas Island"
-msgstr "Weihnachtsinsel"
+msgstr "Weihnachtsinsel Bewohnerin"
 
 #. nationality for "Cayman Islands" (CYM)
 msgid "Caymanian"
-msgstr "Kaiman Inseln"
+msgstr "Kaiman Inseln Bewohnerin"
 
 #. nationality for "Cyprus" (CYP)
 msgid "Cypriot"
-msgstr "Zypern"
+msgstr "Zypriotin"
 
 #. nationality for "Czech Republic" (CZE)
 msgid "Czech"
-msgstr "Tschechische Republik"
+msgstr "Tschechin"
 
 #. nationality for "Germany" (DEU)
 msgid "German"
-msgstr "Deutschland"
+msgstr "Deutscher"
 
 #. nationality for "Djibouti" (DJI)
 msgid "Djiboutian"
-msgstr "Dschibuti"
+msgstr "Dschibutierin"
 
 #. nationality for "Dominica" (DMA)
 msgid "Dominican"
-msgstr "Dominica"
+msgstr "Dominikanerin"
 
 #. nationality for "Denmark" (DNK)
 msgid "Danish"
-msgstr "Dänemark"
+msgstr "Dänin"
 
 #. nationality for "Dominican Republic" (DOM)
 msgid "Dominican from Dominican Republic"
-msgstr "Dominikanische Republik"
+msgstr "Dominikanerin"
 
 #. nationality for "Algeria" (DZA)
 msgid "Algerian"
-msgstr "Algerien"
+msgstr "Algerierin"
 
 #. nationality for "Ecuador" (ECU)
 msgid "Ecuadorian"
-msgstr "Ecuador"
+msgstr "Ecuadorianerin"
 
 #. nationality for "Egypt" (EGY)
 msgid "Egyptian"
-msgstr "Ägypten"
+msgstr "Ägypterin"
 
 #. nationality for "Eritrea" (ERI)
 msgid "Eritrean"
-msgstr "Eritrea"
+msgstr "Eritreerin"
 
 #. nationality for "Western Sahara" (ESH)
 msgid "Sahrawi"
-msgstr "Westsahara"
+msgstr "Westsahara Bewohnerin"
 
 #. nationality for "Spain" (ESP)
 msgid "Spanish"
-msgstr "Spanien"
+msgstr "Spanierin"
 
 #. nationality for "Estonia" (EST)
 msgid "Estonian"
-msgstr "Estland"
+msgstr "Estländerin"
 
 #. nationality for "Ethiopia" (ETH)
 msgid "Ethiopian"
-msgstr "Äthiopien"
+msgstr "Äthiopierin"
 
 #. nationality for "Finland" (FIN)
 msgid "Finnish"
-msgstr "Finnland"
+msgstr "Finnländerin"
 
 #. nationality for "Fiji Islands" (FJI)
 msgid "Fijian"
-msgstr "Fidschi"
+msgstr "Fidschianerin"
 
 #. nationality for "Falkland Islands (Malvinas)" (FLK)
 msgid "Falkland Islanders"
-msgstr "Falkland Inseln"
+msgstr "Falkländerin"
 
 #. nationality for "France" (FRA)
 msgid "French"
-msgstr "Frankreich"
+msgstr "Französin"
 
 #. nationality for "Faroe Islands" (FRO)
 msgid "Faroese"
-msgstr "Färöer Inseln"
+msgstr "Färöerin"
 
 #. nationality for "Micronesia" (FSM)
 msgid "Micronesian"
-msgstr "Mikronesien"
+msgstr "Mikronesierin"
 
 #. nationality for "Gabon" (GAB)
 msgid "Gabonese"
-msgstr "Gabun"
+msgstr "Gabunerin"
 
 #. nationality for "United Kingdom" (GBR)
 msgid "British"
-msgstr "Großbritannien"
+msgstr "Britin"
 
 #. nationality for "Georgia" (GEO)
 msgid "Georgian"
-msgstr "Georgien"
+msgstr "Georgierin"
 
 #. nationality for "Ghana" (GHA)
 msgid "Ghanaian"
-msgstr "Ghana"
+msgstr "Ghanaerin"
 
 #. nationality for "Gibraltar" (GIB)
 msgid "Gibraltarian"
-msgstr "Gibraltar"
+msgstr "Gibraltarerin"
 
 #. nationality for "Guinea" (GIN)
 msgid "Guinean"
-msgstr "Guinea"
+msgstr "Guineerin"
 
 #. nationality for "Guadeloupe" (GLP)
 msgid "Guadeloupe"
@@ -362,27 +363,27 @@ msgstr "Guadeloupe"
 
 #. nationality for "Gambia" (GMB)
 msgid "Gambian"
-msgstr "Gambia"
+msgstr "Gambierin"
 
 #. nationality for "Guinea-Bissau" (GNB)
 msgid "Guinea-Bissauan"
-msgstr "Guinea Bissau"
+msgstr "Guinea-Bissauerin"
 
 #. nationality for "Equatorial Guinea" (GNQ)
 msgid "Equatorial Guinean"
-msgstr "Äquatorialguinea"
+msgstr "Äquatorialguineerin"
 
 #. nationality for "Greece" (GRC)
 msgid "Greek"
-msgstr "Griechenland"
+msgstr "Griechin"
 
 #. nationality for "Grenada" (GRD)
 msgid "Grenadian"
-msgstr "Grenadaa"
+msgstr "Grenaderin"
 
 #. nationality for "Greenland" (GRL)
 msgid "Greenlandic"
-msgstr "Grönland"
+msgstr "Grönlanderin"
 
 #. nationality for "Guatemala" (GTM)
 msgid "Guatemalan"
@@ -390,7 +391,7 @@ msgstr "Guatemala"
 
 #. nationality for "French Guiana" (GUF)
 msgid "Guianese"
-msgstr "Französisch Guyana"
+msgstr "Französisch Guyanerin"
 
 #. nationality for "Guam" (GUM)
 msgid "Guam"
@@ -398,7 +399,7 @@ msgstr "Guam"
 
 #. nationality for "Guyana" (GUY)
 msgid "Guyanese"
-msgstr "Guyana"
+msgstr "Guyanerin"
 
 #. nationality for "Hong Kong" (HKG)
 msgid "Hong Kong"
@@ -410,211 +411,211 @@ msgstr "Heard und McDonald Islands"
 
 #. nationality for "Honduras" (HND)
 msgid "Honduran"
-msgstr "Honduras"
+msgstr "Honduranerin"
 
 #. nationality for "Croatia" (HRV)
 msgid "Croat"
-msgstr "Kroatien"
+msgstr "Kroatin"
 
 #. nationality for "Haiti" (HTI)
 msgid "Haitian"
-msgstr "Haiti"
+msgstr "Haitianerin"
 
 #. nationality for "Hungary" (HUN)
 msgid "Hungarian"
-msgstr "Ungarn"
+msgstr "Ungarin"
 
 #. nationality for "Indonesia" (IDN)
 msgid "Indonesian"
-msgstr "Indonesien"
+msgstr "Indonesierin"
 
 #. nationality for "India" (IND)
 msgid "Indian"
-msgstr "Indien"
+msgstr "Inderin"
 
 #. nationality for "British Indian Ocean Territory" (IOT)
 msgid "British Indian Ocean Territory"
-msgstr "Britisch-Indischer Ozean"
+msgstr "Britisch-Indischer Ozean Bewohnerin"
 
 #. nationality for "Ireland" (IRL)
 msgid "Irish"
-msgstr "Irland"
+msgstr "Irin"
 
 #. nationality for "Iran" (IRN)
 msgid "Iranian"
-msgstr "Iran"
+msgstr "Iranerin"
 
 #. nationality for "Iraq" (IRQ)
 msgid "Iraqi"
-msgstr "Irak"
+msgstr "Irakerin"
 
 #. nationality for "Iceland" (ISL)
 msgid "Icelander"
-msgstr "Island"
+msgstr "Isländerin"
 
 #. nationality for "Israel" (ISR)
 msgid "Israeli"
-msgstr "Israel"
+msgstr "Israeli"
 
 #. nationality for "Italy" (ITA)
 msgid "Italian"
-msgstr "Italien"
+msgstr "Italienerin"
 
 #. nationality for "Jamaica" (JAM)
 msgid "Jamaican"
-msgstr "Jamaika"
+msgstr "Jamaikanerin"
 
 #. nationality for "Jordan" (JOR)
 msgid "Jordanian"
-msgstr "Jordanien"
+msgstr "Jordanierin"
 
 #. nationality for "Japan" (JPN)
 msgid "Japanese"
-msgstr "Japan"
+msgstr "Japanerin"
 
 #. nationality for "Kazakhstan" (KAZ)
 msgid "Kazakh"
-msgstr "Kasachstan"
+msgstr "Kasachin"
 
 #. nationality for "Kenya" (KEN)
 msgid "Kenyan"
-msgstr "Kenia"
+msgstr "Kenianerin"
 
 #. nationality for "Kyrgyzstan" (KGZ)
 msgid "Kyrgyzstani"
-msgstr "Kirgisistan"
+msgstr "Kirgistanerin"
 
 #. nationality for "Cambodia" (KHM)
 msgid "Cambodian"
-msgstr "Kambodscha"
+msgstr "Kambodschanerin"
 
 #. nationality for "Kiribati" (KIR)
 msgid "I-Kiribati"
-msgstr "Kiribati"
+msgstr "Kiribatierin"
 
 #. nationality for "Saint Kitts and Nevis" (KNA)
 msgid "Kittitian"
-msgstr "St. Kitts und Nevis"
+msgstr "St. Kitts und Nevis Bewohnerin"
 
 #. nationality for "Korea, Republic of" (KOR)
 msgid "South Korean"
-msgstr "Süd Korea"
+msgstr "Süd Koreanerin"
 
 #. nationality for "Kuwait" (KWT)
 msgid "Kuwaiti"
-msgstr "Kuwait"
+msgstr "Kuwaiterin"
 
 #. nationality for "Laos" (LAO)
 msgid "Laotian"
-msgstr "Laos"
+msgstr "Laotin"
 
 #. nationality for "Lebanon" (LBN)
 msgid "Lebanese"
-msgstr "Libanon"
+msgstr "Libanesin"
 
 #. nationality for "Liberia" (LBR)
 msgid "Liberian"
-msgstr "Liberia"
+msgstr "Liberianerin"
 
 #. nationality for "Libyan Arab Jamahiriya" (LBY)
 msgid "Libyan"
-msgstr "Libyen"
+msgstr "Libyerin"
 
 #. nationality for "Saint Lucia" (LCA)
 msgid "Saint Lucian"
-msgstr "Saint Lucia"
+msgstr "Saint Lucianerin"
 
 #. nationality for "Liechtenstein" (LIE)
 msgid "Liechtensteiner"
-msgstr "Liechtenstein"
+msgstr "Liechtensteinerin"
 
 #. nationality for "Sri Lanka" (LKA)
 msgid "Sri Lankan"
-msgstr "Sri Lanka"
+msgstr "Sri-Lankerin"
 
 #. nationality for "Lesotho" (LSO)
 msgid "Mosotho"
-msgstr "Lesotho"
+msgstr "Lesotherin"
 
 #. nationality for "Lithuania" (LTU)
 msgid "Lithuanian"
-msgstr "Litauen"
+msgstr "Litauerin"
 
 #. nationality for "Luxembourg" (LUX)
 msgid "Luxembourger"
-msgstr "Luxemburg"
+msgstr "Luxemburgerin"
 
 #. nationality for "Latvia" (LVA)
 msgid "Latvian"
-msgstr "Lettland"
+msgstr "Lettin"
 
 #. nationality for "Macao" (MAC)
 msgid "Macanese"
-msgstr "Macao"
+msgstr "Macauerin"
 
 #. nationality for "Morocco" (MAR)
 msgid "Moroccan"
-msgstr "Marokko"
+msgstr "Marokkanerin"
 
 #. nationality for "Monaco" (MCO)
 msgid "Monegasque"
-msgstr "Monaco"
+msgstr "Monegassin"
 
 #. nationality for "Moldova" (MDA)
 msgid "Moldovan"
-msgstr "Moldawien"
+msgstr "Moldauerin"
 
 #. nationality for "Madagascar" (MDG)
 msgid "Malagasy"
-msgstr "Madagaskar"
+msgstr "Madagassin"
 
 #. nationality for "Maldives" (MDV)
 msgid "Maldivian"
-msgstr "Malediven"
+msgstr "Malediverin"
 
 #. nationality for "Mexico" (MEX)
 msgid "Mexico"
-msgstr "Mexiko"
+msgstr "Mexikanerin"
 
 #. nationality for "Marshall Islands" (MHL)
 msgid "Marshallese"
-msgstr "Marshall Inseln"
+msgstr "Marshallerin"
 
 #. nationality for "Macedonia" (MKD)
 msgid "Macedonian"
-msgstr "Makedonien"
+msgstr "Mazedonierin"
 
 #. nationality for "Mali" (MLI)
 msgid "Malian"
-msgstr "Mali"
+msgstr "Malierin"
 
 #. nationality for "Malta" (MLT)
 msgid "Maltese"
-msgstr "Malta"
+msgstr "Malteserin"
 
 #. nationality for "Myanmar" (MMR)
 msgid "Burmese"
-msgstr "Burma"
+msgstr "Burmesin"
 
 #. nationality for "Montenegro" (MNE)
 msgid "Montenegrin"
-msgstr "Montenegro"
+msgstr "Montenegrinerin"
 
 #. nationality for "Mongolia" (MNG)
 msgid "Mongolian"
-msgstr "Mongolei"
+msgstr "Mongolin"
 
 #. nationality for "Northern Mariana Islands" (MNP)
 msgid "Northern Mariana Islands"
-msgstr "Nördliche Marianen"
+msgstr "Nördliche Marianen-Inseln Bewohnerin"
 
 #. nationality for "Mozambique" (MOZ)
 msgid "Mozambican"
-msgstr "Mazedonien"
+msgstr "Mosambikanerin"
 
 #. nationality for "Mauritania" (MRT)
 msgid "Mauritanian"
-msgstr "Mauretanien"
+msgstr "Mauretanierin"
 
 #. nationality for "Montserrat" (MSR)
 msgid "Montserratian"
@@ -626,15 +627,15 @@ msgstr "Martinique"
 
 #. nationality for "Mauritius" (MUS)
 msgid "Mauritian"
-msgstr "Mauritius"
+msgstr "Mauritierin"
 
 #. nationality for "Malawi" (MWI)
 msgid "Malawian"
-msgstr "Malawi"
+msgstr "Malawierin"
 
 #. nationality for "Malaysia" (MYS)
 msgid "Malaysian"
-msgstr "Malaysia"
+msgstr "Malaysierin"
 
 #. nationality for "Mayotte" (MYT)
 msgid "Mayotte"
@@ -642,155 +643,155 @@ msgstr "Mayotte"
 
 #. nationality for "Namibia" (NAM)
 msgid "Namibian"
-msgstr "Namibia"
+msgstr "Namibierin"
 
 #. nationality for "New Caledonia" (NCL)
 msgid "New Caledonian"
-msgstr "Neukaledonien"
+msgstr "Neukaledonierin"
 
 #. nationality for "Niger" (NER)
 msgid "Nigerien"
-msgstr "Niger"
+msgstr "Nigrerin"
 
 #. nationality for "Norfolk Island" (NFK)
 msgid "Norfolk Island"
-msgstr "Norfolk Inseln"
+msgstr "Norfolk Inseln Bewohnerin"
 
 #. nationality for "Nigeria" (NGA)
 msgid "Nigerian"
-msgstr "Nigeria"
+msgstr "Nigerianerin"
 
 #. nationality for "Nicaragua" (NIC)
 msgid "Nicaraguan"
-msgstr "Nicaragua"
+msgstr "Nicaraguanerin"
 
 #. nationality for "Niue" (NIU)
 msgid "Niuean"
-msgstr "Niue"
+msgstr "Niueanerin"
 
 #. nationality for "Netherlands" (NLD)
 msgid "Dutch"
-msgstr "Niederlande"
+msgstr "Holländerin"
 
 #. nationality for "Norway" (NOR)
 msgid "Norwegian"
-msgstr "Norwegen"
+msgstr "Norwegerin"
 
 #. nationality for "Nepal" (NPL)
 msgid "Nepali"
-msgstr "Nepal"
+msgstr "Nepali"
 
 #. nationality for "Nauru" (NRU)
 msgid "Nauruan"
-msgstr "Nauru"
+msgstr "Nauruerin"
 
 #. nationality for "New Zealand" (NZL)
 msgid "New Zealander"
-msgstr "Neuseeland"
+msgstr "Neuseeländerin"
 
 #. nationality for "Oman" (OMN)
 msgid "Omani"
-msgstr "Oman"
+msgstr "Omanerin"
 
 #. nationality for "Pakistan" (PAK)
 msgid "Pakistani"
-msgstr "Pakistan"
+msgstr "Pakistanerin"
 
 #. nationality for "Panama" (PAN)
 msgid "Panamanian"
-msgstr "Panama"
+msgstr "Panamaerin"
 
 #. nationality for "Pitcairn" (PCN)
 msgid "Pitcairn Islander"
-msgstr "Pitcairn"
+msgstr "Pitcairn-Insulaner"
 
 #. nationality for "Peru" (PER)
 msgid "Peruvian"
-msgstr "Peru"
+msgstr "Peruanerin"
 
 #. nationality for "Philippines" (PHL)
 msgid "Filipino"
-msgstr "Philippinen"
+msgstr "Philippinerin"
 
 #. nationality for "Palau" (PLW)
 msgid "Palauan"
-msgstr "Palau"
+msgstr "Palauerin"
 
 #. nationality for "Papua New Guinea" (PNG)
 msgid "Papua New Guinean"
-msgstr "Papua Neuguinea"
+msgstr "Papua-Neuguineerin"
 
 #. nationality for "Poland" (POL)
 msgid "Polish"
-msgstr "Polen"
+msgstr "Polin"
 
 #. nationality for "Puerto Rico" (PRI)
 msgid "Puerto Rican"
-msgstr "Puerto Rico"
+msgstr "Puerto-Ricanerin"
 
 #. nationality for "Korea, Democratic People's Republic of" (PRK)
 msgid "North Korean"
-msgstr "Nord Korea"
+msgstr "Nord Koreanerin"
 
 #. nationality for "Portugal" (PRT)
 msgid "Portuguese"
-msgstr "Portugal"
+msgstr "Portugiesin"
 
 #. nationality for "Paraguay" (PRY)
 msgid "Paraguayan"
-msgstr "Paraguay"
+msgstr "Paraguayerin"
 
 #. nationality for "Palestinian Territory" (PSE)
 msgid "Palestinian"
-msgstr "Palästina"
+msgstr "Palästinenserin"
 
 #. nationality for "French Polynesia" (PYF)
 msgid "Polynesian"
-msgstr "Französisch Polynesien"
+msgstr "Polynesierin"
 
 #. nationality for "Qatar" (QAT)
 msgid "Qatari"
-msgstr "Katar"
+msgstr "Katarerin"
 
 #. nationality for "Reunion" (REU)
 msgid "Reunion"
-msgstr "Réunion"
+msgstr "Réunion Bewohnerin"
 
 #. nationality for "Romania" (ROU)
 msgid "Romanian"
-msgstr "Rumänien"
+msgstr "Rumänin"
 
 #. nationality for "Russian Federation" (RUS)
 msgid "Russian"
-msgstr "Russland"
+msgstr "Russin"
 
 #. nationality for "Rwanda" (RWA)
 msgid "Rwandan"
-msgstr "Ruanda"
+msgstr "Ruanderin"
 
 #. nationality for "Saudi Arabia" (SAU)
 msgid "Saudi"
-msgstr "Saudi Arabien"
+msgstr "Saudi-Araberin"
 
 #. nationality for "Sudan" (SDN)
 msgid "Sudanese"
-msgstr "Sudan"
+msgstr "Sudanesin"
 
 #. nationality for "Senegal" (SEN)
 msgid "Senegalese"
-msgstr "Senegal"
+msgstr "Senegalesin"
 
 #. nationality for "Singapore" (SGP)
 msgid "Singaporean"
-msgstr "Singapur"
+msgstr "Singapurerin"
 
 #. nationality for "South Georgia and the South Sandwich Islands" (SGS)
 msgid "South Georgia and the South Sandwich Islands"
-msgstr "Südgeorgien und die Südlichen Sandwichinseln"
+msgstr "Südgeorgien und Südlichen Sandwichinseln Bewohnerin"
 
 #. nationality for "Saint Helena" (SHN)
 msgid "Saint Helena"
-msgstr "St. Helena"
+msgstr "St. Helena Bewohnerin"
 
 #. nationality for "Svalbard and Jan Mayen" (SJM)
 msgid "Svalbard and Jan Mayen"
@@ -798,196 +799,196 @@ msgstr "Svalbard und Jan Mayen"
 
 #. nationality for "Solomon Islands" (SLB)
 msgid "Solomon Islands"
-msgstr "Solomon Inseln"
+msgstr "Salomonerin"
 
 #. nationality for "Sierra Leone" (SLE)
 msgid "Sierra Leonean"
-msgstr "Sierra Leone"
+msgstr "Sierra-Leonerin"
 
 #. nationality for "El Salvador" (SLV)
 msgid "Salvadorian"
-msgstr "El Salvador"
+msgstr "Salvadorianerin"
 
 #. nationality for "San Marino" (SMR)
 msgid "Sammarinese"
-msgstr "San Marino"
+msgstr "San Marinesin"
 
 #. nationality for "Somalia" (SOM)
 msgid "Somali"
-msgstr "Somalia"
+msgstr "Somalierin"
 
 #. nationality for "Saint Pierre and Miquelon" (SPM)
 msgid "Saint Pierre and Miquelon"
-msgstr "St. Pierre und Miquelon"
+msgstr "St. Pierre und Miquelon Bewohnerin"
 
 #. nationality for "Serbia" (SRB)
 msgid "Serbian"
-msgstr "Serbien"
+msgstr "Serbin"
 
 #. nationality for "Sao Tome and Principe" (STP)
 msgid "Santomean"
-msgstr "Sao Tome"
+msgstr "Sao-Tomeerin"
 
 #. nationality for "Suriname" (SUR)
 msgid "Surinamese"
-msgstr "Surinam"
+msgstr "Surinamerin"
 
 #. nationality for "Slovakia" (SVK)
 msgid "Slovak"
-msgstr "Slowakei"
+msgstr "Slowakin"
 
 #. nationality for "Slovenia" (SVN)
 msgid "Slovenian"
-msgstr "Slowenien"
+msgstr "Slowenierin"
 
 #. nationality for "Sweden" (SWE)
 msgid "Swedish"
-msgstr "Schweden"
+msgstr "Schwedin"
 
 #. nationality for "Swaziland" (SWZ)
 msgid "Swazi"
-msgstr "Swasiland"
+msgstr "Swasiländerin"
 
 #. nationality for "Seychelles" (SYC)
 msgid "Seychellois"
-msgstr "Seychellen"
+msgstr "Seychellerin"
 
 #. nationality for "Syrian Arab Republic" (SYR)
 msgid "Syrian"
-msgstr "Syrien"
+msgstr "Syrerin"
 
 #. nationality for "" (TCA)
 msgid "Turks and Caicos Islands"
-msgstr "Turks und Kaikos Inseln"
+msgstr "Turks und Kaikos Inseln Bewohnerin"
 
 #. nationality for "Chad" (TCD)
 msgid "Chadian"
-msgstr "Tschad"
+msgstr "Tschaderin"
 
 #. nationality for "Togo" (TGO)
 msgid "Togolese"
-msgstr "Togo"
+msgstr "Togolesin"
 
 #. nationality for "Thailand" (THA)
 msgid "Thai"
-msgstr "Thailand"
+msgstr "Thailänderin"
 
 #. nationality for "Tajikistan" (TJK)
 msgid "Tajik"
-msgstr "Tadschikistan"
+msgstr "Tadschikin"
 
 #. nationality for "Tokelau" (TKL)
 msgid "Tokelauan"
-msgstr "Tokelau"
+msgstr "Tokelau Bewohnerin"
 
 #. nationality for "Turkmenistan" (TKM)
 msgid "Turkmenistani"
-msgstr "Turkmenistan"
+msgstr "Turkmenin"
 
 #. nationality for "Timor-Leste" (TLS)
 msgid "East Timorese"
-msgstr "Timor"
+msgstr "Osttimorerin"
 
 #. nationality for "Tonga" (TON)
 msgid "Tongan"
-msgstr "Tonga"
+msgstr "Tongaerin"
 
 #. nationality for "Trinidad and Tobago" (TTO)
 msgid "Trinidadian and Tobagonian"
-msgstr "Trinidad Tobago"
+msgstr "Trinidad Tobago Bewohnerin"
 
 #. nationality for "Tunisia" (TUN)
 msgid "Tunisian"
-msgstr "Tunesien"
+msgstr "Tunesierin"
 
 #. nationality for "Turkey" (TUR)
 msgid "Turkish"
-msgstr "Türkei"
+msgstr "Türkin"
 
 #. nationality for "Tuvalu" (TUV)
 msgid "Tuvaluan"
-msgstr "Tuvalu"
+msgstr "Tuvaluerin"
 
 #. nationality for "Taiwan" (TWN)
 msgid "Taiwan"
-msgstr "Taiwan"
+msgstr "Taiwanesin"
 
 #. nationality for "Tanzania" (TZA)
 msgid "Tanzanian"
-msgstr "Tansania"
+msgstr "Tansanierin"
 
 #. nationality for "Uganda" (UGA)
 msgid "Ugandan"
-msgstr "Uganda"
+msgstr "Uganderin"
 
 #. nationality for "Ukraine" (UKR)
 msgid "Ukrainian"
-msgstr "Ukraine"
+msgstr "Ukrainerin"
 
 #. nationality for "United States Minor Outlying Islands" (UMI)
 msgid "United States Minor Outlying Islands"
-msgstr "United States Minor Outlying Islands"
+msgstr "United States Minor Outlying Islands Bewohner"
 
 #. nationality for "Uruguay" (URY)
 msgid "Uruguayan"
-msgstr "Uruguay"
+msgstr "Uruguayerin"
 
 #. nationality for "United States" (USA)
 msgid "American"
-msgstr "Vereinigte Staaten von Amerika"
+msgstr "Amerikanerin"
 
 #. nationality for "Uzbekistan" (UZB)
 msgid "Uzbekistani"
-msgstr "Usbekistan"
+msgstr "Usbekin"
 
 #. nationality for "Holy See (Vatican City State)" (VAT)
 msgid "Holy See (Vatican City State)"
-msgstr "Vatikan"
+msgstr "Vatikan Bewohnerin"
 
 #. nationality for "Saint Vincent and the Grenadines" (VCT)
 msgid "Vincentian"
-msgstr "St. Vincent"
+msgstr "Vincenterin"
 
 #. nationality for "Venezuela" (VEN)
 msgid "Venezuelan"
-msgstr "Venezuela"
+msgstr "Venezolanerin"
 
 #. nationality for "British Virgin Islands" (VGB)
 msgid "British Virgin Islands"
-msgstr "Virgin Island (Brit.)"
+msgstr "Britische Jungferninsel Bewohnerin"
 
 #. nationality for "US Virgin Islands" (VIR)
 msgid "US Virgin Islands"
-msgstr "Virgin Island (USA)"
+msgstr "Amerikanische Jungferninseln Bewohnerin"
 
 #. nationality for "Viet Nam" (VNM)
 msgid "Vietnamese"
-msgstr "Vietnam"
+msgstr "Vietnamesin"
 
 #. nationality for "Vanuatu" (VUT)
 msgid "ni-Vanuatu"
-msgstr "Vanuatu"
+msgstr "Vanuatu Bewohnerin"
 
 #. nationality for "Wallis and Futuna" (WLF)
 msgid "Wallisian and Futunian"
-msgstr "Wallis et Futuna"
+msgstr "Wallis et Futuna Bewohnerin"
 
 #. nationality for "Samoa" (WSM)
 msgid "Samoan"
-msgstr "Samoa"
+msgstr "Samoanerin"
 
 #. nationality for "Yemen" (YEM)
 msgid "Yemeni"
-msgstr "Jemen"
+msgstr "Jemenitin"
 
 #. nationality for "South Africa" (ZAF)
 msgid "South African"
-msgstr "Südafrika"
+msgstr "Südafrikanerin"
 
 #. nationality for "Zambia" (ZMB)
 msgid "Zambian"
-msgstr "Sambia"
+msgstr "Sambierin"
 
 #. nationality for "Zimbabwe" (ZWE)
 msgid "Zimbabwean"
-msgstr "Zimbabwe"
+msgstr "Simbabwerin"
