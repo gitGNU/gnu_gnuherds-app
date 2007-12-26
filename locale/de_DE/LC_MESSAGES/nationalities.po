@@ -275,7 +275,7 @@ msgstr "Dänin"
 
 #. nationality for "Dominican Republic" (DOM)
 msgid "Dominican from Dominican Republic"
-msgstr "Dominikanerin"
+msgstr "Dominikanerin, Republik"
 
 #. nationality for "Algeria" (DZA)
 msgid "Algerian"
