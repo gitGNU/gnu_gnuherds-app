@@ -233,8 +233,8 @@ msgid "British Indian Ocean Territory"
 msgstr "Británico del Océano Índico, Territorio"
 
 #. name for BRN
-msgid "Brunei Darussalam"
-msgstr "Brunei Darussalam"
+msgid "Brunei"
+msgstr "Brunéi"
 
 #. name for BGR
 msgid "Bulgaria"
@@ -482,6 +482,10 @@ msgstr "Etiopía"
 #. official_name for ETH
 msgid "Federal Democratic Republic of Ethiopia"
 msgstr "República Federal Democrática de Etiopía"
+
+#. name for EUR
+msgid "Åland Islands"
+msgstr "Islas Åland"
 
 #. name for FLK
 msgid "Falkland Islands (Malvinas)"
@@ -881,7 +885,7 @@ msgid "Grand Duchy of Luxembourg"
 msgstr "Gran Ducado de Luxemburgo"
 
 #. name for MAC
-msgid "Macao"
+msgid "Macau"
 msgstr "Macao"
 
 #. official_name for MAC
@@ -1221,7 +1225,7 @@ msgid "Republic of the Philippines"
 msgstr "República de Filipinas"
 
 #. name for PCN
-msgid "Pitcairn"
+msgid "Pitcairn Islands"
 msgstr "Pitcairn"
 
 #. name for POL
@@ -1253,7 +1257,7 @@ msgid "State of Qatar"
 msgstr "Estado de Qatar"
 
 #. name for REU
-msgid "Reunion"
+msgid "Réunion"
 msgstr "Reunión"
 
 #. name for ROU
@@ -1309,11 +1313,11 @@ msgid "Republic of San Marino"
 msgstr "República de San Marino"
 
 #. name for STP
-msgid "Sao Tome and Principe"
+msgid "São Tomé and Príncipe"
 msgstr "Sao Tomé y Príncipe"
 
 #. official_name for STP
-msgid "Democratic Republic of Sao Tome and Principe"
+msgid "Democratic Republic of São Tomé and Príncipe"
 msgstr "República Democrática de Santo Tomé y Príncipe"
 
 #. name for SAU
@@ -1504,11 +1508,11 @@ msgid "Kingdom of Thailand"
 msgstr "Reino de Tailandia"
 
 #. name for TLS
-msgid "Timor-Leste"
+msgid "East Timor"
 msgstr "Timor Oriental"
 
 #. official_name for TLS
-msgid "Democratic Republic of Timor-Leste"
+msgid "Democratic Republic of East Timor"
 msgstr "República Democrática de Timor Oriental"
 
 #. name for TGO

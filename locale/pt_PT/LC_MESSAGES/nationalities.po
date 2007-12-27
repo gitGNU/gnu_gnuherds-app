@@ -65,11 +65,11 @@ msgid "Netherlands Antillean"
 msgstr "Antilhano/a"
 
 #. nationality for "United Arab Emirates" (ARE)
-msgid "Emirati"
+msgid "Emirian"
 msgstr "Natural dos Emirados Árabes Unidos"
 
 #. nationality for "Argentina" (ARG)
-msgid "Argentine"
+msgid "Argentinian"
 msgstr "Argentino/a"
 
 #. nationality for "Armenia" (ARM)
@@ -117,7 +117,7 @@ msgid "Beninese"
 msgstr "Beninês/Beninesa"
 
 #. nationality for "Burkina Faso" (BFA)
-msgid "Burkinabé"
+msgid "Burkinabe"
 msgstr "Burquino/a"
 
 #. nationality for "Bangladesh" (BGD)
@@ -133,7 +133,7 @@ msgid "Bahraini"
 msgstr "Baremita"
 
 #. nationality for "Bahamas" (BHS)
-msgid "Bahamas"
+msgid "Bahamian"
 msgstr "Baamiano/a"
 
 #. nationality for "Bosnia and Herzegovina" (BIH)
@@ -177,7 +177,7 @@ msgid "Bouvet Island"
 msgstr "Natural da Ilha Bouvet"
 
 #. nationality for "Botswana" (BWA)
-msgid "Batswana"
+msgid "Botswanan"
 msgstr "Botsuano/a"
 
 #. nationality for "Central African Republic" (CAF)
@@ -189,7 +189,7 @@ msgid "Canadian"
 msgstr "Canadiano/a"
 
 #. nationality for "Cocos (Keeling) Islands" (CCK)
-msgid "Cocos (Keeling) Islands"
+msgid "Cocos Islander"
 msgstr "Natural das Ilhas Cocos"
 
 #. nationality for "Switzerland" (CHE)
@@ -245,7 +245,7 @@ msgid "Cuban"
 msgstr "Cubano/a"
 
 #. nationality for "Christmas Island" (CXR)
-msgid "Christmas Island"
+msgid "Christmas Islander"
 msgstr "Natural da Ilha Christmas"
 
 #. nationality for "Cayman Islands" (CYM)
@@ -273,7 +273,7 @@ msgid "Dominican"
 msgstr "Dominiquense"
 
 #. nationality for "Denmark" (DNK)
-msgid "Danish"
+msgid "Dane"
 msgstr "Dinamarquês/Dinamarquesa"
 
 #. nationality for "Dominican Republic" (DOM)
@@ -301,7 +301,7 @@ msgid "Sahrawi"
 msgstr "Saraui"
 
 #. nationality for "Spain" (ESP)
-msgid "Spanish"
+msgid "Spaniard"
 msgstr "Espanhol/Espanhola"
 
 #. nationality for "Estonia" (EST)
@@ -312,12 +312,16 @@ msgstr "Estónio/a"
 msgid "Ethiopian"
 msgstr "Etíope"
 
+#. nationality for "Åland Islands" (EUR)
+msgid "Åland Islander"
+msgstr "Alandês/Alandesa"
+
 #. nationality for "Finland" (FIN)
 msgid "Finnish"
 msgstr "Finlandês/Finlandesa"
 
 #. nationality for "Fiji Islands" (FJI)
-msgid "Fijian"
+msgid "Fiji Islander"
 msgstr "Fijiano/a"
 
 #. nationality for "Falkland Islands (Malvinas)" (FLK)
@@ -341,7 +345,7 @@ msgid "Gabonese"
 msgstr "Gabonês/Gabonesa"
 
 #. nationality for "United Kingdom" (GBR)
-msgid "British"
+msgid "Briton"
 msgstr "Britânico/a"
 
 #. nationality for "Georgia" (GEO)
@@ -361,7 +365,7 @@ msgid "Guinean"
 msgstr "Guineense (da Guiné)"
 
 #. nationality for "Guadeloupe" (GLP)
-msgid "Guadeloupe"
+msgid "Guadeloupean"
 msgstr "Guadalupino/a"
 
 #. nationality for "Gambia" (GMB)
@@ -369,7 +373,7 @@ msgid "Gambian"
 msgstr "Gambiano/a"
 
 #. nationality for "Guinea-Bissau" (GNB)
-msgid "Guinea-Bissauan"
+msgid "Guinean from Guinea-Bissau"
 msgstr "Guineense (da Guiné-Bissau)"
 
 #. nationality for "Equatorial Guinea" (GNQ)
@@ -385,7 +389,7 @@ msgid "Grenadian"
 msgstr "Granadino/a"
 
 #. nationality for "Greenland" (GRL)
-msgid "Greenlandic"
+msgid "Greenlander"
 msgstr "Gronelandês/Gronelandesa"
 
 #. nationality for "Guatemala" (GTM)
@@ -397,7 +401,7 @@ msgid "Guianese"
 msgstr "Guianês/Guianesa (da Guiana Francesa)"
 
 #. nationality for "Guam" (GUM)
-msgid "Guam"
+msgid "Guamanian"
 msgstr "Guamês/Guamesa"
 
 #. nationality for "Guyana" (GUY)
@@ -493,11 +497,11 @@ msgid "Cambodian"
 msgstr "Cambojano/a"
 
 #. nationality for "Kiribati" (KIR)
-msgid "I-Kiribati"
+msgid "Kiribatian"
 msgstr "Quiribatiano/a"
 
 #. nationality for "Saint Kitts and Nevis" (KNA)
-msgid "Kittitian"
+msgid "Kittsian; Nevisian"
 msgstr "Natural de São Cristóvão e Nevis"
 
 #. nationality for "Korea, Republic of" (KOR)
@@ -509,7 +513,7 @@ msgid "Kuwaiti"
 msgstr "Koweitiano/a"
 
 #. nationality for "Laos" (LAO)
-msgid "Laotian"
+msgid "Lao"
 msgstr "Laociano/a"
 
 #. nationality for "Lebanon" (LBN)
@@ -537,7 +541,7 @@ msgid "Sri Lankan"
 msgstr "Cingalês/Cingalesa"
 
 #. nationality for "Lesotho" (LSO)
-msgid "Mosotho"
+msgid "Basotho"
 msgstr "Lesotiano/a"
 
 #. nationality for "Lithuania" (LTU)
@@ -552,7 +556,7 @@ msgstr "Luxemburguês/Luxemburguesa"
 msgid "Latvian"
 msgstr "Letão/Letã"
 
-#. nationality for "Macao" (MAC)
+#. nationality for "Macau" (MAC)
 msgid "Macanese"
 msgstr "Macaense"
 
@@ -577,7 +581,7 @@ msgid "Maldivian"
 msgstr "Maldivo/a"
 
 #. nationality for "Mexico" (MEX)
-msgid "Mexico"
+msgid "Mexican"
 msgstr "Mexicano/a"
 
 #. nationality for "Marshall Islands" (MHL)
@@ -609,7 +613,7 @@ msgid "Mongolian"
 msgstr "Mongol"
 
 #. nationality for "Northern Mariana Islands" (MNP)
-msgid "Northern Mariana Islands"
+msgid "Northern Mariana Islander"
 msgstr "Natural das Ilhas Marianas do Norte"
 
 #. nationality for "Mozambique" (MOZ)
@@ -641,7 +645,7 @@ msgid "Malaysian"
 msgstr "Malaio/a"
 
 #. nationality for "Mayotte" (MYT)
-msgid "Mayotte"
+msgid "Mahorais"
 msgstr "Natural de Mayotte"
 
 #. nationality for "Namibia" (NAM)
@@ -657,7 +661,7 @@ msgid "Nigerien"
 msgstr "Nigerino/a"
 
 #. nationality for "Norfolk Island" (NFK)
-msgid "Norfolk Island"
+msgid "Norfolk Islander"
 msgstr "Natural da Ilha Norfolk"
 
 #. nationality for "Nigeria" (NGA)
@@ -681,7 +685,7 @@ msgid "Norwegian"
 msgstr "Norueguês/Norueguesa"
 
 #. nationality for "Nepal" (NPL)
-msgid "Nepali"
+msgid "Nepalese"
 msgstr "Nepalês/Nepalesa"
 
 #. nationality for "Nauru" (NRU)
@@ -704,7 +708,7 @@ msgstr "Paquistanês/Paquistanesa"
 msgid "Panamanian"
 msgstr "Panamense"
 
-#. nationality for "Pitcairn" (PCN)
+#. nationality for "Pitcairn Islands" (PCN)
 msgid "Pitcairn Islander"
 msgstr "Natural de Pitcairn"
 
@@ -725,7 +729,7 @@ msgid "Papua New Guinean"
 msgstr "Papua"
 
 #. nationality for "Poland" (POL)
-msgid "Polish"
+msgid "Pole"
 msgstr "Polaco/a"
 
 #. nationality for "Puerto Rico" (PRI)
@@ -756,8 +760,8 @@ msgstr "Polinésio/a"
 msgid "Qatari"
 msgstr "Catarense"
 
-#. nationality for "Reunion" (REU)
-msgid "Reunion"
+#. nationality for "Réunion" (REU)
+msgid "Reunionese"
 msgstr "Natural da Reunião"
 
 #. nationality for "Romania" (ROU)
@@ -773,7 +777,7 @@ msgid "Rwandan"
 msgstr "Ruandês/Ruandesa"
 
 #. nationality for "Saudi Arabia" (SAU)
-msgid "Saudi"
+msgid "Saudi Arabian"
 msgstr "Saudita"
 
 #. nationality for "Sudan" (SDN)
@@ -793,7 +797,7 @@ msgid "South Georgia and the South Sandwich Islands"
 msgstr "Natural das Ilhas Geórgia do Sul e Sandwich do Sul"
 
 #. nationality for "Saint Helena" (SHN)
-msgid "Saint Helena"
+msgid "Saint Helenian"
 msgstr "Natural de Santa Helena"
 
 #. nationality for "Svalbard and Jan Mayen" (SJM)
@@ -801,7 +805,7 @@ msgid "Svalbard and Jan Mayen"
 msgstr "Natural de Svalbard e Jan Mayen"
 
 #. nationality for "Solomon Islands" (SLB)
-msgid "Solomon Islands"
+msgid "Solomon Islander"
 msgstr "Natural das Ilhas Salomão"
 
 #. nationality for "Sierra Leone" (SLE)
@@ -813,7 +817,7 @@ msgid "Salvadorian"
 msgstr "Salvadorenho/a"
 
 #. nationality for "San Marino" (SMR)
-msgid "Sammarinese"
+msgid "San Marinese"
 msgstr "São-marinense"
 
 #. nationality for "Somalia" (SOM)
@@ -821,19 +825,19 @@ msgid "Somali"
 msgstr "Somaliano/a"
 
 #. nationality for "Saint Pierre and Miquelon" (SPM)
-msgid "Saint Pierre and Miquelon"
+msgid "St-Pierrais; Miquelonnais"
 msgstr "Natural de São Pedro e Miquelon"
 
 #. nationality for "Serbia" (SRB)
-msgid "Serbian"
+msgid "Serb"
 msgstr "Sérvio/a"
 
-#. nationality for "Sao Tome and Principe" (STP)
-msgid "Santomean"
+#. nationality for "São Tomé and Príncipe" (STP)
+msgid "São Toméan"
 msgstr "Santomense"
 
 #. nationality for "Suriname" (SUR)
-msgid "Surinamese"
+msgid "Surinamer"
 msgstr "Surinamense"
 
 #. nationality for "Slovakia" (SVK)
@@ -841,11 +845,11 @@ msgid "Slovak"
 msgstr "Eslovaco/a"
 
 #. nationality for "Slovenia" (SVN)
-msgid "Slovenian"
+msgid "Slovene"
 msgstr "Esloveno/a"
 
 #. nationality for "Sweden" (SWE)
-msgid "Swedish"
+msgid "Swede"
 msgstr "Sueco/a"
 
 #. nationality for "Swaziland" (SWZ)
@@ -861,7 +865,7 @@ msgid "Syrian"
 msgstr "Sírio/a"
 
 #. nationality for "" (TCA)
-msgid "Turks and Caicos Islands"
+msgid "Turks and Caicos Islander"
 msgstr "Natural das Ilhas Turcas e Caicos"
 
 #. nationality for "Chad" (TCD)
@@ -885,10 +889,10 @@ msgid "Tokelauan"
 msgstr "Natural de Tokelau"
 
 #. nationality for "Turkmenistan" (TKM)
-msgid "Turkmenistani"
+msgid "Turkmen"
 msgstr "Turquemeno/a"
 
-#. nationality for "Timor-Leste" (TLS)
+#. nationality for "East Timor" (TLS)
 msgid "East Timorese"
 msgstr "Timorense"
 
@@ -897,7 +901,7 @@ msgid "Tongan"
 msgstr "Tonganês/Tonganesa"
 
 #. nationality for "Trinidad and Tobago" (TTO)
-msgid "Trinidadian and Tobagonian"
+msgid "Trinidadian; Tobagonian"
 msgstr "Natural de Trindade e Tobago"
 
 #. nationality for "Tunisia" (TUN)
@@ -905,7 +909,7 @@ msgid "Tunisian"
 msgstr "Tunisino/a"
 
 #. nationality for "Turkey" (TUR)
-msgid "Turkish"
+msgid "Turk"
 msgstr "Turco/a"
 
 #. nationality for "Tuvalu" (TUV)
@@ -913,7 +917,7 @@ msgid "Tuvaluan"
 msgstr "Tuvalês/Tuvalesa"
 
 #. nationality for "Taiwan" (TWN)
-msgid "Taiwan"
+msgid "Taiwanese"
 msgstr "Taiwanês/Taiwanesa"
 
 #. nationality for "Tanzania" (TZA)
@@ -941,7 +945,7 @@ msgid "American"
 msgstr "Estado-unidense"
 
 #. nationality for "Uzbekistan" (UZB)
-msgid "Uzbekistani"
+msgid "Uzbek"
 msgstr "Usbeque"
 
 #. nationality for "Holy See (Vatican City State)" (VAT)
@@ -957,11 +961,11 @@ msgid "Venezuelan"
 msgstr "Venezuelano/a"
 
 #. nationality for "British Virgin Islands" (VGB)
-msgid "British Virgin Islands"
+msgid "British Virgin Islander"
 msgstr "Natural das Ilhas Virgens Britânicas"
 
 #. nationality for "US Virgin Islands" (VIR)
-msgid "US Virgin Islands"
+msgid "US Virgin Islander"
 msgstr "Natural das Ilhas Virgens Americanas"
 
 #. nationality for "Viet Nam" (VNM)
@@ -969,11 +973,11 @@ msgid "Vietnamese"
 msgstr "Vietnamita"
 
 #. nationality for "Vanuatu" (VUT)
-msgid "ni-Vanuatu"
+msgid "Vanuatuan"
 msgstr "Natural de Vanuatu"
 
 #. nationality for "Wallis and Futuna" (WLF)
-msgid "Wallisian and Futunian"
+msgid "Wallisian; Futunan"
 msgstr "Natural de Wallis e Futuna"
 
 #. nationality for "Samoa" (WSM)
