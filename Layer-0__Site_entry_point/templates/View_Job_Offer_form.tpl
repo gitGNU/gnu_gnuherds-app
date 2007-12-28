@@ -434,7 +434,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <strong>{t}Nationality{/t}</strong> :{/if}
 </td>
 
-<td colspan="2">
+<td colspan="2" class="greenLight">
 <strong>
 {if $data.EntityType eq 'Person' }
 	{if trim($data.Website) neq ''}<a href="{$data.Website}">{/if}
@@ -462,7 +462,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </td>
 
-<td>
+<td class="greenLight">
 {if $data.PhotoOrLogo eq 'true' }
 		<img src="photo?acl=offers&amp;id={$data.EntityId}" align="right" alt="" border="0" hspace="0" vspace="0">
 {else}
