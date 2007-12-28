@@ -33,7 +33,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </head>
 
 
-<body OnLoad="if ('InitializationOnLoad' in window) InitializationOnLoad();">
+<body>
 
 {if !isset($smarty.get.heading)}
 {include file="header.tpl"}
