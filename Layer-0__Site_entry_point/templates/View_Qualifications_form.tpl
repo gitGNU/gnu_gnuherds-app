@@ -157,7 +157,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td align="right"><strong>{t}Academic qualification{/t}</strong> : </td>
 <td colspan="3" class="greenDark">
 {if trim($data.AcademicQualification) neq '' or trim($data.AcademicQualificationDescription) neq ''}
-	{t}{$data.AcademicQualification}{/t}{if trim($data.AcademicQualificationDescription) neq ''}, ({$data.AcademicQualificationDescription}){/if}
+	{if trim($data.AcademicQualification) neq ''}
+		{t}{$data.AcademicQualification}{/t}{if trim($data.AcademicQualificationDescription) neq ''}, {/if}
+	{/if}
+
+	{if trim($data.AcademicQualificationDescription) neq ''}({$data.AcademicQualificationDescription}){/if}
 {else}
 	{t}none{/t}
 {/if}
