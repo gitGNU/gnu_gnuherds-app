@@ -43,9 +43,10 @@ Suite 225, San Francisco, CA 94107, USA
 {/if}
 </legend>
 
-<form name="formLogin" method="post" section="{$smarty.server.REQUEST_URI}">
-
 <br>
+
+<form name="formLogin" method="post" action="{$smarty.server.REQUEST_URI}">
+<div>
 
 {if $smarty.get.section eq 'classify_skills' or $smarty.get.section eq '' }
 {if $data.PendingSkillList|@count > 0 or $data.Skill2Process neq '' }
@@ -85,7 +86,7 @@ Suite 225, San Francisco, CA 94107, USA
 {if ( ( $smarty.get.section eq 'classify_skills' or $smarty.get.section eq '' ) and $smarty.post.cancel eq '' and ( $data.PendingSkillList|@count > 0 or $data.Skill2Process neq '' ) )  or
     ( $smarty.get.section eq 'reclassify_skills' and $data.Skill2Process neq '' )  or
     $smarty.get.section eq 'add_skills' }
-<table align="center">
+<table>
 
 {if $checks.result eq 'fail' }
 <tr><td colspan="2" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td></tr>
@@ -120,7 +121,6 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr>
-<tr>
 <td align="right"><span class="must">*</span><label for="SkillTag" class="raisePopUp" title="{t}Change the classification tag{/t}">{t}Tag{/t}</label></td>
 <td>
 <select name="SkillTag" id="SkillTag" class="required">
@@ -138,7 +138,7 @@ Suite 225, San Francisco, CA 94107, USA
 <tr><td colspan="2">&nbsp;</td></tr>
 
 <tr>
-<td align="right"><label for="SetTypesSkill">{t}Type{/t}</label></td>
+<td align="right"><label for="SkillType">{t}Type{/t}</label></td>
 <td>
 <select name="SkillType" id="SkillType" class="notRequired">
 {html_options values=$setTypesSkillId output=$setTypesSkillId selected=$data.SkillType}
@@ -153,6 +153,7 @@ Suite 225, San Francisco, CA 94107, USA
 </td>
 </tr>
 
+<tr>
 <td align="right"><label for="SkillLicenseURL">{'License URL'|gettext|strip:'&nbsp;'}</label></td>
 <td>
 <input type="text" name="SkillLicenseURL" id="SkillLicenseURL" size="60" maxlength="255" class="notRequired" value="{$data.SkillLicenseURL}">
@@ -187,5 +188,6 @@ Suite 225, San Francisco, CA 94107, USA
 
 </fieldset>
 
+</div>
 </form>
 

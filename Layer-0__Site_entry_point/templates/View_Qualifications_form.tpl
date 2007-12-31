@@ -17,7 +17,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<table align="center">
+<table cellpadding="0" rules="none" border="0">
 
 {if $smarty.get.EntityId eq $smarty.session.EntityId and $data.CompletedEdition eq 'f' }
 	<tr align="center">
@@ -30,7 +30,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr valign="top">
 {if $data.PhotoOrLogo eq 'true' }
-<td><img src="photo?acl=resume&amp;id={$smarty.get.EntityId}" align="left" alt="" border="0" hspace="0" vspace="0"></td>
+<td><img src="photo?acl=resume&amp;id={$smarty.get.EntityId}" alt="{t}Photo or logo{/t}" class="frame"></td>
 {/if}
 <td colspan="3">
 
@@ -140,7 +140,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td colspan="4" class="subsection">{t}Technical{/t}</td>
 
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}TECHNICAL{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Technical{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -175,7 +175,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr valign="top">
 <td align="right"><strong>{t}Profiles{/t}</strong> : </td>
 
-<td class="greenLight"><u>{'Product profiles'|gettext|strip:'&nbsp;'}</u><br>
+<td class="greenLight"><span class="u">{'Product profiles'|gettext|strip:'&nbsp;'}</span><br>
 {if not is_array($data.ProductProfileList) or count($data.ProductProfileList) == 0}
 	{'not specified'|gettext|strip:'&nbsp;'}
 {else}
@@ -185,7 +185,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </td>
 
-<td class="greenLight"><u>{'Professional profiles'|gettext|strip:'&nbsp;'}</u><br>
+<td class="greenLight"><span class="u">{'Professional profiles'|gettext|strip:'&nbsp;'}</span><br>
 {if not is_array($data.ProfessionalProfileList) or count($data.ProfessionalProfileList) == 0}
 	{'not specified'|gettext|strip:'&nbsp;'}
 {else}
@@ -195,7 +195,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </td>
 
-<td class="greenLight"><u>{'Field profiles'|gettext|strip:'&nbsp;'}</u><br>
+<td class="greenLight"><span class="u">{'Field profiles'|gettext|strip:'&nbsp;'}</span><br>
 {if not is_array($data.FieldProfileList) or count($data.FieldProfileList) == 0}
 	{'not specified'|gettext|strip:'&nbsp;'}
 {else}
@@ -217,19 +217,19 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if not is_array($data.SkillList) or count($data.SkillList) == 0}
 	<td class="greenDark">{t}none{/t}</td> <td class="greenDark"></td> <td class="greenDark"></td>
 {else}
-<td class="greenDark"><u>{t}Skill{/t}</u><br>
+<td class="greenDark"><span class="u">{t}Skill{/t}</span><br>
 {foreach from=$data.SkillList item=skill}
 	{$skill|strip:'&nbsp;'}<br>
 {/foreach}
 </td>
 
-<td class="greenDark"><u>{'Knowledge level'|gettext|strip:'&nbsp;'}</u><br>
+<td class="greenDark"><span class="u">{'Knowledge level'|gettext|strip:'&nbsp;'}</span><br>
 {foreach from=$data.KnowledgeLevelList item=knowledgeLevel}
 	{$knowledgeLevel|gettext|strip:'&nbsp;'}<br>
 {/foreach}
 </td>
 
-<td class="greenDark"><u>{'Experience level'|gettext|strip:'&nbsp;'}</u><br>
+<td class="greenDark"><span class="u">{'Experience level'|gettext|strip:'&nbsp;'}</span><br>
 {foreach from=$data.ExperienceLevelList item=experienceLevel}
 	{$experienceLevel|gettext|strip:'&nbsp;'}<br>
 {/foreach}
@@ -246,19 +246,19 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr valign="top">
 <td align="right"><strong>{t}Languages{/t}</strong> : </td>
 
-<td class="greenLight"><u>{t}Language{/t}</u><br>
+<td class="greenLight"><span class="u">{t}Language{/t}</span><br>
 {foreach from=$data.LanguageList item=language}
 	{$language|gettext|strip:'&nbsp;'}<br>
 {/foreach}
 </td>
 
-<td class="greenLight"><u>{'Spoken level'|gettext|strip:'&nbsp;'}</u><br>
+<td class="greenLight"><span class="u">{'Spoken level'|gettext|strip:'&nbsp;'}</span><br>
 {foreach from=$data.LanguageSpokenLevelList item=spokenLevel}
 	{$spokenLevel|gettext|strip:'&nbsp;'}<br>
 {/foreach}
 </td>
 
-<td class="greenLight"><u>{'Written level'|gettext|strip:'&nbsp;'}</u><br>
+<td class="greenLight"><span class="u">{'Written level'|gettext|strip:'&nbsp;'}</span><br>
 {foreach from=$data.LanguageWrittenLevelList item=writtenLevel}
 	{$writtenLevel|gettext|strip:'&nbsp;'}<br>
 {/foreach}
@@ -324,7 +324,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td colspan="4" class="subsection">{t}Contract{/t}</td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=contract" title="{t}Edit section{/t}: {t}CONTRACT{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=contract" title="{t}Edit section{/t}: {t}Contract{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -366,7 +366,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td colspan="4" class="subsection">{t}Location{/t}</td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=location" title="{t}Edit section{/t}: {t}LOCATION{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=location" title="{t}Edit section{/t}: {t}Location{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -408,11 +408,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 		<tr align="center">
 		<td colspan="5" align="center">
 		<form name="deleteQualificationsForm" method="post" action="resume?id={$smarty.get.EntityId}">
-		<input type="submit" name="delete" value="{t}Delete qualifications{/t}" title="{t}Delete qualifications from the data base{/t}">
+		<div><input type="submit" name="delete" value="{t}Delete qualifications{/t}" title="{t}Delete qualifications from the data base{/t}"></div>
 		</form>
 		</td>
 		</tr>
 {/if}
 
 </table>
-

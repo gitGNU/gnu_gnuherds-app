@@ -16,41 +16,15 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}Settings{/t}</h3>
-
-<form name="formLogin" method="post" action="settings">
-
-<p>{t}Alerts via email on:{/t}</p>
-
-<table>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
 
 <tr>
 <td>
-
-<label>
-<input type="checkbox" name="NewJobOffer" id="NewJobOffer" class="notRequired" {if $data.NewJobOffer eq 'true'} checked {/if}>
-{t}any new job offer{/t}
-</label>
-<br>
-
-<label>
-<input type="checkbox" name="MyQualifications" id="MyQualifications" class="notRequired" {if $data.MyQualifications eq 'true'} checked {/if} disabled>
-<span class="strike">{t}any new job offer which fits my qualifications{/t}</span>
-</label>
-<br>
-
+<p class="foot">
+{t escape='no'
+  1='<a href="mailto:association@gnuherds.org">association@gnuherds.org</a>'
+}Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!{/t}
+</p>
 </td>
 </tr>
-
-<tr> <td>&nbsp;</td> </tr>
-
-<tr align="center">
-<td colspan="4" align="center">
-<input type="submit" name="save" value="{t}Save{/t}">
-</td>
-</tr>
-
-</table>
-
-</form>
-

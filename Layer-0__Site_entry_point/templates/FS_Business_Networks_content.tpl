@@ -17,7 +17,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}FS Business Models{/t}</h3>
+<h3>{t}FS business models{/t}</h3>
 
 <p>
 {t}These are the business models which we know about:{/t}

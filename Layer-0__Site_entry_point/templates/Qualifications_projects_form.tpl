@@ -19,18 +19,18 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <form name="dataForm" method="post" action="resume?action=edit&id={$smarty.get.EntityId}">
 
-<table align="center">
+<table>
 
 {if $smarty.session.HasQualifications eq '1' }
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}UPDATE QUALIFICATIONS DATA{/t}</td> </tr>
+<tr> <td colspan="4" align="center" class="mainsection">{t}Update qualifications data{/t}</td> </tr>
 {else}
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}NEW QUALIFICATIONS{/t}</td> </tr>
+<tr> <td colspan="4" align="center" class="mainsection">{t}New qualifications{/t}</td> </tr>
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr>
-<td colspan="4">
+<td colspan="4" align="center">
 {include file="Qualifications_edit-guide-bar.tpl"}
 </td>
 </tr>
@@ -43,7 +43,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Technical{/t}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
@@ -58,15 +58,15 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td>
 {if $data.ContributionsListProject|@count >= 1}
-<label for="DeleteContributionsList">{'Mark to delete'|gettext|strip:'&nbsp;'}</label>
+<label>{'Mark to delete'|gettext|strip:'&nbsp;'}</label>
 {/if}
 </td>
-<td><label for="ContributionsListProject">{t}Project{/t}</label></td>
+<td><label>{t}Project{/t}</label></td>
 <td>
-<label for="ContributionsListDescription">{t}Description{/t}</label>
+<label>{t}Description{/t}</label>
 </td>
 <td>
-<label for="ContributionsListURI">{t}URI{/t}</label>
+<label>{t}URI{/t}</label>
 </td>
 </tr>
 
@@ -76,12 +76,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr valign="top">
 <td align="right">
 {if $data.ContributionsListProject|@count >= 1}
-<input type="checkbox" name="DeleteContributionsList[]" id="DeleteContributionsList" value="{$i}">
+<input type="checkbox" name="DeleteContributionsList[]" value="{$i}">
 {/if}
 </td>
 
 <td>
-<input type="text" name="ContributionsListProject[]" id="ContributionsListProject" size="15" maxlength="30" value="{$data.ContributionsListProject[$i]}" class="notRequired">
+<input type="text" name="ContributionsListProject[]" size="15" maxlength="30" value="{$data.ContributionsListProject[$i]}" class="notRequired">
 {if $checks.ContributionsListProject[$i] neq '' }
 <br>
 <span class="must">{$checks.ContributionsListProject[$i]}</span>
@@ -89,11 +89,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td>
-<input type="text" name="ContributionsListDescription[]" id="ContributionsListDescription" size="40" maxlength="60" value="{$data.ContributionsListDescription[$i]}" class="notRequired">
+<input type="text" name="ContributionsListDescription[]" size="40" maxlength="60" value="{$data.ContributionsListDescription[$i]}" class="notRequired">
 </td>
 
 <td>
-<input type="text" name="ContributionsListURI[]" id="ContributionsListURI" size="30" maxlength="255" value="{$data.ContributionsListURI[$i]}" class="notRequired">
+<input type="text" name="ContributionsListURI[]" size="30" maxlength="255" value="{$data.ContributionsListURI[$i]}" class="notRequired">
 {if $checks.ContributionsListURI[$i] neq '' }
 <br>
 <span class="must">{$checks.ContributionsListURI[$i]}</span>
@@ -111,15 +111,15 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td>
-<input type="text" name="ContributionsListProject[]" id="ContributionsListProject" size="15" maxlength="30" value="" class="notRequired">
+<input type="text" name="ContributionsListProject[]" size="15" maxlength="30" value="" class="notRequired">
 </td>
 
 <td>
-<input type="text" name="ContributionsListDescription[]" id="ContributionsListDescription" size="40" maxlength="60" value="" class="notRequired">
+<input type="text" name="ContributionsListDescription[]" size="40" maxlength="60" value="" class="notRequired">
 </td>
 
 <td>
-<input type="text" name="ContributionsListURI[]" id="ContributionsListURI" size="30" maxlength="255" value="http://" class="notRequired">
+<input type="text" name="ContributionsListURI[]" size="30" maxlength="255" value="http://" class="notRequired">
 </td>
 </tr>
 

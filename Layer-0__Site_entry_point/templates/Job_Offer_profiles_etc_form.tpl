@@ -19,18 +19,18 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <form name="dataForm" method="post" action="offers?action=edit&id={$smarty.get.JobOfferId}">
 
-<table align="center">
+<table>
 
 {if $smarty.get.JobOfferId }
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}UPDATE JOB OFFER{/t}</td> </tr>
+<tr> <td colspan="4" align="center" class="mainsection">{t}Update job offer{/t}</td> </tr>
 {else}
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}NEW JOB OFFER{/t}</td> </tr>
+<tr> <td colspan="4" align="center" class="mainsection">{t}New job offer{/t}</td> </tr>
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr>
-<td colspan="4">
+<td colspan="4" align="center">
 {include file="Job_Offer_edit-guide-bar.tpl"}
 </td>
 </tr>
@@ -45,7 +45,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Technical{/t}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
@@ -129,4 +129,3 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </table>
 
 </form>
-

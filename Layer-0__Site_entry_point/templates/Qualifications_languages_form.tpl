@@ -19,18 +19,18 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <form name="dataForm" method="post" action="resume?action=edit&id={$smarty.get.EntityId}">
 
-<table align="center">
+<table>
 
 {if $smarty.session.HasQualifications eq '1' }
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}UPDATE QUALIFICATIONS DATA{/t}</td> </tr>
+<tr> <td colspan="4" align="center" class="mainsection">{t}Update qualifications data{/t}</td> </tr>
 {else}
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}NEW QUALIFICATIONS{/t}</td> </tr>
+<tr> <td colspan="4" align="center" class="mainsection">{t}New qualifications{/t}</td> </tr>
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr>
-<td colspan="4">
+<td colspan="4" align="center">
 {include file="Qualifications_edit-guide-bar.tpl"}
 </td>
 </tr>
@@ -45,7 +45,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Technical{/t}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
@@ -60,15 +60,15 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td>
 {if $data.LanguageList|@count >= 1}
-<label for="DeleteLanguageList">{'Mark to delete'|gettext|strip:'&nbsp;'}</label>
+<label>{'Mark to delete'|gettext|strip:'&nbsp;'}</label>
 {/if}
 </td>
-<td><span class="must">*</span><label for="LanguageList" class="raisePopUp" title="{t}Add idioms and theirs spoken and written levels{/t}">{t}Required languages{/t}</label></td>
+<td><span class="must">*</span><label class="raisePopUp" title="{t}Add idioms and theirs spoken and written levels{/t}">{t}Required languages{/t}</label></td>
 <td>
-<span class="must">*</span><label for="LanguageSpokenLevelList">{t}Spoken level{/t}</label>
+<span class="must">*</span><label>{t}Spoken level{/t}</label>
 </td>
 <td>
-<span class="must">*</span><label for="LanguageWrittenLevelList">{t}Written level{/t}</label>
+<span class="must">*</span><label>{t}Written level{/t}</label>
 </td>
 </tr>
 
@@ -78,12 +78,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr valign="top">
 <td align="right">
 {if $data.LanguageList|@count >= 1}
-<input type="checkbox" name="DeleteLanguageList[]" id="DeleteLanguageList" value="{$i}">
+<input type="checkbox" name="DeleteLanguageList[]" value="{$i}">
 {/if}
 </td>
 
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
-<select name="LanguageList[]" id="LanguageList" class="{if $i % 2}greenDark{else}greenLight{/if}">
+<select name="LanguageList[]" class="{if $i % 2}greenDark{else}greenLight{/if}">
 {html_options values=$languagesName output=$languagesNameTranslated selected=$data.LanguageList[$i]}
 </select>
 {if $checks.LanguageList[$i] neq '' }
@@ -93,7 +93,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
-<select name="LanguageSpokenLevelList[]" id="LanguageSpokenLevelList" class="{if $i % 2}greenDark{else}greenLight{/if}">
+<select name="LanguageSpokenLevelList[]" class="{if $i % 2}greenDark{else}greenLight{/if}">
 {html_options values=$languagesSpokenLevelsId output=$languagesSpokenLevelsName selected=$data.LanguageSpokenLevelList[$i]}
 </select>
 {if $checks.LanguageSpokenLevelList[$i] neq '' }
@@ -103,7 +103,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
-<select name="LanguageWrittenLevelList[]" id="LanguageWrittenLevelList" class="{if $i % 2}greenDark{else}greenLight{/if}">
+<select name="LanguageWrittenLevelList[]" class="{if $i % 2}greenDark{else}greenLight{/if}">
 {html_options values=$languagesWrittenLevelsId output=$languagesWrittenLevelsName selected=$data.LanguageWrittenLevelList[$i]}
 </select>
 {if $checks.LanguageWrittenLevelList[$i] neq '' }
@@ -123,19 +123,19 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td>
-<select name="LanguageList[]" id="LanguageList" class="{if $data.LanguageList|@count == 0}required{else}notRequired{/if}">
+<select name="LanguageList[]" class="{if $data.LanguageList|@count == 0}required{else}notRequired{/if}">
 {html_options values=$languagesName output=$languagesNameTranslated}
 </select>
 </td>
 
 <td>
-<select name="LanguageSpokenLevelList[]" id="LanguageSpokenLevelList" class="{if $data.LanguageList|@count == 0}required{else}notRequired{/if}">
+<select name="LanguageSpokenLevelList[]" class="{if $data.LanguageList|@count == 0}required{else}notRequired{/if}">
 {html_options values=$languagesSpokenLevelsId output=$languagesSpokenLevelsName}
 </select>
 </td>
 
 <td>
-<select name="LanguageWrittenLevelList[]" id="LanguageWrittenLevelList" class="{if $data.LanguageList|@count == 0}required{else}notRequired{/if}">
+<select name="LanguageWrittenLevelList[]" class="{if $data.LanguageList|@count == 0}required{else}notRequired{/if}">
 {html_options values=$languagesWrittenLevelsId output=$languagesWrittenLevelsName}
 </select>
 </td>
@@ -185,4 +185,3 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </table>
 
 </form>
-

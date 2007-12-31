@@ -17,7 +17,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}FS Job Offers{/t}</h3>
+<h3>{t}FS job offers{/t}</h3>
 
 
 <p>
@@ -36,7 +36,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<p>{t}There are not active job offers{/t}.</p><p>&nbsp;</p>
 {else}
 
-<table align="center" border="0" width="100%">
+<table border="0">
 
 <tr valign="top">
 <td class="tdTitle"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong></td>

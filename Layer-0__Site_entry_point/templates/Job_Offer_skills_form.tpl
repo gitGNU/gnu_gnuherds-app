@@ -19,18 +19,18 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <form name="dataForm" method="post" action="offers?action=edit&id={$smarty.get.JobOfferId}">
 
-<table align="center">
+<table>
 
 {if $smarty.get.JobOfferId }
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}UPDATE JOB OFFER{/t}</td> </tr>
+<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}Update job offer{/t}</td> </tr>
 {else}
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}NEW JOB OFFER{/t}</td> </tr>
+<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}New job offer{/t}</td> </tr>
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr>
-<td colspan="4">
+<td colspan="4" align="center">
 {include file="Job_Offer_edit-guide-bar.tpl"}
 </td>
 </tr>
@@ -45,7 +45,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="subsection">{t}TECHNICAL{/t}</td> </tr>
+<tr> <td colspan="4">{t}Non-Free and Pending skills are not showed in the view.{/t}</td> </tr>
+
+<tr> <td colspan="4">&nbsp;</td> </tr>
+
+<tr> <td colspan="4" class="subsection">{t}Technical{/t}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
@@ -56,16 +60,16 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td>
 {if $smarty.post.SkillList|@count >= 1}
-<label for="DeleteSkillList">{'Mark to delete'|gettext|strip:'&nbsp;'}</label>
+<label>{'Mark to delete'|gettext|strip:'&nbsp;'}</label>
 {/if}
 </td>
-<td><label class="raisePopUp" title="{t}Non-Free and Pending skills are not showed in the view{/t}">{t}Checks{/t}</label></td>
-<td><label for="SkillList" class="raisePopUp" title="{t}Add skills and theirs knowledge and experience levels{/t}">{t}Skills{/t}</label></td>
+<td><label class="raisePopUp" title="{t}Non-Free and Pending skills are not showed in the view.{/t}">{t}Checks{/t}</label></td>
+<td><label class="raisePopUp" title="{t}Add skills and theirs knowledge and experience levels.{/t}">{t}Skills{/t}</label></td>
 <td>
-<label for="SkillKnowledgeLevelList">{'Knowledge level'|gettext|strip:'&nbsp;'}</label>
+<label>{'Knowledge level'|gettext|strip:'&nbsp;'}</label>
 </td>
 <td>
-<label for="SkillExperienceLevelList">{'Experience level'|gettext|strip:'&nbsp;'}</label>
+<label>{'Experience level'|gettext|strip:'&nbsp;'}</label>
 </td>
 </tr>
 
@@ -75,28 +79,28 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td align="right">
 {if $smarty.post.SkillList|@count >= 1}
-<input type="checkbox" name="DeleteSkillList[]" id="DeleteSkillList" value="{$i}">
+<input type="checkbox" name="DeleteSkillList[]" value="{$i}">
 {/if}
 </td>
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
-{if $data.CheckList[$i] eq "Pending"}<label title="{t}This skill is pending for checking{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Unknown"}<label title="{t}This skill is unknown{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Abstract"}<label title="{t}This skill is abstract{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Pending"}<label title="{t}This skill is pending for checking.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Unknown"}<label title="{t}This skill is unknown.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Abstract"}<label title="{t}This skill is abstract.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 {if $data.CheckList[$i] eq "Free Software"}<label title="{t}This skill is Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
 {if $data.CheckList[$i] eq "Almost-Free Software"}<label title="{t}This skill is almost Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
 {if $data.CheckList[$i] eq "Partially-Free Software"}<label title="{t}This skill is partially Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
 {if $data.CheckList[$i] eq "Non-Free Software"}<label title="{t}This skill is not Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Hardware"}<label title="{t}This skill is Hardware{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Documentation"}<label title="{t}This skill is Documentation{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Hardware"}<label title="{t}This skill is Hardware.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Documentation"}<label title="{t}This skill is Documentation.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 {if $data.CheckList[$i] eq "Free Documentation"}<label title="{t}This skill is Free. Software criteria at the FAQ. Report any mistake!{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 {if $data.CheckList[$i] eq "Non-Free Documentation"}<label title="{t}This skill is not Free. Software criteria at the FAQ. Report any mistake!{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Art"}<label title="{t}This skill is Art{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Art"}<label title="{t}This skill is Art.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 {if $data.CheckList[$i] eq "Sharable Art"}<label title="{t}This skill is Free. Software criteria at the FAQ. Report any mistake!{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 {if $data.CheckList[$i] eq "Non-Sharable Art"}<label title="{t}This skill is not Free. Software criteria at the FAQ. Report any mistake!{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
 </td>
 
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
-<input type="text" name="SkillList[]" id="SkillList" size="40" maxlength="153" class="{if $i % 2}greenDark{else}greenLight{/if}" value="{$smarty.post.SkillList[$i]}">
+<input type="text" name="SkillList[]" size="40" maxlength="153" class="{if $i % 2}greenDark{else}greenLight{/if}" value="{$smarty.post.SkillList[$i]}">
 <input type="hidden" name="ShadowSkillList[]" value="{$smarty.post.ShadowSkillList[$i]}">
 <input type="hidden" name="SkillsToInsert[]" value="{$smarty.post.SkillsToInsert[$i]}">
 <input type="hidden" name="SuggestionShadow[]" value="{$smarty.post.SkillList[$i]}">
@@ -116,7 +120,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
-<select name="SkillKnowledgeLevelList[]" id="SkillKnowledgeLevelList" class="{if $i % 2}greenDark{else}greenLight{/if}">
+<select name="SkillKnowledgeLevelList[]" class="{if $i % 2}greenDark{else}greenLight{/if}">
 {html_options values=$skillKnowledgeLevelsId output=$skillKnowledgeLevelsName selected=$smarty.post.SkillKnowledgeLevelList[$i]}
 </select>
 {if $checks.SkillKnowledgeLevelList[$i] neq '' }
@@ -126,7 +130,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
-<select name="SkillExperienceLevelList[]" id="SkillExperienceLevelList" class="{if $i % 2}greenDark{else}greenLight{/if}">
+<select name="SkillExperienceLevelList[]" class="{if $i % 2}greenDark{else}greenLight{/if}">
 {html_options values=$skillExperienceLevelsId output=$skillExperienceLevelsName selected=$smarty.post.SkillExperienceLevelList[$i]}
 </select>
 {if $checks.SkillExperienceLevelList[$i] neq '' }

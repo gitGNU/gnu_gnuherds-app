@@ -1,8 +1,9 @@
 {*
-Authors: Davi Leal, Victor Engmark
+Authors: Davi Leal, Victor Engmark, Sameer Naik
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
               2007 Victor Engmark <victor dot engmark at gmail dot com>
+              2007 Sameer Naik <sameer AT damagehead DOT com>
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Affero General Public License as published by the Free Software Foundation,
@@ -17,57 +18,22 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
+<div id="logbox">
 <form name="LogForm" method="post" action="https://{$smarty.server.SERVER_NAME}/">
-
-<table border="0" cellspacing="0" cellpadding="2" bgcolor="{$webpage->theme->loginBoxBGcolor}">
-<tr>
-<td align="center" class="login"><u>{'Manage your data'|gettext|strip:'&nbsp;'}</u><br><br></td>
-</tr>
-
-<tr>
-<td nowrap align="left" class="login">
-<label for="loginBox_Email">Email</label>
-</td>
-</tr>
-
-<tr>
-<td nowrap>
-<input type="text" name="Email" id="loginBox_Email" size="22" class="loginControls"> <br>
-</td>
-</tr>
-
-<tr>
-<td nowrap align="left" class="login">
-<label for="loginBox_Password">{'Password'|gettext}</label>
-</td>
-</tr>
-
-<tr>
-<td nowrap>
-<input type="password" name="Password" id="loginBox_Password" size="22" class="loginControls"><br>
-</td>
-</tr>
-
-<tr>
-<td nowrap>
-&nbsp;
-</td>
-</tr>
-
-<tr>
-<td align="center">
-<input type="submit" name="login" value="{'Log in'|gettext}">
-</td>
-</tr>
-
-<tr>
-<td align="center" class="login">
-<a href="password">{'Lost password?'|gettext|strip:'&nbsp;'}</a><br>
+<div>
+<input type="text" name="Email" class="in u_icon" onblur="if(this.value=='') this.value='email';" onfocus="if(this.value=='email') this.value='';" >
 <br>
+<input type="password" name="Password" class="in k_icon" value="password">
+<input type="submit" name="login" class="pos" value="{t}Log in{/t}">
+<a href="password" class="pos">{t}Lost password?{/t}</a>
+</div>
+</form>
+</div>
+
+<div class="quicks">
+<p>
 <a href="person">{'Register person'|gettext}</a><br>
 <a href="company">{'Register company'|gettext}</a><br>
 <a href="nonprofit">{'Register non-profit'|gettext}</a>
-</td>
-</tr>
-</table>
-</form>
+</p>
+</div>

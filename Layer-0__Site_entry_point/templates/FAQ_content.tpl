@@ -17,7 +17,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}Frequently Asked Questions (FAQ){/t}</h3>
+<h3><a name="top"></a>{t}Frequently asked questions (FAQ){/t}</h3>
 
 <p>{t}Index{/t}</p>
 <ol>
@@ -29,7 +29,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <li><a href="#JobSite_module_related_to_the_GNU_Herds_association" style='text-decoration: none;'>{t}How is the Job Site module related to the GNU Herds' association?{/t}</a> <br><br>
 <li><a href="#membership" style='text-decoration: none;'>{t}Who can join or register?{/t}</a>
 <li><a href="#person_vs_company" style='text-decoration: none;'>{t}Can I not be a member of the association because I am a member of a company?{/t}</a>
-<li><a href="#company_votes" style='text-decoration: none;'>{t}How many votes is able to get a company?{/t}</a>
+<li><a href="#company_votes" style='text-decoration: none;'>{t}How many votes is a company able to obtain?{/t}</a>
 <li><a href="#company_voices" style='text-decoration: none;'>{t}A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?{/t}</a>
 <li><a href="#yearly_basis" style='text-decoration: none;'>{t}Why voting membership is on a yearly basis?{/t}</a>
 <li><a href="#e-Voting" style='text-decoration: none;'>{t}e-Voting{/t}</a>
@@ -75,7 +75,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}All this taking into account that: "%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4"{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -105,7 +105,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{t}Note that some offers could allow to subscribe only to some entity types: Persons, Companies or non-profit Organizations.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -114,7 +114,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<p>{t}Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly.{/t}</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -161,7 +161,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<p>{t}It is recommended provide the more information possible.{/t}</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -401,7 +401,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}Note that not all %1 are Non-Free Software, because %1 can be data (not compiled source code) licensed under a Free Software license. However, we need to verify that it really is data, because the non-free object code is typically dressed up as data.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -415,7 +415,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}The Job Site module is %1controlled%2 by the association. Any new module will be controlled by the association too.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -429,7 +429,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}Any entity type can join the association or just register into the web application and use its services. Showing a Free Software contribution is not a requirement to register or join. It is just a requirement to be able to %1vote%2 at the association.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -447,12 +447,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}The association's %1Charter%2 reads:{/t} "<i>{t}There shall be two kinds of members, voting members, to be known simply as a member, and non-voting members, to be known as an associate member.{/t}</i>"
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
 
-<h4>9. <a name="company_votes"></a>{t}How many votes is able to get a company?{/t}</h4>
+<h4>9. <a name="company_votes"></a>{t}How many votes is a company able to obtain?{/t}</h4>
 
 	<p>
 	{t escape='no'
@@ -462,7 +462,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  4='</ul>'
 	}A company could be able to get:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4{/t}
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -480,7 +480,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}The association's %1Charter%2 reads:{/t} "<i>{t}To qualify for voting membership one must show a contribution to the Free Software movement.{/t}</i>"
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -495,7 +495,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{t}The renew process is automated to reduce bureaucracy.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -558,7 +558,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 			<li><a href="http://jfreevote.hispalinux.es/">JFreeVote</a>. {t}It is a already implemented, working solution for electronic voting.{/t}</li>
 		</ul>
 
-	<!--
+	{*
 	<p>
 	Additionally, we have evaluated or we are evaluating some proposals to be
 	used as the GNU Herds e-Voting system. We know some of the below designs
@@ -607,7 +607,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 
 	<p>&nbsp;</p>
-	-->
+	*}
 
 	<p>&nbsp;</p>
 
@@ -623,7 +623,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<li>
 		{t}We want remark:{/t}<br>
-		<!-- &nbsp; &nbsp; <a href="http://www.votehere.net/products.htm">E-voting Solutions</a> The list of requirements of the above reference can be useful to check any design. Anyway, we think the "<i>Revisability: A voter can change their vote in a given period of time</i>" feature is not necessary and even no convenient. What do you think?. <br> -->
+		{* &nbsp; &nbsp; <a href="http://www.votehere.net/products.htm">E-voting Solutions</a> The list of requirements of the above reference can be useful to check any design. Anyway, we think the "<i>Revisability: A voter can change their vote in a given period of time</i>" feature is not necessary and even no convenient. What do you think?. <br> *}
 		&nbsp; &nbsp; <a href="http://lorrie.cranor.org/">Lorrie Faith Cranor</a> <br>
 		&nbsp; &nbsp; <a href="http://www.vote.caltech.edu/">Caltech</a> <br>
 		&nbsp; &nbsp; <a href="http://www.notablesoftware.com/evote.html">Electronic Voting</a> <br>
@@ -632,4 +632,4 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	</ul>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>

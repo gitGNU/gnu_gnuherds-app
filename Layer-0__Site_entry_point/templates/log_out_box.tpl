@@ -16,12 +16,8 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
+<div id="logbox">
 <form name="LogForm" method="post" action="/">
-<table width="155" border="0" cellspacing="0" cellpadding="2" bgcolor="{$webpage->theme->loginBoxBGcolor}">
-<tr>
-<td colspan="2" align="center"><span class="footnote">{'Now, you can go to the menu to manage your data'|gettext}</span><br>
-<input type="submit" name="logout" value="{'Log out'|gettext}">
-</td>
-</tr>
-</table>
+<div><input type="submit" name="logout" value="{t}Log out{/t}"></div>
 </form>
+</div>

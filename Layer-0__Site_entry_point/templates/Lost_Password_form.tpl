@@ -23,16 +23,15 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <form name="formLogin" method="post" action="password">
 
 <p>
-&nbsp; &nbsp; &nbsp; &nbsp; <label for="Email">{t}Email{/t}</label>
-<input type="text" name="Email" id="Email" size="40">
+<label for="Email">{t}Email{/t}</label>
+<input type="text" name="Email" id="Email">
 <input type=submit name="send" value="{t}Send{/t}">
 </p>
 
 {if $checks.Email neq '' }
 <p class="must">
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {$checks.Email}
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {$checks.Email}
 </p>
 {/if}
 
 </form>
-

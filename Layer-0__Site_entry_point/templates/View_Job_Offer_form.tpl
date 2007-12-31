@@ -17,7 +17,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<table align="center">
+<table cellpadding="0" rules="none" border="0">
 
 {if $smarty.session.IsAlreadySubscribed eq 't'}
 		<tr align="center">
@@ -47,7 +47,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=general" title="{t}Edit section{/t}: {t}LOOKING FOR{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=general" title="{t}Edit section{/t}: {t}General{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -129,7 +129,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td colspan="4" class="subsection">{t}Technical{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}TECHNICAL{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Technical{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -160,7 +160,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<tr valign="top">
 	<td align="right"><strong>{t}Profiles{/t}</strong> : </td>
 
-	<td class="greenLight"><u>{'Product profiles'|gettext|strip:'&nbsp;'}</u><br>
+	<td class="greenLight"><span class="u">{'Product profiles'|gettext|strip:'&nbsp;'}</span><br>
 	{if not is_array($data.ProductProfileList) or count($data.ProductProfileList) == 0}
 		{'not specified'|gettext|strip:'&nbsp;'}
 	{else}
@@ -170,7 +170,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{/if}
 	</td>
 
-	<td class="greenLight"><u>{'Professional profiles'|gettext|strip:'&nbsp;'}</u><br>
+	<td class="greenLight"><span class="u">{'Professional profiles'|gettext|strip:'&nbsp;'}</span><br>
 	{if not is_array($data.ProfessionalProfileList) or count($data.ProfessionalProfileList) == 0}
 		{'not specified'|gettext|strip:'&nbsp;'}
 	{else}
@@ -180,7 +180,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{/if}
 	</td>
 
-	<td class="greenLight"><u>{'Field profiles'|gettext|strip:'&nbsp;'}</u><br>
+	<td class="greenLight"><span class="u">{'Field profiles'|gettext|strip:'&nbsp;'}</span><br>
 	{if not is_array($data.FieldProfileList) or count($data.FieldProfileList) == 0}
 		{'not specified'|gettext|strip:'&nbsp;'}
 	{else}
@@ -200,19 +200,19 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<tr valign="top">
 	<td align="right"><strong>{t}Skills{/t}</strong> : </td>
 
-	<td class="greenLight"><u>{t}Skill{/t}</u><br>
+	<td class="greenLight"><span class="u">{t}Skill{/t}</span><br>
 	{foreach from=$data.SkillList item=skill}
 		{$skill|strip:'&nbsp;'}<br>
 	{/foreach}
 	</td>
 
-	<td class="greenLight"><u>{'Knowledge level'|gettext|strip:'&nbsp;'}</u><br>
+	<td class="greenLight"><span class="u">{'Knowledge level'|gettext|strip:'&nbsp;'}</span><br>
 	{foreach from=$data.KnowledgeLevelList item=knowledgeLevel}
 		{$knowledgeLevel|gettext|strip:'&nbsp;'}<br>
 	{/foreach}
 	</td>
 
-	<td class="greenLight"><u>{'Experience level'|gettext|strip:'&nbsp;'}</u><br>
+	<td class="greenLight"><span class="u">{'Experience level'|gettext|strip:'&nbsp;'}</span><br>
 	{foreach from=$data.ExperienceLevelList item=experienceLevel}
 		{$experienceLevel|gettext|strip:'&nbsp;'}<br>
 	{/foreach}
@@ -228,19 +228,19 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<tr valign="top">
 	<td align="right"><strong>{t}Languages{/t}</strong> : </td>
 
-	<td class="greenLight"><u>{t}Language{/t}</u><br>
+	<td class="greenLight"><span class="u">{t}Language{/t}</span><br>
 	{foreach from=$data.LanguageList item=language}
 		{$language|gettext|strip:'&nbsp;'}<br>
 	{/foreach}
 	</td>
 
-	<td class="greenLight"><u>{'Spoken level'|gettext|strip:'&nbsp;'}</u><br>
+	<td class="greenLight"><span class="u">{'Spoken level'|gettext|strip:'&nbsp;'}</span><br>
 	{foreach from=$data.LanguageSpokenLevelList item=spokenLevel}
 		{$spokenLevel|gettext|strip:'&nbsp;'}<br>
 	{/foreach}
 	</td>
 
-	<td class="greenLight"><u>{'Written level'|gettext|strip:'&nbsp;'}</u><br>
+	<td class="greenLight"><span class="u">{'Written level'|gettext|strip:'&nbsp;'}</span><br>
 	{foreach from=$data.LanguageWrittenLevelList item=writtenLevel}
 		{$writtenLevel|gettext|strip:'&nbsp;'}<br>
 	{/foreach}
@@ -288,7 +288,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td colspan="4" class="subsection">{t}Residence location{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=location" title="{t}Edit section{/t}: {t}RESIDENCE LOCATION{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=location" title="{t}Edit section{/t}: {t}Residence location{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -352,7 +352,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td colspan="4" class="subsection">{t}Contract{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=contract" title="{t}Edit section{/t}: {t}CONTRACT{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=contract" title="{t}Edit section{/t}: {t}Contract{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -462,9 +462,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </td>
 
-<td class="greenLight">
+<td class="greenLight" align="right">
 {if $data.PhotoOrLogo eq 'true' }
-		<img src="photo?acl=offers&amp;id={$data.EntityId}" align="right" alt="" border="0" hspace="0" vspace="0">
+		<img src="photo?acl=offers&amp;id={$data.EntityId}" alt="{t}Photo or logo{/t}" class="frame">
 {else}
 		&nbsp;
 {/if}
@@ -526,11 +526,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 		<tr align="center">
 		<td colspan="4" align="center">
 		<form name="subscriteJobOfferForm" method="post" action="offers?id={$smarty.get.JobOfferId}">
-		<input type="submit" name="subscribe" value="{t}Subscribe to this job offer{/t}">
+		<div><input type="submit" name="subscribe" value="{t}Subscribe to this job offer{/t}"></div>
 		</form>
 		</td>
 		</tr>
 {/if}
 
 </table>
-

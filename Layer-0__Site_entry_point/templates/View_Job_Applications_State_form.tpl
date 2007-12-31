@@ -16,13 +16,14 @@ General Public License for more details.
 You should have received a copy of the GNU Affero General Public License along with this
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
-<h3>{t}Job Applications{/t}</h3>
+
+<h3>{t}Job applications{/t}</h3>
 {if count($jobOfferId) == 0 }
 	<p>&nbsp;</p>
 	<p>{t}You do not have your application subscribed to any open job offer.{/t}</p>
 	<p>&nbsp;</p>
 {else}
-<table align="center" border="0" width="100%">
+<table border="0">
 <tr valign="top">
 <td class="tdTitle"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong></td>
 <td class="tdTitle"><strong>{'Offer date'|gettext|strip:'&nbsp;'}</strong></td>

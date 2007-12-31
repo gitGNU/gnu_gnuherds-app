@@ -17,7 +17,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}GNU Herds Hackers' Guide{/t}</h3>
+<h3><a name="top"></a>{t}GNU Herds coders' guide{/t}</h3>
 
 <p>{t}Index{/t}</p>
 <ol>
@@ -60,7 +60,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  1='<a href="#Source_code">'
 	  2='<a href="#Setup">'
 	  3='</a>'
-	}To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this Hackers' Guide. If you need support ask for it at{/t} {mailto address='gnuherds-app-dev@nongnu.org'}
+	}To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this Coders' Guide. If you need support ask for it at{/t} {mailto address='gnuherds-app-dev@nongnu.org'}
 	</p>
 
 	<p>
@@ -70,7 +70,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}Read the current draft of %1GNU Herds' Charter%2.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -103,7 +103,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	</li>
 	</ul>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -133,7 +133,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<!-- XXX: <tr> <td><a href="http://www.openbsd.org/">OpenBSD 3.x</a> <td>The gnuherds.org host is a 633MHZ DEC Alpha 64-bit CPU running OpenBSD. -->
 	</table>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -158,9 +158,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<tr> <td><b>locale</b> <td>Here are the files which translate the webapp (<a href="http://www.gnu.org/software/gettext/">gettext</a>)
 	</table>
 
-	<p><img src="/doc/Layers_1_2_3_4_5_and_6.png" align="middle" alt="" border="0" hspace="0" vspace="0"> <span class="modification">({t}outdated{/t})</span> </p>  <!-- XXX Update this image -->
+	<p><img src="/doc/Layers_1_2_3_4_5_and_6.png" alt="{t}outdated{/t}"> <span class="modification">({t}outdated{/t})</span> </p>{* XXX Update this image *}
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -170,7 +170,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<table border="0">
 	<tbody>
 	<tr><td><p><b>Layers 0, 1, 2, 4 and 5.</b> GUI, Forms, DBManager, PHPTools, and Mailer <span class="modification">({t}outdated{/t})</span> </p>
-	<tr><td><p><a href="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.png"><img src="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.scaled.png" align="middle" alt="" border="0" hspace="0" vspace="0"></a> </p>  <!-- XXX Update this image -->
+	<tr><td><p><a href="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.png"><img src="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.scaled.png" alt="{t}outdated{/t}"></a> </p>{* XXX Update this image *}
 	<p>{t}The Smarty templates could be moved outside this layer.{/t}</p>
 	<p>&nbsp;</p>
 
@@ -192,29 +192,27 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 		<li><a href="/doc/GNUHerds__ER__Logical-model.png">{t}Entity Relation logical model{/t}</a><br>
 		&nbsp; Diagram editor (Dia) image <a href="/doc/GNUHerds__ER__Logical-model.dia">source</a><br>
 		<br>
-		<a href="/doc/GNUHerds__ER__Logical-model.png"><img src="/doc/GNUHerds__ER__Logical-model.scaled.png" align="middle" alt="" border="0" hspace="0" vspace="0"></a>
+		<a href="/doc/GNUHerds__ER__Logical-model.png"><img src="/doc/GNUHerds__ER__Logical-model.scaled.png" alt="{t}Entity Relation logical model{/t}"></a>
 		<li><a href="/doc/GNUHerds__Physical-model.png">{t}Physical model{/t}</a> <span class="modification">({t}outdated{/t})</span> <br>
 		<li><a href="/doc/GNUHerds__SQL_Implementation.psql">{t}SQL Implementation{/t}</a>
 	</ul>
 	</table>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
 
 <h4>6. {t}Coding Standards{/t} <a name="Coding_Standards"></a> </h4>
 
-	<p>
-	<STRIKE>
+	<p class="strike">
 	{t escape='no'
 	  1='<a href="http://docs.clawphp.org/standards/index">'
 	  2='</a>'
 	}We will try to follow these %1Coding Standards%2.{/t}
-	</STRIKE>
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -228,7 +226,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -237,7 +235,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<p>{t}Git is used as repository. The HTTP server gets a tagged release via 'update' from the Git master server.{/t}</p>
 
-	<img src="/doc/How_the_development_team_and_production_is_integrated.png" align="middle" alt="" border="0" hspace="0" vspace="0">
+	<img src="/doc/How_the_development_team_and_production_is_integrated.png" alt="{t}How the development team and production is integrated?{/t}">
 
 	<p>
 	{t escape='no'
@@ -246,7 +244,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}To share source code among the developers, publish your repository and let others know where to fetch from, or use %1 or %2.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -260,7 +258,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}See the %1Task Manager%2 at Savannah.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -274,7 +272,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -300,7 +298,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{t}The source code can have 'XXX' flags, which are used to mark pending tasks, etc.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -314,7 +312,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -328,7 +326,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -341,7 +339,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<li>IRC: &nbsp; /server irc.freenode.net &nbsp; /join #gnuherds</li>
 </ul>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -355,7 +353,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
 <p>&nbsp;</p>
 
@@ -386,4 +384,4 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<tr> <td><b>Victor</b>   <td>Web developer, Quality Assurance.
 	</table>
 
-<center><a href="#" style='text-decoration: none;'>{t}Back to top{/t}</a></center>
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>

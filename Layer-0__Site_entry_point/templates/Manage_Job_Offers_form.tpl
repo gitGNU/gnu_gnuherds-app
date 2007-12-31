@@ -17,7 +17,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}Manage Job Offers{/t}</h3>
+<h3>{t}Manage job offers{/t}</h3>
 
 
 {if count($data.JobOfferId) == 0 }
@@ -27,7 +27,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <form name="deleteJobOffersForm" method="post" action="{$smarty.server.REQUEST_URI}">
 
-<table align="center" border="0" width="100%">
+<table border="0">
 
 <tr valign="top">
 <td></td>
@@ -147,6 +147,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 
 <form name="newJobOffersForm" method="post" action="offers?action=edit&id=&section=general">{* This could be a GET request instead of a POST one. I have used a POST to be able to use a button, due to it is near of the delete button. *}
-<input type="submit" name="new" value="{t}New offer{/t}">
+<div><input type="submit" name="new" value="{t}New offer{/t}"></div>
 </form>
 

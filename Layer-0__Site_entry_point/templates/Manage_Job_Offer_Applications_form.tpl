@@ -17,7 +17,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}Manage the Job Offer applications{/t}</h3>
+<h3>{t}Manage the job offer applications{/t}</h3>
 
 <p class="footnote"><strong>{t}Offer title{/t}</strong>: <a href="offers?id={$smarty.get.JobOfferId}">{$vacancyTitle}</a></p>
 
@@ -26,7 +26,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<p>{t}There are not any application subscribed to this job offer{/t}.</p><p>&nbsp;</p>
 {else}
 
-<table align="center" border="0" width="100%">
+<table border="0">
 
 <tr valign="top">
 <td class="tdTitle"><strong>{t}Applicant{/t}</strong></td>
@@ -60,10 +60,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 <form name="changeApplicationStateForm{$Id}" id="changeApplicationStateForm{$Id}" method="post" action="{$smarty.server.REQUEST_URI}">
+<div>
 <input type="hidden" name="EntityId" value="{$Id}">
 <select name="ApplicationState">
 {html_options values=$applicationStatesId output=$applicationStatesIdTranslated selected=$applicationState[$i]}
 </select>
+</div>
 </form>
 </td>
 
@@ -74,4 +76,3 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </table>
 
 {/if}
-

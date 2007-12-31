@@ -19,14 +19,14 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <form enctype="multipart/form-data" name="personForm" method="post" action="person">
 
-<table align="center">
+<table>
 
 {if $smarty.session.Logged != '1' }
-<tr align="center"> <td colspan="4" align="center"><h3>{t}Register person{/t}</h3></td> </tr>
+<tr> <td colspan="4"><h3>{t}Register person{/t}</h3></td> </tr>
 {/if}
 
 {if $smarty.session.Logged == '1' }
-<tr align="center"> <td colspan="4" align="center" class="mainsection">{t}Update person data{/t}</td> </tr>
+<tr> <td colspan="4" align="center" class="mainsection">{t}Update person data{/t}</td> </tr>
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
@@ -51,7 +51,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr valign="top">
 <td align="right"><span class="must">*</span><label for="Email" class="raisePopUp" title="{t}Change the account email{/t}">Email</label></td>
-<td colspan="3"> <input type="text" name="Email" id="Email" size="40" maxlength="60" class="required" value="{$data.Email}">
+<td colspan="3"> <input type="text" name="Email" id="Email" maxlength="60" class="required" value="{$data.Email}">
 {if $smarty.session.WantEmail neq '' and $smarty.session.Logged eq '1'}<strong>[</strong>{$smarty.session.WantEmail}<strong>]</strong>{/if}
 </td>
 </tr>
@@ -88,12 +88,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td align="right"><label for="FirstName">{t}First name{/t}</label></td>
 <td> <input type="text" name="FirstName" id="FirstName" size="20" maxlength="20" class="notRequired" value="{$data.FirstName}"> </td>
-<th rowspan="5" width="100%">
 <th rowspan="5">
+<th rowspan="5" valign="bottom">
 {if $data.ViewPhotoOrLogo eq 'true' }
-	<img src="photo?acl=me&id={$smarty.session.EntityId}" align="left" alt="" border="0" hspace="0" vspace="0">
+	<img src="photo?acl=me&id={$smarty.session.EntityId}" alt="{t}Photo{/t}" class="frame">
 {else}
-	<img src="/images/default/Person.png" width="90" height="120" align="left" alt="" border="1" hspace="0" vspace="0">
+	<img src="/themes/red_Danijel/images/person.default.png" width="90" height="120" alt="{t}Photo{/t}" class="frame">
 {/if}
 </tr>
 <tr>
@@ -109,8 +109,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td> <input type="file" name="PhotoOrLogo" id="PhotoOrLogo" class="notRequired" value="{$data.PhotoOrLogo}"> </td>
 </tr>
 <tr>
-<td height="100%">&nbsp;</td>
-<td height="100%">&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <th colspan="3">
@@ -204,7 +204,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td colspan="4">&nbsp;</td> </tr> 
 <tr> <td colspan="4">&nbsp;</td> </tr> 
 
-<tr align="center">
+<tr>
 <td colspan="4" align="center">
 <input type="submit" name="save" value="{t}{if $smarty.session.Logged == '1'}Save{else}Register{/if}{/t}">
 

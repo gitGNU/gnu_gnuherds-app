@@ -1,8 +1,9 @@
 {*
-Authors: Davi Leal, Victor Engmark
+Authors: Davi Leal, Victor Engmark, Sameer Naik
 
 Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Davi Leal <davi at leals dot com>
               2007 Victor Engmark <victor dot engmark at gmail dot com>
+              2007 Sameer Naik <sameer AT damagehead DOT com>
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Affero General Public License as published by the Free Software Foundation,
@@ -17,38 +18,30 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<table bgcolor="{$webpage->theme->menuBGcolor}" width="155" cellpadding="0" cellspacing="0" rules="none" border="0">
-<tr>
-<td><img src="{$webpage->theme->borderLeftUpImage}"  width="2" height="2" align="left"  alt="" border="0" hspace="0" vspace="0"></td>
-<td><img src="{$webpage->theme->borderRightUpImage}" width="2" height="2" align="right" alt="" border="0" hspace="0" vspace="0"></td>
-</tr>
-<tr>
+<div class="menu">
 
-<td>
-<p>
-{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/index.php"}<a href="/" class="menu1">{/if}{'Home'|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/index.php"}</a>{/if}<br>
-{if $smarty.server.REQUEST_URI neq "/charter"}<a href="charter" class="menu1">{/if}{'Charter (draft)'|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/charter"}</a>{/if}<br>
-{if $smarty.server.REQUEST_URI neq "/development"}<a href="development" class="menu1">{/if}{"Hackers' Guide"|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/development"}</a>{/if}<br>
-{if $smarty.server.REQUEST_URI neq "/faq"}<a href="faq" class="menu1">{/if}{'FAQ'|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/faq"}</a>{/if}<br>
-</p>
+<ul>
+<li>{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/index.php"}<a href="/">{/if}{t}Home{/t}{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/index.php"}</a>{/if}</li>
+<li>{if $smarty.server.REQUEST_URI neq "/charter"}<a href="charter">{/if}{t}Charter (draft){/t}{if $smarty.server.REQUEST_URI neq "/charter"}</a>{/if}</li>
+<li>{if $smarty.server.REQUEST_URI neq "/development"}<a href="development">{/if}{t}Coders' guide{/t}{if $smarty.server.REQUEST_URI neq "/development"}</a>{/if}</li>
+<li>{if $smarty.server.REQUEST_URI neq "/faq"}<a href="faq">{/if}{t}FAQ{/t}{if $smarty.server.REQUEST_URI neq "/faq"}</a>{/if}</li>
+</ul>
 
 {if $smarty.session.Logged eq '1'}
-<p>
-<span class="menu1noactive">{'Manage your data'|gettext|strip:'&nbsp;'}</span><br>
+<h4>{t}Account{/t}</h4>
+<ul>
 
 {if $smarty.session.LoginType eq 'Person' }
-	&nbsp;&nbsp;<a href="person" class="menu3">{'Person'|gettext}</a><br>
+<li><a href="person">{t}My personal profile{/t}</a></li>
 {/if}
 
 {if $smarty.session.LoginType eq 'Company' }
-	&nbsp;&nbsp;<a href="company" class="menu3">{'Company'|gettext}</a><br>
+<li><a href="company">{t}Our company profile{/t}</a></li>
 {/if}
 
 {if $smarty.session.LoginType eq 'non-profit Organization' }
-	&nbsp;&nbsp;<a href="nonprofit" class="menu3">{'non-profit Organization'|gettext|strip:'&nbsp;'}</a><br>
+<li><a href="nonprofit">{t}Our non-profit profile{/t}</a></li>
 {/if}
-
-{if $smarty.session.Logged eq '1' }
 
 {if $smarty.session.HasQualifications eq '1' }
 	{assign var="url" value="resume?id=`$smarty.session.EntityId`"}
@@ -57,49 +50,36 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 
 {if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;<a href="{$url}" class="menu3">{'My qualifications'|gettext|strip:'&nbsp;'}</a><br>
+<li><a href="{$url}">{t}My qualifications{/t}</a></li>
 {else}
-	&nbsp;&nbsp;<a href="{$url}" class="menu3">{'Our qualifications'|gettext|strip:'&nbsp;'}</a><br>
-{/if}
+<li><a href="{$url}">{t}Our qualifications{/t}</a></li>
 {/if}
 
-{if $smarty.session.Logged eq '1' }
 {if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;<a href="offers?owner=me" class="menu3">{'My job offers'|gettext|strip:'&nbsp;'}</a><br>
+<li><a href="offers?owner=me">{t}My job offers{/t}</a></li>
 {else}
-	&nbsp;&nbsp;<a href="offers?owner=me" class="menu3">{'Our job offers'|gettext|strip:'&nbsp;'}</a><br>
-{/if}
+<li><a href="offers?owner=me">{t}Our job offers{/t}</a></li>
 {/if}
 
-{if $smarty.session.Logged eq '1' }
 {if $smarty.session.LoginType eq "Person" }
-	&nbsp;&nbsp;<a href="applications" class="menu3">{'My job applications'|gettext|strip:'&nbsp;'}</a><br>
+<li><a href="applications">{t}My job applications{/t}</a></li>
 {else}
-	&nbsp;&nbsp;<a href="applications" class="menu3">{'Our job applications'|gettext|strip:'&nbsp;'}</a><br>
-{/if}
+<li><a href="applications">{t}Our job applications{/t}</a></li>
 {/if}
 
-{if $smarty.session.Logged eq '1' }
-	&nbsp;&nbsp;<a href="settings" class="menu3" target="_top">{'Settings'|gettext|strip:'&nbsp;'}</a><br>
-{/if}
+<li><a href="settings">{t}Settings{/t}</a></li>
 
 {if $smarty.session.Logged eq '1' and $smarty.session.SkillsAdmin == true }
-	&nbsp;&nbsp;<a href="admin" class="menu3" target="_top">{'Administration'|gettext|strip:'&nbsp;'}</a><br>
+<li><a href="admin">{t}Administration{/t}</a></li>
 {/if}
 
-</p>
+</ul>
 {/if}
 
-<p>
-<span class="menu1noactive">{'Resources'|gettext}</span><br>
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/offers"}<a href="offers" class="menu3">{/if}<span class="menu3">{'FS Job Offers'|gettext|strip:'&nbsp;'}</span>{if $smarty.server.REQUEST_URI neq "/offers"}</a>{/if}<br>
-	&nbsp;&nbsp;{if $smarty.server.REQUEST_URI neq "/business_models"}<a href="business_models" class="menu3">{/if}<span class="menu3">{'FS Business Models'|gettext|strip:'&nbsp;'}{if $smarty.server.REQUEST_URI neq "/business_models"}</span></a>{/if}<br>
-</p>
-</td>
+<h4>{t}Resources{/t}</h4>
+<ul>
+<li>{if $smarty.server.REQUEST_URI neq "/offers"}<a href="offers">{/if}{t}FS job offers{/t}{if $smarty.server.REQUEST_URI neq "/offers"}</a>{/if}</li>
+<li>{if $smarty.server.REQUEST_URI neq "/business_models"}<a href="business_models">{/if}{t}FS business models{/t}{if $smarty.server.REQUEST_URI neq "/business_models"}</a>{/if}</li>
+</ul>
 
-</tr>
-<tr>
-<td><img src="{$webpage->theme->borderLeftDownImage}"  width="2" height="2" align="left"  alt="" border="0" hspace="0" vspace="0"></td>
-<td><img src="{$webpage->theme->borderRightDownImage}" width="2" height="2" align="right" alt="" border="0" hspace="0" vspace="0"></td>
-</tr>
-</table>
+</div>
