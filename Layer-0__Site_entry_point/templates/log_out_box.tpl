@@ -18,6 +18,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <div id="logbox">
 <form name="LogForm" method="post" action="/">
-<div><input type="submit" name="logout" value="{t}Log out{/t}"></div>
+<p><input type="submit" name="logout" value="{t}Log out{/t}"></p>
 </form>
 </div>
