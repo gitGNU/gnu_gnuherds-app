@@ -1,0 +1,355 @@
+/*
+Authors: Davi Leal, Sameer Naik
+
+Copyright (C) 2007 Davi Leal <davi at leals dot com>
+              2007 Sameer Naik <sameer AT damagehead DOT com>
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free Software Foundation,
+either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero
+General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License along with this
+program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+html{background-color:#ddddaa;}
+body{margin:0px;}
+
+
+/* locale area: Sameer's CSS */
+
+.locale{
+width:100%;
+float:left;
+background-color:#021625;
+border-bottom:1px solid #666666;
+}
+
+.locale ul{
+padding:0px;
+margin:0px;
+float:right;
+font-size:70%;
+background-color:#021625;
+}
+
+.locale ul li{
+list-style:none;
+display:inline;
+}
+
+.locale ul li a{
+padding:4px 10px;
+text-decoration:none;
+float:left;
+color:#FFFFFE;
+border-left:1px solid #333333;
+background-color:#021625;
+}
+
+.locale ul li a:hover{
+background-color:#777777;
+}
+
+#lang_active{
+font-weight:bold;
+color:#FFFFFE;
+}
+
+
+/* header area: Sameer's CSS */
+
+.header{
+clear:both;
+float:left;
+width:100%;
+padding:0px;
+background-color:#bd0000;
+border-bottom:2px solid #999999;
+}
+
+.logo{
+float:left;
+}
+
+#header_title{
+float:left;
+color:#FFFFFE;
+padding:20px 25px 0px 0px;
+font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
+font-size: 20px;
+font-weight:bold;
+}
+
+.notes{
+padding:0px;
+color:#FFFFFE;
+float:right;
+}
+
+.notes a{
+color:#FFFFFE;
+}
+
+.header p{
+padding:0px;
+margin:5px;
+}
+
+
+/* app area: Sameer's CSS */
+
+#app{
+clear:both;
+padding:0px;
+}
+
+#app a:link{color:#008000;}
+#app a:visited{color:#006060;}
+#app a:active{color:#a00000;}
+
+
+/* sidebar area: Sameer's CSS */
+
+.sidebar{float:left;}
+.sidebar div{
+padding:5px 5px 5px 0px;
+overflow:hidden;
+font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+
+
+/* menu area: Sameer's CSS */
+
+.menu{
+margin:5px 5px 5px 5px;
+padding:0px;
+background-color:#d0c482;
+}
+
+.menu ul{
+margin:0px;
+padding:0px;
+}
+
+.menu ul li{
+padding:2px 10px;
+margin:0px 0px 0px 0px;
+text-transform:capitalize;
+}
+
+.menu h4{
+padding:2px 10px;
+margin:10px 0px 0px 0px;
+font-weight:bold;
+text-transform:capitalize;
+}
+
+
+/* logbox area: Sameer's CSS */
+
+#logbox {
+margin:30px 6px 6px 6px;
+background-color:#d0d0a0;
+border:1px solid #d0c482;
+-moz-border-radius-topright:1em !important;
+-moz-border-radius-bottomleft:1em !important;
+}
+
+#logbox form{
+padding:0px 0px 0px 5px;
+margin-top:0px;
+margin-bottom:0px;
+}
+
+#logbox p{
+margin-top:0px;
+margin-bottom:0px;
+padding:0px;
+text-align:center;
+}
+
+.in{
+margin-bottom:5px;
+padding-left:20px;
+margin:0px;
+border:1px solid #d0c482;
+}
+.u_icon{background:url(/themes/green_Davi/icons/user.gif) left no-repeat #e0e0c5;}
+.k_icon{background:url(/themes/green_Davi/icons/key.gif) left no-repeat #e0e0c5;}
+
+.pos{
+display:block;
+margin-top:5px;
+/* IE 6.0
+margin-left: auto;
+margin-right: auto;
+*/
+margin-left:20px; /* IE 6.0 */
+}
+
+#logbox a{font-size:10px;}
+
+
+/* quick links area: Sameer's CSS */
+
+.quicks p{
+margin:10px 0px 10px 0px;
+padding:0px 0px 0px 30px;
+font-size:12px;
+}
+
+
+/* content area: Sameer's CSS */
+
+#content{background-color:#e8eecb; margin:5px; padding:5px;}
+
+
+/* content area: Setting for texts */
+
+h3{
+font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
+font-size:14px;
+text-align:left;
+padding-left:5px;
+padding-right:0px;
+text-decoration:none;
+text-transform:capitalize;
+color:#606000;
+}
+
+h4{
+font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
+font-size:14px;
+text-align:left;
+padding-left:5px;
+text-decoration:none;
+text-transform:capitalize;
+color:#606000;
+}
+
+p{
+text-align:justify;
+padding-left:5px;
+padding-right:5px;
+font-size:14px;
+font-family:Arial, Helvetica, Georgia, sans-serif;
+}
+
+.top{
+text-align:center;
+font-size:12px;
+}
+
+li{
+text-align:justify;
+font-size:14px;
+font-family:Arial, Helvetica, Georgia, sans-serif;
+}
+
+/* content area: Setting for forms */
+
+td{
+font-size:12px;
+font-family:Arial, Helvetica, Georgia, sans-serif;
+}
+
+label{
+font-family:Arial, Helvetica, Georgia, sans-serif;
+font-size:12px;
+color:#505007;
+}
+label.raisePopUp{color:#808000;}
+
+select{font-size:12px;}
+input{font-size:12px;}
+button{font-size:11px; padding-left:0px; padding-right:0px;}
+
+.mainsection{
+font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
+font-size:24px;
+padding-left:5px;
+text-decoration:none;
+text-transform:capitalize;
+color:#555544;
+}
+
+.subsection{
+font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
+font-size:16px;
+padding-left:5px;
+padding-right:0px;
+text-decoration:none;
+text-transform:capitalize;
+color:#555544;
+background-color:#e0e1bf;
+}
+
+.must{
+font-family:Arial, Helvetica, Georgia, sans-serif;
+font-size:12px;
+color:#aa0000;
+}
+
+.error{color:#aa0000;}
+
+.modification{
+font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
+color:#aa0000;
+}
+
+.strike{text-decoration:line-through;}
+
+.tdTitle{	
+background-color:#e0e1bf;
+border:1px outset #641212;
+color:#000000;
+}
+
+.tdDark{
+background-color:#f3f6e8;
+border-left:thin #e0c080;
+border-right:thin #e0c080;
+border-bottom:thin #e0c080;
+color:#333333;
+}
+
+.tdLight{	
+background-color:#fffbed;
+border-left:thin #e0c080;
+border-right:thin #e0c080;
+border-bottom:thin #e0c080;
+color:#333333;
+}
+
+.greenDark{background-color:#f3f6e8;}
+.greenLight{background-color:#f9f6e3;}
+
+.u{text-decoration:underline;}
+
+.required{background-color:#fff5e3; border:2px inset #6f5543;}
+.notRequired{background-color:#f4f8e0;}
+
+.blueApplicationState{background-color:#d9eaff;}
+.redApplicationState{background-color:#ffd9d9;}
+.almostGreenApplicationState{background-color:#f5ffd9;}
+.greenApplicationState{background-color:#dbffd9;}
+
+.edit{background-color:#f9f8f5;}
+
+img{border:0px;}
+.frame{border:1px outset #666666;}
+
+
+/* foot area: Sameer's CSS */
+
+.foot{
+font-family:Arial, Helvetica, Georgia, sans-serif;
+font-size:100%;
+background-color:#e3e2ae;
+}
