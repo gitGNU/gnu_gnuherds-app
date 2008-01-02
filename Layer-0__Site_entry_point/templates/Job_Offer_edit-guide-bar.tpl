@@ -17,106 +17,65 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
 <table cellpadding="0" cellspacing="0" rules="none" border="0">
-
 <tr>
+
 <td align="center">
-{if $section neq 'general'}
-<button type="submit" name="jump" value="general" title="{t}Save and move to section{/t} {t}General{/t}">
-<img src="/themes/red_Danijel/icons/{if $checkresults.general eq 'pass'}green{else}red{/if}-dark.png" alt=""><br>
-{else}
-<button type="submit" name="jump" value="general" title="{t}Save and move to section{/t} {t}General{/t}" disabled>
-<img src="/themes/red_Danijel/icons/{if $checkresults.general eq 'pass'}green{else}red{/if}-light.png" alt=""><br>
-{/if}
-{t}General{/t}
-</button>
+{if $IE_workaround == false}<button type="submit" name="jump" value="general" title="{t}Save and move to section{/t} {t}General{/t}" {if $section eq 'general'}disabled{/if}>{/if}
+<img src="/themes/red_Danijel/icons/{if $checkresults.general eq 'pass'}green{else}red{/if}-{if $section eq 'general'}light{else}dark{/if}.png" alt="{t}{if $checkresults.general eq 'pass'}green{else}red{/if}{/t}"><br>
+{if $IE_workaround == true}<input type="submit" name="jump" value="{t}General{/t}" title="{t}Save and move to section{/t} {t}General{/t}" {if $section eq 'general'}disabled{/if}>{/if}
+{if $IE_workaround == false}{t}General{/t}</button>{/if}
 </td>
 
 <td align="center">
-{if $section neq 'profiles_etc'}
-<button type="submit" name="jump" value="profiles_etc" title="{t}Save and move to section{/t} {t}Academic qualification{/t}">
-<img src="/themes/red_Danijel/icons/{if $checkresults.profiles_etc eq 'pass'}green{else}red{/if}-dark.png" alt=""><br>
-{else}
-<button type="submit" name="jump" value="profiles_etc" title="{t}Save and move to section{/t} {t}Academic qualification{/t}" disabled>
-<img src="/themes/red_Danijel/icons/{if $checkresults.profiles_etc eq 'pass'}green{else}red{/if}-light.png" alt=""><br>
-{/if}
-{t}Profiles, etc.{/t}
-</button>
+{if $IE_workaround == false}<button type="submit" name="jump" value="profiles_etc" title="{t}Save and move to section{/t} {t}Academic qualification{/t}" {if $section eq 'profiles_etc'}disabled{/if}>{/if}
+<img src="/themes/red_Danijel/icons/{if $checkresults.profiles_etc eq 'pass'}green{else}red{/if}-{if $section eq 'profiles_etc'}light{else}dark{/if}.png" alt="{t}{if $checkresults.general eq 'pass'}green{else}red{/if}{/t}"><br>
+{if $IE_workaround == true}<input type="submit" name="jump" value="{t}Profiles, etc.{/t}" title="{t}Save and move to section{/t} {t}Academic qualification{/t}" {if $section eq 'profiles_etc'}disabled{/if}>{/if}
+{if $IE_workaround == false}{t}Profiles, etc.{/t}</button>{/if}
 </td>
 
 <td align="center">
-{if $section neq 'skills'}
-<button type="submit" name="jump" value="skills" title="{t}Save and move to section{/t} {t}Skills{/t}">
-<img src="/themes/red_Danijel/icons/{if $checkresults.skills eq 'pass'}green{else}red{/if}-dark.png" alt=""><br>
-{else}
-<button type="submit" name="jump" value="skills" title="{t}Save and move to section{/t} {t}Skills{/t}" disabled>
-<img src="/themes/red_Danijel/icons/{if $checkresults.skills eq 'pass'}green{else}red{/if}-light.png" alt=""><br>
-{/if}
-{t}Skills{/t}
-</button>
+{if $IE_workaround == false}<button type="submit" name="jump" value="skills" title="{t}Save and move to section{/t} {t}Skills{/t}" {if $section eq 'skills'}disabled{/if}>{/if}
+<img src="/themes/red_Danijel/icons/{if $checkresults.skills eq 'pass'}green{else}red{/if}-{if $section eq 'skills'}light{else}dark{/if}.png" alt="{t}{if $checkresults.general eq 'pass'}green{else}red{/if}{/t}"><br>
+{if $IE_workaround == true}<input type="submit" name="jump" value="{t}Skills{/t}" title="{t}Save and move to section{/t} {t}Skills{/t}" {if $section eq 'skills'}disabled{/if}>{/if}
+{if $IE_workaround == false}{t}Skills{/t}</button>{/if}
 </td>
 
 <td align="center">
-{if $section neq 'languages'}
-<button type="submit" name="jump" value="languages" title="{t}Save and move to section{/t} {t}Languages{/t}">
-<img src="/themes/red_Danijel/icons/{if $checkresults.languages eq 'pass'}green{else}red{/if}-dark.png" alt=""><br>
-{else}
-<button type="submit" name="jump" value="languages" title="{t}Save and move to section{/t} {t}Languages{/t}" disabled>
-<img src="/themes/red_Danijel/icons/{if $checkresults.languages eq 'pass'}green{else}red{/if}-light.png" alt=""><br>
-{/if}
-{t}Languages{/t}
-</button>
+{if $IE_workaround == false}<button type="submit" name="jump" value="languages" title="{t}Save and move to section{/t} {t}Languages{/t}" {if $section eq 'languages'}disabled{/if}>{/if}
+<img src="/themes/red_Danijel/icons/{if $checkresults.languages eq 'pass'}green{else}red{/if}-{if $section eq 'languages'}light{else}dark{/if}.png" alt="{t}{if $checkresults.general eq 'pass'}green{else}red{/if}{/t}"><br>
+{if $IE_workaround == true}<input type="submit" name="jump" value="{t}Languages{/t}" title="{t}Save and move to section{/t} {t}Languages{/t}" {if $section eq 'languages'}disabled{/if}>{/if}
+{if $IE_workaround == false}{t}Languages{/t}</button>{/if}
 </td>
 
 {* The certifications feature is disabled
 <td align="center">
-{if $section neq 'certifications'}
-<button type="submit" name="jump" value="certifications" title="{t}Save and move to section{/t} {t}Certifications{/t}">
-<img src="/themes/red_Danijel/icons/{if $checkresults.certifications eq 'pass'}green{else}red{/if}-dark.png" alt=""><br>
-{else}
-<button type="submit" name="jump" value="certifications" title="{t}Save and move to section{/t} {t}Certifications{/t}" disabled>
-<img src="/themes/red_Danijel/icons/{if $checkresults.certifications eq 'pass'}green{else}red{/if}-light.png" alt=""><br>
-{/if}
-{t}Certifications{/t}
-</button>
+{if $IE_workaround == false}<button type="submit" name="jump" value="certifications" title="{t}Save and move to section{/t} {t}Certifications{/t}" {if $section eq 'certifications'}disabled{/if}>{/if}
+<img src="/themes/red_Danijel/icons/{if $checkresults.certifications eq 'pass'}green{else}red{/if}-{if $section eq 'certifications'}light{else}dark{/if}.png" alt="{t}{if $checkresults.general eq 'pass'}green{else}red{/if}{/t}"><br>
+{if $IE_workaround == true}<input type="submit" name="jump" value="{t}Certifications{/t}" title="{t}Save and move to section{/t} {t}Certifications{/t}" {if $section eq 'certifications'}disabled{/if}>{/if}
+{if $IE_workaround == false}{t}Certifications{/t}</button>{/if}
 </td>
 *}
 
 <td align="center">
-{if $section neq 'projects'}
-<button type="submit" name="jump" value="projects" title="{t}Save and move to section{/t} {t}Experience with FS projects{/t}">
-<img src="/themes/red_Danijel/icons/{if $checkresults.projects eq 'pass'}green{else}red{/if}-dark.png" alt=""><br>
-{else}
-<button type="submit" name="jump" value="projects" title="{t}Save and move to section{/t} {t}Experience with FS projects{/t}" disabled>
-<img src="/themes/red_Danijel/icons/{if $checkresults.projects eq 'pass'}green{else}red{/if}-light.png" alt=""><br>
-{/if}
-{t}FS projects{/t}
-</button>
+{if $IE_workaround == false}<button type="submit" name="jump" value="projects" title="{t}Save and move to section{/t} {t}Experience with FS projects{/t}" {if $section eq 'projects'}disabled{/if}>{/if}
+<img src="/themes/red_Danijel/icons/{if $checkresults.projects eq 'pass'}green{else}red{/if}-{if $section eq 'projects'}light{else}dark{/if}.png" alt="{t}{if $checkresults.general eq 'pass'}green{else}red{/if}{/t}"><br>
+{if $IE_workaround == true}<input type="submit" name="jump" value="{t}FS projects{/t}" title="{t}Save and move to section{/t} {t}Experience with FS projects{/t}" {if $section eq 'projects'}disabled{/if}>{/if}
+{if $IE_workaround == false}{t}FS projects{/t}</button>{/if}
 </td>
 
 <td align="center">
-{if $section neq 'location'}
-<button type="submit" name="jump" value="location" title="{t}Save and move to section{/t} {t}Residence location{/t}">
-<img src="/themes/red_Danijel/icons/{if $checkresults.location eq 'pass'}green{else}red{/if}-dark.png" alt=""><br>
-{else}
-<button type="submit" name="jump" value="location" title="{t}Save and move to section{/t} {t}Residence location{/t}" disabled>
-<img src="/themes/red_Danijel/icons/{if $checkresults.location eq 'pass'}green{else}red{/if}-light.png" alt=""><br>
-{/if}
-{t}Location{/t}
-</button>
+{if $IE_workaround == false}<button type="submit" name="jump" value="location" title="{t}Save and move to section{/t} {t}Residence location{/t}" {if $section eq 'location'}disabled{/if}>{/if}
+<img src="/themes/red_Danijel/icons/{if $checkresults.location eq 'pass'}green{else}red{/if}-{if $section eq 'location'}light{else}dark{/if}.png" alt="{t}{if $checkresults.general eq 'pass'}green{else}red{/if}{/t}"><br>
+{if $IE_workaround == true}<input type="submit" name="jump" value="{t}Location{/t}" title="{t}Save and move to section{/t} {t}Residence location{/t}" {if $section eq 'location'}disabled{/if}>{/if}
+{if $IE_workaround == false}{t}Location{/t}</button>{/if}
 </td>
 
 <td align="center">
-{if $section neq 'contract'}
-<button type="submit" name="jump" value="contract" title="{t}Save and move to section{/t} {t}Contract{/t}">
-<img src="/themes/red_Danijel/icons/{if $checkresults.contract eq 'pass'}green{else}red{/if}-dark.png" alt=""><br>
-{else}
-<button type="submit" name="jump" value="contract" title="{t}Save and move to section{/t} {t}Contract{/t}" disabled>
-<img src="/themes/red_Danijel/icons/{if $checkresults.contract eq 'pass'}green{else}red{/if}-light.png" alt=""><br>
-{/if}
-{t}Contract{/t}
-</button>
+{if $IE_workaround == false}<button type="submit" name="jump" value="contract" title="{t}Save and move to section{/t} {t}Contract{/t}" {if $section eq 'contract'}disabled{/if}>{/if}
+<img src="/themes/red_Danijel/icons/{if $checkresults.contract eq 'pass'}green{else}red{/if}-{if $section eq 'contract'}light{else}dark{/if}.png" alt="{t}{if $checkresults.general eq 'pass'}green{else}red{/if}{/t}"><br>
+{if $IE_workaround == true}<input type="submit" name="jump" value="{t}Contract{/t}" title="{t}Save and move to section{/t} {t}Contract{/t}" {if $section eq 'contract'}disabled{/if}>{/if}
+{if $IE_workaround == false}{t}Contract{/t}</button>{/if}
 </td>
 
 </tr>
-
 </table>

@@ -26,10 +26,19 @@ class JobOfferForm extends SkillsForm
 	private $checkresults;
 	private $section2view;
 	private $section2control;
+	private $IE_workaround = false;
 
 
 	public function processForm()
 	{
+		// Detect Microsoft InternetExplorer browsers
+		$this->IE_workaround = preg_match("/^.*IE.*$/", $_SERVER["HTTP_USER_AGENT"]);
+
+		// $_POST['jump']  value conversion.
+		if ( $this->IE_workaround == true and $_POST['jump'] != '' )
+			$this->Microsoft_InternetExplorer_workaround();
+
+
 		// Find out the section we have to show to the user
 		if ( $_POST['jump'] != '' )
 			$this->section2view = $_POST['jump'];
@@ -248,6 +257,7 @@ class JobOfferForm extends SkillsForm
 		$smarty->assign('checks', $this->checks);
 		$smarty->assign('checkresults', $this->checkresults);
 		$smarty->assign('section', $section);
+		$smarty->assign('IE_workaround', $this->IE_workaround);
 		$smarty->display("Job_Offer_".$section."_form.tpl");
 	}
 
@@ -1083,6 +1093,41 @@ class JobOfferForm extends SkillsForm
 
 		// Set the check marks
 		$this->checkJobOfferForm();
+	}
+
+
+	private function Microsoft_InternetExplorer_workaround() // IE 6.0 and IE 7.0 workaround,  $_POST['jump']  value conversion.
+	{
+		// IE does not work with <button>s as the specification expose [1]
+		//   [1] http://www.w3.org/TR/REC-html40/interact/forms.html#edef-BUTTON
+		//
+		// It's supposed to submit the value attribute, as any other browser does following
+		// the specification, but it instead submits the contents of the element!
+		//
+		// It is even worse, IE sends _always_ the content of _all_ <button>s, even if
+                // buttons have not been clicked!
+
+		// Work around: Use <input> instead of <button> when a IE browser is detected.
+
+
+		// To support the code which we developed previously, we do in this method 'value='
+		// conversion, from the $_POST['jump'] <input> values to the expected <button> values:
+
+		switch($_POST['jump'])
+		{
+			case gettext("General"): $_POST['jump'] = 'general'; break;
+			case gettext("Profiles, etc."): $_POST['jump'] = 'profiles_etc'; break;
+			case gettext("Skills"): $_POST['jump'] = 'skills'; break;
+			case gettext("Languages"): $_POST['jump'] = 'languages'; break;
+			case gettext("Certifications"): $_POST['jump'] = 'certifications'; break;
+			case gettext("FS projects"): $_POST['jump'] = 'projects'; break;
+			case gettext("Location"): $_POST['jump'] = 'location'; break;
+			case gettext("Contract"): $_POST['jump'] = 'contract'; break;
+
+			default:
+				$error = "<p>".gettext("Unexpected error")."</p>";
+				throw new Exception($error,false);
+		}
 	}
 }
 ?>
