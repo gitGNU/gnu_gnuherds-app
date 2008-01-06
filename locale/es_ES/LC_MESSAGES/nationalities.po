@@ -269,7 +269,7 @@ msgid "Dominican"
 msgstr "Dominiqués, sa"
 
 #. nationality for "Denmark" (DNK)
-msgid "Dane"
+msgid "Danish"
 msgstr "Danés, sa"
 
 #. nationality for "Dominican Republic" (DOM)
@@ -297,7 +297,7 @@ msgid "Sahrawi"
 msgstr "Saharaui"
 
 #. nationality for "Spain" (ESP)
-msgid "Spaniard"
+msgid "Spanish"
 msgstr "Español, la"
 
 #. nationality for "Estonia" (EST)
@@ -341,7 +341,7 @@ msgid "Gabonese"
 msgstr "Gabonés, sa"
 
 #. nationality for "United Kingdom" (GBR)
-msgid "Briton"
+msgid "British"
 msgstr "Británico, ca"
 
 #. nationality for "Georgia" (GEO)
@@ -385,7 +385,7 @@ msgid "Grenadian"
 msgstr "Granadino, na"
 
 #. nationality for "Greenland" (GRL)
-msgid "Greenlander"
+msgid "Greenlandic"
 msgstr "Groenlandés, sa"
 
 #. nationality for "Guatemala" (GTM)
@@ -417,7 +417,7 @@ msgid "Honduran"
 msgstr "Hondureño, ña"
 
 #. nationality for "Croatia" (HRV)
-msgid "Croat"
+msgid "Croatian"
 msgstr "Croata"
 
 #. nationality for "Haiti" (HTI)
@@ -453,7 +453,7 @@ msgid "Iraqi"
 msgstr "Iraquí"
 
 #. nationality for "Iceland" (ISL)
-msgid "Icelander"
+msgid "Icelandic"
 msgstr "Islandés, sa"
 
 #. nationality for "Israel" (ISR)
@@ -641,7 +641,7 @@ msgid "Malaysian"
 msgstr "Malayo, ya"
 
 #. nationality for "Mayotte" (MYT)
-msgid "Mahorais"
+msgid "Mahoran"
 msgstr "Mayotense"
 
 #. nationality for "Namibia" (NAM)
@@ -725,7 +725,7 @@ msgid "Papua New Guinean"
 msgstr "Papuano, na"
 
 #. nationality for "Poland" (POL)
-msgid "Pole"
+msgid "Polish"
 msgstr "Polaco, ca"
 
 #. nationality for "Puerto Rico" (PRI)
@@ -825,7 +825,7 @@ msgid "St-Pierrais; Miquelonnais"
 msgstr "San Pedro y Miquelón"
 
 #. nationality for "Serbia" (SRB)
-msgid "Serb"
+msgid "Serbian"
 msgstr "Serbio, bia"
 
 #. nationality for "São Tomé and Príncipe" (STP)
@@ -833,7 +833,7 @@ msgid "São Toméan"
 msgstr "Santotomense"
 
 #. nationality for "Suriname" (SUR)
-msgid "Surinamer"
+msgid "Surinamese"
 msgstr "Surinamés, sa"
 
 #. nationality for "Slovakia" (SVK)
@@ -841,11 +841,11 @@ msgid "Slovak"
 msgstr "Eslovaco, ca"
 
 #. nationality for "Slovenia" (SVN)
-msgid "Slovene"
+msgid "Slovenian"
 msgstr "Esloveno, na"
 
 #. nationality for "Sweden" (SWE)
-msgid "Swede"
+msgid "Swedish"
 msgstr "Sueco, ca"
 
 #. nationality for "Swaziland" (SWZ)
@@ -905,7 +905,7 @@ msgid "Tunisian"
 msgstr "Tunecino, na"
 
 #. nationality for "Turkey" (TUR)
-msgid "Turk"
+msgid "Turkish"
 msgstr "Turco, ca"
 
 #. nationality for "Tuvalu" (TUV)
