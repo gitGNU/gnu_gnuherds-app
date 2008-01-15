@@ -223,8 +223,6 @@ class ViewJobOfferForm
 		$this->data['EntityPostalCode'] = $result[7][0];
 		$this->data['EntityCountryCode'] = $result[8][0];
 
-		$this->data['EntityNationality'] = $result[9][0];
-
 		$this->data['BirthYear'] = $result[10][0];
 		$this->data['PhotoOrLogo'] = '';
 
@@ -243,7 +241,8 @@ class ViewJobOfferForm
 		$this->data['NonprofitName'] = $result[19][0];
 
 		$this->data['EntityCountryName'] = $result[30][0];
-		$this->data['EntityNationalityName'] = $result[31][0];
+		$this->data['NationalityNameList'] = $result[32];
+		$this->data['JobLicenseAtNameList'] = $result[34];
 
 		if ( file_exists("../entity_photos/".$this->data['EntityId']) )
 			$this->data['PhotoOrLogo'] = "true";

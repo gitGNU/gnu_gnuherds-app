@@ -21,31 +21,32 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <table>
 
 {if $smarty.session.Logged != '1' }
-<tr> <td colspan="4"><h3>{t}Register non-profit organization{/t}</h3></td> </tr>
+<tr> <td colspan="3"><h3>{t}Register non-profit organization{/t}</h3></td> </tr>
 {/if}
 
 {if $smarty.session.Logged == '1' }
-<tr> <td colspan="4" align="center" class="mainsection">{t}Update non-profit organization{/t}</td> </tr>
+<tr> <td colspan="3" align="center" class="mainsection">{t}Update non-profit organization{/t}</td> </tr>
 {/if}
 
-<tr> <td colspan="4">&nbsp;</td> </tr>
+<tr> <td colspan="3">&nbsp;</td> </tr>
 
 {if $smarty.session.Logged == '1' }
 
 {if $checks.result eq 'fail' }
-<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td> </tr>
+<tr> <td colspan="3" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td> </tr>
 {/if}
 
-<tr> <td colspan="4" class="footnote">{t escape=no 1='<span class="must">' 2='</span>'}The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional.{/t}</td> </tr>
+<tr> <td colspan="3" class="footnote">{t escape=no 1='<span class="must">' 2='</span>'}The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional.{/t}</td> </tr>
 
-<tr> <td colspan="4">&nbsp;</td> </tr>
-<tr> <td colspan="4" class="subsection">{t}Account identification{/t}</td> </tr>
+<tr> <td colspan="3">&nbsp;</td> </tr>
+
+<tr> <td colspan="3" class="subsection">{t}Account identification{/t}</td> </tr>
 
 {/if}
 
 <tr valign="top">
 <td align="right"><span class="must">*</span><label for="Email" class="raisePopUp" title="{t}Change the account email{/t}">Email</label></td>
-<td colspan="3"> <input type="text" name="Email" id="Email" maxlength="60" class="required" value="{$data.Email}">
+<td colspan="2"> <input type="text" name="Email" id="Email" maxlength="60" class="required" value="{$data.Email}">
 {if $smarty.session.WantEmail neq '' and $smarty.session.Logged eq '1'}<strong>[</strong>{$smarty.session.WantEmail}<strong>]</strong>{/if}
 </td>
 </tr>
@@ -53,7 +54,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $checks.Email neq '' }
 <tr>
 <td></td>
-<td colspan="3"><p class="must">{$checks.Email}</p></td>
+<td colspan="2"><p class="must">{$checks.Email}</p></td>
 </tr>
 {/if}
 
@@ -61,32 +62,37 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td align="right"><label for="Password" class="raisePopUp" title="{t}Change the account password{/t}">{t}Password{/t}</label></td>
-<td colspan="3"> <input type="password" name="Password" id="Password" size="20" maxlength="20" class="notRequired" value=""> </td>
+<td colspan="2"> <input type="password" name="Password" id="Password" size="20" maxlength="20" class="notRequired" value=""> </td>
 </tr>
 <tr>
 <td align="right"><label for="RetypePassword" class="raisePopUp" title="{t}Change the account password{/t}">{t}Retype Password{/t}</label></td>
-<td colspan="3"> <input type="password" name="RetypePassword" id="RetypePassword" size="20" maxlength="20" class="notRequired" value=""> </td>
+<td colspan="2"> <input type="password" name="RetypePassword" id="RetypePassword" size="20" maxlength="20" class="notRequired" value=""> </td>
 </tr>
 
 {if $checks.Password neq '' }
 <tr>
 <td></td>
-<td colspan="3"><p class="must">{$checks.Password}</p></td>
+<td colspan="2"><p class="must">{$checks.Password}</p></td>
 </tr>
 {/if}
 
-<tr> <td colspan="4">&nbsp;</td> </tr>
-<tr> <td colspan="4" class="subsection">{t}non-profit{/t}</td> </tr>
+<tr> <td colspan="3">&nbsp;</td> </tr>
+
+<tr> <td colspan="3" class="subsection">{t}non-profit{/t}</td> </tr>
 <tr>
 <td align="right"><label for="NonprofitName">{t}Name{/t}</label></td>
 <td> <input type="text" name="NonprofitName" id="NonprofitName" size="20" maxlength="30" class="notRequired" value="{$data.NonprofitName}"> </td>
-<th rowspan="5">
-<th rowspan="5" valign="bottom">
+<th rowspan="5" valign="top" align="center">
 {if $data.ViewPhotoOrLogo eq 'true' }
 	<img src="photo?acl=me&id={$smarty.session.EntityId}" alt="{t}Photo or logo{/t}" class="frame">
 {else}
 	<img src="/themes/red_Danijel/images/company_or_non-profit.default.png" width="110" height="80" alt="{t}Photo or logo{/t}" class="frame">
 {/if}
+<br>
+{if $data.ViewPhotoOrLogo eq 'true' }
+	<a href="photo?action=delete"><strong>{t}Delete{/t}</strong></a>
+{/if}
+</th>
 </tr>
 
 <tr valign="top">
@@ -95,87 +101,179 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 
 <tr>
-<td align="right"><label for="Nationality">{t}Nationality{/t}</label></td>
+<td align="right"><label for="PhotoOrLogo" class="raisePopUp" title="{t}Default image size{/t}: 180x120">{t}Photo or logo{/t}</label></td>
+<td> <input type="file" name="PhotoOrLogo" id="PhotoOrLogo" class="notRequired" value="{$data.PhotoOrLogo}"> </td>
+</tr>
+
+
+<tr>
+<td align="right" {if $data.NationalityList|@count >= 1}valign="top"{/if}><label for="Nationality">{t}ISO Nationalities{/t}</label></td>
+<td {if $data.NationalityList|@count >= 1}class="box"{/if}>
+
+{if $data.NationalityList|@count >= 1}
+
+<table>
+<tr>
+<td colspan="2">
+<label>{'Mark to delete'|gettext|strip:'&nbsp;'}</label>
+</td>
+</tr>
+
+{foreach from=$data.NationalityList item=Nationality key=i}
+<tr valign="top">
+<td align="right">
+<input type="checkbox" name="DeleteNationalityList[]" value="{$i}">
+</td>
 <td>
-<select name="Nationality" id="Nationality" class="notRequired">
-{html_options values=$nationalityTwoLetter output=$nationalityNames selected=$data.Nationality}
+<select name="NationalityList[]" {if $i == 0}id="Nationality"{/if} class="notRequired">
+{html_options values=$nationalityTwoLetter output=$nationalityNames selected=$data.NationalityList[$i]}
+</select>
+</td>
+</tr>
+{/foreach}
+
+<tr valign="top">
+<td>
+</td>
+<td>
+<select name="NationalityList[]" class="notRequired">
+{html_options values=$nationalityTwoLetter output=$nationalityNames}
 </select>
 </td>
 </tr>
 
 <tr>
-<td align="right"><label for="PhotoOrLogo" class="raisePopUp" title="'{t}Default image size{/t}: 180x120">{t}Photo or logo{/t}</label></td>
-<td> <input type="file" name="PhotoOrLogo" id="PhotoOrLogo" class="notRequired" value="{$data.PhotoOrLogo}"> </td>
+<td colspan="2" align="right">
+<input type="submit" name="more" value="{t}More{/t}" title="Save and or delete and stay here to add more">
+</td>
 </tr>
+</table>
 
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
+{else}
 
-<tr>
-<th colspan="3">
-<td align="center">
-{if $data.ViewPhotoOrLogo eq 'true' }
-	<a href="photo?action=delete"><strong>{t}Delete{/t}</strong></a>
+<select name="NationalityList[]" id="Nationality" class="notRequired">
+{html_options values=$nationalityTwoLetter output=$nationalityNames}
+</select>
+<input type="submit" name="more" value="{t}More{/t}" title="Save and or delete and stay here to add more">
+
 {/if}
+
 </td>
 </tr>
 
-<tr> <td colspan="4" class="subsection">{t}Address{/t}</td> </tr>
+
+<tr>
+<td align="right" {if $data.JobLicenseAtList|@count >= 1}valign="top"{/if}><label for="JobLicenseAt" class="raisePopUp" title="{t}Besides the inferred from the ISO nationalities fields{/t}">{t}License to work at{/t}</label></td>
+<td {if $data.JobLicenseAtList|@count >= 1}class="box"{/if}>
+
+{if $data.JobLicenseAtList|@count >= 1}
+
+<table>
+<tr>
+<td colspan="2">
+<label>{'Mark to delete'|gettext|strip:'&nbsp;'}</label>
+</td>
+</tr>
+
+{foreach from=$data.JobLicenseAtList item=JobLicenseAt key=i}
+<tr valign="top">
+<td align="right">
+<input type="checkbox" name="DeleteJobLicenseAtList[]" value="{$i}">
+</td>
+<td>
+<select name="JobLicenseAtList[]" {if $i == 0}id="JobLicenseAt"{/if} class="notRequired">
+{html_options values=$countryTwoLetter output=$countryNames selected=$data.JobLicenseAtList[$i]}
+</select>
+</td>
+</tr>
+{/foreach}
+
+<tr valign="top">
+<td>
+</td>
+<td>
+<select name="JobLicenseAtList[]" class="notRequired">
+{html_options values=$countryTwoLetter output=$countryNames}
+</select>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="right">
+<input type="submit" name="more" value="{t}More{/t}" title="Save and or delete and stay here to add more">
+</td>
+</tr>
+</table>
+
+{else}
+
+<select name="JobLicenseAtList[]" id="JobLicenseAt" class="notRequired">
+{html_options values=$countryTwoLetter output=$countryNames}
+</select>
+<input type="submit" name="more" value="{t}More{/t}" title="Save and or delete and stay here to add more">
+
+{/if}
+
+</td>
+</tr>
+
+
+<tr> <td colspan="3">&nbsp;</td> </tr>
+
+<tr> <td colspan="3" class="subsection">{t}Postal address{/t}</td> </tr>
 <tr>
 <td align="right"><label for="Street">{t}Street{/t}</label></td>
-<td colspan="3"> <input type="text" name="Street" id="Street" size="60" maxlength="80" class="notRequired" value="{$data.Street}"> </td>
+<td colspan="2"> <input type="text" name="Street" id="Street" size="60" maxlength="80" class="notRequired" value="{$data.Street}"> </td>
 </tr>
 <tr>
 <td align="right"><label for="Suite">{t}Suite{/t}</label></td>
-<td colspan="3"> <input type="text" name="Suite" id="Suite" size="10" maxlength="10" class="notRequired" value="{$data.Suite}"> </td>
+<td colspan="2"> <input type="text" name="Suite" id="Suite" size="10" maxlength="10" class="notRequired" value="{$data.Suite}"> </td>
 </tr>
 <tr>
 <td align="right"><label for="City">{t}City{/t}</label></td>
-<td colspan="3"> <input type="text" name="City" id="City" size="30" maxlength="30" class="notRequired" value="{$data.City}"> </td>
+<td colspan="2"> <input type="text" name="City" id="City" size="30" maxlength="30" class="notRequired" value="{$data.City}"> </td>
 </tr>
 <tr>
 <td align="right"><label for="StateProvince">{t}State / Province{/t}</label></td>
-<td colspan="3"> <input type="text" name="StateProvince" id="StateProvince" size="30" maxlength="30" class="notRequired" value="{$data.StateProvince}"> </td>
+<td colspan="2"> <input type="text" name="StateProvince" id="StateProvince" size="30" maxlength="30" class="notRequired" value="{$data.StateProvince}"> </td>
 </tr>
 <tr>
 <td align="right"><label for="PostalCode">{t}Postal code{/t}</label></td>
-<td colspan="3"> <input type="text" name="PostalCode" id="PostalCode" size="15" maxlength="15" class="notRequired" value="{$data.PostalCode}"> </td>
+<td colspan="2"> <input type="text" name="PostalCode" id="PostalCode" size="15" maxlength="15" class="notRequired" value="{$data.PostalCode}"> </td>
 </tr>
 <tr>
 <td align="right"><label for="CountryCode">{t}Country{/t}</label></td>
-<td colspan="3">
+<td colspan="2">
 <select name="CountryCode" id="CountryCode" class="notRequired">
 {html_options values=$countryTwoLetter output=$countryNames selected=$data.CountryCode}
 </select>
 </td>
 </tr>
 
-<tr> <td colspan="4">&nbsp;</td> </tr>
+<tr> <td colspan="3">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="subsection">{t}Interactive communication medias{/t}</td> </tr>
+<tr> <td colspan="3" class="subsection">{t}Interactive communication medias{/t}</td> </tr>
 
 <tr>
 <td align="right"><label for="IpPhoneOrVideo">{'IP phone or videophone'|gettext|strip:'&nbsp;'}</label></td>
-<td colspan="3"> <input type="text" name="IpPhoneOrVideo" id="IpPhoneOrVideo" size="60" maxlength="255" class="notRequired" value="{$data.IpPhoneOrVideo}"> </td>
+<td colspan="2"> <input type="text" name="IpPhoneOrVideo" id="IpPhoneOrVideo" size="60" maxlength="255" class="notRequired" value="{$data.IpPhoneOrVideo}"> </td>
 </tr>
 <tr>
 <td align="right"><label for="Landline">{t}Landline{/t}</label></td>
-<td colspan="3"> <input type="text" name="Landline" id="Landline" size="30" maxlength="30" class="notRequired" value="{$data.Landline}"> </td>
+<td colspan="2"> <input type="text" name="Landline" id="Landline" size="30" maxlength="30" class="notRequired" value="{$data.Landline}"> </td>
 </tr>
 <tr>
 <td align="right"><label for="MobilePhone">{t}Mobile phone{/t}</label></td>
-<td colspan="3"> <input type="text" name="MobilePhone" id="MobilePhone" size="30" maxlength="30" class="notRequired" value="{$data.MobilePhone}"> </td>
+<td colspan="2"> <input type="text" name="MobilePhone" id="MobilePhone" size="30" maxlength="30" class="notRequired" value="{$data.MobilePhone}"> </td>
 </tr>
 
 {/if}
 
-<tr> <td colspan="4">&nbsp;</td> </tr> 
-<tr> <td colspan="4">&nbsp;</td> </tr> 
+<tr> <td colspan="3">&nbsp;</td> </tr> 
+<tr> <td colspan="3">&nbsp;</td> </tr> 
 
 <tr>
-<td colspan="4" align="center">
+<td colspan="3" align="center">
 <input type="submit" name="save" value="{t}{if $smarty.session.Logged == '1'}Save{else}Register{/if}{/t}">
 
 {if $smarty.session.Logged == '1' } <!-- update -->

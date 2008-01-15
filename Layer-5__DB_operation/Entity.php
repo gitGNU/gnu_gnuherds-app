@@ -38,8 +38,10 @@ class Entity
 
 	public function getEntity($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT E1_Email,E1_Revoked,E1_EntityType,E1_Street,E1_Suite,E1_City,E1_StateProvince,E1_PostalCode,E1_LO_Country,E1_LN_Nationality,E1_BirthYear,E1_IpPhoneOrVideo,E1_Landline,E1_MobilePhone,E1_Website,EP_FirstName,EP_LastName,EP_MiddleName,EC_CompanyName,EO_OrganizationName,E1_WantEmail,E1_Trusted FROM E1_Entities WHERE E1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT E1_Email,E1_Revoked,E1_EntityType,E1_Street,E1_Suite,E1_City,E1_StateProvince,E1_PostalCode,E1_LO_Country,E1_BirthYear,E1_IpPhoneOrVideo,E1_Landline,E1_MobilePhone,E1_Website,EP_FirstName,EP_LastName,EP_MiddleName,EC_CompanyName,EO_OrganizationName,E1_WantEmail,E1_Trusted FROM E1_Entities WHERE E1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
+
+		// Note: Assuming only one register is got. Note that 'Id' is a master key.
 
 		$array = array();
 
@@ -52,47 +54,48 @@ class Entity
 		$array[6] = pg_fetch_all_columns($result, 6); // E1_StateProvince
 		$array[7] = pg_fetch_all_columns($result, 7); // E1_PostalCode
 		$array[8] = pg_fetch_all_columns($result, 8); // E1_LO_Country
-		$array[9] = pg_fetch_all_columns($result, 9); // E1_LN_Nationality
-		$array[10] = pg_fetch_all_columns($result, 10); // E1_BirthYear
-		$array[11] = pg_fetch_all_columns($result, 11); // E1_IpPhoneOrVideo
-		$array[12] = pg_fetch_all_columns($result, 12); // E1_Landline
-		$array[13] = pg_fetch_all_columns($result, 13); // E1_MobilePhone
-		$array[14] = pg_fetch_all_columns($result, 14); // E1_Website
-		$array[15] = pg_fetch_all_columns($result, 15); // EP_FirstName
-		$array[16] = pg_fetch_all_columns($result, 16); // EP_LastName
-		$array[17] = pg_fetch_all_columns($result, 17); // EP_MiddleName
-		$array[18] = pg_fetch_all_columns($result, 18); // EC_CompanyName
-		$array[19] = pg_fetch_all_columns($result, 19); // EO_OrganizationName
-		$array[20] = pg_fetch_all_columns($result, 20); // E1_WantEmail
-		$array[21] = pg_fetch_all_columns($result, 21); // E1_Trusted
+		$array[10] = pg_fetch_all_columns($result, 9); // E1_BirthYear
+		$array[11] = pg_fetch_all_columns($result, 10); // E1_IpPhoneOrVideo
+		$array[12] = pg_fetch_all_columns($result, 11); // E1_Landline
+		$array[13] = pg_fetch_all_columns($result, 12); // E1_MobilePhone
+		$array[14] = pg_fetch_all_columns($result, 13); // E1_Website
+		$array[15] = pg_fetch_all_columns($result, 14); // EP_FirstName
+		$array[16] = pg_fetch_all_columns($result, 15); // EP_LastName
+		$array[17] = pg_fetch_all_columns($result, 16); // EP_MiddleName
+		$array[18] = pg_fetch_all_columns($result, 17); // EC_CompanyName
+		$array[19] = pg_fetch_all_columns($result, 18); // EO_OrganizationName
+		$array[20] = pg_fetch_all_columns($result, 19); // E1_WantEmail
+		$array[21] = pg_fetch_all_columns($result, 20); // E1_Trusted
 
-		for( $i=0; $i < count($array[0]); $i++) // LO_Name for E1_LO_Country
+		// LO_Name for E1_LO_Country
+		if ( trim($array[8][0]) != '' )
 		{
-			if ( trim($array[8][$i]) != '' )
+			$e1_lo_country = $array[8][0];
+			$sqlQuery = "SELECT LO_Name FROM LO_Countries WHERE LO_TwoLetter='$e1_lo_country'";
+			$loResult = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
+
+			$numrows = pg_num_rows($loResult);
+			if ($numrows!=1) throw new Exception("ERROR:<pre> ASSERT raised: {$sqlQuery} </pre>",false);
+
+			if ( pg_num_rows($loResult) == '1' )
 			{
-				$e1_lo_country = $array[8][$i];
-				$sqlQuery = "SELECT LO_Name FROM LO_Countries WHERE LO_TwoLetter='$e1_lo_country'";
-				$loResult = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
-
-				$numrows = pg_num_rows($loResult);
-				if ($numrows!=1) throw new Exception("ERROR:<pre> ASSERT raised: {$sqlQuery} </pre>",false);
-
-				if ( pg_num_rows($loResult) == '1' )
-				{
-					$row = pg_fetch_object($loResult, 0);
-					$array[30][$i] = trim($row->lo_name);
-				}
+				$row = pg_fetch_object($loResult, 0);
+				$array[30][0] = trim($row->lo_name);
 			}
-			else
-				$array[30][$i] = '';
 		}
+		else
+			$array[30][0] = '';
 
-		for( $i=0; $i < count($array[0]); $i++) // LN_Name for E1_LN_Nationality
+		// Nationalities
+		$nationalities = new Nationalities();
+		$array[31] = $nationalities->getNationalitiesForEntity($Id);
+
+		for( $i=0; $i < count($array[31]); $i++) // LN_Name for E3_E1_Id
 		{
-			if ( trim($array[9][$i]) != '' )
+			if ( trim($array[31][$i]) != '' )
 			{
-				$e1_ln_nationality = $array[9][$i];
-				$sqlQuery = "SELECT LN_Name FROM LN_Nationalities WHERE LN_LO_TwoLetter='$e1_ln_nationality'";
+				$e3_e1_id = $array[31][$i];
+				$sqlQuery = "SELECT LN_Name FROM LN_Nationalities WHERE LN_LO_TwoLetter='$e3_e1_id'";
 				$lnResult = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
 				$numrows = pg_num_rows($lnResult);
@@ -101,11 +104,36 @@ class Entity
 				if ( pg_num_rows($lnResult) == '1' )
 				{
 					$row = pg_fetch_object($lnResult, 0);
-					$array[31][$i] = trim($row->ln_name);
+					$array[32][$i] = trim($row->ln_name);
 				}
 			}
 			else
-				$array[31][$i] = '';
+				$array[32][$i] = '';
+		}
+
+		// JobLicenseAt Country
+		$countries = new Countries();
+		$array[33] = $countries->getJobLicenseAtForEntity($Id);
+
+		for( $i=0; $i < count($array[33]); $i++) // LO_Name for E4_E1_Id
+		{
+			if ( trim($array[33][$i]) != '' )
+			{
+				$e4_e1_id = $array[33][$i];
+				$sqlQuery = "SELECT LO_Name FROM LO_Countries WHERE LO_TwoLetter='$e4_e1_id'";
+				$loResult = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
+
+				$numrows = pg_num_rows($loResult);
+				if ($numrows!=1) throw new Exception("ERROR:<pre> ASSERT raised: {$sqlQuery} </pre>",false);
+
+				if ( pg_num_rows($loResult) == '1' )
+				{
+					$row = pg_fetch_object($loResult, 0);
+					$array[34][$i] = trim($row->lo_name);
+				}
+			}
+			else
+				$array[34][$i] = '';
 		}
 
 		return $array;
@@ -119,32 +147,7 @@ class Entity
 
 		$Email = trim($_POST['Email']);
 
-		$FirstName = isset($_POST['FirstName']) ? trim($_POST['FirstName']) : '';
-		$LastName = isset($_POST['LastName']) ? trim($_POST['LastName']) : '';
-		$MiddleName = isset($_POST['MiddleName']) ? trim($_POST['MiddleName']) : '';
-
-		$CompanyName = isset($_POST['CompanyName']) ? trim($_POST['CompanyName']) : '';
-
-		$NonprofitName = isset($_POST['NonprofitName']) ? trim($_POST['NonprofitName']) : '';
-
-		$BirthYear = isset($_POST['BirthYear']) ? trim($_POST['BirthYear']) : '';
-
-		$Street = trim($_POST['Street']);
-		$Suite = trim($_POST['Suite']);
-		$City = trim($_POST['City']);
-		$StateProvince = trim($_POST['StateProvince']);
-		$PostalCode = trim($_POST['PostalCode']);
-		$CountryCode = trim($_POST['CountryCode']);
-
-		$IpPhoneOrVideo = trim($_POST['IpPhoneOrVideo']);
-		$Landline = trim($_POST['Landline']);
-		$MobilePhone = trim($_POST['MobilePhone']);
-
-		$Website = trim($_POST['Website']);
-
-		$Nationality = trim($_POST['Nationality']);
-
-		$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text) AS  INSERT INTO E1_Entities (E1_WantEmail,E1_EntityType,EP_FirstName,EP_LastName,EP_MiddleName,E1_Street,E1_Suite,E1_City,E1_StateProvince,E1_PostalCode,E1_LO_Country,E1_IpPhoneOrVideo,E1_Landline,E1_MobilePhone,E1_Website,E1_LN_Nationality,E1_BirthYear,EC_CompanyName,EO_OrganizationName) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19);  EXECUTE query('{$Email}','{$_SESSION['EntityType']}','".pg_escape_string($FirstName)."','".pg_escape_string($LastName)."','".pg_escape_string($MiddleName)."','".pg_escape_string($Street)."','".pg_escape_string($Suite)."','".pg_escape_string($City)."','".pg_escape_string($StateProvince)."','".pg_escape_string($PostalCode)."','".pg_escape_string($CountryCode)."','".pg_escape_string($IpPhoneOrVideo)."','".pg_escape_string($Landline)."','".pg_escape_string($MobilePhone)."','".pg_escape_string($Website)."','".pg_escape_string($Nationality)."','".pg_escape_string($BirthYear)."','".pg_escape_string($CompanyName)."','".pg_escape_string($NonprofitName)."');";
+		$sqlQuery = "PREPARE query(text,text) AS  INSERT INTO E1_Entities (E1_WantEmail,E1_EntityType) VALUES ($1,$2);  EXECUTE query('{$Email}','{$_SESSION['EntityType']}');";
 		$this->postgresql->execute($sqlQuery,1);
 
 		// Get the Id of the insert to the E1_Entities table // Ref.: http://www.postgresql.org/docs/current/static/functions-sequence.html
@@ -171,6 +174,14 @@ class Entity
 		// There are not several tables involved, however we use a transaction to be able to be sure the PhotoOrLogo has been deleted rightly.
 		$this->postgresql->execute("SET TRANSACTION   ISOLATION LEVEL  SERIALIZABLE  READ WRITE",0);
 		$this->postgresql->execute("BEGIN",0);
+
+		// Delete its nationalities
+		$nationalities = new Nationalities();
+		$nationalities->deleteNationalitiesForEntity();
+
+		// Delete its JobLicenseAt
+		$countries = new Countries();
+		$countries->deleteJobLicenseAtForEntity();
 
 		// Delete its job offers
 		$jobOffer = new JobOffer();
@@ -222,17 +233,23 @@ class Entity
 
 		$Website = trim($_POST['Website']);
 
-		$Nationality = trim($_POST['Nationality']);
-
 		if ( $_POST['Password'] != '' ) // Request change password too
 		{
-			$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,integer) AS  UPDATE E1_Entities SET E1_WantEmail=$1,E1_Password=$2,EP_FirstName=$3,EP_LastName=$4,EP_MiddleName=$5,E1_Street=$6,E1_Suite=$7,E1_City=$8,E1_StateProvince=$9,E1_PostalCode=$10,E1_LO_Country=$11,E1_IpPhoneOrVideo=$12,E1_Landline=$13,E1_MobilePhone=$14,E1_Website=$15,E1_LN_Nationality=$16,E1_BirthYear=$17,EC_CompanyName=$18,EO_OrganizationName=$19 WHERE E1_Id=$20;  EXECUTE query('{$_SESSION['WantEmail']}','{$this->hasher->HashPassword($_POST['Password'])}','".pg_escape_string($FirstName)."','".pg_escape_string($LastName)."','".pg_escape_string($MiddleName)."','".pg_escape_string($Street)."','".pg_escape_string($Suite)."','".pg_escape_string($City)."','".pg_escape_string($StateProvince)."','".pg_escape_string($PostalCode)."','".pg_escape_string($CountryCode)."','".pg_escape_string($IpPhoneOrVideo)."','".pg_escape_string($Landline)."','".pg_escape_string($MobilePhone)."','".pg_escape_string($Website)."','".pg_escape_string($Nationality)."','".pg_escape_string($BirthYear)."','".pg_escape_string($CompanyName)."','".pg_escape_string($NonprofitName)."','{$_SESSION['EntityId']}');";
+			$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,integer) AS  UPDATE E1_Entities SET E1_WantEmail=$1,E1_Password=$2,EP_FirstName=$3,EP_LastName=$4,EP_MiddleName=$5,E1_Street=$6,E1_Suite=$7,E1_City=$8,E1_StateProvince=$9,E1_PostalCode=$10,E1_LO_Country=$11,E1_IpPhoneOrVideo=$12,E1_Landline=$13,E1_MobilePhone=$14,E1_Website=$15,E1_BirthYear=$16,EC_CompanyName=$17,EO_OrganizationName=$18 WHERE E1_Id=$19;  EXECUTE query('{$_SESSION['WantEmail']}','{$this->hasher->HashPassword($_POST['Password'])}','".pg_escape_string($FirstName)."','".pg_escape_string($LastName)."','".pg_escape_string($MiddleName)."','".pg_escape_string($Street)."','".pg_escape_string($Suite)."','".pg_escape_string($City)."','".pg_escape_string($StateProvince)."','".pg_escape_string($PostalCode)."','".pg_escape_string($CountryCode)."','".pg_escape_string($IpPhoneOrVideo)."','".pg_escape_string($Landline)."','".pg_escape_string($MobilePhone)."','".pg_escape_string($Website)."','".pg_escape_string($BirthYear)."','".pg_escape_string($CompanyName)."','".pg_escape_string($NonprofitName)."','{$_SESSION['EntityId']}');";
 		}
 		else // Do not request change password, so we avoid to overwrite it with an empty string do not updating the E1_Password field
 		{
-			$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,integer) AS  UPDATE E1_Entities SET E1_WantEmail=$1,EP_FirstName=$2,EP_LastName=$3,EP_MiddleName=$4,E1_Street=$5,E1_Suite=$6,E1_City=$7,E1_StateProvince=$8,E1_PostalCode=$9,E1_LO_Country=$10,E1_IpPhoneOrVideo=$11,E1_Landline=$12,E1_MobilePhone=$13,E1_Website=$14,E1_LN_Nationality=$15,E1_BirthYear=$16,EC_CompanyName=$17,EO_OrganizationName=$18 WHERE E1_Id=$19;  EXECUTE query('{$_SESSION['WantEmail']}','".pg_escape_string($FirstName)."','".pg_escape_string($LastName)."','".pg_escape_string($MiddleName)."','".pg_escape_string($Street)."','".pg_escape_string($Suite)."','".pg_escape_string($City)."','".pg_escape_string($StateProvince)."','".pg_escape_string($PostalCode)."','".pg_escape_string($CountryCode)."','".pg_escape_string($IpPhoneOrVideo)."','".pg_escape_string($Landline)."','".pg_escape_string($MobilePhone)."','".pg_escape_string($Website)."','".pg_escape_string($Nationality)."','".pg_escape_string($BirthYear)."','".pg_escape_string($CompanyName)."','".pg_escape_string($NonprofitName)."','{$_SESSION['EntityId']}');";
+			$sqlQuery = "PREPARE query(text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,text,integer) AS  UPDATE E1_Entities SET E1_WantEmail=$1,EP_FirstName=$2,EP_LastName=$3,EP_MiddleName=$4,E1_Street=$5,E1_Suite=$6,E1_City=$7,E1_StateProvince=$8,E1_PostalCode=$9,E1_LO_Country=$10,E1_IpPhoneOrVideo=$11,E1_Landline=$12,E1_MobilePhone=$13,E1_Website=$14,E1_BirthYear=$15,EC_CompanyName=$16,EO_OrganizationName=$17 WHERE E1_Id=$18;  EXECUTE query('{$_SESSION['WantEmail']}','".pg_escape_string($FirstName)."','".pg_escape_string($LastName)."','".pg_escape_string($MiddleName)."','".pg_escape_string($Street)."','".pg_escape_string($Suite)."','".pg_escape_string($City)."','".pg_escape_string($StateProvince)."','".pg_escape_string($PostalCode)."','".pg_escape_string($CountryCode)."','".pg_escape_string($IpPhoneOrVideo)."','".pg_escape_string($Landline)."','".pg_escape_string($MobilePhone)."','".pg_escape_string($Website)."','".pg_escape_string($BirthYear)."','".pg_escape_string($CompanyName)."','".pg_escape_string($NonprofitName)."','{$_SESSION['EntityId']}');";
 		}
 		$this->postgresql->execute($sqlQuery,1);
+
+		// Nationalities
+		$nationalities = new Nationalities();
+		$nationalities->setNationalitiesForEntity();
+
+		// JobLicenseAt
+		$countries = new Countries();
+		$countries->setJobLicenseAtForEntity();
 
 		$this->savePhotoOrLogo($_SESSION['EntityId']);
 

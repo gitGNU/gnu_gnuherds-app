@@ -59,5 +59,31 @@ class Nationalities
 		$sqlQuery = "SELECT LN_Name FROM LN_Nationalities";
 		return $this->postgresql->getOneField($sqlQuery,0);
 	}
+
+
+	public function getNationalitiesForEntity($Id)
+	{
+		$sqlQuery = "PREPARE query(integer) AS  SELECT E3_LN_Id FROM E3_Nationalities WHERE E3_E1_Id=$1;  EXECUTE query('$Id');";
+		return $this->postgresql->getOneField($sqlQuery,1);
+	}
+
+	public function setNationalitiesForEntity()
+	{
+		// clear
+		$this->delNationalitiesForEntity();
+
+		// set
+		for( $i=0; $i < count($_POST['NationalityList']); $i++)
+		{
+			$sqlQuery = "PREPARE query(integer,text) AS  INSERT INTO E3_Nationalities (E3_E1_Id,E3_LN_Id) VALUES ($1,$2);  EXECUTE query('$_SESSION[EntityId]','".pg_escape_string($_POST['NationalityList'][$i])."');";
+			$this->postgresql->execute($sqlQuery,1);
+		}
+	}
+
+	public function deleteNationalitiesForEntity()
+	{
+		$sqlQuery = "PREPARE query(integer) AS  DELETE FROM E3_Nationalities WHERE E3_E1_Id=$1;  EXECUTE query('$_SESSION[EntityId]');";
+		$this->postgresql->execute($sqlQuery,1);
+	}
 }
 ?> 

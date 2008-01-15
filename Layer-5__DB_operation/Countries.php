@@ -59,5 +59,31 @@ class Countries
 		$sqlQuery = "SELECT LO_Name FROM LO_Countries";
 		return $this->postgresql->getOneField($sqlQuery,0);
 	}
+
+
+	public function getJobLicenseAtForEntity($Id)
+	{
+		$sqlQuery = "PREPARE query(integer) AS  SELECT E4_LO_Id FROM E4_EntityJobLicenseAt WHERE E4_E1_Id=$1;  EXECUTE query('$Id');";
+		return $this->postgresql->getOneField($sqlQuery,1);
+	}
+
+	public function setJobLicenseAtForEntity()
+	{
+		// clear
+		$this->delJobLicenseAtForEntity();
+
+		// set
+		for( $i=0; $i < count($_POST['JobLicenseAtList']); $i++)
+		{
+			$sqlQuery = "PREPARE query(integer,text) AS  INSERT INTO E4_EntityJobLicenseAt (E4_E1_Id,E4_LO_Id) VALUES ($1,$2);  EXECUTE query('$_SESSION[EntityId]','".pg_escape_string($_POST['JobLicenseAtList'][$i])."');";
+			$this->postgresql->execute($sqlQuery,1);
+		}
+	}
+
+	public function deleteJobLicenseAtForEntity()
+	{
+		$sqlQuery = "PREPARE query(integer) AS  DELETE FROM E4_EntityJobLicenseAt WHERE E4_E1_Id=$1;  EXECUTE query('$_SESSION[EntityId]');";
+		$this->postgresql->execute($sqlQuery,1);
+	}
 }
 ?> 

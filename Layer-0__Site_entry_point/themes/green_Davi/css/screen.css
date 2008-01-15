@@ -259,6 +259,8 @@ font-size:12px;
 font-family:Arial, Helvetica, Georgia, sans-serif;
 }
 
+td.box{border:1px dotted #641212;}
+
 label{
 font-family:Arial, Helvetica, Georgia, sans-serif;
 font-size:12px;

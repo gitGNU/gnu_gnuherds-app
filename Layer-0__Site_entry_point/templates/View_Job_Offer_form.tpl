@@ -430,8 +430,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr valign="top">
 <td align="right">
 <strong>{t}Name{/t}</strong>&nbsp;:{if trim($data.BirthYear) neq ''}<br>
-<strong>{t}Born{/t}</strong> :{/if}{if trim($data.EntityNationality) neq ''}<br>
-<strong>{t}Nationality{/t}</strong> :{/if}
+<strong>{t}Born{/t}</strong> :{/if}{if count($data.NationalityNameList) > 0 }<br>
+<strong>{if count($data.NationalityNameList) == 1 }{t}Nationality{/t}{else}{t}Nationalities{/t}{/if}</strong> :{/if}{if count($data.JobLicenseAtNameList) > 0 }<br>
+<strong>{t}Besides license to work at{/t}</strong> :{/if}
 </td>
 
 <td colspan="2" class="greenLight">
@@ -456,9 +457,21 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <br>
 {$data.BirthYear}
 {/if}
-{if trim($data.EntityNationality) neq ''}
+{if count($data.NationalityNameList) > 0 }
 <br>
-{$data.EntityNationalityName}
+{if count($data.NationalityNameList) == 1 }
+{t}{$data.NationalityNameList[0]}{/t}
+{else}
+{foreach from=$data.NationalityNameList item=profile key=i}{if $i == 0}{t}{$data.NationalityNameList[$i]}{/t}{else}, {t}{$data.NationalityNameList[$i]}{/t}{/if}{/foreach}
+{/if}
+{/if}
+{if count($data.JobLicenseAtNameList) > 0 }
+<br>
+{if count($data.JobLicenseAtNameList) == 1 }
+{t}{$data.JobLicenseAtNameList[0]}{/t}
+{else}
+{foreach from=$data.JobLicenseAtNameList item=profile key=i}{if $i == 0}{t}{$data.JobLicenseAtNameList[$i]}{/t}{else}, {t}{$data.JobLicenseAtNameList[$i]}{/t}{/if}{/foreach}
+{/if}
 {/if}
 </td>
 

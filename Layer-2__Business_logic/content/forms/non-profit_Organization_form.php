@@ -59,7 +59,7 @@ class NonprofitOrganizationForm extends EntityForm
 
 			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Your information has been deleted from the data base. You have been logout automatically.')."<p>\n";
 		}
-		elseif ( isset($_POST['save']) and $_POST['save'] != '' )
+		elseif ( $_POST['save'] != '' or $_POST['more'] != '' )
 		{
 			$this->saveNonprofitForm();
 		}
@@ -117,6 +117,9 @@ class NonprofitOrganizationForm extends EntityForm
 		$this->checkNonprofitForm();
 
 
+		// Clean empty rows and the one marked to be deleted
+		$this->cleanPOST();
+
 		// Save the values in $data variable
 		$_SESSION['EntityType'] = 'non-profit Organization';
 
@@ -141,7 +144,8 @@ class NonprofitOrganizationForm extends EntityForm
 		$this->data['PostalCode'] = $_POST['PostalCode'];
 		$this->data['CountryCode'] = $_POST['CountryCode'];
 
-		$this->data['Nationality'] = $_POST['Nationality'];
+		$this->data['NationalityList'] = $_POST['NationalityList'];
+		$this->data['JobLicenseAtList'] = $_POST['JobLicenseAtList'];
 
 		$this->data['IpPhoneOrVideo'] = trim($_POST['IpPhoneOrVideo']);
 		$this->data['Landline'] = trim($_POST['Landline']);
@@ -168,6 +172,48 @@ class NonprofitOrganizationForm extends EntityForm
 			{
 				$this->requestRegister();
 			}
+		}
+	}
+
+
+	private function cleanPOST()
+	{
+		// Clean empty rows and the one marked to be deleted
+
+		// Nationalities
+		$count = count($_POST['NationalityList']);
+		for( $i=0,$j=0; $i < $count; $i++)
+		{
+			if ( $_POST['NationalityList'][$i] == '' or ( isset($_POST['DeleteNationalityList']) and in_array("$i",$_POST['DeleteNationalityList']) ) )
+			{
+			}
+			else
+			{
+				$_POST['NationalityList'][$j] = $_POST['NationalityList'][$i];
+				$j++;
+			}
+		}
+		for( $i=$j; $i < $count; $i++)
+		{
+			unset( $_POST['NationalityList'][$i] );
+		}
+
+		// JobLicenseAt Country
+		$count = count($_POST['JobLicenseAtList']);
+		for( $i=0,$j=0; $i < $count; $i++)
+		{
+			if ( $_POST['JobLicenseAtList'][$i] == '' or ( isset($_POST['DeleteJobLicenseAtList']) and in_array("$i",$_POST['DeleteJobLicenseAtList']) ) )
+			{
+			}
+			else
+			{
+				$_POST['JobLicenseAtList'][$j] = $_POST['JobLicenseAtList'][$i];
+				$j++;
+			}
+		}
+		for( $i=$j; $i < $count; $i++)
+		{
+			unset( $_POST['JobLicenseAtList'][$i] );
 		}
 	}
 
@@ -219,7 +265,8 @@ class NonprofitOrganizationForm extends EntityForm
 		$this->data['PostalCode'] = $result[7][0];
 		$this->data['CountryCode'] = $result[8][0];
 
-		$this->data['Nationality'] = $result[9][0];
+		$this->data['NationalityList'] = $result[31];
+		$this->data['JobLicenseAtList'] = $result[33];
 
 		$this->data['IpPhoneOrVideo'] = $result[11][0];
 		$this->data['Landline'] = $result[12][0];

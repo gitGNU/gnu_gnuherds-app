@@ -43,17 +43,18 @@ DROP TABLE QS_QualificationSearches;
 DROP TABLE JS_JobOfferSearches;
 
 -- Relations
-DROP TABLE R0_Qualifications2JobOffersJoins; -- Application state. Resume, that is to say, Entities Qualifications to JobOffer relationships.
-DROP TABLE E2_EntityFreeSoftwareExperiences; -- Contributions to Free Software projects. It extends the Entities table.
-DROP TABLE E3_EntityJobLicenseAt; -- List the countries where the entity has license to work.
-DROP TABLE E4_EntityRequireCertifications; -- List the Certifications which this entity requires to its contractors entities or contracted entities. Take into account that some certifications can be only applyed to some entity types; See the content of the LC_Certifications table. For example a certification which is only applied to Persons, of course, is not required to Companies.
+DROP TABLE R0_Qualifications2JobOffersJoins; -- Application state. Resume, that is to say, entities Qualifications to JobOffer relationships.
+DROP TABLE E2_EntityFreeSoftwareExperiences; -- Contributions to Free Software projects. It extends the E1_Entities table.
+DROP TABLE E3_Nationalities; -- List the entity nationalities. It extends the E1_Entities table.
+DROP TABLE E4_EntityJobLicenseAt; -- List the countries where the entity has license to work. It extends the E1_Entities table.
+DROP TABLE E5_EntityRequireCertifications; -- List the Certifications which this entity requires to its contractors entities or contracted entities. Take into account that some certifications can be only applyed to some entity types; See the content of the LC_Certifications table. For example a certification which is only applied to Persons, of course, is not required to Companies. This table extends the E1_Entities table.
 DROP TABLE J1_JobOffers;
 DROP TABLE A1_Alerts;
 DROP TABLE E1_Entities;
 
 -- Lists:
 DROP TABLE LO_Countries;
-DROP TABLE LN_Nationalities; -- Nationalities internationally recognized.
+DROP TABLE LN_Nationalities; -- Nationalities internationally recognized. That is to say, ISO nationalities.
 DROP TABLE LU_Currencies;
 DROP TABLE LA_AcademicQualifications;
 DROP TABLE LC_Certifications; -- We do not translate de certifications. It is better so, in order to keep a unique 'image'. It is as the usual mark image.
@@ -104,7 +105,7 @@ CREATE TABLE LO_Countries (
 );
 
 
-CREATE TABLE LN_Nationalities ( -- Nationalities internationally recognized.
+CREATE TABLE LN_Nationalities ( -- Nationalities internationally recognized. That is to say, ISO nationalities.
         LN_LO_TwoLetter  char(2) UNIQUE REFERENCES LO_Countries(LO_TwoLetter) NOT NULL,
         LN_Name          varchar(80) NOT NULL
 );
@@ -278,11 +279,10 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         E1_LO_Country      char(2), -- REFERENCES LO_Countries(LO_TwoLetter) NOT NULL,
 
         --------------------------------------------------------------------------
-        -- Nationality (Location of birth for Persons, or Location for Companies and non-profit Organizations)
-	E1_LN_Nationality  char(2), -- REFERENCES LN_Nationalities(LN_TwoLetter), -- NOT NULL,
+        -- ISO Nationalities (Location of birth and other recognized ISO nationalities for Persons, or Location for Companies and non-profit Organizations). (E3_Nationalities)
 
         --------------------------------------------------------------------------
-        -- List the countries where the entity has license to work. (E3_EntityJobLicenseAt)
+        -- List the countries where the entity has license to work. (E4_EntityJobLicenseAt)
 	
         --------------------------------------------------------------------------
 	-- Various
@@ -291,7 +291,7 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         --------------------------------------------------------------------------
         -- Access Control List (ACL): List the Certifications which this entity requires to its contractors entities or contracted entities.
 	-- Take into account that some certifications can be only applyed to some entity types; See the content
-	-- of the LC_Certifications table. (E4_EntityRequireCertifications)
+	-- of the LC_Certifications table. (E5_EntityRequireCertifications)
 
         --------------------------------------------------------------------------
         -- Interactive communication medias -- Voice-Video contact systems
@@ -435,14 +435,19 @@ CREATE TABLE E2_EntityFreeSoftwareExperiences ( -- Contributions to Free Softwar
 	E2_URI          varchar(255) -- One URI for each register. It will be checked automatically. Note the user can supply several URIs to the same FS project inserting several registers, one for each URI, due to E2_Project is not a primary key.
 );
 
-CREATE TABLE E3_EntityJobLicenseAt ( -- List the countries where the entity has license to work.
+CREATE TABLE E3_Nationalities ( -- List the entity nationalities.
         E3_E1_Id        integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Entity identity: being a Person, a Company or a non-profit Organization.
-        E3_LO_Id        char(2) REFERENCES LO_Countries(LO_TwoLetter) NOT NULL
+        E3_LN_Id        char(2) REFERENCES LN_Nationalities(LN_LO_TwoLetter) NOT NULL
 );
 
-CREATE TABLE E4_EntityRequireCertifications ( -- List the Certifications which this entity requires to its contractors entities or contracted entities. Take into account that some certifications can be only applyed to some entity types; See the content of the LC_Certifications table.
+CREATE TABLE E4_EntityJobLicenseAt ( -- List the countries where the entity has license to work.
         E4_E1_Id        integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Entity identity: being a Person, a Company or a non-profit Organization.
-        E4_LC_Name      varchar(30) REFERENCES LC_Certifications(LC_Name) NOT NULL
+        E4_LO_Id        char(2) REFERENCES LO_Countries(LO_TwoLetter) NOT NULL
+);
+
+CREATE TABLE E5_EntityRequireCertifications ( -- List the Certifications which this entity requires to its contractors entities or contracted entities. Take into account that some certifications can be only applyed to some entity types; See the content of the LC_Certifications table.
+        E5_E1_Id        integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Entity identity: being a Person, a Company or a non-profit Organization.
+        E5_LC_Name      varchar(30) REFERENCES LC_Certifications(LC_Name) NOT NULL
 );
 
 
@@ -555,7 +560,7 @@ CREATE TABLE R0_Qualifications2JobOffersJoins (
 
 
 GRANT SELECT, INSERT, UPDATE, DELETE
-ON TABLE E1_Entities, E1_Entities_e1_id_seq, E2_EntityFreeSoftwareExperiences, E2_EntityFreeSoftwareExperiences_e2_id_seq, E3_EntityJobLicenseAt, E4_EntityRequireCertifications, Q1_Qualifications, QS_QualificationSearches, JS_JobOfferSearches, J1_JobOffers, J1_JobOffers_j1_id_seq, R0_Qualifications2JobOffersJoins, R16_JobOffer2Certifications, R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles, R14_JobOffer2Skills, R15_JobOffer2Languages, R17_JobOffer2Nationalities, R26_Qualification2Certifications, R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles, R24_Qualification2Skills, R25_Qualification2Languages
+ON TABLE E1_Entities, E1_Entities_e1_id_seq, E2_EntityFreeSoftwareExperiences, E2_EntityFreeSoftwareExperiences_e2_id_seq, E3_Nationalities, E4_EntityJobLicenseAt, E5_EntityRequireCertifications, Q1_Qualifications, QS_QualificationSearches, JS_JobOfferSearches, J1_JobOffers, J1_JobOffers_j1_id_seq, R0_Qualifications2JobOffersJoins, R16_JobOffer2Certifications, R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles, R14_JobOffer2Skills, R15_JobOffer2Languages, R17_JobOffer2Nationalities, R26_Qualification2Certifications, R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles, R24_Qualification2Skills, R25_Qualification2Languages
 TO "www-data" ;
 
 GRANT SELECT  -- Note these tables are not modified by the webapp.

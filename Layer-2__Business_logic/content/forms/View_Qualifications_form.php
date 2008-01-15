@@ -168,8 +168,6 @@ class ViewQualificationsForm
 		$this->data['PostalCode'] = $result[7][0];
 		$this->data['CountryCode'] = $result[8][0];
 
-		$this->data['Nationality'] = $result[9][0];
-
 		$this->data['BirthYear'] = $result[10][0];
 		$this->data['PhotoOrLogo'] = '';
 
@@ -188,7 +186,8 @@ class ViewQualificationsForm
 		$this->data['NonprofitName'] = $result[19][0];
 
 		$this->data['CountryName'] = $result[30][0];
-		$this->data['NationalityName'] = $result[31][0];
+		$this->data['NationalityNameList'] = $result[32];
+		$this->data['JobLicenseAtCountryNameList'] = $result[34];
 
 		if ( file_exists("../entity_photos/".$_GET['EntityId']) )
 			$this->data['PhotoOrLogo'] = "true";

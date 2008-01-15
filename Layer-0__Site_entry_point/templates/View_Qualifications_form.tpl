@@ -37,7 +37,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {t}{$data.EntityType}{/t}:
 
 {if $data.EntityType eq 'Person' }
-	<!-- Person's name -->
 	<strong>
 	{if trim($data.LastName) neq '' or trim($data.MiddleName) neq '' }
 		{$data.LastName} {$data.MiddleName},
@@ -46,30 +45,40 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	</strong>
 	<br>
 
-	<!-- Person's birth year -->
 	{if trim($data.BirthYear) neq ''}
 		{t}Born{/t}: <strong>{$data.BirthYear}</strong><br>
 	{/if}
 {/if}
 
 {if $data.EntityType eq 'Company' and trim($data.CompanyName) neq ''}
-	<!-- Company's name -->
 	<strong>{$data.CompanyName}</strong><br>
 {/if}
 
 {if $data.EntityType eq 'non-profit Organization' and trim($data.NonprofitName) neq ''}
-	<!-- non-profit Organization's name -->
 	<strong>{$data.NonprofitName}</strong><br>
 {/if}
 
-{if trim($data.Nationality) neq ''}
-	<!-- Nationality -->
-	{t}Nationality{/t}: <strong>{t}{$data.NationalityName}{/t}</strong><br>
+{if count($data.NationalityNameList) > 0 }
+	{if count($data.NationalityNameList) == 1 }
+		{t}Nationality{/t}: <strong>{t}{$data.NationalityNameList[0]}{/t}</strong><br>
+	{else}
+		{t}Nationalities{/t}:
+		{foreach from=$data.NationalityNameList item=profile key=i}{if $i == 0}<strong>{t}{$data.NationalityNameList[$i]}{/t}</strong>{else}, <strong>{t}{$data.NationalityNameList[$i]}{/t}</strong>{/if}{/foreach}<br>
+	{/if}
+{/if}
+
+{if count($data.JobLicenseAtCountryNameList) > 0 }
+	{t}Besides license to work at{/t}:
+	{if count($data.JobLicenseAtCountryNameList) == 1 }
+		<strong>{t}{$data.JobLicenseAtCountryNameList[0]}{/t}</strong><br>
+	{else}
+		{foreach from=$data.JobLicenseAtCountryNameList item=profile key=i}{if $i == 0}<strong>{t}{$data.JobLicenseAtCountryNameList[$i]}{/t}</strong>{else}, <strong>{t}{$data.JobLicenseAtCountryNameList[$i]}{/t}</strong>{/if}{/foreach}<br>
+	{/if}
 {/if}
 
 <br>
 
-<!-- Address -->
+{* Postal address *}
 {if trim($data.Street) neq ''}{$data.Street}{if trim($data.Street) neq '' and trim($data.Suite) neq ''}, {/if}{$data.Suite}<br>{/if}
 
 {if trim($data.PostalCode) neq ''}{$data.PostalCode}{/if}
@@ -81,7 +90,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <br>
 
-<!-- Other contact information -->
+{* Other contact information *}
 
 {mailto address=$data.Email}<br>
 
