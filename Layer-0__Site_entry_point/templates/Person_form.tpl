@@ -267,12 +267,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td colspan="2"> <input type="text" name="City" id="City" size="30" maxlength="30" class="notRequired" value="{$data.City}"> </td>
 </tr>
 <tr>
-<td align="right"><label for="StateProvince">{t}State / Province{/t}</label></td>
-<td colspan="2"> <input type="text" name="StateProvince" id="StateProvince" size="30" maxlength="30" class="notRequired" value="{$data.StateProvince}"> </td>
-</tr>
-<tr>
 <td align="right"><label for="PostalCode">{t}Postal code{/t}</label></td>
 <td colspan="2"> <input type="text" name="PostalCode" id="PostalCode" size="15" maxlength="15" class="notRequired" value="{$data.PostalCode}"> </td>
+</tr>
+<tr>
+<td align="right"><label for="StateProvince">{t}State / Province{/t}</label></td>
+<td colspan="2"> <input type="text" name="StateProvince" id="StateProvince" size="30" maxlength="30" class="notRequired" value="{$data.StateProvince}"> </td>
 </tr>
 <tr>
 <td align="right"><label for="CountryCode">{t}Country{/t}</label></td>
