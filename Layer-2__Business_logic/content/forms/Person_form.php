@@ -154,6 +154,7 @@ class PersonForm extends EntityForm
 		$this->data['MobilePhone'] = trim($_POST['MobilePhone']);
 
 		$this->data['Website'] = trim($_POST['Website']);
+		$this->data['Blog'] = trim($_POST['Blog']);
 
 		$this->data['FirstName'] = trim($_POST['FirstName']);
 		$this->data['LastName'] = trim($_POST['LastName']);
@@ -279,6 +280,7 @@ class PersonForm extends EntityForm
 		$this->data['MobilePhone'] = $result[13][0];
 
 		$this->data['Website'] = $result[14][0];
+		$this->data['Blog'] = $result[22][0];
 
 		$this->data['FirstName'] = $result[15][0];
 		$this->data['LastName'] = $result[16][0];

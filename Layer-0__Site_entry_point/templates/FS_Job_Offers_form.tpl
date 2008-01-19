@@ -79,11 +79,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $EP_FirstName[$i]}<strong>{t}Person{/t}</strong>: {/if}
 {if $EC_CompanyName[$i]}<strong>{t}Company{/t}</strong>: {/if}
 {if $EO_OrganizationName[$i]}<strong>{t}non-profit Organization{/t}</strong>: {/if}
-{if trim($Website[$i]) neq ''}<a href="{$Website[$i]}">{/if}
+{if $EP_FirstName[$i] and trim($Blog[$i]) neq ''}<a href="{$Blog[$i]}">{else}{if trim($Website[$i]) neq ''}<a href="{$Website[$i]}">{/if}{/if}
 {if $EP_FirstName[$i]}{$EP_LastName[$i]} {$EP_MiddleName[$i]}{if $EP_LastName[$i] or $EP_MiddleName[$i]},{/if} {$EP_FirstName[$i]}{/if}
 {if $EC_CompanyName[$i]}{$EC_CompanyName[$i]}{/if}
 {if $EO_OrganizationName[$i]}{$EO_OrganizationName[$i]}{/if}
-{if trim($Website[$i]) neq ''}</a>{/if}
+{if ($EP_FirstName[$i] and trim($Blog[$i]) neq '') or trim($Website[$i]) neq ''}</a>{/if}
 </td>
 
 </tr>

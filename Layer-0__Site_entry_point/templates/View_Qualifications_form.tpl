@@ -94,6 +94,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {mailto address=$data.Email}<br>
 
+{if trim($data.Blog) neq ''}
+	{t}Blog{/t} <a href="{$data.Blog}">{$data.Blog}</a><br>
+{/if}
+
 {if trim($data.Website) neq ''}
 	{t}web site{/t} <a href="{$data.Website}">{$data.Website}</a><br>
 {/if}

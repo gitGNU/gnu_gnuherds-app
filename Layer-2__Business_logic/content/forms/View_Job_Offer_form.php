@@ -230,6 +230,7 @@ class ViewJobOfferForm
 		$this->data['Landline'] = $result[12][0];
 		$this->data['MobilePhone'] = $result[13][0];
 
+		$this->data['Blog'] = $result[22][0];
 		$this->data['Website'] = $result[14][0];
 
 		$this->data['FirstName'] = $result[15][0];

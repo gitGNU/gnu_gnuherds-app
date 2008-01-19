@@ -302,6 +302,10 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         E1_MobilePhone          varchar(30),
 
         --------------------------------------------------------------------------
+        -- Blog
+        E1_Blog            varchar(255), -- Personal blog. Full URI, ie: http://lwn.net/ to be linked in your Job Offers
+
+        --------------------------------------------------------------------------
         -- Website
         E1_Website         varchar(255), -- Personal, Company or non-profit Organization website. Full URI, ie: http://lwn.net/ to be linked in your Job Offers
 

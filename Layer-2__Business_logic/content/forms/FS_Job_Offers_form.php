@@ -57,16 +57,17 @@ class FSJobOffersForm
 		$smarty->assign('EntityId', $result[6]);
 		$smarty->assign('EntityType', $result[7]);
 
-		$smarty->assign('Website', $result[8]);
+		$smarty->assign('Blog', $result[8]);
+		$smarty->assign('Website', $result[9]);
 
-		$smarty->assign('EP_FirstName', $result[9]);
-		$smarty->assign('EP_LastName', $result[10]);
-		$smarty->assign('EP_MiddleName', $result[11]);
+		$smarty->assign('EP_FirstName', $result[10]);
+		$smarty->assign('EP_LastName', $result[11]);
+		$smarty->assign('EP_MiddleName', $result[12]);
 
-		$smarty->assign('EC_CompanyName', $result[12]);
-		$smarty->assign('EO_OrganizationName', $result[13]);
+		$smarty->assign('EC_CompanyName', $result[13]);
+		$smarty->assign('EO_OrganizationName', $result[14]);
 
-		$smarty->assign('VacancyTitle', $result[14]);
+		$smarty->assign('VacancyTitle', $result[15]);
 
 
 		$smarty->display("FS_Job_Offers_form.tpl");

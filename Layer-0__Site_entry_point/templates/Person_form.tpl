@@ -129,6 +129,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 
 <tr>
+<td align="right"><label for="Blog">{t}Blog{/t}</label></td>
+<td> <input type="text" name="Blog" id="Blog" size="45" maxlength="255" class="notRequired" value="{$data.Blog}"> </td>
+</tr>
+
+<tr>
 <td align="right"><label for="Website">{t}Web site{/t}</label></td>
 <td> <input type="text" name="Website" id="Website" size="45" maxlength="255" class="notRequired" value="{$data.Website}"> </td>
 </tr>
