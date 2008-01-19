@@ -446,11 +446,15 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 
 {if $data.EntityType eq 'Company' }
+	{if trim($data.Website) neq ''}<a href="{$data.Website}">{/if}
 	{$data.CompanyName}
+	{if trim($data.Website) neq ''}</a>{/if}
 {/if}
 
 {if $data.EntityType eq 'non-profit Organization' }
+	{if trim($data.Website) neq ''}<a href="{$data.Website}">{/if}
 	{$data.NonprofitName}
+	{if trim($data.Website) neq ''}</a>{/if}
 {/if}
 </strong>
 {if trim($data.BirthYear) neq ''}
