@@ -70,7 +70,7 @@ class Countries
 	public function setJobLicenseAtForEntity()
 	{
 		// clear
-		$this->delJobLicenseAtForEntity();
+		$this->deleteJobLicenseAtForEntity();
 
 		// set
 		for( $i=0; $i < count($_POST['JobLicenseAtList']); $i++)

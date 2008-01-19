@@ -70,7 +70,7 @@ class Nationalities
 	public function setNationalitiesForEntity()
 	{
 		// clear
-		$this->delNationalitiesForEntity();
+		$this->deleteNationalitiesForEntity();
 
 		// set
 		for( $i=0; $i < count($_POST['NationalityList']); $i++)
