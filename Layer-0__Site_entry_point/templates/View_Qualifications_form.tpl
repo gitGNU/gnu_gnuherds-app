@@ -79,14 +79,25 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <br>
 
 {* Postal address *}
-{if trim($data.Street) neq ''}{$data.Street}{if trim($data.Street) neq '' and trim($data.Suite) neq ''}, {/if}{$data.Suite}<br>{/if}
 
-{if trim($data.PostalCode) neq ''}{$data.PostalCode}{/if}
-{if trim($data.PostalCode) neq '' and trim($data.City) neq ''} - {/if}
-{if trim($data.City) neq ''}{$data.City}{/if}
-{if trim($data.PostalCode) neq '' or  trim($data.City) neq ''} <br> {/if}
+{if trim($data.Street) neq '' or trim($data.Suite) neq ''}
+	{$data.Street}{if trim($data.Street) neq '' and trim($data.Suite) neq ''}, {/if}
+	{$data.Suite}
+	<br>
+{/if}
 
-{if trim($data.StateProvince) neq ''}{$data.StateProvince}{if trim($data.StateProvince) neq ''}, {/if}{if trim($data.CountryName) neq ''}<strong>{t}{$data.CountryName}{/t}</strong><br>{/if}{/if}
+{if trim($data.PostalCode) neq '' or  trim($data.City) neq ''}
+	{$data.PostalCode}
+	{if trim($data.PostalCode) neq '' and trim($data.City) neq ''} - {/if}
+	{$data.City}
+	<br>
+{/if}
+
+{if trim($data.StateProvince) neq '' or trim($data.CountryName) neq ''}
+	{$data.StateProvince}{if trim($data.StateProvince) neq '' and trim($data.CountryName) neq ''}, {/if}
+	{if trim($data.CountryName) neq ''}<strong>{t}{$data.CountryName}{/t}</strong>{/if}
+	<br>
+{/if}
 
 <br>
 
