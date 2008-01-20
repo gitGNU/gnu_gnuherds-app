@@ -23,7 +23,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <div>
 <input type="text" name="Email" class="in u_icon" onblur="if(this.value=='') this.value='email';" onfocus="if(this.value=='email') this.value='';" >
 <br>
-<input type="password" name="Password" class="in k_icon" value="password">
+<input type="password" name="Password" class="in k_icon">
 <input type="submit" name="login" class="pos" value="{t}Log in{/t}">
 <a href="password" class="pos">{t}Lost password?{/t}</a>
 </div>
