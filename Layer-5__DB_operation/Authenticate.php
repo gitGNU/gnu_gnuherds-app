@@ -35,7 +35,7 @@ class Authenticate
 
 	public function checkLogin()
 	{
-		$sqlQuery = "PREPARE query(text) AS  SELECT E1_Id,E1_Password,E1_EntityType,E1_SkillsAdmin FROM E1_Entities WHERE E1_Email=$1;  EXECUTE query('$_POST[Email]');";
+		$sqlQuery = "PREPARE query(text) AS  SELECT E1_Id,E1_Password,E1_EntityType,E1_SkillsAdmin FROM E1_Entities WHERE E1_Email=$1;  EXECUTE query('$_POST[LoginEmail]');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery, 1);
 
 		$array = array();
@@ -49,7 +49,7 @@ class Authenticate
 		else
 			return false;
 
-		if ( $this->hasher->CheckPassword($_POST['Password'], $stored_hash) )
+		if ( $this->hasher->CheckPassword($_POST['LoginPassword'], $stored_hash) )
 		{
 			$authenticationData = array();
 

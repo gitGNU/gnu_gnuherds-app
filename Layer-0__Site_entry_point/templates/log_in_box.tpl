@@ -21,9 +21,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <div id="logbox">
 <form name="LogForm" method="post" action="https://{$smarty.server.SERVER_NAME}/">
 <div>
-<input type="text" name="Email" class="in u_icon" onblur="if(this.value=='') this.value='email';" onfocus="if(this.value=='email') this.value='';" >
+<input type="text" name="LoginEmail" class="in u_icon" onblur="if(this.value=='') this.value='email';" onfocus="if(this.value=='email') this.value='';" >
 <br>
-<input type="password" name="Password" class="in k_icon">
+<input type="password" name="LoginPassword" class="in k_icon">
 <input type="submit" name="login" class="pos" value="{t}Log in{/t}">
 <a href="password" class="pos">{t}Lost password?{/t}</a>
 </div>
