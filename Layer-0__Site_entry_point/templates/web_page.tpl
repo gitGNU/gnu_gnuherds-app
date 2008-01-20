@@ -31,7 +31,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <link rel="stylesheet" type="text/css" href="/themes/red_Danijel/css/screen.css">
 </head>
 
-<body>
+<body onload="if ('LoginEmail' in document.LogForm)  if(document.LogForm.LoginEmail.value=='') document.LogForm.LoginEmail.value='email';">
 <div>
 {include file="header.tpl"}
 
