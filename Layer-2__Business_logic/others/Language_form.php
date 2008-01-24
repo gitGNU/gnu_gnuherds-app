@@ -107,65 +107,8 @@ class LanguageForm
 					else
 						$this->setLanguage($default_language);
 				}
-				else // The client has not specified a language, so we try to guess the best default language according to country code. Ref. wikipedia.org, Country official languages.
-				{
-					$country_code = apache_note("GEOIP_COUNTRY_CODE");
-
-					// Official or co-official language. Reference: wikipedia.org
-					if (
-					  // Official
-					     $country_code == "DE" or $country_code == "AT" or $country_code == "LI" or $country_code == "LU" or $country_code == "CH" )
-						$this->setLanguage("de_DE");
-
-					elseif (
-					  // Official
-					     $country_code == "US" or $country_code == "GB" )
-						$this->setLanguage("en_US");
-
-					elseif (
-					  // Official
-					     $country_code == "AD" or $country_code == "AR" or $country_code == "BO" or $country_code == "CL"
-					  or $country_code == "CO" or $country_code == "CR" or $country_code == "CU" or $country_code == "DO" or $country_code == "EC"
-					  or $country_code == "ES" or $country_code == "GI" or $country_code == "GT" or $country_code == "HN"
-					  or $country_code == "MX" or $country_code == "NI" or $country_code == "PA" or $country_code == "PE" or $country_code == "PR"
-					  or $country_code == "PY" or $country_code == "SV" or $country_code == "UY" or $country_code == "VE" )
-						$this->setLanguage("es_ES");
-
-					elseif ( // French: Reference: http://wikitravel.org/fr/Liste_des_pays_francophones
-					  // Official
-					     $country_code == "FR" or $country_code == "BE" or $country_code == "BJ" or $country_code == "BF" // XXX: If Dutch is added to the translation set, at Belgium (BE) should we show 'Dutch' instead of 'French' by default?.
-					  or $country_code == "BI" or $country_code == "CM" or $country_code == "KM" or $country_code == "CD"
-					  or $country_code == "CG" or $country_code == "CI" or $country_code == "DJ" or $country_code == "GA"
-					  or $country_code == "GN" or $country_code == "GQ" or $country_code == "HT" or $country_code == "LU"
-					  or $country_code == "MG" or $country_code == "ML" or $country_code == "MU" or $country_code == "MC"
-					  or $country_code == "NE" or $country_code == "CF" or $country_code == "RW" or $country_code == "SN"
-					  or $country_code == "SC" or $country_code == "CH" or $country_code == "TD" or $country_code == "TG"
-					  or $country_code == "VU" or $country_code == "WF"
-					  ) // XXX: If German is added to the translation set, at Switzerland (CH) should we show 'German' instead of 'French' by default?.
-						$this->setLanguage("fr_FR");
-
-					elseif (
-					  // Official
-					     $country_code == "IT" )
-						$this->setLanguage("it_IT");
-
-					elseif (
-					  // Official
-					     $country_code == "PT" or $country_code == "BR" or $country_code == "AO" or $country_code == "CV"
-					  or $country_code == "GW" or $country_code == "MZ" or $country_code == "ST"
-
-					  // Co-official, Ref.: wikipedia.org
-					  or $country_code == "MO" or $country_code == "TL" )
-						$this->setLanguage("pt_PT");
-
-					elseif (
-					  // Official
-					     $country_code == "RU" or $country_code == "BY" or $country_code == "KZ" or $country_code == "KG" )
-						$this->setLanguage("ru_RU");
-
-					else
-						$this->setLanguage($default_language);
-				}
+				else // The client browser has not specified any language preference
+					$this->setLanguage($default_language);
 			}
 		}
 
