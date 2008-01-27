@@ -26,7 +26,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 
-<title>GNU Herds - {'Free Software Association'|gettext}</title>
+<title>GNU Herds - {t}Free Software Association{/t}</title>
 <link rel="icon" href="/themes/red_Danijel/icons/gh-icon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="/themes/red_Danijel/css/screen.css">
 </head>
