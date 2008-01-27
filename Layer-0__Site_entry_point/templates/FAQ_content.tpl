@@ -156,7 +156,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	</ul>
 
 	<p>{t escape='no'
-		1='<a href="mailto:joboffer@gnuherds.org" >joboffer@gnuherds.org</a>'
+		1='<a href="mailto:association@gnuherds.org" >association@gnuherds.org</a>'
 	   }Report to %1 about any offer that seems improper.{/t}</p>
 
 	<p>{t}It is recommended provide the more information possible.{/t}</p>
