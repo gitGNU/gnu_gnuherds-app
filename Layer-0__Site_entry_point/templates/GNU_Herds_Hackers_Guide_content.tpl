@@ -116,7 +116,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<table>
 	<tr> <td><a href="http://www.w3.org/TR/html401/">HTML</a> 4.01 Strict <td>
-	<tr> <td><a href="http://www.php.net/">PHP</a> >= 5.1 <td>
+	<tr> <td><a href="http://www.php.net/">PHP</a> >= 5.2 <td>
 	<tr> <td><a href="http://smarty.php.net/">Smarty</a> <td>
 	<tr> <td><a href="http://smarty.incutio.com/?page=SmartyGettext">Smarty-Gettext</a> <td>
 	<tr> <td><a href="http://www.gnu.org/software/gettext/">gettext</a> <td>
