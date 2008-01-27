@@ -364,7 +364,7 @@ class Entity
 		}
 		else
 		{
-			$error = "<p>".gettext("ERROR: Wrong magic number!")."</p>";
+			$error = "<p>".gettext("ERROR: Wrong magic number!")."</p><p>".gettext("Is the activation link expired?")."</p>";
 			throw new Exception($error,false);
 		}
 	}
