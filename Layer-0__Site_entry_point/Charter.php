@@ -28,13 +28,12 @@ if ( $_SESSION['Logged'] == '1' and ( !isset($_SERVER['HTTPS']) or $_SERVER['HTT
 
 session_start();
 
-require_once "../Layer-1__Page_builder/Themes.php";
 require_once "../Layer-1__Page_builder/Web_Page.php";
-
 require_once "../Layer-2__Business_logic/content/static/Charter_content.php";
+
 $charterContent = new CharterContent();
 
-$webPage = new WebPage($initialTheme,$charterContent);
+$webPage = new WebPage($charterContent);
 $webPage->processPage();
 $webPage->printPage();
 ?>

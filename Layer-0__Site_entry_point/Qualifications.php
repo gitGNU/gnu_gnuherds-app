@@ -28,13 +28,12 @@ if ( $_SESSION['Logged'] == '1' and ( !isset($_SERVER['HTTPS']) or $_SERVER['HTT
 
 session_start();
 
-require_once "../Layer-1__Page_builder/Themes.php";
 require_once "../Layer-1__Page_builder/Web_Page.php";
-
 require_once "../Layer-2__Business_logic/content/forms/Qualifications_form.php";
+
 $qualificationsForm = new QualificationsForm();
 
-$webPage = new WebPage($resourcesTheme,$qualificationsForm);
+$webPage = new WebPage($qualificationsForm);
 $webPage->processPage();
 $webPage->printPage();
 ?>

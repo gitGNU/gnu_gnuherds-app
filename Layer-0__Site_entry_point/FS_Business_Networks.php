@@ -28,13 +28,12 @@ if ( $_SESSION['Logged'] == '1' and ( !isset($_SERVER['HTTPS']) or $_SERVER['HTT
 
 session_start();
 
-require_once "../Layer-1__Page_builder/Themes.php";
 require_once "../Layer-1__Page_builder/Web_Page.php";
-
 require_once "../Layer-2__Business_logic/content/static/FS_Business_Networks_content.php";
+
 $fsBusinessNetworksContent = new FSBusinessNetworksContent();
 
-$webPage = new WebPage($resourcesTheme,$fsBusinessNetworksContent);
+$webPage = new WebPage($fsBusinessNetworksContent);
 $webPage->processPage();
 $webPage->printPage();
 ?>

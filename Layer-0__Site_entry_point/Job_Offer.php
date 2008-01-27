@@ -28,13 +28,12 @@ if ( $_SESSION['Logged'] == '1' and ( !isset($_SERVER['HTTPS']) or $_SERVER['HTT
 
 session_start();
 
-require_once "../Layer-1__Page_builder/Themes.php";
 require_once "../Layer-1__Page_builder/Web_Page.php";
-
 require_once "../Layer-2__Business_logic/content/forms/Job_Offer_form.php";
+
 $jobOfferForm = new JobOfferForm();
 
-$webPage = new WebPage($resourcesTheme,$jobOfferForm);
+$webPage = new WebPage($jobOfferForm);
 $webPage->processPage();
 $webPage->printPage();
 ?>

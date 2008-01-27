@@ -28,13 +28,12 @@ if ( $_SESSION['Logged'] == '1' and ( !isset($_SERVER['HTTPS']) or $_SERVER['HTT
 
 session_start();
 
-require_once "../Layer-1__Page_builder/Themes.php";
 require_once "../Layer-1__Page_builder/Web_Page.php";
-
 require_once "../Layer-2__Business_logic/content/static/GNU_Herds_Hackers_Guide_content.php";
+
 $gnuHerdsHackersGuideContent = new GNUHerdsHackersGuideContent();
 
-$webPage = new WebPage($initialTheme,$gnuHerdsHackersGuideContent);
+$webPage = new WebPage($gnuHerdsHackersGuideContent);
 $webPage->processPage();
 $webPage->printPage();
 ?>

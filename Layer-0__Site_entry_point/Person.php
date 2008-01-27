@@ -28,13 +28,12 @@ if ( $_SESSION['Logged'] == '1' and ( !isset($_SERVER['HTTPS']) or $_SERVER['HTT
 
 session_start(); // Note: If you are using cookie-based sessions, you must call session_start() before anything is outputted to the browser. Reference: http://es2.php.net/session_start
 
-require_once "../Layer-1__Page_builder/Themes.php";
 require_once "../Layer-1__Page_builder/Web_Page.php";
-
 require_once "../Layer-2__Business_logic/content/forms/Person_form.php";
+
 $personForm = new PersonForm();
 
-$webPage = new WebPage($resourcesTheme,$personForm);
+$webPage = new WebPage($personForm);
 $webPage->processPage();
 $webPage->printPage();
 ?>
