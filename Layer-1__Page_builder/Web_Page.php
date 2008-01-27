@@ -24,15 +24,13 @@ require_once "../Layer-2__Business_logic/others/Log_form.php";
 // This class is a template according which the web pages are printed.
 class WebPage
 {
-	public $theme;
 	public $logForm;
 	public $content;
 	public $contentExceptionOutput;
 	public $contentExceptionCode;
 
-	function __construct($theme,$content)
+	function __construct($content)
 	{
-		$this->theme = $theme;
 		$this->content = $content;
 		$this->contentExceptionOutput = '';
 		$this->contentExceptionCode = 0;
