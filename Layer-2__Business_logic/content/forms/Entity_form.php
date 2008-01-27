@@ -141,7 +141,7 @@ abstract class EntityForm
 			// Send the email
 			$message = gettext("Your email has been used to create an account at GNU Herds.")."\n\n";
 
-			$message .= gettext("To activate it follow the below link.")." ".gettext("That link will expire in 24 hours:")."\n\n";
+			$message .= gettext("To activate it follow the below link.")." ".gettext("That link will expire in 48 hours:")."\n\n";
 
 			$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?action=register&email=".$_POST['Email']."&magic=".$magic;
 

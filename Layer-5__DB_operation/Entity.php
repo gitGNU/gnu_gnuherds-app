@@ -159,7 +159,7 @@ class Entity
 
 		// Set the RegisterMagic
 		// Security: The magic is only overriden for this entity.
-		$sqlQuery = "PREPARE query(text,integer) AS  UPDATE E1_Entities SET E1_RegisterMagic=$1, E1_RegisterMagicExpire= now() + '1 days'::interval WHERE E1_Id=$2;  EXECUTE query('$magic',$E1_Id);";
+		$sqlQuery = "PREPARE query(text,integer) AS  UPDATE E1_Entities SET E1_RegisterMagic=$1, E1_RegisterMagicExpire= now() + '2 days'::interval WHERE E1_Id=$2;  EXECUTE query('$magic',$E1_Id);";
 		$this->postgresql->execute($sqlQuery,1);
 
 		$this->savePhotoOrLogo($E1_Id);
