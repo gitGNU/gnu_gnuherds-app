@@ -17,6 +17,7 @@
 
 
 require_once "../Layer-4__DBManager_etc/DB_Manager.php";
+require_once "HTTP.php";
 
 
 class LanguageForm

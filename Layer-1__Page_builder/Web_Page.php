@@ -19,7 +19,6 @@
 require_once 'Smarty.class.php';
 require_once "../Layer-2__Business_logic/others/Language_form.php";
 require_once "../Layer-2__Business_logic/others/Log_form.php";
-require_once "HTTP.php";
 
 
 // This class is a template according which the web pages are printed.
