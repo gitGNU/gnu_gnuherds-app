@@ -52,7 +52,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </div>
 
 <div id="header_title">
-{$webpage->theme->headSubtitle|gettext}
+{t}Free Software Association{/t}
 </div>
 
 <div class="notes">
