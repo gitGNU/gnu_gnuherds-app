@@ -59,7 +59,7 @@ abstract class EntityForm
 			}
 
 			// Raise the usual error message
-			$error = "<p>".gettext("ERROR: Wrong magic number!.")."</p>";
+			$error = "<p>".gettext("ERROR: Wrong magic number!")."</p>";
 			throw new Exception($error,false);
 		}
 		else

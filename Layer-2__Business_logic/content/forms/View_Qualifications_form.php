@@ -47,7 +47,7 @@ class ViewQualificationsForm
 			// Load the data
 			if ( !isset( $_GET['EntityId'] ) or $_GET['EntityId']=='' )
 			{
-				$error = "<p>".gettext('ERROR: The identifier to show has not been specified!.')."</p>";
+				$error = "<p>".gettext('ERROR: The identifier to show has not been specified!')."</p>";
 				throw new Exception($error,false);
 			}
 			else

@@ -54,7 +54,7 @@ class ManageJobOfferApplicationsForm
 		// Check parameters
 		if ( !isset($_GET['JobOfferId']) or trim($_GET['JobOfferId']) == '' )
 		{
-			$error = "<p>".gettext('ERROR: The identifier to show has not been specified!.')."</p>";
+			$error = "<p>".gettext('ERROR: The identifier to show has not been specified!')."</p>";
 			throw new Exception($error,false);
 		}
 

@@ -320,7 +320,7 @@ class Entity
 		}
 		else
 		{
-			$error = "<p>".gettext("ERROR: Wrong magic number!.")."</p>";
+			$error = "<p>".gettext("ERROR: Wrong magic number!")."</p>";
 			throw new Exception($error,false);
 		}
 	}
@@ -340,7 +340,7 @@ class Entity
 		}
 		else
 		{
-			$error = "<p>".gettext("ERROR: Wrong magic number!.")."</p>";
+			$error = "<p>".gettext("ERROR: Wrong magic number!")."</p>";
 			throw new Exception($error,false);
 		}
 	}
@@ -364,7 +364,7 @@ class Entity
 		}
 		else
 		{
-			$error = "<p>".gettext("ERROR: Wrong magic number!.")."</p>";
+			$error = "<p>".gettext("ERROR: Wrong magic number!")."</p>";
 			throw new Exception($error,false);
 		}
 	}
@@ -410,7 +410,7 @@ class Entity
 		{
 			if ( move_uploaded_file($_FILES["PhotoOrLogo"]["tmp_name"], "../entity_photos/".$E1_Id) == false )
 			{
-				$error = "<p>".gettext("ERROR: Can not save the uploaded file!.")."</p>";
+				$error = "<p>".gettext("ERROR: Can not save the uploaded file!")."</p>";
 				throw new Exception($error,false);
 			}
 
@@ -472,7 +472,7 @@ class Entity
 		{
 			if ( unlink("../entity_photos/".$_SESSION['EntityId']) == false )
 			{
-				$error = "<p>".gettext("ERROR: Can not delete the photo or logo file!.")."</p>";
+				$error = "<p>".gettext("ERROR: Can not delete the photo or logo file!")."</p>";
 				throw new Exception($error,false);
 			}
 		}
