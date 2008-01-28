@@ -66,12 +66,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {t}The Committee shall consist of the following: the members of the system administrator team, the web master team, the development team, the translator teams, the public relations team and the Ethics Officer.{/t}
 </p>
 
-<!--
-<p>
-Non-executive committee members?:  The number of non-executive committee members shall never exceed the number of Officers.  There will be a maximum of one non-executive committee member for each ?two hundred?  members?.
-</p>
--->
-
 <p>
 {t escape='no'
   1='</p><ul>'
