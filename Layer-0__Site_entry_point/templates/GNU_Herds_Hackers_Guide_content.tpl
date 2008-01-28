@@ -369,7 +369,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<tr> <td><b>Bill</b>     <td>System administrator, architecture Adviser, etc.
 	<tr> <td><b>Charles</b>  <td>Auditor, Quality Assurance, etc.
 	<tr> <td><b>Davi</b>     <td>Web developer, Spanish Translator, etc.
-	<tr> <td><b>David</b>    <td>Web developer, main Italian Translator.
+	<tr> <td><b>David</b>    <td>Web developer, second Italian Translator.
 	<tr> <td><b>Duarte</b>   <td>Portuguese Translator.
 	<tr> <td><b>Fatima</b>   <td>Quality Assurance and Functional Auditor.
 	<tr> <td><b>Gabriel</b>  <td>Data Base arquitecture Adviser.
