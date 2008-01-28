@@ -135,7 +135,7 @@ Chapters may be formed in any local area.  There must be ten or more people in a
 <h4>{t}Special Interest Groups{/t}</h4>
 
 <p>
-{t}Special Interest Groups will be formed at the discretion of the committee based on the demand within the membership.{/t}
+{t}Groups will be formed at the discretion of the committee based on the demand within the membership.{/t}
 </p>
 
 
