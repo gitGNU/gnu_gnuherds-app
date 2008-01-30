@@ -1,0 +1,997 @@
+# Authors: Davi Leal
+#
+# Copyright (C) 2007 Davi Leal <davi at leals dot com>
+#
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU Affero General Public License as published by the Free Software Foundation,
+# either version 3 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License along with this
+# program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNU Herds\n"
+"Report-Msgid-Bugs-To: davi@leals.com\n"
+"POT-Creation-Date: 2006-04-10 19:12+0200\n"
+"PO-Revision-Date: 2007-04-09 13:56+0100\n"
+"Last-Translator: Antenore Gatta <antenore@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Italian\n"
+
+# Contry list got via:
+#   SELECT LN_LO_TwoLetter, LO_ThreeLetter, LO_Name, LN_Name FROM LN_Nationalities, LO_Countries WHERE LO_TwoLetter=LN_LO_TwoLetter ORDER BY LO_ThreeLetter;
+
+# Translated using wikipedia.org and a dictionary.
+
+#. nationality for "Aruba" (ABW)
+msgid "Aruban"
+msgstr "Arubano, na"
+
+#. nationality for "Afghanistan" (AFG)
+msgid "Afghan"
+msgstr "Afgano, na"
+
+#. nationality for "Angola" (AGO)
+msgid "Angolan"
+msgstr "Angolano"
+
+#. nationality for "Anguilla" (AIA)
+msgid "Anguillan"
+msgstr "Anguillense"
+
+#. nationality for "Albania" (ALB)
+msgid "Albanian"
+msgstr "Albanese"
+
+#. nationality for "Andorra" (AND)
+msgid "Andorran"
+msgstr "Andorrano, na"
+
+#. nationality for "Netherlands Antilles" (ANT)
+msgid "Netherlands Antillean"
+msgstr "Antille olandesi"
+
+#. nationality for "United Arab Emirates" (ARE)
+msgid "Emirian"
+msgstr "Emiratense"
+
+#. nationality for "Argentina" (ARG)
+msgid "Argentinian"
+msgstr "Argentino, na"
+
+#. nationality for "Armenia" (ARM)
+msgid "Armenian"
+msgstr "Armeno, na"
+
+#. nationality for "American Samoa" (ASM)
+msgid "Samoan, American"
+msgstr "Samoano americano, na"
+
+#. nationality for "Antarctica" (ATA)
+msgid "Antarctic"
+msgstr "Antartico, ca"
+
+#. nationality for "French Southern Territories" (ATF)
+msgid "French Southern Territories"
+msgstr "Territori Francesi del Sur"
+
+#. nationality for "Antigua and Barbuda" (ATG)
+msgid "Antiguan"
+msgstr "Antiguano, na"
+
+#. nationality for "Australia" (AUS)
+msgid "Australian"
+msgstr "Australiano, na"
+
+#. nationality for "Austria" (AUT)
+msgid "Austrian"
+msgstr "Austriaco, ca"
+
+#. nationality for "Azerbaijan" (AZE)
+msgid "Azerbaijani"
+msgstr "Azerbaigiano, na"
+
+#. nationality for "Burundi" (BDI)
+msgid "Burundian"
+msgstr "Burundese"
+
+#. nationality for "Belgium" (BEL)
+msgid "Belgian"
+msgstr "Belga"
+
+#. nationality for "Benin" (BEN)
+msgid "Beninese"
+msgstr "Beniniano"
+
+#. nationality for "Burkina Faso" (BFA)
+msgid "Burkinabe"
+msgstr "Burkinabè"
+
+#. nationality for "Bangladesh" (BGD)
+msgid "Bangladeshi"
+msgstr "Bangladese"
+
+#. nationality for "Bulgaria" (BGR)
+msgid "Bulgarian"
+msgstr "Búlgaro, ra"
+
+#. nationality for "Bahrain" (BHR)
+msgid "Bahraini"
+msgstr "Bahreinita"
+
+#. nationality for "Bahamas" (BHS)
+msgid "Bahamian"
+msgstr "Bahamano, ana"
+
+#. nationality for "Bosnia and Herzegovina" (BIH)
+msgid "Bosnian and Herzegovinian"
+msgstr "Bosniaco erzegovino"
+
+#. nationality for "Belarus" (BLR)
+msgid "Belarusian"
+msgstr "Bielorruso, sa"
+
+#. nationality for "Belize" (BLZ)
+msgid "Belizean"
+msgstr "Belicano, ana"
+
+#. nationality for "Bermuda" (BMU)
+msgid "Bermudian"
+msgstr "Bermudano, ana"
+
+#. nationality for "Bolivia" (BOL)
+msgid "Bolivian"
+msgstr "Boliviano, na"
+
+#. nationality for "Brazil" (BRA)
+msgid "Brazilian"
+msgstr "Brasilano, ana"
+
+#. nationality for "Barbados" (BRB)
+msgid "Barbadian"
+msgstr "Barbadense"
+
+#. nationality for "Brunei Darussalam" (BRN)
+msgid "Bruneian"
+msgstr "Bruneano, na"
+
+#. nationality for "Bhutan" (BTN)
+msgid "Bhutanese"
+msgstr "Butanese"
+
+#. nationality for "Bouvet Island" (BVT)
+msgid "Bouvet Island"
+msgstr "Bouvet"
+
+#. nationality for "Botswana" (BWA)
+msgid "Botswanan"
+msgstr "Botsuano, na"
+
+#. nationality for "Central African Republic" (CAF)
+msgid "Central African"
+msgstr "Centroafricano, na"
+
+#. nationality for "Canada" (CAN)
+msgid "Canadian"
+msgstr "Canadiense"
+
+#. nationality for "Cocos (Keeling) Islands" (CCK)
+msgid "Cocos Islander"
+msgstr "Islas Cocos"
+
+#. nationality for "Switzerland" (CHE)
+msgid "Swiss"
+msgstr "Suizo, za"
+
+#. nationality for "Chile" (CHL)
+msgid "Chilean"
+msgstr "Chileno, na"
+
+#. nationality for "China" (CHN)
+msgid "Chinese"
+msgstr "Chino, na"
+
+#. nationality for "Côte d'Ivoire" (CIV)
+msgid "Ivorian"
+msgstr "Marfilano, ana"
+
+#. nationality for "Cameroon" (CMR)
+msgid "Cameroonian"
+msgstr "Camerunese"
+
+#. nationality for "Congo, The Democratic Republic of the" (COD),  Reference: http://en.wikipedia.org/wiki/ISO_3166-1m
+msgid "Congolese from The Democratic Republic of the Congo"
+msgstr "Congolano, ana, della Repubblica Democratica del Congo"
+
+#. nationality for "Congo, People's Republic of" (COG)
+msgid "Congolese from the Republic of Congo"
+msgstr "Congolano, ana, della Repubblica del Congo"
+
+#. nationality for "Cook Islands" (COK)
+msgid "Cook Islander"
+msgstr "Cookiano, na"
+
+#. nationality for "Colombia" (COL)
+msgid "Colombian"
+msgstr "Colombiano, na"
+
+#. nationality for "Comoros" (COM)
+msgid "Comorian"
+msgstr "Comorano, na"
+
+#. nationality for "Cape Verde" (CPV)
+msgid "Cape Verdean"
+msgstr "Capoverdiano, na"
+
+#. nationality for "Costa Rica" (CRI)
+msgid "Costa Rican"
+msgstr "Costarricense"
+
+#. nationality for "Cuba" (CUB)
+msgid "Cuban"
+msgstr "Cubano, na"
+
+#. nationality for "Christmas Island" (CXR)
+msgid "Christmas Islander"
+msgstr "Territorio dell'isola Christmas"
+
+#. nationality for "Cayman Islands" (CYM)
+msgid "Caymanian"
+msgstr "Caimanese"
+
+#. nationality for "Cyprus" (CYP)
+msgid "Cypriot"
+msgstr "Chipriota"
+
+#. nationality for "Czech Republic" (CZE)
+msgid "Czech"
+msgstr "Checo, ca"
+
+#. nationality for "Germany" (DEU)
+msgid "German"
+msgstr "Alemán, na"
+
+#. nationality for "Djibouti" (DJI)
+msgid "Djiboutian"
+msgstr "Yibutiano, na"
+
+#. nationality for "Dominica" (DMA)
+msgid "Dominican"
+msgstr "Dominiqhese"
+
+#. nationality for "Denmark" (DNK)
+msgid "Danish"
+msgstr "Danese"
+
+#. nationality for "Dominican Republic" (DOM)
+msgid "Dominican from Dominican Republic"
+msgstr "Domenicano, na, della Repubblica Domenicana"
+
+#. nationality for "Algeria" (DZA)
+msgid "Algerian"
+msgstr "Argelino, na"
+
+#. nationality for "Ecuador" (ECU)
+msgid "Ecuadorian"
+msgstr "Ecuatoriano, na"
+
+#. nationality for "Egypt" (EGY)
+msgid "Egyptian"
+msgstr "Egipcio, cia"
+
+#. nationality for "Eritrea" (ERI)
+msgid "Eritrean"
+msgstr "Eritreo, a"
+
+#. nationality for "Western Sahara" (ESH)
+msgid "Sahrawi"
+msgstr "Saharaui"
+
+#. nationality for "Spain" (ESP)
+msgid "Spanish"
+msgstr "Spagnolo, la"
+
+#. nationality for "Estonia" (EST)
+msgid "Estonian"
+msgstr "Estone"
+
+#. nationality for "Ethiopia" (ETH)
+msgid "Ethiopian"
+msgstr "Etiope"
+
+#. nationality for "Åland Islands" (EUR)
+msgid "Åland Islander"
+msgstr "Ålandese"
+
+#. nationality for "Finland" (FIN)
+msgid "Finnish"
+msgstr "Finlandese"
+
+#. nationality for "Fiji Islands" (FJI)
+msgid "Fiji Islander"
+msgstr "Figiano, na"
+
+#. nationality for "Falkland Islands (Malvinas)" (FLK)
+msgid "Falkland Islanders"
+msgstr "Malvinero, ra"
+
+#. nationality for "France" (FRA)
+msgid "French"
+msgstr "Francese"
+
+#. nationality for "Faroe Islands" (FRO)
+msgid "Faroese"
+msgstr "Feroese"
+
+#. nationality for "Micronesia" (FSM)
+msgid "Micronesian"
+msgstr "Micronesio, sia"
+
+#. nationality for "Gabon" (GAB)
+msgid "Gabonese"
+msgstr "Gabonese"
+
+#. nationality for "United Kingdom" (GBR)
+msgid "British"
+msgstr "Britannico, ca"
+
+#. nationality for "Georgia" (GEO)
+msgid "Georgian"
+msgstr "Georgiano, na"
+
+#. nationality for "Ghana" (GHA)
+msgid "Ghanaian"
+msgstr "Ghanese"
+
+#. nationality for "Gibraltar" (GIB)
+msgid "Gibraltarian"
+msgstr "Gibilterriano, na"
+
+#. nationality for "Guinea" (GIN)
+msgid "Guinean"
+msgstr "Guineano, na"
+
+#. nationality for "Guadeloupe" (GLP)
+msgid "Guadeloupean"
+msgstr "Guadalupa"
+
+#. nationality for "Gambia" (GMB)
+msgid "Gambian"
+msgstr "Gambiano, na"
+
+#. nationality for "Guinea-Bissau" (GNB)
+msgid "Guinean from Guinea-Bissau"
+msgstr "Guineano, na, della Guinea-Bissau"
+
+#. nationality for "Equatorial Guinea" (GNQ)
+msgid "Equatorial Guinean"
+msgstr "Ecuatoguineano, na"
+
+#. nationality for "Greece" (GRC)
+msgid "Greek"
+msgstr "Greco, ca"
+
+#. nationality for "Grenada" (GRD)
+msgid "Grenadian"
+msgstr "Granadino, na"
+
+#. nationality for "Greenland" (GRL)
+msgid "Greenlandic"
+msgstr "Groenlandese"
+
+#. nationality for "Guatemala" (GTM)
+msgid "Guatemalan"
+msgstr "Guatemalteco, ca"
+
+#. nationality for "French Guiana" (GUF)
+msgid "Guianese"
+msgstr "Guaianese"
+
+#. nationality for "Guam" (GUM)
+msgid "Guamanian"
+msgstr "Guamano, ana"
+
+#. nationality for "Guyana" (GUY)
+msgid "Guyanese"
+msgstr "Guianese"
+
+#. nationality for "Hong Kong" (HKG)
+msgid "Hong Kong"
+msgstr "Hongkong"
+
+#. nationality for "Heard Island and McDonald Islands" (HMD)
+msgid "Heard Island and McDonald Islands"
+msgstr "Territorio delle isole Heard e McDonald"
+
+#. nationality for "Honduras" (HND)
+msgid "Honduran"
+msgstr "Honduriano, ana"
+
+#. nationality for "Croatia" (HRV)
+msgid "Croatian"
+msgstr "Croato, ta"
+
+#. nationality for "Haiti" (HTI)
+msgid "Haitian"
+msgstr "Haitiano, na"
+
+#. nationality for "Hungary" (HUN)
+msgid "Hungarian"
+msgstr "Húngaro, ra"
+
+#. nationality for "Indonesia" (IDN)
+msgid "Indonesian"
+msgstr "Indonesiano, na"
+
+#. nationality for "India" (IND)
+msgid "Indian"
+msgstr "Indio, dia"
+
+#. nationality for "British Indian Ocean Territory" (IOT)
+msgid "British Indian Ocean Territory"
+msgstr "Territorio britannico dell'Oceano Indiano"
+
+#. nationality for "Ireland" (IRL)
+msgid "Irish"
+msgstr "Irlandese"
+
+#. nationality for "Iran" (IRN)
+msgid "Iranian"
+msgstr "Iraniano, na"
+
+#. nationality for "Iraq" (IRQ)
+msgid "Iraqi"
+msgstr "Iracheno, na"
+
+#. nationality for "Iceland" (ISL)
+msgid "Icelandic"
+msgstr "Islandese"
+
+#. nationality for "Israel" (ISR)
+msgid "Israeli"
+msgstr "Israeliano, na"
+
+#. nationality for "Italy" (ITA)
+msgid "Italian"
+msgstr "Italiano, na"
+
+#. nationality for "Jamaica" (JAM)
+msgid "Jamaican"
+msgstr "Giamaicano, na"
+
+#. nationality for "Jordan" (JOR)
+msgid "Jordanian"
+msgstr "Giordaniano, na"
+
+#. nationality for "Japan" (JPN)
+msgid "Japanese"
+msgstr "Giapponese"
+
+#. nationality for "Kazakhstan" (KAZ)
+msgid "Kazakh"
+msgstr "Kazako, ka"
+
+#. nationality for "Kenya" (KEN)
+msgid "Kenyan"
+msgstr "Keniano, na"
+
+#. nationality for "Kyrgyzstan" (KGZ)
+msgid "Kyrgyzstani"
+msgstr "Kirghiso"
+
+#. nationality for "Cambodia" (KHM)
+msgid "Cambodian"
+msgstr "Cambogiano, na"
+
+#. nationality for "Kiribati" (KIR)
+msgid "Kiribatian"
+msgstr "Kiribatiano, na"
+
+#. nationality for "Saint Kitts and Nevis" (KNA)
+msgid "Kittsian; Nevisian"
+msgstr "Saint Christopher e Nevis"
+
+#. nationality for "Korea, Republic of" (KOR)
+msgid "South Korean"
+msgstr "Surcoreano, na"
+
+#. nationality for "Kuwait" (KWT)
+msgid "Kuwaiti"
+msgstr "Kuwaitiano, na"
+
+#. nationality for "Laos" (LAO)
+msgid "Lao"
+msgstr "Laotiano, na"
+
+#. nationality for "Lebanon" (LBN)
+msgid "Lebanese"
+msgstr "Libanese"
+
+#. nationality for "Liberia" (LBR)
+msgid "Liberian"
+msgstr "Liberiano, na"
+
+#. nationality for "Libyan Arab Jamahiriya" (LBY)
+msgid "Libyan"
+msgstr "Libico, ca"
+
+#. nationality for "Saint Lucia" (LCA)
+msgid "Saint Lucian"
+msgstr "Santaluciano, na"
+
+#. nationality for "Liechtenstein" (LIE)
+msgid "Liechtensteiner"
+msgstr "Liechtenstein"
+
+#. nationality for "Sri Lanka" (LKA)
+msgid "Sri Lankan"
+msgstr "Singalese"
+
+#. nationality for "Lesotho" (LSO)
+msgid "Basotho"
+msgstr "Lesothense"
+
+#. nationality for "Lithuania" (LTU)
+msgid "Lithuanian"
+msgstr "Lituano, na"
+
+#. nationality for "Luxembourg" (LUX)
+msgid "Luxembourger"
+msgstr "Luxemburghese"
+
+#. nationality for "Latvia" (LVA)
+msgid "Latvian"
+msgstr "Letone"
+
+#. nationality for "Macau" (MAC)
+msgid "Macanese"
+msgstr "Macaense"
+
+#. nationality for "Morocco" (MAR)
+msgid "Moroccan"
+msgstr "Marrocchino"
+
+#. nationality for "Monaco" (MCO)
+msgid "Monegasque"
+msgstr "Monegasco, ca"
+
+#. nationality for "Moldova" (MDA)
+msgid "Moldovan"
+msgstr "Moldavo, va"
+
+#. nationality for "Madagascar" (MDG)
+msgid "Malagasy"
+msgstr "Malgascio"
+
+#. nationality for "Maldives" (MDV)
+msgid "Maldivian"
+msgstr "Maldiviano, na"
+
+#. nationality for "Mexico" (MEX)
+msgid "Mexican"
+msgstr "Messicano, na"
+
+#. nationality for "Marshall Islands" (MHL)
+msgid "Marshallese"
+msgstr "Marshallese"
+
+#. nationality for "Macedonia" (MKD)
+msgid "Macedonian"
+msgstr "Macedone"
+
+#. nationality for "Mali" (MLI)
+msgid "Malian"
+msgstr "Maliano"
+
+#. nationality for "Malta" (MLT)
+msgid "Maltese"
+msgstr "Maltese"
+
+#. nationality for "Myanmar" (MMR)
+msgid "Burmese"
+msgstr "Birmano, na"
+
+#. nationality for "Montenegro" (MNE)
+msgid "Montenegrin"
+msgstr "Montenegrino, na"
+
+#. nationality for "Mongolia" (MNG)
+msgid "Mongolian"
+msgstr "Mongolo, la"
+
+#. nationality for "Northern Mariana Islands" (MNP)
+msgid "Northern Mariana Islander"
+msgstr "Commonwealth delle Isole Marianne settentrionali"
+
+#. nationality for "Mozambique" (MOZ)
+msgid "Mozambican"
+msgstr "Mozambicano"
+
+#. nationality for "Mauritania" (MRT)
+msgid "Mauritanian"
+msgstr "Mauritano, na"
+
+#. nationality for "Montserrat" (MSR)
+msgid "Montserratian"
+msgstr "Montserrat"
+
+#. nationality for "Martinique" (MTQ)
+msgid "Martinican"
+msgstr "Martinicano, ana"
+
+#. nationality for "Mauritius" (MUS)
+msgid "Mauritian"
+msgstr "Mauriciano, na"
+
+#. nationality for "Malawi" (MWI)
+msgid "Malawian"
+msgstr "Malauo"
+
+#. nationality for "Malaysia" (MYS)
+msgid "Malaysian"
+msgstr "Malawiano, na"
+
+#. nationality for "Mayotte" (MYT)
+msgid "Mahoran"
+msgstr "Mayotte"
+
+#. nationality for "Namibia" (NAM)
+msgid "Namibian"
+msgstr "Namibiano, na"
+
+#. nationality for "New Caledonia" (NCL)
+msgid "New Caledonian"
+msgstr "Neocaledoniano, ana"
+
+#. nationality for "Niger" (NER)
+msgid "Nigerien"
+msgstr "Nigerino, na"
+
+#. nationality for "Norfolk Island" (NFK)
+msgid "Norfolk Islander"
+msgstr "Norfolkense"
+
+#. nationality for "Nigeria" (NGA)
+msgid "Nigerian"
+msgstr "Nigeriano, na"
+
+#. nationality for "Nicaragua" (NIC)
+msgid "Nicaraguan"
+msgstr "Nicaraguense"
+
+#. nationality for "Niue" (NIU)
+msgid "Niuean"
+msgstr "Niuano, na"
+
+#. nationality for "Netherlands" (NLD)
+msgid "Dutch"
+msgstr "Olandese"
+
+#. nationality for "Norway" (NOR)
+msgid "Norwegian"
+msgstr "Norvegese"
+
+#. nationality for "Nepal" (NPL)
+msgid "Nepalese"
+msgstr "Nepalese"
+
+#. nationality for "Nauru" (NRU)
+msgid "Nauruan"
+msgstr "Nauruano, na"
+
+#. nationality for "New Zealand" (NZL)
+msgid "New Zealander"
+msgstr "Neozelandese"
+
+#. nationality for "Oman" (OMN)
+msgid "Omani"
+msgstr "Omano"
+
+#. nationality for "Pakistan" (PAK)
+msgid "Pakistani"
+msgstr "Pakistano"
+
+#. nationality for "Panama" (PAN)
+msgid "Panamanian"
+msgstr "Panamano, ana"
+
+#. nationality for "Pitcairn Islands" (PCN)
+msgid "Pitcairn Islander"
+msgstr "Pitcairnese"
+
+#. nationality for "Peru" (PER)
+msgid "Peruvian"
+msgstr "Peruano, na"
+
+#. nationality for "Philippines" (PHL)
+msgid "Filipino"
+msgstr "Filipino, na"
+
+#. nationality for "Palau" (PLW)
+msgid "Palauan"
+msgstr "Palauano, na"
+
+#. nationality for "Papua New Guinea" (PNG)
+msgid "Papua New Guinean"
+msgstr "Papuano, na"
+
+#. nationality for "Poland" (POL)
+msgid "Polish"
+msgstr "Polacco, ca"
+
+#. nationality for "Puerto Rico" (PRI)
+msgid "Puerto Rican"
+msgstr "Portoricano, ana"
+
+#. nationality for "Korea, Democratic People's Republic of" (PRK)
+msgid "North Korean"
+msgstr "Norcoreano, na"
+
+#. nationality for "Portugal" (PRT)
+msgid "Portuguese"
+msgstr "Portoghese"
+
+#. nationality for "Paraguay" (PRY)
+msgid "Paraguayan"
+msgstr "Paraguaiano"
+
+#. nationality for "Palestinian Territory" (PSE)
+msgid "Palestinian"
+msgstr "Palestinese"
+
+#. nationality for "French Polynesia" (PYF)
+msgid "Polynesian"
+msgstr "Polinesiano, na"
+
+#. nationality for "Qatar" (QAT)
+msgid "Qatari"
+msgstr "Qatariano"
+
+#. nationality for "Réunion" (REU)
+msgid "Reunionese"
+msgstr "Reunionese"
+
+#. nationality for "Romania" (ROU)
+msgid "Romanian"
+msgstr "Rumeno, na"
+
+#. nationality for "Russian Federation" (RUS)
+msgid "Russian"
+msgstr "Russo, sa"
+
+#. nationality for "Rwanda" (RWA)
+msgid "Rwandan"
+msgstr "Ruandese"
+
+#. nationality for "Saudi Arabia" (SAU)
+msgid "Saudi Arabian"
+msgstr "Saudita"
+
+#. nationality for "Sudan" (SDN)
+msgid "Sudanese"
+msgstr "Sudanese"
+
+#. nationality for "Senegal" (SEN)
+msgid "Senegalese"
+msgstr "Senegalese"
+
+#. nationality for "Singapore" (SGP)
+msgid "Singaporean"
+msgstr "Singaporense"
+
+#. nationality for "South Georgia and the South Sandwich Islands" (SGS)
+msgid "South Georgia and the South Sandwich Islands"
+msgstr "Isole Georgia del Sud e Sandwich del Sud"
+
+#. nationality for "Saint Helena" (SHN)
+msgid "Saint Helenian"
+msgstr "Sant'Elena"
+
+#. nationality for "Svalbard and Jan Mayen" (SJM)
+msgid "Svalbard and Jan Mayen"
+msgstr "Svalbard e Jan Mayen"
+
+#. nationality for "Solomon Islands" (SLB)
+msgid "Solomon Islander"
+msgstr "Salomonense"
+
+#. nationality for "Sierra Leone" (SLE)
+msgid "Sierra Leonean"
+msgstr "Sierraleonese"
+
+#. nationality for "El Salvador" (SLV)
+msgid "Salvadorian"
+msgstr "Salvadoriano, ana"
+
+#. nationality for "San Marino" (SMR)
+msgid "San Marinese"
+msgstr "Sanmarinense"
+
+#. nationality for "Somalia" (SOM)
+msgid "Somali"
+msgstr "Somalo"
+
+#. nationality for "Saint Pierre and Miquelon" (SPM)
+msgid "St-Pierrais; Miquelonnais"
+msgstr "Saint-Pierre e Miquelon"
+
+#. nationality for "Serbia" (SRB)
+msgid "Serbian"
+msgstr "Serbio, bia"
+
+#. nationality for "São Tomé and Príncipe" (STP)
+msgid "São Toméan"
+msgstr "Santotomense"
+
+#. nationality for "Suriname" (SUR)
+msgid "Surinamese"
+msgstr "Surinamese"
+
+#. nationality for "Slovakia" (SVK)
+msgid "Slovak"
+msgstr "Slovacco, ca"
+
+#. nationality for "Slovenia" (SVN)
+msgid "Slovenian"
+msgstr "Sloveno, na"
+
+#. nationality for "Sweden" (SWE)
+msgid "Swedish"
+msgstr "Sueco, ca"
+
+#. nationality for "Swaziland" (SWZ)
+msgid "Swazi"
+msgstr "Suazo, za"
+
+#. nationality for "Seychelles" (SYC)
+msgid "Seychellois"
+msgstr "Seychelense"
+
+#. nationality for "Syrian Arab Republic" (SYR)
+msgid "Syrian"
+msgstr "Sirio, ria"
+
+#. nationality for "" (TCA)
+msgid "Turks and Caicos Islander"
+msgstr "Turcocaiconese"
+
+#. nationality for "Chad" (TCD)
+msgid "Chadian"
+msgstr "Chadiano, na"
+
+#. nationality for "Togo" (TGO)
+msgid "Togolese"
+msgstr "Togolese"
+
+#. nationality for "Thailand" (THA)
+msgid "Thai"
+msgstr "Tailandese"
+
+#. nationality for "Tajikistan" (TJK)
+msgid "Tajik"
+msgstr "Tayiko, ka"
+
+#. nationality for "Tokelau" (TKL)
+msgid "Tokelauan"
+msgstr "Tokelauano, na"
+
+#. nationality for "Turkmenistan" (TKM)
+msgid "Turkmen"
+msgstr "Turcomano, na"
+
+#. nationality for "East Timor" (TLS)
+msgid "East Timorese"
+msgstr "Timorense"
+
+#. nationality for "Tonga" (TON)
+msgid "Tongan"
+msgstr "Tongano, na"
+
+#. nationality for "Trinidad and Tobago" (TTO)
+msgid "Trinidadian; Tobagonian"
+msgstr "Trinitense"
+
+#. nationality for "Tunisia" (TUN)
+msgid "Tunisian"
+msgstr "Tunecino, na"
+
+#. nationality for "Turkey" (TUR)
+msgid "Turkish"
+msgstr "Turco, ca"
+
+#. nationality for "Tuvalu" (TUV)
+msgid "Tuvaluan"
+msgstr "Tuvaluano, na"
+
+#. nationality for "Taiwan" (TWN)
+msgid "Taiwanese"
+msgstr "Taiwanese"
+
+#. nationality for "Tanzania" (TZA)
+msgid "Tanzanian"
+msgstr "Tanzanese"
+
+#. nationality for "Uganda" (UGA)
+msgid "Ugandan"
+msgstr "Ugandese"
+
+#. nationality for "Ukraine" (UKR)
+msgid "Ukrainian"
+msgstr "Ucraniano, na"
+
+#. nationality for "United States Minor Outlying Islands" (UMI)
+msgid "United States Minor Outlying Islands"
+msgstr "Isole minori lontane dagli Stati Uniti"
+
+#. nationality for "Uruguay" (URY)
+msgid "Uruguayan"
+msgstr "Uruguaiano, na"
+
+#. nationality for "United States" (USA)
+msgid "American"
+msgstr "Statunitense"
+
+#. nationality for "Uzbekistan" (UZB)
+msgid "Uzbek"
+msgstr "Uzbeko, ka"
+
+#. nationality for "Holy See (Vatican City State)" (VAT)
+msgid "Holy See (Vatican City State)"
+msgstr "Vaticano, na"
+
+#. nationality for "Saint Vincent and the Grenadines" (VCT)
+msgid "Vincentian"
+msgstr "Sanvicentino, na"
+
+#. nationality for "Venezuela" (VEN)
+msgid "Venezuelan"
+msgstr "Venezuelano, na"
+
+#. nationality for "British Virgin Islands" (VGB)
+msgid "British Virgin Islander"
+msgstr "Islas Vírgenes Británicas"
+
+#. nationality for "US Virgin Islands" (VIR)
+msgid "US Virgin Islander"
+msgstr "Isole Vergini degli Stati Uniti"
+
+#. nationality for "Viet Nam" (VNM)
+msgid "Vietnamese"
+msgstr "Vietnamita"
+
+#. nationality for "Vanuatu" (VUT)
+msgid "Vanuatuan"
+msgstr "Vanuatense"
+
+#. nationality for "Wallis and Futuna" (WLF)
+msgid "Wallisian; Futunan"
+msgstr "Wallis e Futuna"
+
+#. nationality for "Samoa" (WSM)
+msgid "Samoan"
+msgstr "Samoano, na"
+
+#. nationality for "Yemen" (YEM)
+msgid "Yemeni"
+msgstr "Yemenita"
+
+#. nationality for "South Africa" (ZAF)
+msgid "South African"
+msgstr "Sudafricano, na"
+
+#. nationality for "Zambia" (ZMB)
+msgid "Zambian"
+msgstr "Zambiano, na"
+
+#. nationality for "Zimbabwe" (ZWE)
+msgid "Zimbabwean"
+msgstr "Zimbabwano"
