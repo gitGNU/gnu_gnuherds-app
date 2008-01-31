@@ -1,10 +1,10 @@
-<?
+<?php
 #
 # Portable PHP password hashing framework.
 #
-# Version 0.0 / genuine.
+# Version 0.1 / genuine.
 #
-# Written by Solar Designer <solar at openwall.com> in 2004,2005 and placed in
+# Written by Solar Designer <solar at openwall.com> in 2004-2006 and placed in
 # the public domain.
 #
 # There's absolutely no warranty.
@@ -40,7 +40,7 @@ class PasswordHash {
 
 		$this->portable_hashes = $portable_hashes;
 
-		$random_state = microtime() . getmypid();
+		$this->random_state = microtime() . getmypid();
 	}
 
 	function get_random_bytes($count)
