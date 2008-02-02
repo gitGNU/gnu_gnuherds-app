@@ -7,6 +7,7 @@ INSERT INTO LI_Skills VALUES ( 'Darwin',				'Free',		'Operating systems' );
 INSERT INTO LI_Skills VALUES ( 'Microsoft Windows',			'Non-Free',	'Operating systems' );
 INSERT INTO LI_Skills VALUES ( 'Microsoft Windows Vista',		'Non-Free',	'Operating systems' );
 INSERT INTO LI_Skills VALUES ( 'Mac OS X',				'Non-Free',	'Operating systems' );
+INSERT INTO LI_Skills VALUES ( 'Cisco IOS',				'Non-Free',	'Operating systems' );
 
 INSERT INTO LI_Skills VALUES ( 'FreeBSD kernel',			'Free',		'Operating system kernels' );
 INSERT INTO LI_Skills VALUES ( 'NetBSD kernel',				'Free',		'Operating system kernels' );
@@ -16,6 +17,7 @@ INSERT INTO LI_Skills VALUES ( 'Linux kernel',				'Free',		'Operating system ker
 
 INSERT INTO LI_Skills VALUES ( 'Intel x86 / IA-32 (i386)',		'Free',		'Hardware architectures' );
 INSERT INTO LI_Skills VALUES ( 'Sun SPARC (sparc)',			'Free',		'Hardware architectures' );
+INSERT INTO LI_Skills VALUES ( 'HP PA 8900 (RISC)',			'Free',     'Hardware architectures' );
 
 INSERT INTO LI_Skills VALUES ( 'C',					'Free',		'Development formal languages' );
 INSERT INTO LI_Skills VALUES ( 'C#',					'Free',		'Development formal languages' );
