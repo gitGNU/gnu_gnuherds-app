@@ -130,7 +130,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  3='</a>'
 	}%1Git%3 server at %2Savannah%3{/t}
 	<td>
-	<!-- XXX: <tr> <td><a href="http://www.openbsd.org/">OpenBSD 3.x</a> <td>The gnuherds.org host is a 633MHZ DEC Alpha 64-bit CPU running OpenBSD. -->
 	</table>
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
