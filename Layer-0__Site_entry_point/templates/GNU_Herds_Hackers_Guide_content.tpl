@@ -365,7 +365,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<br>
 	</p>
 	<table>
-	<tr> <td><b>Antenore</b> <td>Localization architecture Adviser, Auditor, initial Italian Translator, etc.
+	<tr> <td><b>Antenore</b> <td>Localization architecture Adviser, Auditor, initial and current Italian Translator, etc.
 	<tr> <td><b>Bill</b>     <td>System administrator, architecture Adviser, etc.
 	<tr> <td><b>Charles</b>  <td>Auditor, Quality Assurance, etc.
 	<tr> <td><b>Davi</b>     <td>Web developer, Spanish Translator, etc.
