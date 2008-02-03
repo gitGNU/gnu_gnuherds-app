@@ -92,12 +92,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 		<li> {t}Be ready to use at least a primitive e-Vote system, as for example, to count emails.{/t}</li>
 		<li> {t}Work on others e-Vote proposals.{/t}</li>
 		<li> {t}Finish and show the draft of the P2P based e-Vote system proposal.{/t}
-			<!--
+			{*
 			Davi develops a draft and check it with Lorenzo and a friend who is interested in e-Voting (Gabriel).
 			We ask for the opinion of the rest of this email list.
 			We ask for the opinion of Jason Kitcat, though we know he is very busy.
 			We check with the security experts community.
-			-->
+			*}
 		</li>
 		</ul>
 	</li>
