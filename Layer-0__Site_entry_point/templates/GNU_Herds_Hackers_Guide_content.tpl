@@ -111,26 +111,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <h4>3. {t}Technologies{/t} <a name="Technology"></a> </h4>
 
 	<p>
-	{t}The project depends on the below technologies. Though it is and must be open to any proposal.{/t}
-	</p>
-
-	<table>
-	<tr> <td><a href="http://www.w3.org/TR/html401/">HTML</a> 4.01 Strict <td>
-	<tr> <td><a href="http://www.php.net/">PHP</a> >= 5.2 <td>
-	<tr> <td><a href="http://smarty.php.net/">Smarty</a> <td>
-	<tr> <td><a href="http://smarty.incutio.com/?page=SmartyGettext">Smarty-Gettext</a> <td>
-	<tr> <td><a href="http://www.gnu.org/software/gettext/">gettext</a> <td>
-	<tr> <td><a href="http://www.w3.org/Style/CSS/">CSS x.y</a> <td>
-	<tr> <td><a href="http://httpd.apache.org/">Apache x.y</a> <td>
-	<tr> <td><a href="http://www.postgresql.org/">PostgreSQL</a> >= 7.4.x <td>
-	<tr> <td>
 	{t escape='no'
-	  1='<a href="http://git.savannah.nongnu.org/gitweb/?p=gnuherds-app.git">'
-	  2='<a href="http://savannah.gnu.org/">'
-	  3='</a>'
-	}%1Git%3 server at %2Savannah%3{/t}
-	<td>
-	</table>
+	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=179">'
+	  2='</a>'
+	}See its %1wiki page%2 at Savannah.{/t}
+	</p>
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
