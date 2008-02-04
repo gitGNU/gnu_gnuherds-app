@@ -138,36 +138,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <h4>5. {t}Web application Design{/t}<a name="Design"></a> </h4>
 
-	<table border="0">
-	<tbody>
-	<tr><td><p><b>Layers 0, 1, 2, 4 and 5.</b> GUI, Forms, DBManager, PHPTools, and Mailer <span class="modification">({t}outdated{/t})</span> </p>
-	<tr><td><p><a href="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.png"><img src="/doc/UML__Layers_1_2_3_and_4___GUI__Forms__DBManager__PHPTools__Mailer__Data_base_Operation_classes.scaled.png" alt="{t}outdated{/t}"></a> </p>{* XXX Update this image *}
-	<p>{t}The Smarty templates could be moved outside this layer.{/t}</p>
-	<p>&nbsp;</p>
-
-	<tbody>
-	<tr><td><p><b>Layer 6.</b> ADOdb Database Abstraction Library (PHP)</p>
-	<tr><td>
 	<p>
 	{t escape='no'
-	  1='<a href="http://php.net/pdo">'
+	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=181">'
 	  2='</a>'
-	}ADOdb is an external library. It is not being used yet. We give up about using a data base abstraction library, and this proposal will use instead just %1PDO%2.{/t}
+	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
-	<p>&nbsp;</p>
-
-	<tbody>
-	<tr><td><p><b>Layer 7.</b> PostgreSQL data base server (PostgreSQL, SQL)</p>
-	<tr><td><p>{t}Documentation of the new Data Base design:{/t}</p>
-	<ul>
-		<li><a href="/doc/GNUHerds__ER__Logical-model.png">{t}Entity Relation logical model{/t}</a><br>
-		&nbsp; Diagram editor (Dia) image <a href="/doc/GNUHerds__ER__Logical-model.dia">source</a><br>
-		<br>
-		<a href="/doc/GNUHerds__ER__Logical-model.png"><img src="/doc/GNUHerds__ER__Logical-model.scaled.png" alt="{t}Entity Relation logical model{/t}"></a>
-		<li><a href="/doc/GNUHerds__Physical-model.png">{t}Physical model{/t}</a> <span class="modification">({t}outdated{/t})</span> <br>
-		<li><a href="/doc/GNUHerds__SQL_Implementation.psql">{t}SQL Implementation{/t}</a>
-	</ul>
-	</table>
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
