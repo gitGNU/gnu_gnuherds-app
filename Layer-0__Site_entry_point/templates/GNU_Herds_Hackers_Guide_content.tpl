@@ -125,24 +125,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <h4>4. {t}Web application Architecture{/t}<a name="Architecture"></a> </h4>
 
 	<p>
-	{t}As a Free Software project we look for a modular and extensible design. We hope it could be easy to change the technology of a specific layer if it is needed.{/t}
-	</p><p>
-	{t}This architecture proposal is based on PHP:{/t}
+	{t escape='no'
+	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=180">'
+	  2='</a>'
+	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
-
-	<table>
-	<tr> <td><b>Layer 0.</b> <td>Site entry point (<a href="http://www.w3.org/TR/html401/">HTML</a>, <a href="http://www.w3.org/Style/CSS/">CSS</a>, <a href="http://smarty.php.net/">Smarty</a>, <a href="http://httpd.apache.org/docs/2.0/howto/ssi.html">Apache SSI</a> and <a href="http://www.php.net/">PHP</a> ).
-	<tr> <td><b>Layer 1.</b> <td>GUI page builder and themes (PHP)
-	<tr> <td><b>Layer 2.</b> <td>GUI business logic: content section, others (forms checking and processing) (PHP, HTML)
-	<tr> <td><b>Layer 4.</b> <td>Data base Manager class, PHP Tools class and Mailer class (PHP)
-	<tr> <td><b>Layer 5.</b> <td>Data base Operation classes (PHP, SQL)
-	<tr> <td><b>Layer 6.</b> <td><a href="http://adodb.sourceforge.net/">ADOdb</a> Database Abstraction Library (PHP)
-	<tr> <td><b>..... ..</b> <td>NO stored procedures layer.
-	<tr> <td><b>Layer 7.</b> <td><a href="http://www.postgresql.org/">PostgreSQL</a> data base server (PostgreSQL, SQL)
-	<tr> <td><b>locale</b> <td>Here are the files which translate the webapp (<a href="http://www.gnu.org/software/gettext/">gettext</a>)
-	</table>
-
-	<p><img src="/doc/Layers_1_2_3_4_5_and_6.png" alt="{t}outdated{/t}"> <span class="modification">({t}outdated{/t})</span> </p>{* XXX Update this image *}
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
