@@ -33,7 +33,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <li> <a href="#wiki" style='text-decoration: none;'>Wikis</a>
 <li> <a href="#Source_repository" style='text-decoration: none;'>{t}The Git master server{/t}</a>
 <li> <a href="#Data_base" style='text-decoration: none;'>{t}The PostgreSQL data base{/t}</a>
-<li> <a href="#Communication" style='text-decoration: none;'>{t}Mailing lists{/t}</a>
 <li> <a href="#Setup" style='text-decoration: none;'>{t}How to install a development environment?{/t}</a>
 <li> <a href="#Team" style='text-decoration: none;'>{t}Current work team{/t}</a>
 </ol>
@@ -241,19 +240,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  2='</a>'
 	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
-
-<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
-
-<p>&nbsp;</p>
-
-
-<h4>14. {t}Mailing lists{/t} <a name="Communication"></a> </h4>
-
-<ul>
-	<li><a href="https://lists.gnuherds.org/mailman/listinfo/association">association</a> {t}is the project main list.{/t}</li>
-	<li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
-	<li>IRC: &nbsp; /server irc.freenode.net &nbsp; /join #gnuherds</li>
-</ul>
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
