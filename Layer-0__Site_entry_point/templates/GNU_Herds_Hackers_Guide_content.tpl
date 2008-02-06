@@ -180,15 +180,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <h4>8. {t}How the development team and production is integrated?{/t} <a name="env_Integration"></a> </h4>
 
-	<p>{t}Git is used as repository. The HTTP server gets a tagged release via 'update' from the Git master server.{/t}</p>
-
-	<img src="/doc/How_the_development_team_and_production_is_integrated.png" alt="{t}How the development team and production is integrated?{/t}">
-
 	<p>
 	{t escape='no'
-	  1='"<i>git format-patch</i>"'
-	  2='"<i>git send-email</i>"'
-	}To share source code among the developers, publish your repository and let others know where to fetch from, or use %1 or %2.{/t}
+	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=183">'
+	  2='</a>'
+	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
