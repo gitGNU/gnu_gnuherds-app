@@ -31,7 +31,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <li> <a href="#env_Integration" style='text-decoration: none;'>{t}How the development team and production is integrated?{/t}</a>
 <li> <a href="#TODO" style='text-decoration: none;'>{t}Task list{/t}</a>
 <li> <a href="#wiki" style='text-decoration: none;'>Wikis</a>
-<li> <a href="#Source_code" style='text-decoration: none;'>{t}The source code{/t}</a>
 <li> <a href="#Source_repository" style='text-decoration: none;'>{t}The Git master server{/t}</a>
 <li> <a href="#Data_base" style='text-decoration: none;'>{t}The PostgreSQL data base{/t}</a>
 <li> <a href="#Communication" style='text-decoration: none;'>{t}Mailing lists{/t}</a>
@@ -213,32 +212,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=146">'
 	  2='</a>'
 	}See its %1wiki page%2 at Savannah.{/t}
-	</p>
-
-<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
-
-<p>&nbsp;</p>
-
-
-<h4>11. {t}The source code{/t} <a name="Source_code"></a> </h4>
-
-	<p>
-	{t escape='no'
-	  1='<a href="http://download.savannah.gnu.org/releases/gnuherds-app/">'
-	  2='</a>'
-	}If you do not like play with Git, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2.{/t}
-	{t escape='no'
-	  1='<a href="gnuherds-online.tar.gz">'
-	  2='</a>'
-	}Or much better, you can %1download%2 the code which is running this site right now!.{/t}
-
-	</p><p>
-	{t escape='no'
-	  1='<a href="#Technology">'
-	  2='</a>'
-	}You could set up all the required %1Technologies%2 on your host, to be used as your development environment.{/t}
-	</p><p>
-	{t}The source code can have 'XXX' flags, which are used to mark pending tasks, etc.{/t}
 	</p>
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
