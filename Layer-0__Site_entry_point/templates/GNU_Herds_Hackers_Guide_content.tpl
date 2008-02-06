@@ -152,11 +152,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <h4>6. {t}Coding Standards{/t} <a name="Coding_Standards"></a> </h4>
 
-	<p class="strike">
+	<p>
 	{t escape='no'
-	  1='<a href="http://docs.clawphp.org/standards/index">'
+	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=182">'
 	  2='</a>'
-	}We will try to follow these %1Coding Standards%2.{/t}
+	}See its %1wiki page%2 at Savannah.{/t}
 	</p>
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
