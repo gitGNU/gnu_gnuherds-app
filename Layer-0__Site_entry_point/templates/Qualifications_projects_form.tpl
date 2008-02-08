@@ -43,6 +43,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
+<tr> <td colspan="4" class="note" width="620">{t}Add URIs to the work you have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you expose your knowledge, rationales, feedback, etc.{/t}</td> </tr>
+
+<tr> <td colspan="4">&nbsp;</td> </tr>
+
 <tr> <td colspan="4" class="subsection">{t}Technical{/t}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
