@@ -432,7 +432,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <strong>{t}Name{/t}</strong>&nbsp;:{if trim($data.BirthYear) neq ''}<br>
 <strong>{t}Born{/t}</strong> :{/if}{if count($data.NationalityNameList) > 0 }<br>
 <strong>{if count($data.NationalityNameList) == 1 }{t}Nationality{/t}{else}{t}Nationalities{/t}{/if}</strong> :{/if}{if count($data.JobLicenseAtNameList) > 0 }<br>
-<strong>{t}Besides license to work at{/t}</strong> :{/if}
+<strong>{'Besides license to work at'|gettext|strip:'&nbsp;'}</strong>&nbsp;:{/if}
 </td>
 
 <td colspan="2" class="greenLight">
