@@ -290,7 +290,7 @@ class Entity
 	public function saveLostPasswordMagicForEntity($magic)
 	{
 		// Security: The magic is only overriden for the entity with that email.
-		$sqlQuery = "PREPARE query(text,text) AS  UPDATE E1_Entities SET E1_LostPasswordMagic=$1, E1_LostPasswordMagicExpire= now() + '00:30'::interval WHERE E1_Email=$2;  EXECUTE query('$magic','{$_POST['Email']}');";
+		$sqlQuery = "PREPARE query(text,text) AS  UPDATE E1_Entities SET E1_LostPasswordMagic=$1, E1_LostPasswordMagicExpire= now() + '02:00'::interval WHERE E1_Email=$2;  EXECUTE query('$magic','{$_POST['Email']}');";
 		$this->postgresql->execute($sqlQuery,1);
 	}
 
