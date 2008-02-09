@@ -105,7 +105,7 @@ class Entity
 				if ( pg_num_rows($lnResult) == '1' )
 				{
 					$row = pg_fetch_object($lnResult, 0);
-					$array[32][$i] = trim($row->ln_name);
+					$array[32][$i] = dcgettext('nationalities', trim($row->ln_name), LC_MESSAGES);
 				}
 			}
 			else
