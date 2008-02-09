@@ -25,7 +25,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 
 {if $smarty.session.Logged == '1' }
-<tr> <td colspan="3" align="center" class="mainsection">{t}Update non-profit organization{/t}</td> </tr>
+<tr> <td colspan="3" align="center" class="mainsection">{t}Update non-profit organization data{/t}</td> </tr>
 {/if}
 
 <tr> <td colspan="3">&nbsp;</td> </tr>
@@ -33,7 +33,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $smarty.session.Logged == '1' }
 
 {if $checks.result eq 'fail' }
-<tr> <td colspan="3" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td> </tr>
+<tr> <td colspan="3" class="footnote"><span class="must">{t}Some fields does not match.{/t} {t}Please try again.{/t}</span></span></td> </tr>
 {/if}
 
 <tr> <td colspan="3" class="footnote">{t escape=no 1='<span class="must">' 2='</span>'}The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional.{/t}</td> </tr>
@@ -44,8 +44,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {/if}
 
-<tr valign="top">
-<td align="right"><span class="must">*</span><label for="Email" class="raisePopUp" title="{t}Change the account email{/t}">Email</label></td>
+<tr>
+<td align="right"><span class="must">*</span><label for="Email" class="raisePopUp" title="{t}Change the account email{/t}">{t}Email{/t}</label></td>
 <td colspan="2"> <input type="text" name="Email" id="Email" maxlength="60" class="required" value="{$data.Email}">
 {if $smarty.session.WantEmail neq '' and $smarty.session.Logged eq '1'}<strong>[</strong>{$smarty.session.WantEmail}<strong>]</strong>{/if}
 </td>
@@ -115,7 +115,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <table>
 <tr>
 <td colspan="2">
-<label>{'Mark to delete'|gettext|strip:'&nbsp;'}</label>
+<label>{t}Mark to delete{/t}</label>
 </td>
 </tr>
 
@@ -144,7 +144,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td colspan="2" align="right">
-<input type="submit" name="more" value="{t}More{/t}" title="Save and or delete and stay here to add more">
+<input type="submit" name="more" value="{t}More{/t}" title="{t}Save and or delete and stay here to add more{/t}">
 </td>
 </tr>
 </table>
@@ -154,7 +154,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <select name="NationalityList[]" id="Nationality" class="notRequired">
 {html_options values=$nationalityTwoLetter output=$nationalityNames}
 </select>
-<input type="submit" name="more" value="{t}More{/t}" title="Save and or delete and stay here to add more">
+<input type="submit" name="more" value="{t}More{/t}" title="{t}Save and or delete and stay here to add more{/t}">
 
 {/if}
 
@@ -171,7 +171,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <table>
 <tr>
 <td colspan="2">
-<label>{'Mark to delete'|gettext|strip:'&nbsp;'}</label>
+<label>{t}Mark to delete{/t}</label>
 </td>
 </tr>
 
@@ -200,7 +200,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td colspan="2" align="right">
-<input type="submit" name="more" value="{t}More{/t}" title="Save and or delete and stay here to add more">
+<input type="submit" name="more" value="{t}More{/t}" title="{t}Save and or delete and stay here to add more{/t}">
 </td>
 </tr>
 </table>
@@ -210,7 +210,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <select name="JobLicenseAtList[]" id="JobLicenseAt" class="notRequired">
 {html_options values=$countryTwoLetter output=$countryNames}
 </select>
-<input type="submit" name="more" value="{t}More{/t}" title="Save and or delete and stay here to add more">
+<input type="submit" name="more" value="{t}More{/t}" title="{t}Save and or delete and stay here to add more{/t}">
 
 {/if}
 

@@ -38,7 +38,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 {if $checks.result eq 'fail' }
-<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></td> </tr>
+<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match.{/t} {t}Please try again.{/t}</span></td> </tr>
 {/if}
 
 <tr> <td colspan="4" class="footnote">{t escape=no 1='<span class="must">' 2='</span>'}The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional.{/t}</td> </tr>
@@ -128,8 +128,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="previous" value="{t}Previous{/t}" title="Save and move to the previous section" disabled>
-<input type="submit" name="next" value="{t}Next{/t}" title="Save and move to the next section">
+<input type="submit" name="previous" value="{t}Previous{/t}" title="{t}Save and move to the previous section{/t}" disabled>
+<input type="submit" name="next" value="{t}Next{/t}" title="{t}Save and move to the next section{/t}">
 
 <input type="hidden" name="section2control" value="{$section}">
 
@@ -137,7 +137,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="finish" value="{t}Finish{/t}" title="Finish the edition" {if $checkresults.profiles_etc neq 'pass' or $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or $checkresults.location neq 'pass' or $checkresults.contract neq 'pass'}disabled{/if}>
+<input type="submit" name="finish" value="{t}Finish{/t}" title="{t}Save and finish the edition{/t}" {if $checkresults.profiles_etc neq 'pass' or $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or $checkresults.location neq 'pass' or $checkresults.contract neq 'pass'}disabled{/if}>
 </td>
 </tr>
 

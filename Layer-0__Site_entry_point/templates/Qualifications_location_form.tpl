@@ -69,12 +69,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="previous" value="{t}Previous{/t}" title="Save and move to the previous section">
+<input type="submit" name="previous" value="{t}Previous{/t}" title="{t}Save and move to the previous section{/t}">
 
 {if $smarty.session.LoginType eq 'Person' }
-<input type="submit" name="next" value="{t}Next{/t}" title="Save and move to the next section">
+<input type="submit" name="next" value="{t}Next{/t}" title="{t}Save and move to the next section{/t}">
 {else}
-<input type="submit" name="next" value="{t}Next{/t}" title="Save and move to the next section" disabled>
+<input type="submit" name="next" value="{t}Next{/t}" title="{t}Save and move to the next section{/t}" disabled>
 {/if}
 
 <input type="hidden" name="section2control" value="{$section}">
@@ -87,7 +87,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="finish" value="{t}Finish{/t}" title="Finish the edition" {if $checkresults.profiles_etc neq 'pass' or $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or ( $smarty.session.LoginType eq 'Person' and $checkresults.contract neq 'pass' ) }disabled{/if}>
+<input type="submit" name="finish" value="{t}Finish{/t}" title="{t}Save and finish the edition{/t}" {if $checkresults.profiles_etc neq 'pass' or $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or ( $smarty.session.LoginType eq 'Person' and $checkresults.contract neq 'pass' ) }disabled{/if}>
 </td>
 </tr>
 

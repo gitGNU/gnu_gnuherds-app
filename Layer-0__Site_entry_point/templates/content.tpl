@@ -32,7 +32,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{/if}
 {else}
 	{if $smarty.post.logout != '' }
-		<p>{t}Log out successful{/t}</p> {* XXX: Is not being used! *}
+		<p>{t}Log out successful.{/t}</p> {* XXX: This is not being used. We redirect to the home page. *}
 	{else}
 		{* Show the standard page content *}
 		{if $webpage->contentExceptionOutput eq '' }

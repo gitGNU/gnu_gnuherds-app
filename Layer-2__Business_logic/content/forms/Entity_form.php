@@ -48,7 +48,7 @@ abstract class EntityForm
 			if ( $this->manager->allowActivateAccountEmail($_GET['email']) == true )
 			{
 				// Send a warning email
-				$message = gettext("An attempt was made to activate a new GNU Herds account with this email address.")." ".gettext("However, you have already an active account! Follow the below link to get your lost password if it is needed:")."\n\n";
+				$message = gettext("An attempt was made to activate a new GNU Herds' account with this email address.")." ".gettext("However, you have already an active account!")." ".gettext("Follow the below link to get a new password if it is needed:")."\n\n";
 
 				$message .= "https://".$_SERVER['HTTP_HOST']."/password";
 
@@ -121,7 +121,7 @@ abstract class EntityForm
 			// Check to avoid spam
 			if ( $this->manager->allowRegisterAccountDuplicatedEmail($_POST['Email']) == true )
 			{
-				$message = gettext("An attempt was made to register a new GNU Herds account with this email address.")." ".gettext("However, you have already an active account! Follow the below link to get your lost password if it is needed:")."\n\n";
+				$message = gettext("An attempt was made to register a new GNU Herds' account with this email address.")." ".gettext("However, you have already an active account!")." ".gettext("Follow the below link to get a new password if it is needed:")."\n\n";
 
 				$message .= "https://".$_SERVER['HTTP_HOST']."/password";
 
@@ -148,7 +148,7 @@ abstract class EntityForm
 			$message .= "\n\n";
 			$message .= gettext("If you have not asked for this new account, ignore this email.")."\n\n";
 
-			$message .= gettext("Note: To avoid 'Spam' you can only get this email at the most once each 48 hours. If this email is Spam for you, please let it knows to  association AT gnuherds.org")."\n\n";
+			$message .= gettext("Note: To avoid 'Spam' you can only get this email at the most once each 48 hours.")." ".gettext("If this email is Spam for you, please let it knows to  association AT gnuherds.org")."\n\n";
 
 			mail($_POST['Email'], "GNU Herds: ".gettext("Activate account"), "$message", "From: association@gnuherds.org");
 		}

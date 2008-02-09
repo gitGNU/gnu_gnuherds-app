@@ -103,7 +103,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {* Other contact information *}
 
-Email: {mailto address=$data.Email}<br>
+{t}Email{/t}: {mailto address=$data.Email}<br>
 
 {if trim($data.Blog) neq ''}
 	{t}Blog{/t}: <a href="{$data.Blog}">{$data.Blog}</a><br>

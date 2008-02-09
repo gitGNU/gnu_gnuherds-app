@@ -38,12 +38,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 {if $checks.result eq 'fail' }
-<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></td> </tr>
+<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match.{/t} {t}Please try again.{/t}</span></td> </tr>
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="note" width="620">{t}Add URIs to the work you have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you expose your knowledge, rationales, feedback, etc.{/t}</td> </tr>
+<tr> <td colspan="4" class="note" width="620">{t}Add URIs to the work you or your staff have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you or your staff expose your knowledge, rationales, feedback, etc.{/t}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
@@ -53,10 +53,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td colspan="4" align="right">
-
-{if $smarty.session.LoginType neq 'Person' }
-<p>{t}URIs which prove your contritutions to Free Software projects. That is to say, links to web pages: CVS web, emails which contribute patches or advices accessible from web mail listing archives, etc.{/t}</p>
-{/if}
 
 <table>
 <tr>
@@ -132,7 +128,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td colspan="4" align="right">
-<input type="submit" name="more" value="{t}More{/t}" title="Save and or delete and stay here to add more languages">
+<input type="submit" name="more" value="{t}More{/t}" title="{t}Save and or delete and stay here to add more{/t}">
 </td>
 </tr>
 </table>
@@ -152,8 +148,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="previous" value="{t}Previous{/t}" title="Save and move to the previous section">
-<input type="submit" name="next" value="{t}Next{/t}" title="Save and move to the next section">
+<input type="submit" name="previous" value="{t}Previous{/t}" title="{t}Save and move to the previous section{/t}">
+<input type="submit" name="next" value="{t}Next{/t}" title="{t}Save and move to the next section{/t}">
 
 <input type="hidden" name="section2control" value="{$section}">
 
@@ -164,7 +160,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="finish" value="{t}Finish{/t}" title="Finish the edition" {if $checkresults.profiles_etc neq 'pass' or $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.location neq 'pass' or ( $smarty.session.LoginType eq 'Person' and $checkresults.contract neq 'pass' ) }disabled{/if}>
+<input type="submit" name="finish" value="{t}Finish{/t}" title="{t}Save and finish the edition{/t}" {if $checkresults.profiles_etc neq 'pass' or $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.location neq 'pass' or ( $smarty.session.LoginType eq 'Person' and $checkresults.contract neq 'pass' ) }disabled{/if}>
 </td>
 </tr>
 

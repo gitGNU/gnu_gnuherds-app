@@ -147,6 +147,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 
 <form name="newJobOffersForm" method="post" action="offers?action=edit&id=&section=general">{* This could be a GET request instead of a POST one. I have used a POST to be able to use a button, due to it is near of the delete button. *}
-<div><input type="submit" name="new" value="{t}New offer{/t}"></div>
+<div><input type="submit" name="new" value="{t}New job offer{/t}"></div>
 </form>
 

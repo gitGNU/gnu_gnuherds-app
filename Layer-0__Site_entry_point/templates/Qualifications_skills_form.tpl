@@ -38,14 +38,14 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 {if $checks.result eq 'fail' }
-<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></td> </tr>
+<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match.{/t} {t}Please try again.{/t}</span></td> </tr>
 {elseif $checks.result eq 'suggestions' }
-<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields offer suggestions. The form has not been saved yet. Please, choose.{/t}</span></td> </tr>
+<tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields offer suggestions.{/t} {t}The form has not been saved yet.{/t} {t}Please, choose or edit again.{/t}</span></td> </tr>
 {/if}
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4">{t}Non-Free and Pending skills are not showed in the view.{/t}</td> </tr>
+<tr> <td colspan="4">{t}Non-Free or Pending skills are not showed in the view.{/t}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
@@ -67,7 +67,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <label>{'Mark to delete'|gettext|strip:'&nbsp;'}</label>
 {/if}
 </td>
-<td><label class="raisePopUp" title="{t}Non-Free and Pending skills are not showed in the view.{/t}">{t}Checks{/t}</label></td>
+<td><label class="raisePopUp" title="{t}Non-Free or Pending skills are not showed in the view.{/t}">{t}Checks{/t}</label></td>
 <td><label class="raisePopUp" title="{t}Add skills and theirs knowledge and experience levels.{/t}">{t}Skills{/t}</label></td>
 <td>
 <label>{'Knowledge level'|gettext|strip:'&nbsp;'}</label>
@@ -87,20 +87,20 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </td>
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
-{if $data.CheckList[$i] eq "Pending"}<label title="{t}This skill is pending for checking.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Unknown"}<label title="{t}This skill is unknown.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Abstract"}<label title="{t}This skill is abstract.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Free Software"}<label title="{t}This skill is Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Almost-Free Software"}<label title="{t}This skill is almost Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Partially-Free Software"}<label title="{t}This skill is partially Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Non-Free Software"}<label title="{t}This skill is not Free. Software criteria at the FAQ. Report any mistake!{/t}">{$data.CheckList[$i]|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Hardware"}<label title="{t}This skill is Hardware.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Documentation"}<label title="{t}This skill is Documentation.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Free Documentation"}<label title="{t}This skill is Free. Software criteria at the FAQ. Report any mistake!{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Non-Free Documentation"}<label title="{t}This skill is not Free. Software criteria at the FAQ. Report any mistake!{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Art"}<label title="{t}This skill is Art.{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Sharable Art"}<label title="{t}This skill is Free. Software criteria at the FAQ. Report any mistake!{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Non-Sharable Art"}<label title="{t}This skill is not Free. Software criteria at the FAQ. Report any mistake!{/t}">{t}{$data.CheckList[$i]}{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Pending"}<label title="{t}This skill is pending for checking.{/t}">{t}Pending{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Unknown"}<label title="{t}This skill is unknown.{/t}">{t}Unknown{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Abstract"}<label title="{t}This skill is abstract.{/t}">{t}Abstract{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Free Software"}<label title="{t}This skill is Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Free Software'|gettext|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Almost-Free Software"}<label title="{t}This skill is almost Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Almost-Free Software'|gettext|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Partially-Free Software"}<label title="{t}This skill is partially Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Partially-Free Software'|gettext|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Non-Free Software"}<label title="{t}This skill is not Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Non-Free Software'|gettext|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Hardware"}<label title="{t}This skill is Hardware.{/t}">{t}Hardware{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Documentation"}<label title="{t}This skill is Documentation.{/t}">{t}Documentation{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Free Documentation"}<label title="{t}This skill is Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Free Documentation'|gettext|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Non-Free Documentation"}<label title="{t}This skill is not Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Non-Free Documentation'|gettext|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Art"}<label title="{t}This skill is Art.{/t}">{t}Art{/t}</label>{/if}
+{if $data.CheckList[$i] eq "Sharable Art"}<label title="{t}This skill is Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Sharable Art'|gettext|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Non-Sharable Art"}<label title="{t}This skill is not Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Non-Sharable Art'|gettext|strip:'&nbsp;'}</label>{/if}
 </td>
 
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
@@ -111,7 +111,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {if count($smarty.post.SuggestedSkills[$i]) >= 1 }
 <br>
-<span class="must">{t}Please choose one:{/t}<br></span>
+<span class="must">{t}Please choose:{/t}<br></span>
 {html_radios name='SuggestionSet'|cat:$i options=$smarty.post.SuggestedSkills[$i] separator='<br>'}
 <label><input type="radio" name="SuggestionSet{$i}" value="Keep as is" />{t}Keep as is{/t}</label><br />
 {/if}
@@ -177,7 +177,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td colspan="5" align="right">
-<input type="submit" name="more" value="{t}More{/t}" title="Save and or delete and stay here to add more languages">
+<input type="submit" name="more" value="{t}More{/t}" title="{t}Save and or delete and stay here to add more{/t}">
 </td>
 </tr>
 </table>
@@ -197,8 +197,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="previous" value="{t}Previous{/t}" title="Save and move to the previous section">
-<input type="submit" name="next" value="{t}Next{/t}" title="Save and move to the next section">
+<input type="submit" name="previous" value="{t}Previous{/t}" title="{t}Save and move to the previous section{/t}">
+<input type="submit" name="next" value="{t}Next{/t}" title="{t}Save and move to the next section{/t}">
 
 <input type="hidden" name="section2control" value="{$section}">
 
@@ -207,7 +207,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="finish" value="{t}Finish{/t}" title="Finish the edition" {if $checkresults.profiles_etc neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or $checkresults.location neq 'pass' or ( $smarty.session.LoginType eq 'Person' and $checkresults.contract neq 'pass' ) }disabled{/if}>
+<input type="submit" name="finish" value="{t}Finish{/t}" title="{t}Save and finish the edition{/t}" {if $checkresults.profiles_etc neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or $checkresults.location neq 'pass' or ( $smarty.session.LoginType eq 'Person' and $checkresults.contract neq 'pass' ) }disabled{/if}>
 </td>
 </tr>
 

@@ -81,8 +81,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="previous" value="{t}Previous{/t}" title="Save and move to the previous section">
-<input type="submit" name="next" value="{t}Next{/t}" title="Save and move to the next section">
+<input type="submit" name="previous" value="{t}Previous{/t}" title="{t}Save and move to the previous section{/t}">
+<input type="submit" name="next" value="{t}Next{/t}" title="{t}Save and move to the next section{/t}">
 
 <input type="hidden" name="section2control" value="{$section}">
 
@@ -91,7 +91,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="finish" value="{t}Finish{/t}" title="Finish the edition" {if $checkresults.general neq 'pass' or $checkresults.profiles_etc neq 'pass' or $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or $checkresults.contract neq 'pass'}disabled{/if}>
+<input type="submit" name="finish" value="{t}Finish{/t}" title="{t}Save and finish the edition{/t}" {if $checkresults.general neq 'pass' or $checkresults.profiles_etc neq 'pass' or $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or $checkresults.contract neq 'pass'}disabled{/if}>
 </td>
 </tr>
 
