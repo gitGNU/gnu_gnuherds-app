@@ -512,7 +512,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{mailto address=$data.Email}<br>
 
 	{if trim($data.Website) neq ''}
-		{t}web site{/t} <a href="{$data.Website}">{$data.Website}</a><br>
+		{t}Web site{/t} <a href="{$data.Website}">{$data.Website}</a><br>
 	{/if}
 
 
