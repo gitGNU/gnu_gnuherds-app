@@ -282,7 +282,7 @@ class Entity
 		}
 		else
 		{
-			$error = "<p>isThereEntity: ".gettext("Unexpected error")."</p>";
+			$error = "<p>isThereEntity: ".gettext("ERROR: Unexpected condition")."</p>";
 			throw new Exception($error,false);
 		}
 	}

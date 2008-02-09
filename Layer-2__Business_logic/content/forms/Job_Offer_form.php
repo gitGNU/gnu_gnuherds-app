@@ -249,7 +249,7 @@ class JobOfferForm extends SkillsForm
 			break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 
@@ -449,7 +449,7 @@ class JobOfferForm extends SkillsForm
 			break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 	}
@@ -976,7 +976,7 @@ class JobOfferForm extends SkillsForm
 			break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 	}
@@ -1125,7 +1125,7 @@ class JobOfferForm extends SkillsForm
 			case gettext("Contract"): $_POST['jump'] = 'contract'; break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 	}
