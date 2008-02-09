@@ -49,13 +49,13 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $state[$i] eq 'Selected'}greenApplicationState{/if}
 ">
 {t}{$state[$i]}{/t}
-<!--
+{*
 'Received'	without color
 'In process'	blue
 'Ruled out'	red
 'Finalist' 	almost green
 'Selected'	green
--->
+*}
 </td>
 </tr>
 {/foreach}
