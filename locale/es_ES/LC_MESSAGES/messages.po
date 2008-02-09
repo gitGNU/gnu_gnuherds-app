@@ -220,7 +220,7 @@ msgid "Change account's email"
 msgstr "Cambia el correo electrónico de la cuenta"
 
 msgid "An email has been sent to the new email address to validate it."
-msgstr "Un correo electrónico ha sido enviado a la nueva dirección de correo electrónico para validarlo."
+msgstr "Un correo electrónico ha sido enviado a la nueva dirección de correo electrónico para validarla."
 
 msgid "An attempt was made to register a new GNU Herds' account with this email address."
 msgstr "Se ha intentado registrar una nueva cuenta GNU Herds con esta dirección de correo electrónico."
@@ -247,7 +247,7 @@ msgid "If this email is Spam for you, please let it knows to  association AT gnu
 msgstr "Si este correo electrónico es Spam para usted, por favor hágalo saber a  association AT gnuherds.org"
 
 msgid "Activate account"
-msgstr "Activa cuenta"
+msgstr "Activar cuenta"
 
 msgid "Success. An email has been sent to %s with the instructions to activate the account."
 msgstr "Correcto. Un correo electrónico ha sido enviado a %s con las instrucciones para activar la cuenta."
