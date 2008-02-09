@@ -217,7 +217,7 @@ msgid "If you have not asked for it, just ignore this email."
 msgstr "Si usted no lo ha solicitado, simplemente ignore este correo electrónico."
 
 msgid "Change account's email"
-msgstr "Cambia el correo electrónico de la cuenta"
+msgstr "Cambiar el correo electrónico de la cuenta"
 
 msgid "An email has been sent to the new email address to validate it."
 msgstr "Un correo electrónico ha sido enviado a la nueva dirección de correo electrónico para validarla."
