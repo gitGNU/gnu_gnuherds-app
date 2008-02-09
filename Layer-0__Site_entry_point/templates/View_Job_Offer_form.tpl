@@ -43,7 +43,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {t escape='no'
   1='<strong>'
   2='</strong>'
-}%1Vacancy%2 looking for{/t}
+}%1Job%2 offer{/t}
 </td>
 
 {if $data.EntityId eq $smarty.session.EntityId}
