@@ -1558,8 +1558,8 @@ msgstr "Licencia o licencias usadas por esta habilidad"
 msgid "License name"
 msgstr "Nombre de la licencia"
 
-msgid "License URL"
-msgstr "URL de la licencia"
+msgid "License URI"
+msgstr "URI de la licencia"
 
 msgid "Notes taken to make it more clear the rationale behind the current classification decision"
 msgstr "Notas tomadas para dejar más claro el razonamiento en el cual se apoya la decisión de la clasificación actual"

@@ -154,7 +154,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr>
-<td align="right"><label for="SkillLicenseURL">{'License URL'|gettext|strip:'&nbsp;'}</label></td>
+<td align="right"><label for="SkillLicenseURL">{'License URI'|gettext|strip:'&nbsp;'}</label></td>
 <td>
 <input type="text" name="SkillLicenseURL" id="SkillLicenseURL" size="60" maxlength="255" class="notRequired" value="{$data.SkillLicenseURL}">
 </td>
