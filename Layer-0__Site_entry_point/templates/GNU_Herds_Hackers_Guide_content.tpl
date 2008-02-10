@@ -31,7 +31,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=153">'
 	  2='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&amp;item_id=155">'
 	  3='</a>'
-	}To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this Coders' Guide. If you need support ask for it at{/t} {mailto address='gnuherds-app-dev@nongnu.org'}
+	}To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this coders' guide. If you need support ask for it at{/t} {mailto address='gnuherds-app-dev@nongnu.org'}
 	</p>
 
 	<p>

@@ -405,8 +405,8 @@ msgstr "Guía del desarrollador de GNU Herds"
 msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!."
 msgstr "Si usted quiere formar parte del equipo de GNU Herds, o simplemente colaborar esporádicamente, como algunos ya han hecho, puede %1suscribirse%2 a la lista de correo 'gnuherds-app-dev' o coordinarse con uno de los miembros del equipo. ¡Gracias!."
 
-msgid "To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this Coders' Guide. If you need support ask for it at"
-msgstr "Para jugar con la aplicación web, %1descargue%3 el código e %2instálelo%3 en su PC. Los traductores no necesitan descargar el código fuente, nosotros le enviaremos el fichero POT de gettext a traducir. En esta Guía del desarrollador se responden las preguntas mas frecuentes. Si necesita ayuda pídala en"
+msgid "To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this coders' guide. If you need support ask for it at"
+msgstr "Para jugar con la aplicación web, %1descargue%3 el código e %2instálelo%3 en su PC. Los traductores no necesitan descargar el código fuente, nosotros le enviaremos el fichero POT de gettext a traducir. En esta guía del desarrollador se responden las preguntas mas frecuentes. Si necesita ayuda pídala en"
 
 msgid "Read the current draft of %1GNU Herds' Charter%2."
 msgstr "Véase el borrador actual de los %1Estatutos de GNU Herds%2."
