@@ -1213,6 +1213,9 @@ msgstr "ОБНОВИТЬ БЕСПРИБЫЛЬНУЮ ОРГАНИЗАЦИЮ"
 msgid "non-profit"
 msgstr "БЕСПРИБЫЛЬНАЯ"
 
+msgid "non-profit Organization"
+msgstr "Безприбыльная организация"
+
 msgid "Name"
 msgstr "Название"
 

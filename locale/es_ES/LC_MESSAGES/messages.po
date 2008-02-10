@@ -1168,6 +1168,9 @@ msgstr "Actualizar datos de organización sin ánimo de lucro"
 msgid "non-profit"
 msgstr "Organización"
 
+msgid "non-profit Organization"
+msgstr "Organización sin ánimo de lucro"
+
 msgid "Name"
 msgstr "Nombre"
 
