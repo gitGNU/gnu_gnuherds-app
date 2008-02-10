@@ -717,7 +717,7 @@ msgstr "ser usado como sistema de votación para la comunidad de Software Libre.
 msgid "The GNU Herds' official voting mechanism is only intented to:"
 msgstr "El sistema de votación de GNU Herds solo pretende:"
 
-msgid "be used as voting system to this Association. The voting mechanism must be used as a tool to keep GNU Herds moving in the right direction, helping members guide the board members. It can also be used to get opinions about ideas, etc.: binding vote, opinión vote."
+msgid "be used as voting system to this Association. The voting mechanism must be used as a tool to keep GNU Herds moving in the right direction, helping members guide the board members. It can also be used to get opinions about ideas, etc.: binding vote, opinion vote."
 msgstr "ser usado como sistema de votación para esta Asociación. El mecanismo de votación debe ser usado como una herramienta para mantener GNU Herds en la dirección correcta, ayudando a los afiliados a guiar al Comité. También puede ser usado para obtener opiniones acerca de ideas, etc.: voto vinculante, voto de opinión."
 
 msgid "See references to documentation at bottom of this page."
@@ -1724,7 +1724,7 @@ msgid "Other"
 msgstr "Otro"
 
 #
-# Data Base LA_AcademicQualifications table
+# Data Base LH_Skills table
 #
 msgid "Pending"
 msgstr "Pendiente"
