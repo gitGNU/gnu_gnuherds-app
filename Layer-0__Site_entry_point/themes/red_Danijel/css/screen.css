@@ -295,6 +295,11 @@ color:#555544;
 background-color:#e0e1bf;
 }
 
+.head{
+font-weight:bold;
+text-align:center;
+}
+
 .must{
 font-family:Arial, Helvetica, Georgia, sans-serif;
 font-size:12px;

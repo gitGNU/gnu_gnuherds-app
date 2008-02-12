@@ -39,17 +39,21 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <tr>
-<td colspan="4" class="subsection">
-{t escape='no'
-  1='<strong>'
-  2='</strong>'
-}%1Job%2 offer{/t}
+<td colspan="4" class="subsection head">
+{t}Job offer{/t}
 </td>
 
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=general" title="{t}Edit section{/t}: {t}General{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
+
+<tr>
+<td colspan="4">&nbsp;</td>
+{if $data.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr> 
 
 <tr valign="top">
 <td align="right"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
