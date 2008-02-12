@@ -831,8 +831,8 @@ msgstr "¡La edición de esta oferta no está terminada!. No está lista para se
 msgid "View contact information"
 msgstr "Ver información de contacto"
 
-msgid "%1Job%2 offer"
-msgstr "%1Oferta%2 de empleo"
+msgid "Job offer"
+msgstr "Oferta de empleo"
 
 msgid "Persons"
 msgstr "Personas"
