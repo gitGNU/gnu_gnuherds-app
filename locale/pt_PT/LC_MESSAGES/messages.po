@@ -1,6 +1,6 @@
 # Authors: Duarte Loreto
 #
-# Copyright © 2006, 2007 Duarte Loreto <happyguy_pt@hotmail.com>
+# Copyright © 2006, 2007, 2008 Duarte Loreto <happyguy_pt@hotmail.com>
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU Affero General Public License as published by the Free Software Foundation,
@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: GNUHerds Site\n"
 "Report-Msgid-Bugs-To: happyguy_pt@hotmail.com\n"
 "POT-Creation-Date: 2006-04-10 19:12+0200\n"
-"PO-Revision-Date: 2007-04-09 13:45+0100\n"
+"PO-Revision-Date: 2008-02-11 13:45+0100\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: pt <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -29,16 +29,14 @@ msgstr ""
 #
 # header.tpl
 #
-#, fuzzy
 msgid "Change language"
-msgstr "Cambia lenguaje"
+msgstr "Alterar o idioma"
 
 msgid "Free Software Association"
 msgstr "Associação de Software Livre"
 
-#, fuzzy
 msgid "%1Download the project source code!%2"
-msgstr "%1¡Descargue el código fuente del proyecto!%2"
+msgstr "%1Faça download do código fonte do projecto!%2"
 
 msgid "Project state"
 msgstr "Estado do projecto"
@@ -52,24 +50,20 @@ msgstr "Página Inicial"
 msgid "Charter (draft)"
 msgstr "Estatutos (rascunho)"
 
-#, fuzzy
 msgid "Coders' guide"
 msgstr "Guia do programador"
 
 msgid "Account"
-msgstr ""
+msgstr "Conta"
 
-#, fuzzy
 msgid "My personal profile"
-msgstr "Indivíduo (Membro)"
+msgstr "O meu perfil pessoal"
 
-#, fuzzy
 msgid "Our company"
-msgstr "Empresa"
+msgstr "A nossa empresa"
 
-#, fuzzy
 msgid "Our non-profit"
-msgstr "Nuestra organización"
+msgstr "A nossa organização sem fins lucrativos"
 
 msgid "My qualifications"
 msgstr "As minhas qualificações"
@@ -89,24 +83,20 @@ msgstr "As minhas candidaturas"
 msgid "Our job applications"
 msgstr "As nossas candidaturas"
 
-#, fuzzy
 msgid "Settings"
-msgstr "Configuraciones"
+msgstr "Definições"
 
-#, fuzzy
 msgid "Administration"
-msgstr "Administración"
+msgstr "Administração"
 
 msgid "Resources"
 msgstr "Recursos"
 
-#, fuzzy
 msgid "FS business models"
-msgstr "Redes de negócios SL"
+msgstr "Modelos de negócio de SL"
 
-#, fuzzy
 msgid "FS job offers"
-msgstr "Ofertas de emprego SL"
+msgstr "Ofertas de emprego de SL"
 
 #
 # log_in_box.tpl
@@ -117,17 +107,14 @@ msgstr "Iniciar sessão"
 msgid "Lost password?"
 msgstr "Esqueceu-se da senha?"
 
-#, fuzzy
 msgid "Register person"
-msgstr "Novo indivíduo?"
+msgstr "Registar indivíduo"
 
-#, fuzzy
 msgid "Register company"
-msgstr "Nova empresa?"
+msgstr "Registar empresa"
 
-#, fuzzy
 msgid "Register non-profit"
-msgstr "Nova organização?"
+msgstr "Registar organização"
 
 #
 # log_out_box.tpl
@@ -138,15 +125,12 @@ msgstr "Terminar sessão"
 #
 # content.tpl
 #
-#, fuzzy
 msgid "Log in successful!"
-msgstr "Sessão iniciada com sucesso"
+msgstr "Sessão iniciada com sucesso!"
 
-#, fuzzy
 msgid "Now, you can go to the account menu to manage your data."
-msgstr "Agora, pode utilizar o XXX_acount_XXX menu para organizar os seus dados"
+msgstr "Agora, pode utilizar o menu Conta para organizar os seus dados."
 
-#, fuzzy
 msgid "Log in unsuccessful!"
 msgstr "Erro ao iniciar sessão!"
 
@@ -162,9 +146,8 @@ msgstr "Sessão terminada com sucesso."
 #
 # foot.tpl
 #
-#, fuzzy
 msgid "Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!"
-msgstr "Por favor envíe cualquier observación a %1. Por ejemplo, usted puede informar de problemas técnicos tales como enlaces rotos, incorrecta presentación de la página, etc. Será bienvenida también cualquier crítica o sugerencia. ¡GNU Herds trabaja para usted!."
+msgstr "Agradecemos que envie comentários para %1. Poderá, por exemplo, enviar relatórios de problemas técnicos tais como links inválidos, páginas cuja visualização não é correcta, etc. Agradecemos também críticas e sugestões. O GNU Herds trabalha para si!"
 
 #
 # Lost_Password_form.tpl
@@ -187,9 +170,8 @@ msgstr "Por motivos de segurança. o GNU Herds não envia senhas por correio ele
 msgid "To get your new password follow the below link."
 msgstr "Para obter a sua nova senha siga o link abaixo."
 
-#, fuzzy
 msgid "That link will expire in 2 hours:"
-msgstr "El enlace expirará en 2 horas:"
+msgstr "Esse link irá expirar dentro de 2 horas:"
 
 msgid "If you have not asked for a new password, ignore it and your password will not be changed."
 msgstr "Caso não tenha pedido uma nova senha, ignore-o e a sua senha não será alterada."
@@ -206,93 +188,71 @@ msgstr "Para aumentar a sua segurança, deveria alterar a sua senha após inicia
 #
 # Entity_form.php
 #
-#, fuzzy
 msgid "An attempt was made to activate a new GNU Herds' account with this email address."
-msgstr "Se ha intentado activar una cuenta GNU Herds con esta dirección de correo electrónico."
+msgstr "Foi feita uma tentativa de activação de uma nova conta GNU Herds com este endereço de email."
 
-#, fuzzy
 msgid "However, you have already an active account!"
-msgstr "¡Sin embargo, usted ya tiene una cuenta activada!."
+msgstr "No entanto, já possui uma conta activa!"
 
-#, fuzzy
 msgid "Follow the below link to get a new password if it is needed:"
-msgstr "Si lo necesita, abra el siguiente enlace para obtener una contraseña nueva:"
+msgstr "Siga o link abaixo para obter uma nova senha, caso necessite:"
 
-#, fuzzy
 msgid "If you have not asked for this new account, someone else has asked for it with your email!"
-msgstr "¡Si usted no ha solicitado esta nueva cuenta, alguien la ha solicitado utilizando su correo electrónico!."
+msgstr "Caso não tenha pedido esta nova conta, alguém a pediu utilizando o seu endereço de email!"
 
-#, fuzzy
 msgid "Your account has been activated!"
-msgstr "¡Su cuenta ha sido activada!."
+msgstr "A sua conta foi activada!"
 
-#, fuzzy
 msgid "The email has been changed!"
-msgstr "¡El correo electrónico ha sido cambiado!."
+msgstr "O endereço de email foi alterado!"
 
-#, fuzzy
 msgid "To change your GNU Herds account's email, first log in and then follow the below link."
-msgstr "Para cambiar el correo electrónico de su cuenta GNU Herds, primero entre en GNU Herds y entonces siga el siguiente enlace."
+msgstr "Para alterar o endereço de email da sua conta GNU Herds, inicie uma sessão e depois siga o link abaixo."
 
-#, fuzzy
 msgid "That link will expire in 7 days:"
-msgstr "El enlace expirará en 5 días:"
+msgstr "Esse link irá expirar dentro de 7 dias:"
 
-#, fuzzy
 msgid "If you have not asked for it, just ignore this email."
-msgstr "Si usted no lo ha solicitado, simplemente ignore este correo electrónico."
+msgstr "Caso não a tenha pedido, simplesmente ignore este email."
 
-#, fuzzy
 msgid "Change account's email"
-msgstr "Cambiar el correo electrónico de la cuenta"
+msgstr "Alterar o email da conta"
 
-#, fuzzy
 msgid "An email has been sent to the new email address to validate it."
-msgstr "Un correo electrónico ha sido enviado a la nueva dirección de correo electrónico para validarla."
+msgstr "Foi enviado um email para o novo endereço de email, para o validar."
 
-#, fuzzy
 msgid "An attempt was made to register a new GNU Herds' account with this email address."
-msgstr "Se ha intentado registrar una nueva cuenta GNU Herds con esta dirección de correo electrónico."
+msgstr "Foi feita uma tentativa de registar uma nova conta GNU Herds com este endereço de email."
 
-#, fuzzy
 msgid "Your email has been used to create an account at GNU Herds."
-msgstr "Su correo electrónico ha sido usado para crear una nueva cuenta en GNU Herds."
+msgstr "O seu endereço de email foi utilizado para criar uma conta no GNU Herds."
 
-#, fuzzy
 msgid "To activate it follow the below link."
-msgstr "Para activarla siga el siguiente enlace."
+msgstr "Para a activar, siga o link abaixo."
 
-#, fuzzy
 msgid "That link will expire in 48 hours."
-msgstr "El enlace expirará en 48 horas."
+msgstr "Esse link irá expirar dentro de 48 horas."
 
-#, fuzzy
 msgid "To get a new non-expired link just register at gnuherds.org again."
-msgstr "Para obtener un nuevo enlace no-expirado, simplemente regístrese de nuevo en gnuherds.org"
+msgstr "Para obter um novo link não expirado basta registar-se novamente no gnuherds.org."
 
-#, fuzzy
 msgid "If you have not asked for this new account, ignore this email."
-msgstr "Si usted no ha solicitado esta nueva cuenta, ignore este correo electrónico."
+msgstr "Caso não tenha pedido esta nova conta, ignore este email."
 
-#, fuzzy
 msgid "Note: To avoid 'Spam' you can only get this email at the most once each 48 hours."
-msgstr "Nota: Para evitar 'Spam' usted solo puede obtener este correo electrónico como máximo una vez cada 48 horas."
+msgstr "Nota: Para evitar 'Spam' apenas poderá receber este email no máximo uma vez a cada 48 horas."
 
-#, fuzzy
 msgid "If this email is Spam for you, please let it knows to  association AT gnuherds.org"
-msgstr "Si este correo electrónico es Spam para usted, por favor hágalo saber a  association AT gnuherds.org"
+msgstr "Caso considere este email Spam, agradecemos que nos informe através do endereço  association AT gnuherds.org"
 
-#, fuzzy
 msgid "Activate account"
-msgstr "Activar cuenta"
+msgstr "Activar a conta"
 
-#, fuzzy
 msgid "Success. An email has been sent to %s with the instructions to activate the account."
-msgstr "Correcto. Un correo electrónico ha sido enviado a %s con las instrucciones para activar la cuenta."
+msgstr "Sucesso. Foi enviado um email para %s com as instruções para activar a conta."
 
-#, fuzzy
 msgid "If you do not receive such email, you can inform about it at %s."
-msgstr "Si usted no recibe tal correo electrónico, puede informar a %s."
+msgstr "Caso não receba esse email, poderá informar-nos disso através do endereço %s."
 
 #
 # Entity.php
@@ -330,7 +290,6 @@ msgstr "Certificação %1"
 msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
 msgstr "Este projecto foi realizado por um pequeno %1grupo%2 de membros da comunidade de Software Livre."
 
-#, fuzzy
 msgid "Mailing lists:"
 msgstr "Listas de email:"
 
@@ -358,10 +317,9 @@ msgstr "O nome da Associação será GNU Herds, publicamente designada como GNU 
 msgid "Aims"
 msgstr "Objectivos"
 
-#, fuzzy
 ### OLD: REMOVE ME: msgstr "Os objectivos da Associação serão %1fomentar%2 o desenvolvimento profissional dos participantes na comunidade de Software Livre."
 msgid "The aims of the Association shall be to %1assist and encourage%2 people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
-msgstr "Los objetivos de la Asociación serán %1asistir y promover%2 personas en trabajos remunerados como autores de Software Libre, obteniendo las más altas cotas de competencia y eficiencia."
+msgstr "Os objectivos da Associação serão %1aapoiar e promover%2 pessoas em trabalhos remunerados como autores de Software Livre, obtendo os mais altos níveis de competência e eficiência."
 
 msgid "Membership"
 msgstr "Afiliação"
@@ -375,17 +333,15 @@ msgstr "Todos os membros devem subscrever os objectivos da GNU Herds e reger-se 
 msgid "To qualify for voting membership one must show a contribution to the Free Software movement."
 msgstr "Para se qualificar como membro com poder de voto é necessário demonstrar uma contribuição para o movimento de Software Livre."
 
-#, fuzzy
 ### OLD: REMOVE ME: msgstr "A afiliação terá uma validade de um ano.  Apesar da afiliação ser gratuita, tem de ser renovada."
 msgid "Voting memberships and associate memberships are both free of charge. However, voting memberships %1expire yearly%2 but they can be renewed."
-msgstr "Afiliados y asociados no están sujetos a pago alguno. Sin embargo, la afiliación con capacidad de voto %1expira al año%2 aunque puede ser renovada."
+msgstr "A afiliação de membro e associado é gratuita. No entanto, as afiliações com direito a voto %1expiram anualmente%2 mas podem ser renovadas."
 
 msgid "Committee"
 msgstr "Comité"
 
-#, fuzzy
 msgid "The Committee shall consist of the following: the members of the system administrator team, the web master team, the development team, the translator teams, the public relations team and the Ethics Officer."
-msgstr "O Comité consistirá no seguinte: os membros da equipa de administração de sistemas, a equipa de administradores web, a equipa de XXX development XXX, a equipa de tradutores, a equipa de relações públicas e o Responsável de Ética."
+msgstr "O Comité será composto por: os membros da equipa de administração de sistemas, a equipa de administradores web, a equipa de desenvolvimento, a equipa de tradutores, a equipa de relações públicas e o Responsável de Ética."
 
 msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
 msgstr "As responsabilidades da equipa de certificações serão avaliar, quando requerido, a certificação de %1Free Software Contributor%2, certificação de %3GNU Business Network%4, etc."
@@ -450,9 +406,8 @@ msgstr "Guia do programador do GNU Herds"
 msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!."
 msgstr "Caso deseje juntar-se à equipa GNU Herds, ou colaborar esporadicamente, tal como várias pessoas já fizeram, por favor %1subscreva%2 a lista de distribuição 'gnuherds-app-dev' ou coordene-se com um dos membros da equipa. Obrigado!."
 
-#, fuzzy
 msgid "To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this coders' guide. If you need support ask for it at"
-msgstr "Para trabalhar com a aplicação web, realize o %1download%3 do código e %2instale%3-o no seu servidor. Os tradutores não necessitam de realizar o download do código-fonte. Ser-lhes-á enviado o ficheiro POT gerado pelo gettext para que realizem a tradução. Procure conselhos no guia do programador. Caso necessite de suporte peça-o para"
+msgstr "Para testar a aplicação web, realize o %1download%3 do código e %2instale%3-o no seu servidor. Os tradutores não necessitam de realizar o download do código-fonte. Ser-lhes-á enviado o ficheiro POT gerado pelo gettext para que realizem a tradução. Procure conselhos no guia do programador. Caso necessite de suporte peça-o para"
 
 msgid "Read the current draft of %1GNU Herds' Charter%2."
 msgstr "Consulte o rascunho actual dos %1Estatutos do GNU Herds%2."
@@ -481,9 +436,8 @@ msgstr "Para manter o acesso aos dados dos utilizadores fisicamente seguros, pro
 msgid "Translate the web site to other languages."
 msgstr "Traduzir a página web para outros idiomas."
 
-#, fuzzy
 msgid "Official job site and association announcement."
-msgstr "Anúncio da Associação."
+msgstr "Anúncio oficial da página de emprego e da associação."
 
 msgid "Work on e-Vote subjects:"
 msgstr "Trabalhar em temas de e-Voto:"
@@ -518,9 +472,8 @@ msgstr "Como é integrada a equipa de desenvolvimento com a entrada em produçã
 msgid "Task list"
 msgstr "A lista de tarefas a realizar (TODO)"
 
-#, fuzzy
 msgid "The Git master server"
-msgstr "O servidor Git master"
+msgstr "O servidor principal Git"
 
 msgid "The PostgreSQL data base"
 msgstr "A base de dados PostgreSQL"
@@ -538,7 +491,7 @@ msgstr "Esta lista pode estar desactualizada:"
 # FAQ_content.tpl
 #
 msgid "Frequently asked questions (FAQ)"
-msgstr "Perguntas mais frequentes (FAQ)"
+msgstr "Perguntas frequentes (FAQ)"
 
 msgid "Index"
 msgstr "Índice"
@@ -552,9 +505,8 @@ msgstr "Porquê outro servidor de Classificados de Emprego?"
 msgid "Because no one comply the below proposed conditions:"
 msgstr "Porque nenhum deles respeita todas as condições abaixo enunciadas:"
 
-#, fuzzy
 msgid "Use a license to cover use of the software over a computer network. We are using the %1GNU AGPLv3%2 license. Anyhow, the project is always open to discuss this and any other subject."
-msgstr "Utilizar uma licença para proteger a utilização da aplicação numa rede informática.  :::XXX--> Se está utilizando la licencia %1GNU AGPLv3%2. <--XXX:::  No entanto, o projecto estará sempre aberto a discutir este e outros assuntos."
+msgstr "Utilizar uma licença para proteger a utilização da aplicação numa rede informática. Está a ser utilizada a licença %1GNU AGPLv3%2. No entanto, o projecto estará sempre aberto a discutir este e outros assuntos."
 
 msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users."
 msgstr "Adicionalmente, a gestão do servidor de classificados deve ser %1controlada pelos seus utilizadores%2 segundo regras democráticas. Tal será garantido pelos estatutos da GNU Herds. Assim, garante-se que a evolução do servidor de classificados será controlada e liderada pelos seus utilizadores."
@@ -569,9 +521,8 @@ msgid "Having a global scope, supporting business models based on long-distance 
 msgstr "Tendo um âmbito global, suportar modelos de negócio baseados em tele-trabalho. Com as tecnologias futuras a localização não mais poderá ser um obstáculo à criação de relações sobre serviços de TI. Assim, o objectivo, já alcançado, de traduzir a aplicação web para outros idiomas, e de suportar o facto de que uma oferta de trabalho poderá ser inserida em vários idiomas."
 
 ### OLD: REMOVE-ME: msgstr "Tudo isto tendo em conta que: \"Os %1objectivos%2 da Associação serão os de encorajar o desenvolvimento profissional de quem contribui para o Software Livre.\""
-#, fuzzy
 msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
-msgstr "Todo esto teniendo en cuenta que: \"%3Los %1objetivos%2 de la Asociación serán asistir y promover personas en trabajos remunerados como autores de Software Libre, obteniendo las más altas cotas de competencia y eficiencia.%4\""
+msgstr "Tudo isto tendo em conta que: \"%3Os %1objectivos%2 da Associação serão apoiar e encorajar pessoas no seu trabalho remunerado enquanto autores de Software Livre, obtendo os mais altos níveis de competência e eficiência.%4\""
 
 msgid "How to subscribe to a job offer?"
 msgstr "Como se candidatar a uma oferta de trabalho?"
@@ -627,168 +578,128 @@ msgstr "Instalação de aplicações, caso todas as aplicações a serem instala
 msgid "Report to %1 about any offer that seems improper."
 msgstr "Informe %1 sobre qualquer oferta que não lhe pareça apropriada."
 
-#, fuzzy
 msgid "Which criteria are applied to classify a program, language, protocol, specification, software distribution, etc. as Free or Non-Free Software?"
-msgstr "¿Qué criterios se aplican para clasificar un programa, lenguaje, protocolo, especificación, distribución de software, etc. como Software Libre o NO-Libre?."
+msgstr "Que critérios são aplicados para classificar uma aplicação, idioma, protocolo, especificação, distribuição de software, etc. como Software Livre ou Não-Livre?"
 
-#, fuzzy
 msgid "For a program, read the %1Free Software%2 definition to know the criteria."
-msgstr "Para un programa, los criterios se exponen en la definición de %1Software Libre%2."
+msgstr "Para uma aplicação, consulte a definição de %1Software Livre%2 para conhecer os critérios."
 
-#, fuzzy
 msgid "For development languages, protocols, specifications, etc. the meaningful question is whether it is %1supported%3 by software licensed under any of the %2Free Software Licenses%3: BSD, GPL, etc.  Can you use it with Free Software exclusively?"
-msgstr "Para lenguajes de desarrollo, protocolos, especificaciones, etc. la pregunta precisa es si está %1soportado%3 por software licenciado con cualquiera de las %2Licencias de Software Libre%3: BSD, GPL, etc.  ¿Puede usted usarlo exclusivamente con Software Libre?."
+msgstr "Para linguagens de desenvolvimento, protocolos, especificações, etc. a questão fulcral é se a linguagem é ou não %1suportada%3 por software licenciado por uma qualquer das %2Licenças de Software Livre%3: BSD, GPL, etc. Consegue utilizá-la apenas com o recurso a Software Livre?"
 
-#, fuzzy
 msgid "For software distributions, they must not recommend, promote or grant legitimacy to Non-Free Software."
-msgstr "Para distribuciones de software, estas no deben recomendar, promover o otorgar legitimidad al Software NO-Libre."
+msgstr "Para distribuições de software, estas não deverão recomendar, promover ou conceder legitimidade a Software Não-Livre."
 
-#, fuzzy
 msgid "Currently, the tags applyed to classify skills are:"
-msgstr "Actualmente, las etiquetas aplicadas para clasificar habilidades son:"
+msgstr "Actualmente, as etiquetas aplicadas para classificar conhecimentos são:"
 
-#, fuzzy
 msgid "only for software distributions"
-msgstr "solo para distribuciones de software"
+msgstr "apenas para distribuições de software"
 
-#, fuzzy
 msgid "For example, applying such criteria to Java:"
-msgstr "Por ejemplo, aplicando tales criterios a Java:"
+msgstr "Por exemplo, aplicando tais critérios ao Java:"
 
-#, fuzzy
 msgid "The %1Java%2 technology-skill is tagged as %3Free Software%4 due to there are free software Java compilers."
-msgstr "La tecnología-habilidad %1Java%2 se etiqueta como %3Software Libre%4 ya que hay compiladores de Java que son software libre."
+msgstr "O conhecimento tecnológico em %1Java%2 está etiquetado como %3Software Livre%4 já que existem compiladores de Java que são software livre."
 
-#, fuzzy
 msgid "However the below Sun Java technologies are tagged as %1Non-Free Software%2 because of the license you have to agree to download them is not a Free Software license. Anyhow, most of the Java Sun technologies are GPL'd. Sun has made substantial progress towards freeing the JDK under the GPL. The %3IcedTea%5 project is filling in the %4gaps%5."
-msgstr "Sin embargo las tecnologías Sun Java enumeradas a continuación se etiquetan como %1Software NO-Libre%2 debido a que la licencia que usted tiene que aceptar para descargarlas no es una licencia de Software Libre. No obstante, la mayoría de las tecnologías Java Sun han sido licenciadas bajo GPL. Sun ha hecho sustanciales progresos hacia la liberación del JDK bajo licencia GPL. El proyecto %3IcedTea%5 está ocupando las %4lagunas%5."
+msgstr "No entanto as tecnologias Sun Java listadas abaixo são etiquetadas como %1Software Não-Livre%2 pois a licença com a qual é necessário concordar para realizar o download não é uma licença de Software Livre. Ainda assim, a maior parte das tecnologias Java Sun utilizam a licença GPL. A Sun realizou consideráveis progressos no sentido de distribuir o JDK sob a licença GPL. O projecto %3IcedTea%5 está a colmatar as %4lacunas%5."
 
-#, fuzzy
 msgid "Applying it to .NET:"
-msgstr "Aplicando tales criterios a .NET:"
+msgstr "Aplicando os critérios ao .NET:"
 
-#, fuzzy
 msgid "%1Microsoft .NET%2 is tagged as %3Non-Free Software%4."
-msgstr "%1Microsoft .NET%2 es etiquetado como %3Software NO-Libre%4."
+msgstr "O %1Microsoft .NET%2 é etiquetado como %3Software Não-Livre%4."
 
-#, fuzzy
 msgid "%1Mono .NET%2 is a set of tools under GPL, LGPL and MIT, or dual licenses. It is tagged as %3Free Software%4."
-msgstr "%1Mono .NET%2 es un conjunto de herramientas licenciadas bajo GPL, LGPL y MIT, o licencias duales. Se etiqueta como %3Software Libre%4."
+msgstr "O %1Mono .NET%2 é um conjunto de ferramentas licenciadas sob a GPL, LGPL e MIT, ou licenças duais. Está etiquetado como %3Software Livre%4."
 
-#, fuzzy
 msgid "%1.NET%2 is tagged as %3Non-Free Software%4 because of the Mono tools are not 100% complete. Mono does not cover all .NET"
-msgstr "%1.NET%2 se etiqueta como %3Software NO-Libre%4 debido a que las herramientas Mono no están completas al 100%. Mono no cubre todo .NET"
+msgstr "O %1.NET%2 é etiquetado como %3Software Não-Livre%4 porque as ferramentas Mono não estão 100% terminadas. O Mono não cobre todo o .NET"
 
-#, fuzzy
 msgid "%1C#%2 is tagged as %3Free Software%4 due to there are free software C# compilers."
-msgstr "%1C#%2 está etiquetado como %3Software Libre%4 ya que hay compiladores de C# que son software libre."
+msgstr "O %1C#%2 é etiquetado como %3Software Livre%4 já que existem compiladores de C# que são software livre."
 
-#, fuzzy
 msgid "Applying it to some software distributions:"
-msgstr "Aplicando los criterios a algunas distribuciones de software:"
+msgstr "Aplicando os critérios a algumas distribuições de software:"
 
-#, fuzzy
 msgid "%1 is %3Almost-Free Software%4 because it contains Non-Free Software %2 in its kernel."
-msgstr "%1 es %3Software casi-Libre%4 porque contiene %2 de Software NO-Libre en su kernel."
+msgstr "%1 é %3Software Quase-Livre%4 porque contém %2 de Software Não-Livre no seu kernel."
 
-#, fuzzy
 msgid "%1 is %2Free Software%3 because it does not ship anything that is Non-Free Software."
-msgstr "%1 es %2Software Libre%3 porque no incluye nada de Software NO-Libre."
+msgstr "%1 é %2Software Livre%3 porque não distribui qualquer tipo de Software Não-Livre."
 
-#, fuzzy
 msgid "%1 is not classified yet."
-msgstr "%1 no se ha clasificado todavía."
+msgstr "%1 ainda não está classificada."
 
-#, fuzzy
 msgid "%1 is %2Almost-Free Software%3. Debian is a general term which refer to Debian GNU/Linux and all Debian %4ports%6. The Debian project %5offers%6 the download of some Non-Free Software packages from its archives and website."
-msgstr "%1 es %2Software casi-Libre%3. Debian es un termino general que representa a Debian GNU/Linux y todos los %4ports%6 Debian. El proyecto Debian %5ofrece%6 la descarga de algunos paquetes de Software NO-Libre desde sus archivos y sitio web."
+msgstr "%1 é %2Software Quase-Livre%3. Debian é um termo genérico que se refere ao Debian GNU/Linux e a todos os %4ports%6 Debian. O projecto Debian %5disponibiliza%6 o download de alguns pacotes de Software Não-Livre a partir dos seus arquivos e página web."
 
-#, fuzzy
 msgid "%1 is %2Partially-Free Software%3 %4because%5 it is made of many programs; some are free and some are not."
-msgstr "%1 es %2Software parcialmente-Libre%3 %4porque%5 está compuesto de muchos programas; algunos libres y otros no."
+msgstr "%1 é %2Software Parcialmente-Livre%3 %4porque%5 é composta por muitas aplicações; algumas são livres e outras não."
 
-#, fuzzy
 msgid "%1 is %2Almost-Free Software%3. Although Gobuntu's stated %4policy%7 is to adhere to the Free Software Foundation four freedoms, it presently %5installs%7 Firefox, which encourages installing non-free plugins. Gobuntu enables downloading of non-free software packages from its archives, and the use of the ubuntu.com domain %6promotes%7 non-free software."
-msgstr "%1 es %2Software casi-Libre%3. Aunque la %4política%7 que Gobuntu declara se adhiere a las cuatro libertades expuestas por la Free Software Foundation, Gobuntu %5instala%7 Firefox, el cual anima a la instalación de plugins no-libres. Gobuntu permite la descarga de paquetes de software no-libre desde sus archivos, y el uso del dominio ubuntu.com %6promociona%7 el software no-libre."
+msgstr "%1 é %2Software Quase-Livre%3. Ainda que a %4política%7 adoptada pelo Gobuntu é a da adesão às quatro liberdades da Free Software Foundation, este %5instala%7 o Firefox, o qual encoraja a instalação de plugins não-livres. O Gobuntu permite o download de pacotes de software não-livre a partir dos seus arquivos e a utilização do domínio ubuntu.com %6promove%7 o software não-livre."
 
-#, fuzzy
 msgid "%1 is %3Free Software%4 because it does not ship anything that is Non-Free Software neither work to provide easy access to Non-Free Software. A Non-Free Software %2 not removed from gNewSense is a bug. The gNewSense's %5policy%6 is to delete any non-free software found in the Linux kernel or elsewhere in the GNU/Linux system."
-msgstr "%1 es %3Software Libre%4 porque no incluye Software NO-Libre ni trabaja para facilitar el acceso al Software NO-Libre. Un %2 de Software NO-Libre no eliminado en gNewSense es un bug. La %5política%6 de gNewSense es eliminar cualquier software no-libre que se encuentre en el kernel Linux o en cualquier otro elemento del sistema GNU/Linux."
+msgstr "%1 é %3Software Livre%4 porque não inclui Software Não-Livre nem desenvolve esforços para disponibilizar o fácil acesso a Software Não-Livre. Um %2 de Software Não-Livre por remover do gNewSense é considerado um erro. A %5política%6 do gNewSense é a de eliminar todo o software não-livre que se encontre no kernel de Linux ou em qualquer outro elemento do sistema GNU/Linux."
 
-#, fuzzy
 msgid "%1 is %2Almost-Free Software%3 because although it does not ship anything that is Non-Free Software it provides for easy installation of Non-Free Software through the %4ports system%5. Not many packages though: Java and a few others."
-msgstr "%1 es %2Software casi-Libre%3 porque aunque no incluye nada de Software NO-Libre proporciona fácil acceso a la instalación de Software NO-Libre a través del %4sistema de ports%5. Aunque no muchos paquetes: Java y unos pocos mas."
+msgstr "%1 é %2Software Quase-Livre%3 pois, ainda que não inclua qualquer Software Não-Livre, proporciona fácil acesso à instalação de Software Não-Livre através do %4sistema de ports%5. Ainda que não muitos pacotes: Java e pouco mais."
 
-#, fuzzy
 msgid "%1 and %2 are %4Almost-Free Software%5 because provide for easy installation of some Non-Free Software products through the %6ports system%7. Besides both contain Non-Free Software %3 in its kernel too."
-msgstr "%1 y %2 son %4Software casi-Libre%5 porque proporcionan fácil acceso a productos de Software NO-Libre a través del %6sistema de ports%7. Además ambos contienen también %3 de Software NO-Libre en su kernel."
+msgstr "%1 e %2 são %4Software Quase-Livre%5 porque proporcionam fácil acesso a produtos de Software Não-Livre através do %6sistema de ports%7. Adicionalmente ambos contêm %3 de Software Não-Livre no seu kernel."
 
-#, fuzzy
 msgid "%1Mac OS X%2 is tagged as %3Non-Free Software%4."
-msgstr "%1Mac OS X%2 se etiqueta como %3Software NO-Libre%4."
+msgstr "O %1Mac OS X%2 é etiquetado como %3Software Não-Livre%4."
 
-#, fuzzy
 msgid "%1Microsoft Windows Vista%2 is tagged as %3Non-Free Software%4."
-msgstr "%1Microsoft Windows Vista%2 se etiqueta como %3Software NO-Libre%4."
+msgstr "O %1Microsoft Windows Vista%2 é etiquetado como %3Software Não-Livre%4."
 
-#, fuzzy
 msgid "Note that not all %1 are Non-Free Software, because %1 can be data (not compiled source code) licensed under a Free Software license. However, we need to verify that it really is data, because the non-free object code is typically dressed up as data."
-msgstr "Nótese que no todos los %1 son Software NO-Libre, ya que los %1 pueden contener datos (no código fuente compilado) licenciados bajo licencias de Software Libre. Sin embargo, es necesario verificar que realmente son datos, ya que los objetos de código no-libre son usualmente disfrazados de datos."
+msgstr "Note que nem todos os %1 são Software Não-Livre, já que os %1 podem conter dados (código fonte não compilado) licenciado sob licenças de Software Livre. No entanto, é necessário verificar que são mesmo dados, já que os objectos de código não-livre são normalmente disfarçados como dados."
 
 msgid "How is the Job Site module related to the GNU Herds' association?"
 msgstr "Qual a relação entre o módulo de Classificados de Emprego e a associação GNU Herds?"
 
-#, fuzzy
 msgid "The Job Site module is %1controlled%2 by the association. Any new module will be controlled by the association too."
-msgstr "O módulo de Classificados de Emprego é %1controlado%2 pela associação. XXX Cualquier nuevo módulo será controlado también por la asociación."
+msgstr "O módulo de Classificados de Emprego é %1controlado%2 pela associação. Qualquer módulo adicional será também controlado pela associação."
 
-#, fuzzy
 msgid "Who can join or register?"
-msgstr "¿Quién puede afiliarse o registrase?"
+msgstr "Quem se pode afiliar ou registar?"
 
-#, fuzzy
 msgid "Any entity type can join the association or just register into the web application and use its services. Showing a Free Software contribution is not a requirement to register or join. It is just a requirement to be able to %1vote%2 at the association."
-msgstr "Cualquier tipo de entidad puede afiliarse a la asociación o simplemente registrarse en la aplicación web y usar sus servicios. Mostrar una contribución al Software Libre no es un requisito para registrarse o afiliarse. Solo es requisito para poder %1votar%2 en la asociación."
+msgstr "Qualquer tipo de entidade pode afiliar-se na associação ou apenas registar-se na aplicação web e utilizar os seus serviços. Apresentar uma contribuição para o Software Livre não é um requisito para se registar ou afiliar. Apenas é um requisito para se poder %1votar%2 na associação."
 
-#, fuzzy
 msgid "Can I not be a member of the association because I am a member of a company?"
-msgstr "¿No puedo ser yo miembro de la asociación porque soy miembro de una compañía?"
+msgstr "Estou impedido de ser membro da associação por ser membro de uma empresa?"
 
-#, fuzzy
 msgid "You can. You can be in any case an \"associate member\" or a \"voting member\"."
-msgstr "Sí puede. Usted puede en cualquier caso ser un \"miembro asociado\" o un \"afiliado con capacidad de voto\"."
+msgstr "Não está impedido. Pode ser \"membro associado\" ou \"membro votante\"."
 
-#, fuzzy
 msgid "The association's %1Charter%2 reads:"
-msgstr "En los %1Estatutos%2 de la asociación se puede leer:"
+msgstr "Os %1Estatutos%2 da associação especificam:"
 
-#, fuzzy
 msgid "How many votes is a company able to obtain?"
-msgstr "¿Cuantos votos puede obtener una compañía?"
+msgstr "Quantos votos pode uma empresa obter?"
 
-#, fuzzy
 msgid "A company could be able to get:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4"
-msgstr "Una compañía podría obtener:%1 %2un solo voto como 'compañía' y%3 %2cualquier número de votos como 'personas' (sus trabajadores), habiendo todos ellos individualmente contribuido al software libre.%3%4"
+msgstr "Uma empresa poderá obter:%1 %2apenas um voto enquanto 'empresa' e%3 %2um qualquer número de votos como 'indivíduos' (os seus trabalhadores), tendo todos eles contribuido individualmente para o software livre.%3%4"
 
-#, fuzzy
 msgid "A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?"
-msgstr "Una compañía de 100 trabajadores puede obtener 100 votantes, mientras que mi compañía de 3 trabajadores puede tener solo 3 votantes?"
+msgstr "Uma empresa com 100 trabalhadores pode obter 100 votos enquanto que a minha empresa de 3 trabalhadores apenas pode obter 3 votos?"
 
-#, fuzzy
 msgid "The company gets 100 voting-voices only if each one of its workers has individually contributed to the free software community, and each one of its workers take the personal decision to join and vote at the association."
-msgstr "La compañía obtiene 100 votantes solo si cada uno de sus trabajadores ha individualmente contribuido a la comunidad de software libre, y cada uno de sus trabajadores toman la decisión personal de afiliarse y votar en la asociación."
+msgstr "A empresa obtém 100 votos apenas se cada um dos seus empregados tiver individualmente contribuido para a comunidade de software livre, e cada um dos seus trabalhadores tomar a decisão pessoal de se afiliar e votar na associação."
 
-#, fuzzy
 msgid "Why voting membership is on a yearly basis?"
-msgstr "¿Porqué la afiliación con capacidad de voto caduca al año?"
+msgstr "Porque é que a afiliação com capacidade de voto tem uma validade anual?"
 
-#, fuzzy
 msgid "Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low."
-msgstr "Si no se dispusiese ese mecanismo podría hacer imposible la disolución de la asociación %1debido a%2 las bajas figuras de asistencia."
+msgstr "Não caducar a possibilidade de voto poderia tornar impossível dissolver a associação %1devido aos%2 elevados níveis de abstenção."
 
-#, fuzzy
 msgid "The membership renew process is automated to reduce bureaucracy."
-msgstr "El proceso de renovación de la afiliación se ha automatizado para reducir la burocracia."
+msgstr "O processo de renovação da afiliação é renovado automaticamente para reduzir a burocracia."
 
 msgid "e-Voting"
 msgstr "e-Voto"
@@ -862,13 +773,11 @@ msgstr "Note que todos esses sistemas estão orientados para eleições em país
 #
 # FS_Job_Offers_form.tpl
 #
-#, fuzzy
 msgid "Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc."
-msgstr "Contacte con algunos de los mejores expertos en Software Libre disponibles y sus empresas. Solucione sus problemas hoy con los mejores administradores de sistemas, desarrolladores, equipos de calidad, documentalistas, etc."
+msgstr "Entre em contacto com alguns dos mais experientes participantes na comunidade de Software Livre e suas empresas. Resolva hoje os seus problemas com o apoio dos melhores administradores de sistemas, programadores, equipas de testes de qualidade, autores de documentação, etc."
 
-#, fuzzy
 msgid "Are you a Free Software author?. You could register and add your qualifications."
-msgstr "¿Es usted un autor de Software Libre?. Usted puede registrarse y añadir sus cualificaciones."
+msgstr "É um autor de Software Livre? Pode registar-se e adicionar as suas qualificações."
 
 msgid "There are not active job offers"
 msgstr "Não existem ofertas de emprego activas"
@@ -882,9 +791,8 @@ msgstr "Localização"
 msgid "Offer date"
 msgstr "Data da oferta"
 
-#, fuzzy
 msgid "Offered by"
-msgstr "Entidade Patronal"
+msgstr "Oferecido por"
 
 msgid "Any"
 msgstr "Qualquer"
@@ -919,16 +827,14 @@ msgstr "ERRO: Condição inesperada"
 msgid "Your application has been subscribed to this job offer"
 msgstr "A sua candidatura foi recebida para esta oferta de emprego"
 
-#, fuzzy
 msgid "The edition of this offer is not finished! It is not ready to be published."
-msgstr "¡La edición de esta oferta no está terminada!. No está lista para ser publicada."
+msgstr "A edição desta oferta ainda não está terminada! Não está pronta a ser publicada."
 
 msgid "View contact information"
 msgstr "Consultar informação de contacto"
 
-#, fuzzy
-msgid "%1Job%2 offer"
-msgstr "%1Oferta%2 de empleo"
+msgid "Job offer"
+msgstr "Oferta de emprego"
 
 msgid "Persons"
 msgstr "Indivíduos"
@@ -951,9 +857,8 @@ msgstr "Ref."
 msgid "Contract type"
 msgstr "Tipo de contrato"
 
-#, fuzzy
 msgid "Deadline"
-msgstr "Fecha límite"
+msgstr "Data limite"
 
 msgid "Wage rank"
 msgstr "Nível salarial"
@@ -1009,32 +914,26 @@ msgstr "Candidatar-se a esta oferta de emprego"
 #
 # View_Qualifications_form.tpl
 #
-#, fuzzy
 msgid "The edition of these qualifications is not finished! It does not comply the minimum requisites to allow it subscribe to offers."
-msgstr "¡La edición de estas cualificaciones no está terminada!. No cumple con los requisitos mínimos para permitir suscribirla a ofertas."
+msgstr "A edição destas qualificações não está terminada! Não cumpre os requisitos mínimos para que seja possível subscrever ofertas."
 
-#, fuzzy
 msgid "Edit section"
-msgstr "Editar sección"
+msgstr "Editar a secção"
 
-#, fuzzy
 msgid "edit"
 msgstr "editar"
 
-#, fuzzy
 msgid "Born"
-msgstr "Nació"
+msgstr "Ano de Nascimento"
 
 msgid "Nationality"
 msgstr "Nacionalidade"
 
-#, fuzzy
 msgid "Nationalities"
 msgstr "Nacionalidades"
 
-#, fuzzy
 msgid "Besides license to work at"
-msgstr "Además de licencia para trabajar en"
+msgstr "Adicionalmente autorização de trabalho em"
 
 msgid "Landline"
 msgstr "Telefone"
@@ -1052,7 +951,7 @@ msgid "not specified"
 msgstr "não especificado"
 
 msgid "Contributions to FS projects"
-msgstr "Contribuições para projectos em SL"
+msgstr "Contribuições para projectos de SL"
 
 msgid "Yes"
 msgstr "Sim"
@@ -1063,9 +962,8 @@ msgstr "Não"
 msgid "Delete qualifications"
 msgstr "Apagar qualificações"
 
-#, fuzzy
 msgid "Delete qualifications from the data base"
-msgstr "Borrar las cualificaciones de la base de datos"
+msgstr "Apagar as qualificações da base de dados"
 
 #
 # View_Qualifications_form.php
@@ -1076,9 +974,8 @@ msgstr "ERRO: Não foi especificado o identificador a apresentar!."
 #
 # FS_Business_Networks_content.tpl
 #
-#, fuzzy
 msgid "These are the possible business models we know about:"
-msgstr "Estas são as redes, ou formas de criar uma, que conhecemos:"
+msgstr "Estes são os modelos de negócio possíveis de que temos conhecimento:"
 
 msgid "Its"
 msgstr "A sua"
@@ -1107,32 +1004,26 @@ msgstr "Na senda de empresas de sucesso tais como a %1Best Western%2 ou a %3Mond
 msgid "Read the %1Membership%2 Charter section."
 msgstr "Consulte a secção dos Estatutos de %1Afiliado%2."
 
-#, fuzzy
 msgid "Update person data"
-msgstr "ACTUALIZAR DADOS INDIVIDUAIS"
+msgstr "Actualizad os dados pessoais"
 
-#, fuzzy
 msgid "Some fields does not match."
-msgstr "Errores en algunos campos."
+msgstr "Alguns dos campos estão inválidos."
 
-#, fuzzy
 msgid "Please try again."
-msgstr "Por favor, inténtelo de nuevo."
+msgstr "Tente novamente."
 
 msgid "The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional."
 msgstr "Os campos marcados com um asterisco %1*%2 são de preenchimento obrigatório para permitir terminar a transacção; os restantes campos são opcionais."
 
-#, fuzzy
 msgid "Account identification"
-msgstr "IDENTIFICAÇÃO DE CONTA"
+msgstr "Identificação de conta"
 
-#, fuzzy
 msgid "Email"
-msgstr "Correo electrónico"
+msgstr "Email"
 
-#, fuzzy
 msgid "Change the account email"
-msgstr "Cambiar el correo electrónico de la cuenta"
+msgstr "Alterar a conta de email"
 
 msgid "Password"
 msgstr "Senha"
@@ -1140,9 +1031,8 @@ msgstr "Senha"
 msgid "Retype Password"
 msgstr "Repita a Senha"
 
-#, fuzzy
 msgid "Change the account password"
-msgstr "Cambiar la contraseña de la cuenta"
+msgstr "Alterar a senha da conta"
 
 msgid "Person"
 msgstr "Indivíduo"
@@ -1168,40 +1058,32 @@ msgstr "Tamanho por omissão da imagem"
 msgid "Delete"
 msgstr "Apagar"
 
-#, fuzzy
 msgid "Blog"
 msgstr "Blog"
 
 msgid "Web site"
 msgstr "Página web"
 
-#, fuzzy
 msgid "ISO Nationalities"
 msgstr "Nacionalidades ISO"
 
-#, fuzzy
 msgid "Mark to delete"
-msgstr "Marcar para borrar"
+msgstr "Marcar para apagar"
 
-#, fuzzy
 msgid "More"
-msgstr "Más"
+msgstr "Mais"
 
-#, fuzzy
 msgid "Save and or delete and stay here to add more"
-msgstr "Guardar y/o borrar y permanecer aquí para añadir más"
+msgstr "Gravar e/ou apagar e permanecer aqui para adicionar mais"
 
-#, fuzzy
 msgid "License to work at"
-msgstr "Licencia para trabajar en"
+msgstr "Autorização de trabalho em"
 
-#, fuzzy
 msgid "Besides the inferred from the ISO nationalities fields"
-msgstr "Además de lo deducido de los campos nacionalidades ISO"
+msgstr "Além das inferidas a partir dos campos de nacionalidades ISO"
 
-#, fuzzy
 msgid "Postal address"
-msgstr "ENDEREÇO"
+msgstr "Morada"
 
 msgid "Street"
 msgstr "Rua"
@@ -1221,19 +1103,17 @@ msgstr "Código postal"
 msgid "Country"
 msgstr "País"
 
-#, fuzzy
 msgid "Interactive communication medias"
-msgstr "MEIOS DE COMUNICAÇÃO INTERACTIVA"
+msgstr "Meios de Comunicação Interactivos"
 
 msgid "Save"
 msgstr "Gravar"
 
-#, fuzzy
 msgid "Register"
 msgstr "Registrar"
 
 msgid "Delete me from this Association"
-msgstr "Remova-me desta Associação"
+msgstr "Remover-me desta Associação"
 
 # Person_form.php
 msgid "You can not access this section been logged as"
@@ -1245,9 +1125,8 @@ msgstr "A sua informação foi removida da base de dados. A sua sessão foi term
 msgid "Updated successfully"
 msgstr "Actualizado com sucesso"
 
-#, fuzzy
 msgid "Invalid email address"
-msgstr "Dirección de correo electrónico incorrecta"
+msgstr "Endereço de email inválido"
 
 msgid "Password fields differ"
 msgstr "Os campos de senha são diferentes"
@@ -1262,9 +1141,8 @@ msgstr "Os campos de senha são diferentes"
 # Company form: Company_form.tpl, Company_form.php
 #
 # Company_form.tpl
-#, fuzzy
 msgid "Update company data"
-msgstr "ACTUALIZAR OS DADOS DA EMPRESA"
+msgstr "Actualizar os dados da empresa"
 
 msgid "Company"
 msgstr "Empresa"
@@ -1283,16 +1161,14 @@ msgstr "Removam-me"
 # non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
 #
 # non-profit_Organization_form.tpl
-#, fuzzy
 msgid "New non-profit organization"
-msgstr "NOVA ORGANIZAÇÃO SEM FINS LUCRATIVOS"
+msgstr "Nova organização sem fins lucrativos"
 
-#, fuzzy
 msgid "Update non-profit organization data"
-msgstr "ACTUALIZAR OS DADOS DA ORGANIZAÇÃO SEM FINS LUCRATIVOS"
+msgstr "Actualizar os dados da organização sem fins lucrativos"
 
 msgid "non-profit"
-msgstr "Organização"
+msgstr "sem fins lucrativos"
 
 msgid "non-profit Organization"
 msgstr "Organização sem fins lucrativos"
@@ -1307,64 +1183,52 @@ msgstr "Nome"
 #
 # Qualifications form: Qualifications_edit-guide-bar.tpl, Qualifications_*_form.tpl, Qualifications_form.php
 #
-#, fuzzy
 msgid "New qualifications"
-msgstr "NOVA FICHA DE QUALIFICAÇÕES"
+msgstr "Qualificações novas"
 
-#, fuzzy
 msgid "Update qualifications data"
-msgstr "ACTUALIZAR OS DADOS DE QUALIFICAÇÕES"
+msgstr "Actualizar os dados de qualificações"
 
 msgid "Check qualifications view"
 msgstr "Vista de verificação de qualificações"
 
-#, fuzzy
 msgid "Previous"
 msgstr "Anterior"
 
-#, fuzzy
 msgid "Save and move to the previous section"
-msgstr "Guardar y mover a la sección anterior"
+msgstr "Gravar e ir para a secção anterior"
 
-#, fuzzy
 msgid "Next"
-msgstr "Siguiente"
+msgstr "Seguinte"
 
-#, fuzzy
 msgid "Save and move to the next section"
-msgstr "Guardar y mover a la siguiente sección"
+msgstr "Gravar e ir para a secção seguinte"
 
-#, fuzzy
 msgid "Finish"
 msgstr "Terminar"
 
-#, fuzzy
 msgid "Save and finish the edition"
-msgstr "Guardar y terminar la edición"
+msgstr "Gravar e terminar a edição"
 
 # Qualifications_edit-guide-bar.tpl
-#, fuzzy
 msgid "Save and move to section"
-msgstr "Guardar y mover a sección"
+msgstr "Gravar e ir para a secção"
 
-#, fuzzy
 msgid "FS projects"
-msgstr "Proyectos SL"
+msgstr "Projectos de SL"
 
 msgid "Residence location"
-msgstr "LOCAL DE RESIDÊNCIA"
+msgstr "Local de residência"
 
 msgid "Contract"
 msgstr "Contrato"
 
 # Qualifications_profiles_etc_form.tpl
-#, fuzzy
 msgid "Technical"
-msgstr "TÉCNICO"
+msgstr "Técnica"
 
-#, fuzzy
 msgid "Staff with the below characteristic:"
-msgstr "Personal con las siguientes características:"
+msgstr "Colaborador com as seguintes características:"
 
 msgid "Press Ctrl key to choose more than one Profile"
 msgstr "Prima a tecla Ctrl para seleccionar mais do que um Perfil"
@@ -1382,29 +1246,23 @@ msgid "Field profiles"
 msgstr "Perfis de áreas"
 
 # Qualifications_skills_form.tpl
-#, fuzzy
 msgid "Some fields offer suggestions."
-msgstr "Algunos campos ofrecen sugerencias."
+msgstr "Alguns dos campos oferecem sugestões."
 
-#, fuzzy
 msgid "The form has not been saved yet."
-msgstr "El formulario no ha sido guardado todavía."
+msgstr "O formulário ainda não foi gravado."
 
-#, fuzzy
 msgid "Please, choose or edit again."
-msgstr "Por favor, escoja o edite de nuevo."
+msgstr "Seleccione ou edite novamente."
 
-#, fuzzy
 msgid "Checks"
-msgstr "Inspecciones"
+msgstr "Verificações"
 
-#, fuzzy
 msgid "Non-Free or Pending skills are not showed in the view."
-msgstr "Las Habilidades NO-Libres o Pendientes no se muestran en la vista."
+msgstr "Conhecimentos Não-Livres ou Pendentes não são apresentados na vista."
 
-#, fuzzy
 msgid "Add skills and theirs knowledge and experience levels."
-msgstr "Añadir habilidades y sus niveles de conocimiento y experiencia."
+msgstr "Adicionar conhecimentos e os seus níveis de proficiência e experiência."
 
 msgid "Knowledge level"
 msgstr "Nível de conhecimentos"
@@ -1415,73 +1273,57 @@ msgstr "Nível de experiência"
 msgid "Add"
 msgstr "Adicionar"
 
-#, fuzzy
 msgid "This skill is pending for checking."
-msgstr "Esta habilidad está pendiente de inspección."
+msgstr "Este conhecimento está pendente aguardando verificação."
 
-#, fuzzy
 msgid "This skill is unknown."
-msgstr "Esta habilidad es desconocida."
+msgstr "Este conhecimento é desconhecido."
 
-#, fuzzy
 msgid "This skill is abstract."
-msgstr "Esta habilidad es abstracta."
+msgstr "Este conhecimento é abstracto."
 
-#, fuzzy
 msgid "This skill is almost Free."
-msgstr "Esta habilidad es casi Libre."
+msgstr "Este conhecimento é Quase Livre."
 
-#, fuzzy
 msgid "This skill is partially Free."
-msgstr "Esta habilidad es parcialmente Libre."
+msgstr "Este conhecimento é parcialmente Livre."
 
-#, fuzzy
 msgid "This skill is Hardware."
-msgstr "Esta habilidad es Hardware."
+msgstr "Este conhecimento é Hardware."
 
-#, fuzzy
 msgid "This skill is Documentation."
-msgstr "Esta habilidad es documentación."
+msgstr "Este conhecimento é de Documentação."
 
-#, fuzzy
 msgid "This skill is Art."
-msgstr "Esta habilidad es Arte."
+msgstr "Este conhecimento é Artístico."
 
-#, fuzzy
 msgid "This skill is Free."
-msgstr "Esta habilidad es Libre."
+msgstr "Este conhecimento é Livre."
 
-#, fuzzy
 msgid "This skill is not Free."
-msgstr "Esta habilidad no es Libre."
+msgstr "Este conhecimento é Não-Livre."
 
-#, fuzzy
 msgid "Software criteria at the FAQ."
-msgstr "Criterios de Software en la FAQ."
+msgstr "Critérios para Software explicados nas Perguntas Frequentes."
 
-#, fuzzy
 msgid "Report any mistake!"
-msgstr "¡Informe de cualquier error!."
+msgstr "Agradecemos que relate qualquer erro!"
 
-#, fuzzy
 msgid "Please choose:"
-msgstr "Por favor, escoja:"
+msgstr "Seleccione:"
 
-#, fuzzy
 msgid "Keep as is"
-msgstr "Guárdelo como está"
+msgstr "Manter como está"
 
 # Qualifications_languages_form.tpl
-#, fuzzy
 msgid "Staff with the below languages:"
-msgstr "Personal con los siguientes idiomas:"
+msgstr "Colaboradores com conhecimentos nos seguintes idiomas:"
 
-#, fuzzy
 msgid "Add idioms and theirs spoken and written levels"
-msgstr "Añadir idiomas y sus niveles hablado y escrito"
+msgstr "Adicionar idiomas e seus níveis oral e escrito"
 
 msgid "Spoken level"
-msgstr "Nível falado"
+msgstr "Nível oral"
 
 msgid "Written level"
 msgstr "Nível escrito"
@@ -1491,9 +1333,8 @@ msgstr "Nível escrito"
 # msgstr ""
 
 # Qualifications_projects_form.tpl
-#, fuzzy
 msgid "Add URIs to the work you or your staff have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you or your staff expose your knowledge, rationales, feedback, etc."
-msgstr "Añada URIs al trabajo que usted o su personal ha contribuido a proyectos de Software Libre públicos. Es una buena práctica añadir más de una URI por proyecto, añadiendo también URIs a algunos de sus mejores commits, o threads de conversaciones de correo electrónico donde usted o su personal expone sus conocimientos, razonamientos, comentarios, etc."
+msgstr "Adicione URIs para o trabalho contribuido por si ou pelos seus colaboradores para projectos de Software Livre. É considerada uma boa prática adicionar mais do que o URI do projecto, adicionando também URIs para alguns dos seus melhores commits ou debates por email onde tenha (ou os seus colaboradores) exposto os seus conhecimentos, análise de problemas, comentários, etc."
 
 msgid "Project"
 msgstr "Projecto"
@@ -1540,13 +1381,11 @@ msgstr "Estado profissional actual"
 msgid "To access this section you have to login first."
 msgstr "Para aceder a esta secção tem primeiro de iniciar uma sessão."
 
-#, fuzzy
 msgid "Please fill in here"
-msgstr "Por favor, rellene aquí"
+msgstr "Preencha aqui"
 
-#, fuzzy
 msgid "Incorrect date format"
-msgstr "Formato de fecha incorrecto"
+msgstr "Formato de data incorrecto"
 
 msgid "The qualifications information has been deleted from the data base."
 msgstr "A informação de qualificações foi apagada da base de dados."
@@ -1557,13 +1396,11 @@ msgstr "Sucesso. As suas qualificações foram gravadas."
 #
 # JobOffer form: Job_Offer_edit-quide-bar.tpl, Job_Offer_*_form.tpl, Job_Offer_form.php
 #
-#, fuzzy
 msgid "Update job offer"
-msgstr "ACTUALIZAR OFERTA DE EMPREGO"
+msgstr "Actualizar oferta de emprego"
 
-#, fuzzy
 msgid "New job offer"
-msgstr "NOVA OFERTA DE EMPREGO"
+msgstr "Nova oferta de emprego"
 
 msgid "Check offer view"
 msgstr "Vista de verificação de oferta"
@@ -1609,9 +1446,8 @@ msgstr "Linguagens necessárias"
 # msgstr ""
 
 # Job_Offer_location_form.tpl
-#, fuzzy
 msgid "Do not fill any address field if the offer is Telecommute."
-msgstr "No llene ningún campo de dirección si la oferta es Teletrabajo."
+msgstr "Não preencha qualquer campo de endereço caso a oferta seja em Tele-trabalho."
 
 # Job_Offer_contract_form.tpl
 # msgid ""
@@ -1671,126 +1507,98 @@ msgstr "Estado da candidatura"
 #
 # Alerts_form.tpl
 #
-#, fuzzy
 msgid "Alerts via email on:"
-msgstr "Alertas vía correo electrónico:"
+msgstr "Alertas por email para:"
 
-#, fuzzy
 msgid "any new job offer"
-msgstr "cualquier nueva oferta de trabajo"
+msgstr "qualquer nova oferta de emprego"
 
-#, fuzzy
 msgid "any new job offer which fits my qualifications"
-msgstr "cualquier nueva oferta de trabajo que encaje con mis cualificaciones"
+msgstr "qualquer nova oferta de emprego que seja adequada às minhas qualificações"
 
 #
 # Admin_form.tpl
 #
-#, fuzzy
 msgid "Skills administration"
-msgstr "Administración de habilidades"
+msgstr "Administração de conhecimentos"
 
-#, fuzzy
 msgid "Attend pending to classify skills"
-msgstr "Atender las habilidades pendientes de clasificación"
+msgstr "Verificar os conhecimentos pendentes de classificação"
 
-#, fuzzy
 msgid "Classify"
-msgstr "Clasificar"
+msgstr "Classificar"
 
-#, fuzzy
 msgid "Attend reclassify skill requests"
-msgstr "Atender las peticiones de reclasificación de habilidades"
+msgstr "Verificar os pedidos de reclassificação de conhecimentos"
 
-#, fuzzy
 msgid "Reclassify"
-msgstr "Reclasificar"
+msgstr "Reclassificar"
 
-#, fuzzy
 msgid "Add new skills"
-msgstr "Añadir nuevas habilidades"
+msgstr "Adicionar um novo conhecimento"
 
-#, fuzzy
 msgid "There are not pending to classify skills."
-msgstr "No hay habilidades pendientes de clasificación."
+msgstr "Não existem conhecimentos pendentes de classificação."
 
-#, fuzzy
 msgid "Search"
-msgstr "Buscar"
+msgstr "Procurar"
 
-#, fuzzy
 msgid "Skill properties"
-msgstr "Propiedades de la habilidad"
+msgstr "Propriedades do conhecimento"
 
-#, fuzzy
 msgid "Change the skill name"
-msgstr "Cambiar el nombre de la habilidad"
+msgstr "Alterar o nome do conhecimento"
 
-#, fuzzy
 msgid "Change the classification tag"
-msgstr "Cambiar la etiqueta de la clasificación"
+msgstr "Alterar a etiqueta de classificação"
 
-#, fuzzy
 msgid "Tag"
 msgstr "Etiqueta"
 
-#, fuzzy
 msgid "Type"
 msgstr "Tipo"
 
-#, fuzzy
 msgid "License or licenses used by such skill"
-msgstr "Licencia o licencias usadas por esta habilidad"
+msgstr "Licença ou licenças utilizadas por esse conhecimento"
 
-#, fuzzy
 msgid "License name"
-msgstr "Nombre de la licencia"
+msgstr "Nome da licença"
 
-#, fuzzy
 msgid "License URI"
-msgstr "URI de la licencia"
+msgstr "URI da licença"
 
-#, fuzzy
 msgid "Notes taken to make it more clear the rationale behind the current classification decision"
-msgstr "Notas tomadas para dejar más claro el razonamiento en el cual se apoya la decisión de la clasificación actual"
+msgstr "Notas que clarificam o raciocínio associado à decisão de classificação actual"
 
-#, fuzzy
 msgid "Rationale"
-msgstr "Razonamiento"
+msgstr "Raciocínio"
 
-#, fuzzy
 msgid "Cancel"
 msgstr "Cancelar"
 
-#, fuzzy
 msgid "Not found."
-msgstr "No se ha encontrado."
+msgstr "Não foi encontrado."
 
-#, fuzzy
 msgid "Please, try again."
-msgstr "Por favor, inténtelo de nuevo."
+msgstr "Tente novamente."
 
 #
 # Access_Control_List.php
 #
-#, fuzzy
 msgid "The access is not granted."
-msgstr "Acceso no autorizado."
+msgstr "Acesso recusado."
 
-#, fuzzy
 msgid "Such job offer is already closed, removed, or never was here."
-msgstr "Tal oferta de empleo está ya cerrada, eliminada, o nunca estuvo aquí."
+msgstr "Essa oferta de emprego encontra-se fechada, removida ou nunca existiu."
 
 #
 # raise_NewJobOffer_Alert.php
 #
-#, fuzzy
 msgid "You can disable this type of alerts at  %s"
-msgstr "Usted puede deshabilitar este tipo de alertas en  %s"
+msgstr "Pode desactivar este tipo de alertas em  %s"
 
-#, fuzzy
 msgid "Alert on new job offers"
-msgstr "Alertas de nuevas ofertas de empleo"
+msgstr "Alerta sobre novas ofertas de emprego"
 
 #
 # PostgreSQL.php
@@ -1883,7 +1691,7 @@ msgid "Administrator"
 msgstr "Administrador"
 
 msgid "Documentalist"
-msgstr "Escritor de Documentação"
+msgstr "Redactor de Documentação"
 
 msgid "Technical Redactor"
 msgstr "Redactor Técnico"
@@ -1913,7 +1721,7 @@ msgid "Graduate"
 msgstr "Licenciado"
 
 msgid "Postgraduate"
-msgstr "Mestre"
+msgstr "Pós-graduado/Mestre"
 
 msgid "Doctoral"
 msgstr "Doutor"
@@ -1924,73 +1732,56 @@ msgstr "Outro"
 #
 # Data Base LH_Skills table
 #
-#, fuzzy
 msgid "Pending"
-msgstr "Pendiente"
+msgstr "Pendente"
 
-#, fuzzy
 msgid "Unknown"
-msgstr "Desconocido"
+msgstr "Desconhecido"
 
-#, fuzzy
 msgid "Abstract"
 msgstr "Abstracto"
 
-#, fuzzy
 msgid "Free Software"
-msgstr "Software Libre"
+msgstr "Software Livre"
 
-#, fuzzy
 msgid "Almost-Free Software"
-msgstr "Software casi-Libre"
+msgstr "Software Quase-Livre"
 
-#, fuzzy
 msgid "Partially-Free Software"
-msgstr "Software parcialmente-Libre"
+msgstr "Software Parcialmente-Livre"
 
-#, fuzzy
 msgid "Non-Free Software"
-msgstr "Software NO-Libre"
+msgstr "Software Não-Livre"
 
-#, fuzzy
 msgid "Hardware"
 msgstr "Hardware"
 
-#, fuzzy
 msgid "Documentation"
-msgstr "Documentación"
+msgstr "Documentação"
 
-#, fuzzy
 msgid "Free Documentation"
-msgstr "Documentación Libre"
+msgstr "Documentação Livre"
 
-#, fuzzy
 msgid "Non-Free Documentation"
-msgstr "Documentación NO-Libre"
+msgstr "Documentação Não-Livre"
 
-#, fuzzy
 msgid "Data"
-msgstr "Datos"
+msgstr "Dados"
 
-#, fuzzy
 msgid "Free Data'"
-msgstr "Datos Libres"
+msgstr "Dados Livres"
 
-#, fuzzy
 msgid "Non-Free Data"
-msgstr "Datos NO-Libres"
+msgstr "Dados Não-Livres"
 
-#, fuzzy
 msgid "Art"
 msgstr "Arte"
 
-#, fuzzy
 msgid "Sharable Art"
-msgstr "Arte Compartible"
+msgstr "Arte Partilhável"
 
-#, fuzzy
 msgid "Non-Sharable Art"
-msgstr "Arte NO-Compartible"
+msgstr "Arte Não-Partilhável"
 
 #
 # Data Base LK_ContractType table
