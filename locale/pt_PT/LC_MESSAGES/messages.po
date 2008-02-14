@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: GNUHerds Site\n"
 "Report-Msgid-Bugs-To: happyguy_pt@hotmail.com\n"
 "POT-Creation-Date: 2006-04-10 19:12+0200\n"
-"PO-Revision-Date: 2008-02-13 13:45+0100\n"
+"PO-Revision-Date: 2008-02-14 15:00+0100\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: pt <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -276,7 +276,7 @@ msgid "GNU Herds is a not-for-profit %1true-democratic%3 association which %2aim
 msgstr "GNU Herds é uma associação %1democrática%3 sem fins lucrativos, cujo %2objectivo%3 é apoiar e encorajar pessoas no seu trabalho remunerado enquanto autores de Software Livre, obtendo os mais altos níveis de competência e eficiência."
 
 msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3business models%2. Some of the JobSite's features are:"
-msgstr "O primeiro passo consistiu em desenvolver o módulo de %1Classificados de Emprego%2 e juntar vários %3modelos de negócio%2. Algumas das funcionalidades dos Classificaso de Emprego são:"
+msgstr "O primeiro passo consistiu em desenvolver o módulo de %1Classificados de Emprego%2 e juntar vários %3modelos de negócio%2. Algumas das funcionalidades dos Classificados de Emprego são:"
 
 msgid "Controlled by its own users"
 msgstr "Controlado pelos seus próprios utilizadores"
@@ -1807,7 +1807,6 @@ msgstr "Ao projecto"
 msgid "Partner"
 msgstr "Parceiro"
 
-#, fuzzy
 msgid "Freelance"
 msgstr "Trabalhador Independente"
 
@@ -1871,10 +1870,8 @@ msgstr "Empregado"
 msgid "Working and Studying"
 msgstr "Trabalhador-Estudante"
 
-### XXX: REMOVE ME: msgstr "Trabalhador Independente e Estudante"
-#, fuzzy
 msgid "Freelance and Studying"
-msgstr "Freelance e Estudante"
+msgstr "Trabalhador Independente e Estudante"
 
 msgid "Studying"
 msgstr "Estudante"
