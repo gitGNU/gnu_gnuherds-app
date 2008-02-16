@@ -320,7 +320,6 @@ msgstr "O nome da Associação será GNU Herds, publicamente designada como GNU 
 msgid "Aims"
 msgstr "Objectivos"
 
-### OLD: REMOVE ME: msgstr "Os objectivos da Associação serão %1fomentar%2 o desenvolvimento profissional dos participantes na comunidade de Software Livre."
 msgid "The aims of the Association shall be to %1assist and encourage%2 people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
 msgstr "Os objectivos da Associação serão %1apoiar e promover%2 pessoas em trabalhos remunerados como autores de Software Livre, obtendo os mais altos níveis de competência e eficiência."
 
@@ -336,7 +335,6 @@ msgstr "Todos os membros devem subscrever os objectivos da GNU Herds e reger-se 
 msgid "To qualify for voting membership one must show a contribution to the Free Software movement."
 msgstr "Para se qualificar como membro com poder de voto é necessário demonstrar uma contribuição para o movimento de Software Livre."
 
-### OLD: REMOVE ME: msgstr "A afiliação terá uma validade de um ano.  Apesar da afiliação ser gratuita, tem de ser renovada."
 msgid "Voting memberships and associate memberships are both free of charge. However, voting memberships %1expire yearly%2 but they can be renewed."
 msgstr "A afiliação de membro e associado é gratuita. No entanto, as afiliações com direito a voto %1expiram anualmente%2 mas podem ser renovadas."
 
@@ -523,7 +521,6 @@ msgstr "Facilitar o contacto entre indivíduos e empresas interessadas no negóc
 msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
 msgstr "Tendo um âmbito global, suportar modelos de negócio baseados em tele-trabalho. Com as tecnologias futuras a localização não mais poderá ser um obstáculo à criação de relações sobre serviços de TI. Assim, o objectivo, já alcançado, de traduzir a aplicação web para outros idiomas, e de suportar o facto de que uma oferta de trabalho poderá ser inserida em vários idiomas."
 
-### OLD: REMOVE-ME: msgstr "Tudo isto tendo em conta que: \"Os %1objectivos%2 da Associação serão os de encorajar o desenvolvimento profissional de quem contribui para o Software Livre.\""
 msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
 msgstr "Tudo isto tendo em conta que: \"%3Os %1objectivos%2 da Associação serão apoiar e encorajar pessoas no seu trabalho remunerado enquanto autores de Software Livre, obtendo os mais altos níveis de competência e eficiência.%4\""
 
