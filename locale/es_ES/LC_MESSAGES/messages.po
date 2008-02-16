@@ -54,6 +54,9 @@ msgstr "Estatutos (borrador)"
 msgid "Coders' guide"
 msgstr "Guía del desarrollador"
 
+msgid "FAQ"
+msgstr "Preguntas frecuentes (FAQ)"
+
 msgid "Account"
 msgstr "Cuenta"
 
@@ -1155,6 +1158,7 @@ msgstr "Deme de baja"
 # Company_form.php
 # msgid ""
 # msgstr ""
+
 #
 # non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
 #
@@ -1177,6 +1181,7 @@ msgstr "Nombre"
 # non-profit_Organization_form.php
 # msgid ""
 # msgstr ""
+
 #
 # Qualifications form: Qualifications_edit-guide-bar.tpl, Qualifications_*_form.tpl, Qualifications_form.php
 #
@@ -1861,6 +1866,12 @@ msgstr "años"
 msgid "Working"
 msgstr "Trabajando"
 
+msgid "Working and Studying"
+msgstr "Trabajando y estudiando"
+
+msgid "Freelance and Studying"
+msgstr "Freelance y estudiando"
+
 msgid "Studying"
 msgstr "Estudiando"
 
@@ -1947,4 +1958,3 @@ msgstr "hasta 10 años"
 
 msgid "more than 10 years"
 msgstr "más de 10 años"
-
