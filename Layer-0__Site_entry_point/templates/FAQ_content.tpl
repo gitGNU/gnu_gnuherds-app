@@ -93,7 +93,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 		}Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4.{/t}
 
 		<li> {t escape='no'
-		  1='<a href="resume">'
+		  1='<a href="resume?id=">'
 		  2='</a>'
 		}Fill the %1Qualifications%2 form.{/t}
 		{t}It is recommended provide the more information possible.{/t}
