@@ -127,7 +127,7 @@ CREATE TABLE LU_Currencies (
 
 
 CREATE TABLE LA_AcademicQualifications (
-	LA_Id		varchar(13) PRIMARY KEY,
+	LA_Id		varchar(40) PRIMARY KEY,
 	LA_Level	char(2) UNIQUE NOT NULL CHECK (LA_Level <> '')
 );
 
@@ -360,7 +360,7 @@ CREATE TABLE Q1_Qualifications (
         Q1_ProfessionalExperienceSinceYear varchar(4), -- NOT NULL CHECK (Q1_ProfessionalExperienceSinceYear <> ''),
 
         -- Academic Qualification
-        Q1_LA_Id                           varchar(13), -- REFERENCES LA_AcademicQualifications(LA_Id),
+        Q1_LA_Id                           varchar(40), -- REFERENCES LA_AcademicQualifications(LA_Id),
         Q1_AcademicQualificationDescription varchar(80), -- NOT NULL CHECK (Q1_AcademicQualificationDescription <> ''),
 
         -- Profiles of: Field, Professional, and Product: (R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles)
@@ -492,7 +492,7 @@ CREATE TABLE J1_JobOffers (
         -- Requirements: The JobOffer demand:
 
         J1_ProfessionalExperienceSinceYear varchar(4),
-	J1_LA_Id                           varchar(13), --  REFERENCES LA_AcademicQualifications(LA_Id) NOT NULL, -- The Job Offer requires a minimum level of academic qualification.
+	J1_LA_Id                           varchar(40), --  REFERENCES LA_AcademicQualifications(LA_Id) NOT NULL, -- The Job Offer requires a minimum level of academic qualification.
         -- Certifications                                 (R16_JobOffer2Certifications)
         -- Profiles of: Field, Professional, and Product: (R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles)
         -- Skills                                         (R14_JobOffer2Skills)
@@ -1464,11 +1464,11 @@ INSERT INTO LX_ProductProfiles VALUES ( 'Firmware' );
 INSERT INTO LX_ProductProfiles VALUES ( 'Hardware' );
 
 -- These registers must be inserted in sort according to the value of the first field:
-INSERT INTO LA_AcademicQualifications VALUES ( 'Undergraduate', '10' );
-INSERT INTO LA_AcademicQualifications VALUES ( 'Graduate',      '20' );
-INSERT INTO LA_AcademicQualifications VALUES ( 'Postgraduate',  '30' );
-INSERT INTO LA_AcademicQualifications VALUES ( 'Doctoral',      '40' );
-INSERT INTO LA_AcademicQualifications VALUES ( 'Other',         '00' );
+INSERT INTO LA_AcademicQualifications VALUES ( 'Enrolled at a University (Undergraduate)', '10' );
+INSERT INTO LA_AcademicQualifications VALUES ( 'Bachelor\'s degree (1st University cycle)','20' );
+INSERT INTO LA_AcademicQualifications VALUES ( 'Master\'s degree (2nd University cycle)',  '30' );
+INSERT INTO LA_AcademicQualifications VALUES ( 'Doctoral degree (3rd University cycle)',   '40' );
+INSERT INTO LA_AcademicQualifications VALUES ( 'Other',                                    '00' );
 
 INSERT INTO LC_Certifications VALUES ( 'GNU Business Network',      'false', 'true',  'true'  ); -- This certification could be checked automatically.
 INSERT INTO LC_Certifications VALUES ( 'Free Software Contributor', 'true',  'true',  'true'  ); -- This certification is automatically checked by the webapp, checking the E2_URI field.

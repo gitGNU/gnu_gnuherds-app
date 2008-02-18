@@ -1001,6 +1001,7 @@ msgstr "Na senda de empresas de sucesso tais como a %1Best Western%2 ou a %3Mond
 #
 # Person form: Person_form.tpl, Person_form.php
 #
+# Person_form.tpl
 msgid "Read the %1Membership%2 Charter section."
 msgstr "Consulte a secção dos Estatutos de %1Afiliado%2."
 
@@ -1714,17 +1715,17 @@ msgstr "Helpdesk"
 #
 # Data Base LA_AcademicQualifications table
 #
-msgid "Undergraduate"
-msgstr "Bacharel"
+msgid "Enrolled at a University (Undergraduate)"
+msgstr "Frequência Universitária (Não Licenciado)"
 
-msgid "Graduate"
-msgstr "Licenciado"
+msgid "Bachelor's degree (1st University cycle)"
+msgstr "Licenciado (1º ciclo universitário)"
 
-msgid "Postgraduate"
-msgstr "Pós-graduado/Mestre"
+msgid "Master's degree (2nd University cycle)"
+msgstr "Mestre/Pós-Graduado (2º ciclo universitário)"
 
-msgid "Doctoral"
-msgstr "Doutor"
+msgid "Doctoral degree (3rd University cycle)"
+msgstr "Doutorado (3º ciclo universitário)"
 
 msgid "Other"
 msgstr "Outro"

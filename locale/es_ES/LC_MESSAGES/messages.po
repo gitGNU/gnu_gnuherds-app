@@ -1716,17 +1716,17 @@ msgstr "Helpdesk"
 #
 # Data Base LA_AcademicQualifications table
 #
-msgid "Undergraduate"
+msgid "Enrolled at a University (Undergraduate)"
 msgstr "Estudiante universitario,-a"
 
-msgid "Graduate"
-msgstr "Ingeniero técnico o Diplomado,-a"
+msgid "Bachelor's degree (1st University cycle)"
+msgstr "Ingeniero técnico o Diplomado,-a (1º ciclo Universitario)"
 
-msgid "Postgraduate"
-msgstr "Ingeniero o Licenciado,-a"
+msgid "Master's degree (2nd University cycle)"
+msgstr "Ingeniero o Licenciado,-a (2º ciclo Universitario)"
 
-msgid "Doctoral"
-msgstr "Doctorado,-a"
+msgid "Doctoral degree (3rd University cycle)"
+msgstr "Doctorado,-a (3º ciclo Universitario)"
 
 msgid "Other"
 msgstr "Otro"
