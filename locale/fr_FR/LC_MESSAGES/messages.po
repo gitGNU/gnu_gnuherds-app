@@ -28,14 +28,19 @@ msgstr ""
 "X-Poedit-Language: French\n"
 
 #
-# Heading: Themes.php, Layer-1*/*.php
+# header.tpl
 #
+#, fuzzy
+msgid "Change language"
+msgstr "Cambia lenguaje"
+
 msgid "Free Software Association"
 msgstr "Association pour le Logiciel Libre"
 
-#
-# header.tpl
-#
+#, fuzzy
+msgid "%1Download the project source code!%2"
+msgstr "%1¡Descargue el código fuente del proyecto!%2"
+
 msgid "Project state"
 msgstr "Statut du projet"
 
@@ -48,26 +53,28 @@ msgstr "Accueil"
 msgid "Charter (draft)"
 msgstr "Charte (brouillon)"
 
-msgid "Timeline"
-msgstr "Avancement"
+#, fuzzy
+msgid "Coders' guide"
+msgstr "Guide du hacker"
 
-msgid "Hackers' Guide"
-msgstr "Guide du Hacker"
+#, fuzzy
+msgid "FAQ"
+msgstr "Perguntas Frequentes (FAQ)"
 
-msgid "Manage your data"
-msgstr "Gestion de vos données"
+msgid "Account"
+msgstr ""
 
-msgid "Person"
-msgstr "Personne"
-
-msgid "Person (Member)"
+#, fuzzy
+msgid "My personal profile"
 msgstr "Personne (Membre)"
 
-msgid "Company"
-msgstr "Société"
+#, fuzzy
+msgid "Our company"
+msgstr "Nuestra empresa"
 
-msgid "non-profit Organization"
-msgstr "Organisation à but non lucratif"
+#, fuzzy
+msgid "Our non-profit"
+msgstr "Nuestra organización"
 
 msgid "My qualifications"
 msgstr "Mes qualifications"
@@ -87,46 +94,43 @@ msgstr "Mes candidatures"
 msgid "Our job applications"
 msgstr "Nos candidatures"
 
+#, fuzzy
+msgid "Settings"
+msgstr "Configuraciones"
+
+#, fuzzy
+msgid "Administration"
+msgstr "Administración"
+
 msgid "Resources"
 msgstr "Ressources"
 
-msgid "Careers"
-msgstr "Carrière"
+#, fuzzy
+msgid "FS business models"
+msgstr "Réseaux XXX d'affaires en LL"
 
-msgid "FS Business Networks"
-msgstr "Réseaux d'affaires en LL"
-
-msgid "FS Job Offers"
+msgid "FS job offers"
 msgstr "Offres d'emplois en LL"
-
-msgid "Others"
-msgstr "Autres"
-
-msgid "Special Interest Groups"
-msgstr "Groupes d'intérêts spécifiques"
-
-msgid "e-Voting"
-msgstr "Vote en ligne"
 
 #
 # log_in_box.tpl
 #
-msgid "Password"
-msgstr "Mot de passe"
-
 msgid "Log in"
 msgstr "S'identifier"
 
 msgid "Lost password?"
 msgstr "Mot de passe perdu ?"
 
-msgid "New person?"
+#, fuzzy
+msgid "Register person"
 msgstr "Nouvel utilisateur"
 
-msgid "New company?"
+#, fuzzy
+msgid "Register company"
 msgstr "Nouvelle société"
 
-msgid "New non-profit?"
+#, fuzzy
+msgid "Register non-profit"
 msgstr "Nouvelle organisation"
 
 #
@@ -135,26 +139,37 @@ msgstr "Nouvelle organisation"
 msgid "Log out"
 msgstr "Déconnecter"
 
-msgid "Now, you can go to the menu to manage your data"
-msgstr "Vous pouvez maintenant gérer vos données en passant par le menu"
-
 #
 # content.tpl
 #
-msgid "Log in successful"
-msgstr "Identification réussie"
+#, fuzzy
+msgid "Log in successful!"
+msgstr "Identification réussie !"
 
-msgid "Log out successful"
-msgstr "Déconnexion réussie"
+msgid "Now, you can go to the account menu to manage your data."
+msgstr "Vous pouvez maintenant gérer vos données en passant par le XXX-> account <-XXX menu."
 
-msgid "Log in unsuccessful: Invalid user or password, or some problem with the data base."
-msgstr "Identification impossible : email ou mot de passe invalide, ou problème de base de données."
+#, fuzzy
+msgid "Log in unsuccessful!"
+msgstr "Identification impossible !"
 
-msgid "To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the %1 domain to offices managed by %2FSF%3 staff."
-msgstr "Afin de garantir la sécurité physique de vos données, nous avons demandé le déplacement des services PostgreSQL et HTTP du domaine %1 vers des bureaux gérés par l'équipe %2FSF%3."
+#, fuzzy
+msgid "Invalid user or password, or some problem with the data base."
+msgstr "Email ou mot de passe invalide, ou problème de base de données."
 
-msgid "The %2GNU Herds%3 project is not an official part of %1the GNU Project%3."
-msgstr "Le projet %2GNU Herds%3 ne fait pas officiellement partie du %1Projet GNU%3."
+#, fuzzy
+msgid "Log out successful."
+msgstr "Déconnexion réussie."
+
+# msgid "The %2GNU Herds%3 project is an official part of %1the GNU Project%3."
+# msgstr "Le projet %2GNU Herds%3 fait pas officiellement partie du %1Projet GNU%3."
+
+#
+# foot.tpl
+#
+#, fuzzy
+msgid "Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!"
+msgstr "Por favor envíe cualquier observación a %1. Por ejemplo, usted puede informar de problemas técnicos tales como enlaces rotos, incorrecta presentación de la página, etc. Será bienvenida también cualquier crítica o sugerencia. ¡GNU Herds trabaja para usted!."
 
 #
 # Lost_Password_form.tpl
@@ -174,17 +189,19 @@ msgstr "Vous êtes déjà connecté et vous ne connaissez pas votre mot de passe
 msgid "For security reasons, GNU Herds does not send passwords by electronic mail."
 msgstr "Pour des raisons de sécurité, GNU Herds n'envoie pas les mots de passes par courrier électronique."
 
-msgid "To get your new password follow the below link:"
-msgstr "Pour obtenir votre nouveau mot de passe, suivez le lien suivant :"
+msgid "To get your new password follow the below link."
+msgstr "Pour obtenir votre nouveau mot de passe, suivez le lien suivant."
+
+#, fuzzy
+msgid "That link will expire in 2 hours:"
+msgstr "El enlace expirará en 2 horas:"
 
 msgid "If you have not asked for a new password, ignore it and your password will not be changed."
 msgstr "Si vous n'avez pas demandé de changer votre mot de passe, ignorez ce courrier et il ne sera pas modifié."
 
-msgid "An email has been sent to such address with the instructions to change the password."
-msgstr "Un courrier électronique qui explique comment changer le mot de passe a été envoyé à cette adresse."
-
-msgid "There is not member with that email!. Try again."
-msgstr "Aucun membre n'est enregistré avec cette adresse ! Essayez à nouveau."
+#, fuzzy
+msgid "An email has been sent to %s with the instructions to change the password."
+msgstr "Un courrier électronique qui explique comment changer le mot de passe a été envoyé à %s."
 
 msgid "Your new password is:"
 msgstr "Votre nouveau mot de passe est :"
@@ -193,25 +210,118 @@ msgid "To improve your security, you should change your password after loging in
 msgstr "Pour améliorer votre sécurité, vous devriez changer votre mot de passe immédiatement après vous être identifié."
 
 #
+# Entity_form.php
+#
+#, fuzzy
+msgid "An attempt was made to activate a new GNU Herds' account with this email address."
+msgstr "Se ha intentado activar una cuenta GNU Herds con esta dirección de correo electrónico."
+
+#, fuzzy
+msgid "However, you have already an active account!"
+msgstr "¡Sin embargo, usted ya tiene una cuenta activada!."
+
+#, fuzzy
+msgid "Follow the below link to get a new password if it is needed:"
+msgstr "Si lo necesita, abra el siguiente enlace para obtener una contraseña nueva:"
+
+#, fuzzy
+msgid "If you have not asked for this new account, someone else has asked for it with your email!"
+msgstr "¡Si usted no ha solicitado esta nueva cuenta, alguien la ha solicitado utilizando su correo electrónico!."
+
+#, fuzzy
+msgid "Your account has been activated!"
+msgstr "¡Su cuenta ha sido activada!."
+
+#, fuzzy
+msgid "The email has been changed!"
+msgstr "¡El correo electrónico ha sido cambiado!."
+
+#, fuzzy
+msgid "To change your GNU Herds account's email, first log in and then follow the below link."
+msgstr "Para cambiar el correo electrónico de su cuenta GNU Herds, primero entre en GNU Herds y entonces siga el siguiente enlace."
+
+#, fuzzy
+msgid "That link will expire in 7 days:"
+msgstr "El enlace expirará en 5 días:"
+
+#, fuzzy
+msgid "If you have not asked for it, just ignore this email."
+msgstr "Si usted no lo ha solicitado, simplemente ignore este correo electrónico."
+
+#, fuzzy
+msgid "Change account's email"
+msgstr "Cambiar el correo electrónico de la cuenta"
+
+#, fuzzy
+msgid "An email has been sent to the new email address to validate it."
+msgstr "Un correo electrónico ha sido enviado a la nueva dirección de correo electrónico para validarla."
+
+#, fuzzy
+msgid "An attempt was made to register a new GNU Herds' account with this email address."
+msgstr "Se ha intentado registrar una nueva cuenta GNU Herds con esta dirección de correo electrónico."
+
+#, fuzzy
+msgid "Your email has been used to create an account at GNU Herds."
+msgstr "Su correo electrónico ha sido usado para crear una nueva cuenta en GNU Herds."
+
+#, fuzzy
+msgid "To activate it follow the below link."
+msgstr "Para activarla siga el siguiente enlace."
+
+#, fuzzy
+msgid "That link will expire in 48 hours."
+msgstr "El enlace expirará en 48 horas."
+
+#, fuzzy
+msgid "To get a new non-expired link just register at gnuherds.org again."
+msgstr "Para obtener un nuevo enlace no-expirado, simplemente regístrese de nuevo en gnuherds.org"
+
+#, fuzzy
+msgid "If you have not asked for this new account, ignore this email."
+msgstr "Si usted no ha solicitado esta nueva cuenta, ignore este correo electrónico."
+
+#, fuzzy
+msgid "Note: To avoid 'Spam' you can only get this email at the most once each 48 hours."
+msgstr "Nota: Para evitar 'Spam' usted solo puede obtener este correo electrónico como máximo una vez cada 48 horas."
+
+#, fuzzy
+msgid "If this email is Spam for you, please let it knows to  association AT gnuherds.org"
+msgstr "Si este correo electrónico es Spam para usted, por favor hágalo saber a  association AT gnuherds.org"
+
+#, fuzzy
+msgid "Activate account"
+msgstr "Activar cuenta"
+
+#, fuzzy
+msgid "Success. An email has been sent to %s with the instructions to activate the account."
+msgstr "Correcto. Un correo electrónico ha sido enviado a %s con las instrucciones para activar la cuenta."
+
+#, fuzzy
+msgid "If you do not receive such email, you can inform about it at %s."
+msgstr "Si usted no recibe tal correo electrónico, puede informar a %s."
+
+#
 # Entity.php
 #
-msgid "ERROR: Wrong magic number!."
+msgid "ERROR: Wrong magic number!"
 msgstr "ERREUR : Nombre magique incorrect."
 
-msgid "ERROR: Can not save the uploaded file!."
+msgid "ERROR: Can not save the uploaded file!"
 msgstr "ERREUR : Impossible d'enregistrer le fichier téléchargé."
 
-msgid "ERROR: Can not delete the photo or logo file!."
+msgid "ERROR: Can not delete the photo or logo file!"
 msgstr "ERREUR : Impossible de supprimer le fichier d'image ou logo."
 
 #
 # Home_content.tpl
 #
-msgid "GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors."
-msgstr "GNU Herds est une association à but non lucratif %1démocratique%4 dont le %2but%4 est d'encourager le développement professionnel des contributeurs aux Logiciels Libres."
+#, fuzzy
+msgid "GNU Herds is a not-for-profit %1true-democratic%3 association which %2aims%3 to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
+msgstr "GNU Herds est une association à but non lucratif %1démocratique%4 dont le %2but%4 est ... XXX:: This sentence part is repeated three times in the PO file."
 
-msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:"
-msgstr "La première étape a été de développer les modules du %1site d'offres d'emplois%2 et de regrouper plusieurs modèles de %3réseaux d'affaires%2. Voici certaines des fonctionnalités du site d'offres d'emplois :"
+#, fuzzy
+msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3business models%2. Some of the JobSite's features are:"
+msgstr "La première étape a été de développer les modules du %1site d'offres d'emplois%2 et de regrouper plusieurs %3modèles de XXX--> réseaux <--XXX d'affaires%2. Voici certaines des fonctionnalités du site d'offres d'emplois :"
 
 msgid "Controlled by its own users"
 msgstr "Contrôlé par ses propres utilisateurs"
@@ -219,14 +329,18 @@ msgstr "Contrôlé par ses propres utilisateurs"
 msgid "FS skills data base"
 msgstr "Base de données de compétences en LL"
 
-msgid "Other modules could be developed. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled."
-msgstr "D'autres modules pourraient être développés. Vous pourriez même participer à ce développement. Cependant, une évolution a déjà été proposée : la FSF pourrait délivrer des certifications. L'application web est déjà prête à gérer les certifications, bien que ce support soit désactivé pour le moment."
+msgid "Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled."
+msgstr "D'autres modules pourraient être développés. ::XXX--> Send an email with your proposal to the %1 email list. <--XXX:: Vous pourriez même participer à ce développement. Cependant, une évolution a déjà été proposée : la FSF pourrait délivrer des certifications. L'application web est déjà prête à gérer les certifications, bien que ce support soit désactivé pour le moment."
 
 msgid "%1 certification"
 msgstr "Certification %1"
 
 msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
 msgstr "Ce projet a été réalisé par une petite %1équipe%2 de membres de la communauté des Logiciels Libres."
+
+#, fuzzy
+msgid "Mailing lists:"
+msgstr "Listes de diffusions :"
 
 msgid "is the project main list."
 msgstr "est la liste principale du projet."
@@ -252,8 +366,10 @@ msgstr "Le nom de l'association est GNU Herds, communément appelée GNU Herds -
 msgid "Aims"
 msgstr "But"
 
-msgid "The aims of the Association shall be to %1encourage%2 the professional development of Free Software contributors."
-msgstr "Le but de l'association sera d'%1encourager%2 le développement professionnel des contributeurs aux Logiciels Libres."
+### OLD: REMOVE ME: msgstr "Le but de l'association sera d'%1encourager%2 le développement professionnel des contributeurs aux Logiciels Libres."
+#, fuzzy
+msgid "The aims of the Association shall be to %1assist and encourage%2 people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
+msgstr "Los objetivos de la Asociación serán %1asistir y promover%2 personas en trabajos remunerados como autores de Software Libre, obteniendo las más altas cotas de competencia y eficiencia."
 
 msgid "Membership"
 msgstr "Membres"
@@ -267,14 +383,17 @@ msgstr "Tous les membres doivent être motivés par les buts de GNU Herds et res
 msgid "To qualify for voting membership one must show a contribution to the Free Software movement."
 msgstr "Afin de pouvoir demander d'être membre votant, une personne doit apporter une contribution au mouvement des Logiciels Libres."
 
-msgid "Memberships will be on a yearly basis.  Even though membership is free of charge membership must be renewed."
-msgstr "L'adhésion est annuelle et doit être renouvelée même pour les membres qui ne cotisent pas."
+### OLD: REMOVE ME: msgstr "L'adhésion est annuelle et doit être renouvelée même pour les membres qui ne cotisent pas."
+#, fuzzy
+msgid "Voting memberships and associate memberships are both free of charge. However, voting memberships %1expire yearly%2 but they can be renewed."
+msgstr "Afiliados y asociados no están sujetos a pago alguno. Sin embargo, la afiliación con capacidad de voto %1expira al año%2 aunque puede ser renovada."
 
 msgid "Committee"
 msgstr "Conseil d'administration"
 
-msgid "The Committee shall consist of the following: the members of the system administrator team, the web master team, the certifications team, the translator teams, the Public Relations team and the Ethics Officer."
-msgstr "Le Conseil d'Administration est constitué des personnes suivantes : les membres de l'équipe des administrateurs systèmes, l'équipe des webmasters, l'équipe des certifications, l'équipe des traducteurs, l'équipe des relations publiques et le responsable de l'éthique."
+#, fuzzy
+msgid "The Committee shall consist of the following: the members of the system administrator team, the web master team, the development team, the translator teams, the public relations team and the Ethics Officer."
+msgstr "Le Conseil d'Administration est constitué des personnes suivantes : les membres de l'équipe des administrateurs systèmes, l'équipe des webmasters, l'équipe des XXX--> development <--XXX, l'équipe des traducteurs, l'équipe des relations publiques et le responsable de l'éthique."
 
 msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
 msgstr "Les tâches de l'équipe de certification sera d'évaluer, sur demande, les certifications %1Free Software Contributor%2, %3GNU Business Network%4, etc."
@@ -306,8 +425,11 @@ msgstr "En plus des votes réguliers à main levée, il est possible pour un mem
 msgid "Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed to discuss it is too long should there be a vote.%2Vote on non-technical subjects.%3"
 msgstr "Ligne directrice : %1On ne vote pas les sujets techniques. On en discute afin d'obtenir la meilleure solution technique. Si la discussion prend trop de temps, on peut alors procéder à un vote.%2On vote les sujets non techniques.%3"
 
-msgid "Special Interest Groups will be formed at the discretion of the committee based on the demand within the membership."
-msgstr "Des Groupes d'intérêts spécifiques seront formés à la discrétion du conseil d'administration selon la demande des membres."
+msgid "Special interest groups"
+msgstr "Groupes d'intérêts spécifiques"
+
+msgid "Groups will be formed at the discretion of the committee based on the demand within the membership."
+msgstr "Groupes seront formés à la discrétion du conseil d'administration selon la demande des membres."
 
 msgid "See the %1e-Voting%2 Special Interest Group section. We could work on the design of the official voting mechanism."
 msgstr "Voir la section Groupe d'intérêt spécifique %1Vote électronique%2. Nous pourrons travailler sur la structure du mécanisme officiel de vote."
@@ -328,8 +450,25 @@ msgid "Send comments to"
 msgstr "Envoyez vos commentaires à"
 
 #
-# Timeline_content.tpl
+# GNU_Herds_Hackers_Guide_content.tpl
 #
+#, fuzzy
+msgid "GNU Herds coders' guide"
+msgstr "Guide du  XXX-> Hacker <-XXX  GNU Herds"
+
+msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!."
+msgstr "Si vous voulez rejoindre l'équipe GNU Herds ou y collaborer sporadiquement, comme plusieurs personnes déjà, veuillez vous %1inscrire%2 à la liste de diffusion « gnuherds-app-dev » ou arrangez-vous avec un membre de l'équipe. Merci !"
+
+msgid "To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this coders' guide. If you need support ask for it at"
+msgstr "Pour vous amuser avec l'application, %1téléchargez%3 le code source et %2installez%3-le sur votre machine. Les traducteurs n'ont pas besoin de télécharger le code, nous leur enverrons le fichier gettext POT à traduire. Chercher les astuces dans ce guide du ::XXX--> coder hacker <--XXX:: . Si vous avez besoin d'aide, demandez à"
+
+msgid "Read the current draft of %1GNU Herds' Charter%2."
+msgstr "Lire le brouillon actuel des %1statuts de GNU Herds%2."
+
+#, fuzzy
+msgid "Roadmap"
+msgstr "Avancement"
+
 msgid "DONE!"
 msgstr "FAIT !"
 
@@ -345,14 +484,15 @@ msgstr "Ajout du support des offres d'emplois en LL."
 msgid "Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed."
 msgstr "Donner un petit rapport d'avancement, en référençant ce site web, à Richard Stallman afin qu'ils voient notre activité et nous disent ce qui, si besoin, doit être changé."
 
-msgid "Move to offices managed by FSF staff."
-msgstr "Déménager vers les bureaux de la FSF."
-
-msgid "Association announcement."
-msgstr "Annonce de l'associtation."
+msgid "To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the gnuherds.org domain to offices managed by %1FSF%2 staff."
+msgstr "Afin de garantir la sécurité physique de vos données, nous avons demandé le déplacement des services PostgreSQL et HTTP du domaine gnuherds.org vers des bureaux gérés par l'équipe %1FSF%2."
 
 msgid "Translate the web site to other languages."
 msgstr "Traduire le site web dans d'autres langues."
+
+#, fuzzy
+msgid "Official job site and association announcement."
+msgstr "Annonce de l'associtation."
 
 msgid "Work on e-Vote subjects:"
 msgstr "Travailler sur le vote électronique :"
@@ -366,65 +506,14 @@ msgstr "Travailler sur les autres propositions de vote électronique."
 msgid "Finish and show the draft of the P2P based e-Vote system proposal."
 msgstr "Terminer et montrer le brouillon de la proposition de système de vote électronique en P2P."
 
-#
-# GNU_Herds_Hackers_Guide_content.tpl
-#
-msgid "GNU Herds Hackers' Guide"
-msgstr "Guide du Hacker GNU Herds"
-
-msgid "Introduction"
-msgstr "Introduction"
-
-msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!."
-msgstr "Si vous voulez rejoindre l'équipe GNU Herds ou y collaborer sporadiquement, comme plusieurs personnes déjà, veuillez vous %1inscrire%2 à la liste de diffusion « gnuherds-app-dev » ou arrangez-vous avec un membre de l'équipe. Merci !"
-
-msgid "To play with the web application, %1download%2 the code and install it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this Hackers' Guide. If you need support ask for it at"
-msgstr "Pour vous amuser avec l'application, %1téléchargez%2 le code source et installez-le sur votre machine. Les traducteurs n'ont pas besoin de télécharger le code, nous leur enverrons le fichier gettext POT à traduire. Chercher les astuces dans ce guide du Hacker. Si vous avez besoin d'aide, demandez à"
-
-msgid "Read the current draft of %1GNU Herds' Charter%2."
-msgstr "Lire le brouillon actuel des %1statuts de GNU Herds%2."
-
 msgid "Technologies"
 msgstr "Technologies"
-
-msgid "The project depends on the below technologies. Though it is and must be open to any proposal."
-msgstr "Le projet dépend des technologies suivantes, bien qu'il soit et qu'il doit rester ouvert à toute proposition."
-
-msgid "%1CVS%3 server at %2Savannah%3"
-msgstr "Serveur %1CVS%3 chez %2Savannah%3"
 
 msgid "Web application Architecture"
 msgstr "Architecture de l'application web"
 
-msgid "As a Free Software project we look for a modular and extensible design. We hope it could be easy to change the technology of a specific layer if it is needed."
-msgstr "En tant que projet Logiciel Libre, nous cherchons une architecture modulaire et extensible. Nous espérons pouvoir changer facilement la technologie d'une couche particulière si cela s'avère nécessaire."
-
-msgid "This architecture proposal is based on PHP:"
-msgstr "Cette proposition d'architecture est basée sur PHP :"
-
-msgid "outdated"
-msgstr "obsolète"
-
 msgid "Web application Design"
 msgstr "Structure de l'application web"
-
-msgid "The Smarty templates could be moved outside this layer."
-msgstr "Les templates Smarty pourraient être déplacés hors de cette couche."
-
-msgid "ADOdb is an external library. It is not being used yet. We give up about using a data base abstraction library, and this proposal will use instead just %1PDO%2."
-msgstr "ADOdb est une bibliothèque externe et n'est pas encore utilisée. Nous avons abandonné l'idée de nous servir d'une abstraction de base de données et cette proposition utilisera juste %1PDO%2."
-
-msgid "Documentation of the new Data Base design:"
-msgstr "Documentation de la nouvelle structure de base de données :"
-
-msgid "Entity Relation logical model"
-msgstr "Modèle logique de la relation Entity"
-
-msgid "Physical model"
-msgstr "Modèle physique"
-
-msgid "SQL Implementation"
-msgstr "Implémentation SQL"
 
 msgid "Coding Standards"
 msgstr "Normes de codage"
@@ -432,116 +521,22 @@ msgstr "Normes de codage"
 msgid "Internationalization and Localization"
 msgstr "Internationalisation et localisation"
 
-msgid "We will try to follow these %1Coding Standards%2."
-msgstr "Nous essaierons de suivre ces %1normes de codage%2."
-
 msgid "How the development team and production is integrated?"
 msgstr "Comment s'intègrent l'équipe de développement et la production ?"
 
-msgid "CVS is used as repository. The HTTP server gets a tagged release via 'update' from the CVS server."
-msgstr "CVS est le dépôt de fichiers. Le serveur HTTP obtient une version taguée par un « update » depuis le serveur CVS."
-
-msgid "The suggested formats to share source code among the developers are %1 or %2."
-msgstr "Les formats %1 et %2 sont recommandés pour échanger du code source entre développeurs."
-
-msgid "The TODO task list"
+#, fuzzy
+msgid "Task list"
 msgstr "Liste des tâches à faire"
 
-msgid "See the %1Task Manager%2 at Savannah."
-msgstr "Voir le %1gestionnaire de tâches%2 chez Savannah."
-
-msgid "See the %1Wiki HOWTO%2 at Savannah."
-msgstr "Voir le %1Wiki HOWTO%2 chez Savannah."
-
-msgid "The source code"
-msgstr "Le code source"
-
-msgid "If you do not like play with CVS, you can get a, maybe outdated package, of the website, at our  Savannah %1Filelist (Download area)%2."
-msgstr "Si vous ne souhaitez pas utiliser CVS, vous pouvez obtenir une version (probablement périmée) du site web dans la %1zone de téléchargement%2 de Savannah."
-
-msgid "Or much better, you can %1download%2 the code which is running this site right now!."
-msgstr "Ou, mieux, vous pouvez %1télécharger%2 le code utilisé actuellement par le site !"
-
-msgid "You could set up all the required %1Technologies%2 on your host, to be used as your development environment."
-msgstr "Vous pouvez mettre en place toutes les %1technologies%2 requises sur votre machine, afin de l'utiliser en tant qu'environnement de développement."
-
-msgid "The source code can have 'XXX' flags, which are used to mark pending tasks, etc."
-msgstr "Le code source peut contenir des « XXX » qui sont utilisés pour marquer les tâches restantes, etc."
-
-msgid "The CVS server"
-msgstr "Le serveur CVS"
-
-msgid "The CVS of gnuherds-app is at %1Savannah%2. The PostgreSQL database and the website is at the gnuherds.org host."
-msgstr "Le CVS de gnuherds-app est chez %1Savannah%2. La base PostgreSQL et le site web sont sur la machine gnuherds.org."
-
-msgid "Though before getting write permision to the CVS repository it is usual to prove the interest with some patch, you can register at the Savannah development site and ask to join the project. Do not fear, if you join, nobody will force you to contribute :) "
-msgstr "Avant d'obtenir un accès en écriture au dépôt CVS, vous devez généralement prouver votre intérêt en fournissant des correctifs (patchs). Créez un compte chez Savannah et demandez à rejoindre le projet. N'ayez pas peur, si vous nous rejoignez, personne ne vous forcera à contribuer :)"
-
-msgid "Hints"
-msgstr "Conseils"
-
-msgid "%1Register%3 at %2Savannah%3"
-msgstr "%1Créer un compte%3 chez %2Savannah%3"
-
-msgid "%1Request%2 for inclusion to the project"
-msgstr "%1Demander%2 de rejoindre le projet"
-
-msgid "gnuherds-app %1CVS%2 view"
-msgstr "Voir le %1CVS%2 de gnuherds-app"
-
-msgid "Note: If you register at Savannah and join the project, both checkout and checkin will work in spite of the message \"Your savannah password is useless for cvs\".  When you register, take note of your passphrase. Savannah will ask for it at each cvs operation. For example, my first checkout was as follows:"
-msgstr "Note : Si vous créez un compte chez Savannah et vous nous rejoignez, les checkout et checkin fonctionneront en dépit du message \"Your savannah password is useless for cvs\" (Votre mot de passe savannah est inutile pour CVS). Lorsque vous créez votre compte, retenez bien votre mot de passe. Savannah vous le demandera pour chaque opération CVS. Par exemple, pour mon premier checkout :"
-
-msgid "Now you can work:"
-msgstr "Vous pouvez maintenant travailler :"
-
-msgid "To avoid writing the pass phrase at every cvs command:"
-msgstr "Pour ne pas devoir taper le mot de passe à chaque commande CVS :"
-
-msgid "The web site"
-msgstr "Le site web"
-
-msgid "It is in the gnuherds.org host."
-msgstr "Il se trouve sur le serveur gnuherds.org."
+#, fuzzy
+msgid "The Git master server"
+msgstr "Le serveur Git master"
 
 msgid "The PostgreSQL data base"
 msgstr "La base de données PostgreSQL."
 
-msgid "Creating from scratch. Follow the below steps:"
-msgstr "À partir d'une base vierge, suivez ces étapes :"
-
-msgid "Create the data base"
-msgstr "Création de la base"
-
-msgid "Create the user, as super user"
-msgstr "Création du super-utilisateur"
-
-msgid "Grant permissions"
-msgstr "Assigner les permissions"
-
-msgid "Quit"
-msgstr "Quitter"
-
-msgid "Create the initial state of the data base"
-msgstr "Créer la structure de la base"
-
-msgid "Check that 'stderr' and 'stdout' do not show errors"
-msgstr "Vérifier que « stderr » et « stdout » n'affichent pas d'erreur."
-
-msgid "General references:"
-msgstr "Références générales :"
-
-msgid "Email lists"
-msgstr "Listes de diffusions"
-
 msgid "How to install a development environment?"
 msgstr "Comment installer un environnement de développement ?"
-
-msgid "Install"
-msgstr "Installer"
-
-msgid "Configure"
-msgstr "Configurer"
 
 msgid "Current work team"
 msgstr "Équipe actuelle"
@@ -552,8 +547,8 @@ msgstr "La liste est probablement périmée :"
 #
 # FAQ_content.tpl
 #
-msgid "Frequently Asked Questions (FAQ)"
-msgstr "Foire Aux Questions (FAQ)"
+msgid "Frequently asked questions (FAQ)"
+msgstr "Foire aux questions (FAQ)"
 
 msgid "Index"
 msgstr "Index"
@@ -567,8 +562,9 @@ msgstr "Pourquoi un nouveau site d'offres d'emplois ?"
 msgid "Because no one comply the below proposed conditions:"
 msgstr "Parce qu'aucun autre ne respecte cet ensemble de conditions :"
 
-msgid "Use a license to cover use of the software over a computer network. The current %1Affero GPL%2 license will be replaced by the GPL v3 license when it be released. Anyhow, the project is always open to discuss this and any other subject."
-msgstr "Utiliser une licence qui protège l'utilisation du logiciel à travers un réseau informatique. La licence actuelle %1Affero GPL%2 sera remplacée par la licence GPL v3 lorsque celle-ci sera prête. Le projet reste ouvert à toute discussion concernant ce ou tout autre sujet."
+#, fuzzy
+msgid "Use a license to cover use of the software over a computer network. We are using the %1GNU AGPLv3%2 license. Anyhow, the project is always open to discuss this and any other subject."
+msgstr "Utiliser une licence qui protège l'utilisation du logiciel à travers un réseau informatique. XXX-> Se está utilizando la licencia %1GNU AGPLv3%2. <--XXX  Le projet reste ouvert à toute discussion concernant ce ou tout autre sujet."
 
 msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users."
 msgstr "De plus, la gestion du site d'offres d'emplois doit être %1contrôlée par ses propres utilisateurs%2 en utilisant une politique démocratique. Cela sera garanti par l'association GNU Herds afin de s'assurer que l'évolution du site d'offres d'emplois sera contrôlée et menée par ses utilisateurs."
@@ -582,8 +578,10 @@ msgstr "Faciliter les contacts entre les individus et les sociétés intéressé
 msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
 msgstr "Avoir une zone d'activité globale, supportant ainsi des modèles d'affaires basés sur le travail à longue distance. Avec les technologies à venir, la localisation ne devrait pas être un obstacle pour établir des relations entre plusieurs services IT. Le but de traduire l'application web en plusieurs langues et de permettre ainsi la saisie d'une offre d'emploi en plusieurs langues est déjà atteint."
 
-msgid "All this taking into account that: \"The %1aims%2 of the Association shall be to encourage the professional development of Free Software contributors.\""
-msgstr "Tout cela en tenant compte que « Le %1but%2 de l'association est d'encourager le développement professionnel des contributeurs en Logiciels Libres »."
+### OLD: REMOVE ME: msgstr "Tout cela en tenant compte que « Le %1but%2 de l'association est d'encourager le développement professionnel des contributeurs en Logiciels Libres »."
+#, fuzzy
+msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
+msgstr "Todo esto teniendo en cuenta que: \"%3Los %1objetivos%2 de la Asociación serán asistir y promover personas en trabajos remunerados como autores de Software Libre, obteniendo las más altas cotas de competencia y eficiencia.%4\""
 
 msgid "How to subscribe to a job offer?"
 msgstr "Comment postuler à une offre d'emploi ?"
@@ -593,6 +591,10 @@ msgstr "Enregistrez-vous en tant que %1personne%4, %2société%4 ou %3organisati
 
 msgid "Fill the %1Qualifications%2 form."
 msgstr "Remplissez le formulaire de %1qualifications%2."
+
+#, fuzzy
+msgid "It is recommended provide the more information possible."
+msgstr "Se recomienda suministrar la mayor cantidad de información posible."
 
 msgid "Log in."
 msgstr "Identifiez-vous."
@@ -636,642 +638,171 @@ msgstr "Installation de logiciel, si tous les logiciels à installer sont des %1
 msgid "Report to %1 about any offer that seems improper."
 msgstr "Veuillez signaler à %1 toute offre qui ne vous semblerait pas conforme."
 
-msgid "How is the Job Site module related to the GNU Herds Association?"
-msgstr "De quelle façon le module de site d'emploi est lié à l'Association GNU Herds ?"
+#, fuzzy
+msgid "Which criteria are applied to classify a program, language, protocol, specification, software distribution, etc. as Free or Non-Free Software?"
+msgstr "¿Qué criterios se aplican para clasificar un programa, lenguaje, protocolo, especificación, distribución de software, etc. como Software Libre o NO-Libre?."
+
+#, fuzzy
+msgid "For a program, read the %1Free Software%2 definition to know the criteria."
+msgstr "Para un programa, los criterios se exponen en la definición de %1Software Libre%2."
+
+#, fuzzy
+msgid "For development languages, protocols, specifications, etc. the meaningful question is whether it is %1supported%3 by software licensed under any of the %2Free Software Licenses%3: BSD, GPL, etc.  Can you use it with Free Software exclusively?"
+msgstr "Para lenguajes de desarrollo, protocolos, especificaciones, etc. la pregunta precisa es si está %1soportado%3 por software licenciado con cualquiera de las %2Licencias de Software Libre%3: BSD, GPL, etc.  ¿Puede usted usarlo exclusivamente con Software Libre?."
 
-msgid "The Job Site module is %1controlled%2 by the Association."
-msgstr "Le module de site d'emploi est %1contrôlé%2 par l'Association."
+#, fuzzy
+msgid "For software distributions, they must not recommend, promote or grant legitimacy to Non-Free Software."
+msgstr "Para distribuciones de software, estas no deben recomendar, promover o otorgar legitimidad al Software NO-Libre."
 
-#
-# Timeline_content.tpl [DELAYED]
-#
-#
-# FS_Job_Offers_form.tpl
-#
-msgid "There are not active job offers"
-msgstr "Aucune offre d'emploi"
+#, fuzzy
+msgid "Currently, the tags applyed to classify skills are:"
+msgstr "Actualmente, las etiquetas aplicadas para clasificar habilidades son:"
 
-msgid "Vacancy title"
-msgstr "Titre du poste"
+#, fuzzy
+msgid "only for software distributions"
+msgstr "solo para distribuciones de software"
 
-msgid "Location"
-msgstr "Lieu"
+#, fuzzy
+msgid "For example, applying such criteria to Java:"
+msgstr "Por ejemplo, aplicando tales criterios a Java:"
 
-msgid "Offer date"
-msgstr "Date souhaitée de début"
+#, fuzzy
+msgid "The %1Java%2 technology-skill is tagged as %3Free Software%4 due to there are free software Java compilers."
+msgstr "La tecnología-habilidad %1Java%2 se etiqueta como %3Software Libre%4 ya que hay compiladores de Java que son software libre."
 
-msgid "Employer"
-msgstr "Employeur"
+#, fuzzy
+msgid "However the below Sun Java technologies are tagged as %1Non-Free Software%2 because of the license you have to agree to download them is not a Free Software license. Anyhow, most of the Java Sun technologies are GPL'd. Sun has made substantial progress towards freeing the JDK under the GPL. The %3IcedTea%5 project is filling in the %4gaps%5."
+msgstr "Sin embargo las tecnologías Sun Java enumeradas a continuación se etiquetan como %1Software NO-Libre%2 debido a que la licencia que usted tiene que aceptar para descargarlas no es una licencia de Software Libre. No obstante, la mayoría de las tecnologías Java Sun han sido licenciadas bajo GPL. Sun ha hecho sustanciales progresos hacia la liberación del JDK bajo licencia GPL. El proyecto %3IcedTea%5 está ocupando las %4lagunas%5."
 
-msgid "Any"
-msgstr "Quelconque"
+#, fuzzy
+msgid "Applying it to .NET:"
+msgstr "Aplicando tales criterios a .NET:"
 
-msgid "telework"
-msgstr "Télétravail"
+#, fuzzy
+msgid "%1Microsoft .NET%2 is tagged as %3Non-Free Software%4."
+msgstr "%1Microsoft .NET%2 es etiquetado como %3Software NO-Libre%4."
 
-#
-# View_Job_Offer_form.php
-#
-msgid "To be able to subscribe your application, you have to fill the Qualification form."
-msgstr "Afin de pouvoir postuler, vous devez remplir le formulaire de Qualifications."
+#, fuzzy
+msgid "%1Mono .NET%2 is a set of tools under GPL, LGPL and MIT, or dual licenses. It is tagged as %3Free Software%4."
+msgstr "%1Mono .NET%2 es un conjunto de herramientas licenciadas bajo GPL, LGPL y MIT, o licencias duales. Se etiqueta como %3Software Libre%4."
 
-msgid "To be able to subscribe your application, you have to log in first."
-msgstr "Afin de pouvoir postuler, vous devez vous identifier."
+#, fuzzy
+msgid "%1.NET%2 is tagged as %3Non-Free Software%4 because of the Mono tools are not 100% complete. Mono does not cover all .NET"
+msgstr "%1.NET%2 se etiqueta como %3Software NO-Libre%4 debido a que las herramientas Mono no están completas al 100%. Mono no cubre todo .NET"
 
-msgid "See the"
-msgstr "Voir la"
+#, fuzzy
+msgid "%1C#%2 is tagged as %3Free Software%4 due to there are free software C# compilers."
+msgstr "%1C#%2 está etiquetado como %3Software Libre%4 ya que hay compiladores de C# que son software libre."
 
-msgid "Note that this job offer is not looking for a"
-msgstr "Notez que cette offre d'emploi ne recherche pas un"
+#, fuzzy
+msgid "Applying it to some software distributions:"
+msgstr "Aplicando los criterios a algunas distribuciones de software:"
 
-msgid "You can not subscribe to you own offer."
-msgstr "Vous ne pouvez pas postuler à votre propre offre d'emploi."
+#, fuzzy
+msgid "%1 is %3Almost-Free Software%4 because it contains Non-Free Software %2 in its kernel."
+msgstr "%1 es %3Software casi-Libre%4 porque contiene %2 de Software NO-Libre en su kernel."
 
-msgid "ERROR: Unexpected condition"
-msgstr "ERREUR : Condition inattendue"
-
-#
-# View_Job_Offer_form.tpl
-#
-msgid "Your application has been subscribed to this job offer"
-msgstr "Votre candidature pour ce poste a été enregistrée."
-
-msgid "been born in"
-msgstr "né(e) à"
-
-msgid "Nationality"
-msgstr "Nationalité"
-
-msgid "View contact information"
-msgstr "Contacts"
-
-msgid "IS LOOKING FOR"
-msgstr "RECHERCHE"
-
-msgid "Entity type"
-msgstr "Type d'entité"
-
-msgid "Persons"
-msgstr "Personne"
-
-msgid "Companies"
-msgstr "Société"
-
-msgid "non-profit Organizations"
-msgstr "Organisation à but non lucratif"
-
-msgid "or"
-msgstr "ou"
-
-msgid "Vacancies"
-msgstr "Poste vacant"
-
-msgid "Ref."
-msgstr "Réf."
-
-msgid "Contract type"
-msgstr "Type de contrat"
-
-msgid "Wage rank"
-msgstr "Salaire"
-
-msgid "Estimated effort"
-msgstr "Estimation de l'effort"
-
-msgid "Professional experience since"
-msgstr "Expérience professionelle depuis"
-
-msgid "Experience since"
-msgstr "Expérience depuis"
-
-msgid "Academic qualification"
-msgstr "Diplômes"
-
-msgid "Skills"
-msgstr "Compétences"
-
-msgid "Skill"
-msgstr "Compétence"
-
-msgid "Languages"
-msgstr "Langues"
-
-msgid "Language"
-msgstr "Langues"
-
-msgid "Description"
-msgstr "Description"
-
-msgid "Certifications"
-msgstr "Certifications"
-
-msgid "Experience with FS projects"
-msgstr "Expérience en projets LL"
-
-msgid "Currently you are"
-msgstr "Vous êtes actuellement"
-
-msgid "RESIDENCE LOCATION"
-msgstr "LIEU DE RÉSIDENCE"
-
-msgid "Telework"
-msgstr "Télétravail"
-
-msgid "any location"
-msgstr "lieu quelconque"
-
-msgid "required"
-msgstr "requis"
-
-msgid "Subscribe to this job offer"
-msgstr "Postuler à cette offre d'emploi"
-
-#
-# View_Qualifications_form.tpl
-#
-msgid "web site"
-msgstr "site web"
-
-msgid "Landline"
-msgstr "Téléphone fixe"
-
-msgid "Mobile phone"
-msgstr "Téléphone mobile"
-
-msgid "IP phone or videophone"
-msgstr "Téléphone IP ou visiophone"
-
-msgid "none"
-msgstr "aucun"
-
-msgid "not specified"
-msgstr "non specifié"
-
-msgid "Yes"
-msgstr "Oui"
-
-msgid "No"
-msgstr "Non"
-
-#
-# View_Qualifications_form.php
-#
-msgid "ERROR: The identifier to show has not been specified!."
-msgstr "ERREUR : L'identificateur à afficher n'a pas été spécifié."
-
-#
-# FS_Business_Networks_content.tpl
-#
-msgid "These are the networks, or ways to set up one, which we know about:"
-msgstr "Voici les réseaux, ou les façons d'en mettre un en place, que nous connaissons :"
-
-msgid "Menttes provides training, consulting, web sites, portals, extranets, intranets and custom web application development with Plone, Zope and Python. These services are provided for end-users, companies and consulting firms of any country."
-msgstr "Menttes fournit les formations, conseils, développements des sites web, portails, extranets, intranets et applications web avec Plone, Zope et Python. Ces services sont destinés aux utilisateurs finaux, sociétés et cabinets de conseils situées n'importe quel pays."
-
-msgid "Its"
-msgstr "Son"
-
-msgid "draft"
-msgstr "brouillon"
-
-msgid "December"
-msgstr "Décembre"
-
-msgid "Flexible Business Networks"
-msgstr "Réseaux d'affaires flexibles"
-
-msgid "If your company is not able to undertake fully a project, instead of losing the contract, you %1could choose to work with %2outsourcers%3. You can cut costs and foster competition between vendors, while taking advantage of vendor specialization and technical expertise%4."
-msgstr "Si votre société n'a pas assez de ressources pour prendre en charge un projet, au lieu de perdre le contrat, vous %1pouvez choisir de travailler avec des %2sous-traitants%3. Vous pouvez ainsi réduire les coûts et renforcer la concurrence entre les distributeurs, tout en conservant les avantages de votre spécialisation et expertise technique%4."
-
-msgid "Cooperatives & non-profit Franchises"
-msgstr "Coopératives et franchises à but non lucratif"
-
-msgid "Following the way of successful organizations as %1Best Western%2 or %3Mondragon Cooperative Corporation%2. You can read comments at the %4 email list."
-msgstr "Imiter des organisations qui ont réussies, telles que %1Best Western%2 ou %3Mondragon Cooperative Corporation%2. Lisez les commentaires de la liste de diffusion %4."
-
-msgid "Send an email to"
-msgstr "Envoyer un mail à"
-
-msgid "to update the above list"
-msgstr "pour mettre à jour la liste ci-dessous"
-
-#
-# International_Trade_Law_content.tpl
-#
-msgid "Reference"
-msgstr "Référence"
-
-msgid "References"
-msgstr "Références"
-
-#
-# FS_Businesses_SIG_content.tpl
-#
-msgid "Special Interest Group: FS Businesses"
-msgstr "Groupement d'intérêts spécifiques : Affaires LL"
-
-msgid "You can see the %1FS Business Networks%2 section."
-msgstr "Vous pouvez voir la section %1Réseaux d'affaires en LL%2."
-
-msgid "Email lists where we know FS Businesses are discussed:"
-msgstr "Liste de diffusions où l'on discute d'affaires en LL :"
-
-#
-# Person form: Person_form.tpl, Person_form.php
-#
-# Person_form.tpl
-msgid "NEW PERSON"
-msgstr "NOUVELLE PERSONNE"
-
-msgid "If you are already registered, first, login and then get into here again to update your data."
-msgstr "Si vous êtes déjà enregistré, identifiez-vous d'abord et revenez ensuite pour mettre à jour vos données."
-
-msgid "Read the %1%2%3Membership%4 Charter section."
-msgstr "Lisez la section %1%2%3Membres%4 des statuts."
-
-msgid "UPDATE PERSON DATA"
-msgstr "METTRE À JOUR VOS DONNÉES"
-
-msgid "The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional."
-msgstr "Les champs marqués d'une astérisque %1*%2 sont requis pour finaliser la transaction. Les autres champs sont facultatifs."
-
-msgid "ACCOUNT IDENTIFICATION"
-msgstr "IDENTIFICATION DU COMPTE"
-
-msgid "Retype Password"
-msgstr "Retapez le mot de passe"
-
-msgid "PERSON"
-msgstr "PERSONNE"
-
-msgid "First name"
-msgstr "Prénom"
-
-msgid "Last name"
-msgstr "Nom"
-
-msgid "Middle name"
-msgstr "Second nom"
-
-msgid "Photo"
-msgstr "Photo"
-
-msgid "Default image size"
-msgstr "Taille d'image par défaut"
-
-msgid "ADDRESS"
-msgstr "ADRESSE"
-
-msgid "Street"
-msgstr "Rue"
-
-msgid "Suite"
-msgstr "Etage"
-
-msgid "City"
-msgstr "Ville"
-
-msgid "State / Province"
-msgstr "État / Province"
-
-msgid "Postal code"
-msgstr "Code postal"
-
-msgid "Country"
-msgstr "Pays"
-
-msgid "INTERACTIVE COMMUNICATION MEDIAS"
-msgstr "MODE DE COMMUNICATION INTERACTIF"
-
-msgid "OTHER INFORMATION"
-msgstr "AUTRES INFORMATIONS"
-
-msgid "Save"
-msgstr "Sauver"
-
-msgid "Delete me from this Association"
-msgstr "Supprimer mon compte de l'Association"
-
-# Person_form.php
-msgid "You can not access this section been logged as"
-msgstr "Vous n'avez pas accès à cette section en tant que"
-
-msgid "Back"
-msgstr "Retour"
-
-msgid "Your information has been deleted from the data base. You have been logout automatically."
-msgstr "Vos informations ont été détruites de la base de données. Vous avez été automatiquement déconnecté."
-
-msgid "Updated successfully"
-msgstr "Mise à jour réussie"
-
-msgid "Success. You have been logged automatically. You can realize others operations in the left menu."
-msgstr "Réussi. Vous avez été connecté automatiquement. Les opérations disponibles sont accessibles dans le menu de gauche."
-
-msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
-msgstr "Vos contributions à la communauté des Logiciels Libres seront évaluées. Le résultat vous sera transféré par mail, ce qui activera votre possibilité de voter si l'évaluation est positive."
-
-msgid "There is already a member with this email in the data base. If that email is yours, get the password via the \"Lost Password\" form, else choose a different email."
-msgstr "Un membre utilisant cette adresse mail existe déjà dans la base de données. Si c'est votre adresse, récupérez le mot de passe via le formulaire « Mot de passe perdu ». Sinon, donnez une autre adresse."
-
-msgid "The Password fields differ:"
-msgstr "Les mots de passes donnés sont différents :"
-
-msgid "Please, write it again."
-msgstr "Veuillez le retaper."
-
-msgid "Some required fields are empty!. You have to fill them:"
-msgstr "Certains champs obligatoires sont vides, vous devez les remplir :"
-
-msgid "The Email field is not an email address."
-msgstr "Le champ Email ne contient pas une adresse email."
-
-msgid "If you want to qualify to vote, you have to supply both the contributions and your public key."
-msgstr "Pour demander le droit de vote, vous devez fournit vos contributions et votre clé publique."
-
-#
-# Company form: Company_form.tpl, Company_form.php
-#
-# Company_form.tpl
-msgid "NEW COMPANY"
-msgstr "NOUVELLE SOCIÉTÉ"
-
-msgid "UPDATE COMPANY DATA"
-msgstr "METTRE À JOUR LES DONNÉES DE LA SOCIÉTÉ"
-
-msgid "COMPANY"
-msgstr "SOCIÉTÉ"
-
-msgid "Photo or logo"
-msgstr "Photo ou logo"
-
-msgid "Delete me"
-msgstr "Supprimez-moi"
-
-# Company_form.php
-# msgid ""
-# msgstr ""
-#
-# non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
-#
-# non-profit_Organization_form.tpl
-msgid "NEW NONPROFIT ORGANIZATION"
-msgstr "NOUVELLE ORGANISATION À BUT NON LUCRATIF"
-
-msgid "UPDATE NONPROFIT ORGANIZATION"
-msgstr "METTRE À JOUR LES DONNÉES DE L'ORGANISATION"
-
-msgid "NONPROFIT"
-msgstr "ORGANISATION"
-
-msgid "Name"
-msgstr "Nom"
-
-msgid "Web site"
-msgstr "Site web"
-
-# non-profit_Organization_form.php
-# msgid ""
-# msgstr ""
-#
-# Qualifications form: Qualifications_form.tpl, Qualifications_form.php
-#
-# Qualifications_form.tpl
-msgid "NEW QUALIFICATIONS"
-msgstr "NOUVELLES QUALIFICATIONS"
-
-msgid "UPDATE QUALIFICATIONS DATA"
-msgstr "METTRE A JOUR LES QUALIFICATIONS"
-
-msgid "To demand any form reorganization: the addition to the lists, update, deletion of a profile, skill, etc., you can send an email to"
-msgstr "Pour demander une réorganisation de formulaire, les ajouts, mises à jour ou suppression de profils, compétences, etc. vous pouvez envoyer un mail à"
-
-msgid "PERSONAL"
-msgstr "PERSONNE"
-
-msgid "Year of birth"
-msgstr "Année de naissance"
-
-msgid "TECHNICAL"
-msgstr "TECHNIQUE"
-
-msgid "Years of experience"
-msgstr "Années d'expériences"
-
-msgid "Profiles"
-msgstr "Profils"
-
-msgid "Product profiles"
-msgstr "Profils de produits"
-
-msgid "Press Ctrl key to choose more than one Profile"
-msgstr "Pressez la touche Ctrl pour sélectionner plusieurs profils"
-
-msgid "Choose any skill in one of the combo-boxes and then select the knowledge and experience levels.%1 The skill and levels will arise in the right box. Repeat this operation with each skill you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3."
-msgstr "Choisissez les compétences dans la boîte et sélectionnez ensuite les niveaux de connaissance et de compétence.%1 Les compétences et niveaux apparaîtront dans la boîte de droite. Répétez cette opération avec chacune de vos compétences.%1 Si vous voulez supprimer certaines entrées, sélectionnez-les dans la boîte de droite et cliquez sur %2Supprimer%3."
-
-msgid "Choose any idiom in the first combo-box and then select the spoken and written levels.%1 The idiom and levels will arise in the right box. Repeat this operation with each idiom you know.%1 If you want to delete some entry, select it in the right box and click %2Delete%3."
-msgstr "Choisissez une langue dans la première boîte et sélectionnez ensuite vos niveaux en parlé/écrit.%1 Les lagues et niveaux apparaîtront dans la boîte de droite. Répétez cette opération avec chaque langue.%1 Si vous voulez supprimer certaines entrées, sélectionnez-les dans la boîte de droite et cliquez sur %2Supprimer%3."
-
-msgid "URIs which prove your contritution to FS projects. For example: CVS web reference, email with patch or advices, etc."
-msgstr "URI qui prouvent vos contributions en LL. Par exemple : des CVS web, des mails contenant des correctifs ou des conseils, etc."
-
-msgid "Professional profiles"
-msgstr "Profils professionels"
-
-msgid "Field profiles"
-msgstr "Profils de champs d'applications"
-
-msgid "Request your certifications"
-msgstr "Demandez vos certifications"
-
-msgid "Project"
-msgstr "Projet"
-
-msgid "Contributions to FS projects"
-msgstr "Contributions à des projets LL"
-
-msgid "The Project and URI fields are required. Please, try again."
-msgstr "Les champs Projet et URI sont obligatoires, veuillez les remplir."
-
-msgid "Knowledge level"
-msgstr "Niveau de connaissance"
-
-msgid "Experience level"
-msgstr "Niveau d'expérience"
-
-msgid "Spoken level"
-msgstr "Niveau de parlé"
-
-msgid "Written level"
-msgstr "Niveau écrit"
-
-msgid "Add"
-msgstr "Ajouter"
-
-msgid "Delete"
-msgstr "Supprimer"
-
-msgid "CONTRACT"
-msgstr "CONTRAT"
-
-msgid "Desired contract type"
-msgstr "Type de contrat désiré"
-
-msgid "Desired wage rank"
-msgstr "Salaire désiré"
-
-msgid "The format has to be:"
-msgstr "Le format doit être :"
-
-msgid "Minimum"
-msgstr "Minimum"
-
-msgid "Optimum"
-msgstr "Idéal"
-
-msgid "For example:"
-msgstr "Par exemple :"
-
-msgid "Currency"
-msgstr "Devise"
-
-msgid "Current employability"
-msgstr "Statut actuel"
-
-msgid "LOCATION"
-msgstr "LIEU"
-
-msgid "Available to travel"
-msgstr "Je peux faire des déplacements"
-
-msgid "Available to change residence"
-msgstr "Je peux déménager"
-
-msgid "Check qualifications view"
-msgstr "Vérifier les qualifications"
-
-# Qualifications_form.php
-msgid "To access this section you have to login first."
-msgstr "Vous devez vous identifier avant de pouvoir accéder à cette section."
-
-msgid "Delete qualifications"
-msgstr "Supprimer les qualifications"
-
-msgid "The qualifications information has been deleted from the data base."
-msgstr "Vos qualifications ont été supprimées de la base de données."
-
-msgid "Success. Your qualifications have been saved."
-msgstr "Réussi. Vos qualifications ont été sauvegardées."
-
-#
-# JobOffer form: Job_Offer_form.tpl, Job_Offer_form.php
-#
-# Job_Offer_form.tpl
-msgid "UPDATE JOB OFFER"
-msgstr "METTRE À JOUR L'OFFRE D'EMPLOI"
-
-msgid "NEW JOB OFFER"
-msgstr "NOUVELLE OFFRE D'EMPLOI"
-
-msgid "GENERAL"
-msgstr "GÉNÉRAL"
-
-msgid "Filled automatically"
-msgstr "Rempli automatiquement"
-
-msgid "Empty professional profile"
-msgstr "Profil professionel vide"
-
-msgid "The offer is closed"
-msgstr "L'offre est fermée"
-
-msgid "Your offer reference"
-msgstr "Référence de votre offre"
-
-msgid "Expiration date"
-msgstr "Date d'expiration"
-
-msgid "The format could be for example"
-msgstr "Le format peut-être par exemple"
-
-msgid "Allow applications from"
-msgstr "Permettre les candidatures de"
-
-msgid "guide"
-msgstr "guide"
-
-msgid "Required languages"
-msgstr "Langues requises"
-
-msgid "Check job offer view"
-msgstr "Visualiser l'offre d'emploi"
-
-# Job_Offer_form.php
-msgid "In the RESIDENCE LOCATION subsection, you have to fill an address (at least the Country), or activate the \"Telework\" checkbox."
-msgstr "Dans la sous-section LIEU, vous devez indiquer une adresse (au moins un pays) ou activer la case « Télétravail »."
-
-msgid "Incorrect format."
-msgstr "Format incorrect"
-
-msgid "Success. Your job offer have been saved."
-msgstr "Réussi. Votre offre d'emploi a été sauvée."
-
-#
-# Manage_Job_Offer_Applications_form.tpl
-#
-msgid "Manage the Job Offer applications"
-msgstr "Gérer les candidatures à l'offre d'emploi"
-
-msgid "Offer title"
-msgstr "Titre de l'offre d'emploi"
-
-msgid "Applicant"
-msgstr "Candidat"
-
-#
-# Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_form.php
-#
-# Manage_Job_Offers_form.tpl
-msgid "Manage Job Offers"
-msgstr "Gérer les offres d'emplois"
-
-msgid "You do not have any defined job offer."
-msgstr "Vous n'avez pas d'offre d'emploi de définie."
-
-msgid "Closed"
-msgstr "Fermé"
-
-msgid "Delete selected offers"
-msgstr "Supprimer les offres sélectionnées"
-
-msgid "New offer"
-msgstr "Nouvelle Offre"
-
-# Manage_Job_Offers_form.php
-msgid "The selected job offers has been deleted from the data base."
-msgstr "Les offres d'emplois sélectionnées ont été supprimées de la base de données."
-
-msgid "Offers to delete have not been selected. Try again."
-msgstr "Vous n'avez pas sélectionné d'offre à supprimer. Réessayez."
-
-#
-# View_Job_Applications_State_form.tpl
-#
-msgid "Job Applications"
-msgstr "Candidatures"
-
-msgid "You do not have your application subscribed to any open job offer."
-msgstr "Vous n'avez postulé à aucune offre d'emploi."
-
-msgid "Subscription state"
-msgstr "État de la souscription"
-
-#
-# e-Voting_SIG_content.tpl
-#
-msgid "Special Interest Group"
-msgstr "Groupe d'intérêt spécifique"
+#, fuzzy
+msgid "%1 is %2Free Software%3 because it does not ship anything that is Non-Free Software."
+msgstr "%1 es %2Software Libre%3 porque no incluye nada de Software NO-Libre."
+
+#, fuzzy
+msgid "%1 is not classified yet."
+msgstr "%1 no se ha clasificado todavía."
+
+#, fuzzy
+msgid "%1 is %2Almost-Free Software%3. Debian is a general term which refer to Debian GNU/Linux and all Debian %4ports%6. The Debian project %5offers%6 the download of some Non-Free Software packages from its archives and website."
+msgstr "%1 es %2Software casi-Libre%3. Debian es un termino general que representa a Debian GNU/Linux y todos los %4ports%6 Debian. El proyecto Debian %5ofrece%6 la descarga de algunos paquetes de Software NO-Libre desde sus archivos y sitio web."
+
+#, fuzzy
+msgid "%1 is %2Partially-Free Software%3 %4because%5 it is made of many programs; some are free and some are not."
+msgstr "%1 es %2Software parcialmente-Libre%3 %4porque%5 está compuesto de muchos programas; algunos libres y otros no."
+
+#, fuzzy
+msgid "%1 is %2Almost-Free Software%3. Although Gobuntu's stated %4policy%7 is to adhere to the Free Software Foundation four freedoms, it presently %5installs%7 Firefox, which encourages installing non-free plugins. Gobuntu enables downloading of non-free software packages from its archives, and the use of the ubuntu.com domain %6promotes%7 non-free software."
+msgstr "%1 es %2Software casi-Libre%3. Aunque la %4política%7 que Gobuntu declara se adhiere a las cuatro libertades expuestas por la Free Software Foundation, Gobuntu %5instala%7 Firefox, el cual anima a la instalación de plugins no-libres. Gobuntu permite la descarga de paquetes de software no-libre desde sus archivos, y el uso del dominio ubuntu.com %6promociona%7 el software no-libre."
+
+#, fuzzy
+msgid "%1 is %3Free Software%4 because it does not ship anything that is Non-Free Software neither work to provide easy access to Non-Free Software. A Non-Free Software %2 not removed from gNewSense is a bug. The gNewSense's %5policy%6 is to delete any non-free software found in the Linux kernel or elsewhere in the GNU/Linux system."
+msgstr "%1 es %3Software Libre%4 porque no incluye Software NO-Libre ni trabaja para facilitar el acceso al Software NO-Libre. Un %2 de Software NO-Libre no eliminado en gNewSense es un bug. La %5política%6 de gNewSense es eliminar cualquier software no-libre que se encuentre en el kernel Linux o en cualquier otro elemento del sistema GNU/Linux."
+
+#, fuzzy
+msgid "%1 is %2Almost-Free Software%3 because although it does not ship anything that is Non-Free Software it provides for easy installation of Non-Free Software through the %4ports system%5. Not many packages though: Java and a few others."
+msgstr "%1 es %2Software casi-Libre%3 porque aunque no incluye nada de Software NO-Libre proporciona fácil acceso a la instalación de Software NO-Libre a través del %4sistema de ports%5. Aunque no muchos paquetes: Java y unos pocos mas."
+
+#, fuzzy
+msgid "%1 and %2 are %4Almost-Free Software%5 because provide for easy installation of some Non-Free Software products through the %6ports system%7. Besides both contain Non-Free Software %3 in its kernel too."
+msgstr "%1 y %2 son %4Software casi-Libre%5 porque proporcionan fácil acceso a productos de Software NO-Libre a través del %6sistema de ports%7. Además ambos contienen también %3 de Software NO-Libre en su kernel."
+
+#, fuzzy
+msgid "%1Mac OS X%2 is tagged as %3Non-Free Software%4."
+msgstr "%1Mac OS X%2 se etiqueta como %3Software NO-Libre%4."
+
+#, fuzzy
+msgid "%1Microsoft Windows Vista%2 is tagged as %3Non-Free Software%4."
+msgstr "%1Microsoft Windows Vista%2 se etiqueta como %3Software NO-Libre%4."
+
+#, fuzzy
+msgid "Note that not all %1 are Non-Free Software, because %1 can be data (not compiled source code) licensed under a Free Software license. However, we need to verify that it really is data, because the non-free object code is typically dressed up as data."
+msgstr "Nótese que no todos los %1 son Software NO-Libre, ya que los %1 pueden contener datos (no código fuente compilado) licenciados bajo licencias de Software Libre. Sin embargo, es necesario verificar que realmente son datos, ya que los objetos de código no-libre son usualmente disfrazados de datos."
+
+msgid "How is the Job Site module related to the GNU Herds' association?"
+msgstr "De quelle façon le module de site d'emploi est lié à l'association GNU Herds ?"
+
+#, fuzzy
+msgid "The Job Site module is %1controlled%2 by the association. Any new module will be controlled by the association too."
+msgstr "Le module de site d'emploi est %1contrôlé%2 par l'association.  XXX--> Cualquier nuevo módulo será controlado también por la asociación."
+
+#, fuzzy
+msgid "Who can join or register?"
+msgstr "¿Quién puede afiliarse o registrase?"
+
+#, fuzzy
+msgid "Any entity type can join the association or just register into the web application and use its services. Showing a Free Software contribution is not a requirement to register or join. It is just a requirement to be able to %1vote%2 at the association."
+msgstr "Cualquier tipo de entidad puede afiliarse a la asociación o simplemente registrarse en la aplicación web y usar sus servicios. Mostrar una contribución al Software Libre no es un requisito para registrarse o afiliarse. Solo es requisito para poder %1votar%2 en la asociación."
+
+#, fuzzy
+msgid "Can I not be a member of the association because I am a member of a company?"
+msgstr "¿No puedo ser yo miembro de la asociación porque soy miembro de una compañía?"
+
+#, fuzzy
+msgid "You can. You can be in any case an \"associate member\" or a \"voting member\"."
+msgstr "Sí puede. Usted puede en cualquier caso ser un \"miembro asociado\" o un \"afiliado con capacidad de voto\"."
+
+#, fuzzy
+msgid "The association's %1Charter%2 reads:"
+msgstr "En los %1Estatutos%2 de la asociación se puede leer:"
+
+#, fuzzy
+msgid "How many votes is a company able to obtain?"
+msgstr "¿Cuantos votos puede obtener una compañía?"
+
+#, fuzzy
+msgid "A company could be able to get:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4"
+msgstr "Una compañía podría obtener:%1 %2un solo voto como 'compañía' y%3 %2cualquier número de votos como 'personas' (sus trabajadores), habiendo todos ellos individualmente contribuido al software libre.%3%4"
+
+#, fuzzy
+msgid "A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?"
+msgstr "Una compañía de 100 trabajadores puede obtener 100 votantes, mientras que mi compañía de 3 trabajadores puede tener solo 3 votantes?"
+
+#, fuzzy
+msgid "The company gets 100 voting-voices only if each one of its workers has individually contributed to the free software community, and each one of its workers take the personal decision to join and vote at the association."
+msgstr "La compañía obtiene 100 votantes solo si cada uno de sus trabajadores ha individualmente contribuido a la comunidad de software libre, y cada uno de sus trabajadores toman la decisión personal de afiliarse y votar en la asociación."
+
+#, fuzzy
+msgid "Why voting membership is on a yearly basis?"
+msgstr "¿Porqué la afiliación con capacidad de voto caduca al año?"
+
+#, fuzzy
+msgid "Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low."
+msgstr "Si no se dispusiese ese mecanismo podría hacer imposible la disolución de la asociación %1debido a%2 las bajas figuras de asistencia."
+
+#, fuzzy
+msgid "The membership renew process is automated to reduce bureaucracy."
+msgstr "El proceso de renovación de la afiliación se ha automatizado para reducir la burocracia."
+
+msgid "e-Voting"
+msgstr "Vote en ligne"
 
 msgid "Initially, GNU Herds' members can vote showing their hands, sending an email."
 msgstr "Les membres GNU Herds peuvent voter à main levée, en envoyant un mail."
@@ -1312,9 +843,6 @@ msgstr "Certaines distributions GNU/Linux utilisent leur propre système de vote
 msgid "Stalled since March 2002."
 msgstr "Suspendu depuis March 2002."
 
-msgid "We have added the below links from the %1\"Bringing free software to voting booths\"%2 %3LWN%4 article:"
-msgstr "Nous avons récupéré les liens ci-dessous depuis l'article de %3LWN%4 %1« Bringing free software to voting booths »%2 :"
-
 msgid "It is dormant."
 msgstr "Inactif."
 
@@ -1343,9 +871,948 @@ msgid "Note that all those systems are country voting oriented."
 msgstr "Notez que tous ces systèmes sont orientés pour les élections nationales."
 
 #
+# FS_Job_Offers_form.tpl
+#
+#, fuzzy
+msgid "Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc."
+msgstr "Contacte con algunos de los mejores expertos en Software Libre disponibles y sus empresas. Solucione sus problemas hoy con los mejores administradores de sistemas, desarrolladores, equipos de calidad, documentalistas, etc."
+
+#, fuzzy
+msgid "Are you a Free Software author?. You could register and add your qualifications."
+msgstr "¿Es usted un autor de Software Libre?. Usted puede registrarse y añadir sus cualificaciones."
+
+msgid "There are not active job offers"
+msgstr "Aucune offre d'emploi"
+
+msgid "Vacancy title"
+msgstr "Titre du poste"
+
+msgid "Location"
+msgstr "Lieu"
+
+msgid "Offer date"
+msgstr "Date souhaitée de début"
+
+#, fuzzy
+msgid "Offered by"
+msgstr "Employeur"
+
+msgid "Any"
+msgstr "Quelconque"
+
+msgid "telework"
+msgstr "Télétravail"
+
+#
+# View_Job_Offer_form.php
+#
+msgid "To be able to subscribe your application, you have to fill the Qualification form."
+msgstr "Afin de pouvoir postuler, vous devez remplir le formulaire de Qualifications."
+
+msgid "To be able to subscribe your application, you have to log in first."
+msgstr "Afin de pouvoir postuler, vous devez vous identifier."
+
+msgid "See the"
+msgstr "Voir la"
+
+msgid "Note that this job offer is not looking for a"
+msgstr "Notez que cette offre d'emploi ne recherche pas un"
+
+msgid "You can not subscribe to you own offer."
+msgstr "Vous ne pouvez pas postuler à votre propre offre d'emploi."
+
+msgid "ERROR: Unexpected condition"
+msgstr "ERREUR : Condition inattendue"
+
+#
+# View_Job_Offer_form.tpl
+#
+msgid "Your application has been subscribed to this job offer"
+msgstr "Votre candidature pour ce poste a été enregistrée."
+
+#, fuzzy
+msgid "The edition of this offer is not finished! It is not ready to be published."
+msgstr "¡La edición de esta oferta no está terminada!. No está lista para ser publicada."
+
+msgid "View contact information"
+msgstr "Contacts"
+
+#, fuzzy
+msgid "Job offer"
+msgstr "Oferta de empleo"
+
+msgid "Persons"
+msgstr "Personne"
+
+msgid "Companies"
+msgstr "Société"
+
+msgid "non-profit Organizations"
+msgstr "Organisation à but non lucratif"
+
+msgid "or"
+msgstr "ou"
+
+msgid "Vacancies"
+msgstr "Poste vacant"
+
+msgid "Ref."
+msgstr "Réf."
+
+msgid "Contract type"
+msgstr "Type de contrat"
+
+#, fuzzy
+msgid "Deadline"
+msgstr "Fecha límite"
+
+msgid "Wage rank"
+msgstr "Salaire"
+
+msgid "Estimated effort"
+msgstr "Estimation de l'effort"
+
+msgid "Professional experience since"
+msgstr "Expérience professionelle depuis"
+
+msgid "Experience since"
+msgstr "Expérience depuis"
+
+msgid "Academic qualification"
+msgstr "Diplômes"
+
+msgid "Skills"
+msgstr "Compétences"
+
+msgid "Skill"
+msgstr "Compétence"
+
+msgid "Languages"
+msgstr "Langues"
+
+msgid "Language"
+msgstr "Langues"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Certifications"
+msgstr "Certifications"
+
+msgid "Experience with FS projects"
+msgstr "Expérience en projets LL"
+
+msgid "Currently you are"
+msgstr "Vous êtes actuellement"
+
+msgid "Telecommute"
+msgstr "Télétravail"
+
+msgid "any location"
+msgstr "lieu quelconque"
+
+msgid "required"
+msgstr "requis"
+
+msgid "Subscribe to this job offer"
+msgstr "Postuler à cette offre d'emploi"
+
+#
+# View_Qualifications_form.tpl
+#
+#, fuzzy
+msgid "The edition of these qualifications is not finished! It does not comply the minimum requisites to allow it subscribe to offers."
+msgstr "¡La edición de estas cualificaciones no está terminada!. No cumple con los requisitos mínimos para permitir suscribirla a ofertas."
+
+#, fuzzy
+msgid "Edit section"
+msgstr "Editar sección"
+
+#, fuzzy
+msgid "edit"
+msgstr "editar"
+
+#, fuzzy
+msgid "Born"
+msgstr "Nació"
+
+msgid "Nationality"
+msgstr "Nationalité"
+
+#, fuzzy
+msgid "Nationalities"
+msgstr "Nacionalidades"
+
+#, fuzzy
+msgid "Besides license to work at"
+msgstr "Además de licencia para trabajar en"
+
+msgid "Landline"
+msgstr "Téléphone fixe"
+
+msgid "Mobile phone"
+msgstr "Téléphone mobile"
+
+msgid "IP phone or videophone"
+msgstr "Téléphone IP ou visiophone"
+
+msgid "none"
+msgstr "aucun"
+
+msgid "not specified"
+msgstr "non specifié"
+
+msgid "Contributions to FS projects"
+msgstr "Contributions à des projets LL"
+
+msgid "Yes"
+msgstr "Oui"
+
+msgid "No"
+msgstr "Non"
+
+msgid "Delete qualifications"
+msgstr "Supprimer les qualifications"
+
+#, fuzzy
+msgid "Delete qualifications from the data base"
+msgstr "Borrar las cualificaciones de la base de datos"
+
+#
+# View_Qualifications_form.php
+#
+msgid "ERROR: The identifier to show has not been specified!"
+msgstr "ERREUR : L'identificateur à afficher n'a pas été spécifié."
+
+#
+# FS_Business_Networks_content.tpl
+#
+#, fuzzy
+msgid "These are the possible business models we know about:"
+msgstr "Voici les réseaux, ou les façons d'en mettre un en place, que nous connaissons :"
+
+msgid "Its"
+msgstr "Son"
+
+msgid "draft"
+msgstr "brouillon"
+
+msgid "December"
+msgstr "Décembre"
+
+msgid "Flexible Business Networks"
+msgstr "Réseaux d'affaires flexibles"
+
+msgid "If your company is not able to undertake fully a project, instead of losing the contract, you %1could choose to work with %2outsourcers%3. You can cut costs and foster competition between vendors, while taking advantage of vendor specialization and technical expertise%4."
+msgstr "Si votre société n'a pas assez de ressources pour prendre en charge un projet, au lieu de perdre le contrat, vous %1pouvez choisir de travailler avec des %2sous-traitants%3. Vous pouvez ainsi réduire les coûts et renforcer la concurrence entre les distributeurs, tout en conservant les avantages de votre spécialisation et expertise technique%4."
+
+msgid "Cooperatives & non-profit Franchises"
+msgstr "Coopératives et franchises à but non lucratif"
+
+msgid "Following the way of successful organizations as %1Best Western%2 or %3Mondragon Cooperative Corporation%2. You can read comments at the %4 email list."
+msgstr "Imiter des organisations qui ont réussies, telles que %1Best Western%2 ou %3Mondragon Cooperative Corporation%2. Lisez les commentaires de la liste de diffusion %4."
+
+#
+# Person form: Person_form.tpl, Person_form.php
+#
+# Person_form.tpl
+msgid "Read the %1Membership%2 Charter section."
+msgstr "Lisez la section %1Membres%2 des statuts."
+
+#, fuzzy
+msgid "Update person data"
+msgstr "METTRE À JOUR VOS DONNÉES"
+
+#, fuzzy
+msgid "Some fields does not match."
+msgstr "Errores en algunos campos."
+
+#, fuzzy
+msgid "Please try again."
+msgstr "Por favor, inténtelo de nuevo."
+
+msgid "The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional."
+msgstr "Les champs marqués d'une astérisque %1*%2 sont requis pour finaliser la transaction. Les autres champs sont facultatifs."
+
+#, fuzzy
+msgid "Account identification"
+msgstr "IDENTIFICATION DU COMPTE"
+
+#, fuzzy
+msgid "Email"
+msgstr "Correo electrónico"
+
+#, fuzzy
+msgid "Change the account email"
+msgstr "Cambiar el correo electrónico de la cuenta"
+
+msgid "Password"
+msgstr "Mot de passe"
+
+msgid "Retype Password"
+msgstr "Retapez le mot de passe"
+
+#, fuzzy
+msgid "Change the account password"
+msgstr "Cambiar la contraseña de la cuenta"
+
+msgid "Person"
+msgstr "Personne"
+
+msgid "First name"
+msgstr "Prénom"
+
+msgid "Last name"
+msgstr "Nom"
+
+msgid "Middle name"
+msgstr "Second nom"
+
+msgid "Year of birth"
+msgstr "Année de naissance"
+
+msgid "Photo"
+msgstr "Photo"
+
+msgid "Default image size"
+msgstr "Taille d'image par défaut"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+#, fuzzy
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Web site"
+msgstr "Site web"
+
+#, fuzzy
+msgid "ISO Nationalities"
+msgstr "Nacionalidades ISO"
+
+#, fuzzy
+msgid "Mark to delete"
+msgstr "Marcar para borrar"
+
+#, fuzzy
+msgid "More"
+msgstr "Más"
+
+#, fuzzy
+msgid "Save and or delete and stay here to add more"
+msgstr "Guardar y/o borrar y permanecer aquí para añadir más"
+
+#, fuzzy
+msgid "License to work at"
+msgstr "Licencia para trabajar en"
+
+#, fuzzy
+msgid "Besides the inferred from the ISO nationalities fields"
+msgstr "Además de lo deducido de los campos nacionalidades ISO"
+
+#, fuzzy
+msgid "Postal address"
+msgstr "Dirección postal"
+
+msgid "Street"
+msgstr "Rue"
+
+msgid "Suite"
+msgstr "Etage"
+
+msgid "City"
+msgstr "Ville"
+
+msgid "State / Province"
+msgstr "État / Province"
+
+msgid "Postal code"
+msgstr "Code postal"
+
+msgid "Country"
+msgstr "Pays"
+
+#, fuzzy
+msgid "Interactive communication medias"
+msgstr "MODE DE COMMUNICATION INTERACTIF"
+
+msgid "Save"
+msgstr "Sauver"
+
+#, fuzzy
+msgid "Register"
+msgstr "Registrar"
+
+msgid "Delete me from this Association"
+msgstr "Supprimer mon compte de l'Association"
+
+# Person_form.php
+msgid "You can not access this section been logged as"
+msgstr "Vous n'avez pas accès à cette section en tant que"
+
+msgid "Your information has been deleted from the data base. You have been logout automatically."
+msgstr "Vos informations ont été détruites de la base de données. Vous avez été automatiquement déconnecté."
+
+msgid "Updated successfully"
+msgstr "Mise à jour réussie"
+
+#, fuzzy
+msgid "Invalid email address"
+msgstr "Dirección de correo electrónico incorrecta"
+
+#, fuzzy
+msgid "Password fields differ"
+msgstr "Mots de passes donnés sont différents"
+
+#XXX: msgid "If you want to qualify to vote, you have to supply both the contributions and your public key."
+#XXX: msgstr "Pour demander le droit de vote, vous devez fournit vos contributions et votre clé publique."
+
+#XXX: msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
+#XXX: msgstr "Vos contributions à la communauté des Logiciels Libres seront évaluées. Le résultat vous sera transféré par mail, ce qui activera votre possibilité de voter si l'évaluation est positive."
+
+#
+# Company form: Company_form.tpl, Company_form.php
+#
+# Company_form.tpl
+#, fuzzy
+msgid "Update company data"
+msgstr "METTRE À JOUR LES DONNÉES DE LA SOCIÉTÉ"
+
+msgid "Company"
+msgstr "Société"
+
+msgid "Photo or logo"
+msgstr "Photo ou logo"
+
+msgid "Delete me"
+msgstr "Supprimez-moi"
+
+# Company_form.php
+# msgid ""
+# msgstr ""
+
+#
+# non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
+#
+# non-profit_Organization_form.tpl
+#, fuzzy
+msgid "New non-profit organization"
+msgstr "NOUVELLE ORGANISATION À BUT NON LUCRATIF"
+
+#, fuzzy
+msgid "Update non-profit organization data"
+msgstr "METTRE À JOUR LES DONNÉES DE L'ORGANISATION XXX--> data"
+
+msgid "non-profit"
+msgstr "Organisation"
+
+msgid "non-profit Organization"
+msgstr "Organisation à but non lucratif"
+
+msgid "Name"
+msgstr "Nom"
+
+# non-profit_Organization_form.php
+# msgid ""
+# msgstr ""
+
+#
+# Qualifications form: Qualifications_edit-guide-bar.tpl, Qualifications_*_form.tpl, Qualifications_form.php
+#
+#, fuzzy
+msgid "New qualifications"
+msgstr "NOUVELLES QUALIFICATIONS"
+
+#, fuzzy
+msgid "Update qualifications data"
+msgstr "METTRE A JOUR LES QUALIFICATIONS"
+
+msgid "Check qualifications view"
+msgstr "Vérifier les qualifications"
+
+#, fuzzy
+msgid "Previous"
+msgstr "Anterior"
+
+#, fuzzy
+msgid "Save and move to the previous section"
+msgstr "Guardar y mover a la sección anterior"
+
+#, fuzzy
+msgid "Next"
+msgstr "Siguiente"
+
+#, fuzzy
+msgid "Save and move to the next section"
+msgstr "Guardar y mover a la siguiente sección"
+
+#, fuzzy
+msgid "Finish"
+msgstr "Terminar"
+
+#, fuzzy
+msgid "Save and finish the edition"
+msgstr "Guardar y terminar la edición"
+
+# Qualifications_edit-guide-bar.tpl
+#, fuzzy
+msgid "Save and move to section"
+msgstr "Guardar y mover a sección"
+
+#, fuzzy
+msgid "FS projects"
+msgstr "Proyectos SL"
+
+#, fuzzy
+msgid "Residence location"
+msgstr "Ubicación de la residencia"
+
+msgid "Contract"
+msgstr "Contrat"
+
+# Qualifications_profiles_etc_form.tpl
+#, fuzzy
+msgid "Technical"
+msgstr "TECHNIQUE"
+
+#, fuzzy
+msgid "Staff with the below characteristic:"
+msgstr "Personal con las siguientes características:"
+
+msgid "Press Ctrl key to choose more than one Profile"
+msgstr "Pressez la touche Ctrl pour sélectionner plusieurs profils"
+
+msgid "Profiles"
+msgstr "Profils"
+
+msgid "Product profiles"
+msgstr "Profils de produits"
+
+msgid "Professional profiles"
+msgstr "Profils professionels"
+
+msgid "Field profiles"
+msgstr "Profils de champs d'applications"
+
+# Qualifications_skills_form.tpl
+#, fuzzy
+msgid "Some fields offer suggestions."
+msgstr "Algunos campos ofrecen sugerencias."
+
+#, fuzzy
+msgid "The form has not been saved yet."
+msgstr "El formulario no ha sido guardado todavía."
+
+#, fuzzy
+msgid "Please, choose or edit again."
+msgstr "Por favor, escoja o edite de nuevo."
+
+#, fuzzy
+msgid "Checks"
+msgstr "Inspecciones"
+
+#, fuzzy
+msgid "Non-Free or Pending skills are not showed in the view."
+msgstr "Las Habilidades NO-Libres o Pendientes no se muestran en la vista."
+
+#, fuzzy
+msgid "Add skills and theirs knowledge and experience levels."
+msgstr "Añadir habilidades y sus niveles de conocimiento y experiencia."
+
+msgid "Knowledge level"
+msgstr "Niveau de connaissance"
+
+msgid "Experience level"
+msgstr "Niveau d'expérience"
+
+msgid "Add"
+msgstr "Ajouter"
+
+#, fuzzy
+msgid "This skill is pending for checking."
+msgstr "Esta habilidad está pendiente de inspección."
+
+#, fuzzy
+msgid "This skill is unknown."
+msgstr "Esta habilidad es desconocida."
+
+#, fuzzy
+msgid "This skill is abstract."
+msgstr "Esta habilidad es abstracta."
+
+#, fuzzy
+msgid "This skill is almost Free."
+msgstr "Esta habilidad es casi Libre."
+
+#, fuzzy
+msgid "This skill is partially Free."
+msgstr "Esta habilidad es parcialmente Libre."
+
+#, fuzzy
+msgid "This skill is Hardware."
+msgstr "Esta habilidad es Hardware."
+
+#, fuzzy
+msgid "This skill is Documentation."
+msgstr "Esta habilidad es documentación."
+
+#, fuzzy
+msgid "This skill is Art."
+msgstr "Esta habilidad es Arte."
+
+#, fuzzy
+msgid "This skill is Free."
+msgstr "Esta habilidad es Libre."
+
+#, fuzzy
+msgid "This skill is not Free."
+msgstr "Esta habilidad no es Libre."
+
+#, fuzzy
+msgid "Software criteria at the FAQ."
+msgstr "Criterios de Software en la FAQ."
+
+#, fuzzy
+msgid "Report any mistake!"
+msgstr "¡Informe de cualquier error!."
+
+#, fuzzy
+msgid "Please choose:"
+msgstr "Por favor, escoja:"
+
+#, fuzzy
+msgid "Keep as is"
+msgstr "Guárdelo como está"
+
+# Qualifications_languages_form.tpl
+#, fuzzy
+msgid "Staff with the below languages:"
+msgstr "Personal con los siguientes idiomas:"
+
+#, fuzzy
+msgid "Add idioms and theirs spoken and written levels"
+msgstr "Añadir idiomas y sus niveles hablado y escrito"
+
+msgid "Spoken level"
+msgstr "Niveau de parlé"
+
+msgid "Written level"
+msgstr "Niveau écrit"
+
+# Qualifications_certifications_form.tpl
+# msgid ""
+# msgstr ""
+
+# Qualifications_projects_form.tpl
+#, fuzzy
+msgid "Add URIs to the work you or your staff have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you or your staff expose your knowledge, rationales, feedback, etc."
+msgstr "Añada URIs al trabajo que usted o su personal ha contribuido a proyectos de Software Libre públicos. Es una buena práctica añadir más de una URI por proyecto, añadiendo también URIs a algunos de sus mejores commits, o threads de conversaciones de correo electrónico donde usted o su personal expone sus conocimientos, razonamientos, comentarios, etc."
+
+msgid "Project"
+msgstr "Projet"
+
+# Qualifications_location_form.tpl
+#, fuzzy
+msgid "Staff:"
+msgstr "Personal:"
+
+msgid "Available to travel"
+msgstr "Je peux faire des déplacements"
+
+msgid "Available to change residence"
+msgstr "Je peux déménager"
+
+msgid "Request your certifications"
+msgstr "Demandez vos certifications"
+
+# Qualifications_contract_form.tpl
+msgid "Desired contract type"
+msgstr "Type de contrat désiré"
+
+msgid "Desired wage rank"
+msgstr "Salaire désiré"
+
+msgid "The format has to be:"
+msgstr "Le format doit être :"
+
+msgid "Minimum"
+msgstr "Minimum"
+
+msgid "Optimum"
+msgstr "Idéal"
+
+msgid "For example:"
+msgstr "Par exemple :"
+
+msgid "Currency"
+msgstr "Devise"
+
+msgid "Current employability"
+msgstr "Statut actuel"
+
+# Qualifications_form.php
+msgid "To access this section you have to login first."
+msgstr "Vous devez vous identifier avant de pouvoir accéder à cette section."
+
+#, fuzzy
+msgid "Please fill in here"
+msgstr "Por favor, rellene aquí"
+
+#, fuzzy
+msgid "Incorrect date format"
+msgstr "Formato de fecha incorrecto"
+
+msgid "The qualifications information has been deleted from the data base."
+msgstr "Vos qualifications ont été supprimées de la base de données."
+
+msgid "Success. Your qualifications have been saved."
+msgstr "Réussi. Vos qualifications ont été sauvegardées."
+
+#
+# JobOffer form: Job_Offer_edit-quide-bar.tpl, Job_Offer_*_form.tpl, Job_Offer_form.php
+#
+#, fuzzy
+msgid "Update job offer"
+msgstr "METTRE À JOUR L'OFFRE D'EMPLOI"
+
+#, fuzzy
+msgid "New job offer"
+msgstr "NOUVELLE OFFRE D'EMPLOI"
+
+#, fuzzy
+msgid "Check offer view"
+msgstr "Visualiser l'offre"
+
+# Job_Offer_edit-quide-bar.tpl
+#, fuzzy
+msgid "General"
+msgstr "GÉNÉRAL"
+
+# Job_Offer_general_form.tpl
+msgid "Allow applications from"
+msgstr "Permettre les candidatures de"
+
+msgid "The offer is closed"
+msgstr "L'offre est fermée"
+
+msgid "Expiration date"
+msgstr "Date d'expiration"
+
+msgid "The format could be for example"
+msgstr "Le format peut-être par exemple"
+
+msgid "Your offer reference"
+msgstr "Référence de votre offre"
+
+# Job_Offer_profiles_etc_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_skills_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_languages_form.tpl
+msgid "Required languages"
+msgstr "Langues requises"
+
+# Job_Offer_certifications_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_projects_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_location_form.tpl
+#, fuzzy
+msgid "Do not fill any address field if the offer is Telecommute."
+msgstr "No llene ningún campo de dirección si la oferta es Teletrabajo."
+
+# Job_Offer_contract_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_form.php
+# msgid ""
+# msgstr ""
+
+#
+# Manage_Job_Offer_Applications_form.tpl
+#
+msgid "Manage the job offer applications"
+msgstr "Gérer les candidatures à l'offre d'emploi"
+
+msgid "Offer title"
+msgstr "Titre de l'offre d'emploi"
+
+msgid "Applicant"
+msgstr "Candidat"
+
+#
+# Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_form.php
+#
+# Manage_Job_Offers_form.tpl
+msgid "Manage job offers"
+msgstr "Gérer les offres d'emplois"
+
+msgid "You do not have any defined job offer."
+msgstr "Vous n'avez pas d'offre d'emploi de définie."
+
+msgid "Closed"
+msgstr "Fermé"
+
+msgid "Delete selected offers"
+msgstr "Supprimer les offres sélectionnées"
+
+# Manage_Job_Offers_form.php
+msgid "The selected job offers has been deleted from the data base."
+msgstr "Les offres d'emplois sélectionnées ont été supprimées de la base de données."
+
+msgid "Offers to delete have not been selected. Try again."
+msgstr "Vous n'avez pas sélectionné d'offre à supprimer. Réessayez."
+
+#
+# View_Job_Applications_State_form.tpl
+#
+msgid "Job applications"
+msgstr "Candidatures"
+
+msgid "You do not have your application subscribed to any open job offer."
+msgstr "Vous n'avez postulé à aucune offre d'emploi."
+
+msgid "Subscription state"
+msgstr "État de la souscription"
+
+#
+# Alerts_form.tpl
+#
+#, fuzzy
+msgid "Alerts via email on:"
+msgstr "Alertas vía correo electrónico:"
+
+#, fuzzy
+msgid "any new job offer"
+msgstr "cualquier nueva oferta de trabajo"
+
+#, fuzzy
+msgid "any new job offer which fits my qualifications"
+msgstr "cualquier nueva oferta de trabajo que encaje con mis cualificaciones"
+
+#
+# Admin_form.tpl
+#
+#, fuzzy
+msgid "Skills administration"
+msgstr "Administración de habilidades"
+
+#, fuzzy
+msgid "Attend pending to classify skills"
+msgstr "Atender las habilidades pendientes de clasificación"
+
+#, fuzzy
+msgid "Classify"
+msgstr "Clasificar"
+
+#, fuzzy
+msgid "Attend reclassify skill requests"
+msgstr "Atender las peticiones de reclasificación de habilidades"
+
+#, fuzzy
+msgid "Reclassify"
+msgstr "Reclasificar"
+
+#, fuzzy
+msgid "Add new skills"
+msgstr "Añadir nuevas habilidades"
+
+#, fuzzy
+msgid "There are not pending to classify skills."
+msgstr "No hay habilidades pendientes de clasificación."
+
+#, fuzzy
+msgid "Search"
+msgstr "Buscar"
+
+#, fuzzy
+msgid "Skill properties"
+msgstr "Propiedades de la habilidad"
+
+#, fuzzy
+msgid "Change the skill name"
+msgstr "Cambiar el nombre de la habilidad"
+
+#, fuzzy
+msgid "Change the classification tag"
+msgstr "Cambiar la etiqueta de la clasificación"
+
+#, fuzzy
+msgid "Tag"
+msgstr "Etiqueta"
+
+#, fuzzy
+msgid "Type"
+msgstr "Tipo"
+
+#, fuzzy
+msgid "License or licenses used by such skill"
+msgstr "Licencia o licencias usadas por esta habilidad"
+
+#, fuzzy
+msgid "License name"
+msgstr "Nombre de la licencia"
+
+#, fuzzy
+msgid "License URI"
+msgstr "URI de la licencia"
+
+#, fuzzy
+msgid "Notes taken to make it more clear the rationale behind the current classification decision"
+msgstr "Notas tomadas para dejar más claro el razonamiento en el cual se apoya la decisión de la clasificación actual"
+
+#, fuzzy
+msgid "Rationale"
+msgstr "Razonamiento"
+
+#, fuzzy
+msgid "Cancel"
+msgstr "Cancelar"
+
+#, fuzzy
+msgid "Not found."
+msgstr "No se ha encontrado."
+
+#, fuzzy
+msgid "Please, try again."
+msgstr "Por favor, inténtelo de nuevo."
+
+#
+# Access_Control_List.php
+#
+#, fuzzy
+msgid "The access is not granted."
+msgstr "Acceso no autorizado."
+
+#, fuzzy
+msgid "Such job offer is already closed, removed, or never was here."
+msgstr "Tal oferta de empleo está ya cerrada, eliminada, o nunca estuvo aquí."
+
+#
+# raise_NewJobOffer_Alert.php
+#
+#, fuzzy
+msgid "You can disable this type of alerts at  %s"
+msgstr "Usted puede deshabilitar este tipo de alertas en  %s"
+
+#, fuzzy
+msgid "Alert on new job offers"
+msgstr "Alertas de nuevas ofertas de empleo"
+
+#
 # PostgreSQL.php
 #
-msgid "ERROR: Connection to database failed!."
+msgid "ERROR: Connection to database failed!"
 msgstr "ERREUR : Connexion à la base de données en échec."
 
 msgid "Data base under maintenance. Excuse the inconveniences."
@@ -1472,6 +1939,77 @@ msgid "Other"
 msgstr "Autre"
 
 #
+# Data Base LH_Skills table
+#
+#, fuzzy
+msgid "Pending"
+msgstr "Pendiente"
+
+#, fuzzy
+msgid "Unknown"
+msgstr "Desconocido"
+
+#, fuzzy
+msgid "Abstract"
+msgstr "Abstracto"
+
+#, fuzzy
+msgid "Free Software"
+msgstr "Software Libre"
+
+#, fuzzy
+msgid "Almost-Free Software"
+msgstr "Software casi-Libre"
+
+#, fuzzy
+msgid "Partially-Free Software"
+msgstr "Software parcialmente-Libre"
+
+#, fuzzy
+msgid "Non-Free Software"
+msgstr "Software NO-Libre"
+
+#, fuzzy
+msgid "Hardware"
+msgstr "Hardware"
+
+#, fuzzy
+msgid "Documentation"
+msgstr "Documentación"
+
+#, fuzzy
+msgid "Free Documentation"
+msgstr "Documentación Libre"
+
+#, fuzzy
+msgid "Non-Free Documentation"
+msgstr "Documentación NO-Libre"
+
+#, fuzzy
+msgid "Data"
+msgstr "Datos"
+
+#, fuzzy
+msgid "Free Data'"
+msgstr "Datos Libres"
+
+#, fuzzy
+msgid "Non-Free Data"
+msgstr "Datos NO-Libres"
+
+#, fuzzy
+msgid "Art"
+msgstr "Arte"
+
+#, fuzzy
+msgid "Sharable Art"
+msgstr "Arte Compartible"
+
+#, fuzzy
+msgid "Non-Sharable Art"
+msgstr "Arte NO-Compartible"
+
+#
 # Data Base LK_ContractType table
 #
 msgid "Vacation cover"
@@ -1552,6 +2090,14 @@ msgstr "ans"
 msgid "Working"
 msgstr "Employé"
 
+#, fuzzy
+msgid "Working and Studying"
+msgstr "Trabalhador-Estudante"
+
+#, fuzzy
+msgid "Freelance and Studying"
+msgstr "Freelance e Estudante"
+
 msgid "Studying"
 msgstr "Étudiant"
 
@@ -1607,69 +2153,6 @@ msgid "Selected"
 msgstr "Sélectionné"
 
 #
-# Data Base LT_SkillSetTypes table
-#
-msgid "Operating systems"
-msgstr "Systèmes d'exploitation"
-
-msgid "Operating system kernels"
-msgstr "Noyau de système d'exploitation"
-
-msgid "Hardware architectures"
-msgstr "Architecture matérielle"
-
-msgid "Software engineering methodologies"
-msgstr "Génie logiciel"
-
-msgid "Architectural Patterns"
-msgstr "Motifs architecturaux"
-
-msgid "Design Patterns"
-msgstr "Motifs de création"
-
-msgid "Development formal languages"
-msgstr "Langages formels"
-
-msgid "Development specification languages"
-msgstr "Langages de spécification"
-
-msgid "Development tools"
-msgstr "Outils de développement"
-
-msgid "Development libraries"
-msgstr "Bibliothèques de programmation"
-
-msgid "Development frameworks"
-msgstr "Environnement de programmation"
-
-msgid "Development techniques"
-msgstr "Techniques de développement"
-
-msgid "Testing frameworks"
-msgstr "Environnement de test"
-
-msgid "Specifications"
-msgstr "Spécifications"
-
-msgid "Network protocols"
-msgstr "Protocoles réseaux"
-
-msgid "Network servers"
-msgstr "Serveurs en réseaux"
-
-msgid "Network tools"
-msgstr "Outils réseaux"
-
-msgid "Desktop applications"
-msgstr "Applications de bureau"
-
-msgid "Documentation tools"
-msgstr "Outils de documentation"
-
-msgid "Translation tools"
-msgstr "Outils de traduction"
-
-#
 # Data Base LG_KnowledgeLevel table
 #
 msgid "Good"
@@ -1701,4 +2184,3 @@ msgstr "jusqu'à 10 ans"
 
 msgid "more than 10 years"
 msgstr "plus de 10 ans"
-

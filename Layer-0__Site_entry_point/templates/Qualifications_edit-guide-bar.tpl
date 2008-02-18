@@ -20,10 +20,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 
 <td align="center">
-{if $IE_workaround == false}<button type="submit" name="jump" value="profiles_etc" title="{t}Save and move to section{/t} {t}Academic qualification{/t}" {if $section eq 'profiles_etc'}disabled{/if}>{/if}
+{if $IE_workaround == false}<button type="submit" name="jump" value="profiles_etc" title="{t}Save and move to section{/t} {t}Profiles{/t}" {if $section eq 'profiles_etc'}disabled{/if}>{/if}
 <img src="/themes/red_Danijel/icons/{if $checkresults.profiles_etc eq 'pass'}green{else}red{/if}-{if $section eq 'profiles_etc'}light{else}dark{/if}.png" alt="{t}{if $checkresults.general eq 'pass'}green{else}red{/if}{/t}"><br>
-{if $IE_workaround == true}<input type="submit" name="jump" value="{t}Profiles, etc.{/t}" title="{t}Save and move to section{/t} {t}Academic qualification{/t}" {if $section eq 'profiles_etc'}disabled{/if}>{/if}
-{if $IE_workaround == false}{t}Profiles, etc.{/t}</button>{/if}
+{if $IE_workaround == true}<input type="submit" name="jump" value="{t}Profiles{/t}" title="{t}Save and move to section{/t} {t}Profiles{/t}" {if $section eq 'profiles_etc'}disabled{/if}>{/if}
+{if $IE_workaround == false}{t}Profiles{/t}</button>{/if}
 </td>
 
 <td align="center">

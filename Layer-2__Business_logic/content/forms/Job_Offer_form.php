@@ -61,7 +61,7 @@ class JobOfferForm extends SkillsForm
 		if ( $_POST['section2control'] != '' )
 			$this->section2control = $_POST['section2control'];
 		else
-			$this->section2control = ''; // GET request from language change, POST request from "New offer", etc.
+			$this->section2control = ''; // GET request from language change, POST request from "New job offer", etc.
 
 		// Find out the JobOfferId. It is used at saveJobOfferForm() and at the Smarty templates
 		if ( $_GET['JobOfferId'] != '' )
@@ -249,7 +249,7 @@ class JobOfferForm extends SkillsForm
 			break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 
@@ -449,7 +449,7 @@ class JobOfferForm extends SkillsForm
 			break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 	}
@@ -976,7 +976,7 @@ class JobOfferForm extends SkillsForm
 			break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 	}
@@ -1116,7 +1116,7 @@ class JobOfferForm extends SkillsForm
 		switch($_POST['jump'])
 		{
 			case gettext("General"): $_POST['jump'] = 'general'; break;
-			case gettext("Profiles, etc."): $_POST['jump'] = 'profiles_etc'; break;
+			case gettext("Profiles"): $_POST['jump'] = 'profiles_etc'; break;
 			case gettext("Skills"): $_POST['jump'] = 'skills'; break;
 			case gettext("Languages"): $_POST['jump'] = 'languages'; break;
 			case gettext("Certifications"): $_POST['jump'] = 'certifications'; break;
@@ -1125,7 +1125,7 @@ class JobOfferForm extends SkillsForm
 			case gettext("Contract"): $_POST['jump'] = 'contract'; break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 	}

@@ -1,0 +1,2004 @@
+# Authors: Davi Leal
+#
+# Copyright (C) 2006, 2007 Davi Leal <davi at leals dot com>
+#
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU Affero General Public License as published by the Free Software Foundation,
+# either version 3 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License along with this
+# program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: messages 0.0.1\n"
+"Report-Msgid-Bugs-To: davi@leals.com\n"
+"POT-Creation-Date: 2006-04-10 19:12+0200\n"
+"PO-Revision-Date: 2007-03-05 13:48+0100\n"
+"Last-Translator: Nickolay V. Shmyrev <nshmyrev@yandex.ru>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#
+# header.tpl
+#
+msgid "Change language"
+msgstr ""
+
+msgid "Free Software Association"
+msgstr "Ассоциация Свободного ПО"
+
+msgid "%1Download the project source code!%2"
+msgstr ""
+
+msgid "Project state"
+msgstr ""
+
+#
+# menu.tpl
+#
+msgid "Home"
+msgstr "Начало"
+
+msgid "Charter (draft)"
+msgstr "Устав (образец)"
+
+#, fuzzy
+msgid "Coders' guide"
+msgstr "Руководство разработчика"
+
+msgid "Account"
+msgstr ""
+
+msgid "My personal profile"
+msgstr ""
+
+#, fuzzy
+msgid "Our company"
+msgstr "Компания"
+
+#, fuzzy
+msgid "Our non-profit"
+msgstr "Безприбыльная организация"
+
+msgid "My qualifications"
+msgstr "Квалификация"
+
+msgid "Our qualifications"
+msgstr "Наша квалификация"
+
+msgid "My job offers"
+msgstr "Предложения работы"
+
+msgid "Our job offers"
+msgstr "Наши предложения работы"
+
+msgid "My job applications"
+msgstr "Мои заявки на работу"
+
+msgid "Our job applications"
+msgstr "Наши заявки на работу"
+
+msgid "Settings"
+msgstr ""
+
+msgid "Administration"
+msgstr ""
+
+msgid "Resources"
+msgstr "Ресурсы"
+
+#, fuzzy
+msgid "FS business models"
+msgstr "Деловые ресурсы о Свободном ПО"
+
+#, fuzzy
+msgid "FS job offers"
+msgstr "Работа над Свободным ПО"
+
+#
+# log_in_box.tpl
+#
+msgid "Log in"
+msgstr "Войти"
+
+msgid "Lost password?"
+msgstr "Забыли пароль?"
+
+#, fuzzy
+msgid "Register person"
+msgstr "Новый участник?"
+
+#, fuzzy
+msgid "Register company"
+msgstr "Новая компания?"
+
+#, fuzzy
+msgid "Register non-profit"
+msgstr "Новая бесприбыльная организация?"
+
+#
+# log_out_box.tpl
+#
+msgid "Log out"
+msgstr "Выйти"
+
+#
+# content.tpl
+#
+#, fuzzy
+msgid "Log in successful!"
+msgstr "Вход удался"
+
+#, fuzzy
+msgid "Now, you can go to the account menu to manage your data."
+msgstr "Теперь меню позволяет настраивать личные данные"
+
+#, fuzzy
+msgid "Log in unsuccessful!"
+msgstr "Не удалось войти"
+
+#, fuzzy
+msgid "Invalid user or password, or some problem with the data base."
+msgstr "пользователь или пароль неверны. Хотя, возможно, возникла проблема в базе данных."
+
+#, fuzzy
+msgid "Log out successful."
+msgstr "Выход удался."
+
+# msgid "The %2GNU Herds%3 project is an official part of %1the GNU Project%3."
+# msgstr ""
+
+#
+# foot.tpl
+#
+msgid "Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!"
+msgstr ""
+
+#
+# Lost_Password_form.tpl
+#
+msgid "Write your email and click the Send button."
+msgstr "Напишите сообщение и нажмите на кнопку \"Отослать\""
+
+msgid "Send"
+msgstr "Отослать"
+
+#
+# Lost_Password_form.php
+#
+msgid "You are already logged!. So we suppose you know your password. Anyway, log out and ask for it again if you want we send it to you."
+msgstr "Вы уже вошли в систему! Поэтому предполагается, что пароль известен. Если вы хотите сменить пароль, выйдите из системы и попробуйте ещё раз."
+
+msgid "For security reasons, GNU Herds does not send passwords by electronic mail."
+msgstr "Из соображений безопасности, GNU Herds не посылает пароли по электронной почте."
+
+msgid "To get your new password follow the below link."
+msgstr "Для получения нового пароля откройте ссылку."
+
+msgid "That link will expire in 2 hours:"
+msgstr ""
+
+msgid "If you have not asked for a new password, ignore it and your password will not be changed."
+msgstr "Если вы не просили изменить пароль, оставьте это письмо. Пароль останется прежним."
+
+#, fuzzy
+msgid "An email has been sent to %s with the instructions to change the password."
+msgstr "Письмо с инструкциями по смене пароля было отправлено на этот адрес электронной почты."
+
+msgid "Your new password is:"
+msgstr "Новый пароль:"
+
+msgid "To improve your security, you should change your password after loging in."
+msgstr "В целях повышения безопасности системы, необходимо войти в систему перед изменением пароля."
+
+#
+# Entity_form.php
+#
+msgid "An attempt was made to activate a new GNU Herds' account with this email address."
+msgstr ""
+
+msgid "However, you have already an active account!"
+msgstr ""
+
+msgid "Follow the below link to get a new password if it is needed:"
+msgstr ""
+
+msgid "If you have not asked for this new account, someone else has asked for it with your email!"
+msgstr ""
+
+msgid "Your account has been activated!"
+msgstr ""
+
+msgid "The email has been changed!"
+msgstr ""
+
+msgid "To change your GNU Herds account's email, first log in and then follow the below link."
+msgstr ""
+
+msgid "That link will expire in 7 days:"
+msgstr ""
+
+msgid "If you have not asked for it, just ignore this email."
+msgstr ""
+
+msgid "Change account's email"
+msgstr ""
+
+msgid "An email has been sent to the new email address to validate it."
+msgstr ""
+
+msgid "An attempt was made to register a new GNU Herds' account with this email address."
+msgstr ""
+
+msgid "Your email has been used to create an account at GNU Herds."
+msgstr ""
+
+msgid "To activate it follow the below link."
+msgstr ""
+
+msgid "That link will expire in 48 hours."
+msgstr ""
+
+msgid "To get a new non-expired link just register at gnuherds.org again."
+msgstr ""
+
+msgid "If you have not asked for this new account, ignore this email."
+msgstr ""
+
+msgid "Note: To avoid 'Spam' you can only get this email at the most once each 48 hours."
+msgstr ""
+
+msgid "If this email is Spam for you, please let it knows to  association AT gnuherds.org"
+msgstr ""
+
+msgid "Activate account"
+msgstr ""
+
+msgid "Success. An email has been sent to %s with the instructions to activate the account."
+msgstr ""
+
+msgid "If you do not receive such email, you can inform about it at %s."
+msgstr ""
+
+#
+# Entity.php
+#
+msgid "ERROR: Wrong magic number!"
+msgstr "ОШИБКА: Неверная контрольная сумма!."
+
+msgid "ERROR: Can not save the uploaded file!"
+msgstr "ОШИБКА: Не удалось сохранить загруженный файл!."
+
+msgid "ERROR: Can not delete the photo or logo file!"
+msgstr "ОШИБКА: Не удалось удалить файл с логотипом или фотографией!."
+
+#
+# Home_content.tpl
+#
+msgid "GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors."
+msgstr "GNU Herds - бесприбыльная %1подлинно демократичная%4 ассоциация, которая %2направлена%4 на улучшение профессиональной разработки Свободного Программного Обеспечения."
+
+msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:"
+msgstr "Первый шаг состоит в разработке ресурса %1Поиска работы%2 и сборе опыта различных моделей %3Сетевого Бизнеса%2. Некоторые преимущества модуля Поиска работы:"
+
+msgid "Controlled by its own users"
+msgstr "Управляется своими пользователями"
+
+msgid "FS skills data base"
+msgstr "Имеет базу данных квалификации разработчиков"
+
+msgid "Other modules could be developed. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled."
+msgstr "Могут появиться и другие модули. Некоторые из них можете предложить Вы. Например, некоторые модули уже предложены: Ассоциация Свободного ПО может выдавать сертификаты. Этот ресурс уже поддерживает сертификацию, но временно эти возможности отключены."
+
+msgid "%1 certification"
+msgstr "%1 сертификация"
+
+msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
+msgstr "Этот проект создан небольшой %1командой%2 членов сообщества Свободного Программного Обеспечения."
+
+#, fuzzy
+msgid "Mailing lists:"
+msgstr "Списки рассылок:"
+
+msgid "is the project main list."
+msgstr "главный список рассылки проекта."
+
+msgid "to carry on the web application development."
+msgstr "для обсуждения разработки веб-приложения."
+
+msgid "For more information:"
+msgstr "Для получения дополнительной информации, смотрите:"
+
+#
+# Charter_content.tpl
+#
+msgid "Charter for GNU Herds (draft)"
+msgstr "Устав GNU Herds (образец)"
+
+msgid "Title"
+msgstr "Заглавие"
+
+msgid "The name of the Association shall be GNU Herds, to be known publicly as GNU Herds - Free Software Association."
+msgstr "Название ассоциации - GNU Herds, далее она упоминается как GNU Herds - Ассоциация Свободного ПО"
+
+msgid "Aims"
+msgstr "Цели"
+
+#, fuzzy
+msgid "The aims of the Association shall be to %1assist and encourage%2 people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
+msgstr "Цели ассоциации - %1способствовать%2 профессиональной разработке Свободного Программного Обеспечения."
+
+msgid "Membership"
+msgstr "Участие"
+
+msgid "There shall be two kinds of members, voting members, to be known simply as a member, and non-voting members, to be known as an associate member."
+msgstr "В ассоциацию входит два вида участников - участники с правом голоса, делее называемые просто участниками, и участники без права голоса - ассоциированные участники."
+
+msgid "All members must subscribe to the purposes of GNU Herds and adhere to the Code of Ethics at the penalty of their membership being revoked."
+msgstr "Все члены ассоциации должны соблюдать принципы GNU Herds и таким образом с Кодексом Этики, в противном случае членство может быть отклонено."
+
+msgid "To qualify for voting membership one must show a contribution to the Free Software movement."
+msgstr "Для того, чтобы получить право голоса, участник должен показать свой вклад в движение Свободного ПО."
+
+#, fuzzy
+msgid "Voting memberships and associate memberships are both free of charge. However, voting memberships %1expire yearly%2 but they can be renewed."
+msgstr "Членство обновляется ежегодно. Несмотря на то, что членство бесплатно, оно должно подтверждаться каждый год."
+
+msgid "Committee"
+msgstr "Комитет"
+
+#, fuzzy
+msgid "The Committee shall consist of the following: the members of the system administrator team, the web master team, the development team, the translator teams, the public relations team and the Ethics Officer."
+msgstr "Комитет состоит из следущих членов: команда администраторов, команда веб-разработчиков, команда сертификации XXX XXX, команда переводчиков, команда внешних отношений и надзиратель над соблюдением Этики."
+
+msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
+msgstr "Задачи команды сертификации состоят в испытании по запросу сертификатов %1Разработчика Свободного ПО%2, сертификации %3Деловой Сети GNU%4 и подобных действиях."
+
+msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6"
+msgstr "Надзиратель над проблемами Этики будет назначен Free Software Foundation, Inc. для слежения за следующими моментами: %1 %2Использования имени GNU не скомпрометировано.%3 %2Ассоциация следует философии %4Свободного ПО%5.%3 %2Действия участников не ведут к некорректному использованию или очернению философии %4Свободного ПО%5.%6"
+
+msgid "To depart from the above GNU requirements the Association have to discuss it previously with the GNU Project. Any conflict which can not be resolved in the discussion will raise the removal of the GNU Project approval, and so the GNU part of the Association name."
+msgstr "Чтобы не отклоняться от требований GNU, Ассоциация должна обсуждать свои действия с проектом GNU. В случае неразрешимого конфликта, может возникнуть обсуждение по удалению поддержки Проекта GNU, и таким образом, удалению GNU из имени Ассоциации."
+
+msgid "All other officers will be elected by the membership."
+msgstr "Весь другой персонал будет выбран из участников проекта."
+
+msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or his out of office."
+msgstr "Срок действия полномочий руководителей - 4 года. Все позиции в комитете добровольные, и член комитета может оставить свои полномочия в любое время. После 6 месяцев членства в случае возникновения проблем, может быть возбуждено голосование по отклонению полномочий члена руководства."
+
+msgid "Decisions"
+msgstr "Решения"
+
+msgid "The goal of the committee is to administer the Association and execute the decisions taken by the members.  Therefore, all decisions will be voted upon by the membership."
+msgstr "Назначение комитета - администрирование Ассоциации и выполнение решений, принятых членами. Таким образом решения принимаются голосованием членов ассоциации."
+
+msgid "Voting"
+msgstr "Голосование"
+
+msgid "In addition to the issues at hand in a vote, the option to abstain, delegate your vote to another individual, and delegate your vote to the committee shall be present.  Through membership options a member can set one of these to be the default if they do not vote.  The option will initially be set to abstain.  Officer elections, amendments or dissolutions may not be delegated."
+msgstr "В добавление к обычным вопросам, связанным с голосованием, должна присутствовать возможность воздержаться или передать голос другому человеку или комитету. В параметрах участника должна быть доступной возможность установить такую передачу по умолчанию, для тех случаев, если участник не хочет голосовать. По умолчанию участник будет воздерживаться от голосования. Голоса на выборах надзирателя, при принятии поправок к уставу или при голосовании о роспуске не могут передаваться."
+
+msgid "Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed to discuss it is too long should there be a vote.%2Vote on non-technical subjects.%3"
+msgstr "Руководство: %1Не голосуйте по техническим вопросам. Их можно обсудить и прийти к наилучшему решению. Только если нужно слишком большое время для обсуждения должно проводиться голосование.%2Но всегда голосуйте по организационным вопросам.%3"
+
+msgid "Special interest groups"
+msgstr "Группы по интересам"
+
+#, fuzzy
+msgid "Groups will be formed at the discretion of the committee based on the demand within the membership."
+msgstr "Группы по специальным интересам будут созданы по решению комитета по требованию участников."
+
+msgid "See the %1e-Voting%2 Special Interest Group section. We could work on the design of the official voting mechanism."
+msgstr "Смотрите раздел группы, посвящённой %1электронному голосованию%2. Возможно выработать принципы построения официального механизма голосования."
+
+msgid "Amendments"
+msgstr "Поправки"
+
+msgid "Any member may motion for amendments to this Charter for any reason.  All proposed amendments will be put to a vote of the general membership."
+msgstr "Любой участник может предложить поправки к этому уставу по любой причине. Предложенные будут предложены на голосование всех участников."
+
+msgid "Dissolution"
+msgstr "Роспуск"
+
+msgid "The committee may motion for dissolution of the Association if they feel it is no longer serving a useful purpose.  Upon the motion being passed 75% of the membership must vote in favour of dissolution for it to occur."
+msgstr "Комитет может перейти к роспуску Ассоциации если будет ясно, что она не является полезной. После этого 75% участников должны проголосовать за роспуск для того, чтобы он состоялся."
+
+msgid "Send comments to"
+msgstr "Адрес для комментариев"
+
+#
+# GNU_Herds_Hackers_Guide_content.tpl
+#
+#, fuzzy
+msgid "GNU Herds coders' guide"
+msgstr "Руководство разработчика GNU Herds"
+
+msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!."
+msgstr "Если вы хотите присоединиться к команде GNU Herds или просто внести свой вклад, как некоторые, пожалуйста %1подпишитесь%2 на список рассылки 'gnuherds-app-dev' или свяжитесь с одним из членов команды. Спасибо!."
+
+#, fuzzy
+msgid "To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this coders' guide. If you need support ask for it at"
+msgstr "Чтобы попробовать приложение в действии, %1скачайте%3 код и установите %2 XXX %3 его на вашей машине. Для переводчиков не обязательно скачивать исходный код. По почте вы получите POT файл для перевода. Прочитайте Руководство разработчика. Если необходима помощь, задавайте вопросы."
+
+msgid "Read the current draft of %1GNU Herds' Charter%2."
+msgstr "Прочтите текущий образец устава %1GNU Herds%2."
+
+#, fuzzy
+msgid "Roadmap"
+msgstr "Расписание"
+
+msgid "DONE!"
+msgstr "СДЕЛАНО!"
+
+msgid "ONGOING PROCESS"
+msgstr "ТЕКУЩЕЙ ПРОЦЕСС"
+
+msgid "Add the member support."
+msgstr "Добавить возможности работы с участниками."
+
+msgid "Add the FS Job Offers support."
+msgstr "Добавить возможности по работе с предложениями о работе в свободном ПО"
+
+msgid "Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed."
+msgstr "Написать небольшой отчёт о деятельности со ссылкой на веб-сайт Ричарду Столлману чтобы они просмотрели наши действия и подсказали, что должно быть поправлено."
+
+#, fuzzy
+msgid "To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the gnuherds.org domain to offices managed by %1FSF%2 staff."
+msgstr "Чтобы защитить базу пользователей от физического вмешательства, мы предложили переместить сервисы базы данных и веб-сервера домена gnuherds.org в помещения %1 XXX %2 Ассоциации Свободного ПО."
+
+msgid "Translate the web site to other languages."
+msgstr "Перевести сайт на другие языки."
+
+#, fuzzy
+msgid "Official job site and association announcement."
+msgstr "Сделать официальное объявление об Ассоциации"
+
+msgid "Work on e-Vote subjects:"
+msgstr "Проработать другие аспекты электронного голосования:"
+
+msgid "Be ready to use at least a primitive e-Vote system, as for example, to count emails."
+msgstr "Подготовиться к использованию примитивной системы электронного голосования, например, для подсчёта писем."
+
+msgid "Work on others e-Vote proposals."
+msgstr "Проработать другие предложения электронного голосования."
+
+msgid "Finish and show the draft of the P2P based e-Vote system proposal."
+msgstr "Закончить и показать черновик предложения по системе голосования точка-точка."
+
+msgid "Technologies"
+msgstr "Технологии"
+
+msgid "Web application Architecture"
+msgstr "Архитектура веб-приложения"
+
+msgid "Web application Design"
+msgstr "Разработка веб-приложения"
+
+msgid "Coding Standards"
+msgstr "Стандарты кодирования"
+
+msgid "Internationalization and Localization"
+msgstr "Интернационализация и локализация"
+
+msgid "How the development team and production is integrated?"
+msgstr "Как будут интегрированы разработка и использование?"
+
+#, fuzzy
+msgid "Task list"
+msgstr "Список задач"
+
+#, fuzzy
+msgid "The Git master server"
+msgstr "Сервер CVS"
+
+msgid "The PostgreSQL data base"
+msgstr "База данных PostgreSQL"
+
+msgid "How to install a development environment?"
+msgstr "Как установить среду разработки?"
+
+msgid "Current work team"
+msgstr "Рабочая группа"
+
+msgid "The list could be outdated:"
+msgstr "Список может устареть"
+
+#
+# FAQ_content.tpl
+#
+msgid "Frequently asked questions (FAQ)"
+msgstr "Часто задаваемые вопросы (FAQ)"
+
+msgid "Index"
+msgstr "Содержание"
+
+msgid "Back to top"
+msgstr "Назад к началу"
+
+msgid "Why another Job Site?"
+msgstr "Почему ещё один сайт для поиска работы?"
+
+msgid "Because no one comply the below proposed conditions:"
+msgstr "Потому что ещё не один из них не удовлетворяет следующим требованиям:"
+
+#, fuzzy
+msgid "Use a license to cover use of the software over a computer network. We are using the %1GNU AGPLv3%2 license. Anyhow, the project is always open to discuss this and any other subject."
+msgstr "Использует одну лицензию для всего программного обеспечения в сети. Текущая лицензия %1Affero GPL%2 будет изменена на лицензию GPL v3, когда последняя будет выпущена. Хотя этот момент может обсуждаться, как и любой другой."
+
+msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users."
+msgstr "Управление веб-сайтом осуществляется его %1пользователями%2 на демократических принципах. Это гарантируется правилами ассоциации GNU Herds. Поэтому будьте уверены, что развитие сайта и его действия контролируются его пользователями."
+
+msgid "Supplying support to engage among companies and persons, it doesn't matter the which or the order, helping the raise of a diversity of business models.  That is flexibility."
+msgstr "Поддерживает как компании, так и обычных пользователей, независимо от статуса. Таким образом создаётся разноплановость бизнеса. Такая модель очень гибкая."
+
+msgid "Make it easy the contacts among persons and companies interested in Free Software business."
+msgstr "Позволяет легко контактировать между собой простым разработчикам и компаниям, заинтересованным в бизнесе Свободного ПО."
+
+msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
+msgstr "Имеет глобальную направленность, поддерживая распределённые бизнес-модели Технологии будущего могут отменить современные препятствия, связанные с распределением работ. Например, для задача перевода веб-сайта на различные языки уже может быть опубликована для нескольких языков сразу."
+
+#, fuzzy
+msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
+msgstr "Суммируя выше сказанное, можно сказать что %1цели%2 ассоциации состоят в стимулировании профессиональной разработки участниками создания Свободного Программного Обеспечения."
+
+msgid "How to subscribe to a job offer?"
+msgstr "Как подписаться на предложения о работе"
+
+msgid "Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4."
+msgstr "Зарегистрируйтесь как новый %1участник%4, %2компания%4 или %3бесприбыльная организация.%4"
+
+msgid "Fill the %1Qualifications%2 form."
+msgstr "Заполните данные о %1Квалификации%2."
+
+msgid "It is recommended provide the more information possible."
+msgstr ""
+
+msgid "Log in."
+msgstr "Войдите в систему."
+
+msgid "Subscribe to the offer."
+msgstr "Подпишитесь на предложение."
+
+msgid "Note that some offers could allow to subscribe only to some entity types: Persons, Companies or non-profit Organizations."
+msgstr "Заметьте, что некоторые предложения работы позволяют подписываться на них только некоторым видам участников: независимым разработчикам, компаниям или бесприбыльным организациям."
+
+msgid "Who can subscribe to a job offer?"
+msgstr "Кто может подписаться на предложение о работе?"
+
+msgid "Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly."
+msgstr "Независимые участники, компании и бесприбыльные организации, которые удовлетворяют условиям, заданным в форме требуемой квалификации. То есть те, кто смог заполнить её правильно."
+
+msgid "Who can post a job offer?"
+msgstr "Кто может предложить новую работу?"
+
+msgid "Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:"
+msgstr "Любой участник, компания или бесприбыльная организация, удовлетворяющая условиям формы предложения работы и чьё предложение подходит под следующие требования:"
+
+msgid "Development or maintenance of software for distribution to the public, if all the software to be developed or maintained is %1Free Software%2."
+msgstr "Разработка, сопровождение программного обеспечения для публичного распространения, если всё разрабатываемое ПО будет %1Свободным%2."
+
+msgid "Writing or maintenance of documentation for software, if all the software to be documented is %1Free Software%2, and all the documentation to be written or maintained is free in the same sense."
+msgstr "Создание или поддержка документации для программного обеспечения, если документируемое " "программное обеспечение является %1Свободным%2, и вся документация распространяется на тех же свободных принципах."
+
+msgid "Development or maintenance of software for private use by specific clients, if the clients will have the source code and rights to modify and distribute it, and if the software to be used for the development is all %1Free Software%2."
+msgstr "Разработка или поддержка программного обеспечения, используемого только в частном порядке клиентами, если они имеют права на исходный код и права на его модификацию и распространение, и если программное обеспечение, используемое для разработки %1Свободное%2."
+
+msgid "Providing support of software, if all the software to be supported is %1Free Software%2."
+msgstr "Сопровождение программного обеспечения, если оно является %1Свободным%2."
+
+msgid "Promotion or marketing of software, if all the software to be promoted and/or marketed is %1Free Software%2."
+msgstr "Распространение и реклама программного обеспечения, учитывая что оно рекламируется как %1Свободное%2."
+
+msgid "Installation of software, if all the software to be installed is %1Free Software%2."
+msgstr "Установка программного обеспечения, если устанавливаемое ПО является %1Свободным%2."
+
+msgid "Report to %1 about any offer that seems improper."
+msgstr "Уведомите %1 о любом предложении, которое кажется неподходящим."
+
+msgid "Which criteria are applied to classify a program, language, protocol, specification, software distribution, etc. as Free or Non-Free Software?"
+msgstr ""
+
+msgid "For a program, read the %1Free Software%2 definition to know the criteria."
+msgstr ""
+
+msgid "For development languages, protocols, specifications, etc. the meaningful question is whether it is %1supported%3 by software licensed under any of the %2Free Software Licenses%3: BSD, GPL, etc.  Can you use it with Free Software exclusively?"
+msgstr ""
+
+msgid "For software distributions, they must not recommend, promote or grant legitimacy to Non-Free Software."
+msgstr ""
+
+msgid "Currently, the tags applyed to classify skills are:"
+msgstr ""
+
+msgid "only for software distributions"
+msgstr ""
+
+msgid "For example, applying such criteria to Java:"
+msgstr ""
+
+msgid "The %1Java%2 technology-skill is tagged as %3Free Software%4 due to there are free software Java compilers."
+msgstr ""
+
+msgid "However the below Sun Java technologies are tagged as %1Non-Free Software%2 because of the license you have to agree to download them is not a Free Software license. Anyhow, most of the Java Sun technologies are GPL'd. Sun has made substantial progress towards freeing the JDK under the GPL. The %3IcedTea%5 project is filling in the %4gaps%5."
+msgstr ""
+
+msgid "Applying it to .NET:"
+msgstr ""
+
+msgid "%1Microsoft .NET%2 is tagged as %3Non-Free Software%4."
+msgstr ""
+
+msgid "%1Mono .NET%2 is a set of tools under GPL, LGPL and MIT, or dual licenses. It is tagged as %3Free Software%4."
+msgstr ""
+
+msgid "%1.NET%2 is tagged as %3Non-Free Software%4 because of the Mono tools are not 100% complete. Mono does not cover all .NET"
+msgstr ""
+
+msgid "%1C#%2 is tagged as %3Free Software%4 due to there are free software C# compilers."
+msgstr ""
+
+msgid "Applying it to some software distributions:"
+msgstr ""
+
+msgid "%1 is %3Almost-Free Software%4 because it contains Non-Free Software %2 in its kernel."
+msgstr ""
+
+msgid "%1 is %2Free Software%3 because it does not ship anything that is Non-Free Software."
+msgstr ""
+
+msgid "%1 is not classified yet."
+msgstr ""
+
+msgid "%1 is %2Almost-Free Software%3. Debian is a general term which refer to Debian GNU/Linux and all Debian %4ports%6. The Debian project %5offers%6 the download of some Non-Free Software packages from its archives and website."
+msgstr ""
+
+msgid "%1 is %2Partially-Free Software%3 %4because%5 it is made of many programs; some are free and some are not."
+msgstr ""
+
+msgid "%1 is %2Almost-Free Software%3. Although Gobuntu's stated %4policy%7 is to adhere to the Free Software Foundation four freedoms, it presently %5installs%7 Firefox, which encourages installing non-free plugins. Gobuntu enables downloading of non-free software packages from its archives, and the use of the ubuntu.com domain %6promotes%7 non-free software."
+msgstr ""
+
+msgid "%1 is %3Free Software%4 because it does not ship anything that is Non-Free Software neither work to provide easy access to Non-Free Software. A Non-Free Software %2 not removed from gNewSense is a bug. The gNewSense's %5policy%6 is to delete any non-free software found in the Linux kernel or elsewhere in the GNU/Linux system."
+msgstr ""
+
+msgid "%1 is %2Almost-Free Software%3 because although it does not ship anything that is Non-Free Software it provides for easy installation of Non-Free Software through the %4ports system%5. Not many packages though: Java and a few others."
+msgstr ""
+
+msgid "%1 and %2 are %4Almost-Free Software%5 because provide for easy installation of some Non-Free Software products through the %6ports system%7. Besides both contain Non-Free Software %3 in its kernel too."
+msgstr "%1 y %2 son %4Software casi-Libre%5 porque proporcionan fácil acceso a productos de Software NO-Libre a través del %6sistema de ports%7. Además ambos contienen también %3 de Software NO-Libre en su kernel."
+
+msgid "%1Mac OS X%2 is tagged as %3Non-Free Software%4."
+msgstr ""
+
+msgid "%1Microsoft Windows Vista%2 is tagged as %3Non-Free Software%4."
+msgstr ""
+
+msgid "Note that not all %1 are Non-Free Software, because %1 can be data (not compiled source code) licensed under a Free Software license. However, we need to verify that it really is data, because the non-free object code is typically dressed up as data."
+msgstr ""
+
+#, fuzzy
+msgid "How is the Job Site module related to the GNU Herds' association?"
+msgstr "Как соотносятся модуль поиска работы и Ассоциация GNU Herds?"
+
+#, fuzzy
+msgid "The Job Site module is %1controlled%2 by the association. Any new module will be controlled by the association too."
+msgstr "Модуль поиска работу %1управляется%2 ассоциацией."
+
+msgid "Who can join or register?"
+msgstr ""
+
+msgid "Any entity type can join the association or just register into the web application and use its services. Showing a Free Software contribution is not a requirement to register or join. It is just a requirement to be able to %1vote%2 at the association."
+msgstr ""
+
+msgid "Can I not be a member of the association because I am a member of a company?"
+msgstr ""
+
+msgid "You can. You can be in any case an \"associate member\" or a \"voting member\"."
+msgstr ""
+
+msgid "The association's %1Charter%2 reads:"
+msgstr ""
+
+msgid "How many votes is a company able to obtain?"
+msgstr ""
+
+msgid "A company could be able to get:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4"
+msgstr ""
+
+msgid "A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?"
+msgstr ""
+
+msgid "The company gets 100 voting-voices only if each one of its workers has individually contributed to the free software community, and each one of its workers take the personal decision to join and vote at the association."
+msgstr ""
+
+msgid "Why voting membership is on a yearly basis?"
+msgstr ""
+
+msgid "Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low."
+msgstr ""
+
+msgid "The membership renew process is automated to reduce bureaucracy."
+msgstr ""
+
+msgid "e-Voting"
+msgstr "Электронное голосование"
+
+msgid "Initially, GNU Herds' members can vote showing their hands, sending an email."
+msgstr "Для начала члены ассоциации GNU Herds могут голосовать, посылая сообщения электронной почты."
+
+msgid "The GNU Herds' official voting mechanism is not intented to:"
+msgstr "Официальный механизм голосования GNU Herds не предназначен для:"
+
+msgid "be used as a country voting system."
+msgstr "использования как системы голосования в стране."
+
+msgid "be used as the FS community voting system. The FS community does not need a voting system. As Barry Fitzgerald exposes:"
+msgstr "использования как системы голосования сообщества Свободного ПО. Это сообщество не нуждается в системе голосования, как пишет Барри Фитцжеральд:"
+
+msgid "The GNU Herds' official voting mechanism is only intented to:"
+msgstr "Механизм GNU Herds предназначен только для:"
+
+msgid "be used as voting system to this Association. The voting mechanism must be used as a tool to keep GNU Herds moving in the right direction, helping members guide the board members. It can also be used to get opinions about ideas, etc.: binding vote, opinion vote."
+msgstr "Использования как система голосования этой Ассоциации. Механизм голосования будет использоваться как средство контроля направления развития GNU Herds, помогая участникам следить за руководством. Также он должен помогать собирать мнения об идеях, например, можно будет проводить сбор мнений участников."
+
+msgid "See references to documentation at bottom of this page."
+msgstr "Смотрите ссылки на документацию внизу страницы."
+
+msgid "Options"
+msgstr "Параметры"
+
+msgid "There are several projects which try to solve the e-Voting trouble. The goal of each project can be different. Some of them has modified its aims or are stalled:"
+msgstr "Есть несколько проектов, пытающихся решить проблемы электронного голосования. Цель каждого из проектов может быть отличной. Например, некоторые из них изменили свои цели, а некоторые приостановили развитие:"
+
+msgid "The development has been discontinued due to"
+msgstr "Разработка была остановлена из-за следущих причин:"
+
+msgid "It seems to support the %1Condorcet method%2 and even \"a mix of secret and public ballots\"."
+msgstr "Кажется поддерживает метод %1Condorcet%2 и даже смесь \"открытых и закрытых бюллетеней\"."
+
+msgid "Some free GNU/Linux distributions use it own voting system."
+msgstr "Некоторые дистрибутивы GNU/Linux используют свои собственные системы голосования."
+
+msgid "Stalled since March 2002."
+msgstr "Приостановлено с марта 2002."
+
+msgid "It is dormant."
+msgstr "Это спящий вулкан."
+
+msgid "It is interested in exploring alternative voting methods."
+msgstr "Интересно изучать альтернативные методы голосования."
+
+msgid "It is too young to have released any useful code."
+msgstr "Слишком рано выпускать работающий код."
+
+msgid "It has already been used in at least one election for the Legislative Assembly in the Australian Capitol Territory in October 2001 and is approved for use in future elections."
+msgstr "Оно уже было использовано по меньшей мере в одних выборах в Законодательное Собрание в Австралийских Главных Территориях в Октябре 2001 года и будет использовано в будущих выборах, подтвердив свою полезность."
+
+msgid "It is a already implemented, working solution for electronic voting."
+msgstr "Это уже реализовано, работающее решение для электронного голосования."
+
+msgid "References to documentation"
+msgstr "Ссылки на документацию"
+
+msgid "A 16 page nontechnical paper, on 16 requirements that a voting system \"must\" meet. Read it to know a bit more about efforts underway at coming up with secure voting (and what may constitute a definition of secure voting). Consider in particular the requirement that anonimity be maintained."
+msgstr "Статья из 16 страниц по 16 требованиям, которым система голосования \"должна\" удовлетворять. Прочтите для ознакомления с усилиями в области безопасного голосования и о том, что может заместить понятие безопасного голосования. Примите во внимание, что требование анонимности соблюдается."
+
+msgid "We want remark:"
+msgstr "Необходимо заметить:"
+
+msgid "Note that all those systems are country voting oriented."
+msgstr "Заметьте, что все эти системы были ориентированы на голосование."
+
+#
+# FS_Job_Offers_form.tpl
+#
+msgid "Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc."
+msgstr ""
+
+msgid "Are you a Free Software author?. You could register and add your qualifications."
+msgstr ""
+
+msgid "There are not active job offers"
+msgstr "Нет активных предложений работы"
+
+msgid "Vacancy title"
+msgstr "Название вакансии"
+
+msgid "Location"
+msgstr "Положение"
+
+msgid "Offer date"
+msgstr "Дата поступления"
+
+#, fuzzy
+msgid "Offered by"
+msgstr "Работник"
+
+msgid "Any"
+msgstr "Любой"
+
+msgid "telework"
+msgstr "Удалённая работа"
+
+#
+# View_Job_Offer_form.php
+#
+msgid "To be able to subscribe your application, you have to fill the Qualification form."
+msgstr "Чтобы иметь возможность подписаться на предложение работы, вы должны заполнить форму квалификации."
+
+msgid "To be able to subscribe your application, you have to log in first."
+msgstr "Чтобы подписаться на предложение работы, необходимо войти в систему."
+
+msgid "See the"
+msgstr "Смотрите"
+
+msgid "Note that this job offer is not looking for a"
+msgstr "Заметьте, что это предложение работы не нуждается в"
+
+msgid "You can not subscribe to you own offer."
+msgstr "Нельзя подписаться на собственное предложение о работе."
+
+msgid "ERROR: Unexpected condition"
+msgstr "ОШИБКА: Неожиданное условие"
+
+#
+# View_Job_Offer_form.tpl
+#
+msgid "Your application has been subscribed to this job offer"
+msgstr "Ваше заявка на предложение о работе получена"
+
+msgid "The edition of this offer is not finished! It is not ready to be published."
+msgstr ""
+
+msgid "View contact information"
+msgstr "Посмотреть информацию о контактах"
+
+msgid "%1Job%2 offer"
+msgstr ""
+
+msgid "Persons"
+msgstr "Участники"
+
+msgid "Companies"
+msgstr "Компании"
+
+msgid "non-profit Organizations"
+msgstr "бесприбыльные организации"
+
+msgid "or"
+msgstr "или"
+
+msgid "Vacancies"
+msgstr "Вакансии"
+
+msgid "Ref."
+msgstr "Ссылка."
+
+msgid "Contract type"
+msgstr "Тип контакта"
+
+msgid "Deadline"
+msgstr "Fecha límite"
+
+msgid "Wage rank"
+msgstr "Уровень заработной платы"
+
+msgid "Estimated effort"
+msgstr "Оценка времени"
+
+msgid "Professional experience since"
+msgstr "Профессиональный опыт"
+
+msgid "Experience since"
+msgstr "Опыт"
+
+msgid "Academic qualification"
+msgstr "Академическая степень"
+
+msgid "Skills"
+msgstr "Навыки"
+
+msgid "Skill"
+msgstr "Навык"
+
+msgid "Languages"
+msgstr "Языки"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Certifications"
+msgstr "Сертификаты"
+
+msgid "Experience with FS projects"
+msgstr "Опыт работы в проектах по созданию свободного ПО"
+
+msgid "Currently you are"
+msgstr "Вы сейчас"
+
+#, fuzzy
+msgid "Telecommute"
+msgstr "Удалённая работа"
+
+msgid "any location"
+msgstr "Любое место"
+
+msgid "required"
+msgstr "требуется"
+
+msgid "Subscribe to this job offer"
+msgstr "Подписаться на это предложение работы"
+
+#
+# View_Qualifications_form.tpl
+#
+msgid "The edition of these qualifications is not finished! It does not comply the minimum requisites to allow it subscribe to offers."
+msgstr ""
+
+msgid "Edit section"
+msgstr ""
+
+msgid "edit"
+msgstr ""
+
+msgid "Born"
+msgstr ""
+
+msgid "Nationality"
+msgstr "Национальность"
+
+#, fuzzy
+msgid "Nationalities"
+msgstr "Национальность"
+
+msgid "Besides license to work at"
+msgstr ""
+
+msgid "Landline"
+msgstr "Канал связи"
+
+msgid "Mobile phone"
+msgstr "Мобильный телефон"
+
+msgid "IP phone or videophone"
+msgstr "IP телефон или видеосвязь"
+
+msgid "none"
+msgstr "отсутствует"
+
+msgid "not specified"
+msgstr "не задано"
+
+msgid "Contributions to FS projects"
+msgstr "Помощь проектам свободного ПО"
+
+msgid "Yes"
+msgstr "Да"
+
+msgid "No"
+msgstr "Нет"
+
+msgid "Delete qualifications"
+msgstr "Удалить навыки"
+
+msgid "Delete qualifications from the data base"
+msgstr ""
+
+#
+# View_Qualifications_form.php
+#
+msgid "ERROR: The identifier to show has not been specified!"
+msgstr "ОШИБКА: Не был задан идентификатор отображаемой информации!."
+
+#
+# FS_Business_Networks_content.tpl
+#
+msgid "These are the possible business models we know about:"
+msgstr "Вот сети или способы их создания, о которых мы знаем:"
+
+msgid "Its"
+msgstr "Его"
+
+msgid "draft"
+msgstr "образец"
+
+msgid "December"
+msgstr "Декабрь"
+
+msgid "Flexible Business Networks"
+msgstr "Гибкие деловые сети"
+
+msgid "If your company is not able to undertake fully a project, instead of losing the contract, you %1could choose to work with %2outsourcers%3. You can cut costs and foster competition between vendors, while taking advantage of vendor specialization and technical expertise%4."
+msgstr "Если ваша компания не может справиться с проектом, вместо потери контракта вы можете %1начать работу с %2аутсорсингом%3. Таким образом вы можете снизить затраты и использовать соревновательные возможности, тем не менее получая преимущества от специализации производителей и проводя техническую экспертизу%4."
+
+msgid "Cooperatives & non-profit Franchises"
+msgstr "Кооперативы и бесприбыльные франшизы"
+
+msgid "Following the way of successful organizations as %1Best Western%2 or %3Mondragon Cooperative Corporation%2. You can read comments at the %4 email list."
+msgstr "Следуя по пути таких успешных организаций как %1Best Western%2 или %3Mondragon Cooperative Corporation%2. Вы можете также ознакомиться с комментариями на списке рассылки %4."
+
+#
+# Person form: Person_form.tpl, Person_form.php
+#
+# Person_form.tpl
+msgid "Read the %1Membership%2 Charter section."
+msgstr "Прочитайте главу устава о %1Членстве%2."
+
+#, fuzzy
+msgid "Update person data"
+msgstr "ОБНОВИТЬ ЛИЧНЫЕ ДАННЫЕ"
+
+msgid "Some fields does not match."
+msgstr ""
+
+msgid "Please try again."
+msgstr ""
+
+msgid "The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional."
+msgstr "Поля, отмеченные звёздочкой %1*%2 необходимы для завершения транзакции; другие поля не обязательны."
+
+#, fuzzy
+msgid "Account identification"
+msgstr "ИДЕНТИФИКАЦИЯ УЧЁТНОЙ ЗАПИСИ"
+
+msgid "Email"
+msgstr "Correo electrónico"
+
+msgid "Change the account email"
+msgstr ""
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Retype Password"
+msgstr "Введите пароль ещё раз"
+
+msgid "Change the account password"
+msgstr ""
+
+#, fuzzy
+msgid "Person"
+msgstr "УЧАСТНИК"
+
+msgid "First name"
+msgstr "Имя"
+
+msgid "Last name"
+msgstr "Фамилия"
+
+msgid "Middle name"
+msgstr "Отчество"
+
+msgid "Year of birth"
+msgstr "Год рождения"
+
+msgid "Photo"
+msgstr "Фотография"
+
+msgid "Default image size"
+msgstr "Размер изображения по умолчанию"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Blog"
+msgstr "Blog"
+
+#, fuzzy
+# msgstr "Веб-сайт"
+msgid "Web site"
+msgstr "Веб-страница"
+
+msgid "ISO Nationalities"
+msgstr "Nacionalidades ISO"
+
+msgid "Mark to delete"
+msgstr ""
+
+msgid "More"
+msgstr ""
+
+msgid "Save and or delete and stay here to add more"
+msgstr ""
+
+msgid "License to work at"
+msgstr ""
+
+msgid "Besides the inferred from the ISO nationalities fields"
+msgstr ""
+
+#, fuzzy
+msgid "Postal address"
+msgstr "АДРЕС"
+
+msgid "Street"
+msgstr "Улица"
+
+msgid "Suite"
+msgstr "Район"
+
+msgid "City"
+msgstr "Город"
+
+msgid "State / Province"
+msgstr "Область / Край"
+
+msgid "Postal code"
+msgstr "Почтовый индекс"
+
+msgid "Country"
+msgstr "Страна"
+
+#, fuzzy
+msgid "Interactive communication medias"
+msgstr "СРЕДСТВА ИНТЕРАКТИВНОГО ОБЩЕНИЯ"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Register"
+msgstr ""
+
+msgid "Delete me from this Association"
+msgstr "Удалить меня из Ассоциации"
+
+# Person_form.php
+msgid "You can not access this section been logged as"
+msgstr "Вы не можете получить доступ к этой информации, пока находитесь по именем"
+
+msgid "Your information has been deleted from the data base. You have been logout automatically."
+msgstr "Информация была удалена из базы данных. Вы автоматически вышли из системы."
+
+msgid "Updated successfully"
+msgstr "Успешно обновлено"
+
+msgid "Invalid email address"
+msgstr ""
+
+#, fuzzy
+msgid "Password fields differ"
+msgstr "Пароль отличается от подтверждения"
+
+#XXX: msgid "If you want to qualify to vote, you have to supply both the contributions and your public key."
+#XXX: msgstr "Для того, чтобы получить доступ к голосованиям, необходимо предоставить список выполненных работ и открытый ключ."
+
+#XXX: msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
+#XXX: msgstr "Ваш вклад в свободное программное обеспечение будет проверен. Результат будет послан Вам по электронной почте. Таким образом вы получите право голоса, если результат будет положительным."
+
+#
+# Company form: Company_form.tpl, Company_form.php
+#
+# Company_form.tpl
+#, fuzzy
+msgid "Update company data"
+msgstr "ОБНОВИТЬ ДАННЫЕ КОМПАНИИ"
+
+#, fuzzy
+msgid "Company"
+msgstr "КОМПАНИЯ"
+
+msgid "Photo or logo"
+msgstr "Фотография или логотип"
+
+msgid "Delete me"
+msgstr "Удалить информацию"
+
+# Company_form.php
+# msgid ""
+# msgstr ""
+#
+# non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
+#
+# non-profit_Organization_form.tpl
+#, fuzzy
+msgid "New non-profit organization"
+msgstr "НОВАЯ БЕСПРИБЫЛЬНАЯ ОРГАНИЗАЦИЯ"
+
+#, fuzzy
+msgid "Update non-profit organization data"
+msgstr "ОБНОВИТЬ БЕСПРИБЫЛЬНУЮ ОРГАНИЗАЦИЮ"
+
+#, fuzzy
+msgid "non-profit"
+msgstr "БЕСПРИБЫЛЬНАЯ"
+
+msgid "non-profit Organization"
+msgstr "Безприбыльная организация"
+
+msgid "Name"
+msgstr "Название"
+
+# non-profit_Organization_form.php
+# msgid ""
+# msgstr ""
+#
+# Qualifications form: Qualifications_edit-guide-bar.tpl, Qualifications_*_form.tpl, Qualifications_form.php
+#
+#, fuzzy
+msgid "New qualifications"
+msgstr "НОВЫЕ НАВЫКИ"
+
+#, fuzzy
+msgid "Update qualifications data"
+msgstr "ОБНОВИТЬ ДАННЫЕ О КВАЛИФИКАЦИИ"
+
+msgid "Check qualifications view"
+msgstr "Отобразить форму квалификации"
+
+msgid "Previous"
+msgstr ""
+
+msgid "Save and move to the previous section"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Save and move to the next section"
+msgstr ""
+
+msgid "Finish"
+msgstr ""
+
+msgid "Save and finish the edition"
+msgstr ""
+
+# Qualifications_edit-guide-bar.tpl
+msgid "Save and move to section"
+msgstr ""
+
+msgid "FS projects"
+msgstr ""
+
+#, fuzzy
+msgid "Residence location"
+msgstr "МЕСТО ЖИТЕЛЬСТВА"
+
+#, fuzzy
+msgid "Contract"
+msgstr "КОНТАКТ"
+
+# Qualifications_profiles_etc_form.tpl
+#, fuzzy
+msgid "Technical"
+msgstr "ТЕХНИЧЕСКОЕ"
+
+msgid "Staff with the below characteristic:"
+msgstr ""
+
+msgid "Press Ctrl key to choose more than one Profile"
+msgstr "Нажмите клавишу Ctrl для выделения более одного направления"
+
+msgid "Profiles"
+msgstr "Направления"
+
+msgid "Product profiles"
+msgstr "Направления продукта"
+
+msgid "Professional profiles"
+msgstr "Профили профессионалов"
+
+msgid "Field profiles"
+msgstr "Поля профиля"
+
+# Qualifications_skills_form.tpl
+msgid "Some fields offer suggestions."
+msgstr ""
+
+msgid "The form has not been saved yet."
+msgstr ""
+
+msgid "Please, choose or edit again."
+msgstr ""
+
+msgid "Checks"
+msgstr ""
+
+msgid "Non-Free or Pending skills are not showed in the view."
+msgstr ""
+
+msgid "Add skills and theirs knowledge and experience levels."
+msgstr ""
+
+msgid "Knowledge level"
+msgstr "Уровень знаний"
+
+msgid "Experience level"
+msgstr "Уровень опыта"
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "This skill is pending for checking."
+msgstr ""
+
+msgid "This skill is unknown."
+msgstr ""
+
+msgid "This skill is abstract."
+msgstr ""
+
+msgid "This skill is almost Free."
+msgstr ""
+
+msgid "This skill is partially Free."
+msgstr ""
+
+msgid "This skill is Hardware."
+msgstr ""
+
+msgid "This skill is Documentation."
+msgstr ""
+
+msgid "This skill is Art."
+msgstr ""
+
+msgid "This skill is Free."
+msgstr ""
+
+msgid "This skill is not Free."
+msgstr ""
+
+msgid "Software criteria at the FAQ."
+msgstr ""
+
+msgid "Report any mistake!"
+msgstr ""
+
+msgid "Please choose:"
+msgstr ""
+
+msgid "Keep as is"
+msgstr ""
+
+# Qualifications_languages_form.tpl
+msgid "Staff with the below languages:"
+msgstr ""
+
+msgid "Add idioms and theirs spoken and written levels"
+msgstr ""
+
+msgid "Spoken level"
+msgstr "Разговорный"
+
+msgid "Written level"
+msgstr "Письменный"
+
+# Qualifications_certifications_form.tpl
+# msgid ""
+# msgstr ""
+
+# Qualifications_projects_form.tpl
+msgid "Add URIs to the work you or your staff have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you or your staff expose your knowledge, rationales, feedback, etc."
+msgstr ""
+
+msgid "Project"
+msgstr "Проект"
+
+# Qualifications_location_form.tpl
+msgid "Staff:"
+msgstr "Personal:"
+
+msgid "Available to travel"
+msgstr "Согласен на поездку"
+
+msgid "Available to change residence"
+msgstr "Согласен на смену места жительства"
+
+msgid "Request your certifications"
+msgstr "Запросить ваши сертификаты"
+
+# Qualifications_contract_form.tpl
+msgid "Desired contract type"
+msgstr "Предпочтительный способ взаимодействия"
+
+msgid "Desired wage rank"
+msgstr "Желаемый уровень заработной платы"
+
+msgid "The format has to be:"
+msgstr "Формат должен быть:"
+
+msgid "Minimum"
+msgstr "Минимальный"
+
+msgid "Optimum"
+msgstr "Оптимальный"
+
+msgid "For example:"
+msgstr "Например:"
+
+msgid "Currency"
+msgstr "Валюта"
+
+msgid "Current employability"
+msgstr "Текущая занятость"
+
+# Qualifications_form.php
+msgid "To access this section you have to login first."
+msgstr "Для того, чтобы получить доступ, необходимо войти в систему."
+
+msgid "Please fill in here"
+msgstr ""
+
+msgid "Incorrect date format"
+msgstr ""
+
+msgid "The qualifications information has been deleted from the data base."
+msgstr "Информация о квалификации была удалена из базы данных."
+
+msgid "Success. Your qualifications have been saved."
+msgstr "Успех. Данные о квалификации были сохранены."
+
+#
+# JobOffer form: Job_Offer_edit-quide-bar.tpl, Job_Offer_*_form.tpl, Job_Offer_form.php
+#
+#, fuzzy
+msgid "Update job offer"
+msgstr "ОБНОВИТЬ ПРЕДЛОЖЕНИЕ РАБОТЫ"
+
+#, fuzzy
+msgid "New job offer"
+msgstr "Новое предложение РАБОТЫ"
+
+#, fuzzy
+msgid "Check offer view"
+msgstr "Показать форму предложения работы"
+
+# Job_Offer_edit-quide-bar.tpl
+#, fuzzy
+msgid "General"
+msgstr "ОБЩЕЕ"
+
+# Job_Offer_general_form.tpl
+msgid "Allow applications from"
+msgstr "Разрешать заявки от"
+
+msgid "The offer is closed"
+msgstr "Предложение закрыто"
+
+msgid "Expiration date"
+msgstr "Срок истечения"
+
+msgid "The format could be for example"
+msgstr "Формат может быть, например"
+
+msgid "Your offer reference"
+msgstr "Ваша ссылка на предложение"
+
+# Job_Offer_profiles_etc_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_skills_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_languages_form.tpl
+msgid "Required languages"
+msgstr "Требуемые языки"
+
+# Job_Offer_certifications_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_projects_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_location_form.tpl
+msgid "Do not fill any address field if the offer is Telecommute."
+msgstr ""
+
+# Job_Offer_contract_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_form.php
+# msgid ""
+# msgstr ""
+
+#
+# Manage_Job_Offer_Applications_form.tpl
+#
+msgid "Manage the job offer applications"
+msgstr "Управление заявками на предложенную работу"
+
+msgid "Offer title"
+msgstr "Заглавие предложения"
+
+msgid "Applicant"
+msgstr "Претендент"
+
+#
+# Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_form.php
+#
+# Manage_Job_Offers_form.tpl
+msgid "Manage job offers"
+msgstr "Управления предложениями работы"
+
+msgid "You do not have any defined job offer."
+msgstr "Не задано предложений работы."
+
+msgid "Closed"
+msgstr "Закрыто"
+
+msgid "Delete selected offers"
+msgstr "Удалить выделенные предложения"
+
+# Manage_Job_Offers_form.php
+msgid "The selected job offers has been deleted from the data base."
+msgstr "Выделенные предложения работы были удалены из базы данных."
+
+msgid "Offers to delete have not been selected. Try again."
+msgstr "Не выделены предложения работы. Попробуйте ещё раз"
+
+#
+# View_Job_Applications_State_form.tpl
+#
+msgid "Job applications"
+msgstr "Заявки на работу"
+
+msgid "You do not have your application subscribed to any open job offer."
+msgstr "Нет заявок на ещё действительные предложения о работе."
+
+msgid "Subscription state"
+msgstr "Статус подписки"
+
+#
+# Alerts_form.tpl
+#
+msgid "Alerts via email on:"
+msgstr ""
+
+msgid "any new job offer"
+msgstr ""
+
+msgid "any new job offer which fits my qualifications"
+msgstr ""
+
+#
+# Admin_form.tpl
+#
+msgid "Skills administration"
+msgstr ""
+
+msgid "Attend pending to classify skills"
+msgstr ""
+
+msgid "Classify"
+msgstr ""
+
+msgid "Attend reclassify skill requests"
+msgstr ""
+
+msgid "Reclassify"
+msgstr ""
+
+msgid "Add new skills"
+msgstr ""
+
+msgid "There are not pending to classify skills."
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Skill properties"
+msgstr ""
+
+msgid "Change the skill name"
+msgstr ""
+
+msgid "Change the classification tag"
+msgstr ""
+
+msgid "Tag"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "License or licenses used by such skill"
+msgstr ""
+
+msgid "License name"
+msgstr ""
+
+msgid "License URI"
+msgstr ""
+
+msgid "Notes taken to make it more clear the rationale behind the current classification decision"
+msgstr ""
+
+msgid "Rationale"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Not found."
+msgstr ""
+
+msgid "Please, try again."
+msgstr ""
+
+#
+# Access_Control_List.php
+#
+msgid "The access is not granted."
+msgstr ""
+
+msgid "Such job offer is already closed, removed, or never was here."
+msgstr ""
+
+#
+# raise_NewJobOffer_Alert.php
+#
+msgid "You can disable this type of alerts at  %s"
+msgstr ""
+
+msgid "Alert on new job offers"
+msgstr ""
+
+#
+# PostgreSQL.php
+#
+msgid "ERROR: Connection to database failed!"
+msgstr "ОШИБКА: Не удалось подсоединиться к базе данных!."
+
+msgid "Data base under maintenance. Excuse the inconveniences."
+msgstr "База данных отключена по техническим причинам. Извините за неудобства."
+
+#
+# Data Base LF_FieldProfiles table
+#
+msgid "Data Bases"
+msgstr "Базы данных"
+
+msgid "Networks"
+msgstr "Сетевые приложения"
+
+msgid "Systems"
+msgstr "Системное программирование"
+
+msgid "Security"
+msgstr "Безопасность"
+
+msgid "Web"
+msgstr "Веб"
+
+msgid "Creative design"
+msgstr "Дизайн"
+
+msgid "Quality Assurance"
+msgstr "Контроль качества"
+
+#
+# Data Base LP_ProfessionalProfiles table
+#
+msgid "General Manager"
+msgstr "Управление"
+
+msgid "HH.RR."
+msgstr "Управление персоналом"
+
+msgid "Marketing"
+msgstr "Маркетинг"
+
+msgid "Logistics and Distribution"
+msgstr "Логистика и распространение"
+
+msgid "Commercial - Seller"
+msgstr "Коммерческие продажи"
+
+msgid "Customer support"
+msgstr "Поддержка клиентов"
+
+msgid "Research and Development"
+msgstr "Исследования и разработка"
+
+msgid "Account Manager"
+msgstr "Управление безопасностью"
+
+msgid "Project Manager"
+msgstr "Менеджер проекта"
+
+msgid "Architect"
+msgstr "Архитектор"
+
+msgid "Auditor"
+msgstr "Аудитор"
+
+msgid "Adviser"
+msgstr "Советник"
+
+msgid "Technician"
+msgstr "Технический специалист"
+
+msgid "Functional Analyst"
+msgstr "Функциональный аналитик"
+
+msgid "Technician Analyst"
+msgstr "Технический аналитик"
+
+msgid "Developer"
+msgstr "Разработчик"
+
+msgid "Beta tester"
+msgstr "Тестировщик"
+
+msgid "Administrator"
+msgstr "Администратор"
+
+msgid "Documentalist"
+msgstr "Создатель документации"
+
+msgid "Technical Redactor"
+msgstr "Технический редактор"
+
+msgid "Teacher"
+msgstr "Учитель"
+
+msgid "Translator"
+msgstr "Переводчик"
+
+msgid "Operator"
+msgstr "Оператор"
+
+msgid "Technical support"
+msgstr "Техническая поддержка"
+
+msgid "Helpdesk"
+msgstr "Поддержка пользователей"
+
+#
+# Data Base LA_AcademicQualifications table
+#
+msgid "Undergraduate"
+msgstr "Незаконченное высшее"
+
+msgid "Graduate"
+msgstr "Высшее образование"
+
+msgid "Postgraduate"
+msgstr "Аспирантура"
+
+msgid "Doctoral"
+msgstr "Учёная степень"
+
+msgid "Other"
+msgstr "Другое"
+
+#
+# Data Base LH_Skills table
+#
+msgid "Pending"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Abstract"
+msgstr ""
+
+msgid "Free Software"
+msgstr ""
+
+msgid "Almost-Free Software"
+msgstr ""
+
+msgid "Partially-Free Software"
+msgstr ""
+
+msgid "Non-Free Software"
+msgstr ""
+
+msgid "Hardware"
+msgstr ""
+
+msgid "Documentation"
+msgstr ""
+
+msgid "Free Documentation"
+msgstr ""
+
+msgid "Non-Free Documentation"
+msgstr ""
+
+msgid "Data"
+msgstr ""
+
+msgid "Free Data'"
+msgstr ""
+
+msgid "Non-Free Data"
+msgstr ""
+
+msgid "Art"
+msgstr ""
+
+msgid "Sharable Art"
+msgstr ""
+
+msgid "Non-Sharable Art"
+msgstr ""
+
+#
+# Data Base LK_ContractType table
+#
+msgid "Vacation cover"
+msgstr "Во время каникул"
+
+msgid "Maternity cover"
+msgstr "Материнское сопровождение"
+
+msgid "Training"
+msgstr "Тренировка"
+
+msgid "By hours"
+msgstr "По часам"
+
+msgid "By project"
+msgstr "По проектам"
+
+msgid "Partner"
+msgstr "Партнёр"
+
+msgid "Freelance"
+msgstr "Свободный разработчик"
+
+msgid "Temporary"
+msgstr "Временно"
+
+msgid "Half time"
+msgstr "Половину рабочего дня"
+
+msgid "Full time"
+msgstr "Полный рабочий день"
+
+msgid "Indefinite"
+msgstr "Сколько угодно"
+
+#
+# Data Base LB_ByPeriod table
+#
+msgid "by year"
+msgstr "по годам"
+
+msgid "by month"
+msgstr "по месяцам"
+
+msgid "by week"
+msgstr "по неделям"
+
+msgid "by day"
+msgstr "по дням"
+
+msgid "by hour"
+msgstr "по часам"
+
+msgid "by project"
+msgstr "по проектам"
+
+#
+# Data Base LM_TimeUnits table
+#
+msgid "hours"
+msgstr "часы"
+
+msgid "days"
+msgstr "дни"
+
+msgid "weeks"
+msgstr "недели"
+
+msgid "months"
+msgstr "месяцы"
+
+msgid "years"
+msgstr "годы"
+
+#
+# Data Base LE_Employability table
+#
+msgid "Working"
+msgstr "Работа"
+
+msgid "Studying"
+msgstr "Учёба"
+
+msgid "Without job"
+msgstr "Без работы"
+
+#
+# Data Base LS_SpokenLevel table
+#
+msgid "Null"
+msgstr "Не разговариваю"
+
+msgid "Basic"
+msgstr "Общие фразы"
+
+msgid "Conversation"
+msgstr "Могу поддерживать"
+
+msgid "Negotiation"
+msgstr "Могу поддерживать беседу"
+
+msgid "Native"
+msgstr "Родной"
+
+#
+# Data Base LW_WrittenLevel table
+#
+msgid "Medium"
+msgstr "Средний"
+
+msgid "High"
+msgstr "Высокий"
+
+msgid "Excellent"
+msgstr "Отличный"
+
+#
+# Data Base LZ_ApplicationStates table
+#
+msgid "Received"
+msgstr "Получено"
+
+msgid "In process"
+msgstr "В процессе"
+
+msgid "Ruled out"
+msgstr "Отклонено"
+
+msgid "Finalist"
+msgstr "В финале"
+
+msgid "Selected"
+msgstr "Выбрано"
+
+#
+# Data Base LG_KnowledgeLevel table
+#
+msgid "Good"
+msgstr "Хорошее"
+
+msgid "Master"
+msgstr "Мастерское"
+
+msgid "Expert"
+msgstr "Экспертное"
+
+msgid "internals"
+msgstr "внутренности"
+
+#
+# Data Base LN_ExperienceLevel table
+#
+msgid "up to 6 months"
+msgstr "до 6 месяцев"
+
+msgid "up to 2 years"
+msgstr "до 2 лет"
+
+msgid "up to 5 years"
+msgstr "до 5 лет"
+
+msgid "up to 10 years"
+msgstr "до 10 лет"
+
+msgid "more than 10 years"
+msgstr "более 10 лет"
+

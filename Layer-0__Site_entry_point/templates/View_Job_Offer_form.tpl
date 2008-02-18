@@ -39,17 +39,21 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <tr>
-<td colspan="4" class="subsection">
-{t escape='no'
-  1='<strong>'
-  2='</strong>'
-}%1Vacancy%2 looking for{/t}
+<td colspan="4" class="subsection head">
+{t}Job offer{/t}
 </td>
 
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=general" title="{t}Edit section{/t}: {t}General{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
+
+<tr>
+<td colspan="4">&nbsp;</td>
+{if $data.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr> 
 
 <tr valign="top">
 <td align="right"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
@@ -432,7 +436,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <strong>{t}Name{/t}</strong>&nbsp;:{if trim($data.BirthYear) neq ''}<br>
 <strong>{t}Born{/t}</strong> :{/if}{if count($data.NationalityNameList) > 0 }<br>
 <strong>{if count($data.NationalityNameList) == 1 }{t}Nationality{/t}{else}{t}Nationalities{/t}{/if}</strong> :{/if}{if count($data.JobLicenseAtNameList) > 0 }<br>
-<strong>{t}Besides license to work at{/t}</strong> :{/if}
+<strong>{'Besides license to work at'|gettext|strip:'&nbsp;'}</strong>&nbsp;:{/if}
 </td>
 
 <td colspan="2" class="greenLight">
@@ -512,7 +516,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{mailto address=$data.Email}<br>
 
 	{if trim($data.Website) neq ''}
-		{t}web site{/t} <a href="{$data.Website}">{$data.Website}</a><br>
+		{t}Web site{/t} <a href="{$data.Website}">{$data.Website}</a><br>
 	{/if}
 
 

@@ -384,7 +384,7 @@ class JobOffer
 				$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
 				$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
 
-				$sqlQuery = "PREPARE query(text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_ProfessionalExperienceSinceYear=$1,J1_LA_Id=$2,J1_CompletedEdition=$3 WHERE J1_Id=$4;  EXECUTE query('".pg_escape_string($ProfessionalExperienceSinceYear)."','$AcademicQualification','$completedEdition','$J1_Id');";
+				$sqlQuery = "PREPARE query(text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_ProfessionalExperienceSinceYear=$1,J1_LA_Id=$2,J1_CompletedEdition=$3 WHERE J1_Id=$4;  EXECUTE query('".pg_escape_string($ProfessionalExperienceSinceYear)."','".pg_escape_string($AcademicQualification)."','$completedEdition','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
 
 				// Profiles

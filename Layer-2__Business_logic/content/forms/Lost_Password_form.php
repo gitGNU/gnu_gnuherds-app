@@ -67,7 +67,7 @@ class LostPassword
 						// Send the email
 						$message = gettext("For security reasons, GNU Herds does not send passwords by electronic mail.")."\n\n";
 
-						$message .= gettext("To get your new password follow the below link.")." ".gettext("That link will expire in 30 minutes:")."\n\n";
+						$message .= gettext("To get your new password follow the below link.")." ".gettext("That link will expire in 2 hours:")."\n\n";
 
 						$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".$_POST['Email']."&magic=".$magic;
 

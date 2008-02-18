@@ -44,7 +44,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
   1='<a href="development#Team">'
   2='</a>'
 }This project has been put together by a small %1team%2 of members of the Free Software community.{/t}</p>
+<p>&nbsp;</p>
+<p>{t}Mailing lists:{/t}</p>
 <ul>
-<li><a href="https://lists.gnuherds.org/mailman/listinfo/association">association</a> {t}is the project main list.{/t}</li>
+<li><a href="http://lists.gnuherds.org/mailman/listinfo/association">association</a> {t}is the project main list.{/t}</li>
 <li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
 </ul>

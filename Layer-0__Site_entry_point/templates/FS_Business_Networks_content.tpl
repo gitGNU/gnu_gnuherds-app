@@ -20,7 +20,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <h3>{t}FS business models{/t}</h3>
 
 <p>
-{t}These are the business models which we know about:{/t}
+{t}These are the possible business models we know about:{/t}
 </p>
 <ul>
 

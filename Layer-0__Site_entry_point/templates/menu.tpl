@@ -36,11 +36,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 
 {if $smarty.session.LoginType eq 'Company' }
-<li><a href="company">{t}Our company profile{/t}</a></li>
+<li><a href="company">{t}Our company{/t}</a></li>
 {/if}
 
 {if $smarty.session.LoginType eq 'non-profit Organization' }
-<li><a href="nonprofit">{t}Our non-profit profile{/t}</a></li>
+<li><a href="nonprofit">{t}Our non-profit{/t}</a></li>
 {/if}
 
 {if $smarty.session.HasQualifications eq '1' }

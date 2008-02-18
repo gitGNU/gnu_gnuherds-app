@@ -32,7 +32,7 @@ class Alerts
 
 	public function initAlertsForEntity($E1_Id)
 	{
-		$sqlQuery = "PREPARE query(integer,bool) AS  INSERT INTO A1_Alerts (A1_E1_Id,A1_NewJobOffer) VALUES ($1,$2);  EXECUTE query('$E1_Id','false');";
+		$sqlQuery = "PREPARE query(integer,bool) AS  INSERT INTO A1_Alerts (A1_E1_Id,A1_NewJobOffer) VALUES ($1,$2);  EXECUTE query('$E1_Id','true');";
 		$this->postgresql->execute($sqlQuery,1);
 	}
 

@@ -19,11 +19,11 @@ Suite 225, San Francisco, CA 94107, USA
 
 <h3>{t}Skills administration{/t}</h3>
 
-<a href="/admin?section=classify_skills" title="Attend pending to classify skills">{t}Classify{/t}</a>
+<a href="/admin?section=classify_skills" title="{t}Attend pending to classify skills{/t}">{t}Classify{/t}</a>
  | 
-<a href="/admin?section=reclassify_skills" title="Attend reclassify skill requests">{t}Reclassify{/t}</a>
+<a href="/admin?section=reclassify_skills" title="{t}Attend reclassify skill requests{/t}">{t}Reclassify{/t}</a>
  | 
-<a href="/admin?section=add_skills" title="Add new skills">{t}Add{/t}</a>
+<a href="/admin?section=add_skills" title="{t}Add new skills{/t}">{t}Add{/t}</a>
 
 <br>
 <br>
@@ -89,10 +89,10 @@ Suite 225, San Francisco, CA 94107, USA
 <table>
 
 {if $checks.result eq 'fail' }
-<tr><td colspan="2" class="footnote"><span class="must">{t}Some fields does not match. Please try again.{/t}</span></span></td></tr>
+<tr><td colspan="2" class="footnote"><span class="must">{t}Some fields does not match.{/t} {t}Please try again.{/t}</span></span></td></tr>
 <tr><td colspan="2">&nbsp;</td></tr>
 {elseif $checks.result eq 'suggestions' }
-<tr><td colspan="2" class="footnote"><span class="must">{t}Some fields offer suggestions. The form has not been saved yet. Please, choose.{/t}</span></span></td></tr>
+<tr><td colspan="2" class="footnote"><span class="must">{t}Some fields offer suggestions.{/t} {t}The form has not been saved yet.{/t} {t}Please, choose or edit again.{/t}</span></td></tr>
 <tr><td colspan="2">&nbsp;</td></tr>
 {/if}
 
@@ -101,13 +101,13 @@ Suite 225, San Francisco, CA 94107, USA
 <tr><td colspan="2">&nbsp;</td></tr>
 
 <tr valign="top">
-<td align="right"><span class="must">*</span><label for="SkillName" class="raisePopUp" title="{t}Change the skill name{/t}">Name</label></td>
+<td align="right"><span class="must">*</span><label for="SkillName" class="raisePopUp" title="{t}Change the skill name{/t}">{t}Name{/t}</label></td>
 <td>
 <input type="text" name="SkillName" id="SkillName" size="40" maxlength="153" class="required" value="{$data.SkillName}"> <!-- Do not support automatic skill-list processing yet -->
 
 {if count($smarty.post.SuggestedSkills[0]) >= 1 }
 <br>
-<span class="must">{t}Please choose one:{/t}<br></span>
+<span class="must">{t}Please choose:{/t}<br></span>
 {html_radios name='SuggestionSet'|cat:'0' options=$smarty.post.SuggestedSkills[0] separator='<br>'}
 <label><input type="radio" name="SuggestionSet{0}" value="Keep as is" />{t}Keep as is{/t}</label><br />
 {/if}
@@ -154,7 +154,7 @@ Suite 225, San Francisco, CA 94107, USA
 </tr>
 
 <tr>
-<td align="right"><label for="SkillLicenseURL">{'License URL'|gettext|strip:'&nbsp;'}</label></td>
+<td align="right"><label for="SkillLicenseURL">{'License URI'|gettext|strip:'&nbsp;'}</label></td>
 <td>
 <input type="text" name="SkillLicenseURL" id="SkillLicenseURL" size="60" maxlength="255" class="notRequired" value="{$data.SkillLicenseURL}">
 </td>

@@ -60,10 +60,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {if count($data.NationalityNameList) > 0 }
 	{if count($data.NationalityNameList) == 1 }
-		{t}Nationality{/t}: <strong>{t}{$data.NationalityNameList[0]}{/t}</strong><br>
+		{t}Nationality{/t}: <strong>{$data.NationalityNameList[0]}</strong><br>
 	{else}
 		{t}Nationalities{/t}:
-		{foreach from=$data.NationalityNameList item=profile key=i}{if $i == 0}<strong>{t}{$data.NationalityNameList[$i]}{/t}</strong>{else}, <strong>{t}{$data.NationalityNameList[$i]}{/t}</strong>{/if}{/foreach}<br>
+		{foreach from=$data.NationalityNameList item=profile key=i}{if $i == 0}<strong>{$data.NationalityNameList[$i]}</strong>{else}, <strong>{$data.NationalityNameList[$i]}</strong>{/if}{/foreach}<br>
 	{/if}
 {/if}
 
@@ -103,7 +103,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {* Other contact information *}
 
-Email: {mailto address=$data.Email}<br>
+{t}Email{/t}: {mailto address=$data.Email}<br>
 
 {if trim($data.Blog) neq ''}
 	{t}Blog{/t}: <a href="{$data.Blog}">{$data.Blog}</a><br>

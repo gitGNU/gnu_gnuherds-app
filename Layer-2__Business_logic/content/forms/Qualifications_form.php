@@ -227,7 +227,7 @@ class QualificationsForm extends SkillsForm
 			break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 
@@ -420,7 +420,7 @@ class QualificationsForm extends SkillsForm
 			break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 	}
@@ -903,7 +903,7 @@ class QualificationsForm extends SkillsForm
 			break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 	}
@@ -1021,7 +1021,7 @@ class QualificationsForm extends SkillsForm
 
 		switch($_POST['jump'])
 		{
-			case gettext("Profiles, etc."): $_POST['jump'] = 'profiles_etc'; break;
+			case gettext("Profiles"): $_POST['jump'] = 'profiles_etc'; break;
 			case gettext("Skills"): $_POST['jump'] = 'skills'; break;
 			case gettext("Languages"): $_POST['jump'] = 'languages'; break;
 			case gettext("Certifications"): $_POST['jump'] = 'certifications'; break;
@@ -1030,7 +1030,7 @@ class QualificationsForm extends SkillsForm
 			case gettext("Contract"): $_POST['jump'] = 'contract'; break;
 
 			default:
-				$error = "<p>".gettext("Unexpected error")."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 		}
 	}

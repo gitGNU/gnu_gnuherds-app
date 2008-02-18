@@ -485,10 +485,6 @@ msgstr "Éthiopie"
 msgid "Federal Democratic Republic of Ethiopia"
 msgstr "République démocratique fédérale d'Éthiopie"
 
-#. name for EUR
-msgid "Åland Islands"
-msgstr "Åland, Îles"
-
 #. name for FLK
 msgid "Falkland Islands (Malvinas)"
 msgstr "Falkland, Îles (Malvinas)"

@@ -25,8 +25,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <li><a href="#How_to_subscribe" style='text-decoration: none;'>{t}How to subscribe to a job offer?{/t}</a>
 <li><a href="#Who_can_subscribe" style='text-decoration: none;'>{t}Who can subscribe to a job offer?{/t}</a>
 <li><a href="#Who_can_post" style='text-decoration: none;'>{t}Who can post a job offer?{/t}</a>
-<li><a href="#FS_criteria" style='text-decoration: none;'>{t}Which criteria are applied to classify a program, language, protocol, specification, software distribution, etc. as Free or Non-Free Software?{/t}</a> <br><br>
-<li><a href="#JobSite_module_related_to_the_GNU_Herds_association" style='text-decoration: none;'>{t}How is the Job Site module related to the GNU Herds' association?{/t}</a> <br><br>
+<li><a href="#FS_criteria" style='text-decoration: none;'>{t}Which criteria are applied to classify a program, language, protocol, specification, software distribution, etc. as Free or Non-Free Software?{/t}</a>
+<br><br>
+<li><a href="#JobSite_module_related_to_the_GNU_Herds_association" style='text-decoration: none;'>{t}How is the Job Site module related to the GNU Herds' association?{/t}</a>
+<br><br>
 <li><a href="#membership" style='text-decoration: none;'>{t}Who can join or register?{/t}</a>
 <li><a href="#person_vs_company" style='text-decoration: none;'>{t}Can I not be a member of the association because I am a member of a company?{/t}</a>
 <li><a href="#company_votes" style='text-decoration: none;'>{t}How many votes is a company able to obtain?{/t}</a>
@@ -91,7 +93,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 		}Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4.{/t}
 
 		<li> {t escape='no'
-		  1='<a href="resume">'
+		  1='<a href="resume?id=">'
 		  2='</a>'
 		}Fill the %1Qualifications%2 form.{/t}
 		{t}It is recommended provide the more information possible.{/t}
@@ -193,7 +195,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<p>&nbsp;</p>
 
- 	<p>{t}Currently, the types applyed to classify skills are:{/t}</p>
+ 	<p>{t}Currently, the tags applyed to classify skills are:{/t}</p>
 	<ul>
 	<li><i>{t}Free Software{/t}</i></li>
 	<li><i>{t}Almost-Free Software{/t}</i>, {t}only for software distributions{/t}.</li>
@@ -339,7 +341,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  5='<a href="http://diveintomark.org/archives/2007/10/18/gobuntu-has-already-failed">'
 	  6='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-10/msg00048.html">'
 	  7='</a>'
-	}%1 is %2Almost-Free Software%3. Although Gobuntu's stated %4policy%7 is to adhere to the Free Software Foundations four freedoms, it presently %5installs%7 Firefox, which encourages installing non-free plugins. Gobuntu enables downloading of non-free software packages from its archives, and the use of the ubuntu.com domain %6promotes%7 non-free software.{/t}
+	}%1 is %2Almost-Free Software%3. Although Gobuntu's stated %4policy%7 is to adhere to the Free Software Foundation four freedoms, it presently %5installs%7 Firefox, which encourages installing non-free plugins. Gobuntu enables downloading of non-free software packages from its archives, and the use of the ubuntu.com domain %6promotes%7 non-free software.{/t}
 	</li>
 
 	<li>
@@ -492,7 +494,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  1='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-09/msg00051.html">'
 	  2='</a>'
 	}Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low.{/t}
-	{t}The renew process is automated to reduce bureaucracy.{/t}
+	{t}The membership renew process is automated to reduce bureaucracy.{/t}
 	</p>
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
