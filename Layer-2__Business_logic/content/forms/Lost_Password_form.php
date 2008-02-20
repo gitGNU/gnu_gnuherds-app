@@ -74,7 +74,8 @@ class LostPassword
 						$message .= "\n\n";
 						$message .= gettext("If you have not asked for a new password, ignore it and your password will not be changed.")."\n\n";
 
-						mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
+						mb_language("uni");
+						mb_send_mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
 					}
 				}
 

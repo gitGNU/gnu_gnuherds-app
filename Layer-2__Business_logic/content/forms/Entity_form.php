@@ -55,7 +55,8 @@ abstract class EntityForm
 				$message .= "\n\n";
 				$message .= gettext("If you have not asked for this new account, someone else has asked for it with your email!")."\n\n";
 
-				mail($_GET['email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
+				mb_language("uni");
+				mb_send_mail($_GET['email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
 			}
 
 			// Raise the usual error message
@@ -108,7 +109,8 @@ abstract class EntityForm
 		$message .= "\n\n";
 		$message .= gettext("If you have not asked for it, just ignore this email.")."\n\n";
 
-		mail($_POST['Email'], "GNU Herds: ".gettext("Change account's email"), "$message", "From: association@gnuherds.org");
+		mb_language("uni");
+		mb_send_mail($_POST['Email'], "GNU Herds: ".gettext("Change account's email"), "$message", "From: association@gnuherds.org");
 
 		// Report to the user
 		$this->processingResult .= "<p>&nbsp;</p><p>".gettext('An email has been sent to the new email address to validate it.')."<p>\n";
@@ -128,7 +130,8 @@ abstract class EntityForm
 				$message .= "\n\n";
 				$message .= gettext("If you have not asked for this new account, someone else has asked for it with your email!")."\n\n";
 
-				mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
+				mb_language("uni");
+				mb_send_mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
 			}
 		}
 		else
@@ -150,7 +153,8 @@ abstract class EntityForm
 
 			$message .= gettext("Note: To avoid 'Spam' you can only get this email at the most once each 48 hours.")." ".gettext("If this email is Spam for you, please let it knows to  association AT gnuherds.org")."\n\n";
 
-			mail($_POST['Email'], "GNU Herds: ".gettext("Activate account"), "$message", "From: association@gnuherds.org");
+			mb_language("uni");
+			mb_send_mail($_POST['Email'], "GNU Herds: ".gettext("Activate account"), "$message", "From: association@gnuherds.org");
 		}
 
 		// Report to the user
