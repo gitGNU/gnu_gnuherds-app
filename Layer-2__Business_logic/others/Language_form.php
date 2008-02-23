@@ -39,7 +39,7 @@ class LanguageForm
 		}
 		else
 		{
-			$default_language = "en_US"; // The main and default language of this project is the English languge
+			$default_language = "en_US"; // The main and default language of this project is the English language
 
 			if ( /* $_SESSION["Language"] == "de_DE"
 			  or */ $_SESSION["Language"] == "en_US"
