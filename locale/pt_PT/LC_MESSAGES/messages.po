@@ -38,9 +38,6 @@ msgstr "Associação de Software Livre"
 msgid "%1Download the project source code!%2"
 msgstr "%1Faça download do código fonte do projecto!%2"
 
-msgid "Project state"
-msgstr "Estado do projecto"
-
 #
 # menu.tpl
 #
