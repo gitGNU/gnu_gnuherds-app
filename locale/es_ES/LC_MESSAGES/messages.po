@@ -117,6 +117,9 @@ msgstr "Registrar persona"
 msgid "Register company"
 msgstr "Registrar compañía"
 
+msgid "Register non-profit organization"
+msgstr "Registrar organización sin ánimo de lucro"
+
 msgid "Register non-profit"
 msgstr "Registrar organización"
 
@@ -1163,9 +1166,6 @@ msgstr "Deme de baja"
 # non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
 #
 # non-profit_Organization_form.tpl
-msgid "New non-profit organization"
-msgstr "Nueva organización sin ánimo de lucro"
-
 msgid "Update non-profit organization data"
 msgstr "Actualizar datos de organización sin ánimo de lucro"
 
