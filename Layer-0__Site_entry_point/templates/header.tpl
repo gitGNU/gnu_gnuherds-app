@@ -61,7 +61,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
   2='</a>'
 }%1Download the project source code!%2{/t}<br><a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">GNU Affero GPL v3</a></p>
 
-<p>{t}Project state{/t}: <strong>Beta</strong></p>
+{* <p>{t}Project state{/t}: <strong>Beta</strong></p> *}
 </div>
 
 </div>
