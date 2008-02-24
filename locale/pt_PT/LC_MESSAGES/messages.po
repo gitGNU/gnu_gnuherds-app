@@ -1314,9 +1314,6 @@ msgid "Keep as is"
 msgstr "Manter como está"
 
 # Qualifications_languages_form.tpl
-msgid "Staff with the below languages:"
-msgstr "Colaboradores com conhecimentos nos seguintes idiomas:"
-
 msgid "Add idioms and theirs spoken and written levels"
 msgstr "Adicionar idiomas e seus níveis oral e escrito"
 
@@ -1338,9 +1335,6 @@ msgid "Project"
 msgstr "Projecto"
 
 # Qualifications_location_form.tpl
-msgid "Staff:"
-msgstr "Colaborador:"
-
 msgid "Available to travel"
 msgstr "Disponível para viajar"
 

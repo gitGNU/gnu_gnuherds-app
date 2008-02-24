@@ -53,7 +53,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td colspan="4" align="right">
 
 {if $smarty.session.LoginType neq 'Person' }
-<p>{t}Staff with the below languages:{/t}<p>
+<p>{t}Staff with the below characteristic:{/t}<p>
 {/if}
 
 <table>
