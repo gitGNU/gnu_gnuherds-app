@@ -380,6 +380,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </tr>
 
+{/if}
+
 <tr>
 <td colspan="4">&nbsp;</td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
@@ -421,8 +423,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td class="edit"></td>
 {/if}
 </tr>
-
-{/if}
 
 
 {if $smarty.get.EntityId eq $smarty.session.EntityId }
