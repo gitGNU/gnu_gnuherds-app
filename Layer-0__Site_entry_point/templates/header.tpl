@@ -56,10 +56,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </div>
 
 <div class="notes">
-<p>{t escape='no'
+<p><a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html"><img src="images/agplv3-155x51.png" alt="GNU Affero GPL v3"></a><br>{t escape='no'
   1='<a href="gnuherds-online.tar.gz">'
   2='</a>'
-}<a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html"><img src="images/agplv3-155x51.png" alt="GNU Affero GPL v3"></a><br>%1Download the project source code!%2{/t}</p>
+}%1Download the project source code!%2{/t}</p>
 </div>
 
 </div>
