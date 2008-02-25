@@ -153,6 +153,24 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 
 
+{if $data.EntityType neq 'Person' }
+
+<tr>
+<td colspan="4">&nbsp;</td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr> 
+
+<tr>
+<td colspan="4">{t}Staff with the below characteristic:{/t}</td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr> 
+
+{/if}
+
 <tr>
 <td colspan="4">&nbsp;</td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
