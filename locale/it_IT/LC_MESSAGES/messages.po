@@ -198,7 +198,7 @@ msgstr "Se non hai chiesto una nuova password, ignoralo e la tua password non sa
 
 #
 msgid "An email has been sent to %s with the instructions to change the password."
-msgstr "Un'email è stata spedita all'%s__XXX:: Note: '%s' is replaced by an email address ::XXX__ con le istruzioni per cambiare la password."
+msgstr "Un'email è stata spedita a%s con le istruzioni per cambiare la password."
 
 msgid "Your new password is:"
 msgstr "La tua nuova password è:"
@@ -314,7 +314,7 @@ msgstr "ERRORE: Impossibile cancellare la foto o il logo!"
 #
 #
 msgid "GNU Herds is a not-for-profit %1true-democratic%3 association which %2aims%3 to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
-msgstr "GNU Herds è un'associazione %1democratica%3 senza scopo di lucro, il cui %2obiettivo%3 è XXX XXX ... Note: The same sentence is repeated in 3 msgids. Sorry."
+msgstr "GNU Herds è un'associazione %1democratica%3 senza scopo di lucro, il cui %2obiettivo%3 è di assistere ed incoraggiare le persone nel loro lavoro pagato come autori di Software Libero, ottenendo i massimi livelli di competenza ed efficienza"
 
 #
 msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3business models%2. Some of the JobSite's features are:"
@@ -327,7 +327,7 @@ msgid "FS skills data base"
 msgstr "Database competenze SL"
 
 msgid "Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled."
-msgstr "Altri moduli potranno essere sviluppati. ::XXX-->Invia un'email con lr tue proposte a %1. <--XXX:: I prossimi passi possono dipendere da te. Comunque, uno di questi passi è già stato proposto: la FSF potrà rilasciare delle certificazioni. Questo sito è pronto a supportare le certificazioni, anche se al momento questa funzionalità è disabilitata."
+msgstr "Altri moduli potranno essere sviluppati. Invia un'email con le tue proposte alla lista di distribuzione  %1. I prossimi passi possono dipendere da te. Comunque, uno di questi passi è già stato proposto: la FSF potrà rilasciare delle certificazioni. Questo sito è pronto a supportare le certificazioni, anche se al momento questa funzionalità è disabilitata."
 
 msgid "%1 certification"
 msgstr "Certificazione %1"
@@ -364,7 +364,7 @@ msgstr "Scopo"
 
 #
 msgid "The aims of the Association shall be to %1assist and encourage%2 people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
-msgstr "Lo scopo dell'Associazione sarà di %1 XXX XXX ... Note: The same sentence is repeated in 3 msgids. Sorry."
+msgstr "Lo scopo dell'Associazione sarà di %1assistere e incoraggiare%2 le persone nel loro lavoro pagato come autori di Software Libero, ottenendo i massimi livelli di competenza ed efficienza"
 
 msgid "Membership"
 msgstr "Affiliazione"
@@ -388,7 +388,7 @@ msgstr "Comitato"
 
 #
 msgid "The Committee shall consist of the following: the members of the system administrator team, the web master team, the development team, the translator teams, the public relations team and the Ethics Officer."
-msgstr "Il Comitato sarà così composto: i membri del gruppo system administrator, il gruppo dei web master, il gruppo di XXX--> development <--XXX, i traduttori del gruppo, il gruppo relazioni pubbliche e l'Ufficiale Etico."
+msgstr "Il Comitato sarà così composto: i membri del gruppo system administrator, il gruppo dei web master, il gruppo di sviluppo, i traduttori del gruppo, il gruppo relazioni pubbliche e l'Ufficiale Etico."
 
 msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
 msgstr "Il gruppo di certificazione verificherà, su richiesta, le certificazioni %1Free Software Contributor%2, %3GNU Business Network%4, etc."
@@ -448,14 +448,14 @@ msgstr "Invia commenti a"
 # GNU_Herds_Hackers_Guide_content.tpl
 #
 msgid "GNU Herds coders' guide"
-msgstr "Guida dell'::XXX->coders<-XXX:: GNU Herds"
+msgstr "Guida del coder GNU Herds"
 
 msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!."
 msgstr "Se vuoi unirti al team GNU Herds, o collaborare sporadicamente, come diversi ragazzi hanno già fatto, per favore %1unisciti%2 alla mailing list 'gnuherds-app-dev' o coordinati con uno dei membri del team. Grazie!."
 
 #
 msgid "To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this coders' guide. If you need support ask for it at"
-msgstr "Per provare l'applicazione web, %1scarica%3 il codice ed %2installalo%3 sul tuo host. I traduttori non hanno bisogno di scaricare il codice sorgente. Manderemo loro il file gettext POT da tradurre. Per qualunque consiglio, guarda la guida dell'::XXX->coders<-XXX::. Se hai bisogno di supporto, chiedi aiuto in"
+msgstr "Per provare l'applicazione web, %1scarica%3 il codice ed %2installalo%3 sul tuo host. I traduttori non hanno bisogno di scaricare il codice sorgente. Manderemo loro il file gettext POT da tradurre. Per qualunque consiglio, guarda la guida del coder. Se hai bisogno di supporto, chiedi aiuto in"
 
 msgid "Read the current draft of %1GNU Herds' Charter%2."
 msgstr "Leggi la bozza corrente dello %1Statuto GNU Herds%2."
@@ -558,7 +558,7 @@ msgstr "Perché nessuno segue le condizioni proposte di seguito:"
 
 #
 msgid "Use a license to cover use of the software over a computer network. We are using the %1GNU AGPLv3%2 license. Anyhow, the project is always open to discuss this and any other subject."
-msgstr "Usare una licenza per proteggere l'utilizzo del software su una rete di computer. ::XXX--> Se está utilizando la licencia %1GNU AGPLv3%2. <--XXX:: Il progetto sarà comunque sempre aperto alla discussione su questo ed ogni altro argomento."
+msgstr "Usare una licenza per proteggere l'utilizzo del software su una rete di computer. Stiamo utilizzando la licenza %1GNU AGPLv3%2. Il progetto sarà comunque sempre aperto alla discussione su questo ed ogni altro argomento."
 
 msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users."
 msgstr "Inoltre, la gestione del sito deve essere %1controllata dai suoi stessi utenti%2, secondo una politica democratica. Questo sarà garantito dalla politica dell'associazione GNU Herds. Perciò si sarà sicuri che l'evoluzione del sito sarà controllata e portata avanti dai suoi utenti."
@@ -574,7 +574,7 @@ msgstr "Avere un obiettivo globale, supportare modelli di business basati sul te
 
 #
 msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
-msgstr "Tutto questo tenendo in conto che: \"%3Lo %1scopo%2 dell'Associazione dovrebbe essere XXX XXX ... Note: The same sentence is repeated in 3 msgids. Sorry.   ... Software Libero.\""
+msgstr "Tutto questo tenendo conto che: \"%3Lo %1scopo%2 dell'Associazione dovrebbe essere di assistere ed incoraggiare le persone nel loro lavoro pagato come autori di Software Libero, ottenendo i massimi livelli di competenza ed efficienza.%4\""
 
 msgid "How to subscribe to a job offer?"
 msgstr "Come sottoscrivere un'offerta di lavoro?"
@@ -744,7 +744,7 @@ msgstr "Che relazione c'è tra il modulo del sito web di offerte di lavoro con l
 
 #
 msgid "The Job Site module is %1controlled%2 by the association. Any new module will be controlled by the association too."
-msgstr "Il modulo del Sito di Impiego è %1controllato%2 dalla associazione.  ::XXX---> Cualquier nuevo módulo será controlado también por la asociación."
+msgstr "Il modulo del Sito di Impiego è %1controllato%2 dalla associazione. Anche ogni nuovo modulo sarà controllato dall'associazione."
 
 #
 msgid "Who can join or register?"
