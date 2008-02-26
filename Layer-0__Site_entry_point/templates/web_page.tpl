@@ -32,14 +32,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </head>
 
 <body onload="if ('LoginEmail' in document.LogForm)  if(document.LogForm.LoginEmail.value=='') document.LogForm.LoginEmail.value='email';">
-
-{* We hate getting stuck in someone else's frames *}
-{literal}
-<script type="text/javascript">
-if (parent.location != this.location) parent.location = this.location;
-</script>
-{/literal}
-
 <div>
 {include file="header.tpl"}
 
