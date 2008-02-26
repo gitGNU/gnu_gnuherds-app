@@ -44,8 +44,8 @@ class LanguageForm
 			if ( /* $_SESSION["Language"] == "de_DE"
 			  or */ $_SESSION["Language"] == "en_US"
 			  or $_SESSION["Language"] == "es_ES" /*
-			  or $_SESSION["Language"] == "fr_FR"
-			  or $_SESSION["Language"] == "it_IT" */
+			  or $_SESSION["Language"] == "fr_FR" */
+			  or $_SESSION["Language"] == "it_IT"
 			  or $_SESSION["Language"] == "pt_PT" /*
 			  or $_SESSION["Language"] == "ru_RU" */ )
 			{
@@ -66,9 +66,9 @@ class LanguageForm
 					"es_HN" => true, "es_MX" => true, "es_NI" => true, "es_PA" => true, "es_PE" => true, "es_PR" => true,
 					"es_PY" => true, "es_SV" => true, "es_US" => true, "es_UY" => true, "es_VE" => true, /*
 					"fr" => true,
-					"fr_BE" => true, "fr_CA" => true, "fr_CH" => true, "fr_FR" => true, "fr_LU" => true,
+					"fr_BE" => true, "fr_CA" => true, "fr_CH" => true, "fr_FR" => true, "fr_LU" => true, */
 					"it" => true,
-					"it_IT" => true, "it_CH" => true, */
+					"it_IT" => true, "it_CH" => true,
 					"pt" => true,
 					"pt_PT" => true, "pt_BR" => true /* ,
 					"ru" => true,
