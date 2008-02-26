@@ -43,7 +43,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <strong>{t}{$entityType[$i]}{/t}</strong>
 
 <a href="resume?id={$Id}">
-{if $firstName[$i]}{$lastName[$i]} {$middleName[$i]}{if $lastName[$i] or $middleName[$i]},{/if} {$firstName[$i]}{/if}
+{if $firstName[$i]}{$lastName[$i]}{if $middleName[$i]} {/if}{$middleName[$i]}{if $lastName[$i] or $middleName[$i]},{/if} {$firstName[$i]}{/if}
 {if $companyName[$i]}{$companyName[$i]}{/if}
 {if $organizationName[$i]}{$organizationName[$i]}{/if}
 </a>

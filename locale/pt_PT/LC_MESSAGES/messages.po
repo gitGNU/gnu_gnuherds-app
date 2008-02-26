@@ -38,9 +38,6 @@ msgstr "Associação de Software Livre"
 msgid "%1Download the project source code!%2"
 msgstr "%1Faça download do código fonte do projecto!%2"
 
-msgid "Project state"
-msgstr "Estado do projecto"
-
 #
 # menu.tpl
 #
@@ -115,6 +112,9 @@ msgstr "Registar indivíduo"
 
 msgid "Register company"
 msgstr "Registar empresa"
+
+msgid "Register non-profit organization"
+msgstr "Registar organização sem fins lucrativos"
 
 msgid "Register non-profit"
 msgstr "Registar organização"
@@ -1162,9 +1162,6 @@ msgstr "Removam-me"
 # non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
 #
 # non-profit_Organization_form.tpl
-msgid "New non-profit organization"
-msgstr "Nova organização sem fins lucrativos"
-
 msgid "Update non-profit organization data"
 msgstr "Actualizar os dados da organização sem fins lucrativos"
 
@@ -1317,9 +1314,6 @@ msgid "Keep as is"
 msgstr "Manter como está"
 
 # Qualifications_languages_form.tpl
-msgid "Staff with the below languages:"
-msgstr "Colaboradores com conhecimentos nos seguintes idiomas:"
-
 msgid "Add idioms and theirs spoken and written levels"
 msgstr "Adicionar idiomas e seus níveis oral e escrito"
 
@@ -1341,9 +1335,6 @@ msgid "Project"
 msgstr "Projecto"
 
 # Qualifications_location_form.tpl
-msgid "Staff:"
-msgstr "Colaborador:"
-
 msgid "Available to travel"
 msgstr "Disponível para viajar"
 

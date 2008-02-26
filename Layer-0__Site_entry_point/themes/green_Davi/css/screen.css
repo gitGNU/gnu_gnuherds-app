@@ -88,17 +88,16 @@ font-weight:bold;
 
 .notes{
 padding:0px;
-color:#FFFFFE;
 float:right;
 }
 
 .notes a{
-color:#FFFFFE;
+color:#000000;
 }
 
 .header p{
 padding:0px;
-margin:5px;
+margin:1px;
 }
 
 

@@ -44,7 +44,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 {if $smarty.session.LoginType neq 'Person' }
-<tr> <td colspan="4">{t}Staff:{/t}</td> </tr>
+<tr> <td colspan="4"><p>{t}Staff with the below characteristic:{/t}<p></td> </tr>
 {/if}
 
 {if $certificationsList[0]|@count >= 1}

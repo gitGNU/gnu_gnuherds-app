@@ -39,23 +39,23 @@ class LanguageForm
 		}
 		else
 		{
-			$default_language = "en_US"; // The main and default language of this project is the English languge
+			$default_language = "en_US"; // The main and default language of this project is the English language
 
-			if ( $_SESSION["Language"] == "de_DE"
-			  or $_SESSION["Language"] == "en_US"
-			  or $_SESSION["Language"] == "es_ES"
+			if ( /* $_SESSION["Language"] == "de_DE"
+			  or */ $_SESSION["Language"] == "en_US"
+			  or $_SESSION["Language"] == "es_ES" /*
 			  or $_SESSION["Language"] == "fr_FR"
-			  or $_SESSION["Language"] == "it_IT"
-			  or $_SESSION["Language"] == "pt_PT"
-			  or $_SESSION["Language"] == "ru_RU" )
+			  or $_SESSION["Language"] == "it_IT" */
+			  or $_SESSION["Language"] == "pt_PT" /*
+			  or $_SESSION["Language"] == "ru_RU" */ )
 			{
 				$this->setLanguage($_SESSION["Language"]); // Update the validity of the language selection
 			}
 			else // The client has not specified a language, so we try to guess the best default language according to the user browser settings.
 			{
-				$supported = array(
+				$supported = array( /*
 					"de" => true,
-					"de_AT" => true, "de_BE" => true, "de_CH" => true, "de_DE" => true, "de_LU" => true,
+					"de_AT" => true, "de_BE" => true, "de_CH" => true, "de_DE" => true, "de_LU" => true, */
 					"en" => true,
 					"en_AU" => true, "en_BW" => true, "en_CA" => true, "en_DK" => true, "en_GB" => true, "en_HK" => true,
 					"en_IE" => true, "en_IN" => true, "en_NZ" => true, "en_PH" => true, "en_SG" => true, "en_US" => true,
@@ -64,15 +64,15 @@ class LanguageForm
 					"es_AD" => true, "es_AR" => true, "es_BO" => true, "es_CL" => true, "es_CO" => true, "es_CR" => true,
 					"es_CU" => true, "es_DO" => true, "es_EC" => true, "es_ES" => true, "es_GI" => true, "es_GT" => true,
 					"es_HN" => true, "es_MX" => true, "es_NI" => true, "es_PA" => true, "es_PE" => true, "es_PR" => true,
-					"es_PY" => true, "es_SV" => true, "es_US" => true, "es_UY" => true, "es_VE" => true,
+					"es_PY" => true, "es_SV" => true, "es_US" => true, "es_UY" => true, "es_VE" => true, /*
 					"fr" => true,
 					"fr_BE" => true, "fr_CA" => true, "fr_CH" => true, "fr_FR" => true, "fr_LU" => true,
 					"it" => true,
-					"it_IT" => true, "it_CH" => true,
+					"it_IT" => true, "it_CH" => true, */
 					"pt" => true,
-					"pt_PT" => true, "pt_BR" => true,
+					"pt_PT" => true, "pt_BR" => true /* ,
 					"ru" => true,
-					"ru_RU" => true, "ru_UA" => true
+					"ru_RU" => true, "ru_UA" => true */
 				);
 
 				$chosen = HTTP::negotiateLanguage($supported);
