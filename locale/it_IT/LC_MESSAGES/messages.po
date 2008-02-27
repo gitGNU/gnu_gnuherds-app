@@ -1,3 +1,4 @@
+# translation of messages.po to italian
 # translation of messages.po to
 # Authors: Davi Leal
 #
@@ -21,9 +22,9 @@ msgstr ""
 "Project-Id-Version: messages\n"
 "Report-Msgid-Bugs-To: davi@leals.com\n"
 "POT-Creation-Date: 2006-04-10 19:12+0200\n"
-"PO-Revision-Date: 2008-02-26 07:37+0100\n"
+"PO-Revision-Date: 2008-02-27 08:53+0100\n"
 "Last-Translator: Antenore Gatta <antenore@gmail.com>\n"
-"Language-Team:  <en@li.org>\n"
+"Language-Team: italian <gnuherds-app-dev@nongnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -113,17 +114,14 @@ msgstr "Entra"
 msgid "Lost password?"
 msgstr "Perso la password?"
 
-#, fuzzy
 msgid "Register person"
-msgstr "Nuova persona?"
+msgstr "Registra persona"
 
-#, fuzzy
 msgid "Register company"
-msgstr "Nuova azienda?"
+msgstr "Registra azienda"
 
-#, fuzzy
 msgid "Register non-profit"
-msgstr "Nuova organizzazione?"
+msgstr "Registra organizzazione no-profit"
 
 #
 # log_out_box.tpl
@@ -151,18 +149,17 @@ msgstr "Uscita corretta."
 
 # msgid "The %2GNU Herds%3 project is an official part of %1the GNU Project%3."
 # msgstr "Il progetto %2GNU Herds%3 è ufficialmente parte del %1Progetto GNU%3."
-
 #
 # foot.tpl
 #
 msgid "Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!"
-msgstr "Per favore invia ogni commento to %1. Per esempio, potresti inviare report di problemi tecnici, come link errati, rendering delle pagine, etc. Critiche e suggerimenti sono sempre benvenuti. GNU Herds lavora per voi!"
+msgstr "Per favore invia ogni commento a %1. Per esempio, potresti inviare un rapporto di problemi tecnici, come link errati, rendering delle pagine, etc. Critiche e suggerimenti sono sempre benvenuti. GNU Herds lavora per voi!"
 
 #
 # Lost_Password_form.tpl
 #
 msgid "Write your email and click the Send button."
-msgstr "Inserisci la tua email e clicca sul tasto invia."
+msgstr "Inserisci il tuo indirizzo di posta elettronica e clicca sul tasto invia."
 
 msgid "Send"
 msgstr "Invia"
@@ -186,7 +183,7 @@ msgid "If you have not asked for a new password, ignore it and your password wil
 msgstr "Se non hai chiesto una nuova password, ignoralo e la tua password non sarà cambiata."
 
 msgid "An email has been sent to %s with the instructions to change the password."
-msgstr "Un'email è stata spedita a%s con le istruzioni per cambiare la password."
+msgstr "Un messaggio ti è stato inviato all'indirizzo %s con le istruzioni per cambiare la password."
 
 msgid "Your new password is:"
 msgstr "La tua nuova password è:"
@@ -198,7 +195,7 @@ msgstr "Per migliorare la tua sicurezza, dovresti cambiare la password dopo aver
 # Entity_form.php
 #
 msgid "An attempt was made to activate a new GNU Herds' account with this email address."
-msgstr "E' stato tentato di attivare un nuovo account GNU Herds con questo indirizzo email."
+msgstr "E' stato tentato di attivare un nuovo account GNU Herds con questo indirizzo di posta elettronica."
 
 msgid "However, you have already an active account!"
 msgstr "Comunque, avete già un account attivo!"
@@ -207,34 +204,34 @@ msgid "Follow the below link to get a new password if it is needed:"
 msgstr "Clicca il link seguente per avere una nuova password se necessario:"
 
 msgid "If you have not asked for this new account, someone else has asked for it with your email!"
-msgstr "Se non hai chiesto un nuovo account, qualcun altro lo ha fatto con la tua email!"
+msgstr "Se non hai chiesto un nuovo account, qualcun altro lo ha fatto con il tuo indirizzo di posta elettronica!"
 
 msgid "Your account has been activated!"
 msgstr "Il tuo account è stato attivato!"
 
 msgid "The email has been changed!"
-msgstr "L'email è stata cambiata!"
+msgstr "L'indirizzo di posta elettronica è stato cambiato!"
 
 msgid "To change your GNU Herds account's email, first log in and then follow the below link."
-msgstr "Per cambiare l'indirizzo email dell'account GNU Herds, effettua il login e segui il link qui sotto."
+msgstr "Per cambiare l'indirizzo di posta elettronica del tuo account GNU Herds, prima di tutto effettua il log in e poi segui il link qui sotto."
 
 msgid "That link will expire in 7 days:"
 msgstr "Il link scadrà in 7 giorni:"
 
 msgid "If you have not asked for it, just ignore this email."
-msgstr "Se non hai fatto questa richiesta, ignora questa email."
+msgstr "Se non hai fatto questa richiesta, ignora questo messaggio."
 
 msgid "Change account's email"
-msgstr "Cambia l'email del tuo account"
+msgstr "Cambia l'indirizzo di posta elettronica del tuo account."
 
 msgid "An email has been sent to the new email address to validate it."
-msgstr "Un'email è stata inviata al tuo nuovo indirizzo per essere validata."
+msgstr "Un messaggio è stato inviato al tuo nuovo indirizzo di posta elettronica per essere validata."
 
 msgid "An attempt was made to register a new GNU Herds' account with this email address."
-msgstr "Si è cercato di registrare un nuovo account GNU Herds con questo indirizzo email."
+msgstr "Si è cercato di registrare un nuovo account GNU Herds con questo indirizzo di posta elettronica."
 
 msgid "Your email has been used to create an account at GNU Herds."
-msgstr "La tua email è stata usata per creare un nuovo account su GNU Herds."
+msgstr "Il tuo indirizzo di posta elettronica è stato usato per creare un nuovo account su GNU Herds."
 
 msgid "To activate it follow the below link."
 msgstr "Per attivarlo segui il link qui sotto."
@@ -246,10 +243,10 @@ msgid "To get a new non-expired link just register at gnuherds.org again."
 msgstr "Per avere un nuovo link registrati ancora a gnuherds.org."
 
 msgid "If you have not asked for this new account, ignore this email."
-msgstr "Se non hai richiesto questo account, ignora quest'email."
+msgstr "Se non hai richiesto questo account, ignora questo messaggio."
 
 msgid "Note: To avoid 'Spam' you can only get this email at the most once each 48 hours."
-msgstr "Nota: Per evitare 'Spam' tu puoi ricevere quest'email al massimo ogni 48 ore."
+msgstr "Nota: Per evitare 'Spam' tu puoi ricevere questo messaggiol al massimo ogni 48 ore."
 
 msgid "If this email is Spam for you, please let it knows to  association AT gnuherds.org"
 msgstr "Se per te questo messaggio è Spam, per favore comunicacelo a association AT gnuherds.org"
@@ -258,10 +255,10 @@ msgid "Activate account"
 msgstr "Attivare account"
 
 msgid "Success. An email has been sent to %s with the instructions to activate the account."
-msgstr "Successo. Un'email è stata inviata a %s con le istruzioni per attivare l'account."
+msgstr "Successo. Un messaggio è stato inviato a %s con le istruzioni per attivare l'account."
 
 msgid "If you do not receive such email, you can inform about it at %s."
-msgstr "Se non ricevi tale email, ci puoi informare a %s."
+msgstr "Se non ricevi tale messaggio, ci puoi informare a %s."
 
 #
 # Entity.php
@@ -291,7 +288,7 @@ msgid "FS skills data base"
 msgstr "Database competenze SL"
 
 msgid "Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled."
-msgstr "Altri moduli potranno essere sviluppati. Invia un'email con le tue proposte alla lista di distribuzione  %1. I prossimi passi possono dipendere da te. Comunque, uno di questi passi è già stato proposto: la FSF potrà rilasciare delle certificazioni. Questo sito è pronto a supportare le certificazioni, anche se al momento questa funzionalità è disabilitata."
+msgstr "Altri moduli potranno essere sviluppati. Invia un messaggio con le tue proposte alla lista di distribuzione  %1. I prossimi passi possono dipendere da te. Comunque, uno di questi passi è già stato proposto: la FSF potrà rilasciare delle certificazioni. Questo sito è pronto a supportare le certificazioni, anche se al momento questa funzionalità è disabilitata."
 
 msgid "%1 certification"
 msgstr "Certificazione %1"
@@ -411,7 +408,7 @@ msgid "GNU Herds coders' guide"
 msgstr "Guida del coder GNU Herds"
 
 msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!."
-msgstr "Se vuoi unirti al team GNU Herds, o collaborare sporadicamente, come diversi ragazzi hanno già fatto, per favore %1unisciti%2 alla mailing list 'gnuherds-app-dev' o coordinati con uno dei membri del team. Grazie!."
+msgstr "Se vuoi unirti al team GNU Herds, o collaborare sporadicamente, come diversi ragazzi hanno già fatto, per favore %1unisciti%2 alla lista di distribuzione 'gnuherds-app-dev' o coordinati con uno dei membri del team. Grazie!."
 
 msgid "To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this coders' guide. If you need support ask for it at"
 msgstr "Per provare l'applicazione web, %1scarica%3 il codice ed %2installalo%3 sul tuo host. I traduttori non hanno bisogno di scaricare il codice sorgente. Manderemo loro il file gettext POT da tradurre. Per qualunque consiglio, guarda la guida del coder. Se hai bisogno di supporto, chiedi aiuto in"
@@ -443,15 +440,14 @@ msgstr "Per mantenere l'accesso ai dati dell'utente fisicamente sicuri, abbiamo 
 msgid "Translate the web site to other languages."
 msgstr "Tradurre il sito web in altre lingue."
 
-#, fuzzy
 msgid "Official job site and association announcement."
-msgstr "Annuncio  ::XXX--> job site  and <--XXX::  dell'associazione."
+msgstr "Annuncio ufficiale del portale del lavoro e dell'associazione."
 
 msgid "Work on e-Vote subjects:"
 msgstr "Lavorare sui temi del voto elettronico:"
 
 msgid "Be ready to use at least a primitive e-Vote system, as for example, to count emails."
-msgstr "Essere pronti ad usare almeno un sistema primitivo di voto elettronico come, per esempio, contando le email."
+msgstr "Essere pronti ad usare almeno un sistema primitivo di voto elettronico come, per esempio, contando i messaggi di posta elettronica."
 
 msgid "Work on others e-Vote proposals."
 msgstr "Lavorare su altre proposte di voto elettronico."
@@ -592,7 +588,7 @@ msgid "For a program, read the %1Free Software%2 definition to know the criteria
 msgstr "Per un programma, leggi la definizione %1Software Libero%2 per conosce i criteri."
 
 msgid "For development languages, protocols, specifications, etc. the meaningful question is whether it is %1supported%3 by software licensed under any of the %2Free Software Licenses%3: BSD, GPL, etc.  Can you use it with Free Software exclusively?"
-msgstr "Per linguaggi di programmazione, protocolli, specifiche, etc. la domanda principale da porsi è se sia %1supportato%3 da qualsiasi software licenziato sotto %2Free Software Licenses%3: BSD, GPL, etc. Puoi usarli esclusivamente con il Software Libero?"
+msgstr "Per linguaggi di programmazione, protocolli, specifiche, etc. la domanda principale da porsi è se sia %1supportato%3 da qualsiasi software licenziato sotto %2Licenze Software Libero%3: BSD, GPL, etc. Puoi usarli esclusivamente con il Software Libero?"
 
 msgid "For software distributions, they must not recommend, promote or grant legitimacy to Non-Free Software."
 msgstr "Per distribuzioni software, non devono raccomndare, promuovere o ammettere legittimità a Software Non Libero."
@@ -646,7 +642,7 @@ msgid "%1 is %2Partially-Free Software%3 %4because%5 it is made of many programs
 msgstr "%1 è %2Software parzialmente-Libero%3 %4perchè%5 perchè è composto da molti programmi; alcuni liberi e altri no."
 
 msgid "%1 is %2Almost-Free Software%3. Although Gobuntu's stated %4policy%7 is to adhere to the Free Software Foundation four freedoms, it presently %5installs%7 Firefox, which encourages installing non-free plugins. Gobuntu enables downloading of non-free software packages from its archives, and the use of the ubuntu.com domain %6promotes%7 non-free software."
-msgstr "%1 è %2Software quasi-Libero%3. Sebbene la %4politica%7 dichiarata da Gobuntu dice di aderire alle qattro libertà della Free Software Foundation, Gobuntu %5installa%7 Firefox, che incoraggia all'installazione di plugin non-liberi. Gobuntu permette il download di software non-libero dai suoi archivi e l'uso del dominio ubuntu.com %6promuove%7 il software non-libero."
+msgstr "%1 è %2Software quasi-Libero%3. Sebbene la %4politica%7 dichiarata da Gobuntu dice di aderire alle qattro libertà della Fondazione Sofware Libero, Gobuntu %5installa%7 Firefox, che incoraggia all'installazione di plugin non-liberi. Gobuntu permette il download di software non-libero dai suoi archivi e l'uso del dominio ubuntu.com %6promuove%7 il software non-libero."
 
 msgid "%1 is %3Free Software%4 because it does not ship anything that is Non-Free Software neither work to provide easy access to Non-Free Software. A Non-Free Software %2 not removed from gNewSense is a bug. The gNewSense's %5policy%6 is to delete any non-free software found in the Linux kernel or elsewhere in the GNU/Linux system."
 msgstr "%1 è %3Software Libero%4 perchè non include Software NON-libero ne lavora per facilitare l'accesso a Software NON-libero. Un %2 Software NON-libero non rimosso in gNewSense è un bug. La %5politica%6 di gNewSense è eliminare ogni software NON-libero che si incontra nel kernel Linux o in qualche altro elemento del sistema GNU/Linux."
@@ -712,7 +708,7 @@ msgid "e-Voting"
 msgstr "Voto elettronico"
 
 msgid "Initially, GNU Herds' members can vote showing their hands, sending an email."
-msgstr "Inizialmente, i soci GNU Herds possono votare alzando la mano, inviando un'email."
+msgstr "Inizialmente, i soci GNU Herds possono votare alzando la mano, inviando un messaggio di posta elettronica."
 
 msgid "The GNU Herds' official voting mechanism is not intented to:"
 msgstr "Il meccanismo di votazione ufficiale GNU Herds non è inteso per:"
@@ -745,7 +741,7 @@ msgid "It seems to support the %1Condorcet method%2 and even \"a mix of secret a
 msgstr "Sembra supporti il %1metodo Condorcet%2, incluso \"un misto di votazioni segrete e pubbliche\"."
 
 msgid "Some free GNU/Linux distributions use it own voting system."
-msgstr "Alcune distribuzioni free GNU/Linux usano un proprio sistema di votazioni."
+msgstr "Alcune distribuzioni libere di GNU/Linux usano un proprio sistema di votazioni."
 
 msgid "Stalled since March 2002."
 msgstr "Sospeso da Marzo 2002."
@@ -798,9 +794,8 @@ msgstr "Ubicazione"
 msgid "Offer date"
 msgstr "Data dell'offerta"
 
-#, fuzzy
 msgid "Offered by"
-msgstr "Datore di lavoro"
+msgstr "Offerta da"
 
 msgid "Any"
 msgstr "Chiunque"
@@ -940,9 +935,8 @@ msgstr "Nazionalità"
 msgid "Nationalities"
 msgstr "Nazionalità"
 
-#, fuzzy
 msgid "Besides license to work at"
-msgstr "Abilitato a lavorare in"
+msgstr "Inoltre abilitato a lavorare in"
 
 msgid "Landline"
 msgstr "Telefono fisso"
@@ -1005,7 +999,7 @@ msgid "Cooperatives & non-profit Franchises"
 msgstr "Cooperative e Franchising no profit"
 
 msgid "Following the way of successful organizations as %1Best Western%2 or %3Mondragon Cooperative Corporation%2. You can read comments at the %4 email list."
-msgstr "Seguendo la scia di organizzazioni di successo come %1Best Western%2 o %3Mondragon Cooperative Corporation%2. Puoi leggere i commenti alla mailing list %4."
+msgstr "Seguendo la scia di organizzazioni di successo come %1Best Western%2 o %3Mondragon Cooperative Corporation%2. Puoi leggere i commenti nella lista di distribuzione %4."
 
 #
 # Person form: Person_form.tpl, Person_form.php
@@ -1143,10 +1137,8 @@ msgstr "I campi Password sono diversi"
 
 #XXX: msgid "If you want to qualify to vote, you have to supply both the contributions and your public key."
 #XXX: msgstr "Se vuoi ottenere il diritto di voto, devi fornire sia i contributi che la tua chiave pubblica."
-
 #XXX: msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
 #XXX: msgstr "Il tuo contributo alla comunità del Software Libero sarà valutata. Il risultato ti sarà inviato via email, con l'abilitazione della capacità di voto in caso di valutazione positiva."
-
 #
 # Company form: Company_form.tpl, Company_form.php
 #
@@ -1166,7 +1158,6 @@ msgstr "Cancellami"
 # Company_form.php
 # msgid ""
 # msgstr ""
-
 #
 # non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
 #
@@ -1190,7 +1181,6 @@ msgstr "Nome"
 # non-profit_Organization_form.php
 # msgid ""
 # msgstr ""
-
 #
 # Qualifications form: Qualifications_form.tpl, Qualifications_form.php
 #
@@ -1342,7 +1332,6 @@ msgstr "Livello scritto"
 # Qualifications_certifications_form.tpl
 # msgid ""
 # msgstr ""
-
 # Qualifications_projects_form.tpl
 msgid "Add URIs to the work you or your staff have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you or your staff expose your knowledge, rationales, feedback, etc."
 msgstr "Aggiungi l'URIs di lavori che tu o il tuo personale a contribuito a progetti di Software Libero publici. E' buona pratica aggiungere più di un URIs per progetto, aggiungendo anche URIs a tuoi personali commit, o threads di conversazione di posta elettronica dove tu o il tuo personale esponete le vostre conoscenze, ragionamenti, commenti, etc."
@@ -1439,11 +1428,9 @@ msgstr "Riferimento alla tua offerta"
 # Job_Offer_profiles_etc_form.tpl
 # msgid ""
 # msgstr ""
-
 # Job_Offer_skills_form.tpl
 # msgid ""
 # msgstr ""
-
 # Job_Offer_languages_form.tpl
 msgid "Required languages"
 msgstr "Lingue richieste"
@@ -1451,11 +1438,9 @@ msgstr "Lingue richieste"
 # Job_Offer_certifications_form.tpl
 # msgid ""
 # msgstr ""
-
 # Job_Offer_projects_form.tpl
 # msgid ""
 # msgstr ""
-
 # Job_Offer_location_form.tpl
 msgid "Do not fill any address field if the offer is Telecommute."
 msgstr "Non inserire nessuna offerta se si tratta di Telelavoro."
@@ -1463,11 +1448,9 @@ msgstr "Non inserire nessuna offerta se si tratta di Telelavoro."
 # Job_Offer_contract_form.tpl
 # msgid ""
 # msgstr ""
-
 # Job_Offer_form.php
 # msgid ""
 # msgstr ""
-
 #
 # Manage_Job_Offer_Applications_form.tpl
 msgid "Manage the job offer applications"
