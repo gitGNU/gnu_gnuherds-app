@@ -116,10 +116,10 @@ msgid "Register company"
 msgstr "Registra azienda"
 
 msgid "Register non-profit organization"
-msgstr "Registar organização sem fins lucrativos"
+msgstr "Registra organizzazione no-profit"
 
 msgid "Register non-profit"
-msgstr "Registar organização"
+msgstr "Registra organizzazione"
 
 #
 # log_out_box.tpl
