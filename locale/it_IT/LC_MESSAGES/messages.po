@@ -1,8 +1,7 @@
-# translation of messages.po to italian
-# translation of messages.po to
-# Authors: Davi Leal
+# Authors: Davi Leal, Antenore Gatta
 #
-# Copyright (C) 2006, 2007 Davi Leal <davi at leals dot com>
+# Copyright (C) 2006, 2007, 2008 Davi Leal <davi at leals dot com>
+#               2008 Antenore Gatta <antenore at gmail dot com>
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU Affero General Public License as published by the Free Software Foundation,
@@ -16,7 +15,6 @@
 # You should have received a copy of the GNU Affero General Public License along with this
 # program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 #
-# Antenore Gatta <antenore@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
@@ -41,9 +39,6 @@ msgstr "Associazione Software Libero"
 
 msgid "%1Download the project source code!%2"
 msgstr "%1Scarica il codice sorgente del progetto%2"
-
-msgid "Project state"
-msgstr "Stato del progetto"
 
 #
 # menu.tpl
@@ -120,8 +115,11 @@ msgstr "Registra persona"
 msgid "Register company"
 msgstr "Registra azienda"
 
+msgid "Register non-profit organization"
+msgstr "Registar organização sem fins lucrativos"
+
 msgid "Register non-profit"
-msgstr "Registra organizzazione no-profit"
+msgstr "Registar organização"
 
 #
 # log_out_box.tpl
@@ -1163,9 +1161,6 @@ msgstr "Cancellami"
 #
 # non-profit_Organization_form.tpl
 #
-msgid "New non-profit organization"
-msgstr "Nuova organizzazione no profit"
-
 msgid "Update non-profit organization data"
 msgstr "Aggiorna dati organizzazione no profit"
 
@@ -1317,9 +1312,6 @@ msgid "Keep as is"
 msgstr "Salva così come è"
 
 # Qualifications_languages_form.tpl
-msgid "Staff with the below languages:"
-msgstr "Personale con le seguenti lingue:"
-
 msgid "Add idioms and theirs spoken and written levels"
 msgstr "Aggiungi linguaggi e livelli di scritto e parlato"
 
@@ -1340,9 +1332,6 @@ msgid "Project"
 msgstr "Progetto"
 
 # Qualifications_location_form.tpl
-msgid "Staff:"
-msgstr "Personale:"
-
 msgid "Available to travel"
 msgstr "Disponibile a viaggiare"
 
@@ -1707,23 +1696,21 @@ msgstr "Helpdesk"
 #
 # Data Base LA_AcademicQualifications table
 #
-#XXX: Antenore, please check if my translations are good here. David.
-#     In particular, check for "Doctoral" => "Dottore". Davi explained
-#     me that to become "Doctoral" you have to do a thesis. I thought
-#     to translate it to "Dottorando", but Davi told me that you are
-#     a Doctoral _after_ you made your thesis. So I finally translated
-#     it as "Dottore". But I'm not sure at all. Please, check this.
-msgid "Undergraduate"
-msgstr "Studente universitario"
+#, fuzzy
+msgid "Enrolled at a University (Undergraduate)"
+msgstr "Studente universitario (Não Licenciado XXX XXX XXX)"
 
-msgid "Graduate"
-msgstr "Laureato (laurea triennale)"
+#, fuzzy
+msgid "Bachelor's degree (1st University cycle)"
+msgstr "Licenciado (1º ciclo universitário)"
 
-msgid "Postgraduate"
-msgstr "Laureato (laurea lunga)"
+#, fuzzy
+msgid "Master's degree (2nd University cycle)"
+msgstr "Mestre/Pós-Graduado (2º ciclo universitário)"
 
-msgid "Doctoral"
-msgstr "Dottore"
+#, fuzzy
+msgid "Doctoral degree (3rd University cycle)"
+msgstr "Doutorado (3º ciclo universitário)"
 
 msgid "Other"
 msgstr "Altro"
