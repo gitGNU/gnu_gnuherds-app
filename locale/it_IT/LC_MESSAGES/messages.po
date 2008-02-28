@@ -1,3 +1,4 @@
+# translation of messages.po to italian
 # Authors: Davi Leal, Antenore Gatta
 #
 # Copyright (C) 2006, 2007, 2008 Davi Leal <davi at leals dot com>
@@ -15,12 +16,13 @@
 # You should have received a copy of the GNU Affero General Public License along with this
 # program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 #
+# Antenore Gatta <antenore@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
 "Report-Msgid-Bugs-To: davi@leals.com\n"
 "POT-Creation-Date: 2006-04-10 19:12+0200\n"
-"PO-Revision-Date: 2008-02-27 08:53+0100\n"
+"PO-Revision-Date: 2008-02-28 08:21+0100\n"
 "Last-Translator: Antenore Gatta <antenore@gmail.com>\n"
 "Language-Team: italian <gnuherds-app-dev@nongnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -134,7 +136,7 @@ msgid "Log in successful!"
 msgstr "Accesso corretto!"
 
 msgid "Now, you can go to the account menu to manage your data."
-msgstr "Ora puoi gestire i tuoi dati."
+msgstr "Ora puoi andare al menu account per gestire i tuoi dati."
 
 msgid "Log in unsuccessful!"
 msgstr "Accesso non corretto!"
@@ -1696,21 +1698,17 @@ msgstr "Helpdesk"
 #
 # Data Base LA_AcademicQualifications table
 #
-#, fuzzy
 msgid "Enrolled at a University (Undergraduate)"
-msgstr "Studente universitario (Não Licenciado XXX XXX XXX)"
+msgstr "Studente universitario (Non laureato)"
 
-#, fuzzy
 msgid "Bachelor's degree (1st University cycle)"
-msgstr "Licenciado (1º ciclo universitário)"
+msgstr "Laureato (1º ciclo universitario)"
 
-#, fuzzy
 msgid "Master's degree (2nd University cycle)"
-msgstr "Mestre/Pós-Graduado (2º ciclo universitário)"
+msgstr "Master/Post-Laurea (2º ciclo universitario)"
 
-#, fuzzy
 msgid "Doctoral degree (3rd University cycle)"
-msgstr "Doutorado (3º ciclo universitário)"
+msgstr "Dottorato di ricerca (3º ciclo universitario)"
 
 msgid "Other"
 msgstr "Altro"
