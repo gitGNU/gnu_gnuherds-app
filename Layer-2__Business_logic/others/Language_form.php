@@ -159,7 +159,7 @@ class LanguageForm
 	private function setLanguage($language)
 	{
 		$_SESSION["Language"] = $language;
-		setcookie("Language", $language, time()+(86400*30), '/', "gnuherds.org", false, true);
+		setcookie("Language", $language, time()+(86400*30), '/', $_SERVER['SERVER_NAME'], false, true);
 	}
 }
 ?>
