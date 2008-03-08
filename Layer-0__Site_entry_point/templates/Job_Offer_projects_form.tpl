@@ -36,7 +36,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
-
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr> <td colspan="4" class="subsection">{t}Technical{/t}</td> </tr>

@@ -36,17 +36,17 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
+<tr> <td colspan="4">&nbsp;</td> </tr>
 
 {if $checks.result eq 'fail' }
 <tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match.{/t} {t}Please try again.{/t}</span></td> </tr>
+<tr> <td colspan="4">&nbsp;</td> </tr>
 {elseif $checks.result eq 'suggestions' }
 <tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields offer suggestions.{/t} {t}The form has not been saved yet.{/t} {t}Please, choose or edit again.{/t}</span></td> </tr>
+<tr> <td colspan="4">&nbsp;</td> </tr>
 {/if}
 
-<tr> <td colspan="4">&nbsp;</td> </tr>
-
 <tr> <td colspan="4">{t}Non-Free or Pending skills are not showed in the view.{/t}</td> </tr>
-
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr> <td colspan="4" class="subsection">{t}Technical{/t}</td> </tr>

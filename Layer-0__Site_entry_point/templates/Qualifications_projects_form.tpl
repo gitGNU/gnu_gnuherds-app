@@ -36,15 +36,14 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
+<tr> <td colspan="4">&nbsp;</td> </tr>
 
 {if $checks.result eq 'fail' }
 <tr> <td colspan="4" class="footnote"><span class="must">{t}Some fields does not match.{/t} {t}Please try again.{/t}</span></td> </tr>
+<tr> <td colspan="4">&nbsp;</td> </tr>
 {/if}
 
-<tr> <td colspan="4">&nbsp;</td> </tr>
-
 <tr> <td colspan="4" class="note" width="620">{t}Add URIs to the work you or your staff have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you or your staff expose your knowledge, rationales, feedback, etc.{/t}</td> </tr>
-
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr> <td colspan="4" class="subsection">{t}Technical{/t}</td> </tr>
