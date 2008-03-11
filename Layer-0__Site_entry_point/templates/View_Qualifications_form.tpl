@@ -194,26 +194,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </tr>
 
-{if $data.EntityType eq 'Person' }
-<tr>
-<td align="right"><strong>{t}Academic qualification{/t}</strong> : </td>
-<td colspan="3" class="greenDark">
-{if trim($data.AcademicQualification) neq '' or trim($data.AcademicQualificationDescription) neq ''}
-	{if trim($data.AcademicQualification) neq ''}
-		{t}{$data.AcademicQualification}{/t}{if trim($data.AcademicQualificationDescription) neq ''}, {/if}
-	{/if}
-
-	{if trim($data.AcademicQualificationDescription) neq ''}({$data.AcademicQualificationDescription}){/if}
-{else}
-	{t}none{/t}
-{/if}
-</td>
-{if $smarty.get.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Academic qualification{/t}">{t}edit{/t}</a></td>
-{/if}
-</tr>
-{/if}
-
 <tr valign="top">
 <td align="right"><strong>{t}Profiles{/t}</strong> : </td>
 
@@ -251,6 +231,24 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Profiles{/t}">{t}edit{/t}</a></td>
 {/if}
 
+</tr>
+
+<tr>
+<td align="right"><strong>{t}Academic qualification{/t}</strong> : </td>
+<td colspan="3" class="greenDark">
+{if trim($data.AcademicQualification) neq '' or trim($data.AcademicQualificationDescription) neq ''}
+	{if trim($data.AcademicQualification) neq ''}
+		{t}{$data.AcademicQualification}{/t}{if trim($data.AcademicQualificationDescription) neq ''}, {/if}
+	{/if}
+
+	{if trim($data.AcademicQualificationDescription) neq ''}({$data.AcademicQualificationDescription}){/if}
+{else}
+	{t}none{/t}
+{/if}
+</td>
+{if $smarty.get.EntityId eq $smarty.session.EntityId}
+<td class="edit"><a href="/resume?action=edit&amp;id={$smarty.get.EntityId}&amp;section=academic" title="{t}Edit section{/t}: {t}Academic qualification{/t}">{t}edit{/t}</a></td>
+{/if}
 </tr>
 
 <tr valign="top">

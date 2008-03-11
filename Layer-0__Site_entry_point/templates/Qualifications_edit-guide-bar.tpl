@@ -27,6 +27,13 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td align="center">
+{if $IE_workaround == false}<button type="submit" name="jump" value="academic" title="{t}Save and move to section{/t} {t}Academic qualification{/t}" {if $section eq 'academic'}disabled{/if}>{/if}
+<img src="/themes/red_Danijel/icons/{if $checkresults.academic eq 'pass'}green{else}red{/if}-{if $section eq 'academic'}light{else}dark{/if}.png" alt="{t}{if $checkresults.general eq 'pass'}green{else}red{/if}{/t}"><br>
+{if $IE_workaround == true}<input type="submit" name="jump" value="{t}Academic{/t}" title="{t}Save and move to section{/t} {t}Academic qualification{/t}" {if $section eq 'academic'}disabled{/if}>{/if}
+{if $IE_workaround == false}{t}Academic{/t}</button>{/if}
+</td>
+
+<td align="center">
 {if $IE_workaround == false}<button type="submit" name="jump" value="skills" title="{t}Save and move to section{/t} {t}Skills{/t}" {if $section eq 'skills'}disabled{/if}>{/if}
 <img src="/themes/red_Danijel/icons/{if $checkresults.skills eq 'pass'}green{else}red{/if}-{if $section eq 'skills'}light{else}dark{/if}.png" alt="{t}{if $checkresults.general eq 'pass'}green{else}red{/if}{/t}"><br>
 {if $IE_workaround == true}<input type="submit" name="jump" value="{t}Skills{/t}" title="{t}Save and move to section{/t} {t}Skills{/t}" {if $section eq 'skills'}disabled{/if}>{/if}

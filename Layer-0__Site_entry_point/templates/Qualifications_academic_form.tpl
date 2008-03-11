@@ -38,7 +38,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td colspan="4">&nbsp;</td> </tr>
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
-<tr> <td colspan="4" class="subsection">{t}Technical{/t}</td> </tr>
+<tr> <td colspan="4" class="subsection">{t}Academic qualification{/t}</td> </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
@@ -46,35 +46,17 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td colspan="4"><p>{t}Staff with the below characteristic:{/t}<p></td> </tr>
 {/if}
 
-{if $certificationsList[0]|@count >= 1}
-{if $data.AllowPersonApplications eq 'true' or $data.AllowCompanyApplications eq 'true' or $data.AllowOrganizationApplications eq 'true'}
-
 <tr valign="top">
-<td align="right"><label for="CertificationsList">{t}Certifications{/t}</label><br> </td>
+<td align="right"><label for="AcademicQualification">{t}Academic qualification{/t}</label></td>
 <td colspan="3">
-
-<table cellspacing="0" cellpadding="0">
-{foreach from=$certificationsList[0] item=certification key=i}
-	{if  ( $data.AllowPersonApplications eq 'true'       and $certificationsList[1][$i] eq 't' )
-	  or ( $data.AllowCompanyApplications eq 'true'      and $certificationsList[2][$i] eq 't' )
-	  or ( $data.AllowOrganizationApplications eq 'true' and $certificationsList[3][$i] eq 't' )
-	}
-		{if is_array($data.CertificationsList) and in_array($certification, $data.CertificationsList) }
-			<tr> <td> <input type="checkbox" name="CertificationsList[]" id="CertificationsList" value="{$certification}" class="notRequired" checked>{$certification}</td> </tr>
-		{else}
-			<tr> <td> <input type="checkbox" name="CertificationsList[]" id="CertificationsList" value="{$certification}" class="notRequired">{$certification}</td> </tr>
-		{/if}
-	{/if}
-{/foreach}
-</table>
-
+<select name="AcademicQualification" id="AcademicQualification" class="notRequired">
+{html_options values=$academicQualificationsId output=$academicQualificationsIdTranslated selected=$data.AcademicQualification}
+</select> <br>
+<label for="AcademicQualificationDescription">{t}Description{/t} </label><input type="text" name="AcademicQualificationDescription" id="AcademicQualificationDescription" size="35" maxlength="80" value="{$data.AcademicQualificationDescription}" class="notRequired">
 </td>
 </tr>
 
-{/if}
-{/if}
-
-<tr> <td colspan="4">&nbsp;</td> </tr> 
+<tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr> <td colspan="4" class="subsection">&nbsp;</td> </tr>
 
@@ -91,12 +73,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <input type="hidden" name="section2control" value="{$section}">
 
-<input type="hidden" name="jump2previous" value="languages">
-<input type="hidden" name="jump2next" value="projects">
+<input type="hidden" name="jump2previous" value="profiles_etc">
+<input type="hidden" name="jump2next" value="skills">
 
 &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="finish" value="{t}Finish{/t}" title="{t}Save and finish the edition{/t}" {if $checkresults.profiles_etc neq 'pass' or $checkresults.academic neq 'pass' or $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or $checkresults.location neq 'pass' or ( $smarty.session.LoginType eq 'Person' and $checkresults.contract neq 'pass' ) }disabled{/if}>
+<input type="submit" name="finish" value="{t}Finish{/t}" title="{t}Save and finish the edition{/t}" {if $checkresults.profiles_etc neq 'pass' or $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or $checkresults.location neq 'pass' or ( $smarty.session.LoginType eq 'Person' and $checkresults.contract neq 'pass' ) }disabled{/if}>
 </td>
 </tr>
 

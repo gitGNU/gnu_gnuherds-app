@@ -112,10 +112,8 @@ class Qualifications
 
 		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : '';
 		$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
-		$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
-		$AcademicQualificationDescription = trim($_POST['AcademicQualificationDescription']);
 
-		$sqlQuery = "PREPARE query(integer,text,text,text) AS  INSERT INTO Q1_Qualifications (Q1_E1_Id,Q1_ProfessionalExperienceSinceYear,Q1_LA_Id,Q1_AcademicQualificationDescription) VALUES ($1,$2,$3,$4);  EXECUTE query('$EntityId','".pg_escape_string($ProfessionalExperienceSinceYear)."','".pg_escape_string($AcademicQualification)."','".pg_escape_string($AcademicQualificationDescription)."');";
+		$sqlQuery = "PREPARE query(integer,text) AS  INSERT INTO Q1_Qualifications (Q1_E1_Id,Q1_ProfessionalExperienceSinceYear) VALUES ($1,$2);  EXECUTE query('$EntityId','".pg_escape_string($ProfessionalExperienceSinceYear)."');";
 		$this->postgresql->execute($sqlQuery,1);
 
 
@@ -185,10 +183,8 @@ class Qualifications
 				// Q1_Qualifications table
 
 				$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
-				$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
-				$AcademicQualificationDescription = trim($_POST['AcademicQualificationDescription']);
 
-				$sqlQuery = "PREPARE query(text,text,text,bool,integer) AS  UPDATE Q1_Qualifications SET Q1_ProfessionalExperienceSinceYear=$1,Q1_LA_Id=$2,Q1_AcademicQualificationDescription=$3,Q1_CompletedEdition=$4 WHERE Q1_E1_Id=$5;  EXECUTE query('".pg_escape_string($ProfessionalExperienceSinceYear)."','".pg_escape_string($AcademicQualification)."','".pg_escape_string($AcademicQualificationDescription)."','$completedEdition','{$_SESSION['EntityId']}');";
+				$sqlQuery = "PREPARE query(integer,bool,integer) AS  UPDATE Q1_Qualifications SET Q1_ProfessionalExperienceSinceYear=$1,Q1_CompletedEdition=$2 WHERE Q1_E1_Id=$3;  EXECUTE query('".pg_escape_string($ProfessionalExperienceSinceYear)."','$completedEdition','{$_SESSION['EntityId']}');";
 				$this->postgresql->execute($sqlQuery,1);
 
 				// Profiles
@@ -200,6 +196,14 @@ class Qualifications
 
 				$fieldProfiles = new FieldProfiles();
 				$fieldProfiles->setFieldProfilesForEntity();
+			break;
+
+			case 'academic':
+				$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
+				$AcademicQualificationDescription = trim($_POST['AcademicQualificationDescription']);
+
+				$sqlQuery = "PREPARE query(text,text,bool,integer) AS  UPDATE Q1_Qualifications SET Q1_LA_Id=$1,Q1_AcademicQualificationDescription=$2,Q1_CompletedEdition=$3 WHERE Q1_E1_Id=$4;  EXECUTE query('".pg_escape_string($AcademicQualification)."','".pg_escape_string($AcademicQualificationDescription)."','$completedEdition','{$_SESSION['EntityId']}');";
+				$this->postgresql->execute($sqlQuery,1);
 			break;
 
 			case 'certifications':

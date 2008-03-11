@@ -78,6 +78,7 @@ class QualificationsForm extends SkillsForm
 			if ( $_SESSION['HasQualifications'] != '1' ) // creating qualifications
 			{
 				// Reset the visited-marks set by a previous qualifications edition
+				$_SESSION['VisitedQualifications_academic'] = false;
 				$_SESSION['VisitedQualifications_skills'] = false;
 				$_SESSION['VisitedQualifications_certifications'] = false;
 				$_SESSION['VisitedQualifications_projects'] = false;
@@ -150,10 +151,6 @@ class QualificationsForm extends SkillsForm
 		switch($section)
 		{
 			case 'profiles_etc':
-				$academicQualifications = $this->manager->getAcademicQualificationsList();
-				$smarty->assign('academicQualificationsId', array_merge( array(""), array_keys($academicQualifications) ) );
-				$smarty->assign('academicQualificationsIdTranslated', array_merge( array(""), array_values($academicQualifications) ) );
-
 				$productProfiles = $this->manager->getProductProfilesList();
 				$smarty->assign('productProfiles', array_values($productProfiles) );
 
@@ -164,6 +161,12 @@ class QualificationsForm extends SkillsForm
 				$fieldProfiles = $this->manager->getFieldProfilesList();
 				$smarty->assign('fieldProfilesId', array_keys($fieldProfiles) );
 				$smarty->assign('fieldProfilesName', array_values($fieldProfiles) );
+			break;
+
+			case 'academic':
+				$academicQualifications = $this->manager->getAcademicQualificationsList();
+				$smarty->assign('academicQualificationsId', array_merge( array(""), array_keys($academicQualifications) ) );
+				$smarty->assign('academicQualificationsIdTranslated', array_merge( array(""), array_values($academicQualifications) ) );
 			break;
 
 			case 'skills':
@@ -279,12 +282,15 @@ class QualificationsForm extends SkillsForm
 		{
 			case 'profiles_etc':
 				$this->data['ProfessionalExperienceSinceYear'] = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
-				$this->data['AcademicQualification'] = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
-				$this->data['AcademicQualificationDescription'] = isset($_POST['AcademicQualificationDescription']) ? trim($_POST['AcademicQualificationDescription']) : '';
 
 				$this->data['ProductProfileList'] = isset($_POST['ProductProfileList']) ?  $_POST['ProductProfileList'] : array();
 				$this->data['ProfessionalProfileList'] = isset($_POST['ProfessionalProfileList']) ? $_POST['ProfessionalProfileList'] : array();
 				$this->data['FieldProfileList'] = isset($_POST['FieldProfileList']) ? $_POST['FieldProfileList'] : array();
+			break;
+
+			case 'academic':
+				$this->data['AcademicQualification'] = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
+				$this->data['AcademicQualificationDescription'] = isset($_POST['AcademicQualificationDescription']) ? trim($_POST['AcademicQualificationDescription']) : '';
 			break;
 
 			case 'skills':
@@ -435,6 +441,7 @@ class QualificationsForm extends SkillsForm
 		// Set the marks of non-required sections. The user has already viewed them in the previous edition when she set the EntityId.
 		if ( $_GET['EntityId'] != '')
 		{
+			$_SESSION['VisitedQualifications_academic'] = true;
 			$_SESSION['VisitedQualifications_skills'] = true;
 			$_SESSION['VisitedQualifications_certifications'] = true;
 			$_SESSION['VisitedQualifications_projects'] = true;
@@ -462,6 +469,14 @@ class QualificationsForm extends SkillsForm
 		{
 			$this->checks['ProfessionalProfileList'] = ''; // Reset possible value set by the checkQualificationsForm() of loadQualificationsForm().
 		}
+
+
+		// 'academic' section
+		if ( $this->section2control == 'academic' )
+			$_SESSION['VisitedQualifications_academic'] = true; // Mark we have visited this section
+
+		if ( $_GET['EntityId'] != '' or ($_GET['EntityId'] == '' and $_SESSION['EntityId'] != '' and $_SESSION['VisitedQualifications_academic'] == true) )
+			$this->checkresults['academic'] = "pass";
 
 
 		// 'skills' section
@@ -739,7 +754,7 @@ class QualificationsForm extends SkillsForm
 		}
 
 
-		if ( $this->checkresults['profiles_etc'] == "pass" and $this->checkresults['skills'] == "pass" and $this->checkresults['languages'] == "pass" and
+		if ( $this->checkresults['profiles_etc'] == "pass" and $this->checkresults['academic'] == "pass" and $this->checkresults['skills'] == "pass" and $this->checkresults['languages'] == "pass" and
 		     $this->checkresults['projects'] == "pass" and $this->checkresults['location'] == "pass" and
 		     ( $_SESSION['LoginType'] != 'Person' or ( $_SESSION['LoginType'] == 'Person' and $this->checkresults['contract'] == "pass" ) ) )
 			$this->checks['completed_edition'] = "true";
@@ -755,6 +770,11 @@ class QualificationsForm extends SkillsForm
 		switch($this->section2control)
 		{
 			case 'profiles_etc':
+				// There are no suggestions for this section
+				return $can_save;
+			break;
+
+			case 'academic':
 				// There are no suggestions for this section
 				return $can_save;
 			break;
@@ -1022,6 +1042,7 @@ class QualificationsForm extends SkillsForm
 		switch($_POST['jump'])
 		{
 			case gettext("Profiles"): $_POST['jump'] = 'profiles_etc'; break;
+			case gettext("Academic"): $_POST['jump'] = 'academic'; break;
 			case gettext("Skills"): $_POST['jump'] = 'skills'; break;
 			case gettext("Languages"): $_POST['jump'] = 'languages'; break;
 			case gettext("Certifications"): $_POST['jump'] = 'certifications'; break;

@@ -73,18 +73,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 {/if}
 
-{if $smarty.session.LoginType eq 'Person' }
-<tr valign="top">
-<td align="right"><label for="AcademicQualification">{t}Academic qualification{/t}</label></td>
-<td colspan="3">
-<select name="AcademicQualification" id="AcademicQualification" class="notRequired">
-{html_options values=$academicQualificationsId output=$academicQualificationsIdTranslated selected=$data.AcademicQualification}
-</select> <br>
-<label for="AcademicQualificationDescription">{t}Description{/t} </label><input type="text" name="AcademicQualificationDescription" id="AcademicQualificationDescription" size="35" maxlength="80" value="{$data.AcademicQualificationDescription}" class="notRequired">
-</td>
-</tr>
-{/if}
-
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr valign="top">
@@ -125,11 +113,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <input type="hidden" name="section2control" value="{$section}">
 
-<input type="hidden" name="jump2next" value="skills">
+<input type="hidden" name="jump2next" value="academic">
 
 &nbsp; &nbsp; &nbsp;
 
-<input type="submit" name="finish" value="{t}Finish{/t}" title="{t}Save and finish the edition{/t}" {if $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or $checkresults.location neq 'pass' or ( $smarty.session.LoginType eq 'Person' and $checkresults.contract neq 'pass' ) }disabled{/if}>
+<input type="submit" name="finish" value="{t}Finish{/t}" title="{t}Save and finish the edition{/t}" {if $checkresults.academic neq 'pass' or $checkresults.skills neq 'pass' or $checkresults.languages neq 'pass' or $checkresults.projects neq 'pass' or $checkresults.location neq 'pass' or ( $smarty.session.LoginType eq 'Person' and $checkresults.contract neq 'pass' ) }disabled{/if}>
 </td>
 </tr>
 
