@@ -197,7 +197,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr valign="top">
 <td align="right"><strong>{t}Profiles{/t}</strong> : </td>
 
-<td class="greenLight"><span class="u">{'Product profiles'|gettext|strip:'&nbsp;'}</span><br>
+<td class="greenDark"><span class="u">{'Product profiles'|gettext|strip:'&nbsp;'}</span><br>
 {if not is_array($data.ProductProfileList) or count($data.ProductProfileList) == 0}
 	{'not specified'|gettext|strip:'&nbsp;'}
 {else}
@@ -207,7 +207,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </td>
 
-<td class="greenLight"><span class="u">{'Professional profiles'|gettext|strip:'&nbsp;'}</span><br>
+<td class="greenDark"><span class="u">{'Professional profiles'|gettext|strip:'&nbsp;'}</span><br>
 {if not is_array($data.ProfessionalProfileList) or count($data.ProfessionalProfileList) == 0}
 	{'not specified'|gettext|strip:'&nbsp;'}
 {else}
@@ -217,7 +217,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </td>
 
-<td class="greenLight"><span class="u">{'Field profiles'|gettext|strip:'&nbsp;'}</span><br>
+<td class="greenDark"><span class="u">{'Field profiles'|gettext|strip:'&nbsp;'}</span><br>
 {if not is_array($data.FieldProfileList) or count($data.FieldProfileList) == 0}
 	{'not specified'|gettext|strip:'&nbsp;'}
 {else}
@@ -235,7 +235,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td align="right"><strong>{t}Academic qualification{/t}</strong> : </td>
-<td colspan="3" class="greenDark">
+<td colspan="3" class="greenLight">
 {if trim($data.AcademicQualification) neq '' or trim($data.AcademicQualificationDescription) neq ''}
 	{if trim($data.AcademicQualification) neq ''}
 		{t}{$data.AcademicQualification}{/t}{if trim($data.AcademicQualificationDescription) neq ''}, {/if}
