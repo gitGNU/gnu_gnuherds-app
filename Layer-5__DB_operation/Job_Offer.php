@@ -403,7 +403,9 @@ class JobOffer
 				$skills = new Skills();
 				$result = $skills->setSkillsForJobOffer($J1_Id);
 
-				// Saving this section does not need to update the J1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+				// Update the J1_CompletedEdition flag
+				$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE J1_JobOffers SET J1_CompletedEdition=$1 WHERE J1_Id=$2;  EXECUTE query('$completedEdition','$J1_Id');";
+				$this->postgresql->execute($sqlQuery,1);
 			break;
 
 			case 'languages':
@@ -411,6 +413,7 @@ class JobOffer
 				$languages = new Languages();
 				$languages->setLanguagesForJobOffer($J1_Id);
 
+				// Update the J1_CompletedEdition flag
 				$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE J1_JobOffers SET J1_CompletedEdition=$1 WHERE J1_Id=$2;  EXECUTE query('$completedEdition','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
 			break;
@@ -420,16 +423,16 @@ class JobOffer
 				$certifications = new Certifications();
 				$certifications->setCertificationsForJobOffer($J1_Id);
 
-				// Saving this section does not need to update the J1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+				// Update the J1_CompletedEdition flag
+				$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE J1_JobOffers SET J1_CompletedEdition=$1 WHERE J1_Id=$2;  EXECUTE query('$completedEdition','$J1_Id');";
+				$this->postgresql->execute($sqlQuery,1);
 			break;
 
 			case 'projects':
 				$FreeSoftwareExperiences = isset($_POST['FreeSoftwareExperiences']) ? trim($_POST['FreeSoftwareExperiences']) : '';
 
-				$sqlQuery = "PREPARE query(text,integer) AS  UPDATE J1_JobOffers SET J1_FreeSoftwareProjects=$1 WHERE J1_Id=$2;  EXECUTE query('".pg_escape_string($FreeSoftwareExperiences)."','$J1_Id');";
+				$sqlQuery = "PREPARE query(text,bool,integer) AS  UPDATE J1_JobOffers SET J1_FreeSoftwareProjects=$1,J1_CompletedEdition=$2 WHERE J1_Id=$3;  EXECUTE query('".pg_escape_string($FreeSoftwareExperiences)."','$completedEdition','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
-
-				// Saving this section does not need to update the J1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
 			break;
 
 			case 'location':
@@ -441,10 +444,8 @@ class JobOffer
 					$AvailableToTravel = 'true';
 				else	$AvailableToTravel = 'false';
 
-				$sqlQuery = "PREPARE query(text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_City=$1,J1_StateProvince=$2,J1_LO_Country=$3,J1_AvailableToTravel=$4 WHERE J1_Id=$5;  EXECUTE query('".pg_escape_string($City)."','".pg_escape_string($StateProvince)."','".pg_escape_string($CountryCode)."','$AvailableToTravel','$J1_Id');";
+				$sqlQuery = "PREPARE query(text,text,text,bool,bool,integer) AS  UPDATE J1_JobOffers SET J1_City=$1,J1_StateProvince=$2,J1_LO_Country=$3,J1_AvailableToTravel=$4,J1_CompletedEdition=$5 WHERE J1_Id=$6;  EXECUTE query('".pg_escape_string($City)."','".pg_escape_string($StateProvince)."','".pg_escape_string($CountryCode)."','$AvailableToTravel','$completedEdition','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
-
-				// Saving this section does not need to update the J1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
 			break;
 
 			case 'contract':

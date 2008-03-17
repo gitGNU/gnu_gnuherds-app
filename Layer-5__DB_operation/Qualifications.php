@@ -215,7 +215,9 @@ class Qualifications
 				$academic = new Academic();
 				$academic->setAcademicForEntity();
 
-				// Saving this section does not need to update the Q1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+				// Update the Q1_CompletedEdition flag
+				$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE Q1_Qualifications SET Q1_CompletedEdition=$1 WHERE Q1_E1_Id=$2;  EXECUTE query('$completedEdition','{$_SESSION['EntityId']}');";
+				$this->postgresql->execute($sqlQuery,1);
 			break;
 
 			case 'certifications':
@@ -223,7 +225,9 @@ class Qualifications
 				$certifications = new Certifications();
 				$certifications->setRequestedCertificationsForEntity();
 
-				// Saving this section does not need to update the Q1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+				// Update the Q1_CompletedEdition flag
+				$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE Q1_Qualifications SET Q1_CompletedEdition=$1 WHERE Q1_E1_Id=$2;  EXECUTE query('$completedEdition','{$_SESSION['EntityId']}');";
+				$this->postgresql->execute($sqlQuery,1);
 			break;
 
 			case 'projects':
@@ -231,7 +235,9 @@ class Qualifications
 				$freeSoftwareExperiences = new FreeSoftwareExperiences();
 				$freeSoftwareExperiences->setFreeSoftwareExperiencesForEntity();
 
-				// Saving this section does not need to update the Q1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+				// Update the Q1_CompletedEdition flag
+				$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE Q1_Qualifications SET Q1_CompletedEdition=$1 WHERE Q1_E1_Id=$2;  EXECUTE query('$completedEdition','{$_SESSION['EntityId']}');";
+				$this->postgresql->execute($sqlQuery,1);
 			break;
 
 			case 'languages':
@@ -239,6 +245,7 @@ class Qualifications
 				$languages = new Languages();
 				$languages->setLanguagesForEntity();
 
+				// Update the Q1_CompletedEdition flag
 				$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE Q1_Qualifications SET Q1_CompletedEdition=$1 WHERE Q1_E1_Id=$2;  EXECUTE query('$completedEdition','{$_SESSION['EntityId']}');";
 				$this->postgresql->execute($sqlQuery,1);
 			break;
@@ -248,10 +255,13 @@ class Qualifications
 				$skills = new Skills();
 				$skills->setSkillsForEntity();
 
-				// Saving this section does not need to update the Q1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
+				// Update the Q1_CompletedEdition flag
+				$sqlQuery = "PREPARE query(bool,integer) AS  UPDATE Q1_Qualifications SET Q1_CompletedEdition=$1 WHERE Q1_E1_Id=$2;  EXECUTE query('$completedEdition','{$_SESSION['EntityId']}');";
+				$this->postgresql->execute($sqlQuery,1);
 			break;
 
 			case 'location':
+				// Q1_Qualifications table
 				if (isset($_POST['AvailableToTravel']) and $_POST['AvailableToTravel'] == 'on')
 					$AvailableToTravel = 'true';
 				else	$AvailableToTravel = 'false';
@@ -263,13 +273,12 @@ class Qualifications
 				$AvailableToTravel = trim($AvailableToTravel);
 				$AvailableToChangeResidence = trim($AvailableToChangeResidence);
 
-				$sqlQuery = "PREPARE query(bool,bool,integer) AS  UPDATE Q1_Qualifications SET QP_AvailableToTravel=$1,QP_AvailableToChangeResidence=$2 WHERE Q1_E1_Id=$3;  EXECUTE query('$AvailableToTravel','$AvailableToChangeResidence','{$_SESSION['EntityId']}');";
+				$sqlQuery = "PREPARE query(bool,bool,bool,integer) AS  UPDATE Q1_Qualifications SET QP_AvailableToTravel=$1,QP_AvailableToChangeResidence=$2,Q1_CompletedEdition=$3 WHERE Q1_E1_Id=$4;  EXECUTE query('$AvailableToTravel','$AvailableToChangeResidence','$completedEdition','{$_SESSION['EntityId']}');";
 				$this->postgresql->execute($sqlQuery,1);
-
-				// Saving this section does not need to update the Q1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
 			break;
 
 			case 'contract':
+				// Q1_Qualifications table
 				$DesiredContractType = isset($_POST['DesiredContractType']) ? trim($_POST['DesiredContractType']) : '';
 				$DesiredWageRank = isset($_POST['DesiredWageRank']) ? trim($_POST['DesiredWageRank']) : '';
 				$WageRankCurrency = isset($_POST['WageRankCurrency']) ? trim($_POST['WageRankCurrency']) : '';
