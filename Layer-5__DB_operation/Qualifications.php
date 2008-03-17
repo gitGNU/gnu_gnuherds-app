@@ -165,6 +165,10 @@ class Qualifications
 		$fieldProfiles = new FieldProfiles();
 		$fieldProfiles->delFieldProfilesForEntity();
 
+		// Academic table
+		$academic = new Academic();
+		$academic->delAcademicForEntity();
+
 		// Contributions/FreeSoftwareExperiences
 		$freeSoftwareExperiences = new FreeSoftwareExperiences();
 		$freeSoftwareExperiences->delFreeSoftwareExperiencesForEntity();
