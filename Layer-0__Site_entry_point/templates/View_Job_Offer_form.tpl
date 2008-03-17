@@ -147,12 +147,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	</tr>
 {/if}
 
-{if trim($data.AcademicQualification) neq ''}
+{if trim($data.AcademicLevel) neq ''}
 	<tr>
-	<td align="right"><strong>{'Academic qualification'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
-	<td colspan="3" class="greenLight">{t}{$data.AcademicQualification}{/t}</td>
+	<td align="right"><strong>{'Academic level'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
+	<td colspan="3" class="greenLight">{t}{$data.AcademicLevel}{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Academic qualification{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Academic level{/t}">{t}edit{/t}</a></td>
 {/if}
 	</tr>
 {/if}

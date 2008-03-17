@@ -165,9 +165,9 @@ class JobOfferForm extends SkillsForm
 			break;
 
 			case 'profiles_etc':
-				$academicQualifications = $this->manager->getAcademicQualificationsList();
-				$smarty->assign('academicQualificationsId', array_merge( array(""), array_keys($academicQualifications) ) );
-				$smarty->assign('academicQualificationsIdTranslated', array_merge( array(""), array_values($academicQualifications) ) );
+				$academicLevels = $this->manager->getAcademicLevelsList();
+				$smarty->assign('academicLevelsId', array_merge( array(""), array_keys($academicLevels) ) );
+				$smarty->assign('academicLevelsIdTranslated', array_merge( array(""), array_values($academicLevels) ) );
 
 				$productProfiles = $this->manager->getProductProfilesList();
 				$smarty->assign('productProfiles', array_values($productProfiles) );
@@ -335,7 +335,7 @@ class JobOfferForm extends SkillsForm
 
 			case 'profiles_etc':
 				$this->data['ProfessionalExperienceSinceYear'] = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
-				$this->data['AcademicQualification'] = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
+				$this->data['AcademicLevel'] = isset($_POST['AcademicLevel']) ? trim($_POST['AcademicLevel']) : '';
 
 				$this->data['ProductProfileList'] = isset($_POST['ProductProfileList']) ?  $_POST['ProductProfileList'] : array();
 				$this->data['ProfessionalProfileList'] = isset($_POST['ProfessionalProfileList']) ? $_POST['ProfessionalProfileList'] : array();
@@ -1032,7 +1032,7 @@ class JobOfferForm extends SkillsForm
 		$this->data['Deadline'] = $result[28][0];
 
 		$this->data['ProfessionalExperienceSinceYear'] = $result[14][0];
-		$this->data['AcademicQualification'] = $result[15][0];
+		$this->data['AcademicLevel'] = $result[15][0];
 
 		// JobOffer Profiles tables
 		$this->data['ProductProfileList'] = $result[30];

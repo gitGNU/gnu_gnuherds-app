@@ -164,9 +164,13 @@ class QualificationsForm extends SkillsForm
 			break;
 
 			case 'academic':
-				$academicQualifications = $this->manager->getAcademicQualificationsList();
-				$smarty->assign('academicQualificationsId', array_merge( array(""), array_keys($academicQualifications) ) );
-				$smarty->assign('academicQualificationsIdTranslated', array_merge( array(""), array_values($academicQualifications) ) );
+				$academicLevels = $this->manager->getAcademicLevelsList();
+
+				// Dirty hack: Delete the element which is only used in JobOffers
+				unset( $academicLevels["Enrolled at a University (Undergraduate)"] );
+
+				$smarty->assign('academicLevelsId', array_merge( array(""), array_keys($academicLevels) ) );
+				$smarty->assign('academicLevelsIdTranslated', array_merge( array(""), array_values($academicLevels) ) );
 			break;
 
 			case 'skills':
@@ -289,8 +293,51 @@ class QualificationsForm extends SkillsForm
 			break;
 
 			case 'academic':
-				$this->data['AcademicQualification'] = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
-				$this->data['AcademicQualificationDescription'] = isset($_POST['AcademicQualificationDescription']) ? trim($_POST['AcademicQualificationDescription']) : '';
+				// Clean empty rows and the one marked to be deleted
+				$count = count($_POST['AcademicLevelList']);
+				for( $i=0,$j=0; $i < $count; $i++)
+				{
+					if ( ( trim($_POST['DegreeList'][$i]) == '' and trim($_POST['AcademicLevelList'][$i]) == '' and
+					       trim($_POST['DegreeGrantedList'][$i]) == '' and trim($_POST['StartDateList'][$i]) == '' and trim($_POST['FinishDateList'][$i]) == '' and
+					       trim($_POST['InstitutionList'][$i]) == '' and trim($_POST['InstitutionURIList'][$i]) == '' and trim($_POST['ShortCommentList'][$i]) == '') or
+					     ( isset($_POST['DeleteAcademicList']) and in_array("$i",$_POST['DeleteAcademicList']) ) )
+					{
+					}
+					else
+					{
+						$_POST['DegreeList'][$j] = $_POST['DegreeList'][$i];
+						$_POST['AcademicLevelList'][$j] = $_POST['AcademicLevelList'][$i];
+						$_POST['DegreeGrantedList'][$j] = $_POST['DegreeGrantedList'][$i];
+						$_POST['StartDateList'][$j] = $_POST['StartDateList'][$i];
+						$_POST['FinishDateList'][$j] = $_POST['FinishDateList'][$i];
+						$_POST['InstitutionList'][$j] = $_POST['InstitutionList'][$i];
+						$_POST['InstitutionURIList'][$j] = $_POST['InstitutionURIList'][$i];
+						$_POST['ShortCommentList'][$j] = $_POST['ShortCommentList'][$i];
+						$j++;
+					}
+				}
+
+				for( $i=$j; $i < $count; $i++)
+				{
+					unset( $_POST['DegreeList'][$i] );
+					unset( $_POST['AcademicLevelList'][$i] );
+					unset( $_POST['DegreeGrantedList'][$i] );
+					unset( $_POST['StartDateList'][$i] );
+					unset( $_POST['FinishDateList'][$i] );
+					unset( $_POST['InstitutionList'][$i] );
+					unset( $_POST['InstitutionURIList'][$i] );
+					unset( $_POST['ShortCommentList'][$i] );
+				}
+
+				// Now, copy to the $data variable
+				$this->data['DegreeList'] = isset($_POST['DegreeList']) ? $_POST['DegreeList'] : array();
+				$this->data['AcademicLevelList'] = isset($_POST['AcademicLevelList']) ? $_POST['AcademicLevelList'] : array();
+				$this->data['DegreeGrantedList'] = isset($_POST['DegreeGrantedList']) ? $_POST['DegreeGrantedList'] : array();
+				$this->data['StartDateList'] = isset($_POST['StartDateList']) ? $_POST['StartDateList'] : array();
+				$this->data['FinishDateList'] = isset($_POST['FinishDateList']) ? $_POST['FinishDateList'] : array();
+				$this->data['InstitutionList'] = isset($_POST['InstitutionList']) ? $_POST['InstitutionList'] : array();
+				$this->data['InstitutionURIList'] = isset($_POST['InstitutionURIList']) ? $_POST['InstitutionURIList'] : array();
+				$this->data['ShortCommentList'] = isset($_POST['ShortCommentList']) ? $_POST['ShortCommentList'] : array();
 			break;
 
 			case 'skills':
@@ -477,6 +524,62 @@ class QualificationsForm extends SkillsForm
 
 		if ( $_GET['EntityId'] != '' or ($_GET['EntityId'] == '' and $_SESSION['EntityId'] != '' and $_SESSION['VisitedQualifications_academic'] == true) )
 			$this->checkresults['academic'] = "pass";
+
+		// Check all dates
+		for( $i=0; $i < count($_POST['DegreeList']); $i++)
+		{
+			// StartDate
+			if ( $this->data['StartDateList'][$i]=='' )
+			{
+			}
+			else
+			{
+				// Date format
+				if ( ( !preg_match('/^(\d\d)\-(\d\d)\-(\d\d\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	   	  		( !preg_match('/^(\d\d\d\d)\-(\d\d)\-(\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+	  	   		( !preg_match('/^(\d\d)\/(\d\d)\/(\d\d\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	 	    		( !preg_match('/^(\d\d\d\d)\/(\d\d)\/(\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+				{
+					$this->checkresults['academic'] = "fail";
+
+					if ( $this->section2control == 'academic' )
+					{
+						$this->checks['result'] = "fail";
+						$this->checks['StartDateList'][$i] = gettext('Incorrect date format');
+					}
+				}
+				else
+				{
+					$this->checks['StartDateList'][$i] = ''; // Reset possible value set by the checkQualificationsForm() of loadQualificationsForm().
+				}
+			}
+
+			// FinishDate
+			if ( $this->data['FinishDateList'][$i]=='' )
+			{
+			}
+			else
+			{
+				// Date format
+				if ( ( !preg_match('/^(\d\d)\-(\d\d)\-(\d\d\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	   	  		( !preg_match('/^(\d\d\d\d)\-(\d\d)\-(\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+	  	   		( !preg_match('/^(\d\d)\/(\d\d)\/(\d\d\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	 	    		( !preg_match('/^(\d\d\d\d)\/(\d\d)\/(\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+				{
+					$this->checkresults['academic'] = "fail";
+
+					if ( $this->section2control == 'academic' )
+					{
+						$this->checks['result'] = "fail";
+						$this->checks['FinishDateList'][$i] = gettext('Incorrect date format');
+					}
+				}
+				else
+				{
+					$this->checks['FinishDateList'][$i] = ''; // Reset possible value set by the checkQualificationsForm() of loadQualificationsForm().
+				}
+			}
+		}
 
 
 		// 'skills' section
@@ -941,7 +1044,6 @@ class QualificationsForm extends SkillsForm
 		// Qualifications table
 
 		$this->data['ProfessionalExperienceSinceYear'] = $result[0][0];
-		$this->data['AcademicQualification'] = $result[1][0];
 
 		// Only for Person entity
 		$this->data['DesiredContractType'] = $result[2][0];
@@ -962,6 +1064,16 @@ class QualificationsForm extends SkillsForm
 
 		$this->data['AcademicQualificationDescription'] = $result[9][0];
 
+
+		// Qualification Academic table
+		$this->data['DegreeList'] = $result[40];
+		$this->data['AcademicLevelList'] = $result[41];
+		$this->data['DegreeGrantedList'] = $result[42];
+		$this->data['StartDateList'] = $result[43];
+		$this->data['FinishDateList'] = $result[44];
+		$this->data['InstitutionList'] = $result[45];
+		$this->data['InstitutionURIList'] = $result[46];
+		$this->data['ShortCommentList'] = $result[47];
 
 		// Qualification Profiles tables
 		$this->data['ProductProfileList'] = $result[20];

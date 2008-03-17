@@ -33,6 +33,7 @@ DROP TABLE R23_Qualification2ProductProfiles;
 DROP TABLE R24_Qualification2Skills;
 DROP TABLE R25_Qualification2Languages;
 DROP TABLE R26_Qualification2Certifications;
+DROP TABLE R27_Qualification2Academic;
 
 
 -- Qualifications
@@ -56,7 +57,7 @@ DROP TABLE E1_Entities;
 DROP TABLE LO_Countries;
 DROP TABLE LN_Nationalities; -- Nationalities internationally recognized. That is to say, ISO nationalities.
 DROP TABLE LU_Currencies;
-DROP TABLE LA_AcademicQualifications;
+DROP TABLE LA_AcademicLevels;
 DROP TABLE LC_Certifications; -- We do not translate de certifications. It is better so, in order to keep a unique 'image'. It is as the usual mark image.
 DROP TABLE LK_ContractType;
 DROP TABLE LB_ByPeriod;
@@ -126,7 +127,7 @@ CREATE TABLE LU_Currencies (
 );
 
 
-CREATE TABLE LA_AcademicQualifications (
+CREATE TABLE LA_AcademicLevels (
 	LA_Id		varchar(40) PRIMARY KEY,
 	LA_Level	char(2) UNIQUE NOT NULL CHECK (LA_Level <> '')
 );
@@ -359,9 +360,7 @@ CREATE TABLE Q1_Qualifications (
 
         Q1_ProfessionalExperienceSinceYear varchar(4), -- NOT NULL CHECK (Q1_ProfessionalExperienceSinceYear <> ''),
 
-        -- Academic Qualification
-        Q1_LA_Id                           varchar(40), -- REFERENCES LA_AcademicQualifications(LA_Id),
-        Q1_AcademicQualificationDescription varchar(80), -- NOT NULL CHECK (Q1_AcademicQualificationDescription <> ''),
+        -- Academic (R27_Qualification2Academic)
 
         -- Profiles of: Field, Professional, and Product: (R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles)
 
@@ -430,6 +429,17 @@ CREATE TABLE R25_Qualification2Languages (
 	R25_LW_Id       varchar(20) REFERENCES LW_WrittenLevel(LW_Id) NOT NULL
 );
 
+CREATE TABLE R27_Qualification2Academic (
+	R27_Q1_E1_Id    integer REFERENCES Q1_Qualifications(Q1_E1_Id) NOT NULL,
+	R27_Degree      varchar(80),
+	R27_LA_Id       varchar(40), -- REFERENCES LA_AcademicLevels(LA_Id), -- If the user does not fill this field the automatic check will not work. Anyway we do not force the user to fill it.
+        R27_DegreeGranted varchar(3), -- bool DEFAULT 'false',
+        R27_StartDate   date,
+        R27_FinishDate  date,
+	R27_Institution varchar(80), -- University or education institution
+	R27_InstitutionURI varchar(255), -- URI of such University or education institution
+        R27_ShortComment varchar(80) -- Short comment or description
+);
 
 CREATE TABLE E2_EntityFreeSoftwareExperiences ( -- Contributions to Free Software projects
         E2_Id           SERIAL PRIMARY KEY, -- Identifier
@@ -492,7 +502,7 @@ CREATE TABLE J1_JobOffers (
         -- Requirements: The JobOffer demand:
 
         J1_ProfessionalExperienceSinceYear varchar(4),
-	J1_LA_Id                           varchar(40), --  REFERENCES LA_AcademicQualifications(LA_Id) NOT NULL, -- The Job Offer requires a minimum level of academic qualification.
+	J1_LA_Id                           varchar(40), --  REFERENCES LA_AcademicLevels(LA_Id) NOT NULL, -- The Job Offer requires a minimum level of academic qualification.
         -- Certifications                                 (R16_JobOffer2Certifications)
         -- Profiles of: Field, Professional, and Product: (R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles)
         -- Skills                                         (R14_JobOffer2Skills)
@@ -564,11 +574,11 @@ CREATE TABLE R0_Qualifications2JobOffersJoins (
 
 
 GRANT SELECT, INSERT, UPDATE, DELETE
-ON TABLE E1_Entities, E1_Entities_e1_id_seq, E2_EntityFreeSoftwareExperiences, E2_EntityFreeSoftwareExperiences_e2_id_seq, E3_Nationalities, E4_EntityJobLicenseAt, E5_EntityRequireCertifications, Q1_Qualifications, QS_QualificationSearches, JS_JobOfferSearches, J1_JobOffers, J1_JobOffers_j1_id_seq, R0_Qualifications2JobOffersJoins, R16_JobOffer2Certifications, R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles, R14_JobOffer2Skills, R15_JobOffer2Languages, R17_JobOffer2Nationalities, R26_Qualification2Certifications, R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles, R24_Qualification2Skills, R25_Qualification2Languages
+ON TABLE E1_Entities, E1_Entities_e1_id_seq, E2_EntityFreeSoftwareExperiences, E2_EntityFreeSoftwareExperiences_e2_id_seq, E3_Nationalities, E4_EntityJobLicenseAt, E5_EntityRequireCertifications, Q1_Qualifications, QS_QualificationSearches, JS_JobOfferSearches, J1_JobOffers, J1_JobOffers_j1_id_seq, R0_Qualifications2JobOffersJoins, R16_JobOffer2Certifications, R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles, R14_JobOffer2Skills, R15_JobOffer2Languages, R17_JobOffer2Nationalities, R26_Qualification2Certifications, R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles, R24_Qualification2Skills, R25_Qualification2Languages, R27_Qualification2Academic
 TO "www-data" ;
 
 GRANT SELECT  -- Note these tables are not modified by the webapp.
-ON TABLE LO_Countries, LU_Currencies, LL_Languages, LA_AcademicQualifications, LC_Certifications, LK_ContractType, LB_ByPeriod, LM_TimeUnits, LE_Employability, LS_SpokenLevel, LW_WrittenLevel, LF_FieldProfiles, LP_ProfessionalProfiles, LX_ProductProfiles, LI_Skills, LT_SkillSetTypes, LG_KnowledgeLevel, LN_ExperienceLevel, LZ_ApplicationStates
+ON TABLE LO_Countries, LU_Currencies, LL_Languages, LA_AcademicLevels, LC_Certifications, LK_ContractType, LB_ByPeriod, LM_TimeUnits, LE_Employability, LS_SpokenLevel, LW_WrittenLevel, LF_FieldProfiles, LP_ProfessionalProfiles, LX_ProductProfiles, LI_Skills, LT_SkillSetTypes, LG_KnowledgeLevel, LN_ExperienceLevel, LZ_ApplicationStates
 TO "www-data" ;
 
 
@@ -1464,11 +1474,12 @@ INSERT INTO LX_ProductProfiles VALUES ( 'Firmware' );
 INSERT INTO LX_ProductProfiles VALUES ( 'Hardware' );
 
 -- These registers must be inserted in sort according to the value of the first field:
-INSERT INTO LA_AcademicQualifications VALUES ( 'Enrolled at a University (Undergraduate)', '10' );
-INSERT INTO LA_AcademicQualifications VALUES ( 'Bachelor\'s degree (1st University cycle)','20' );
-INSERT INTO LA_AcademicQualifications VALUES ( 'Master\'s degree (2nd University cycle)',  '30' );
-INSERT INTO LA_AcademicQualifications VALUES ( 'Doctoral degree (3rd University cycle)',   '40' );
-INSERT INTO LA_AcademicQualifications VALUES ( 'Other',                                    '00' );
+INSERT INTO LA_AcademicLevels VALUES ( 'Enrolled at a University (Undergraduate)', '10' );
+INSERT INTO LA_AcademicLevels VALUES ( 'Bachelor\'s degree (1st University cycle)','20' );
+INSERT INTO LA_AcademicLevels VALUES ( 'Master\'s degree (2nd University cycle)',  '30' );
+INSERT INTO LA_AcademicLevels VALUES ( 'Doctoral degree (3rd University cycle)',   '40' );
+INSERT INTO LA_AcademicLevels VALUES ( 'Other',                                    '00' );
+
 
 INSERT INTO LC_Certifications VALUES ( 'GNU Business Network',      'false', 'true',  'true'  ); -- This certification could be checked automatically.
 INSERT INTO LC_Certifications VALUES ( 'Free Software Contributor', 'true',  'true',  'true'  ); -- This certification is automatically checked by the webapp, checking the E2_URI field.

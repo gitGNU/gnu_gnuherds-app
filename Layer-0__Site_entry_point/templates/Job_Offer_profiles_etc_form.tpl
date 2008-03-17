@@ -64,10 +64,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {if $data.AllowPersonApplications eq 'true'}
 <tr>
-<td align="right"><label for="AcademicQualification">{t}Academic qualification{/t}</label></td>
+<td align="right"><label for="AcademicLevel">{t}Academic level{/t}</label></td>
 <td colspan="3">
-<select name="AcademicQualification" id="AcademicQualification" class="notRequired">
-{html_options values=$academicQualificationsId output=$academicQualificationsIdTranslated selected=$data.AcademicQualification}
+<select name="AcademicLevel" id="AcademicLevel" class="notRequired">
+{html_options values=$academicLevelsId output=$academicLevelsIdTranslated selected=$data.AcademicLevel}
 </select>
 </td>
 </tr>

@@ -102,7 +102,6 @@ class ViewQualificationsForm
 		$this->data['CompletedEdition'] = $result[10][0];
 
 		$this->data['ProfessionalExperienceSinceYear'] = $result[0][0];
-		$this->data['AcademicQualification'] = $result[1][0];
 
 		$this->data['DesiredContractType'] = $result[2][0]; // Only for Person entity
 		$this->data['DesiredWageRank'] = $result[3][0];
@@ -126,6 +125,16 @@ class ViewQualificationsForm
 			$this->data['WageRankCurrencyName'] = $result[15][0];
 		else
 			$this->data['WageRankCurrencyName'] = '';
+
+		// Qualification Academic table
+		$this->data['DegreeList'] = $result[40];
+		$this->data['AcademicLevelList'] = $result[41];
+		$this->data['DegreeGrantedList'] = $result[42];
+		$this->data['StartDateList'] = $result[43];
+		$this->data['FinishDateList'] = $result[44];
+		$this->data['InstitutionList'] = $result[45];
+		$this->data['InstitutionURIList'] = $result[46];
+		$this->data['ShortCommentList'] = $result[47];
 
 		// Profiles tables
 		$this->data['ProductProfileList'] = $result[20];

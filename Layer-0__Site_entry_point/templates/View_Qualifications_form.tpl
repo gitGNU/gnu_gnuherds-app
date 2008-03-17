@@ -233,15 +233,17 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 </tr>
 
-<tr>
+<tr valign="top">
 <td align="right"><strong>{t}Academic qualification{/t}</strong> : </td>
 <td colspan="3" class="greenLight">
-{if trim($data.AcademicQualification) neq '' or trim($data.AcademicQualificationDescription) neq ''}
-	{if trim($data.AcademicQualification) neq ''}
-		{t}{$data.AcademicQualification}{/t}{if trim($data.AcademicQualificationDescription) neq ''}, {/if}
-	{/if}
-
-	{if trim($data.AcademicQualificationDescription) neq ''}({$data.AcademicQualificationDescription}){/if}
+{if count($data.DegreeList)>0}
+	{foreach from=$data.DegreeList item=degree key=i}
+		{if $data.DegreeList[$i]}{$data.DegreeList[$i]} &nbsp; {/if} {if $data.StartDateList[$i] or $data.FinishDateList[$i]}{$data.StartDateList[$i]} &nbsp; {$data.FinishDateList[$i]}{/if} {if $data.DegreeList[$i] or $data.StartDateList[$i] or $data.FinishDateList[$i] or $data.DegreeGrantedList[$i] eq 'No'}<br>{/if}
+		{if $data.AcademicLevelList[$i]}{t}{$data.AcademicLevelList[$i]}{/t} &nbsp; {if $data.DegreeGrantedList[$i] eq 'No'}<i>{t}Degree not granted{/t}</i>{/if} <br>{/if}
+		{if $data.InstitutionList[$i]}{if $data.InstitutionURIList[$i]}<a href="{$data.InstitutionURIList[$i]}">{/if}{$data.InstitutionList[$i]}{if $data.InstitutionURIList[$i]}</a>{/if}<br>{/if}
+		{if $data.ShortCommentList[$i]}{$data.ShortCommentList[$i]}<br>{/if}
+		<br>
+	{/foreach}
 {else}
 	{t}none{/t}
 {/if}

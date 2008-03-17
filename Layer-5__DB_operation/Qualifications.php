@@ -70,6 +70,18 @@ class Qualifications
 		$fieldProfiles = new FieldProfiles();
 		$array[22] = $fieldProfiles->getFieldProfilesForEntity($Id);
 
+		// Academic
+		$academic = new Academic();
+		$arrayAC = $academic->getAcademicForEntity($Id);
+		$array[40] = $arrayAC[0];
+		$array[41] = $arrayAC[1];
+		$array[42] = $arrayAC[2];
+		$array[43] = $arrayAC[3];
+		$array[44] = $arrayAC[4];
+		$array[45] = $arrayAC[5];
+		$array[46] = $arrayAC[6];
+		$array[47] = $arrayAC[7];
+
 		// Certifications
 		$certifications = new Certifications();
 		$arrayCE = $certifications->getRequestedCertificationsForEntity($Id);
@@ -199,11 +211,11 @@ class Qualifications
 			break;
 
 			case 'academic':
-				$AcademicQualification = isset($_POST['AcademicQualification']) ? trim($_POST['AcademicQualification']) : '';
-				$AcademicQualificationDescription = trim($_POST['AcademicQualificationDescription']);
+				// Academic table
+				$academic = new Academic();
+				$academic->setAcademicForEntity();
 
-				$sqlQuery = "PREPARE query(text,text,bool,integer) AS  UPDATE Q1_Qualifications SET Q1_LA_Id=$1,Q1_AcademicQualificationDescription=$2,Q1_CompletedEdition=$3 WHERE Q1_E1_Id=$4;  EXECUTE query('".pg_escape_string($AcademicQualification)."','".pg_escape_string($AcademicQualificationDescription)."','$completedEdition','{$_SESSION['EntityId']}');";
-				$this->postgresql->execute($sqlQuery,1);
+				// Saving this section does not need to update the Q1_CompletedEdition flag due to it does not change its state, because of this section do not have any required field.
 			break;
 
 			case 'certifications':

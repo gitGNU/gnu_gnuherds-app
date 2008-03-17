@@ -26,7 +26,7 @@ require_once "../Layer-5__DB_operation/Alerts.php";
 // Lists
 require_once "../Layer-5__DB_operation/Countries.php";
 require_once "../Layer-5__DB_operation/Nationalities.php";
-require_once "../Layer-5__DB_operation/Academic_Qualifications.php";
+require_once "../Layer-5__DB_operation/Academic.php";
 require_once "../Layer-5__DB_operation/Product_Profiles.php";
 require_once "../Layer-5__DB_operation/Professional_Profiles.php";
 require_once "../Layer-5__DB_operation/Field_Profiles.php";
@@ -417,12 +417,12 @@ class DBManager
 		return $nationalities->getNationalityList();
 	}
 
-	public function getAcademicQualificationsList()
+	public function getAcademicLevelsList()
 	{
 		// This method does not need ACL check. It gets public information.
 
-		$academicQualifications = new AcademicQualifications();
-		return $academicQualifications->getAcademicQualificationsList();
+		$academic = new Academic();
+		return $academic->getAcademicLevelsList();
 	}
 
 	public function getProductProfilesList()

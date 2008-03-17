@@ -167,7 +167,7 @@ class ViewJobOfferForm
 		$this->data['Deadline'] = $result[28][0];
 
 		$this->data['ProfessionalExperienceSinceYear'] = trim($result[14][0]);
-		$this->data['AcademicQualification'] = trim($result[15][0]);
+		$this->data['AcademicLevel'] = trim($result[15][0]);
 
 		// Profiles tables
 		$this->data['ProductProfileList'] = $result[30];
