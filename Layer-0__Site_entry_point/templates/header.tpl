@@ -35,7 +35,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {* {if $smarty.session.Language eq 'fr_FR'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=fr_FR" lang="fr_FR" hreflang="fr_FR" title="{t}Change language{/t}">Français</a></li> *}
 {if $smarty.session.Language eq 'it_IT'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=it_IT" lang="it_IT" hreflang="it_IT" title="{t}Change language{/t}">Italiano</a></li>
 {if $smarty.session.Language eq 'pt_PT'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=pt_PT" lang="pt_PT" hreflang="pt_PT" title="{t}Change language{/t}">Português</a></li>
-{* {if $smarty.session.Language eq 'ru_RU'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=ru_RU" lang="ru_RU" hreflang="ru_RU" title="{t}Change language{/t}">Русский</a></li> *}
+{if $smarty.session.Language eq 'ru_RU'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=ru_RU" lang="ru_RU" hreflang="ru_RU" title="{t}Change language{/t}">Русский</a></li>
 </ul>
 </div>
 

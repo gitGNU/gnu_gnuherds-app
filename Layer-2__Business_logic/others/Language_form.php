@@ -46,8 +46,8 @@ class LanguageForm
 			  or $_SESSION["Language"] == "es_ES" /*
 			  or $_SESSION["Language"] == "fr_FR" */
 			  or $_SESSION["Language"] == "it_IT"
-			  or $_SESSION["Language"] == "pt_PT" /*
-			  or $_SESSION["Language"] == "ru_RU" */ )
+			  or $_SESSION["Language"] == "pt_PT"
+			  or $_SESSION["Language"] == "ru_RU" )
 			{
 				$this->setLanguage($_SESSION["Language"]); // Update the validity of the language selection
 			}
@@ -70,9 +70,9 @@ class LanguageForm
 					"it" => true,
 					"it_IT" => true, "it_CH" => true,
 					"pt" => true,
-					"pt_PT" => true, "pt_BR" => true /* ,
+					"pt_PT" => true, "pt_BR" => true,
 					"ru" => true,
-					"ru_RU" => true, "ru_UA" => true */
+					"ru_RU" => true, "ru_UA" => true
 				);
 
 				$chosen = HTTP::negotiateLanguage($supported);
