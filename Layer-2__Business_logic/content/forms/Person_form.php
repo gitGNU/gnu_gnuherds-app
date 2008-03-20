@@ -17,7 +17,7 @@
 
 
 require_once "../Layer-2__Business_logic/content/forms/Entity_form.php";
-require_once "../Layer-4__DBManager_etc/PHP_Tools.php";
+require_once "../lib/PHP_Tools.php";
 
 // Methods take the values from the global $_POST[] array.
 

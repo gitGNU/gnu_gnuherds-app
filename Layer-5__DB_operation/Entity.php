@@ -17,8 +17,8 @@
 
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
-require_once "../Layer-5__DB_operation/lib/PasswordHash.php";
 require_once "../Layer-5__DB_operation/Alerts.php";
+require_once "../lib/PasswordHash.php";
 
 // Methods take the values form the global $_POST[] array.
 

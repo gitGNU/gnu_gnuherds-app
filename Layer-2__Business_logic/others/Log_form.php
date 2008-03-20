@@ -17,7 +17,7 @@
 
 
 require_once "../Layer-4__DBManager_etc/DB_Manager.php";
-require_once "../Layer-4__DBManager_etc/PHP_Tools.php";
+require_once "../lib/PHP_Tools.php";
 
 
 class LogForm
