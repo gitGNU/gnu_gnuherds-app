@@ -17,16 +17,19 @@
 
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
+require_once "../lib/Translator.php";
 
 
 class Languages
 {
 	private $postgresql;
+	private $translator;
 
 
 	function __construct()
 	{
 		$this->postgresql = new PostgreSQL();
+		$this->translator = new Translator();
 	}
 
 
@@ -36,12 +39,7 @@ class Languages
 		$languages = array_combine($languagesName, $languagesName);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
-		while (current($languages))
-		{
-			$languages[key($languages)] = gettext( trim( current($languages) ) );
-			next($languages);
-		}
-
+		$languages = $this->translator->t_array($languages, 'iso_639');
 		asort($languages); // Note after transtale it, we sort this ComboBox.
 
 		return $languages;
@@ -60,12 +58,7 @@ class Languages
 		$languagesSpokenLevels = array_combine($languagesSpokenLevelsId, $languagesSpokenLevelsId);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
-		while (current($languagesSpokenLevels))
-		{
-			$languagesSpokenLevels[key($languagesSpokenLevels)] = gettext( trim( current($languagesSpokenLevels) ) );
-			next($languagesSpokenLevels);
-		}
-
+		$languagesSpokenLevels = $this->translator->t_array($languagesSpokenLevels, 'database');
 		// asort($languagesSpokenLevels); // Note: The 'Id' is sort from the Data Base so we do not need sort this list after translate it.
 
 		return $languagesSpokenLevels;
@@ -84,12 +77,7 @@ class Languages
 		$languagesWrittenLevels = array_combine($languagesWrittenLevelsId, $languagesWrittenLevelsId);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
-		while (current($languagesWrittenLevels))
-		{
-			$languagesWrittenLevels[key($languagesWrittenLevels)] = gettext( trim( current($languagesWrittenLevels) ) );
-			next($languagesWrittenLevels);
-		}
-
+		$languagesWrittenLevels = $this->translator->t_array($languagesWrittenLevels, 'database');
 		// asort($languagesWrittenLevels); // Note: The 'Id' is sort from the Data Base so we do not need sort this list after translate it.
 
 		return $languagesWrittenLevels;

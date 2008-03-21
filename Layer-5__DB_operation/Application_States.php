@@ -17,16 +17,19 @@
 
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
+require_once "../lib/Translator.php";
 
 
 class ApplicationStates
 {
 	private $postgresql;
+	private $translator;
 
 
 	function __construct()
 	{
 		$this->postgresql = new PostgreSQL();
+		$this->translator = new Translator();
 	}
 
 
@@ -36,11 +39,9 @@ class ApplicationStates
 		$applicationStatesIdList = $this->postgresql->getOneField($sqlQuery,0);
 		$applicationStates = array_combine($applicationStatesIdList, $applicationStatesIdList);
 
-		while (current($applicationStates))
-		{
-			$applicationStates[key($applicationStates)] = gettext( trim( current($applicationStates) ) );
-			next($applicationStates);
-		}
+		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
+		$applicationStates = $this->translator->t_array($applicationStates, 'database');
+		// asort($byPeriod);  Note: We do not sort this ComboBox.
 
 		return $applicationStates;
 	}

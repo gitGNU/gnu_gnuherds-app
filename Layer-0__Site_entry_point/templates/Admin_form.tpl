@@ -124,7 +124,7 @@ Suite 225, San Francisco, CA 94107, USA
 <td align="right"><span class="must">*</span><label for="SkillTag" class="raisePopUp" title="{t}Change the classification tag{/t}">{t}Tag{/t}</label></td>
 <td>
 <select name="SkillTag" id="SkillTag" class="required">
-{html_options values=$skillTagId output=$skillTagId selected=$data.SkillTag}
+{html_options values=$skillTagsId output=$skillTagsIdTranslated selected=$data.SkillTag}
 </select>
 
 {if $checks.SkillTag neq '' }

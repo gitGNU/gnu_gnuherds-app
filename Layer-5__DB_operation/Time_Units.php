@@ -17,16 +17,19 @@
 
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
+require_once "../lib/Translator.php";
 
 
 class TimeUnits
 {
 	private $postgresql;
+	private $translator;
 
 
 	function __construct()
 	{
 		$this->postgresql = new PostgreSQL();
+		$this->translator = new Translator();
 	}
 
 
@@ -36,12 +39,7 @@ class TimeUnits
 		$timeUnits = array_combine($timeUnitsIdList, $timeUnitsIdList);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
-		while (current($timeUnits))
-		{
-			$timeUnits[key($timeUnits)] = gettext( trim( current($timeUnits) ) );
-			next($timeUnits);
-		}
-
+		$timeUnits = $this->translator->t_array($timeUnits, 'database');
 		// asort($timeUnits);  Note: We do not sort this ComboBox.
 
 		return $timeUnits;

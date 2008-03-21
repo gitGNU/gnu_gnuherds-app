@@ -83,20 +83,23 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </td>
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">
-{if $data.CheckList[$i] eq "Pending"}<label title="{t}This skill is pending for checking.{/t}">{t}Pending{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Unknown"}<label title="{t}This skill is unknown.{/t}">{t}Unknown{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Abstract"}<label title="{t}This skill is abstract.{/t}">{t}Abstract{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Free Software"}<label title="{t}This skill is Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Free Software'|gettext|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Almost-Free Software"}<label title="{t}This skill is almost Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Almost-Free Software'|gettext|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Partially-Free Software"}<label title="{t}This skill is partially Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Partially-Free Software'|gettext|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Non-Free Software"}<label title="{t}This skill is not Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Non-Free Software'|gettext|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Hardware"}<label title="{t}This skill is Hardware.{/t}">{t}Hardware{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Documentation"}<label title="{t}This skill is Documentation.{/t}">{t}Documentation{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Free Documentation"}<label title="{t}This skill is Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Free Documentation'|gettext|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Non-Free Documentation"}<label title="{t}This skill is not Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Non-Free Documentation'|gettext|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Art"}<label title="{t}This skill is Art.{/t}">{t}Art{/t}</label>{/if}
-{if $data.CheckList[$i] eq "Sharable Art"}<label title="{t}This skill is Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Sharable Art'|gettext|strip:'&nbsp;'}</label>{/if}
-{if $data.CheckList[$i] eq "Non-Sharable Art"}<label title="{t}This skill is not Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Non-Sharable Art'|gettext|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Pending"}<label title="{t}This skill is pending for checking.{/t}">{'Pending'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Unknown"}<label title="{t}This skill is unknown.{/t}">{'Unknown'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Abstract"}<label title="{t}This skill is abstract.{/t}">{'Abstract'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Free Software"}<label title="{t}This skill is Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Free Software'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Almost-Free Software"}<label title="{t}This skill is almost Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Almost-Free Software'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Partially-Free Software"}<label title="{t}This skill is partially Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Partially-Free Software'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Non-Free Software"}<label title="{t}This skill is not Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Non-Free Software'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Hardware"}<label title="{t}This skill is Hardware.{/t}">{'Hardware'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Documentation"}<label title="{t}This skill is Documentation.{/t}">{'Documentation'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Free Documentation"}<label title="{t}This skill is Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Free Documentation'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Non-Free Documentation"}<label title="{t}This skill is not Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Non-Free Documentation'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Data"}<label title="{t}This skill is Data.{/t}">{'Data'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Free Data"}<label title="{t}This skill is Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Free Data'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Non-Free Data"}<label title="{t}This skill is not Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Non-Free Data'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Art"}<label title="{t}This skill is Art.{/t}">{'Art'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Sharable Art"}<label title="{t}This skill is Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Sharable Art'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
+{if $data.CheckList[$i] eq "Non-Sharable Art"}<label title="{t}This skill is not Free.{/t} {t}Software criteria at the FAQ.{/t} {t}Report any mistake!{/t}">{'Non-Sharable Art'|dgettext:'database'|strip:'&nbsp;'}</label>{/if}
 </td>
 
 <td class="{if $i % 2}greenDark{else}greenLight{/if}">

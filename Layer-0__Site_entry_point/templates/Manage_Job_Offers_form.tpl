@@ -36,11 +36,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td class="tdTitle"><strong>{'Expiration date'|gettext|strip:'&nbsp;'}</strong></td>
 <td class="tdTitle"><strong>{'Closed'|gettext|strip:'&nbsp;'}</strong></td>
 <td></td>
-<td class="tdTitle">{'Received'|gettext|strip:'&nbsp;'}</td>
-<td class="tdTitle">{'In process'|gettext|strip:'&nbsp;'}</td>
-<td class="tdTitle">{'Ruled out'|gettext|strip:'&nbsp;'}</td>
-<td class="tdTitle">{'Finalist'|gettext|strip:'&nbsp;'}</td>
-<td class="tdTitle">{'Selected'|gettext|strip:'&nbsp;'}</td>
+<td class="tdTitle">{'Received'|dgettext:'database'|strip:'&nbsp;'}</td>
+<td class="tdTitle">{'In process'|dgettext:'database'|strip:'&nbsp;'}</td>
+<td class="tdTitle">{'Ruled out'|dgettext:'database'|strip:'&nbsp;'}</td>
+<td class="tdTitle">{'Finalist'|dgettext:'database'|strip:'&nbsp;'}</td>
+<td class="tdTitle">{'Selected'|dgettext:'database'|strip:'&nbsp;'}</td>
 </tr>
 
 {foreach from=$data.JobOfferId item=Id key=i}

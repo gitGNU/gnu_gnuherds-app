@@ -95,7 +95,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {if trim($data.StateProvince) neq '' or trim($data.CountryName) neq ''}
 	{$data.StateProvince}{if trim($data.StateProvince) neq '' and trim($data.CountryName) neq ''}, {/if}
-	{if trim($data.CountryName) neq ''}<strong>{t}{$data.CountryName}{/t}</strong>{/if}
+	{if trim($data.CountryName) neq ''}<strong>{t domain='iso_3166'}{$data.CountryName}{/t}</strong>{/if}
 	<br>
 {/if}
 
@@ -202,7 +202,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{'not specified'|gettext|strip:'&nbsp;'}
 {else}
 	{foreach from=$data.ProductProfileList item=profile}
-		{$profile|gettext|strip:'&nbsp;'}<br>
+		{$profile|dgettext:'database'|strip:'&nbsp;'}<br>
 	{/foreach}
 {/if}
 </td>
@@ -212,7 +212,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{'not specified'|gettext|strip:'&nbsp;'}
 {else}
 	{foreach from=$data.ProfessionalProfileList item=profile}
-		{$profile|gettext|strip:'&nbsp;'}<br>
+		{$profile|dgettext:'database'|strip:'&nbsp;'}<br>
 	{/foreach}
 {/if}
 </td>
@@ -222,7 +222,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{'not specified'|gettext|strip:'&nbsp;'}
 {else}
 	{foreach from=$data.FieldProfileList item=profile}
-		{$profile|gettext|strip:'&nbsp;'}<br>
+		{$profile|dgettext:'database'|strip:'&nbsp;'}<br>
 	{/foreach}
 {/if}
 </td>
@@ -239,7 +239,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if count($data.DegreeList)>0}
 	{foreach from=$data.DegreeList item=degree key=i}
 		{if $data.DegreeList[$i]}{$data.DegreeList[$i]} &nbsp; {/if} {if $data.StartDateList[$i] or $data.FinishDateList[$i]}{$data.StartDateList[$i]} &nbsp; {$data.FinishDateList[$i]}{/if} {if $data.DegreeList[$i] or $data.StartDateList[$i] or $data.FinishDateList[$i] or $data.DegreeGrantedList[$i] eq 'No'}<br>{/if}
-		{if $data.AcademicLevelList[$i]}{t}{$data.AcademicLevelList[$i]}{/t} &nbsp; {if $data.DegreeGrantedList[$i] eq 'No'}<i>{t}Degree not granted{/t}</i>{/if} <br>{/if}
+		{if $data.AcademicLevelList[$i]}{t domain='database'}{$data.AcademicLevelList[$i]}{/t} &nbsp; {if $data.DegreeGrantedList[$i] eq 'No'}<i>{t}Degree not granted{/t}</i>{/if} <br>{/if}
 		{if $data.InstitutionList[$i]}{if $data.InstitutionURIList[$i]}<a href="{$data.InstitutionURIList[$i]}">{/if}{$data.InstitutionList[$i]}{if $data.InstitutionURIList[$i]}</a>{/if}<br>{/if}
 		{if $data.ShortCommentList[$i]}{$data.ShortCommentList[$i]}<br>{/if}
 		<br>
@@ -267,13 +267,13 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <td class="greenDark"><span class="u">{'Knowledge level'|gettext|strip:'&nbsp;'}</span><br>
 {foreach from=$data.KnowledgeLevelList item=knowledgeLevel}
-	{$knowledgeLevel|gettext|strip:'&nbsp;'}<br>
+	{$knowledgeLevel|dgettext:'database'|strip:'&nbsp;'}<br>
 {/foreach}
 </td>
 
 <td class="greenDark"><span class="u">{'Experience level'|gettext|strip:'&nbsp;'}</span><br>
 {foreach from=$data.ExperienceLevelList item=experienceLevel}
-	{$experienceLevel|gettext|strip:'&nbsp;'}<br>
+	{$experienceLevel|dgettext:'database'|strip:'&nbsp;'}<br>
 {/foreach}
 </td>
 
@@ -290,19 +290,19 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <td class="greenLight"><span class="u">{t}Language{/t}</span><br>
 {foreach from=$data.LanguageList item=language}
-	{$language|gettext|strip:'&nbsp;'}<br>
+	{$language|dgettext:'iso_639'|strip:'&nbsp;'}<br>
 {/foreach}
 </td>
 
 <td class="greenLight"><span class="u">{'Spoken level'|gettext|strip:'&nbsp;'}</span><br>
 {foreach from=$data.LanguageSpokenLevelList item=spokenLevel}
-	{$spokenLevel|gettext|strip:'&nbsp;'}<br>
+	{$spokenLevel|dgettext:'database'|strip:'&nbsp;'}<br>
 {/foreach}
 </td>
 
 <td class="greenLight"><span class="u">{'Written level'|gettext|strip:'&nbsp;'}</span><br>
 {foreach from=$data.LanguageWrittenLevelList item=writtenLevel}
-	{$writtenLevel|gettext|strip:'&nbsp;'}<br>
+	{$writtenLevel|dgettext:'database'|strip:'&nbsp;'}<br>
 {/foreach}
 </td>
 
@@ -372,7 +372,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td align="right"><strong>{t}Desired contract type{/t}</strong> : </td>
-<td colspan="3" class="greenLight">{t}{$data.DesiredContractType}{/t}</td>
+<td colspan="3" class="greenLight">{t domain='database'}{$data.DesiredContractType}{/t}</td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
@@ -382,8 +382,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td align="right"><strong>{t}Desired wage rank{/t}</strong> : </td>
 <td colspan="3" class="greenDark">
 {$data.DesiredWageRank}
-({t}{$data.WageRankCurrencyName}{/t})
-{t}{$data.WageRankByPeriod}{/t}{if trim($data.DesiredWageRank) neq ''}. [{t}Minimum{/t}-{t}Optimum{/t}]{/if}
+({t domain='iso_4217'}{$data.WageRankCurrencyName}{/t})
+{t domain='database'}{$data.WageRankByPeriod}{/t}{if trim($data.DesiredWageRank) neq ''}. [{t}Minimum{/t}-{t}Optimum{/t}]{/if}
 </td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
@@ -392,7 +392,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td align="right"><strong>{t}Current employability{/t}</strong> : </td>
-<td colspan="3" class="greenLight">{t}{$data.CurrentEmployability}{/t}</td>
+<td colspan="3" class="greenLight">{t domain='database'}{$data.CurrentEmployability}{/t}</td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}

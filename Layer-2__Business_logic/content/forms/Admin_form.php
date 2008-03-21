@@ -91,7 +91,10 @@ class AdminForm extends SkillsForm
 	{
 		$smarty = new Smarty;
 
-		$smarty->assign('skillTagId', array_merge( array(""), $this->manager->getSkillTagList() ) );
+		$skillTags = $this->manager->getSkillTagList();
+		$smarty->assign('skillTagsId', array_merge( array(""), array_keys($skillTags) ) );
+		$smarty->assign('skillTagsIdTranslated', array_merge( array(""), array_values($skillTags) ) );
+
 		$smarty->assign('setTypesSkillId', array_merge( array(""), $this->manager->getSkillSetTypesList() ) );
 
 		$smarty->assign('data', $this->data);

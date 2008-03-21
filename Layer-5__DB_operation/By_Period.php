@@ -17,16 +17,19 @@
 
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
+require_once "../lib/Translator.php";
 
 
 class ByPeriod
 {
 	private $postgresql;
+	private $translator;
 
 
 	function __construct()
 	{
 		$this->postgresql = new PostgreSQL();
+		$this->translator = new Translator();
 	}
 
 
@@ -36,12 +39,7 @@ class ByPeriod
 		$byPeriod = array_combine($byPeriodIdList, $byPeriodIdList);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
-		while (current($byPeriod))
-		{
-			$byPeriod[key($byPeriod)] = gettext( trim( current($byPeriod) ) );
-			next($byPeriod);
-		}
-
+		$byPeriod = $this->translator->t_array($byPeriod, 'database');
 		// asort($byPeriod);  Note: We do not sort this ComboBox.
 
 		return $byPeriod;

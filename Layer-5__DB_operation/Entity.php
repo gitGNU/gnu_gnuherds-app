@@ -105,7 +105,7 @@ class Entity
 				if ( pg_num_rows($lnResult) == '1' )
 				{
 					$row = pg_fetch_object($lnResult, 0);
-					$array[32][$i] = dcgettext('nationalities', trim($row->ln_name), LC_MESSAGES);
+					$array[32][$i] = dgettext('nationalities', trim($row->ln_name));
 				}
 			}
 			else
@@ -130,7 +130,7 @@ class Entity
 				if ( pg_num_rows($loResult) == '1' )
 				{
 					$row = pg_fetch_object($loResult, 0);
-					$array[34][$i] = trim($row->lo_name);
+					$array[34][$i] = dgettext('iso_3166', trim($row->lo_name));
 				}
 			}
 			else

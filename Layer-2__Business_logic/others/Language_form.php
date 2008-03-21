@@ -148,8 +148,24 @@ class LanguageForm
 		$domain = 'messages';
 		bindtextdomain($domain, "../locale");
 
+		// Bind the 'database' domain
+		$domain = 'database';
+		bindtextdomain($domain, "../locale");
+
 		// Bind the 'nationalities' domain
 		$domain = 'nationalities';
+		bindtextdomain($domain, "../locale");
+
+		// Bind the ISO-3166 (country names) domain
+		$domain = 'iso_3166';
+		bindtextdomain($domain, "../locale");
+
+		// Bind the ISO-4217 (currency names) domain
+		$domain = 'iso_4217';
+		bindtextdomain($domain, "../locale");
+
+		// Bind the ISO-639 (language names) domain
+		$domain = 'iso_639';
 		bindtextdomain($domain, "../locale");
 
 		// Set the default text domain as 'messages'

@@ -17,16 +17,19 @@
 
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
+require_once "../lib/Translator.php";
 
 
 class FieldProfiles
 {
 	private $postgresql;
+	private $translator;
 
 
 	function __construct()
 	{
 		$this->postgresql = new PostgreSQL();
+		$this->translator = new Translator();
 	}
 
 
@@ -36,12 +39,7 @@ class FieldProfiles
 		$fieldProfiles = array_combine($fieldProfilesIdList, $fieldProfilesIdList);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
-		while (current($fieldProfiles))
-		{
-			$fieldProfiles[key($fieldProfiles)] = gettext( trim( current($fieldProfiles) ) );
-			next($fieldProfiles);
-		}
-
+		$fieldProfiles = $this->translator->t_array($fieldProfiles, 'database');
 		// asort($fieldProfiles);  Note: We do not sort this ComboBox.
 
 		return $fieldProfiles;

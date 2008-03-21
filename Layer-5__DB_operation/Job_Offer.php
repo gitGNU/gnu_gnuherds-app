@@ -604,15 +604,15 @@ class JobOffer
 		$VacancyTitle = '';
 
 		if ( trim($arrayLP[0]) != '')
-			$VacancyTitle .= gettext($arrayLP[0]);
+			$VacancyTitle .= dgettext('database',$arrayLP[0]);
 
 		for( $i=1; $i < count($arrayLP); $i++)
 			if ( trim($arrayLP[$i]) != '')
-				$VacancyTitle .= ", ".gettext($arrayLP[$i]);
+				$VacancyTitle .= ", ".dgettext('database',$arrayLP[$i]);
 
 		for( $i=0; $i < count($arrayLF); $i++)
 			if ( trim($arrayLF[$i]) != '')
-				$VacancyTitle .= ", ".gettext($arrayLF[$i]);
+				$VacancyTitle .= ", ".dgettext('database',$arrayLF[$i]);
 
 		$trusted = $this->isJobOfferOwnerTrusted($J1_Id);
 
@@ -631,7 +631,7 @@ class JobOffer
 
 		for( $i=0; $i < count($arrayLL[0]); $i++)
 			if ( trim($arrayLL[0][$i]) != '')
-				$VacancyTitle .= ", ".gettext($arrayLL[0][$i]);
+				$VacancyTitle .= ", ".dgettext('iso_639',$arrayLL[0][$i]);
 
 		if ( $VacancyTitle == '')
 			$VacancyTitle = gettext("not specified");

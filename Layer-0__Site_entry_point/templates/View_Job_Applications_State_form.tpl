@@ -48,7 +48,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $state[$i] eq 'Finalist'}almostGreenApplicationState{/if}
 {if $state[$i] eq 'Selected'}greenApplicationState{/if}
 ">
-{t}{$state[$i]}{/t}
+{t domain='database'}{$state[$i]}{/t}
 {*
 'Received'	without color
 'In process'	blue

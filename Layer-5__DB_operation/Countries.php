@@ -17,16 +17,19 @@
 
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
+require_once "../lib/Translator.php";
 
 
 class Countries
 {
 	private $postgresql;
+	private $translator;
 
 
 	function __construct()
 	{
 		$this->postgresql = new PostgreSQL();
+		$this->translator = new Translator();
 	}
 
 
@@ -37,12 +40,7 @@ class Countries
 		$countries = array_combine($countryTwoLetter, $countryNames);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
-		while (current($countries))
-		{
- 			$countries[key($countries)] = gettext( trim( current($countries) ) );
- 			next($countries);
-		}
-
+		$countries = $this->translator->t_array($countries, 'iso_3166');
 		asort($countries); // Note After translate it, we sort this ComboBox.
 
 		return $countries;

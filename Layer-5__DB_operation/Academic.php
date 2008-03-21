@@ -17,16 +17,19 @@
 
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
+require_once "../lib/Translator.php";
 
 
 class Academic
 {
 	private $postgresql;
+	private $translator;
 
 
 	function __construct()
 	{
 		$this->postgresql = new PostgreSQL();
+		$this->translator = new Translator();
 	}
 
 
@@ -36,13 +39,8 @@ class Academic
 		$academicLevels = array_combine($academicLevelsIdList, $academicLevelsIdList);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
-		while (current($academicLevels))
-		{
-			$academicLevels[key($academicLevels)] = gettext( trim( current($academicLevels) ) );
-			next($academicLevels);
-		}
-
-		// asort($professionalProfiles);  Note: The 'Id' is sort from the DataBase so we do not need sort this list after translate it.
+		$academicLevels = $this->translator->t_array($academicLevels, 'database');
+		// asort($academicLevels);  Note: The 'Id' is sort from the DataBase so we do not need sort this list after translate it.
 
 		return $academicLevels;
 	}

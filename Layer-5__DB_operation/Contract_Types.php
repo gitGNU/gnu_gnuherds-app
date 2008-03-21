@@ -17,16 +17,19 @@
 
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
+require_once "../lib/Translator.php";
 
 
 class ContractTypes
 {
 	private $postgresql;
+	private $translator;
 
 
 	function __construct()
 	{
 		$this->postgresql = new PostgreSQL();
+		$this->translator = new Translator();
 	}
 
 
@@ -37,13 +40,8 @@ class ContractTypes
 		$contractTypes = array_combine($contractTypesIdList, $contractTypesIdList);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
-		while (current($contractTypes))
-		{
-			$contractTypes[key($contractTypes)] = gettext( trim( current($contractTypes) ) );
-			next($contractTypes);
-		}
-
-		// asort($professionalProfiles);  Note: The 'Id' is sort from the DataBase so we do not need sort this list after translate it.
+		$contractTypes = $this->translator->t_array($contractTypes, 'database');
+		// asort($contractTypes);  Note: The 'Id' is sort from the DataBase so we do not need sort this list after translate it.
 
 		return $contractTypes;
 	}

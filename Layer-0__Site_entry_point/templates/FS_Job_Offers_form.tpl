@@ -57,10 +57,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if trim($City[$i]) eq '' and trim($StateProvince[$i]) eq '' and trim($CountryName[$i]) eq ''}
-<strong>{t}Any{/t}</strong>, {t}telework{/t}
+<strong>{t domain='database'}Any{/t}</strong>, {t}telework{/t}
 {else}
 {if trim($CountryName[$i]) neq ''}
-<strong>{t}{$CountryName[$i]}{/t}</strong>{if $StateProvince[$i]}, {$StateProvince[$i]}{/if}{if $City[$i]}, {$City[$i]}{/if}
+<strong>{t domain='iso_3166'}{$CountryName[$i]}{/t}</strong>{if $StateProvince[$i]}, {$StateProvince[$i]}{/if}{if $City[$i]}, {$City[$i]}{/if}
 {else}
 {if trim($StateProvince[$i]) neq ''}
 {$StateProvince[$i]}{if $City[$i]}, {$City[$i]}{/if}

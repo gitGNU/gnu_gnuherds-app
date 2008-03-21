@@ -54,7 +54,7 @@ function raiseNewJobOfferAlerts() // Alerts on any NewJobOffer
 			$message .= gettext("Location").":  ";
 			if ( trim($result[2][$j]) == '' )
 			{
-				$message .= gettext("Any").", ".gettext("telework");
+				$message .= dgettext('database', "Any").", ".gettext("telework");
 			}
 			else
 			{

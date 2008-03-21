@@ -38,9 +38,6 @@ msgstr "Ассоциация Свободного ПО"
 msgid "%1Download the project source code!%2"
 msgstr "%1Скачать исходный код проекта!%2"
 
-msgid "Project state"
-msgstr "Состояние проекта"
-
 #
 # menu.tpl
 #
@@ -52,6 +49,10 @@ msgstr "Устав (образец)"
 
 msgid "Coders' guide"
 msgstr "Руководство разработчика"
+
+#, fuzzy
+msgid "FAQ"
+msgstr "Preguntas frecuentes (FAQ)"
 
 msgid "Account"
 msgstr "Учётная запись"
@@ -112,6 +113,10 @@ msgstr "Зарегистрировать себя"
 
 msgid "Register company"
 msgstr "Зарегистрировать компанию"
+
+#, fuzzy
+msgid "Register non-profit organization"
+msgstr "Registrar organización sin ánimo de lucro"
 
 msgid "Register non-profit"
 msgstr "Зарегистрировать бесприбыльную организацию"
@@ -269,11 +274,13 @@ msgstr "ОШИБКА: Не удалось удалить файл с логот�
 #
 # Home_content.tpl
 #
-msgid "GNU Herds is a not-for-profit %1true-democratic%4 association which %2aims%4 to encourage the professional development of Free Software contributors."
-msgstr "GNU Herds - бесприбыльная %1подлинно демократичная%4 ассоциация, которая %2направлена%4 на улучшение профессиональной разработки Свободного Программного Обеспечения."
+#, fuzzy
+msgid "GNU Herds is a not-for-profit %1true-democratic%3 association which %2aims%3 to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
+msgstr "GNU Herds - бесприбыльная %1подлинно демократичная%3 ассоциация, которая %2направлена%3 на ... ... ... ...  ассоциации состоят в стимулировании профессиональной разработки участниками создания Свободного Программного Обеспечения, в достижении высочайшего уровня компетенции разрабочиков, и в повышении эффективности."
 
-msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3Business Networks%2 models. Some of the JobSite's features are:"
-msgstr "Первый шаг состоит в разработке ресурса %1Поиска работы%2 и сборе опыта различных моделей %3Сетевого Бизнеса%2. Некоторые преимущества модуля Поиска работы:"
+#, fuzzy
+msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3business models%2. Some of the JobSite's features are:"
+msgstr "Первый шаг состоит в разработке ресурса %1Поиска работы%2 и сборе опыта различных %3 XXX XXX %2. Некоторые преимущества модуля Поиска работы:"
 
 msgid "Controlled by its own users"
 msgstr "Управляется своими пользователями"
@@ -281,8 +288,9 @@ msgstr "Управляется своими пользователями"
 msgid "FS skills data base"
 msgstr "Имеет базу данных квалификации разработчиков"
 
-msgid "Other modules could be developed. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled."
-msgstr "Могут появиться и другие модули. Некоторые из них можете предложить Вы. Например, некоторые модули уже предложены: Ассоциация Свободного ПО может выдавать сертификаты. Этот ресурс уже поддерживает сертификацию, но временно эти возможности отключены."
+#, fuzzy
+msgid "Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled."
+msgstr "Могут появиться и другие модули.  XXX(New sentence)-->  Send an email with your proposal to the %1 email list. <--XXX  Некоторые из них можете предложить Вы. Например, некоторые модули уже предложены: Ассоциация Свободного ПО может выдавать сертификаты. Этот ресурс уже поддерживает сертификацию, но временно эти возможности отключены."
 
 msgid "%1 certification"
 msgstr "%1 сертификация"
@@ -317,8 +325,9 @@ msgstr "Название ассоциации - GNU Herds, далее она у�
 msgid "Aims"
 msgstr "Цели"
 
+#, fuzzy
 msgid "The aims of the Association shall be to %1assist and encourage%2 people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
-msgstr "Цели ассоциации - %1помогать и поощрять%2 разработчиков коммерческого ПО в их работе над Свободным ПО, повышая уровень компетенции разрабочиков и их эффективность."
+msgstr "Цели ассоциации - %1помогать и поощрять%2 разработчиков коммерческого ПО в их работе над Свободным ПО, повышая уровень компетенции разрабочиков и их эффективность.  ... ... ... ...    ассоциации состоят в стимулировании профессиональной разработки участниками создания Свободного Программного Обеспечения, в достижении высочайшего уровня компетенции разрабочиков, и в повышении эффективности.%4"
 
 msgid "Membership"
 msgstr "Участие"
@@ -791,9 +800,6 @@ msgstr "Дата поступления"
 msgid "Offered by"
 msgstr "Автор предложения"
 
-msgid "Any"
-msgstr "Любой"
-
 msgid "telework"
 msgstr "Удалённая работа"
 
@@ -830,8 +836,8 @@ msgstr "Правка этого предложения о работе не за
 msgid "View contact information"
 msgstr "Посмотреть информацию о контактах"
 
-msgid "%1Job%2 offer"
-msgstr "Предложение %1работы%2"
+msgid "Job offer"
+msgstr "Предложение работы"
 
 msgid "Persons"
 msgstr "Участники"
@@ -1154,13 +1160,11 @@ msgstr "Удалить информацию"
 # Company_form.php
 # msgid ""
 # msgstr ""
+
 #
 # non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
 #
 # non-profit_Organization_form.tpl
-msgid "New non-profit organization"
-msgstr "Новая бесприбыльная организация"
-
 msgid "Update non-profit organization data"
 msgstr "Обновить данные бесприбыльной организации"
 
@@ -1176,6 +1180,7 @@ msgstr "Название"
 # non-profit_Organization_form.php
 # msgid ""
 # msgstr ""
+
 #
 # Qualifications form: Qualifications_edit-guide-bar.tpl, Qualifications_*_form.tpl, Qualifications_form.php
 #
@@ -1312,9 +1317,6 @@ msgid "Keep as is"
 msgstr "Оставить как есть"
 
 # Qualifications_languages_form.tpl
-msgid "Staff with the below languages:"
-msgstr "Сотрудники с нижеперечисленными языками:"
-
 msgid "Add idioms and theirs spoken and written levels"
 msgstr "Добавьте сотрудников и их навыке в разговорном и письменном языке"
 
@@ -1336,9 +1338,6 @@ msgid "Project"
 msgstr "Проект"
 
 # Qualifications_location_form.tpl
-msgid "Staff:"
-msgstr "Personal:"
-
 msgid "Available to travel"
 msgstr "Согласен на поездку"
 
@@ -1604,345 +1603,3 @@ msgstr "ОШИБКА: Не удалось подсоединиться к баз
 
 msgid "Data base under maintenance. Excuse the inconveniences."
 msgstr "База данных отключена по техническим причинам. Извините за неудобства."
-
-#
-# Data Base LF_FieldProfiles table
-#
-msgid "Data Bases"
-msgstr "Базы данных"
-
-msgid "Networks"
-msgstr "Сетевые приложения"
-
-msgid "Systems"
-msgstr "Системное программирование"
-
-msgid "Security"
-msgstr "Безопасность"
-
-msgid "Web"
-msgstr "Веб"
-
-msgid "Creative design"
-msgstr "Дизайн"
-
-msgid "Quality Assurance"
-msgstr "Контроль качества"
-
-#
-# Data Base LP_ProfessionalProfiles table
-#
-msgid "General Manager"
-msgstr "Управление"
-
-msgid "HH.RR."
-msgstr "Управление персоналом"
-
-msgid "Marketing"
-msgstr "Маркетинг"
-
-msgid "Logistics and Distribution"
-msgstr "Логистика и распространение"
-
-msgid "Commercial - Seller"
-msgstr "Коммерческие продажи"
-
-msgid "Customer support"
-msgstr "Поддержка клиентов"
-
-msgid "Research and Development"
-msgstr "Исследования и разработка"
-
-msgid "Account Manager"
-msgstr "Управление безопасностью"
-
-msgid "Project Manager"
-msgstr "Менеджер проекта"
-
-msgid "Architect"
-msgstr "Архитектор"
-
-msgid "Auditor"
-msgstr "Аудитор"
-
-msgid "Adviser"
-msgstr "Советник"
-
-msgid "Technician"
-msgstr "Технический специалист"
-
-msgid "Functional Analyst"
-msgstr "Функциональный аналитик"
-
-msgid "Technician Analyst"
-msgstr "Технический аналитик"
-
-msgid "Developer"
-msgstr "Разработчик"
-
-msgid "Beta tester"
-msgstr "Тестировщик"
-
-msgid "Administrator"
-msgstr "Администратор"
-
-msgid "Documentalist"
-msgstr "Создатель документации"
-
-msgid "Technical Redactor"
-msgstr "Технический редактор"
-
-msgid "Teacher"
-msgstr "Учитель"
-
-msgid "Translator"
-msgstr "Переводчик"
-
-msgid "Operator"
-msgstr "Оператор"
-
-msgid "Technical support"
-msgstr "Техническая поддержка"
-
-msgid "Helpdesk"
-msgstr "Поддержка пользователей"
-
-#
-# Data Base LA_AcademicQualifications table
-#
-msgid "Undergraduate"
-msgstr "Незаконченное высшее"
-
-msgid "Graduate"
-msgstr "Высшее образование"
-
-msgid "Postgraduate"
-msgstr "Аспирантура"
-
-msgid "Doctoral"
-msgstr "Учёная степень"
-
-msgid "Other"
-msgstr "Другое"
-
-#
-# Data Base LH_Skills table
-#
-msgid "Pending"
-msgstr "В обработке"
-
-msgid "Unknown"
-msgstr "Неизвестно"
-
-msgid "Abstract"
-msgstr "Абстрактное"
-
-msgid "Free Software"
-msgstr "Свободное ПО"
-
-msgid "Almost-Free Software"
-msgstr "Почти свободное ПО"
-
-msgid "Partially-Free Software"
-msgstr "Частично свободное ПО"
-
-msgid "Non-Free Software"
-msgstr "Несвободное ПО"
-
-msgid "Hardware"
-msgstr "Аппаратура"
-
-msgid "Documentation"
-msgstr "Документация"
-
-msgid "Free Documentation"
-msgstr "Свободная документация"
-
-msgid "Non-Free Documentation"
-msgstr "Несвободная документация"
-
-msgid "Data"
-msgstr "Данные"
-
-msgid "Free Data'"
-msgstr "Свободные данные"
-
-msgid "Non-Free Data"
-msgstr "Несвободные данные"
-
-msgid "Art"
-msgstr "Искусство"
-
-msgid "Sharable Art"
-msgstr "Разделяемое искусство"
-
-msgid "Non-Sharable Art"
-msgstr "Несвободное искусство"
-
-#
-# Data Base LK_ContractType table
-#
-msgid "Vacation cover"
-msgstr "Во время каникул"
-
-msgid "Maternity cover"
-msgstr "Материнское сопровождение"
-
-msgid "Training"
-msgstr "Тренировка"
-
-msgid "By hours"
-msgstr "По часам"
-
-msgid "By project"
-msgstr "По проектам"
-
-msgid "Partner"
-msgstr "Партнёр"
-
-msgid "Freelance"
-msgstr "Свободный разработчик"
-
-msgid "Temporary"
-msgstr "Временно"
-
-msgid "Half time"
-msgstr "Половину рабочего дня"
-
-msgid "Full time"
-msgstr "Полный рабочий день"
-
-msgid "Indefinite"
-msgstr "Сколько угодно"
-
-#
-# Data Base LB_ByPeriod table
-#
-msgid "by year"
-msgstr "по годам"
-
-msgid "by month"
-msgstr "по месяцам"
-
-msgid "by week"
-msgstr "по неделям"
-
-msgid "by day"
-msgstr "по дням"
-
-msgid "by hour"
-msgstr "по часам"
-
-msgid "by project"
-msgstr "по проектам"
-
-#
-# Data Base LM_TimeUnits table
-#
-msgid "hours"
-msgstr "часы"
-
-msgid "days"
-msgstr "дни"
-
-msgid "weeks"
-msgstr "недели"
-
-msgid "months"
-msgstr "месяцы"
-
-msgid "years"
-msgstr "годы"
-
-#
-# Data Base LE_Employability table
-#
-msgid "Working"
-msgstr "Работа"
-
-msgid "Studying"
-msgstr "Учёба"
-
-msgid "Without job"
-msgstr "Без работы"
-
-#
-# Data Base LS_SpokenLevel table
-#
-msgid "Null"
-msgstr "Не разговариваю"
-
-msgid "Basic"
-msgstr "Общие фразы"
-
-msgid "Conversation"
-msgstr "Могу поддерживать"
-
-msgid "Negotiation"
-msgstr "Могу поддерживать беседу"
-
-msgid "Native"
-msgstr "Родной"
-
-#
-# Data Base LW_WrittenLevel table
-#
-msgid "Medium"
-msgstr "Средний"
-
-msgid "High"
-msgstr "Высокий"
-
-msgid "Excellent"
-msgstr "Отличный"
-
-#
-# Data Base LZ_ApplicationStates table
-#
-msgid "Received"
-msgstr "Получено"
-
-msgid "In process"
-msgstr "В процессе"
-
-msgid "Ruled out"
-msgstr "Отклонено"
-
-msgid "Finalist"
-msgstr "В финале"
-
-msgid "Selected"
-msgstr "Выбрано"
-
-#
-# Data Base LG_KnowledgeLevel table
-#
-msgid "Good"
-msgstr "Хорошее"
-
-msgid "Master"
-msgstr "Мастерское"
-
-msgid "Expert"
-msgstr "Экспертное"
-
-msgid "internals"
-msgstr "внутренности"
-
-#
-# Data Base LN_ExperienceLevel table
-#
-msgid "up to 6 months"
-msgstr "до 6 месяцев"
-
-msgid "up to 2 years"
-msgstr "до 2 лет"
-
-msgid "up to 5 years"
-msgstr "до 5 лет"
-
-msgid "up to 10 years"
-msgstr "до 10 лет"
-
-msgid "more than 10 years"
-msgstr "более 10 лет"

@@ -149,6 +149,7 @@ msgstr "Uscita corretta."
 
 # msgid "The %2GNU Herds%3 project is an official part of %1the GNU Project%3."
 # msgstr "Il progetto %2GNU Herds%3 è ufficialmente parte del %1Progetto GNU%3."
+
 #
 # foot.tpl
 #
@@ -797,9 +798,6 @@ msgstr "Data dell'offerta"
 msgid "Offered by"
 msgstr "Offerta da"
 
-msgid "Any"
-msgstr "Chiunque"
-
 msgid "telework"
 msgstr "telelavoro"
 
@@ -1137,8 +1135,10 @@ msgstr "I campi Password sono diversi"
 
 #XXX: msgid "If you want to qualify to vote, you have to supply both the contributions and your public key."
 #XXX: msgstr "Se vuoi ottenere il diritto di voto, devi fornire sia i contributi che la tua chiave pubblica."
+
 #XXX: msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
 #XXX: msgstr "Il tuo contributo alla comunità del Software Libero sarà valutata. Il risultato ti sarà inviato via email, con l'abilitazione della capacità di voto in caso di valutazione positiva."
+
 #
 # Company form: Company_form.tpl, Company_form.php
 #
@@ -1158,6 +1158,7 @@ msgstr "Cancellami"
 # Company_form.php
 # msgid ""
 # msgstr ""
+
 #
 # non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
 #
@@ -1178,6 +1179,7 @@ msgstr "Nome"
 # non-profit_Organization_form.php
 # msgid ""
 # msgstr ""
+
 #
 # Qualifications form: Qualifications_form.tpl, Qualifications_form.php
 #
@@ -1326,6 +1328,7 @@ msgstr "Livello scritto"
 # Qualifications_certifications_form.tpl
 # msgid ""
 # msgstr ""
+
 # Qualifications_projects_form.tpl
 msgid "Add URIs to the work you or your staff have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you or your staff expose your knowledge, rationales, feedback, etc."
 msgstr "Aggiungi l'URIs di lavori che tu o il tuo personale a contribuito a progetti di Software Libero publici. E' buona pratica aggiungere più di un URIs per progetto, aggiungendo anche URIs a tuoi personali commit, o threads di conversazione di posta elettronica dove tu o il tuo personale esponete le vostre conoscenze, ragionamenti, commenti, etc."
@@ -1419,9 +1422,11 @@ msgstr "Riferimento alla tua offerta"
 # Job_Offer_profiles_etc_form.tpl
 # msgid ""
 # msgstr ""
+
 # Job_Offer_skills_form.tpl
 # msgid ""
 # msgstr ""
+
 # Job_Offer_languages_form.tpl
 msgid "Required languages"
 msgstr "Lingue richieste"
@@ -1429,9 +1434,11 @@ msgstr "Lingue richieste"
 # Job_Offer_certifications_form.tpl
 # msgid ""
 # msgstr ""
+
 # Job_Offer_projects_form.tpl
 # msgid ""
 # msgstr ""
+
 # Job_Offer_location_form.tpl
 msgid "Do not fill any address field if the offer is Telecommute."
 msgstr "Non inserire nessuna offerta se si tratta di Telelavoro."
@@ -1439,11 +1446,14 @@ msgstr "Non inserire nessuna offerta se si tratta di Telelavoro."
 # Job_Offer_contract_form.tpl
 # msgid ""
 # msgstr ""
+
 # Job_Offer_form.php
 # msgid ""
 # msgstr ""
+
 #
 # Manage_Job_Offer_Applications_form.tpl
+#
 msgid "Manage the job offer applications"
 msgstr "Gestisci le candidature alle offerte di Lavoro"
 
@@ -1592,352 +1602,3 @@ msgstr "ERRORE: Connessione al database fallita!."
 
 msgid "Data base under maintenance. Excuse the inconveniences."
 msgstr "Database in manutenzione. Ci scusiamo per l'inconveniente."
-
-#
-# Data Base LF_FieldProfiles table
-#
-msgid "Data Bases"
-msgstr "Data Base"
-
-msgid "Networks"
-msgstr "Reti"
-
-msgid "Systems"
-msgstr "Sistemi"
-
-msgid "Security"
-msgstr "Sicurezza"
-
-msgid "Web"
-msgstr "Web"
-
-msgid "Creative design"
-msgstr "Design creativo"
-
-msgid "Quality Assurance"
-msgstr "Controllo di qualità"
-
-#
-# Data Base LP_ProfessionalProfiles table
-#
-msgid "General Manager"
-msgstr "Direttore Generale"
-
-msgid "HH.RR."
-msgstr "RR.HH."
-
-msgid "Marketing"
-msgstr "Marketing"
-
-msgid "Logistics and Distribution"
-msgstr "Logistica e Distribuzione"
-
-msgid "Commercial - Seller"
-msgstr "Commerciale - Venditore"
-
-msgid "Customer support"
-msgstr "Supporto clienti"
-
-msgid "Research and Development"
-msgstr "Ricerca e Sviluppo"
-
-msgid "Account Manager"
-msgstr "Gestore Account"
-
-msgid "Project Manager"
-msgstr "Gestore Progetto"
-
-msgid "Architect"
-msgstr "Architetto"
-
-msgid "Auditor"
-msgstr "Revisore"
-
-msgid "Adviser"
-msgstr "Consigliere"
-
-msgid "Technician"
-msgstr "Tecnico"
-
-msgid "Functional Analyst"
-msgstr "Analista funzionale"
-
-msgid "Technician Analyst"
-msgstr "Analista tecnico"
-
-msgid "Developer"
-msgstr "Sviluppatore"
-
-msgid "Beta tester"
-msgstr "Beta tester"
-
-msgid "Administrator"
-msgstr "Amministratore"
-
-msgid "Documentalist"
-msgstr "Documentatore"
-
-msgid "Technical Redactor"
-msgstr "Redattore tecnico"
-
-msgid "Teacher"
-msgstr "Insegnante"
-
-msgid "Translator"
-msgstr "Traduttore"
-
-msgid "Operator"
-msgstr "Operatore"
-
-msgid "Technical support"
-msgstr "Supporto tecnico"
-
-msgid "Helpdesk"
-msgstr "Helpdesk"
-
-#
-# Data Base LA_AcademicQualifications table
-#
-msgid "Enrolled at a University (Undergraduate)"
-msgstr "Studente universitario (Non laureato)"
-
-msgid "Bachelor's degree (1st University cycle)"
-msgstr "Laureato (1º ciclo universitario)"
-
-msgid "Master's degree (2nd University cycle)"
-msgstr "Master/Post-Laurea (2º ciclo universitario)"
-
-msgid "Doctoral degree (3rd University cycle)"
-msgstr "Dottorato di ricerca (3º ciclo universitario)"
-
-msgid "Other"
-msgstr "Altro"
-
-#
-# Data Base LH_Skills table
-#
-msgid "Pending"
-msgstr "In attesa"
-
-msgid "Unknown"
-msgstr "Sconosciuto"
-
-msgid "Abstract"
-msgstr "Astratto"
-
-msgid "Free Software"
-msgstr "Software Libero"
-
-msgid "Almost-Free Software"
-msgstr "Software quasi-Libero"
-
-msgid "Partially-Free Software"
-msgstr "Software parzialmente-Libero"
-
-msgid "Non-Free Software"
-msgstr "Software NON-libero"
-
-msgid "Hardware"
-msgstr "Hardware"
-
-msgid "Documentation"
-msgstr "Documentazione"
-
-msgid "Free Documentation"
-msgstr "Documentazione Libera"
-
-msgid "Non-Free Documentation"
-msgstr "Documentazione NON-libera"
-
-msgid "Data"
-msgstr "Dati"
-
-msgid "Free Data'"
-msgstr "Dati Liberi"
-
-msgid "Non-Free Data"
-msgstr "Dati NON-liberi"
-
-msgid "Art"
-msgstr "Arte"
-
-msgid "Sharable Art"
-msgstr "Arte Condivisibile"
-
-msgid "Non-Sharable Art"
-msgstr "Arte NON-Condivisibile"
-
-#
-# Data Base LK_ContractType table
-#
-msgid "Vacation cover"
-msgstr "Copertura vacanze"
-
-msgid "Maternity cover"
-msgstr "Copertura maternità"
-
-msgid "Training"
-msgstr "Formazione"
-
-msgid "By hours"
-msgstr "Per ore"
-
-msgid "By project"
-msgstr "Per progetto"
-
-msgid "Partner"
-msgstr "Partner"
-
-msgid "Freelance"
-msgstr "Freelance"
-
-msgid "Temporary"
-msgstr "Temporaneo"
-
-msgid "Half time"
-msgstr "Half time"
-
-msgid "Full time"
-msgstr "Full time"
-
-msgid "Indefinite"
-msgstr "Indefinito"
-
-#
-# Data Base LB_ByPeriod table
-#
-msgid "by year"
-msgstr "per anno"
-
-msgid "by month"
-msgstr "per mese"
-
-msgid "by week"
-msgstr "per settimana"
-
-msgid "by day"
-msgstr "per giorno"
-
-msgid "by hour"
-msgstr "per ora"
-
-msgid "by project"
-msgstr "per progetto"
-
-#
-# Data Base LM_TimeUnits table
-#
-msgid "hours"
-msgstr "ore"
-
-msgid "days"
-msgstr "giorni"
-
-msgid "weeks"
-msgstr "settimane"
-
-msgid "months"
-msgstr "mesi"
-
-msgid "years"
-msgstr "anni"
-
-#
-# Data Base LE_Employability table
-#
-msgid "Working"
-msgstr "Lavorando"
-
-msgid "Working and Studying"
-msgstr "Lavorando e Studiando"
-
-msgid "Freelance and Studying"
-msgstr "Freelance e Studiando"
-
-msgid "Studying"
-msgstr "Studiando"
-
-msgid "Without job"
-msgstr "Senza impiego"
-
-#
-# Data Base LS_SpokenLevel table
-#
-msgid "Null"
-msgstr "Nessuno"
-
-msgid "Basic"
-msgstr "Base"
-
-msgid "Conversation"
-msgstr "Conversazione"
-
-msgid "Negotiation"
-msgstr "Negoziazione"
-
-msgid "Native"
-msgstr "Nativo"
-
-#
-# Data Base LW_WrittenLevel table
-#
-msgid "Medium"
-msgstr "Medio"
-
-msgid "High"
-msgstr "Alto"
-
-msgid "Excellent"
-msgstr "Eccellente"
-
-#
-# Data Base LZ_ApplicationStates table
-#
-msgid "Received"
-msgstr "Ricevuto"
-
-msgid "In process"
-msgstr "In processo"
-
-msgid "Ruled out"
-msgstr "Scartato"
-
-msgid "Finalist"
-msgstr "Finalista"
-
-msgid "Selected"
-msgstr "Selezionato"
-
-#
-# Data Base LG_KnowledgeLevel table
-#
-msgid "Good"
-msgstr "Buono"
-
-msgid "Master"
-msgstr "Maestro"
-
-msgid "Expert"
-msgstr "Esperto"
-
-msgid "internals"
-msgstr "internals"
-
-#
-# Data Base LN_ExperienceLevel table
-#
-msgid "up to 6 months"
-msgstr "fino a 6 mesi"
-
-msgid "up to 2 years"
-msgstr "fino a 2 anni"
-
-msgid "up to 5 years"
-msgstr "fino a 5 anni"
-
-msgid "up to 10 years"
-msgstr "fino a 10 anni"
-
-msgid "more than 10 years"
-msgstr "più di 10 anni"
-

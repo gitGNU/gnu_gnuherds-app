@@ -17,16 +17,19 @@
 
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
+require_once "../lib/Translator.php";
 
 
 class Skills
 {
 	private $postgresql;
+	private $translator;
 
 
 	function __construct()
 	{
 		$this->postgresql = new PostgreSQL();
+		$this->translator = new Translator();
 	}
 
 
@@ -100,7 +103,15 @@ class Skills
 	public function getSkillTagList()
 	{
 		$sqlQuery = "SELECT LH_Id FROM LH_Skills";
-		return $this->postgresql->getOneField($sqlQuery,0);
+		$skillTagsIdList = $this->postgresql->getOneField($sqlQuery,0);
+
+		$skillTags = array_combine($skillTagsIdList, $skillTagsIdList);
+
+		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
+		$skillTags = $this->translator->t_array($skillTags, 'database');
+		// asort($skillTags);  Note: The 'Id' is sort from the DataBase so we do not need sort this list after translate it.
+
+		return $skillTags;
 	}
 
 
@@ -110,12 +121,7 @@ class Skills
 		$skillKnowledgeLevels = array_combine($skillKnowledgeLevelsId, $skillKnowledgeLevelsId);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the skill using gettext().
-		while (current($skillKnowledgeLevels))
-		{
-			$skillKnowledgeLevels[key($skillKnowledgeLevels)] = gettext( trim( current($skillKnowledgeLevels) ) );
-			next($skillKnowledgeLevels);
-		}
-
+		$skillKnowledgeLevels = $this->translator->t_array($skillKnowledgeLevels, 'database');
 		// asort($skillKnowledgeLevels); // Note: The 'Id' is sort from the Data Base so we do not need sort this list after translate it.
 
 		return $skillKnowledgeLevels;
@@ -134,12 +140,7 @@ class Skills
 		$skillExperienceLevels = array_combine($skillExperienceLevelsId, $skillExperienceLevelsId);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the skill using gettext().
-		while (current($skillExperienceLevels))
-		{
-			$skillExperienceLevels[key($skillExperienceLevels)] = gettext( trim( current($skillExperienceLevels) ) );
-			next($skillExperienceLevels);
-		}
-
+		$skillExperienceLevels = $this->translator->t_array($skillExperienceLevels, 'database');
 		// asort($skillExperienceLevels); // Note: The 'Id' is sort from the Data Base so we do not need sort this list after translate it.
 
 		return $skillExperienceLevels;

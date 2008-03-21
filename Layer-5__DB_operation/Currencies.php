@@ -17,16 +17,19 @@
 
 
 require_once "../Layer-5__DB_operation/PostgreSQL.php";
+require_once "../lib/Translator.php";
 
 
 class Currencies
 {
 	private $postgresql;
+	private $translator;
 
 
 	function __construct()
 	{
 		$this->postgresql = new PostgreSQL();
+		$this->translator = new Translator();
 	}
 
 
@@ -37,12 +40,7 @@ class Currencies
 		$currencies = array_combine($currenciesThreeLetter, $currenciesName);
 
 		// This method is used to fill the combo box in the forms, so we sort it according to the language using gettext().
-		while (current($currencies))
-		{
-			$currencies[key($currencies)] = gettext( trim( current($currencies) ) );
-			next($currencies);
-		}
-
+		$currencies = $this->translator->t_array($currencies, 'iso_4217');
 		asort($currencies); // Note After translate it, we sort this ComboBox.
 
 		return $currencies;

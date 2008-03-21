@@ -1,0 +1,385 @@
+# Authors: Davi Leal
+#
+# Copyright (C) 2006, 2007 Davi Leal <davi at leals dot com>
+#
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU Affero General Public License as published by the Free Software Foundation,
+# either version 3 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License along with this
+# program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: messages 0.0.1\n"
+"Report-Msgid-Bugs-To: davi@leals.com\n"
+"POT-Creation-Date: 2008-02-27 19:12+0200\n"
+"PO-Revision-Date: 2008-02-27 13:48+0100\n"
+"Last-Translator: Nickolay V. Shmyrev <nshmyrev@yandex.ru>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#
+# Data Base LF_FieldProfiles table
+#
+msgid "Data Bases"
+msgstr "Базы данных"
+
+msgid "Networks"
+msgstr "Сетевые приложения"
+
+msgid "Systems"
+msgstr "Системное программирование"
+
+msgid "Security"
+msgstr "Безопасность"
+
+msgid "Web"
+msgstr "Веб"
+
+msgid "Creative design"
+msgstr "Дизайн"
+
+msgid "Quality Assurance"
+msgstr "Контроль качества"
+
+#
+# Data Base LP_ProfessionalProfiles table
+#
+msgid "General Manager"
+msgstr "Управление"
+
+msgid "HH.RR."
+msgstr "Управление персоналом"
+
+msgid "Marketing"
+msgstr "Маркетинг"
+
+msgid "Logistics and Distribution"
+msgstr "Логистика и распространение"
+
+msgid "Commercial - Seller"
+msgstr "Коммерческие продажи"
+
+msgid "Customer support"
+msgstr "Поддержка клиентов"
+
+msgid "Research and Development"
+msgstr "Исследования и разработка"
+
+msgid "Account Manager"
+msgstr "Управление безопасностью"
+
+msgid "Project Manager"
+msgstr "Менеджер проекта"
+
+msgid "Architect"
+msgstr "Архитектор"
+
+msgid "Auditor"
+msgstr "Аудитор"
+
+msgid "Adviser"
+msgstr "Советник"
+
+msgid "Technician"
+msgstr "Технический специалист"
+
+msgid "Functional Analyst"
+msgstr "Функциональный аналитик"
+
+msgid "Technician Analyst"
+msgstr "Технический аналитик"
+
+msgid "Developer"
+msgstr "Разработчик"
+
+msgid "Beta tester"
+msgstr "Тестировщик"
+
+msgid "Administrator"
+msgstr "Администратор"
+
+msgid "Documentalist"
+msgstr "Создатель документации"
+
+msgid "Technical Redactor"
+msgstr "Технический редактор"
+
+msgid "Teacher"
+msgstr "Учитель"
+
+msgid "Translator"
+msgstr "Переводчик"
+
+msgid "Operator"
+msgstr "Оператор"
+
+msgid "Technical support"
+msgstr "Техническая поддержка"
+
+msgid "Helpdesk"
+msgstr "Поддержка пользователей"
+
+#
+# Data Base LA_AcademicLevels table
+#
+#, fuzzy
+msgid "Enrolled at a University (Undergraduate)"
+msgstr "Незаконченное высшее"
+
+#, fuzzy
+msgid "Bachelor's degree (1st University cycle)"
+msgstr "Высшее образование ()"
+
+#, fuzzy
+msgid "Master's degree (2nd University cycle)"
+msgstr "Аспирантура ()"
+
+#, fuzzy
+msgid "Doctoral degree (3rd University cycle)"
+msgstr "Doctorado,-a (3º ciclo Universitario)"
+msgstr "Учёная степень ()"
+
+msgid "Other"
+msgstr "Другое"
+
+#
+# Data Base LH_Skills table
+#
+msgid "Pending"
+msgstr "В обработке"
+
+msgid "Unknown"
+msgstr "Неизвестно"
+
+msgid "Abstract"
+msgstr "Абстрактное"
+
+msgid "Free Software"
+msgstr "Свободное ПО"
+
+msgid "Almost-Free Software"
+msgstr "Почти свободное ПО"
+
+msgid "Partially-Free Software"
+msgstr "Частично свободное ПО"
+
+msgid "Non-Free Software"
+msgstr "Несвободное ПО"
+
+msgid "Hardware"
+msgstr "Аппаратура"
+
+msgid "Documentation"
+msgstr "Документация"
+
+msgid "Free Documentation"
+msgstr "Свободная документация"
+
+msgid "Non-Free Documentation"
+msgstr "Несвободная документация"
+
+msgid "Data"
+msgstr "Данные"
+
+msgid "Free Data"
+msgstr "Свободные данные"
+
+msgid "Non-Free Data"
+msgstr "Несвободные данные"
+
+msgid "Art"
+msgstr "Искусство"
+
+msgid "Sharable Art"
+msgstr "Разделяемое искусство"
+
+msgid "Non-Sharable Art"
+msgstr "Несвободное искусство"
+
+#
+# Data Base LK_ContractType table
+#
+msgid "Any"
+msgstr "Любой"
+
+msgid "Vacation cover"
+msgstr "Во время каникул"
+
+msgid "Maternity cover"
+msgstr "Материнское сопровождение"
+
+msgid "Training"
+msgstr "Тренировка"
+
+msgid "By hours"
+msgstr "По часам"
+
+msgid "By project"
+msgstr "По проектам"
+
+msgid "Partner"
+msgstr "Партнёр"
+
+msgid "Freelance"
+msgstr "Свободный разработчик"
+
+msgid "Temporary"
+msgstr "Временно"
+
+msgid "Half time"
+msgstr "Половину рабочего дня"
+
+msgid "Full time"
+msgstr "Полный рабочий день"
+
+msgid "Indefinite"
+msgstr "Сколько угодно"
+
+#
+# Data Base LB_ByPeriod table
+#
+msgid "by year"
+msgstr "по годам"
+
+msgid "by month"
+msgstr "по месяцам"
+
+msgid "by week"
+msgstr "по неделям"
+
+msgid "by day"
+msgstr "по дням"
+
+msgid "by hour"
+msgstr "по часам"
+
+msgid "by project"
+msgstr "по проектам"
+
+#
+# Data Base LM_TimeUnits table
+#
+msgid "hours"
+msgstr "часы"
+
+msgid "days"
+msgstr "дни"
+
+msgid "weeks"
+msgstr "недели"
+
+msgid "months"
+msgstr "месяцы"
+
+msgid "years"
+msgstr "годы"
+
+#
+# Data Base LE_Employability table
+#
+msgid "Working"
+msgstr "Работа"
+
+#, fuzzy
+msgid "Working and Studying"
+msgstr "Trabajando y estudiando"
+
+#, fuzzy
+msgid "Freelance and Studying"
+msgstr "Freelance y estudiando"
+
+msgid "Studying"
+msgstr "Учёба"
+
+msgid "Without job"
+msgstr "Без работы"
+
+#
+# Data Base LS_SpokenLevel table
+#
+msgid "Null"
+msgstr "Не разговариваю"
+
+msgid "Basic"
+msgstr "Общие фразы"
+
+msgid "Conversation"
+msgstr "Могу поддерживать"
+
+msgid "Negotiation"
+msgstr "Могу поддерживать беседу"
+
+msgid "Native"
+msgstr "Родной"
+
+#
+# Data Base LW_WrittenLevel table
+#
+msgid "Medium"
+msgstr "Средний"
+
+msgid "High"
+msgstr "Высокий"
+
+msgid "Excellent"
+msgstr "Отличный"
+
+#
+# Data Base LZ_ApplicationStates table
+#
+msgid "Received"
+msgstr "Получено"
+
+msgid "In process"
+msgstr "В процессе"
+
+msgid "Ruled out"
+msgstr "Отклонено"
+
+msgid "Finalist"
+msgstr "В финале"
+
+msgid "Selected"
+msgstr "Выбрано"
+
+#
+# Data Base LG_KnowledgeLevel table
+#
+msgid "Good"
+msgstr "Хорошее"
+
+msgid "Master"
+msgstr "Мастерское"
+
+msgid "Expert"
+msgstr "Экспертное"
+
+msgid "internals"
+msgstr "внутренности"
+
+#
+# Data Base LN_ExperienceLevel table
+#
+msgid "up to 6 months"
+msgstr "до 6 месяцев"
+
+msgid "up to 2 years"
+msgstr "до 2 лет"
+
+msgid "up to 5 years"
+msgstr "до 5 лет"
+
+msgid "up to 10 years"
+msgstr "до 10 лет"
+
+msgid "more than 10 years"
+msgstr "более 10 лет"
