@@ -1210,6 +1210,9 @@ msgstr "Guardar y terminar la edición"
 msgid "Save and move to section"
 msgstr "Guardar y mover a sección"
 
+msgid "Academic"
+msgstr "Académico"
+
 msgid "FS projects"
 msgstr "Proyectos SL"
 
@@ -1240,6 +1243,34 @@ msgstr "Perfiles profesionales"
 
 msgid "Field profiles"
 msgstr "Perfiles de campo"
+
+# Qualifications_academic_form.tpl
+msgid "Degree"
+msgstr "Título"
+
+msgid "Academic level"
+msgstr "Nivel académico"
+
+msgid "Degree granted"
+msgstr "Título otorgado"
+
+msgid "Start date"
+msgstr "Fecha de comienzo"
+
+msgid "Finish date"
+msgstr "Fecha de finalización"
+
+msgid "Institution"
+msgstr "Institución"
+
+msgid "University or education institution"
+msgstr "Universidad o institución educativa"
+
+msgid "Institution's URI"
+msgstr "URI de la intitución"
+
+msgid "Short comment"
+msgstr "Comentario corto"
 
 # Qualifications_skills_form.tpl
 msgid "Some fields offer suggestions."
@@ -1289,6 +1320,10 @@ msgstr "Esta habilidad es Hardware."
 
 msgid "This skill is Documentation."
 msgstr "Esta habilidad es documentación."
+
+# I, the Spanish translator, know that the Spanish word 'es' is singular and 'Datos' is plural. My translation tries to keep 'es' connected to 'habilidad' which is singular.
+msgid "This skill is Data."
+msgstr "Esta habilidad es Datos."
 
 msgid "This skill is Art."
 msgstr "Esta habilidad es Arte."

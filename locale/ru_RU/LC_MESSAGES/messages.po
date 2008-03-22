@@ -1215,6 +1215,10 @@ msgstr "Сохранить и закончить правку"
 msgid "Save and move to section"
 msgstr "Сохранить и перейти к разделу"
 
+#, fuzzy
+msgid "Academic"
+msgstr "Académico"
+
 msgid "FS projects"
 msgstr "Проекты свободного ПО"
 
@@ -1245,6 +1249,43 @@ msgstr "Профили профессионалов"
 
 msgid "Field profiles"
 msgstr "Поля профиля"
+
+# Qualifications_academic_form.tpl
+#, fuzzy
+msgid "Degree"
+msgstr "Título"
+
+#, fuzzy
+msgid "Academic level"
+msgstr "Nivel académico"
+
+#, fuzzy
+msgid "Degree granted"
+msgstr "Título otorgado"
+
+#, fuzzy
+msgid "Start date"
+msgstr "Fecha de comienzo"
+
+#, fuzzy
+msgid "Finish date"
+msgstr "Fecha de finalización"
+
+#, fuzzy
+msgid "Institution"
+msgstr "Institución"
+
+#, fuzzy
+msgid "University or education institution"
+msgstr "Universidad o institución educativa"
+
+#, fuzzy
+msgid "Institution's URI"
+msgstr "URI de la intitución"
+
+#, fuzzy
+msgid "Short comment"
+msgstr "Comentario corto"
 
 # Qualifications_skills_form.tpl
 msgid "Some fields offer suggestions."
@@ -1294,6 +1335,10 @@ msgstr "Этот навык связан с оборудованием."
 
 msgid "This skill is Documentation."
 msgstr "Этот навык связан с документацией"
+
+#, fuzzy
+msgid "This skill is Data."
+msgstr "Esta habilidad es Datos."
 
 msgid "This skill is Art."
 msgstr "Этот навык связан и искусством."

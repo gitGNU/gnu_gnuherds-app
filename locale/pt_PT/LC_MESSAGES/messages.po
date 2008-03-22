@@ -1209,6 +1209,10 @@ msgstr "Gravar e terminar a edição"
 msgid "Save and move to section"
 msgstr "Gravar e ir para a secção"
 
+#, fuzzy
+msgid "Academic"
+msgstr "Académico"
+
 msgid "FS projects"
 msgstr "Projectos de SL"
 
@@ -1239,6 +1243,43 @@ msgstr "Perfis profissionais"
 
 msgid "Field profiles"
 msgstr "Perfis de áreas"
+
+# Qualifications_academic_form.tpl
+#, fuzzy
+msgid "Degree"
+msgstr "Título"
+
+#, fuzzy
+msgid "Academic level"
+msgstr "Nivel académico"
+
+#, fuzzy
+msgid "Degree granted"
+msgstr "Título otorgado"
+
+#, fuzzy
+msgid "Start date"
+msgstr "Fecha de comienzo"
+
+#, fuzzy
+msgid "Finish date"
+msgstr "Fecha de finalización"
+
+#, fuzzy
+msgid "Institution"
+msgstr "Institución"
+
+#, fuzzy
+msgid "University or education institution"
+msgstr "Universidad o institución educativa"
+
+#, fuzzy
+msgid "Institution's URI"
+msgstr "URI de la intitución"
+
+#, fuzzy
+msgid "Short comment"
+msgstr "Comentario corto"
 
 # Qualifications_skills_form.tpl
 msgid "Some fields offer suggestions."
@@ -1288,6 +1329,10 @@ msgstr "Este conhecimento é Hardware."
 
 msgid "This skill is Documentation."
 msgstr "Este conhecimento é de Documentação."
+
+#, fuzzy
+msgid "This skill is Data."
+msgstr "Esta habilidad es Datos."
 
 msgid "This skill is Art."
 msgstr "Este conhecimento é Artístico."
