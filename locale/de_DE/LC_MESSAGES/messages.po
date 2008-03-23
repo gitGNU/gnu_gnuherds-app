@@ -40,9 +40,6 @@ msgstr "Assoziation der Freie Software"
 msgid "%1Download the project source code!%2"
 msgstr "%1Faça download do código fonte do projecto!%2"
 
-msgid "Project state"
-msgstr "Stand des Projektes"
-
 #
 # menu.tpl
 #
@@ -129,6 +126,10 @@ msgstr "Neue Person?"
 #, fuzzy
 msgid "Register company"
 msgstr "Neues Unternehmen?"
+
+#, fuzzy
+msgid "Register non-profit organization"
+msgstr "Registrar organización sin ánimo de lucro"
 
 #, fuzzy
 msgid "Register non-profit"
@@ -956,9 +957,6 @@ msgstr "Datum des Angebots"
 msgid "Offered by"
 msgstr "Arbeiter, -in"
 
-msgid "Any"
-msgstr "Irgendeine"
-
 msgid "telework"
 msgstr "Tele-Arbeit"
 
@@ -1185,6 +1183,7 @@ msgstr "Siguiendo la huella de organizaciones de éxito como %1Best Western%2 o 
 #
 # Person form: Person_form.tpl, Person_form.php
 #
+# Person_form.tpl
 #, fuzzy
 msgid "Read the %1Membership%2 Charter section."
 msgstr "Lea el apartado %1Socios%2 de los Estatutos."
@@ -1370,10 +1369,6 @@ msgstr "Lösch mich"
 #
 # non-profit_Organization_form.tpl
 #, fuzzy
-msgid "New non-profit organization"
-msgstr "Nova organização sem fins lucrativos"
-
-#, fuzzy
 msgid "Update non-profit organization data"
 msgstr "Actualizar os dados da organização sem fins lucrativos"
 
@@ -1437,6 +1432,10 @@ msgid "Save and move to section"
 msgstr "Gravar e ir para a secção"
 
 #, fuzzy
+msgid "Academic"
+msgstr "Académico"
+
+#, fuzzy
 msgid "FS projects"
 msgstr "FS projekten"
 
@@ -1475,6 +1474,43 @@ msgstr "Perfiles profesionales"
 #, fuzzy
 msgid "Field profiles"
 msgstr "Perfiles de campo"
+
+# Qualifications_academic_form.tpl
+#, fuzzy
+msgid "Degree"
+msgstr "Título"
+
+#, fuzzy
+msgid "Academic level"
+msgstr "Nivel académico"
+
+#, fuzzy
+msgid "Degree granted"
+msgstr "Título otorgado"
+
+#, fuzzy
+msgid "Start date"
+msgstr "Fecha de comienzo"
+
+#, fuzzy
+msgid "Finish date"
+msgstr "Fecha de finalización"
+
+#, fuzzy
+msgid "Institution"
+msgstr "Institución"
+
+#, fuzzy
+msgid "University or education institution"
+msgstr "Universidad o institución educativa"
+
+#, fuzzy
+msgid "Institution's URI"
+msgstr "URI de la intitución"
+
+#, fuzzy
+msgid "Short comment"
+msgstr "Comentario corto"
 
 # Qualifications_skills_form.tpl
 #, fuzzy
@@ -1541,6 +1577,10 @@ msgid "This skill is Documentation."
 msgstr "Este conhecimento é de Documentação."
 
 #, fuzzy
+msgid "This skill is Data."
+msgstr "Esta habilidad es Datos."
+
+#, fuzzy
 msgid "This skill is Art."
 msgstr "Este conhecimento é Artístico."
 
@@ -1570,10 +1610,6 @@ msgstr "Manter como está"
 
 # Qualifications_languages_form.tpl
 #, fuzzy
-msgid "Staff with the below languages:"
-msgstr "Colaboradores com conhecimentos nos seguintes idiomas:"
-
-#, fuzzy
 msgid "Add idioms and theirs spoken and written levels"
 msgstr "Adicionar idiomas e seus níveis oral e escrito"
 
@@ -1599,9 +1635,6 @@ msgid "Project"
 msgstr "Proyecto"
 
 # Qualifications_location_form.tpl
-msgid "Staff:"
-msgstr "Colaborador:"
-
 #, fuzzy
 msgid "Available to travel"
 msgstr "Dispuesto a viajar"
@@ -1931,378 +1964,3 @@ msgstr "ERROR: ¡Ha fallado la conexión con la base de datos!."
 #, fuzzy
 msgid "Data base under maintenance. Excuse the inconveniences."
 msgstr "Base de datos en mantenimiento. Disculpen las molestias."
-
-#
-# Data Base LF_FieldProfiles table
-#
-msgid "Data Bases"
-msgstr "Datenbank"
-
-msgid "Networks"
-msgstr "Netzwerk"
-
-msgid "Systems"
-msgstr "Systeme"
-
-msgid "Security"
-msgstr "Sicherheit"
-
-msgid "Web"
-msgstr "WEB"
-
-#, fuzzy
-msgid "Creative design"
-msgstr "Diseño creativo"
-
-msgid "Quality Assurance"
-msgstr "Qualitätskontrolle"
-
-#
-# Data Base LP_ProfessionalProfiles table
-#
-msgid "General Manager"
-msgstr "Generalmanager"
-
-msgid "HH.RR."
-msgstr "Personalabteilung"
-
-msgid "Marketing"
-msgstr "Marketing"
-
-msgid "Logistics and Distribution"
-msgstr "Logistik und Vertrieb"
-
-msgid "Commercial - Seller"
-msgstr "Verkauf"
-
-msgid "Customer support"
-msgstr "Kundenberatung"
-
-msgid "Research and Development"
-msgstr "Forschung und Entwicklung"
-
-msgid "Account Manager"
-msgstr "Accountmanager"
-
-msgid "Project Manager"
-msgstr "Projektmanager"
-
-msgid "Architect"
-msgstr "Architekt"
-
-msgid "Auditor"
-msgstr "Prüfer"
-
-msgid "Adviser"
-msgstr "Berater"
-
-msgid "Technician"
-msgstr "Technik"
-
-#, fuzzy
-msgid "Functional Analyst"
-msgstr "Analista funcional"
-
-#, fuzzy
-msgid "Technician Analyst"
-msgstr "Analista técnico"
-
-msgid "Developer"
-msgstr "Entwickler"
-
-#, fuzzy
-msgid "Beta tester"
-msgstr "Beta tester"
-
-msgid "Administrator"
-msgstr "Sachbearbeiter"
-
-#, fuzzy
-msgid "Documentalist"
-msgstr "Documentalista"
-
-#, fuzzy
-msgid "Technical Redactor"
-msgstr "Redactor técnico"
-
-msgid "Teacher"
-msgstr "Lehrer"
-
-msgid "Translator"
-msgstr "Übersetzer"
-
-msgid "Operator"
-msgstr "Operator"
-
-msgid "Technical support"
-msgstr "Technische Betreuung"
-
-msgid "Helpdesk"
-msgstr "Information"
-
-#
-# Data Base LA_AcademicQualifications table
-#
-msgid "Undergraduate"
-msgstr "Student"
-
-msgid "Graduate"
-msgstr "Absolvent"
-
-msgid "Postgraduate"
-msgstr "Doktorand"
-
-msgid "Doctoral"
-msgstr "Doktor"
-
-msgid "Other"
-msgstr "Andere"
-
-#
-# Data Base LH_Skills table
-#
-#, fuzzy
-msgid "Pending"
-msgstr "Pendente"
-
-#, fuzzy
-msgid "Unknown"
-msgstr "Desconhecido"
-
-#, fuzzy
-msgid "Abstract"
-msgstr "Abstracto"
-
-#, fuzzy
-msgid "Free Software"
-msgstr "Software Livre"
-
-#, fuzzy
-msgid "Almost-Free Software"
-msgstr "Software Quase-Livre"
-
-#, fuzzy
-msgid "Partially-Free Software"
-msgstr "Software Parcialmente-Livre"
-
-#, fuzzy
-msgid "Non-Free Software"
-msgstr "Software Não-Livre"
-
-#, fuzzy
-msgid "Hardware"
-msgstr "Hardware"
-
-#, fuzzy
-msgid "Documentation"
-msgstr "Documentação"
-
-#, fuzzy
-msgid "Free Documentation"
-msgstr "Documentação Livre"
-
-#, fuzzy
-msgid "Non-Free Documentation"
-msgstr "Documentação Não-Livre"
-
-#, fuzzy
-msgid "Data"
-msgstr "Dados"
-
-#, fuzzy
-msgid "Free Data'"
-msgstr "Dados Livres"
-
-#, fuzzy
-msgid "Non-Free Data"
-msgstr "Dados Não-Livres"
-
-#, fuzzy
-msgid "Art"
-msgstr "Arte"
-
-#, fuzzy
-msgid "Sharable Art"
-msgstr "Arte Partilhável"
-
-#, fuzzy
-msgid "Non-Sharable Art"
-msgstr "Arte Não-Partilhável"
-
-#
-# Data Base LK_ContractType table
-#
-#, fuzzy
-msgid "Vacation cover"
-msgstr "Cobertura de vacaciones"
-
-#, fuzzy
-msgid "Maternity cover"
-msgstr "Cobertura de maternidad"
-
-msgid "Training"
-msgstr "Übungseinheit"
-
-msgid "By hours"
-msgstr "Nach stunden"
-
-msgid "By project"
-msgstr "Nach projekten"
-
-msgid "Partner"
-msgstr "Partner"
-
-msgid "Freelance"
-msgstr "Freiberuflich"
-
-msgid "Temporary"
-msgstr "Befristet"
-
-msgid "Half time"
-msgstr "Halbzeit"
-
-msgid "Full time"
-msgstr "Vollzeit"
-
-msgid "Indefinite"
-msgstr "Undefiniert"
-
-#
-# Data Base LB_ByPeriod table
-#
-msgid "by year"
-msgstr "nach Jahren"
-
-msgid "by month"
-msgstr "nach Monaten"
-
-msgid "by week"
-msgstr "nach Wochen"
-
-msgid "by day"
-msgstr "nach Tagen"
-
-msgid "by hour"
-msgstr "nach Stunden"
-
-msgid "by project"
-msgstr "im/auf Projekt"
-
-#
-# Data Base LM_TimeMeasurement table
-#
-msgid "hours"
-msgstr "Stunden"
-
-msgid "days"
-msgstr "Tage"
-
-msgid "weeks"
-msgstr "Wochen"
-
-msgid "months"
-msgstr "Monate"
-
-msgid "years"
-msgstr "Jahre"
-
-#
-# Data Base LE_Employability table
-#
-msgid "Working"
-msgstr "arbeiten"
-
-#, fuzzy
-msgid "Working and Studying"
-msgstr "Trabalhador-Estudante"
-
-#, fuzzy
-msgid "Freelance and Studying"
-msgstr "Trabalhador Independente e Estudante"
-
-msgid "Studying"
-msgstr "studieren"
-
-msgid "Without job"
-msgstr "Ohne Arbeit"
-
-#
-# Data Base LS_SpokenLevel table
-#
-msgid "Null"
-msgstr "Null"
-
-msgid "Basic"
-msgstr "Basik"
-
-msgid "Conversation"
-msgstr "Konversation"
-
-msgid "Negotiation"
-msgstr "Verhandlung"
-
-msgid "Native"
-msgstr "heimisch"
-
-#
-# Data Base LW_WrittenLevel table
-#
-msgid "Medium"
-msgstr "Halb"
-
-msgid "High"
-msgstr "Hoch"
-
-msgid "Excellent"
-msgstr "Exzellent"
-
-#
-# Data Base LZ_ApplicationStates table
-#
-msgid "Received"
-msgstr "empfangen"
-
-msgid "In process"
-msgstr "im Prozess"
-
-msgid "Ruled out"
-msgstr "abgelehnt"
-
-msgid "Finalist"
-msgstr "Finalist"
-
-msgid "Selected"
-msgstr "Auserwaehlter"
-
-#
-# Data Base LG_KnowledgeLevel table
-#
-msgid "Good"
-msgstr "Gut"
-
-msgid "Master"
-msgstr "Master"
-
-msgid "Expert"
-msgstr "Experte"
-
-msgid "internals"
-msgstr "intern"
-
-#
-# Data Base LN_ExperienceLevel table
-#
-msgid "up to 6 months"
-msgstr "bis 6 Monaten"
-
-msgid "up to 2 years"
-msgstr "bis 2 Jahren"
-
-msgid "up to 5 years"
-msgstr "bis 5 Jahren"
-
-msgid "up to 10 years"
-msgstr "bis 10 Jahren"
-
-msgid "more than 10 years"
-msgstr "mehr als 10 Jahren"

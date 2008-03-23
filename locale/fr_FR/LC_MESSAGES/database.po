@@ -1,0 +1,402 @@
+# Authors: Davi Leal
+#
+# Copyright (C) 2006, 2007, 2008 Davi Leal <davi at leals dot com>
+#
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU Affero General Public License as published by the Free Software Foundation,
+# either version 3 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License along with this
+# program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNU Herds\n"
+"Report-Msgid-Bugs-To: davi@leals.com\n"
+"POT-Creation-Date: 2006-04-10 19:12+0200\n"
+"PO-Revision-Date: 2007-02-23 14:33+0100\n"
+"Last-Translator: Camille Huot <camille@huot.name>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+
+#
+# Data Base LF_FieldProfiles table
+#
+msgid "Data Bases"
+msgstr "Bases de données"
+
+msgid "Networks"
+msgstr "Réseaux"
+
+msgid "Systems"
+msgstr "Systèmes"
+
+msgid "Security"
+msgstr "Sécurité"
+
+msgid "Web"
+msgstr "Web"
+
+msgid "Creative design"
+msgstr "Création"
+
+msgid "Quality Assurance"
+msgstr "Assurance et Qualité"
+
+#
+# Data Base LP_ProfessionalProfiles table
+#
+msgid "General Manager"
+msgstr "Directeur Général"
+
+msgid "HH.RR."
+msgstr "RH"
+
+msgid "Marketing"
+msgstr "Marketing"
+
+msgid "Logistics and Distribution"
+msgstr "Logistique et distribution"
+
+msgid "Commercial - Seller"
+msgstr "Commercial - Vendeur"
+
+msgid "Customer support"
+msgstr "Support client"
+
+msgid "Research and Development"
+msgstr "Recherche et Développement"
+
+msgid "Account Manager"
+msgstr "Gestionnaire de compte"
+
+msgid "Project Manager"
+msgstr "Chef de Projet"
+
+msgid "Architect"
+msgstr "Architecte"
+
+msgid "Auditor"
+msgstr "Auditeur"
+
+msgid "Adviser"
+msgstr "Conseiller"
+
+msgid "Technician"
+msgstr "Technicien"
+
+msgid "Functional Analyst"
+msgstr "Analyste Fonctionnel"
+
+msgid "Technician Analyst"
+msgstr "Analyste Technique"
+
+msgid "Developer"
+msgstr "Développeur"
+
+msgid "Beta tester"
+msgstr "Bêta testeur"
+
+msgid "Administrator"
+msgstr "Administrateur"
+
+msgid "Documentalist"
+msgstr "Documentaliste"
+
+msgid "Technical Redactor"
+msgstr "Rédacteur Technique"
+
+msgid "Teacher"
+msgstr "Enseignant"
+
+msgid "Translator"
+msgstr "Traducteur"
+
+msgid "Operator"
+msgstr "Opérateur"
+
+msgid "Technical support"
+msgstr "Support technique"
+
+msgid "Helpdesk"
+msgstr "Helpdesk"
+
+#
+# Data Base LA_AcademicLevels table
+#
+#, fuzzy
+msgid "Enrolled at a University (Undergraduate)"
+msgstr "Bac ()"
+
+#, fuzzy
+msgid "Bachelor's degree (1st University cycle)"
+msgstr "Licence ()"
+
+#, fuzzy
+msgid "Master's degree (2nd University cycle)"
+msgstr "Master ()"
+
+#, fuzzy
+msgid "Doctoral degree (3rd University cycle)"
+msgstr "Doctorat ()"
+
+msgid "Other"
+msgstr "Autre"
+
+#
+# Data Base LH_Skills table
+#
+#, fuzzy
+msgid "Pending"
+msgstr "Pendiente"
+
+#, fuzzy
+msgid "Unknown"
+msgstr "Desconocido"
+
+#, fuzzy
+msgid "Abstract"
+msgstr "Abstracto"
+
+#, fuzzy
+msgid "Free Software"
+msgstr "Software Libre"
+
+#, fuzzy
+msgid "Almost-Free Software"
+msgstr "Software casi-Libre"
+
+#, fuzzy
+msgid "Partially-Free Software"
+msgstr "Software parcialmente-Libre"
+
+#, fuzzy
+msgid "Non-Free Software"
+msgstr "Software NO-Libre"
+
+#, fuzzy
+msgid "Hardware"
+msgstr "Hardware"
+
+#, fuzzy
+msgid "Documentation"
+msgstr "Documentación"
+
+#, fuzzy
+msgid "Free Documentation"
+msgstr "Documentación Libre"
+
+#, fuzzy
+msgid "Non-Free Documentation"
+msgstr "Documentación NO-Libre"
+
+#, fuzzy
+msgid "Data"
+msgstr "Datos"
+
+#, fuzzy
+msgid "Free Data"
+msgstr "Datos Libres"
+
+#, fuzzy
+msgid "Non-Free Data"
+msgstr "Datos NO-Libres"
+
+#, fuzzy
+msgid "Art"
+msgstr "Arte"
+
+#, fuzzy
+msgid "Sharable Art"
+msgstr "Arte Compartible"
+
+#, fuzzy
+msgid "Non-Sharable Art"
+msgstr "Arte NO-Compartible"
+
+#
+# Data Base LK_ContractType table
+#
+msgid "Any"
+msgstr "Quelconque"
+
+msgid "Vacation cover"
+msgstr "Vacances"
+
+msgid "Maternity cover"
+msgstr "Congés de maternité"
+
+msgid "Training"
+msgstr "Formation"
+
+msgid "By hours"
+msgstr "à l'heure"
+
+msgid "By project"
+msgstr "au projet"
+
+msgid "Partner"
+msgstr "Partenaire"
+
+msgid "Freelance"
+msgstr "Indépendant"
+
+msgid "Temporary"
+msgstr "Temps partiel"
+
+msgid "Half time"
+msgstr "Mi-temps"
+
+msgid "Full time"
+msgstr "Temps Plein"
+
+msgid "Indefinite"
+msgstr "Indéterminé"
+
+#
+# Data Base LB_ByPeriod table
+#
+msgid "by year"
+msgstr "par an"
+
+msgid "by month"
+msgstr "par mois"
+
+msgid "by week"
+msgstr "par semaine"
+
+msgid "by day"
+msgstr "par jour"
+
+msgid "by hour"
+msgstr "de l'heure"
+
+msgid "by project"
+msgstr "par projet"
+
+#
+# Data Base LM_TimeUnits table
+#
+msgid "hours"
+msgstr "heures"
+
+msgid "days"
+msgstr "jours"
+
+msgid "weeks"
+msgstr "semaines"
+
+msgid "months"
+msgstr "mois"
+
+msgid "years"
+msgstr "ans"
+
+#
+# Data Base LE_Employability table
+#
+msgid "Working"
+msgstr "Employé"
+
+#, fuzzy
+msgid "Working and Studying"
+msgstr "Trabalhador-Estudante"
+
+#, fuzzy
+msgid "Freelance and Studying"
+msgstr "Freelance e Estudante"
+
+msgid "Studying"
+msgstr "Étudiant"
+
+msgid "Without job"
+msgstr "Sans emploi"
+
+#
+# Data Base LS_SpokenLevel table
+#
+msgid "Null"
+msgstr "Aucun"
+
+msgid "Basic"
+msgstr "Base"
+
+msgid "Conversation"
+msgstr "Conversation"
+
+msgid "Negotiation"
+msgstr "Négociation"
+
+msgid "Native"
+msgstr "Native"
+
+#
+# Data Base LW_WrittenLevel table
+#
+msgid "Medium"
+msgstr "Moyen"
+
+msgid "High"
+msgstr "Élevé"
+
+msgid "Excellent"
+msgstr "Excellent"
+
+#
+# Data Base LZ_ApplicationStates table
+#
+msgid "Received"
+msgstr "Reçu"
+
+msgid "In process"
+msgstr "En cours"
+
+msgid "Ruled out"
+msgstr "Éliminé"
+
+msgid "Finalist"
+msgstr "Finaliste"
+
+msgid "Selected"
+msgstr "Sélectionné"
+
+#
+# Data Base LG_KnowledgeLevel table
+#
+msgid "Good"
+msgstr "Bon"
+
+msgid "Master"
+msgstr "Élevé"
+
+msgid "Expert"
+msgstr "Expert"
+
+msgid "internals"
+msgstr "internes"
+
+#
+# Data Base LN_ExperienceLevel table
+#
+msgid "up to 6 months"
+msgstr "jusqu'à 6 mois"
+
+msgid "up to 2 years"
+msgstr "jusqu'à 2 ans"
+
+msgid "up to 5 years"
+msgstr "jusqu'à 5 ans"
+
+msgid "up to 10 years"
+msgstr "jusqu'à 10 ans"
+
+msgid "more than 10 years"
+msgstr "plus de 10 ans"

@@ -41,9 +41,6 @@ msgstr "Association pour le Logiciel Libre"
 msgid "%1Download the project source code!%2"
 msgstr "%1¡Descargue el código fuente del proyecto!%2"
 
-msgid "Project state"
-msgstr "Statut du projet"
-
 #
 # menu.tpl
 #
@@ -128,6 +125,10 @@ msgstr "Nouvel utilisateur"
 #, fuzzy
 msgid "Register company"
 msgstr "Nouvelle société"
+
+#, fuzzy
+msgid "Register non-profit organization"
+msgstr "Registrar organización sin ánimo de lucro"
 
 #, fuzzy
 msgid "Register non-profit"
@@ -366,7 +367,6 @@ msgstr "Le nom de l'association est GNU Herds, communément appelée GNU Herds -
 msgid "Aims"
 msgstr "But"
 
-### OLD: REMOVE ME: msgstr "Le but de l'association sera d'%1encourager%2 le développement professionnel des contributeurs aux Logiciels Libres."
 #, fuzzy
 msgid "The aims of the Association shall be to %1assist and encourage%2 people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
 msgstr "Los objetivos de la Asociación serán %1asistir y promover%2 personas en trabajos remunerados como autores de Software Libre, obteniendo las más altas cotas de competencia y eficiencia."
@@ -383,7 +383,6 @@ msgstr "Tous les membres doivent être motivés par les buts de GNU Herds et res
 msgid "To qualify for voting membership one must show a contribution to the Free Software movement."
 msgstr "Afin de pouvoir demander d'être membre votant, une personne doit apporter une contribution au mouvement des Logiciels Libres."
 
-### OLD: REMOVE ME: msgstr "L'adhésion est annuelle et doit être renouvelée même pour les membres qui ne cotisent pas."
 #, fuzzy
 msgid "Voting memberships and associate memberships are both free of charge. However, voting memberships %1expire yearly%2 but they can be renewed."
 msgstr "Afiliados y asociados no están sujetos a pago alguno. Sin embargo, la afiliación con capacidad de voto %1expira al año%2 aunque puede ser renovada."
@@ -578,7 +577,6 @@ msgstr "Faciliter les contacts entre les individus et les sociétés intéressé
 msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
 msgstr "Avoir une zone d'activité globale, supportant ainsi des modèles d'affaires basés sur le travail à longue distance. Avec les technologies à venir, la localisation ne devrait pas être un obstacle pour établir des relations entre plusieurs services IT. Le but de traduire l'application web en plusieurs langues et de permettre ainsi la saisie d'une offre d'emploi en plusieurs langues est déjà atteint."
 
-### OLD: REMOVE ME: msgstr "Tout cela en tenant compte que « Le %1but%2 de l'association est d'encourager le développement professionnel des contributeurs en Logiciels Libres »."
 #, fuzzy
 msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
 msgstr "Todo esto teniendo en cuenta que: \"%3Los %1objetivos%2 de la Asociación serán asistir y promover personas en trabajos remunerados como autores de Software Libre, obteniendo las más altas cotas de competencia y eficiencia.%4\""
@@ -896,9 +894,6 @@ msgstr "Date souhaitée de début"
 #, fuzzy
 msgid "Offered by"
 msgstr "Employeur"
-
-msgid "Any"
-msgstr "Quelconque"
 
 msgid "telework"
 msgstr "Télétravail"
@@ -1297,10 +1292,6 @@ msgstr "Supprimez-moi"
 #
 # non-profit_Organization_form.tpl
 #, fuzzy
-msgid "New non-profit organization"
-msgstr "NOUVELLE ORGANISATION À BUT NON LUCRATIF"
-
-#, fuzzy
 msgid "Update non-profit organization data"
 msgstr "METTRE À JOUR LES DONNÉES DE L'ORGANISATION XXX--> data"
 
@@ -1361,6 +1352,10 @@ msgid "Save and move to section"
 msgstr "Guardar y mover a sección"
 
 #, fuzzy
+msgid "Academic"
+msgstr "Académico"
+
+#, fuzzy
 msgid "FS projects"
 msgstr "Proyectos SL"
 
@@ -1394,6 +1389,43 @@ msgstr "Profils professionels"
 
 msgid "Field profiles"
 msgstr "Profils de champs d'applications"
+
+# Qualifications_academic_form.tpl
+#, fuzzy
+msgid "Degree"
+msgstr "Título"
+
+#, fuzzy
+msgid "Academic level"
+msgstr "Nivel académico"
+
+#, fuzzy
+msgid "Degree granted"
+msgstr "Título otorgado"
+
+#, fuzzy
+msgid "Start date"
+msgstr "Fecha de comienzo"
+
+#, fuzzy
+msgid "Finish date"
+msgstr "Fecha de finalización"
+
+#, fuzzy
+msgid "Institution"
+msgstr "Institución"
+
+#, fuzzy
+msgid "University or education institution"
+msgstr "Universidad o institución educativa"
+
+#, fuzzy
+msgid "Institution's URI"
+msgstr "URI de la intitución"
+
+#, fuzzy
+msgid "Short comment"
+msgstr "Comentario corto"
 
 # Qualifications_skills_form.tpl
 #, fuzzy
@@ -1458,6 +1490,10 @@ msgid "This skill is Documentation."
 msgstr "Esta habilidad es documentación."
 
 #, fuzzy
+msgid "This skill is Data."
+msgstr "Esta habilidad es Datos."
+
+#, fuzzy
 msgid "This skill is Art."
 msgstr "Esta habilidad es Arte."
 
@@ -1487,10 +1523,6 @@ msgstr "Guárdelo como está"
 
 # Qualifications_languages_form.tpl
 #, fuzzy
-msgid "Staff with the below languages:"
-msgstr "Personal con los siguientes idiomas:"
-
-#, fuzzy
 msgid "Add idioms and theirs spoken and written levels"
 msgstr "Añadir idiomas y sus niveles hablado y escrito"
 
@@ -1513,10 +1545,6 @@ msgid "Project"
 msgstr "Projet"
 
 # Qualifications_location_form.tpl
-#, fuzzy
-msgid "Staff:"
-msgstr "Personal:"
-
 msgid "Available to travel"
 msgstr "Je peux faire des déplacements"
 
@@ -1817,370 +1845,3 @@ msgstr "ERREUR : Connexion à la base de données en échec."
 
 msgid "Data base under maintenance. Excuse the inconveniences."
 msgstr "Base de données en maintenance, veuillez nous excuser pour la gêne occasionnée."
-
-#
-# Data Base LF_FieldProfiles table
-#
-msgid "Data Bases"
-msgstr "Bases de données"
-
-msgid "Networks"
-msgstr "Réseaux"
-
-msgid "Systems"
-msgstr "Systèmes"
-
-msgid "Security"
-msgstr "Sécurité"
-
-msgid "Web"
-msgstr "Web"
-
-msgid "Creative design"
-msgstr "Création"
-
-msgid "Quality Assurance"
-msgstr "Assurance et Qualité"
-
-#
-# Data Base LP_ProfessionalProfiles table
-#
-msgid "General Manager"
-msgstr "Directeur Général"
-
-msgid "HH.RR."
-msgstr "RH"
-
-msgid "Marketing"
-msgstr "Marketing"
-
-msgid "Logistics and Distribution"
-msgstr "Logistique et distribution"
-
-msgid "Commercial - Seller"
-msgstr "Commercial - Vendeur"
-
-msgid "Customer support"
-msgstr "Support client"
-
-msgid "Research and Development"
-msgstr "Recherche et Développement"
-
-msgid "Account Manager"
-msgstr "Gestionnaire de compte"
-
-msgid "Project Manager"
-msgstr "Chef de Projet"
-
-msgid "Architect"
-msgstr "Architecte"
-
-msgid "Auditor"
-msgstr "Auditeur"
-
-msgid "Adviser"
-msgstr "Conseiller"
-
-msgid "Technician"
-msgstr "Technicien"
-
-msgid "Functional Analyst"
-msgstr "Analyste Fonctionnel"
-
-msgid "Technician Analyst"
-msgstr "Analyste Technique"
-
-msgid "Developer"
-msgstr "Développeur"
-
-msgid "Beta tester"
-msgstr "Bêta testeur"
-
-msgid "Administrator"
-msgstr "Administrateur"
-
-msgid "Documentalist"
-msgstr "Documentaliste"
-
-msgid "Technical Redactor"
-msgstr "Rédacteur Technique"
-
-msgid "Teacher"
-msgstr "Enseignant"
-
-msgid "Translator"
-msgstr "Traducteur"
-
-msgid "Operator"
-msgstr "Opérateur"
-
-msgid "Technical support"
-msgstr "Support technique"
-
-msgid "Helpdesk"
-msgstr "Helpdesk"
-
-#
-# Data Base LA_AcademicQualifications table
-#
-msgid "Undergraduate"
-msgstr "Bac"
-
-msgid "Graduate"
-msgstr "Licence"
-
-msgid "Postgraduate"
-msgstr "Master"
-
-msgid "Doctoral"
-msgstr "Doctorat"
-
-msgid "Other"
-msgstr "Autre"
-
-#
-# Data Base LH_Skills table
-#
-#, fuzzy
-msgid "Pending"
-msgstr "Pendiente"
-
-#, fuzzy
-msgid "Unknown"
-msgstr "Desconocido"
-
-#, fuzzy
-msgid "Abstract"
-msgstr "Abstracto"
-
-#, fuzzy
-msgid "Free Software"
-msgstr "Software Libre"
-
-#, fuzzy
-msgid "Almost-Free Software"
-msgstr "Software casi-Libre"
-
-#, fuzzy
-msgid "Partially-Free Software"
-msgstr "Software parcialmente-Libre"
-
-#, fuzzy
-msgid "Non-Free Software"
-msgstr "Software NO-Libre"
-
-#, fuzzy
-msgid "Hardware"
-msgstr "Hardware"
-
-#, fuzzy
-msgid "Documentation"
-msgstr "Documentación"
-
-#, fuzzy
-msgid "Free Documentation"
-msgstr "Documentación Libre"
-
-#, fuzzy
-msgid "Non-Free Documentation"
-msgstr "Documentación NO-Libre"
-
-#, fuzzy
-msgid "Data"
-msgstr "Datos"
-
-#, fuzzy
-msgid "Free Data'"
-msgstr "Datos Libres"
-
-#, fuzzy
-msgid "Non-Free Data"
-msgstr "Datos NO-Libres"
-
-#, fuzzy
-msgid "Art"
-msgstr "Arte"
-
-#, fuzzy
-msgid "Sharable Art"
-msgstr "Arte Compartible"
-
-#, fuzzy
-msgid "Non-Sharable Art"
-msgstr "Arte NO-Compartible"
-
-#
-# Data Base LK_ContractType table
-#
-msgid "Vacation cover"
-msgstr "Vacances"
-
-msgid "Maternity cover"
-msgstr "Congés de maternité"
-
-msgid "Training"
-msgstr "Formation"
-
-msgid "By hours"
-msgstr "à l'heure"
-
-msgid "By project"
-msgstr "au projet"
-
-msgid "Partner"
-msgstr "Partenaire"
-
-msgid "Freelance"
-msgstr "Indépendant"
-
-msgid "Temporary"
-msgstr "Temps partiel"
-
-msgid "Half time"
-msgstr "Mi-temps"
-
-msgid "Full time"
-msgstr "Temps Plein"
-
-msgid "Indefinite"
-msgstr "Indéterminé"
-
-#
-# Data Base LB_ByPeriod table
-#
-msgid "by year"
-msgstr "par an"
-
-msgid "by month"
-msgstr "par mois"
-
-msgid "by week"
-msgstr "par semaine"
-
-msgid "by day"
-msgstr "par jour"
-
-msgid "by hour"
-msgstr "de l'heure"
-
-msgid "by project"
-msgstr "par projet"
-
-#
-# Data Base LM_TimeUnits table
-#
-msgid "hours"
-msgstr "heures"
-
-msgid "days"
-msgstr "jours"
-
-msgid "weeks"
-msgstr "semaines"
-
-msgid "months"
-msgstr "mois"
-
-msgid "years"
-msgstr "ans"
-
-#
-# Data Base LE_Employability table
-#
-msgid "Working"
-msgstr "Employé"
-
-#, fuzzy
-msgid "Working and Studying"
-msgstr "Trabalhador-Estudante"
-
-#, fuzzy
-msgid "Freelance and Studying"
-msgstr "Freelance e Estudante"
-
-msgid "Studying"
-msgstr "Étudiant"
-
-msgid "Without job"
-msgstr "Sans emploi"
-
-#
-# Data Base LS_SpokenLevel table
-#
-msgid "Null"
-msgstr "Aucun"
-
-msgid "Basic"
-msgstr "Base"
-
-msgid "Conversation"
-msgstr "Conversation"
-
-msgid "Negotiation"
-msgstr "Négociation"
-
-msgid "Native"
-msgstr "Native"
-
-#
-# Data Base LW_WrittenLevel table
-#
-msgid "Medium"
-msgstr "Moyen"
-
-msgid "High"
-msgstr "Élevé"
-
-msgid "Excellent"
-msgstr "Excellent"
-
-#
-# Data Base LZ_ApplicationStates table
-#
-msgid "Received"
-msgstr "Reçu"
-
-msgid "In process"
-msgstr "En cours"
-
-msgid "Ruled out"
-msgstr "Éliminé"
-
-msgid "Finalist"
-msgstr "Finaliste"
-
-msgid "Selected"
-msgstr "Sélectionné"
-
-#
-# Data Base LG_KnowledgeLevel table
-#
-msgid "Good"
-msgstr "Bon"
-
-msgid "Master"
-msgstr "Élevé"
-
-msgid "Expert"
-msgstr "Expert"
-
-msgid "internals"
-msgstr "internes"
-
-#
-# Data Base LN_ExperienceLevel table
-#
-msgid "up to 6 months"
-msgstr "jusqu'à 6 mois"
-
-msgid "up to 2 years"
-msgstr "jusqu'à 2 ans"
-
-msgid "up to 5 years"
-msgstr "jusqu'à 5 ans"
-
-msgid "up to 10 years"
-msgstr "jusqu'à 10 ans"
-
-msgid "more than 10 years"
-msgstr "plus de 10 ans"
