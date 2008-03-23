@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: GNUHerds Site\n"
 "Report-Msgid-Bugs-To: happyguy_pt@hotmail.com\n"
 "POT-Creation-Date: 2006-04-10 19:12+0200\n"
-"PO-Revision-Date: 2008-02-14 15:00+0100\n"
+"PO-Revision-Date: 2008-03-23 15:00+0100\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: pt <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -1209,9 +1209,8 @@ msgstr "Gravar e terminar a edição"
 msgid "Save and move to section"
 msgstr "Gravar e ir para a secção"
 
-#, fuzzy
 msgid "Academic"
-msgstr "Académico"
+msgstr "Académica"
 
 msgid "FS projects"
 msgstr "Projectos de SL"
@@ -1245,41 +1244,32 @@ msgid "Field profiles"
 msgstr "Perfis de áreas"
 
 # Qualifications_academic_form.tpl
-#, fuzzy
 msgid "Degree"
-msgstr "Título"
+msgstr "Grau Académico"
 
-#, fuzzy
 msgid "Academic level"
-msgstr "Nivel académico"
+msgstr "Nível académico"
 
-#, fuzzy
 msgid "Degree granted"
-msgstr "Título otorgado"
+msgstr "Grau alcançado"
 
-#, fuzzy
 msgid "Start date"
-msgstr "Fecha de comienzo"
+msgstr "Data de início"
 
-#, fuzzy
 msgid "Finish date"
-msgstr "Fecha de finalización"
+msgstr "Data de conclusão"
 
-#, fuzzy
 msgid "Institution"
-msgstr "Institución"
+msgstr "Instituição"
 
-#, fuzzy
 msgid "University or education institution"
-msgstr "Universidad o institución educativa"
+msgstr "Universidade ou instituição de ensino"
 
-#, fuzzy
 msgid "Institution's URI"
-msgstr "URI de la intitución"
+msgstr "URI da instituição"
 
-#, fuzzy
 msgid "Short comment"
-msgstr "Comentario corto"
+msgstr "Comentário abreviado"
 
 # Qualifications_skills_form.tpl
 msgid "Some fields offer suggestions."
@@ -1330,9 +1320,8 @@ msgstr "Este conhecimento é Hardware."
 msgid "This skill is Documentation."
 msgstr "Este conhecimento é de Documentação."
 
-#, fuzzy
 msgid "This skill is Data."
-msgstr "Esta habilidad es Datos."
+msgstr "Este conhecimento é de Dados."
 
 msgid "This skill is Art."
 msgstr "Este conhecimento é Artístico."
