@@ -145,7 +145,6 @@ msgstr "Аспирантура ()"
 
 #, fuzzy
 msgid "Doctoral degree (3rd University cycle)"
-msgstr "Doctorado,-a (3º ciclo Universitario)"
 msgstr "Учёная степень ()"
 
 msgid "Other"
