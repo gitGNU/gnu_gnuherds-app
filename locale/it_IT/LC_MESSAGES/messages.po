@@ -1,4 +1,4 @@
-# translation of messages.po to italian
+# translation of messages.po to Italian
 # Authors: Davi Leal, Antenore Gatta
 #
 # Copyright (C) 2006, 2007, 2008 Davi Leal <davi at leals dot com>
@@ -17,14 +17,15 @@
 # program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 #
 # Antenore Gatta <antenore@gmail.com>, 2008.
+# Antenore Gatta <amtenore.gatta@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
 "Report-Msgid-Bugs-To: davi@leals.com\n"
 "POT-Creation-Date: 2006-04-10 19:12+0200\n"
-"PO-Revision-Date: 2008-02-28 08:21+0100\n"
-"Last-Translator: Antenore Gatta <antenore@gmail.com>\n"
-"Language-Team: italian <gnuherds-app-dev@nongnu.org>\n"
+"PO-Revision-Date: 2008-03-27 17:42+0100\n"
+"Last-Translator: Antenore Gatta <amtenore.gatta@gmail.com>\n"
+"Language-Team: Italian <gnuherds-app-dev@nongnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -149,7 +150,6 @@ msgstr "Uscita corretta."
 
 # msgid "The %2GNU Herds%3 project is an official part of %1the GNU Project%3."
 # msgstr "Il progetto %2GNU Herds%3 è ufficialmente parte del %1Progetto GNU%3."
-
 #
 # foot.tpl
 #
@@ -1135,10 +1135,8 @@ msgstr "I campi Password sono diversi"
 
 #XXX: msgid "If you want to qualify to vote, you have to supply both the contributions and your public key."
 #XXX: msgstr "Se vuoi ottenere il diritto di voto, devi fornire sia i contributi che la tua chiave pubblica."
-
 #XXX: msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
 #XXX: msgstr "Il tuo contributo alla comunità del Software Libero sarà valutata. Il risultato ti sarà inviato via email, con l'abilitazione della capacità di voto in caso di valutazione positiva."
-
 #
 # Company form: Company_form.tpl, Company_form.php
 #
@@ -1158,7 +1156,6 @@ msgstr "Cancellami"
 # Company_form.php
 # msgid ""
 # msgstr ""
-
 #
 # non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
 #
@@ -1179,7 +1176,6 @@ msgstr "Nome"
 # non-profit_Organization_form.php
 # msgid ""
 # msgstr ""
-
 #
 # Qualifications form: Qualifications_form.tpl, Qualifications_form.php
 #
@@ -1214,9 +1210,8 @@ msgstr "Salva e termina l'edit"
 msgid "Save and move to section"
 msgstr "Salva e passa alla sezione"
 
-#, fuzzy
 msgid "Academic"
-msgstr "Académico"
+msgstr "Accademico"
 
 msgid "FS projects"
 msgstr "Progetti SL"
@@ -1250,41 +1245,32 @@ msgid "Field profiles"
 msgstr "Profili di campo"
 
 # Qualifications_academic_form.tpl
-#, fuzzy
 msgid "Degree"
-msgstr "Título"
+msgstr "Titolo"
 
-#, fuzzy
 msgid "Academic level"
-msgstr "Nivel académico"
+msgstr "Livello accademico"
 
-#, fuzzy
 msgid "Degree granted"
-msgstr "Título otorgado"
+msgstr "Titolo ottenuto"
 
-#, fuzzy
 msgid "Start date"
-msgstr "Fecha de comienzo"
+msgstr "Data di inizio"
 
-#, fuzzy
 msgid "Finish date"
-msgstr "Fecha de finalización"
+msgstr "Data di fine"
 
-#, fuzzy
 msgid "Institution"
-msgstr "Institución"
+msgstr "Isitituzione"
 
-#, fuzzy
 msgid "University or education institution"
-msgstr "Universidad o institución educativa"
+msgstr "Universita' o istituzione educativa"
 
-#, fuzzy
 msgid "Institution's URI"
-msgstr "URI de la intitución"
+msgstr "URI dell'istituzione"
 
-#, fuzzy
 msgid "Short comment"
-msgstr "Comentario corto"
+msgstr "Breve commento"
 
 # Qualifications_skills_form.tpl
 msgid "Some fields offer suggestions."
@@ -1335,9 +1321,8 @@ msgstr "Questa competenza è Hardware."
 msgid "This skill is Documentation."
 msgstr "Questa competenza è Documentazione."
 
-#, fuzzy
 msgid "This skill is Data."
-msgstr "Esta habilidad es Datos."
+msgstr "Questa competenza e' Dati."
 
 msgid "This skill is Art."
 msgstr "Questa competenza è Arte."
@@ -1373,7 +1358,6 @@ msgstr "Livello scritto"
 # Qualifications_certifications_form.tpl
 # msgid ""
 # msgstr ""
-
 # Qualifications_projects_form.tpl
 msgid "Add URIs to the work you or your staff have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you or your staff expose your knowledge, rationales, feedback, etc."
 msgstr "Aggiungi l'URIs di lavori che tu o il tuo personale a contribuito a progetti di Software Libero publici. E' buona pratica aggiungere più di un URIs per progetto, aggiungendo anche URIs a tuoi personali commit, o threads di conversazione di posta elettronica dove tu o il tuo personale esponete le vostre conoscenze, ragionamenti, commenti, etc."
@@ -1467,11 +1451,9 @@ msgstr "Riferimento alla tua offerta"
 # Job_Offer_profiles_etc_form.tpl
 # msgid ""
 # msgstr ""
-
 # Job_Offer_skills_form.tpl
 # msgid ""
 # msgstr ""
-
 # Job_Offer_languages_form.tpl
 msgid "Required languages"
 msgstr "Lingue richieste"
@@ -1479,11 +1461,9 @@ msgstr "Lingue richieste"
 # Job_Offer_certifications_form.tpl
 # msgid ""
 # msgstr ""
-
 # Job_Offer_projects_form.tpl
 # msgid ""
 # msgstr ""
-
 # Job_Offer_location_form.tpl
 msgid "Do not fill any address field if the offer is Telecommute."
 msgstr "Non inserire nessuna offerta se si tratta di Telelavoro."
@@ -1491,11 +1471,9 @@ msgstr "Non inserire nessuna offerta se si tratta di Telelavoro."
 # Job_Offer_contract_form.tpl
 # msgid ""
 # msgstr ""
-
 # Job_Offer_form.php
 # msgid ""
 # msgstr ""
-
 #
 # Manage_Job_Offer_Applications_form.tpl
 #
@@ -1647,3 +1625,4 @@ msgstr "ERRORE: Connessione al database fallita!."
 
 msgid "Data base under maintenance. Excuse the inconveniences."
 msgstr "Database in manutenzione. Ci scusiamo per l'inconveniente."
+
