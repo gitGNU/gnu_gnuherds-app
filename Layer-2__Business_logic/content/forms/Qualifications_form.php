@@ -535,10 +535,10 @@ class QualificationsForm extends SkillsForm
 			else
 			{
 				// Date format
-				if ( ( !preg_match('/^(\d\d)\-(\d\d)\-(\d\d\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	   	  		( !preg_match('/^(\d\d\d\d)\-(\d\d)\-(\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
-	  	   		( !preg_match('/^(\d\d)\/(\d\d)\/(\d\d\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	 	    		( !preg_match('/^(\d\d\d\d)\/(\d\d)\/(\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+				if ( ( !preg_match('/^(\d{1,2})\-(\d{1,2})\-(\d\d\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	   	  		( !preg_match('/^(\d\d\d\d)\-(\d{1,2})\-(\d{1,2})$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+	  	   		( !preg_match('/^(\d{1,2})\/(\d{1,2})\/(\d\d\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	 	    		( !preg_match('/^(\d\d\d\d)\/(\d{1,2})\/(\d{1,2})$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
 				{
 					$this->checkresults['academic'] = "fail";
 
@@ -561,10 +561,10 @@ class QualificationsForm extends SkillsForm
 			else
 			{
 				// Date format
-				if ( ( !preg_match('/^(\d\d)\-(\d\d)\-(\d\d\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	   	  		( !preg_match('/^(\d\d\d\d)\-(\d\d)\-(\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
-	  	   		( !preg_match('/^(\d\d)\/(\d\d)\/(\d\d\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	 	    		( !preg_match('/^(\d\d\d\d)\/(\d\d)\/(\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+				if ( ( !preg_match('/^(\d{1,2})\-(\d{1,2})\-(\d\d\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	   	  		( !preg_match('/^(\d\d\d\d)\-(\d{1,2})\-(\d{1,2})$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+	  	   		( !preg_match('/^(\d{1,2})\/(\d{1,2})\/(\d\d\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+	 	    		( !preg_match('/^(\d\d\d\d)\/(\d{1,2})\/(\d{1,2})$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
 				{
 					$this->checkresults['academic'] = "fail";
 
