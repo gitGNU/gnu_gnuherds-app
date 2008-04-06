@@ -131,21 +131,17 @@ msgstr "Поддержка пользователей"
 #
 # Data Base LA_AcademicLevels table
 #
-#, fuzzy
 msgid "Enrolled at a University (Undergraduate)"
-msgstr "Незаконченное высшее"
+msgstr "Поступил в университет (Незаконченное)"
 
-#, fuzzy
 msgid "Bachelor's degree (1st University cycle)"
-msgstr "Высшее образование ()"
+msgstr "Степень бакалавра (1-й этап обучения)"
 
-#, fuzzy
 msgid "Master's degree (2nd University cycle)"
-msgstr "Аспирантура ()"
+msgstr "Степень магистра (2-й этап обучения)"
 
-#, fuzzy
 msgid "Doctoral degree (3rd University cycle)"
-msgstr "Учёная степень ()"
+msgstr "Учёная степень (3-й этап обучения)"
 
 msgid "Other"
 msgstr "Другое"
@@ -288,13 +284,11 @@ msgstr "годы"
 msgid "Working"
 msgstr "Работа"
 
-#, fuzzy
 msgid "Working and Studying"
-msgstr "Trabajando y estudiando"
+msgstr "Работа и учёба"
 
-#, fuzzy
 msgid "Freelance and Studying"
-msgstr "Freelance y estudiando"
+msgstr "Работа по контрактам и учёба"
 
 msgid "Studying"
 msgstr "Учёба"
