@@ -116,9 +116,8 @@ msgstr "Зарегистрировать компанию"
 msgid "Register non-profit organization"
 msgstr "Регистрация бесприбыльной организации"
 
-#, fuzzy
 msgid "Register non-profit"
-msgstr "Зарегистрировать бесприбыльную организацию"
+msgstr "Зарегистрировать общество"
 
 #
 # log_out_box.tpl
@@ -1210,9 +1209,8 @@ msgstr "Сохранить и закончить правку"
 msgid "Save and move to section"
 msgstr "Сохранить и перейти к разделу"
 
-#, fuzzy
 msgid "Academic"
-msgstr "Académico"
+msgstr "Научная деятельность"
 
 msgid "FS projects"
 msgstr "Проекты свободного ПО"
@@ -1246,41 +1244,32 @@ msgid "Field profiles"
 msgstr "Поля профиля"
 
 # Qualifications_academic_form.tpl
-#, fuzzy
 msgid "Degree"
-msgstr "Título"
+msgstr "Степень"
 
-#, fuzzy
 msgid "Academic level"
-msgstr "Nivel académico"
+msgstr "Научная степень"
 
-#, fuzzy
 msgid "Degree granted"
-msgstr "Título otorgado"
+msgstr "Степень получена"
 
-#, fuzzy
 msgid "Start date"
-msgstr "Fecha de comienzo"
+msgstr "Дата начала"
 
-#, fuzzy
 msgid "Finish date"
-msgstr "Fecha de finalización"
+msgstr "Дата окончания"
 
-#, fuzzy
 msgid "Institution"
-msgstr "Institución"
+msgstr "ВУЗ"
 
-#, fuzzy
 msgid "University or education institution"
-msgstr "Universidad o institución educativa"
+msgstr "Высшее учебное заведение"
 
-#, fuzzy
 msgid "Institution's URI"
-msgstr "URI de la intitución"
+msgstr "Ресурс учебного заведения"
 
-#, fuzzy
 msgid "Short comment"
-msgstr "Comentario corto"
+msgstr "Короткий комментарий"
 
 # Qualifications_skills_form.tpl
 msgid "Some fields offer suggestions."
@@ -1331,12 +1320,11 @@ msgstr "Этот навык связан с оборудованием."
 msgid "This skill is Documentation."
 msgstr "Этот навык связан с документацией"
 
-#, fuzzy
 msgid "This skill is Data."
-msgstr "Esta habilidad es Datos."
+msgstr "Этот навык связан с данными."
 
 msgid "This skill is Art."
-msgstr "Этот навык связан и искусством."
+msgstr "Этот навык связан с искусством."
 
 msgid "This skill is Free."
 msgstr "Этот навык связан со свободным ПО."
