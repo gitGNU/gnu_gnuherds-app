@@ -1688,8 +1688,8 @@ msgid "Please fill in here"
 msgstr "Preencha aqui"
 
 #, fuzzy
-msgid "Incorrect date format"
-msgstr "Formato de data incorrecto"
+msgid "Incorrect date format."
+msgstr "Formato de data incorrecto."
 
 #, fuzzy
 msgid "The qualifications information has been deleted from the data base."

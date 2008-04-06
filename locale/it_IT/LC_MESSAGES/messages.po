@@ -1407,8 +1407,8 @@ msgstr "Per accedere a questa sezione devi prima effettuare l'accesso."
 msgid "Please fill in here"
 msgstr "Per favore, inserisci qui"
 
-msgid "Incorrect date format"
-msgstr "Formato della data non corretto"
+msgid "Incorrect date format."
+msgstr "Formato della data non corretto."
 
 msgid "The qualifications information has been deleted from the data base."
 msgstr "L'informazione sulle qualifiche è stata cancellata dal data base."

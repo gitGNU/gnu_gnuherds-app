@@ -1424,8 +1424,8 @@ msgstr "Для того, чтобы получить доступ, необхо�
 msgid "Please fill in here"
 msgstr "Заполните поле"
 
-msgid "Incorrect date format"
-msgstr "Некорректный формат даты"
+msgid "Incorrect date format."
+msgstr "Некорректный формат даты."
 
 msgid "The qualifications information has been deleted from the data base."
 msgstr "Информация о квалификации была удалена из базы данных."

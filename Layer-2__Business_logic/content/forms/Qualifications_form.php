@@ -545,7 +545,7 @@ class QualificationsForm extends SkillsForm
 					if ( $this->section2control == 'academic' )
 					{
 						$this->checks['result'] = "fail";
-						$this->checks['StartDateList'][$i] = gettext('Incorrect date format');
+						$this->checks['StartDateList'][$i] = gettext('Incorrect date format.').' '.gettext('The format could be for example').' dd/mm/yyyy';
 					}
 				}
 				else
@@ -571,7 +571,7 @@ class QualificationsForm extends SkillsForm
 					if ( $this->section2control == 'academic' )
 					{
 						$this->checks['result'] = "fail";
-						$this->checks['FinishDateList'][$i] = gettext('Incorrect date format');
+						$this->checks['FinishDateList'][$i] = gettext('Incorrect date format.').' '.gettext('The format could be for example').' dd/mm/yyyy';
 					}
 				}
 				else

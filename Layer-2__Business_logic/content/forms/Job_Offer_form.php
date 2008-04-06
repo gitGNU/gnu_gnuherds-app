@@ -530,7 +530,7 @@ class JobOfferForm extends SkillsForm
 				if ( $this->section2control == 'general' )
 				{
 					$this->checks['result'] = "fail";
-					$this->checks['ExpirationDate'] = gettext('Incorrect date format');
+					$this->checks['ExpirationDate'] = gettext('Incorrect date format.').' '.gettext('The format could be for example').' dd/mm/yyyy';
 				}
 			}
 			else
@@ -798,7 +798,7 @@ class JobOfferForm extends SkillsForm
 				if ( $this->section2control == 'contract' )
 				{
 					$this->checks['result'] = "fail";
-					$this->checks['Deadline'] = gettext('Incorrect date format');
+					$this->checks['Deadline'] = gettext('Incorrect date format.').' '.gettext('The format could be for example').' dd/mm/yyyy';
 				}
 			}
 			else

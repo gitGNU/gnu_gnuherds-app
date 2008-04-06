@@ -1409,8 +1409,8 @@ msgstr "Para acceder a esta sección usted debe 'entrar'."
 msgid "Please fill in here"
 msgstr "Por favor, rellene aquí"
 
-msgid "Incorrect date format"
-msgstr "Formato de fecha incorrecto"
+msgid "Incorrect date format."
+msgstr "Formato de fecha incorrecto."
 
 msgid "The qualifications information has been deleted from the data base."
 msgstr "La ficha de cualificaciones ha sido borrada de la base de datos."
