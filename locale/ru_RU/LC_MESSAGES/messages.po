@@ -116,6 +116,7 @@ msgstr "Зарегистрировать компанию"
 msgid "Register non-profit organization"
 msgstr "Регистрация бесприбыльной организации"
 
+#, fuzzy
 msgid "Register non-profit"
 msgstr "Зарегистрировать бесприбыльную организацию"
 
