@@ -95,7 +95,6 @@ function raiseNewJobOfferAlerts() // Alerts on any NewJobOffer
 		mb_language("uni"); //XXX: Add support to Japanese, etc.  Reference: http://es.php.net/manual/en/function.mb-language.php
 		for ( $j=0; $j < count($emails); $j++ )
 			mb_send_mail($emails[$j], "GNU Herds: ".gettext("Alert on new job offers"), "$message", "From: association@gnuherds.org");
-
 	}
 
 	// We disable the NewJoOffer alerts due to they are already been processed
