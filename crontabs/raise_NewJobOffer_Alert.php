@@ -67,7 +67,7 @@ function raiseNewJobOfferAlerts() // Alerts on any NewJobOffer
 			//XXX-remove-this-line:  $message .= gettext("Offer date").": ";
 			//XXX-remove-this-line:  $message .= $result[5][$j]."\n";
 
-			$message .= gettext("Employer").":  ";
+			$message .= gettext("Offered by").":  ";
 			if ($result[10][$j] != '') $message .= gettext("Person").": ";
 			if ($result[13][$j] != '') $message .= gettext("Company").": ";
 			if ($result[14][$j] != '') $message .= gettext("non-profit Organization").": ";
