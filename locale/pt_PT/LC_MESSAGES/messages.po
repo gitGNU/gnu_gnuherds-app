@@ -860,6 +860,10 @@ msgstr "Data limite"
 msgid "Wage rank"
 msgstr "Nível salarial"
 
+#, fuzzy
+msgid "Salary"
+msgstr ""
+
 msgid "Estimated effort"
 msgstr "Esforço estimado"
 

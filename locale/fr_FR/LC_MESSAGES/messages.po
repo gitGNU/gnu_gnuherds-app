@@ -964,6 +964,10 @@ msgstr "Fecha límite"
 msgid "Wage rank"
 msgstr "Salaire"
 
+#, fuzzy
+msgid "Salary"
+msgstr "Salaire"
+
 msgid "Estimated effort"
 msgstr "Estimation de l'effort"
 

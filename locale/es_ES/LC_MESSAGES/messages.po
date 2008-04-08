@@ -861,6 +861,9 @@ msgstr "Fecha límite"
 msgid "Wage rank"
 msgstr "Rango salarial"
 
+msgid "Salary"
+msgstr "Salario"
+
 msgid "Estimated effort"
 msgstr "Esfuerzo estimado"
 

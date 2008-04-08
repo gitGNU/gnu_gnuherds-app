@@ -1031,6 +1031,10 @@ msgstr "Data limite"
 msgid "Wage rank"
 msgstr "Gehaltsrang"
 
+#, fuzzy
+msgid "Salary"
+msgstr "Salario"
+
 msgid "Estimated effort"
 msgstr "Die Schätzung der Leistung"
 
