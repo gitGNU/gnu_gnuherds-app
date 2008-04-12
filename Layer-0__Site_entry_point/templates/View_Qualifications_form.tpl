@@ -372,7 +372,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td align="right"><strong>{t}Desired contract type{/t}</strong> : </td>
-<td colspan="3" class="greenLight">{t domain='database'}{$data.DesiredContractType}{/t}</td>
+<td colspan="3" class="greenLight">{if $data.DesiredContractType neq ''}{t domain='database'}{$data.DesiredContractType}{/t}{/if}</td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
@@ -382,8 +382,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td align="right"><strong>{t}Desired wage rank{/t}</strong> : </td>
 <td colspan="3" class="greenDark">
 {$data.DesiredWageRank}
-({t domain='iso_4217'}{$data.WageRankCurrencyName}{/t})
-{t domain='database'}{$data.WageRankByPeriod}{/t}{if trim($data.DesiredWageRank) neq ''}. [{t}Minimum{/t}-{t}Optimum{/t}]{/if}
+{if $data.WageRankCurrencyName neq ''}({t domain='iso_4217'}{$data.WageRankCurrencyName}{/t}){/if}
+{if $data.WageRankByPeriod neq ''} {t domain='database'}{$data.WageRankByPeriod}{/t}. [{t}Minimum{/t}-{t}Optimum{/t}]{/if}
 </td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
@@ -392,7 +392,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td align="right"><strong>{t}Current employability{/t}</strong> : </td>
-<td colspan="3" class="greenLight">{t domain='database'}{$data.CurrentEmployability}{/t}</td>
+<td colspan="3" class="greenLight">{if $data.CurrentEmployability neq ''}{t domain='database'}{$data.CurrentEmployability}{/t}{/if}</td>
 {if $smarty.get.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
