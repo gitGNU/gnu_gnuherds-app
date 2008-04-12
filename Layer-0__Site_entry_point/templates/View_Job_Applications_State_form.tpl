@@ -41,7 +41,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {$offerDate[$i]}
 </td>
 <td></td>
-<td class="
+<td align="center" class="
 {if $state[$i] eq 'Received'}{if $i % 2}tdDark{else}tdLight{/if}{/if}
 {if $state[$i] eq 'In process'}blueApplicationState{/if}
 {if $state[$i] eq 'Ruled out'}redApplicationState{/if}

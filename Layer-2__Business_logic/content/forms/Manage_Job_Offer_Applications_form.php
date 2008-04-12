@@ -59,8 +59,11 @@ class ManageJobOfferApplicationsForm
 		}
 
 		// Process each button event
-		if ( $_POST['ApplicationState'] != '' )
-			$this->manager->setApplicationState($_GET['JobOfferId'],$_POST['ApplicationState'],$_POST['EntityId']);
+		if ( $_POST['save'] != '' )
+		{
+			for( $i=0; $i < count($_POST['ApplicationState']); $i++)
+				$this->manager->setApplicationState($_GET['JobOfferId'],$_POST['ApplicationState'][$i],$_POST['EntityId'][$i]);
+		}
 	}
 
 

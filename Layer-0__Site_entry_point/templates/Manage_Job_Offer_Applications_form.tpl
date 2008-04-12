@@ -26,12 +26,14 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<p>{t}There are not any application subscribed to this job offer{/t}.</p><p>&nbsp;</p>
 {else}
 
+<form name="applicationStateForm" id="applicationStateForm" method="post" action="{$smarty.server.REQUEST_URI}">
 <table border="0">
 
 <tr valign="top">
 <td class="tdTitle"><strong>{t}Applicant{/t}</strong></td>
 <td class="tdTitle"><strong>{t}Location{/t}</strong></td>
 <td class="tdTitle"><strong>{t}Experience since{/t}</strong></td>
+<td></td>
 <td class="tdTitle"><strong>{t}Subscription state{/t}</strong></td>
 </tr>
 
@@ -58,21 +60,32 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {$professionalExperienceSinceYear[$i]}
 </td>
 
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<form name="changeApplicationStateForm{$Id}" id="changeApplicationStateForm{$Id}" method="post" action="{$smarty.server.REQUEST_URI}">
+<td></td>
+
+<td align="center" class="{if $i % 2}tdDark{else}tdLight{/if}">
 <div>
-<input type="hidden" name="EntityId" value="{$Id}">
-<select name="ApplicationState">
+<input type="hidden" name="EntityId[]" value="{$Id}">
+<select name="ApplicationState[]" OnChange="javascript:document.applicationStateForm.save.disabled=false;">
 {html_options values=$applicationStatesId output=$applicationStatesIdTranslated selected=$applicationState[$i]}
 </select>
 </div>
-</form>
 </td>
 
 </tr>
 
 {/foreach}
 
+<tr><td colspan="5">&nbsp;</td></tr>
+
+<tr align="center">
+<td colspan="4">
+</td>
+<td>
+<input type="submit" name="save" id="save" value="{t}Save{/t}" disabled>
+</td>
+</tr>
+
 </table>
+</form>
 
 {/if}
