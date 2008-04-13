@@ -87,8 +87,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr>
-<td align="right"><span class="must">*</span><label for="ExpirationDate" class="raisePopUp" title="{t}The format could be for example{/t} 'dd/mm/yyyy'">{t}Expiration date{/t}</label></td>
-<td colspan="3"> <input type="text" name="ExpirationDate" id="ExpirationDate" class="required" value="{$data.ExpirationDate}"> </td>
+<td align="right"><span class="must">*</span><label for="ExpirationDate" class="raisePopUp" title="{t}The format could be for example{/t}: yyyy-mm-dd , mm/dd/yyyy">{t}Expiration date{/t}</label></td>
+<td colspan="3"> <input type="text" name="ExpirationDate" id="ExpirationDate" size="11" maxlength="10" class="required" value="{$data.ExpirationDate}"> </td>
 </tr>
 
 {if $checks.ExpirationDate neq '' }

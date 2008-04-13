@@ -535,17 +535,19 @@ class QualificationsForm extends SkillsForm
 			else
 			{
 				// Date format
-				if ( ( !preg_match('/^(\d{1,2})\-(\d{1,2})\-(\d\d\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	   	  		( !preg_match('/^(\d\d\d\d)\-(\d{1,2})\-(\d{1,2})$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
-	  	   		( !preg_match('/^(\d{1,2})\/(\d{1,2})\/(\d\d\d\d)$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	 	    		( !preg_match('/^(\d\d\d\d)\/(\d{1,2})\/(\d{1,2})$/',$this->data['StartDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+				if (// PostgreSQL: ISO date format
+				    ( !preg_match('/^(\d\d\d\d)\-(\d{1,2})\-(\d{1,2})$/',trim($this->data['StartDateList'][$i]),$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+				    ( !preg_match('/^(\d\d\d\d)\/(\d{1,2})\/(\d{1,2})$/',trim($this->data['StartDateList'][$i]),$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+				    // PostgreSQL: MDY date format
+				    ( !preg_match('/^(\d{1,2})\-(\d{1,2})\-(\d\d\d\d)$/',trim($this->data['StartDateList'][$i]),$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+				    ( !preg_match('/^(\d{1,2})\/(\d{1,2})\/(\d\d\d\d)$/',trim($this->data['StartDateList'][$i]),$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) )
 				{
 					$this->checkresults['academic'] = "fail";
 
 					if ( $this->section2control == 'academic' )
 					{
 						$this->checks['result'] = "fail";
-						$this->checks['StartDateList'][$i] = gettext('Incorrect date format.').' '.gettext('The format could be for example').' dd/mm/yyyy';
+						$this->checks['StartDateList'][$i] = gettext('Incorrect date format.').' '.gettext('The format could be for example').': yyyy-mm-dd , mm/dd/yyyy';
 					}
 				}
 				else
@@ -561,17 +563,19 @@ class QualificationsForm extends SkillsForm
 			else
 			{
 				// Date format
-				if ( ( !preg_match('/^(\d{1,2})\-(\d{1,2})\-(\d\d\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	   	  		( !preg_match('/^(\d\d\d\d)\-(\d{1,2})\-(\d{1,2})$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
-	  	   		( !preg_match('/^(\d{1,2})\/(\d{1,2})\/(\d\d\d\d)$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	 	    		( !preg_match('/^(\d\d\d\d)\/(\d{1,2})\/(\d{1,2})$/',$this->data['FinishDateList'][$i],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+				if (// PostgreSQL: ISO date format
+				    ( !preg_match('/^(\d\d\d\d)\-(\d{1,2})\-(\d{1,2})$/',trim($this->data['FinishDateList'][$i]),$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+				    ( !preg_match('/^(\d\d\d\d)\/(\d{1,2})\/(\d{1,2})$/',trim($this->data['FinishDateList'][$i]),$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+				    // PostgreSQL: MDY date format
+				    ( !preg_match('/^(\d{1,2})\-(\d{1,2})\-(\d\d\d\d)$/',trim($this->data['FinishDateList'][$i]),$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+				    ( !preg_match('/^(\d{1,2})\/(\d{1,2})\/(\d\d\d\d)$/',trim($this->data['FinishDateList'][$i]),$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) )
 				{
 					$this->checkresults['academic'] = "fail";
 
 					if ( $this->section2control == 'academic' )
 					{
 						$this->checks['result'] = "fail";
-						$this->checks['FinishDateList'][$i] = gettext('Incorrect date format.').' '.gettext('The format could be for example').' dd/mm/yyyy';
+						$this->checks['FinishDateList'][$i] = gettext('Incorrect date format.').' '.gettext('The format could be for example').': yyyy-mm-dd , mm/dd/yyyy';
 					}
 				}
 				else

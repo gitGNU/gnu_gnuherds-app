@@ -520,17 +520,19 @@ class JobOfferForm extends SkillsForm
 		else
 		{
 			// Date format
-			if ( ( !preg_match('/^(\d{1,2})\-(\d{1,2})\-(\d\d\d\d)$/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	     		( !preg_match('/^(\d\d\d\d)\-(\d{1,2})\-(\d{1,2})$/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
-	     		( !preg_match('/^(\d{1,2})\/(\d{1,2})\/(\d\d\d\d)$/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	     		( !preg_match('/^(\d\d\d\d)\/(\d{1,2})\/(\d{1,2})$/',$this->data['ExpirationDate'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+			if (// PostgreSQL: ISO date format
+			    ( !preg_match('/^(\d\d\d\d)\-(\d{1,2})\-(\d{1,2})$/',trim($this->data['ExpirationDate']),$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+			    ( !preg_match('/^(\d\d\d\d)\/(\d{1,2})\/(\d{1,2})$/',trim($this->data['ExpirationDate']),$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+			    // PostgreSQL: MDY date format
+			    ( !preg_match('/^(\d{1,2})\-(\d{1,2})\-(\d\d\d\d)$/',trim($this->data['ExpirationDate']),$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+			    ( !preg_match('/^(\d{1,2})\/(\d{1,2})\/(\d\d\d\d)$/',trim($this->data['ExpirationDate']),$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) )
 			{
 				$this->checkresults['general'] = "fail";
 
 				if ( $this->section2control == 'general' )
 				{
 					$this->checks['result'] = "fail";
-					$this->checks['ExpirationDate'] = gettext('Incorrect date format.').' '.gettext('The format could be for example').' dd/mm/yyyy';
+					$this->checks['ExpirationDate'] = gettext('Incorrect date format.').' '.gettext('The format could be for example').': yyyy-mm-dd , mm/dd/yyyy';
 				}
 			}
 			else
@@ -762,17 +764,19 @@ class JobOfferForm extends SkillsForm
 		else
 		{
 			// Date format
-			if ( ( !preg_match('/^(\d{1,2})\-(\d{1,2})\-(\d\d\d\d)$/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	     		( !preg_match('/^(\d\d\d\d)\-(\d{1,2})\-(\d{1,2})$/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
-	     		( !preg_match('/^(\d{1,2})\/(\d{1,2})\/(\d\d\d\d)$/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
-	     		( !preg_match('/^(\d\d\d\d)\/(\d{1,2})\/(\d{1,2})$/',$this->data['Deadline'],$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) )     )
+			if (// PostgreSQL: ISO date format
+			    ( !preg_match('/^(\d\d\d\d)\-(\d{1,2})\-(\d{1,2})$/',trim($this->data['Deadline']),$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+			    ( !preg_match('/^(\d\d\d\d)\/(\d{1,2})\/(\d{1,2})$/',trim($this->data['Deadline']),$res) || count($res) < 4 || !checkdate($res[2],$res[3],$res[1]) ) and
+			    // PostgreSQL: MDY date format
+			    ( !preg_match('/^(\d{1,2})\-(\d{1,2})\-(\d\d\d\d)$/',trim($this->data['Deadline']),$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) and
+			    ( !preg_match('/^(\d{1,2})\/(\d{1,2})\/(\d\d\d\d)$/',trim($this->data['Deadline']),$res) || count($res) < 4 || !checkdate($res[1],$res[2],$res[3]) ) )
 			{
 				$this->checkresults['contract'] = "fail";
 
 				if ( $this->section2control == 'contract' )
 				{
 					$this->checks['result'] = "fail";
-					$this->checks['Deadline'] = gettext('Incorrect date format.').' '.gettext('The format could be for example').' dd/mm/yyyy';
+					$this->checks['Deadline'] = gettext('Incorrect date format.').' '.gettext('The format could be for example').': yyyy-mm-dd , mm/dd/yyyy';
 				}
 			}
 			else

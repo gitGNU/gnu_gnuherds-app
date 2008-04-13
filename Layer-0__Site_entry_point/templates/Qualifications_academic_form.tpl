@@ -93,8 +93,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 
 <tr>
-<td align="right" class="{if $i % 2}greenDark{else}greenLight{/if}"><label class="raisePopUp" title="{t}The format could be for example{/t} 'dd/mm/yyyy'">{'Start date'|gettext|strip:'&nbsp;'}</label></td>
-<td class="{if $i % 2}greenDark{else}greenLight{/if}"><input type="text" name="StartDateList[]" size="10" maxlength="10" value="{$data.StartDateList[$i]}" class="{if $i % 2}greenDark{else}greenLight{/if}">
+<td align="right" class="{if $i % 2}greenDark{else}greenLight{/if}"><label class="raisePopUp" title="{t}The format could be for example{/t}: yyyy-mm-dd , mm/dd/yyyy">{'Start date'|gettext|strip:'&nbsp;'}</label></td>
+<td class="{if $i % 2}greenDark{else}greenLight{/if}"><input type="text" name="StartDateList[]" size="11" maxlength="10" value="{$data.StartDateList[$i]}" class="{if $i % 2}greenDark{else}greenLight{/if}">
 
 {if $checks.StartDateList[$i] neq '' }
 <span class="must">{$checks.StartDateList[$i]}</span>
@@ -104,8 +104,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 
 <tr>
-<td align="right" class="{if $i % 2}greenDark{else}greenLight{/if}"><label class="raisePopUp" title="{t}The format could be for example{/t} 'dd/mm/yyyy'">{'Finish date'|gettext|strip:'&nbsp;'}</label></td>
-<td class="{if $i % 2}greenDark{else}greenLight{/if}"><input type="text" name="FinishDateList[]" size="10" maxlength="10" value="{$data.FinishDateList[$i]}" class="{if $i % 2}greenDark{else}greenLight{/if}">
+<td align="right" class="{if $i % 2}greenDark{else}greenLight{/if}"><label class="raisePopUp" title="{t}The format could be for example{/t}: yyyy-mm-dd , mm/dd/yyyy">{'Finish date'|gettext|strip:'&nbsp;'}</label></td>
+<td class="{if $i % 2}greenDark{else}greenLight{/if}"><input type="text" name="FinishDateList[]" size="11" maxlength="10" value="{$data.FinishDateList[$i]}" class="{if $i % 2}greenDark{else}greenLight{/if}">
 
 {if $checks.FinishDateList[$i] neq '' }
 <span class="must">{$checks.FinishDateList[$i]}</span>
@@ -178,13 +178,13 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 
 <tr>
-<td align="right"><label for="StartDateList" class="raisePopUp" title="{t}The format could be for example{/t} 'dd/mm/yyyy'">{'Start date'|gettext|strip:'&nbsp;'}</label></td>
-<td><input type="text" name="StartDateList[]" id="StartDateList" size="10" maxlength="10" value="" class="notRequired"></td>
+<td align="right"><label for="StartDateList" class="raisePopUp" title="{t}The format could be for example{/t}: yyyy-mm-dd , mm/dd/yyyy">{'Start date'|gettext|strip:'&nbsp;'}</label></td>
+<td><input type="text" name="StartDateList[]" id="StartDateList" size="11" maxlength="10" value="" class="notRequired"></td>
 </tr>
 
 <tr>
-<td align="right"><label for="FinishDateList" class="raisePopUp" title="{t}The format could be for example{/t} 'dd/mm/yyyy'">{'Finish date'|gettext|strip:'&nbsp;'}</label></td>
-<td><input type="text" name="FinishDateList[]" id="FinishDateList" size="10" maxlength="10" value="" class="notRequired"></td>
+<td align="right"><label for="FinishDateList" class="raisePopUp" title="{t}The format could be for example{/t}: yyyy-mm-dd , mm/dd/yyyy">{'Finish date'|gettext|strip:'&nbsp;'}</label></td>
+<td><input type="text" name="FinishDateList[]" id="FinishDateList" size="11" maxlength="10" value="" class="notRequired"></td>
 </tr>
 
 <tr><td colspan="2">&nbsp;</td></tr>

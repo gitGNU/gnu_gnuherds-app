@@ -106,7 +106,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <table cellpadding="0" cellspacing="0" rules="none" border="0">
 <tr>
 <td>
-<input type="text" name="EstimatedEffort" id="EstimatedEffort" size="15" maxlength="30" class="{if $data.WageRankByPeriod eq 'by project'}required{else}notRequired{/if}" value="{$data.EstimatedEffort}">
+<input type="text" name="EstimatedEffort" id="EstimatedEffort" size="13" maxlength="30" class="{if $data.WageRankByPeriod eq 'by project'}required{else}notRequired{/if}" value="{$data.EstimatedEffort}">
 </td>
 <td>
 <select name="TimeUnit" id="TimeUnit" class="{if $data.WageRankByPeriod eq 'by project'}required{else}notRequired{/if}">
@@ -127,8 +127,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 
 <tr>
-<td align="right"><label for="Deadline" class="raisePopUp" title="{t}The format could be for example{/t} 'dd/mm/yyyy'">{'Deadline'|gettext|strip:'&nbsp;'}</label></td>
-<td colspan="3"> <input type="text" name="Deadline" id="Deadline" size="15" class="notRequired" value="{$data.Deadline}"> </td>
+<td align="right"><label for="Deadline" class="raisePopUp" title="{t}The format could be for example{/t}: yyyy-mm-dd , mm/dd/yyyy">{'Deadline'|gettext|strip:'&nbsp;'}</label></td>
+<td colspan="3"> <input type="text" name="Deadline" id="Deadline" size="11" maxlength="10" class="notRequired" value="{$data.Deadline}"> </td>
 </tr>
 
 {if $checks.Deadline neq '' }
