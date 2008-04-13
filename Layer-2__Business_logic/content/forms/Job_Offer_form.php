@@ -613,19 +613,6 @@ class JobOfferForm extends SkillsForm
 			{
 				$this->checks['SkillExperienceLevelList'][$i] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 			}
-
-			if ( $_POST['SkillKnowledgeLevelList'][$i] == 'Null' and $_POST['SkillExperienceLevelList'][$i] == 'Null' )
-			{
-				$this->checkresults['skills'] = "fail";
-
-				if ( $this->section2control == 'skills' )
-				{
-					$this->checks['result'] = "fail";
-					$this->checks['SkillKnowledgeLevelList'][$i] = gettext('Please fill in here');
-					$this->checks['SkillExperienceLevelList'][$i] = gettext('Please fill in here');
-				}
-			}
-			// else do not reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 		}
 
 		// 'languages' section
@@ -693,19 +680,6 @@ class JobOfferForm extends SkillsForm
 				{
 					$this->checks['LanguageWrittenLevelList'][$i] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 				}
-
-				if ( $this->data['LanguageSpokenLevelList'][$i] == 'Null' and $this->data['LanguageWrittenLevelList'][$i] == 'Null' )
-				{
-					$this->checkresults['languages'] = "fail";
-
-					if ( $this->section2control == 'languages' )
-					{
-						$this->checks['result'] = "fail";
-						$this->checks['LanguageSpokenLevelList'][$i] = gettext('Please fill in here');
-						$this->checks['LanguageWrittenLevelList'][$i] = gettext('Please fill in here');
-					}
-				}
-				// else do not reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 			}
 		}
 
