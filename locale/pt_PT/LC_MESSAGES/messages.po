@@ -284,11 +284,8 @@ msgstr "Controlado pelos seus próprios utilizadores"
 msgid "FS skills data base"
 msgstr "Base de dados de conhecimentos em SL"
 
-msgid "Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled."
-msgstr "Poderiam ser desenvolvidos outros módulos. Envie um email com a sua proposta para a lista de distribuição %1. Os próximos passos podem estar nas suas mãos. No entanto, um desses passos foi já proposto: a FSF poderia conceder algumas certificações. Esta aplicação web está já preparada para suportar certificações, ainda que tal suporte esteja de momento desactivado."
-
-msgid "%1 certification"
-msgstr "Certificação %1"
+msgid "Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side."
+msgstr "Poderiam ser desenvolvidos outros módulos. Envie um email com a sua proposta para a lista de distribuição %1. Os próximos passos podem estar nas suas mãos."
 
 msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
 msgstr "Este projecto foi realizado por um pequeno %1grupo%2 de membros da comunidade de Software Livre."

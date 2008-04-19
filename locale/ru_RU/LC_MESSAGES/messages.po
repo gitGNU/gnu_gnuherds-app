@@ -284,11 +284,8 @@ msgstr "Управляется своими пользователями"
 msgid "FS skills data base"
 msgstr "Имеет базу данных квалификации разработчиков"
 
-msgid "Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side. However, one of those steps has been already proposed: the FSF could grant some certifications. This web application is already ready to support certifications, though such support is now disabled."
-msgstr "Могут появиться и другие модули. Отправьте сообщение с предложением в список рассылки %1 и возьмите инициативу в свои руки. Например, некоторые модули уже предложены: Ассоциация Свободного ПО может выдавать сертификаты. Этот ресурс уже поддерживает сертификацию, но временно эти возможности отключены."
-
-msgid "%1 certification"
-msgstr "%1 сертификация"
+msgid "Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side."
+msgstr "Могут появиться и другие модули. Отправьте сообщение с предложением в список рассылки %1 и возьмите инициативу в свои руки."
 
 msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
 msgstr "Этот проект создан небольшой %1командой%2 членов сообщества Свободного Программного Обеспечения."
