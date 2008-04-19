@@ -540,7 +540,7 @@ class JobOffer
 		return $array;
 	}
 
-	private function getEntitiesSubscribed($JobOfferId)
+	public function getEntitiesSubscribed($JobOfferId)
 	{
 		$sqlQuery = "PREPARE query(integer) AS  SELECT R0_E1_Id FROM R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=$1;  EXECUTE query('$JobOfferId');";
 		return $this->postgresql->getOneField($sqlQuery,1);

@@ -143,15 +143,16 @@ class AccessControlList
 				}
 				else
 				{
-					// If the job offer is not active, only the job offer owner can read it.
+					// If the job offer is not active, only the job offer owner and the entities already subscribed to such job offer can read it.
 					if ( $_SESSION['Logged'] == '1' )
 					{
 						$joboffers = $jobOffer->getJobOffersForEntity(); // Job Offers for the logged Entity
+						$entities = $jobOffer->getEntitiesSubscribed($J1_Id); // Entities subscribed to the $J1_Id Job Offer
 
-						if ( !in_array( $J1_Id, $joboffers[0] ) )
-							$this->notActive();
-						else
+						if ( in_array($J1_Id,$joboffers[0]) or in_array($_SESSION['EntityId'],$entities) )
 							$this->granted();
+						else
+							$this->notActive();
 					}
 					else
 					{
