@@ -67,6 +67,10 @@ class AccessControlList
 
 	public function checkQualificationsAccess($mode,$E1_Id)
 	{
+		// Check access to both:
+		// qualifications entity information: profiles, academic, skills, languages, etc.,
+		// and personal entity information: photo or logo, name, address, landline, etc.
+
 		$this->checkProperlyLogged();
 
 		$qualifications = new Qualifications();
@@ -95,8 +99,10 @@ class AccessControlList
 	}
 
 
-	public function checkEntityAccess($mode,$E1_Id)
+	public function checkJobOfferEntityAccess($mode,$E1_Id)
 	{
+		// Check access to general entity information: photo or logo, name, etc.
+
 		$jobOffer = new JobOffer();
 
 		switch ($mode) {
@@ -106,6 +112,9 @@ class AccessControlList
 					or
 				     // Check if the E1_Id entity has some job offer published
 				     $jobOffer->hasJobOfferPublished($E1_Id) == true
+					or
+				     // Check if the logged entity is subscribed to some of the job offers owned by the E1_Id entity, even if such job offers are not active
+				     $jobOffer->isApplicant($E1_Id) == true
 				   )
 					$this->granted();
 				else

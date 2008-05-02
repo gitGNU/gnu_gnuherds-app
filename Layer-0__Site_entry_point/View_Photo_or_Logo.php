@@ -110,7 +110,7 @@ class __DBManager
 	public function getJobOfferPhotoOrLogoForEntity($Id)
 	{
 		$acl = new __AccessControlList();
-		$acl->checkEntityAccess("READ",$Id);
+		$acl->checkJobOfferEntityAccess("READ",$Id);
 
 		$entity = new __Entity();
 		return $entity->getEntityPhotoOrLogo($Id);
@@ -151,6 +151,10 @@ class __AccessControlList
 
 	public function checkQualificationsAccess($mode,$E1_Id)
 	{
+		// Check access to both:
+		// qualifications entity information: profiles, academic, skills, languages, etc.,
+		// and personal entity information: photo or logo, name, address, landline, etc.
+
 		$this->checkProperlyLogged();
 
 		$qualifications = new __Qualifications();
@@ -179,8 +183,10 @@ class __AccessControlList
 	}
 
 
-	public function checkEntityAccess($mode,$E1_Id)
+	public function checkJobOfferEntityAccess($mode,$E1_Id)
 	{
+		// Check access to general entity information: photo or logo, name, etc.
+
 		$jobOffer = new __JobOffer();
 
 		switch ($mode) {
@@ -190,6 +196,9 @@ class __AccessControlList
 					or
 				     // Check if the E1_Id entity has some job offer published
 				     $jobOffer->hasJobOfferPublished($E1_Id) == true
+					or
+				     // Check if the logged entity is subscribed to some of the job offers owned by the E1_Id entity, even if such job offers are not active
+				     $jobOffer->isApplicant($E1_Id) == true
 				   )
 					$this->granted();
 				else
@@ -282,6 +291,18 @@ class __JobOffer
 	public function hasJobOfferPublished($E1_Id)
 	{
 		$sqlQuery = "PREPARE query(integer) AS  SELECT count(*) FROM J1_JobOffers WHERE J1_E1_Id=$1 AND J1_Closed='f' AND J1_ExpirationDate > 'now';  EXECUTE query('$E1_Id');";
+		$result = $this->postgresql->getOneField($sqlQuery,1);
+
+		if ( intval($result[0]) >= 1 )
+			return true;
+		else
+			return false;
+	}
+
+	// Check if the logged entity is subscribed to some of the job offers owned by the E1_Id entity, even if such job offers are not active
+	public function isApplicant($E1_Id)
+	{
+		$sqlQuery = "PREPARE query(integer,integer) AS  SELECT count(*) FROM R0_Qualifications2JobOffersJoins,J1_JobOffers WHERE R0_J1_Id=J1_Id AND J1_E1_Id=$1 AND R0_E1_Id=$2;  EXECUTE query('$E1_Id','$_SESSION[EntityId]');";
 		$result = $this->postgresql->getOneField($sqlQuery,1);
 
 		if ( intval($result[0]) >= 1 )

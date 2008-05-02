@@ -283,7 +283,7 @@ class DBManager
 	public function getJobOfferPhotoOrLogoForEntity($Id)
 	{
 		$acl = new AccessControlList();
-		$acl->checkEntityAccess("READ",$Id);
+		$acl->checkJobOfferEntityAccess("READ",$Id);
 
 		$entity = new Entity();
 		return $entity->getEntityPhotoOrLogo($Id);

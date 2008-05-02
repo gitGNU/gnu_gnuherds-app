@@ -663,6 +663,18 @@ class JobOffer
 			return false;
 	}
 
+	// Check if the logged entity is subscribed to some of the job offers owned by the E1_Id entity, even if such job offers are not active
+	public function isApplicant($E1_Id)
+	{
+		$sqlQuery = "PREPARE query(integer,integer) AS  SELECT count(*) FROM R0_Qualifications2JobOffersJoins,J1_JobOffers WHERE R0_J1_Id=J1_Id AND J1_E1_Id=$1 AND R0_E1_Id=$2;  EXECUTE query('$E1_Id','$_SESSION[EntityId]');";
+		$result = $this->postgresql->getOneField($sqlQuery,1);
+
+		if ( intval($result[0]) >= 1 )
+			return true;
+		else
+			return false;
+	}
+
 
 	public function isJobOfferActive($J1_Id)
 	{
