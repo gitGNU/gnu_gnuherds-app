@@ -65,6 +65,8 @@ class AdminForm extends SkillsForm
 			}
 			elseif ( isset($_POST['search']) and $_POST['search'] != '' )
 			{
+				$_POST['Skill2Process'] = trim($_POST['Skill2Process']);
+
 				if ( $this->manager->isSkillAlreadyInDataBase($_POST['Skill2Process']) == true )
 					$this->loadAdminForm();
 			}
