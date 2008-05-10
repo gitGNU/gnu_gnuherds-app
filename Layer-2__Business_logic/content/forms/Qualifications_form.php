@@ -649,14 +649,14 @@ class QualificationsForm extends SkillsForm
 		{
 			$this->checkresults['languages'] = "fail";
 
-				if ( $this->section2control == 'languages' )
-				{
-					$this->checks['result'] = "fail";
+			if ( $this->section2control == 'languages' )
+			{
+				$this->checks['result'] = "fail";
 
-					$this->checks['LanguageList'][0] = gettext('Please fill in here');
-					$this->checks['LanguageSpokenLevelList'][0] = gettext('Please fill in here');
-					$this->checks['LanguageWrittenLevelList'][0] = gettext('Please fill in here');
-				}
+				$this->checks['LanguageList'][0] = gettext('Please fill in here');
+				$this->checks['LanguageSpokenLevelList'][0] = gettext('Please fill in here');
+				$this->checks['LanguageWrittenLevelList'][0] = gettext('Please fill in here');
+			}
 		}
 		else
 		{
