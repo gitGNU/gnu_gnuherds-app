@@ -353,7 +353,7 @@ class QualificationsForm extends SkillsForm
 					{
 						$this->data['CheckList'][$j] = $this->data['CheckList'][$i];
 
-						$_POST['SkillList'][$j] = $_POST['SkillList'][$i];
+						$_POST['SkillList'][$j] = trim($_POST['SkillList'][$i]);
 						$_POST['ShadowSkillList'][$j] = $_POST['ShadowSkillList'][$i];
 						$_POST['SkillsToInsert'][$j] = $_POST['SkillsToInsert'][$i];
 						$_POST['SuggestionSet'.$j] = $_POST['SuggestionSet'.$i];
