@@ -179,6 +179,9 @@ class AdminForm extends SkillsForm
 
 	private function prepareData4View()
 	{
+		// Trim the SkillName before saving
+		$_POST['SkillName'] = trim($_POST['SkillName']);
+
 		// Save the section values in the $data variable
 
 		$this->data['Skill2Process'] = isset($_POST['Skill2Process']) ? $_POST['Skill2Process'] : $_POST['ShadowSkill2Process'];
