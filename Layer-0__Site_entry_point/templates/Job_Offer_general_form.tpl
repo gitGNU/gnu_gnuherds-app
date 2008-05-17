@@ -114,7 +114,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr valign="top">
 <td align="right"><label for="EmployerJobOfferReference">{t}Your offer reference{/t}</label></td>
-<td colspan="3"> <input type="text" name="EmployerJobOfferReference" id="EmployerJobOfferReference" class="notRequired" value="{$data.EmployerJobOfferReference}"> </td>
+<td colspan="3"> <input type="text" name="EmployerJobOfferReference" id="EmployerJobOfferReference" size="20" maxlength="30" class="notRequired" value="{$data.EmployerJobOfferReference}"> </td>
 </tr>
 
 <tr> <td colspan="4">&nbsp;</td> </tr>
