@@ -18,7 +18,7 @@
 
 // We have to use SSL for encryption of the password, PHPSESSID, etc., because else
 // it is sent to the web server as plain text.
-// Insert the following code snipet into the top of secure page.
+// Insert the following code snippet into the top of secure page.
 if ( $_SESSION['Logged'] == '1' and ( !isset($_SERVER['HTTPS']) or $_SERVER['HTTPS'] != 'on' ) )
 {
 	header("Location: https://$_SERVER[SERVER_NAME]$_SERVER[REQUEST_URI]");
