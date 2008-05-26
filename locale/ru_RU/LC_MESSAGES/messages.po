@@ -353,7 +353,7 @@ msgstr "Чтобы не отклоняться от требований GNU, А
 msgid "All other officers will be elected by the membership."
 msgstr "Весь другой персонал будет выбран из участников проекта."
 
-msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or his out of office."
+msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or him out of office."
 msgstr "Срок действия полномочий руководителей - 4 года. Все позиции в комитете добровольные, и член комитета может оставить свои полномочия в любое время. После 6 месяцев членства в случае возникновения проблем, может быть возбуждено голосование по отклонению полномочий члена руководства."
 
 msgid "Decisions"
@@ -368,7 +368,7 @@ msgstr "Голосование"
 msgid "In addition to the issues at hand in a vote, the option to abstain, delegate your vote to another individual, and delegate your vote to the committee shall be present.  Through membership options a member can set one of these to be the default if they do not vote.  The option will initially be set to abstain.  Officer elections, amendments or dissolutions may not be delegated."
 msgstr "В добавление к обычным вопросам, связанным с голосованием, должна присутствовать возможность воздержаться или передать голос другому человеку или комитету. В параметрах участника должна быть доступной возможность установить такую передачу по умолчанию, для тех случаев, если участник не хочет голосовать. По умолчанию участник будет воздерживаться от голосования. Голоса на выборах надзирателя, при принятии поправок к уставу или при голосовании о роспуске не могут передаваться."
 
-msgid "Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed to discuss it is too long should there be a vote.%2Vote on non-technical subjects.%3"
+msgid "Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed for discussion is too long should there be a vote.%2Vote on non-technical subjects.%3"
 msgstr "Руководство: %1Не голосуйте по техническим вопросам. Их можно обсудить и прийти к наилучшему решению. Только если нужно слишком большое время для обсуждения должно проводиться голосование.%2Но всегда голосуйте по организационным вопросам.%3"
 
 msgid "Special interest groups"

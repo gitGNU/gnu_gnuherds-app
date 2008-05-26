@@ -85,7 +85,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </p>
 
 <p>
-{t}An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or his out of office.{/t}
+{t}An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or him out of office.{/t}
 </p>
 
 
@@ -107,7 +107,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
   1='</p><ul><li>'
   2='</li><li>'
   3='</li></ul>'
-}Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed to discuss it is too long should there be a vote.%2Vote on non-technical subjects.%3{/t}
+}Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed for discussion is too long should there be a vote.%2Vote on non-technical subjects.%3{/t}
 
 <p>
 {t escape='no'

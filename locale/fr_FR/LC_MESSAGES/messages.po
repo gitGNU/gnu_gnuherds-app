@@ -403,7 +403,7 @@ msgstr "En cas de problème avec les demandes de GNU ci-dessus, l'Association en
 msgid "All other officers will be elected by the membership."
 msgstr "Tous les autres membres du bureau seront élus par les membres."
 
-msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or his out of office."
+msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or him out of office."
 msgstr "Un membre du bureau est élu pour un mandat de 4 ans. Toutes les membres du conseil d'administration sont volontaires, un membre du bureau peut se résigner à tout moment. Après une période de 6 mois, si les membres ne sont pas satisfaits d'un membre du bureau, ils peuvent voter sa suppression de poste."
 
 msgid "Decisions"
@@ -418,7 +418,7 @@ msgstr "Le vote"
 msgid "In addition to the issues at hand in a vote, the option to abstain, delegate your vote to another individual, and delegate your vote to the committee shall be present.  Through membership options a member can set one of these to be the default if they do not vote.  The option will initially be set to abstain.  Officer elections, amendments or dissolutions may not be delegated."
 msgstr "En plus des votes réguliers à main levée, il est possible pour un membre de choisir de s'abstenir, de déléguer son vote à une autre personne et de déléguer son vote au conseil d'administration. Parmi les choix d'un membre, celui-ci peut définir l'un d'entre eux comme étant celui par défaut s'il ne vote pas. Le choix par défaut est l'abstention. Les élections de membres du bureau, les amendements et la dissolution ne permettent pas de déléguer un vote."
 
-msgid "Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed to discuss it is too long should there be a vote.%2Vote on non-technical subjects.%3"
+msgid "Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed for discussion is too long should there be a vote.%2Vote on non-technical subjects.%3"
 msgstr "Ligne directrice : %1On ne vote pas les sujets techniques. On en discute afin d'obtenir la meilleure solution technique. Si la discussion prend trop de temps, on peut alors procéder à un vote.%2On vote les sujets non techniques.%3"
 
 msgid "Special interest groups"

@@ -410,7 +410,7 @@ msgid "All other officers will be elected by the membership."
 msgstr "El resto de delegados serán elegidos por los afiliados."
 
 #, fuzzy
-msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or his out of office."
+msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or him out of office."
 msgstr "La duración del Cargo será de 4 años.  Todos los cargos del comité son voluntarios. Cualquier delegado puede renunciar en cualquier momento.  Después de 6 meses, si los afiliados están descontentos con un delegado pueden apartarlo/a de su cargo."
 
 msgid "Decisions"
@@ -428,7 +428,7 @@ msgid "In addition to the issues at hand in a vote, the option to abstain, deleg
 msgstr "Además de las opciones de voto disponibles en una votación concreta, estarán también presentes las opciones de: abstenerse, delegar el voto en otro individuo, y delegar el voto en el comité.  En la ficha de opciones de afiliado se podrá especificar una de estas opciones como defecto, la cual se aplicará si el afiliado no vota.  Esta opción será inicialmente configurada para abstenerse. Las elecciones de cargos, enmiendas o mociones de disolución no pueden ser delegadas."
 
 #, fuzzy
-msgid "Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed to discuss it is too long should there be a vote.%2Vote on non-technical subjects.%3"
+msgid "Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed for discussion is too long should there be a vote.%2Vote on non-technical subjects.%3"
 msgstr "Directrices: %1No use el mecanismo de votación para tomar decisiones sobre temas técnicos. Simplemente, discútalos para obtener la mejor solución técnica. Utilíselo solo si el tiempo necesario para discutirlo es demasiado.%2Úsese el mecanismo de votación para tomar decisiones no-técnicas.%3"
 
 msgid "Special interest groups"
