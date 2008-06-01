@@ -635,9 +635,6 @@ msgstr "%1 это %2почти свободное ПО%3. Debian на самом
 msgid "%1 is %2Partially-Free Software%3 %4because%5 it is made of many programs; some are free and some are not."
 msgstr "%1 это %2частично свободное ПО%3, %4потому что%5 некоторые приложения в его составе свободны, а некоторые несвободны."
 
-msgid "%1 is %2Almost-Free Software%3. Although Gobuntu's stated %4policy%7 is to adhere to the Free Software Foundation four freedoms, it presently %5installs%7 Firefox, which encourages installing non-free plugins. Gobuntu enables downloading of non-free software packages from its archives, and the use of the ubuntu.com domain %6promotes%7 non-free software."
-msgstr "%1 это %2почти свободное ПО%3. Несмотря на то, что Gobuntu's анонсировало %4политику%7 следования четырём главным свободам ПО, в настоящий момент этот дистрибутив %5распространяет%7 Firefox, позволяя использовать несвободные модули. Gobuntu рекомендует закачку несвободного программного обеспечения из своих хранилищ, и позволяет использовать ресурсы ubuntu.com %6распространяя%7 несвободное ПО."
-
 msgid "%1 is %3Free Software%4 because it does not ship anything that is Non-Free Software neither work to provide easy access to Non-Free Software. A Non-Free Software %2 not removed from gNewSense is a bug. The gNewSense's %5policy%6 is to delete any non-free software found in the Linux kernel or elsewhere in the GNU/Linux system."
 msgstr "%1 это %3свободное ПО%4, потому что в его составе отсутствуют не свободные приложения и приложения, предоставляющими доступ к несвободным компонентам. Любое несвободное ПО в составе %2  gNewSense является ошибкой разработчиков. %5Политика%6 gNewSense требует удаления любого несвободного ПО из ядра ОС Linux или других компонент системы GNU/Linux."
 

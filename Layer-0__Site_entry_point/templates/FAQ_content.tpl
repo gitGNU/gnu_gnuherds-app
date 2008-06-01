@@ -334,18 +334,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<li>
 	{t escape='no'
-	  1='<strong>Gobuntu</strong>'
-	  2='<i>'
-	  3='</i>'
-	  4='<a href="http://www.ubuntu.com/products/whatisubuntu/gobuntu">'
-	  5='<a href="http://diveintomark.org/archives/2007/10/18/gobuntu-has-already-failed">'
-	  6='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-10/msg00048.html">'
-	  7='</a>'
-	}%1 is %2Almost-Free Software%3. Although Gobuntu's stated %4policy%7 is to adhere to the Free Software Foundation four freedoms, it presently %5installs%7 Firefox, which encourages installing non-free plugins. Gobuntu enables downloading of non-free software packages from its archives, and the use of the ubuntu.com domain %6promotes%7 non-free software.{/t}
-	</li>
-
-	<li>
-	{t escape='no'
 	  1='<strong>gNewSense</strong>'
 	  2='<acronym title="Binary Large OBject">BLOB</acronym>'
 	  3='<i>'
