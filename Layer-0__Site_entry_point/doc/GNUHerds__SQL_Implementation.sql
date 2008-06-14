@@ -54,8 +54,8 @@ DROP TABLE A1_Alerts;
 DROP TABLE E1_Entities;
 
 -- Lists:
-DROP TABLE LO_Countries;
 DROP TABLE LN_Nationalities; -- Nationalities internationally recognized. That is to say, ISO nationalities.
+DROP TABLE LO_Countries;
 DROP TABLE LU_Currencies;
 DROP TABLE LA_AcademicLevels;
 DROP TABLE LC_Certifications; -- We do not translate de certifications. It is better so, in order to keep a unique 'image'. It is as the usual mark image.
