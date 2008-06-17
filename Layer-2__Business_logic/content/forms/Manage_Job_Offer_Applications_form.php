@@ -107,7 +107,6 @@ class ManageJobOfferApplicationsForm
 
 		$smarty->assign('countryName', $result[12]);
 		$smarty->assign('professionalExperienceSinceYear', $result[13]);
-		$smarty->assign('academicQualification', $result[14]);
 
 		$smarty->assign('applicationState', $result[15]);
 

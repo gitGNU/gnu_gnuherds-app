@@ -530,7 +530,6 @@ class JobOffer
 				$arrayQA = $qualifications->getQualificationsForEntity($entities[$i]);
 
 				$array[13][$i] = $arrayQA[0][0]; // Q1_ProfessionalExperienceSinceYear
-				$array[14][$i] = $arrayQA[1][0]; // Q1_LA_Id
 
 				$arraySS = $this->getApplicationState($JobOfferId,$entities[$i]);
 				$array[15][$i] = $arraySS[0]; // R0_State

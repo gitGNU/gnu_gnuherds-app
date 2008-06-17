@@ -1040,8 +1040,6 @@ class QualificationsForm extends SkillsForm
 		else
 			$this->data['AvailableToChangeResidence'] = "false";
 
-		$this->data['AcademicQualificationDescription'] = $result[9][0];
-
 
 		// Qualification Academic table
 		$this->data['DegreeList'] = $result[40];

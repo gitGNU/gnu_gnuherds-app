@@ -119,8 +119,6 @@ class ViewQualificationsForm
 		else
 			$this->data['AvailableToChangeResidence'] = "false";
 
-		$this->data['AcademicQualificationDescription'] = $result[9][0];
-
 		if ( isset($result[15][0]) )
 			$this->data['WageRankCurrencyName'] = $result[15][0];
 		else

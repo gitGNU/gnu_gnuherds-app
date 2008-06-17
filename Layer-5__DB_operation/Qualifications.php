@@ -35,22 +35,20 @@ class Qualifications
 
 	public function getQualificationsForEntity($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT Q1_ProfessionalExperienceSinceYear,Q1_LA_Id,QP_LK_DesiredContractType,QP_DesiredWageRank,QP_LU_WageRankCurrency,QP_LB_WageRankByPeriod,QP_CurrentEmployability,QP_AvailableToTravel,QP_AvailableToChangeResidence,Q1_AcademicQualificationDescription,Q1_CompletedEdition FROM Q1_Qualifications WHERE Q1_E1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT Q1_ProfessionalExperienceSinceYear,QP_LK_DesiredContractType,QP_DesiredWageRank,QP_LU_WageRankCurrency,QP_LB_WageRankByPeriod,QP_CurrentEmployability,QP_AvailableToTravel,QP_AvailableToChangeResidence,Q1_CompletedEdition FROM Q1_Qualifications WHERE Q1_E1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array = array();
 
 		$array[0] = pg_fetch_all_columns($result, 0); // Q1_ProfessionalExperienceSinceYear
-		$array[1] = pg_fetch_all_columns($result, 1); // Q1_LA_Id
-		$array[2] = pg_fetch_all_columns($result, 2); // QP_LK_DesiredContractType
-		$array[3] = pg_fetch_all_columns($result, 3); // QP_DesiredWageRank
-		$array[4] = pg_fetch_all_columns($result, 4); // QP_LU_WageRankCurrency
-		$array[5] = pg_fetch_all_columns($result, 5); // QP_LB_WageRankByPeriod
-		$array[6] = pg_fetch_all_columns($result, 6); // QP_CurrentEmployability
-		$array[7] = pg_fetch_all_columns($result, 7); // QP_AvailableToTravel
-		$array[8] = pg_fetch_all_columns($result, 8); // QP_AvailableToChangeResidence
-		$array[9] = pg_fetch_all_columns($result, 9); // Q1_AcademicQualificationDescription
-		$array[10] = pg_fetch_all_columns($result, 10); // Q1_CompletedEdition
+		$array[2] = pg_fetch_all_columns($result, 1); // QP_LK_DesiredContractType
+		$array[3] = pg_fetch_all_columns($result, 2); // QP_DesiredWageRank
+		$array[4] = pg_fetch_all_columns($result, 3); // QP_LU_WageRankCurrency
+		$array[5] = pg_fetch_all_columns($result, 4); // QP_LB_WageRankByPeriod
+		$array[6] = pg_fetch_all_columns($result, 5); // QP_CurrentEmployability
+		$array[7] = pg_fetch_all_columns($result, 6); // QP_AvailableToTravel
+		$array[8] = pg_fetch_all_columns($result, 7); // QP_AvailableToChangeResidence
+		$array[10] = pg_fetch_all_columns($result, 8); // Q1_CompletedEdition
 
  		// The curreny name.
 		$currencies = new Currencies();
