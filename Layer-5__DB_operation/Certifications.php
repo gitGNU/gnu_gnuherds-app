@@ -30,9 +30,9 @@ class Certifications
 	}
 
 
-	public function getRequestedCertificationsForEntity()
+	public function getRequestedCertificationsForEntity($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT R26_LC_Name, R26_State FROM R26_Qualification2Certifications WHERE R26_Q1_E1_Id=$1;  EXECUTE query('$_SESSION[EntityId]');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT R26_LC_Name, R26_State FROM R26_Qualification2Certifications WHERE R26_Q1_E1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery, 1);
 
 		$array[0] = pg_fetch_all_columns($result, 0 );
