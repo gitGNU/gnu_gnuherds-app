@@ -728,7 +728,19 @@ class JobOfferForm extends SkillsForm
 			$this->checks['ContractType'] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 		}
 
-		if ( $this->data['WageRank']=='' or $this->data['WageRankCurrency']=='' or $this->data['WageRankByPeriod']=='' )
+		define("MINIMUM_JOB_OFFER_SALARY", 6.55); // TODO: DELAYED: Move these constants to a central configuration file
+
+		if ( (float)($this->data['WageRank']) < MINIMUM_JOB_OFFER_SALARY )
+		{
+			$this->checkresults['contract'] = "fail";
+
+			if ( $this->section2control == 'contract' )
+			{
+				$this->checks['result'] = "fail";
+				$this->checks['WageRank'] = vsprintf(gettext('Please fill in here numeric greater or equal to %s'), MINIMUM_JOB_OFFER_SALARY );
+			}
+		}
+		elseif ( $this->data['WageRank']=='' or $this->data['WageRankCurrency']=='' or $this->data['WageRankByPeriod']=='' )
 		{
 			$this->checkresults['contract'] = "fail";
 
