@@ -527,8 +527,8 @@ msgstr "Como se candidatar a uma oferta de trabalho?"
 msgid "Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4."
 msgstr "Registe-se como um novo %1Indivíduo%4, %2Empresa%4 ou %3Organização sem fins lucrativos%4."
 
-msgid "Fill the %1Qualifications%2 form."
-msgstr "Preencha o formulário de %1Qualificações%2."
+msgid "Fill the %1%2%3Qualifications%4 form."
+msgstr "Preencha o formulário de %1%2%3Qualificações%4."
 
 msgid "It is recommended provide the more information possible."
 msgstr "É recomendado que apresente a maior quantidade de informação possível."

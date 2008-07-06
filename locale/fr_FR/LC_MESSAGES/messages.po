@@ -584,8 +584,8 @@ msgstr "Comment postuler à une offre d'emploi ?"
 msgid "Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4."
 msgstr "Enregistrez-vous en tant que %1personne%4, %2société%4 ou %3organisation à but non lucratif%4."
 
-msgid "Fill the %1Qualifications%2 form."
-msgstr "Remplissez le formulaire de %1qualifications%2."
+msgid "Fill the %1%2%3Qualifications%4 form."
+msgstr "Remplissez le formulaire de %1%2%3qualifications%4."
 
 #, fuzzy
 msgid "It is recommended provide the more information possible."

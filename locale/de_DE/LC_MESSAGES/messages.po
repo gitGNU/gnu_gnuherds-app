@@ -616,8 +616,8 @@ msgid "Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4."
 msgstr "Regístrese como nueva %1Persona%4, %2Compañía%4 o %3Organización sin ánimo de lucro%4."
 
 #, fuzzy
-msgid "Fill the %1Qualifications%2 form."
-msgstr "Rellene el formulario de %1Cualificaciones%2."
+msgid "Fill the %1%2%3Qualifications%4 form."
+msgstr "Rellene el formulario de %1%2%3Cualificaciones%4."
 
 #, fuzzy
 msgid "It is recommended provide the more information possible."

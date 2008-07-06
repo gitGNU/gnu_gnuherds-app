@@ -531,8 +531,8 @@ msgstr "Come sottoscrivere un'offerta di lavoro?"
 msgid "Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4."
 msgstr "Registrati come nuova %1Persona%4, %2Azienda%4 o %3Organizzazione no profit%4."
 
-msgid "Fill the %1Qualifications%2 form."
-msgstr "Riempi il modulo %1Qualifiche%2."
+msgid "Fill the %1%2%3Qualifications%4 form."
+msgstr "Riempi il modulo %1%2%3Qualifiche%4."
 
 msgid "It is recommended provide the more information possible."
 msgstr "E' raccomndato fornire il maggior numero di informazioni possibile."
