@@ -53,7 +53,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<strong>{if $countryName[$i]}{t}{$countryName[$i]}{/t}{/if}</strong>{if $stateProvince[$i]}, {$stateProvince[$i]}{/if}{if $city[$i]}, {$city[$i]}{/if}
+<strong>{if $countryName[$i]}{t}{$countryName[$i]}{/t}{/if}</strong>{if $stateProvince[$i]}{if $countryName[$i]}, {/if}{$stateProvince[$i]}{/if}{if $city[$i]}{if $countryName[$i] or $stateProvince[$i]}, {/if}{$city[$i]}{/if}
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
