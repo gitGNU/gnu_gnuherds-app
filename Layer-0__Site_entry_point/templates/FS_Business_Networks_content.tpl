@@ -32,8 +32,42 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<li>
 		<p>
-		<a href="http://www.libre-entreprise.org/">Libre-entreprise</a> ({t}French{/t})
+		<a href="http://www.ttllp.co.uk/">Turo Technology LLP</a>, {t}Cooperative{/t}. ({t}English{/t})<br>
 		</p>
+	</li>
+
+	<li>
+		<p>
+		<a href="http://www.libre-entreprise.org/">Libre-entreprise</a> ({t}French{/t})<br>
+		</p>
+
+		<ul>
+			<li>
+				<p>
+				<a href="http://www.easter-eggs.com/">Easter-eggs</a><br>
+				</p>
+			</li>
+			<li>
+				<p>
+				<a href="http://www.cliss21.com/">Cliss XXI</a>, {t}Cooperative{/t}.<br>
+				</p>
+			</li>
+			<li>
+				<p>
+				<a href="http://www.eledo.com/">Eledo</a><br>
+				</p>
+			</li>
+			<li>
+				<p>
+				<a href="http://www.libricks.fr/">Libricks</a><br>
+				</p>
+			</li>
+			<li>
+				<p>
+				...
+				</p>
+			</li>
+		</ul>
 	</li>
 
 	<li>
