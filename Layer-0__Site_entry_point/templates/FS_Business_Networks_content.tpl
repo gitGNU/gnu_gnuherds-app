@@ -26,19 +26,19 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<li>
 		<p>
-		<a href="http://blue-gnu.biz/node/99">AdaCore</a> ({t}English{/t})
+		<a href="http://blue-gnu.biz/node/99">AdaCore</a> ({t domain='iso_639'}English{/t})
 		</p>
 	</li>
 
 	<li>
 		<p>
-		<a href="http://www.ttllp.co.uk/">Turo Technology LLP</a>, {t}Cooperative{/t}. ({t}English{/t})<br>
+		<a href="http://www.ttllp.co.uk/">Turo Technology LLP</a>, {t}Cooperative{/t}. ({t domain='iso_639'}English{/t})<br>
 		</p>
 	</li>
 
 	<li>
 		<p>
-		<a href="http://www.libre-entreprise.org/">Libre-entreprise</a> ({t}French{/t})<br>
+		<a href="http://www.libre-entreprise.org/">Libre-entreprise</a> ({t domain='iso_639'}French{/t})<br>
 		</p>
 
 		<ul>
@@ -72,7 +72,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<li>
 		<p>
-		<a href="http://www.menttes.com/contact-us">Menttes</a> ({t}English{/t}, {t}Spanish{/t})
+		<a href="http://www.menttes.com/contact-us">Menttes</a> ({t domain='iso_639'}English{/t}, {t domain='iso_639'}Spanish{/t})
 		</p>
 	</li>
 
