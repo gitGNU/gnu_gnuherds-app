@@ -17,136 +17,74 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}Manage job offers{/t}</h3>
+<h3>{t}My notices{/t}</h3>
 
 
-{if count($data.JobOfferId) == 0 }
-	<p>&nbsp;</p>
-	<p>{t}You do not have any defined job offer.{/t}</p><p>&nbsp;</p>
+<ul id="tablist">
+<li><a {if $smarty.get.section eq '' or $smarty.get.section eq 'offers'} class="current" {/if}
+	href="offers?owner=me&section=offers">{t}FS job offers{/t}</a></li>
+<li><a {if $smarty.get.section eq 'pledges'} class="current" {/if}
+	href="offers?owner=me&section=pledges">{t}FS pledges{/t}</a></li>
+<li><a {if $smarty.get.section eq 'volunteers'} class="current" {/if}
+	href="offers?owner=me&section=volunteers">{t}FS volunteers{/t}</a></li>
+</ul>
+
+<div id="tab">
+{if $smarty.get.section eq '' or $smarty.get.section eq 'offers'}
+	{include file="Manage_Job_Offers_job_offer_form.tpl"}
+{elseif $smarty.get.section eq 'pledges'}
+	{include file="Manage_Job_Offers_donation_pledge_group_form.tpl"}
+{elseif $smarty.get.section eq 'volunteers'}
+	{include file="Manage_Job_Offers_look_for_volunteers_form.tpl"}
 {else}
-
-<form name="deleteJobOffersForm" method="post" action="{$smarty.server.REQUEST_URI}">
-
-<table border="0">
-
-<tr valign="top">
-<td></td>
-<td class="tdTitle"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong></td>
-<td class="tdTitle"><strong>{'Offer date'|gettext|strip:'&nbsp;'}</strong></td>
-<td class="tdTitle"><strong>{'Expiration date'|gettext|strip:'&nbsp;'}</strong></td>
-<td class="tdTitle"><strong>{'Closed'|gettext|strip:'&nbsp;'}</strong></td>
-<td></td>
-<td class="tdTitle">{'Received'|dgettext:'database'|strip:'&nbsp;'}</td>
-<td class="tdTitle">{'In process'|dgettext:'database'|strip:'&nbsp;'}</td>
-<td class="tdTitle">{'Ruled out'|dgettext:'database'|strip:'&nbsp;'}</td>
-<td class="tdTitle">{'Finalist'|dgettext:'database'|strip:'&nbsp;'}</td>
-<td class="tdTitle">{'Selected'|dgettext:'database'|strip:'&nbsp;'}</td>
-</tr>
-
-{foreach from=$data.JobOfferId item=Id key=i}
-
-<tr valign="top">
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<input type="checkbox" name="DeleteJobOffers[]" value="{$Id}">
-</td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="offers?id={$Id}">{$data.VacancyTitle[$i]}</a>
-</td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$data.OfferDate[$i]}
-</td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$data.ExpirationDate[$i]}
-</td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $data.Closed[$i] eq 'f'}
-{t}No{/t}
-{else}
-{t}Yes{/t}
+	{t}ERROR: Unexpected condition{/t}
 {/if}
-</td>
+</div>
 
+<br>
+<br>
+<br>
+
+
+<table id="new_offer">
+
+<tr valign="top">
 <td>
-</td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $ReceivedMeter[$i] eq '0'}
-{t}none{/t}
-{else}
-<a href="applications?action=edit&id={$Id}">
-{$ReceivedMeter[$i]}
+<a href="offers?action=edit&amp;id=&amp;section=general">
+<img src="/themes/red_Danijel/images/class.gold.tiny.png" alt="{t}icon{/t}">
 </a>
-{/if}
 </td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $InProcessMeter[$i] eq '0'}
-{t}none{/t}
-{else}
-<a href="applications?action=edit&id={$Id}">
-{$InProcessMeter[$i]}
-</a>
-{/if}
+<td>
+<form name="newJobOfferForm" method="post" action="offers?action=edit&amp;id=&amp;section=general">
+<input type="submit" name="new" value="{t}New job offer{/t}">
+</form>
 </td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $RuledOutMeter[$i] eq '0'}
-{t}none{/t}
-{else}
-<a href="applications?action=edit&id={$Id}">
-{$RuledOutMeter[$i]}
-</a>
-{/if}
-</td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $FinalistMeter[$i] eq '0'}
-{t}none{/t}
-{else}
-<a href="applications?action=edit&id={$Id}">
-{$FinalistMeter[$i]}
-</a>
-{/if}
-</td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $SelectedMeter[$i] eq '0'}
-{t}none{/t}
-{else}
-<a href="applications?action=edit&id={$Id}">
-{$SelectedMeter[$i]}
-</a>
-{/if}
-</td>
-
 </tr>
 
-{/foreach}
-
-<tr>
-<td colspan="5">&nbsp;</td>
+<tr valign="top">
+<td>
+<a href="pledges?action=edit&amp;id=">
+<img src="/themes/red_Danijel/images/class.green.tiny.png" alt="{t}icon{/t}">
+</a>
+</td>
+<td>
+<form name="newDonationPledgeGroupForm" method="post" action="pledges?action=edit&amp;id=">
+<input type="submit" name="new" value="{t}New donation pledge group{/t}">
+</form>
+</td>
 </tr>
 
-<tr>
-<td colspan="5">
-{if count($data.JobOfferId) > 0 }
-<input type="submit" name="delete" value="{t}Delete selected offers{/t}">
-{/if}
+<tr valign="top">
+<td>
+<a href="volunteers?action=edit&amp;id=">
+<img src="/themes/red_Danijel/images/class.grey.tiny.png" alt="{t}icon{/t}">
+</a>
+</td>
+<td>
+<form name="newLookForVolunteerForm" method="post" action="volunteers?action=edit&amp;id=">
+<input type="submit" name="new" value="{t}New look for volunteers{/t}">
+</form>
 </td>
 </tr>
 
 </table>
-
-</form>
-
-{/if}
-
-<form name="newJobOffersForm" method="post" action="offers?action=edit&id=&section=general">{* This could be a GET request instead of a POST one. I have used a POST to be able to use a button, due to it is near of the delete button. *}
-<div><input type="submit" name="new" value="{t}New job offer{/t}"></div>
-</form>
-
