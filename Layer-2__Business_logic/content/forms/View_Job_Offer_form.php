@@ -66,7 +66,10 @@ class ViewJobOfferForm
 							$_SESSION['IsAlreadySubscribed'] = $this->manager->IsAlreadySubscribed( $_SESSION['EntityId'], $_GET['JobOfferId'] );
 
 							if ( $_SESSION['IsAlreadySubscribed'] == false )
-								$_SESSION['IsAlreadySubscribed'] = $this->manager->subscribeApplication( $_SESSION['EntityId'], $_GET['JobOfferId'] );
+							{
+								$this->manager->subscribeApplication( $_SESSION['EntityId'], $_GET['JobOfferId'] );
+								$_SESSION['IsAlreadySubscribed'] = true;
+							}
 						}
 						else
 						{
