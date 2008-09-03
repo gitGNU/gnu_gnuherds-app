@@ -52,11 +52,11 @@ class LostPassword
 
 			if ($this->checks['result'] == "pass" )
 			{
-				if ( $this->manager->lookForEntity($_POST['Email']) == true )
+				if ( $this->manager->lookForEntity(trim($_POST['Email'])) == true )
 				{
 					// Check to avoid spam
 					// If we do not send the email, to avoid possible spam, we do not add the 'magic' to the data base because of without that email the user will not be able to use the 'magic' to get a new password.
-					if ( $this->manager->allowLostPasswordEmail($_POST['Email']) == true )
+					if ( $this->manager->allowLostPasswordEmail(trim($_POST['Email'])) == true )
 					{
 						// Make the 'magic' flag
 						$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
@@ -69,13 +69,13 @@ class LostPassword
 
 						$message .= gettext("To get your new password follow the below link.")." ".gettext("That link will expire in 2 hours:")."\n\n";
 
-						$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".$_POST['Email']."&magic=".$magic;
+						$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".trim($_POST['Email'])."&magic=".$magic;
 
 						$message .= "\n\n";
 						$message .= gettext("If you have not asked for a new password, ignore it and your password will not be changed.")."\n\n";
 
 						mb_language("uni");
-						mb_send_mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
+						mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
 					}
 				}
 
@@ -150,7 +150,7 @@ class LostPassword
 		else
 		{
 			// The Email field have to keep the right syntax
-			if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST["Email"]))
+			if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", trim($_POST["Email"])))
 			{
 				$this->checks['result'] = "fail";
 				$this->checks['Email'] = gettext('Invalid email address');

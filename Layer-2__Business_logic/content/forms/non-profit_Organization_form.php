@@ -123,9 +123,9 @@ class NonprofitOrganizationForm extends EntityForm
 		// Save the values in $data variable
 		$_SESSION['EntityType'] = 'non-profit Organization';
 
-		if ( $this->data['Email'] != $_POST['Email'] )
+		if ( $this->data['Email'] != trim($_POST['Email']) )
 		{
-			$_SESSION['WantEmail'] = $_POST['Email'];
+			$_SESSION['WantEmail'] = trim($_POST['Email']);
 			$changeEmail = true;
 		}
 		else
@@ -237,7 +237,7 @@ class NonprofitOrganizationForm extends EntityForm
 		else
 		{
 			// The Email field have to keep the right syntax
-			if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST["Email"]))
+			if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", trim($_POST["Email"])))
 			{
 				$this->checks['result'] = "fail";
 				$this->checks['Email'] = gettext('Invalid email address');

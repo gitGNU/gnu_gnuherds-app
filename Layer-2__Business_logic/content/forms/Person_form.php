@@ -68,7 +68,7 @@ class PersonForm extends EntityForm
 			// Process the "register account" or "change account's email" operations.
 			// It is not needed to check the log-in state. If it is needed, it is checked later.
 
-			if ( isset($_GET['action']) and $_GET['action'] == "register" )
+			if ( isset($_GET['action']) and ( $_GET['action'] == "register" or $_GET['action'] == "verify" ) )
 				$this->register(); // Register account
 			else
 				$this->changeEmail(); // Modify account's email
@@ -123,9 +123,9 @@ class PersonForm extends EntityForm
 		// Save the values in $data variable
 		$_SESSION['EntityType'] = 'Person';
 
-		if ( $this->data['Email'] != $_POST['Email'] )
+		if ( $this->data['Email'] != trim($_POST['Email']) )
 		{
-			$_SESSION['WantEmail'] = $_POST['Email'];
+			$_SESSION['WantEmail'] = trim($_POST['Email']);
 			$changeEmail = true;
 		}
 		else
@@ -242,7 +242,7 @@ class PersonForm extends EntityForm
 		else
 		{
 			// The Email field have to keep the right syntax
-			if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $_POST["Email"]))
+			if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", trim($_POST["Email"])))
 			{
 				$this->checks['result'] = "fail";
 				$this->checks['Email'] = gettext('Invalid email address');
