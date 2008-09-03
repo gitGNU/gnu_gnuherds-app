@@ -45,7 +45,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}
 <a href="/">
 {/if}
-<img src="/themes/red_Danijel/images/logo.png" alt="{t}GNU Herds' logo (red theme){/t}">
+<img src="/themes/red_Danijel/images/logo.png" alt="{t}GNU Herds' logo{/t}">
 {if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}
 </a>
 {/if}
