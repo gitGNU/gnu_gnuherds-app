@@ -56,15 +56,15 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 
 {if $smarty.session.LoginType eq "Person" }
-<li><a href="offers?owner=me">{t}My job offers{/t}</a></li>
+<li><a href="offers?owner=me">{t}My notices{/t}</a></li>
 {else}
-<li><a href="offers?owner=me">{t}Our job offers{/t}</a></li>
+<li><a href="offers?owner=me">{t}Our notices{/t}</a></li>
 {/if}
 
 {if $smarty.session.LoginType eq "Person" }
-<li><a href="applications">{t}My job applications{/t}</a></li>
+<li><a href="applications">{t}My subscriptions{/t}</a></li>
 {else}
-<li><a href="applications">{t}Our job applications{/t}</a></li>
+<li><a href="applications">{t}Our subscriptions{/t}</a></li>
 {/if}
 
 <li><a href="settings">{t}Settings{/t}</a></li>
@@ -79,6 +79,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <h4>{t}Resources{/t}</h4>
 <ul>
 <li>{if $smarty.server.REQUEST_URI neq "/offers"}<a href="offers">{/if}{t}FS job offers{/t}{if $smarty.server.REQUEST_URI neq "/offers"}</a>{/if}</li>
+<li>{if $smarty.server.REQUEST_URI neq "/pledges"}<a href="pledges">{/if}{t}FS pledges{/t}{if $smarty.server.REQUEST_URI neq "/pledges"}</a>{/if}</li>
+<li>{if $smarty.server.REQUEST_URI neq "/volunteers"}<a href="volunteers">{/if}{t}FS volunteers{/t}{if $smarty.server.REQUEST_URI neq "/volunteers"}</a>{/if}</li>
 <li>{if $smarty.server.REQUEST_URI neq "/business_models"}<a href="business_models">{/if}{t}FS business models{/t}{if $smarty.server.REQUEST_URI neq "/business_models"}</a>{/if}</li>
 </ul>
 

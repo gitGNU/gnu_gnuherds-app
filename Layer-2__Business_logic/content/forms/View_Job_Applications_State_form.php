@@ -75,6 +75,8 @@ class ViewJobApplicationsStateForm
 		if ( isset($result[4]) )
 			$smarty->assign('vacancyTitle', $result[4]);
 
+		$smarty->assign('offerType', $result[5]);
+
 
 		$smarty->display("View_Job_Applications_State_form.tpl");
 	}

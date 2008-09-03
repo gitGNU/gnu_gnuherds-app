@@ -45,6 +45,7 @@ DROP TABLE JS_JobOfferSearches;
 
 -- Relations
 DROP TABLE R0_Qualifications2JobOffersJoins; -- Application state. Resume, that is to say, entities Qualifications to JobOffer relationships.
+DROP TABLE R1_Donations2JobOffersJoins; -- Donation pledge groups.
 DROP TABLE E2_EntityFreeSoftwareExperiences; -- Contributions to Free Software projects. It extends the E1_Entities table.
 DROP TABLE E3_Nationalities; -- List the entity nationalities. It extends the E1_Entities table.
 DROP TABLE E4_EntityJobLicenseAt; -- List the countries where the entity has license to work. It extends the E1_Entities table.
@@ -54,6 +55,7 @@ DROP TABLE A1_Alerts;
 DROP TABLE E1_Entities;
 
 -- Lists:
+DROP TABLE LJ_OfferType;
 DROP TABLE LN_Nationalities; -- Nationalities internationally recognized. That is to say, ISO nationalities.
 DROP TABLE LO_Countries;
 DROP TABLE LU_Currencies;
@@ -85,6 +87,11 @@ DROP TABLE LL_Languages;
 
 
 -- =============================================================================
+
+
+CREATE TABLE LJ_OfferType (
+        LJ_Id            varchar(22) PRIMARY KEY CHECK (LJ_Id <> '')
+);
 
 
 CREATE TABLE LL_Languages (
@@ -465,10 +472,11 @@ CREATE TABLE E5_EntityRequireCertifications ( -- List the Certifications which t
 );
 
 
-CREATE TABLE J1_JobOffers (
+CREATE TABLE J1_JobOffers ( -- XXX: TODO: The idea is that maybe some of the volunteer-looking or pledges can be converted to actual job offers if they success getting the support of the needed donators.
         J1_Id              SERIAL PRIMARY KEY, -- Job Offer identifier
         J1_E1_Id           integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Employer identity: being a Person, a Company or a non-profit Organization.
         J1_CompletedEdition bool DEFAULT 'false', -- The edition has been successfully completed. All checks pass.
+        J1_OfferType       varchar(22) REFERENCES LJ_OfferType(LJ_Id) NOT NULL,
 
         -- General data
 
@@ -571,15 +579,28 @@ CREATE TABLE R0_Qualifications2JobOffersJoins (
 	PRIMARY KEY (R0_J1_Id,R0_E1_Id)
 );
 
+CREATE TABLE R1_Donations2JobOffersJoins (
+        R1_Id        SERIAL PRIMARY KEY, -- Identifier
+        R1_J1_Id     integer REFERENCES J1_JobOffers(J1_Id) NOT NULL, -- Offer identifier
+        R1_Donation  varchar(15) NOT NULL,
+        R1_E1_Id     integer REFERENCES E1_Entities(E1_Id) NOT NULL -- Donator's identity, being a Person, Company or non-profit Organization.
+);
+
 
 
 GRANT SELECT, INSERT, UPDATE, DELETE
-ON TABLE E1_Entities, E1_Entities_e1_id_seq, E2_EntityFreeSoftwareExperiences, E2_EntityFreeSoftwareExperiences_e2_id_seq, E3_Nationalities, E4_EntityJobLicenseAt, E5_EntityRequireCertifications, Q1_Qualifications, QS_QualificationSearches, JS_JobOfferSearches, J1_JobOffers, J1_JobOffers_j1_id_seq, R0_Qualifications2JobOffersJoins, R16_JobOffer2Certifications, R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles, R14_JobOffer2Skills, R15_JobOffer2Languages, R17_JobOffer2Nationalities, R26_Qualification2Certifications, R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles, R24_Qualification2Skills, R25_Qualification2Languages, R27_Qualification2Academic
+ON TABLE E1_Entities, E1_Entities_e1_id_seq, E2_EntityFreeSoftwareExperiences, E2_EntityFreeSoftwareExperiences_e2_id_seq, E3_Nationalities, E4_EntityJobLicenseAt, E5_EntityRequireCertifications, Q1_Qualifications, QS_QualificationSearches, JS_JobOfferSearches, J1_JobOffers, J1_JobOffers_j1_id_seq, R0_Qualifications2JobOffersJoins, R1_Donations2JobOffersJoins, R16_JobOffer2Certifications, R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles, R14_JobOffer2Skills, R15_JobOffer2Languages, R17_JobOffer2Nationalities, R26_Qualification2Certifications, R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles, R24_Qualification2Skills, R25_Qualification2Languages, R27_Qualification2Academic
 TO "www-data" ;
 
 GRANT SELECT  -- Note these tables are not modified by the webapp.
-ON TABLE LO_Countries, LU_Currencies, LL_Languages, LA_AcademicLevels, LC_Certifications, LK_ContractType, LB_ByPeriod, LM_TimeUnits, LE_Employability, LS_SpokenLevel, LW_WrittenLevel, LF_FieldProfiles, LP_ProfessionalProfiles, LX_ProductProfiles, LI_Skills, LT_SkillSetTypes, LG_KnowledgeLevel, LN_ExperienceLevel, LZ_ApplicationStates
+ON TABLE LJ_OfferType, LO_Countries, LU_Currencies, LL_Languages, LA_AcademicLevels, LC_Certifications, LK_ContractType, LB_ByPeriod, LM_TimeUnits, LE_Employability, LS_SpokenLevel, LW_WrittenLevel, LF_FieldProfiles, LP_ProfessionalProfiles, LX_ProductProfiles, LI_Skills, LT_SkillSetTypes, LG_KnowledgeLevel, LN_ExperienceLevel, LZ_ApplicationStates
 TO "www-data" ;
+
+
+
+INSERT INTO LJ_OfferType VALUES ( 'Job offer' ); -- That is the same text which is shown in the head of offers view.
+INSERT INTO LJ_OfferType VALUES ( 'Donation pledge group' );
+INSERT INTO LJ_OfferType VALUES ( 'Looking for volunteers' );
 
 
 

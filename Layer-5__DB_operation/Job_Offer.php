@@ -33,9 +33,9 @@ class JobOffer
 	}
 
 
-	public function getJobOffersForEntity()
+	public function getJobOffersForEntity($extra_condition = '')
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_OfferDate,J1_ExpirationDate,J1_Closed FROM J1_JobOffers WHERE J1_E1_Id=$1;  EXECUTE query('$_SESSION[EntityId]');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_VacancyTitle,J1_OfferType FROM J1_JobOffers WHERE J1_E1_Id=$1 ".$extra_condition.";  EXECUTE query('$_SESSION[EntityId]');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 		$array = array();
 		$array[0] = pg_fetch_all_columns($result, 0);
@@ -43,15 +43,20 @@ class JobOffer
 		$array[2] = pg_fetch_all_columns($result, 2);
 		$array[3] = pg_fetch_all_columns($result, 3);
 
+		$array[4] = pg_fetch_all_columns($result, 4);
+
 		for( $i=0; $i < count($array[0]); $i++)
-			$array[4][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
+			if ( $array[4][$i] == '' )
+				$array[4][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
+
+		$array[5] = pg_fetch_all_columns($result, 5);
 
 		return $array;
 	}
 
 	public function getJobOffers($extra_condition = '')
 	{
-		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Blog, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CompanyName, EO_OrganizationName FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
+		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Blog, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CompanyName, EO_OrganizationName, J1_VacancyTitle FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
 		$array = array();
@@ -98,8 +103,11 @@ class JobOffer
 		$array[13] = pg_fetch_all_columns($result, 12); // EC_CompanyName
 		$array[14] = pg_fetch_all_columns($result, 13); // EO_OrganizationName
 
+		$array[15] = pg_fetch_all_columns($result, 14); // J1_VacancyTitle
+
 		for( $i=0; $i < count($array[0]); $i++)
-			$array[15][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
+			if ( $array[15][$i] == '' )
+				$array[15][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
 
 		return $array;
 	}
@@ -107,7 +115,7 @@ class JobOffer
 
 	public function getJobOffer($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_EstimatedEffort,J1_LM_TimeUnit,J1_E1_Id,J1_CompletedEdition,J1_Deadline FROM J1_JobOffers WHERE J1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_EstimatedEffort,J1_LM_TimeUnit,J1_E1_Id,J1_CompletedEdition,J1_Deadline,J1_VacancyTitle,J1_Description,J1_OfferType FROM J1_JobOffers WHERE J1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array = array();
@@ -219,22 +227,28 @@ class JobOffer
 		$array[45] = $arrayLS[2];
 		$array[46] = $arrayLS[3];
 
-		$array[60][0] = $this->makeUp_VacancyTitle($Id);
+		$array[60] = pg_fetch_all_columns($result, 26); // J1_VacancyTitle
+
+		if ( $array[60][0] == '' )
+			$array[60][0] = $this->makeUp_VacancyTitle($Id);
+
+		$array[61] = pg_fetch_all_columns($result, 27); // J1_Description
+
+		$array[62] = pg_fetch_all_columns($result, 28); // J1_OfferType
 
 		return $array;
 	}
 
 
-	public function addJobOffer($completedEdition)
+	public function addJobOffer($offerType,$completedEdition)
 	{
 		// As there are several tables involved, we use a transaction to be sure, all operations are done, or nothing is done.
-		$this->postgresql->execute("SET TRANSACTION   ISOLATION LEVEL  SERIALIZABLE  READ WRITE",0);
-		$this->postgresql->execute("BEGIN",0);
 
 
 		// J1_JobOffers table
 
-		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : '';
+		$entity = new Entity();
+		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : $entity->getEntityId(trim($_POST['Email']),'REQUEST_ADD_NOTICE_OPERATION'); // It registers the email and send the verification email if it is needed
 
 		$EmployerJobOfferReference = isset($_POST['EmployerJobOfferReference']) ? trim($_POST['EmployerJobOfferReference']) : '';
 
@@ -262,7 +276,15 @@ class JobOffer
 
 		$Vacancies = isset($_POST['Vacancies']) ? trim($_POST['Vacancies']) : '';
 
-		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,text) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9);  EXECUTE query('$EntityId','".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."');";
+		$VacancyTitle = isset($_POST['VacancyTitle']) ? trim($_POST['VacancyTitle']) : '';
+		$Description = isset($_POST['Description']) ? trim($_POST['Description']) : '';
+
+
+		$this->postgresql->execute("SET TRANSACTION   ISOLATION LEVEL  SERIALIZABLE  READ WRITE",0);
+		$this->postgresql->execute("BEGIN",0);
+
+
+		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,text,text,text,text,bool) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_VacancyTitle,J1_Description,J1_OfferType,J1_CompletedEdition) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13);  EXECUTE query('$EntityId','".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','".pg_escape_string($VacancyTitle)."','".pg_escape_string($Description)."','$offerType','$completedEdition');";
 		$this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 
@@ -273,9 +295,14 @@ class JobOffer
 		$J1_Id = $array[0];
 
 		// Saving only the first section. It is not need to update the J1_CompletedEdition flag due to it is 'false' by default.
+		// When adding Donation Pledges or Look For Volunteers entries we have to set $completedEdition to 'true'
 
 
 		$this->postgresql->execute("COMMIT",0);
+
+
+		if ( $offerType == 'Donation pledge group' )
+			$this->addDonation($J1_Id);
 
 		return $J1_Id;
 	}
@@ -376,7 +403,10 @@ class JobOffer
 
 				$Vacancies = isset($_POST['Vacancies']) ? trim($_POST['Vacancies']) : '';
 
-				$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCompanyApplications=$6,J1_AllowOrganizationApplications=$7,J1_Vacancies=$8,J1_CompletedEdition=$9 WHERE J1_Id=$10;  EXECUTE query('".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','$completedEdition','$J1_Id');";
+				$VacancyTitle = isset($_POST['VacancyTitle']) ? trim($_POST['VacancyTitle']) : '';
+				$Description = isset($_POST['Description']) ? trim($_POST['Description']) : '';
+
+				$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCompanyApplications=$6,J1_AllowOrganizationApplications=$7,J1_Vacancies=$8,J1_VacancyTitle=$9,J1_Description=$10,J1_CompletedEdition=$11 WHERE J1_Id=$12;  EXECUTE query('".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','".pg_escape_string($VacancyTitle)."','".pg_escape_string($Description)."','$completedEdition','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
 			break;
 
@@ -471,6 +501,64 @@ class JobOffer
 	}
 
 
+	public function getDonations($JobOfferId)
+	{
+		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Donation,EP_FirstName,EP_LastName,EP_MiddleName,EC_CompanyName,EO_OrganizationName FROM R1_Donations2JobOffersJoins,E1_Entities WHERE R1_E1_Id=E1_Id AND R1_J1_Id=$1 ;  EXECUTE query('$JobOfferId');";
+		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
+
+		$array['Donation'] = pg_fetch_all_columns($result, 0);
+
+		$array['FirstName'] = pg_fetch_all_columns($result, 1);
+		$array['LastName'] = pg_fetch_all_columns($result, 2);
+		$array['MiddleName'] = pg_fetch_all_columns($result, 3);
+
+		$array['CompanyName'] = pg_fetch_all_columns($result, 4);
+
+		$array['NonprofitName'] = pg_fetch_all_columns($result, 5);
+
+		return $array;
+	}
+
+
+	public function addDonation($JobOfferId)
+	{
+		$entity = new Entity();
+		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : $entity->getEntityId(trim($_POST['Email']),'REQUEST_ADD_DONATION_TO_NOTICE_OPERATION'); // It registers the email and send the verification email if it is needed
+
+		$WageRank = isset($_POST['WageRank']) ? trim($_POST['WageRank']) : '';
+
+		// We do not increase the value of previous donations. We just add another donation to the notice, with the email
+		// the user used.  No DELETE + INSERT, just INSERT.
+		// If the user was not logged when [s]he filled the donation then [s]he have to confirm the donation clicking the
+		// link sent via email.
+
+		$sqlQuery = "PREPARE query(integer,text,integer) AS  INSERT INTO R1_Donations2JobOffersJoins (R1_J1_Id,R1_Donation,R1_E1_Id) VALUES ($1,$2,$3);  EXECUTE query('$JobOfferId','".pg_escape_string($WageRank)."','$EntityId');";
+		$this->postgresql->execute($sqlQuery,1);
+	}
+
+
+	public function cancelSelectedDonations()
+	{
+		for ($i=0; $i < count($_POST['CancelDonations']); $i++)
+		{
+			$sqlQuery = "PREPARE query(integer) AS  DELETE FROM R1_Donations2JobOffersJoins WHERE R1_Id=$1;  EXECUTE query('{$_POST['CancelDonations'][$i]}');";
+			$result = $this->postgresql->execute($sqlQuery,1);
+		}
+	}
+
+
+	public function getMyDonationsForPledgeGroup($JobOfferId)
+	{
+		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Id, R1_Donation FROM R1_Donations2JobOffersJoins WHERE R1_J1_Id=$1 ;  EXECUTE query('$JobOfferId');";
+		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
+
+		$array['DonationId'] = pg_fetch_all_columns($result, 0);
+		$array['Donation'] = pg_fetch_all_columns($result, 1);
+
+		return $array;
+	}
+
+
 	public function getApplicationsMeterForJobOffer($Id, $meter)
 	{
 		$sqlQuery = "PREPARE query(integer,text) AS  SELECT count(R0_E1_Id) FROM R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=$1 AND R0_State=$2;  EXECUTE query('$Id','$meter');";
@@ -482,7 +570,6 @@ class JobOffer
 	{
 		$sqlQuery = "PREPARE query(integer,integer) AS  INSERT INTO R0_Qualifications2JobOffersJoins (R0_J1_Id,R0_State,R0_E1_Id) VALUES ($1,'Received',$2);  EXECUTE query('$JobOfferId','$EntityId');";
 		$this->postgresql->getPostgreSQLObject($sqlQuery,1);
-		return true;
 	}
 
 	public function IsAlreadySubscribed($EntityId,$JobOfferId)
@@ -495,44 +582,59 @@ class JobOffer
 			return false;
 	}
 
+	public function IsAlreadyDonator($EntityId,$JobOfferId)
+	{
+		$sqlQuery = "PREPARE query(integer,integer) AS  SELECT R1_J1_Id FROM R1_Donations2JobOffersJoins WHERE R1_J1_Id=$1 AND R1_E1_Id=$2;  EXECUTE query('$JobOfferId','$EntityId');";
+		$result = $this->postgresql->getOneField($sqlQuery,1);
+		if ( is_array($result) and count($result)>=1 )
+			return true;
+		else
+			return false;
+	}
+
 	public function getJobOfferApplications($JobOfferId)
 	{
-		$array[0] = $this->makeUp_VacancyTitle($JobOfferId);
+		$array['VacancyTitle'] = $this->makeUp_VacancyTitle($JobOfferId);
+		$array[0] = $this->makeUp_VacancyTitle($JobOfferId); //XXX: Temporal workaround.
 
 		$entities = $this->getEntitiesSubscribed($JobOfferId);
 		if ( is_array($entities) and count($entities)>0 )
 		{
+			$array['Count'] = count($entities); // XXX: Duplicated 3 count() call.
+
 			for ($i=0; $i<count($entities); $i++)
 			{
-				$array[1][$i] = $entities[$i]; // EntityId
+				$array['EntityId'][$i] = $entities[$i];
 
 				$entity = new Entity();
 				$arrayEN = $entity->getEntity($entities[$i]);
 
-				$array[2][$i] = $arrayEN[2][0]; // E1_EntityType
+				$array['Email'][$i] = $arrayEN[0][0];
+				$array['EntityType'][$i] = $arrayEN[2][0];
 
-				$array[3][$i] = $arrayEN[3][0]; // E1_Street
-				$array[4][$i] = $arrayEN[5][0]; // E1_City
-				$array[5][$i] = $arrayEN[6][0]; // E1_StateProvince
+				$array['Street'][$i] = $arrayEN[3][0];
+				$array['City'][$i] = $arrayEN[5][0];
+				$array['StateProvince'][$i] = $arrayEN[6][0];
 
-				$array[6][$i] = $arrayEN[14][0]; // E1_Website
+				$array['Website'][$i] = $arrayEN[14][0];
 
-				$array[7][$i] = $arrayEN[15][0]; // EP_FirstName
-				$array[8][$i] = $arrayEN[16][0]; // EP_LastName
-				$array[9][$i] = $arrayEN[17][0]; // EP_MiddleName
+				$array['FirstName'][$i] = $arrayEN[15][0];
+				$array['LastName'][$i] = $arrayEN[16][0];
+				$array['MiddleName'][$i] = $arrayEN[17][0];
 
-				$array[10][$i] = $arrayEN[18][0]; // EC_CompanyName
-				$array[11][$i] = $arrayEN[19][0]; // EO_OrganizationName
+				$array['CompanyName'][$i] = $arrayEN[18][0];
+				$array['NonprofitName'][$i] = $arrayEN[19][0];
 
-				$array[12][$i] = $arrayEN[30][0]; // LO_Name
+				$array['CountryName'][$i] = $arrayEN[30][0];
 
 				$qualifications = new Qualifications();
 				$arrayQA = $qualifications->getQualificationsForEntity($entities[$i]);
 
-				$array[13][$i] = $arrayQA[0][0]; // Q1_ProfessionalExperienceSinceYear
+				$array['ProfessionalExperienceSinceYear'][$i] = $arrayQA[0][0];
 
 				$arraySS = $this->getApplicationState($JobOfferId,$entities[$i]);
-				$array[15][$i] = $arraySS[0]; // R0_State
+				$array['ApplicationState'][$i] = $arraySS[0];
+
 			}
 		}
 
@@ -560,7 +662,7 @@ class JobOffer
 
 	public function getJobApplicationsForEntity()
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_E1_Id,J1_OfferDate,R0_State FROM J1_JobOffers,R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=J1_Id AND R0_E1_Id=$1 ;  EXECUTE query('$_SESSION[EntityId]');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_E1_Id,J1_OfferDate,R0_State,J1_VacancyTitle,J1_OfferType FROM J1_JobOffers,R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=J1_Id AND R0_E1_Id=$1 ;  EXECUTE query('$_SESSION[EntityId]');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 		$array = array();
 		$array[0] = pg_fetch_all_columns($result, 0);
@@ -568,8 +670,13 @@ class JobOffer
 		$array[2] = pg_fetch_all_columns($result, 2);
 		$array[3] = pg_fetch_all_columns($result, 3);
 
+		$array[4] = pg_fetch_all_columns($result, 4);
+
 		for( $i=0; $i < count($array[0]); $i++)
-			$array[4][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
+			if ( $array[4][$i] == '' )
+				$array[4][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
+
+		$array[5] = pg_fetch_all_columns($result, 5);
 
 		return $array;
 	}

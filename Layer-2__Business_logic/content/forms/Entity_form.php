@@ -70,13 +70,21 @@ abstract class EntityForm
 
 			if ( $new_password != false )
 			{
-				$this->processingResult .= "<p>&nbsp;</p>\n";
-				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your account has been activated!")."</p>\n";
+				if ( $_GET['action'] == "register" )
+				{
+					$this->processingResult .= "<p>&nbsp;</p>\n";
+					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your account has been activated!")."</p>\n";
 
-				// Show the password
-				$this->processingResult .= "<p>&nbsp;</p>\n";
-				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your new password is:")." <strong>".$new_password."</strong></p>\n";
-				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("To improve your security, you should change your password after loging in.")."</p>";
+					// Show the password
+					$this->processingResult .= "<p>&nbsp;</p>\n";
+					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your new password is:")." <strong>".$new_password."</strong></p>\n";
+					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("To improve your security, you should change your password after loging in.")."</p>";
+				}
+				elseif ( $_GET['action'] == "verify" )
+				{
+					$this->processingResult .= "<p>&nbsp;</p>\n";
+					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your email has been verified!")."</p>\n";
+				}
 			}
 		}
 	}
@@ -104,13 +112,13 @@ abstract class EntityForm
 		// Send the email
 		$message .= gettext("To change your GNU Herds account's email, first log in and then follow the below link.")." ".gettext("That link will expire in 7 days:")."\n\n";
 
-		$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".$_POST['Email']."&magic=".$magic;
+		$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?email=".trim($_POST['Email'])."&magic=".$magic;
 
 		$message .= "\n\n";
 		$message .= gettext("If you have not asked for it, just ignore this email.")."\n\n";
 
 		mb_language("uni");
-		mb_send_mail($_POST['Email'], "GNU Herds: ".gettext("Change account's email"), "$message", "From: association@gnuherds.org");
+		mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Change account's email"), "$message", "From: association@gnuherds.org");
 
 		// Report to the user
 		$this->processingResult .= "<p>&nbsp;</p><p>".gettext('An email has been sent to the new email address to validate it.')."<p>\n";
@@ -118,10 +126,10 @@ abstract class EntityForm
 
 	protected function requestRegister()
 	{
-		if ( $this->manager->lookForEntity($_POST['Email']) == true )
+		if ( $this->manager->lookForEntity(trim($_POST['Email'])) == true )
 		{
 			// Check to avoid spam
-			if ( $this->manager->allowRegisterAccountDuplicatedEmail($_POST['Email']) == true )
+			if ( $this->manager->allowRegisterAccountDuplicatedEmail(trim($_POST['Email'])) == true )
 			{
 				$message = gettext("An attempt was made to register a new GNU Herds' account with this email address.")." ".gettext("However, you have already an active account!")." ".gettext("Follow the below link to get a new password if it is needed:")."\n\n";
 
@@ -131,7 +139,7 @@ abstract class EntityForm
 				$message .= gettext("If you have not asked for this new account, someone else has asked for it with your email!")."\n\n";
 
 				mb_language("uni");
-				mb_send_mail($_POST['Email'], "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
+				mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Lost password?"), "$message", "From: association@gnuherds.org");
 			}
 		}
 		else
@@ -146,7 +154,7 @@ abstract class EntityForm
 
 			$message .= gettext("To activate it follow the below link.")." ".gettext("That link will expire in 48 hours.")." ".gettext("To get a new non-expired link just register at gnuherds.org again.")."\n\n";
 
-			$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?action=register&email=".$_POST['Email']."&magic=".$magic;
+			$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?action=register&email=".trim($_POST['Email'])."&magic=".$magic;
 
 			$message .= "\n\n";
 			$message .= gettext("If you have not asked for this new account, ignore this email.")."\n\n";
@@ -154,7 +162,7 @@ abstract class EntityForm
 			$message .= gettext("Note: To avoid 'Spam' you can only get this email at the most once each 48 hours.")." ".gettext("If this email is Spam for you, please let it knows to  association AT gnuherds.org")."\n\n";
 
 			mb_language("uni");
-			mb_send_mail($_POST['Email'], "GNU Herds: ".gettext("Activate account"), "$message", "From: association@gnuherds.org");
+			mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Activate account"), "$message", "From: association@gnuherds.org");
 		}
 
 		// Report to the user

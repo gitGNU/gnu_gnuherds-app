@@ -1,8 +1,7 @@
 {*
-Authors: Davi Leal, Victor Engmark
+Authors: Davi Leal
 
-Copyright (C) 2006, 2007, 2008 Davi Leal <davi at leals dot com>
-              2007, 2008 Victor Engmark <victor dot engmark at gmail dot com>
+Copyright (C) 2008 Davi Leal <davi at leals dot com>
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Affero General Public License as published by the Free Software Foundation,
@@ -17,45 +16,53 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}FS job offers{/t}</h3>
+<h3>{t}Looking for volunteers{/t}</h3>
 
 
 {include file="offer-type-bar.tpl"}
 
 
 <p>
-{t}Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc.{/t}
-</p>
-
-{if $smarty.session.Logged neq '1' }
-<p>
-{t}Are you a Free Software author?. You could register and add your qualifications.{/t}
-</p>
-{/if}
-
-<p class="center">
-<br>
 {t escape='no'
-  1='<a href="mailto:association@gnuherds.org">association@gnuherds.org</a>'
-}The simplest way to post a job offer is to email all the details you have about it to %1{/t}
-<br>
-<br>
+  1='<a href="pledges">'
+  2='</a>'
+}If you would pay something for realizing such task, please fill it as %1FS pledge%2 instead of as volunteer.{/t}
 </p>
+
+<!-- XXX: DELAYED: This feature is delayed.
+<p>
+{t escape='no'
+  1='<a href="pledges">'
+  2='</a>'
+  3='<i>'
+  4='</i>'
+}You can compromise your two cents to convert some of the below volunteer entries into a %1FS pledge%2. Just open and click "%3My pledge%4".{/t}
+</p>
+-->
+
+<br>
+
+<form name="newLookForVolunteerForm" method="post" action="volunteers?action=edit&id=" class="center">
+<input type="submit" name="new" value="{t}New look for volunteers{/t}">
+</form>
+
+<br>
+<br>
+<br>
 
 
 <table border="0">
 
 <tr valign="top">
-<td class="tdTitle"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-<td class="tdTitle"><strong>{'Location'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-<td class="tdTitle"><strong>{'Offer date'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;</strong></td>
-<td class="tdTitle"><strong>{'Offered by'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;</strong></td>
+<td class="tdTitle"><strong>{'Volunteer title'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+<td class="tdTitle"><strong>{'Entry date'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+<td class="tdTitle"><strong>{'Created by'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
 </tr>
 
 {if count($JobOfferId) == 0 }
 <tr valign="top">
-<td colspan="4" class="tdDark center">
-{t}There are no job offers{/t}
+<td colspan="3" class="tdDark center">
+{t}There are no entries{/t}
 </td>
 </tr>
 {else}
@@ -65,25 +72,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr valign="top">
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="offers?id={$Id}">
+<a href="volunteers?id={$Id}">
 {$VacancyTitle[$i]}
 </a>
-</td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if trim($City[$i]) eq '' and trim($StateProvince[$i]) eq '' and trim($CountryName[$i]) eq ''}
-<strong>{t domain='database'}Any{/t}</strong>, {t}telework{/t}
-{else}
-{if trim($CountryName[$i]) neq ''}
-<strong>{t domain='iso_3166'}{$CountryName[$i]}{/t}</strong>{if $StateProvince[$i]}, {$StateProvince[$i]}{/if}{if $City[$i]}, {$City[$i]}{/if}
-{else}
-{if trim($StateProvince[$i]) neq ''}
-{$StateProvince[$i]}{if $City[$i]}, {$City[$i]}{/if}
-{else}
-{$City[$i]}
-{/if}
-{/if}
-{/if}
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
@@ -108,3 +99,4 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 
 </table>
+

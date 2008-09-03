@@ -147,8 +147,9 @@ class Entity
 		$this->postgresql->execute("BEGIN",0);
 
 		$Email = trim($_POST['Email']);
+		$EntityType = isset($_SESSION['EntityType']) ? trim($_SESSION['EntityType']) : "To verify Email";
 
-		$sqlQuery = "PREPARE query(text,text) AS  INSERT INTO E1_Entities (E1_WantEmail,E1_EntityType) VALUES ($1,$2);  EXECUTE query('{$Email}','{$_SESSION['EntityType']}');";
+		$sqlQuery = "PREPARE query(text,text) AS  INSERT INTO E1_Entities (E1_WantEmail,E1_EntityType) VALUES ($1,$2);  EXECUTE query('{$Email}','{$EntityType}');"; //XXX: TODO: Only list the E1_Email, not the WantEmail(not yet verified)
 		$this->postgresql->execute($sqlQuery,1);
 
 		// Get the Id of the insert to the E1_Entities table // Ref.: http://www.postgresql.org/docs/current/static/functions-sequence.html
@@ -168,6 +169,8 @@ class Entity
 		$alerts->initAlertsForEntity($E1_Id);
 
 		$this->postgresql->execute("COMMIT",0); // We do not commit if savePhotoOrLogo fails.
+
+		return $E1_Id;
 	}
 
 	public function deleteEntity()
@@ -278,7 +281,7 @@ class Entity
 		}
 		elseif ($numrows == 1)
 		{
-			return true;
+			return $array[0]; // We take this opportunity to return the E1_Id instead of just 'true'. Note E1_Id will is always >=1, so it will be always 'true'.
 		}
 		else
 		{
@@ -287,10 +290,46 @@ class Entity
 		}
 	}
 
+	public function getEntityId($email) // This method is used to get the EntityId, when the user is not logged in, or to create and get a EntityId when the user is even not registered (auto-registering).
+	{
+		$E1_Id = $this->lookForEntity($email);
+
+		if ( $E1_Id )
+		{
+			return $E1_Id;
+		}
+		else
+		{
+			// Make the 'magic' flag
+			$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
+
+			$E1_Id = $this->addEntity($magic);
+
+			// Send the email
+			$message = gettext("Your email has been used to create or update a notice at GNU Herds.")."\n\n";
+
+			$message .= gettext("Follow the below link to confirm.")." ".gettext("That link will expire in 48 hours.")."\n\n"; // If it is not confirmed it will be lost, and the creation or update process will have to begin again.
+
+			$message .= "http://".$_SERVER['HTTP_HOST']."/entity?action=verify&email=".trim($_POST['Email'])."&magic=".$magic;
+
+			$message .= "\n\n";
+			$message .= gettext("If you have not asked for it, ignore this email.")."\n\n";
+
+			$message .= gettext("Note: To avoid 'Spam' you can only get this email at the most once each 48 hours.")." ".gettext("If this email is Spam for you, please let it knows to  association AT gnuherds.org")."\n\n";
+
+			mb_language("uni");
+			mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Email verification"), "$message", "From: association@gnuherds.org");
+
+			return $E1_Id;
+		}
+	}
+
 	public function saveLostPasswordMagicForEntity($magic)
 	{
+		$email = trim($_POST['Email']);
+
 		// Security: The magic is only overriden for the entity with that email.
-		$sqlQuery = "PREPARE query(text,text) AS  UPDATE E1_Entities SET E1_LostPasswordMagic=$1, E1_LostPasswordMagicExpire= now() + '02:00'::interval WHERE E1_Email=$2;  EXECUTE query('$magic','{$_POST['Email']}');";
+		$sqlQuery = "PREPARE query(text,text) AS  UPDATE E1_Entities SET E1_LostPasswordMagic=$1, E1_LostPasswordMagicExpire= now() + '02:00'::interval WHERE E1_Email=$2;  EXECUTE query('$magic','{$email}');";
 		$this->postgresql->execute($sqlQuery,1);
 	}
 

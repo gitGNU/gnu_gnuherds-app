@@ -348,6 +348,65 @@ color:#333333;
 img{border:0px;}
 .frame{border:1px outset #666666;}
 
+.limitWidth{width:500px;}
+.splitWidth{width:200px;}
+.center{text-align:center;}
+.justify{text-align:justify;}
+
+
+/* content area: Setting for OfferType Bar */
+
+#offertypebar{
+float:right;
+text-align:center;
+padding:0px 0px 0px 40px;
+}
+
+
+/* content area: Setting for TabBar */
+
+#tablist{
+padding:3px 0;
+margin-left:5px;
+margin-bottom:0;
+margin-top:0.1em;
+border-bottom:1px solid #C8AAAA;
+}
+
+#tablist li{
+list-style:none;
+display:inline;
+margin:0;
+}
+
+#tablist li a{
+text-decoration:none;
+padding:3px 0.5em;
+margin-right:3px;
+font-size:12px;
+border:1px solid #C8AAAA;
+border-bottom:none;
+background:#DFBCBC;
+}
+
+#tablist li a.current{
+border-bottom:1px solid #FEF5ED;
+background:#FEF5ED;
+}
+
+#tab{
+margin-left:5px;
+border:1px solid #C8AAAA;
+border-top:none;
+}
+
+
+/* content area: Setting for Create Entries */
+
+#new_offer{
+margin-left:30px;
+}
+
 
 /* foot area: Sameer's CSS */
 

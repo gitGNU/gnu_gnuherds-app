@@ -75,6 +75,14 @@ class DBManager
 		return $entity->getEntityPhotoOrLogo($Id);
 	}
 
+	public function getEntityId($email,$requestOperation)
+	{
+		// This method does not need ACL check because of we have to allow it even to not logged entities.
+
+		$entity = new Entity();
+		return $entity->getEntityId($email,$requestOperation);
+	}
+
 	public function addEntity($magic)
 	{
 		// This method does not need ACL check
@@ -247,20 +255,20 @@ class DBManager
 	}
 
 
-	public function getJobOffersForEntity()
+	public function getJobOffersForEntity($extra_condition)
 	{
 		// This method does not need ACL check because of it works with SESSION[EntityId]
 
 		$jobOffer = new JobOffer();
-		return $jobOffer->getJobOffersForEntity();
+		return $jobOffer->getJobOffersForEntity($extra_condition);
 	}
 
-	public function getJobOffers()
+	public function getJobOffers($extra_condition)
 	{
 		// This method does not need ACL check. It gets public information.
 
 		$jobOffer = new JobOffer();
-		return $jobOffer->getJobOffers();
+		return $jobOffer->getJobOffers($extra_condition);
 	}
 
 	public function getNewJobOffers()
@@ -289,12 +297,12 @@ class DBManager
 		return $entity->getEntityPhotoOrLogo($Id);
 	}
 
-	public function addJobOffer($completedEdition)
+	public function addJobOffer($offerType,$completedEdition)
 	{
 		// This method does not need ACL check because of it works with SESSION[EntityId]
 
 		$jobOffer = new JobOffer();
-		return $jobOffer->addJobOffer($completedEdition);
+		return $jobOffer->addJobOffer($offerType,$completedEdition);
 	}
 
 	public function deleteSelectedJobOffers()
@@ -316,6 +324,41 @@ class DBManager
 		return $jobOffer->updateJobOffer($Id,$section,$completedEdition);
 	}
 
+	public function getDonations($Id)
+	{
+		// This method does not need ACL check. It gets public information.
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->getDonations($Id);
+	}
+
+	public function addDonation($Id)
+	{
+		// This method does not need ACL check. Everybody is allowed to donate.
+
+		$jobOffer = new JobOffer();
+		$jobOffer->addDonation($Id);
+	}
+
+	public function cancelSelectedDonations()
+	{
+		//XXX: TODO: $acl = new AccessControlList();
+		//XXX: TODO: for ($i=0; $i < count($_POST['DeleteJobOffers']); $i++)
+		//XXX: TODO:	 $acl->checkJobOfferAccess("WRITE",$_POST['DeleteJobOffers'][$i]);
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->cancelSelectedDonations();
+	}
+
+	public function getMyDonationsForPledgeGroup($Id)
+	{
+		//XXX: TODO: $acl = new AccessControlList();
+		//XXX: TODO: $acl->checkJobOfferAccess("WRITE",$_POST['DeleteJobOffers'][$i]);
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->getMyDonationsForPledgeGroup($Id);
+	}
+
 	public function getApplicationsMeterForJobOffer($Id,$meter)
 	{
 		$acl = new AccessControlList();
@@ -330,7 +373,7 @@ class DBManager
 		// With the current use of this method, it does not need ACL check.
 
 		$jobOffer = new JobOffer();
-		return $jobOffer->subscribeApplication($EntityId,$JobOfferId);
+		$jobOffer->subscribeApplication($EntityId,$JobOfferId);
 	}
 
 	public function IsAlreadySubscribed($EntityId,$JobOfferId)
@@ -339,6 +382,14 @@ class DBManager
 
 		$jobOffer = new JobOffer();
 		return $jobOffer->IsAlreadySubscribed($EntityId,$JobOfferId);
+	}
+
+	public function IsAlreadyDonator($EntityId,$JobOfferId)
+	{
+		// With the current use of this method, it does not need ACL check.
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->IsAlreadyDonator($EntityId,$JobOfferId);
 	}
 
 	public function getJobOfferApplications($JobOfferId)

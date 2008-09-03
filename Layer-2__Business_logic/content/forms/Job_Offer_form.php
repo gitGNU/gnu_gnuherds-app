@@ -103,7 +103,10 @@ class JobOfferForm extends SkillsForm
 		}
 
 		// Process each button event
-		if ( isset($_POST['new']) and $_POST['new'] != '' ) // new
+		if ( isset($_POST['new']) and $_POST['new'] != '' ) // new (from click-button)
+		{
+		}
+		elseif ( count($_POST) == 0 and $_GET['id'] == '' ) // new (from icon-link)
 		{
 		}
 		elseif ( $_POST['previous'] != '' or $_POST['next'] != '' or $_POST['jump'] != '' or $_POST['finish'] != '' or $_POST['more'] != '' ) // update
@@ -131,7 +134,7 @@ class JobOfferForm extends SkillsForm
 	{
 		if ( $_POST['finish'] != '' and $this->checks['result'] == "pass" and $this->can_save == true )
 		{
-			header('Location: /offers?id='.$_SESSION['JobOfferId']); // We reditect to the view-offer web page
+			header('Location: /offers?id='.$_SESSION['JobOfferId']); // We reditect to the view-OfferType web page
 			exit;
 		}
 		else
@@ -282,7 +285,8 @@ class JobOfferForm extends SkillsForm
 				}
 				else // new
 				{
-					$_SESSION['JobOfferId'] = $this->manager->addJobOffer($this->checks['completed_edition']); // Add a new job offer with the data from the 'general' section
+					$offerType = 'Job offer';
+					$_SESSION['JobOfferId'] = $this->manager->addJobOffer($offerType,$this->checks['completed_edition']); // Add a new job offer with the data from the 'general' section
 					// We set this SESSION variable as a hack to be able to pass the J1_Id to the next form section
 				}
 			}
@@ -728,7 +732,7 @@ class JobOfferForm extends SkillsForm
 			$this->checks['ContractType'] = ''; // Reset possible value set by the checkJobOfferForm() of loadJobOfferForm().
 		}
 
-		define("MINIMUM_JOB_OFFER_SALARY", 6.55); // TODO: DELAYED: Move these constants to a central configuration file
+		define("MINIMUM_JOB_OFFER_SALARY", 6.55 ); // TODO: DELAYED: Move these constants to a central configuration file
 
 		if ( (float)($this->data['WageRank']) < MINIMUM_JOB_OFFER_SALARY )
 		{

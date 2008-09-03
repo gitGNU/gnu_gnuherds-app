@@ -88,27 +88,27 @@ class ManageJobOfferApplicationsForm
 
 		$smarty->assign('vacancyTitle', $result[0]);
 
-		$smarty->assign('entityId', $result[1]);
+		$smarty->assign('entityId', $result['EntityId']);
 
-		$smarty->assign('entityType', $result[2]);
+		$smarty->assign('entityType', $result['EntityType']);
 
-		$smarty->assign('street', $result[3]);
-		$smarty->assign('city', $result[4]);
-		$smarty->assign('stateProvince', $result[5]);
+		$smarty->assign('street', $result['Street']);
+		$smarty->assign('city', $result['City']);
+		$smarty->assign('stateProvince', $result['StateProvince']);
 
-		$smarty->assign('website', $result[6]);
+		$smarty->assign('website', $result['Website']);
 
-		$smarty->assign('firstName', $result[7]);
-		$smarty->assign('lastName', $result[8]);
-		$smarty->assign('middleName', $result[9]);
+		$smarty->assign('firstName', $result['FirstName']);
+		$smarty->assign('lastName', $result['LastName']);
+		$smarty->assign('middleName', $result['MiddleName']);
 
-		$smarty->assign('companyName', $result[10]);
-		$smarty->assign('organizationName', $result[11]);
+		$smarty->assign('companyName', $result['CompanyName']);
+		$smarty->assign('nonprofitName', $result['NonprofitName']);
 
-		$smarty->assign('countryName', $result[12]);
-		$smarty->assign('professionalExperienceSinceYear', $result[13]);
+		$smarty->assign('countryName', $result['CountryName']);
+		$smarty->assign('professionalExperienceSinceYear', $result['ProfessionalExperienceSinceYear']);
 
-		$smarty->assign('applicationState', $result[15]);
+		$smarty->assign('applicationState', $result['ApplicationState']);
 
 
 		$smarty->display("Manage_Job_Offer_Applications_form.tpl");

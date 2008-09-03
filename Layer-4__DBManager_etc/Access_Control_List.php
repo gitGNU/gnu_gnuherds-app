@@ -192,10 +192,18 @@ class AccessControlList
 		switch ($mode) {
 			case "READ":
 			case "WRITE":
-				$joboffers = $jobOffer->getJobOffersForEntity();
+				$joboffer = $jobOffer->getJobOffer($J1_Id);
+				if ( $joboffer[62][0] == 'Donation pledge group' ) // XXX: TODO: CHECK: The applicant's names for Donation pledge groups are public if they are not specially set to anonymous
+				{
+					$this->granted();
+				}
+				else
+				{
+					$joboffers = $jobOffer->getJobOffersForEntity();
 
-				if ( !in_array( $J1_Id, $joboffers[0] ) )
-					$this->notGranted();
+					if ( !in_array( $J1_Id, $joboffers[0] ) )
+						$this->notGranted();
+				}
 
 				break;
 

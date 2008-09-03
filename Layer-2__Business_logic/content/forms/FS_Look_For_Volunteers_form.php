@@ -1,7 +1,7 @@
 <?php
 // Authors: Davi Leal
 //
-// Copyright (C) 2006, 2007, 2008 Davi Leal <davi at leals dot com>
+// Copyright (C) 2008 Davi Leal <davi at leals dot com>
 //
 // This program is free software: you can redistribute it and/or modify it under
 // the terms of the GNU Affero General Public License as published by the Free Software Foundation,
@@ -21,7 +21,7 @@ require_once "../Layer-4__DBManager_etc/DB_Manager.php";
 // Methods take the values from the global $_POST[] array.
 
 
-class FSJobOffersForm
+class FSLookForVolunteersForm
 {
 	public function processForm()
 	{
@@ -30,18 +30,19 @@ class FSJobOffersForm
 
 	public function printOutput()
 	{
-		$this->printFSJobOffersForm();
+		$this->printFSLookForVolunteersForm();
 	}
 
 
-	private function printFSJobOffersForm()
+	private function printFSLookForVolunteersForm()
 	{
 		$manager = new DBManager();
 		$smarty = new Smarty;
 
 
 		// Job Offers
-		$result = $manager->getJobOffers(" AND J1_OfferType='Job offer' ");
+
+		$result = $manager->getJobOffers(" AND J1_OfferType='Looking for volunteers' ");
 
 		$smarty->assign('JobOfferId', $result[0]);
 
@@ -69,7 +70,7 @@ class FSJobOffersForm
 		$smarty->assign('VacancyTitle', $result[15]);
 
 
-		$smarty->display("FS_Job_Offers_form.tpl");
+		$smarty->display("FS_Look_For_Volunteers_form.tpl");
 	}
 }
 ?> 

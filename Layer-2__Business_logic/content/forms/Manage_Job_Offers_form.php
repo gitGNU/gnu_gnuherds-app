@@ -55,14 +55,16 @@ class ManageJobOffersForm
 		// Process each button event
 		if ( $_POST['delete'] != '' )
 		{
-			if ( count($_POST['DeleteJobOffers']) >= 1 )
+			if ( count($_POST['DeleteJobOffers']) >= 1 or count($_POST['CancelDonations']) >= 1 )
 			{
-				$this->manager->deleteSelectedJobOffers();
-				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('The selected job offers has been deleted from the data base.')."<p>\n";
-			}
-			else
-			{
-				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Offers to delete have not been selected. Try again.')."<p>\n";
+				if ( $_GET['section'] == 'pledges' )
+				{
+					$this->manager->cancelSelectedDonations();
+				}
+				else
+				{
+					$this->manager->deleteSelectedJobOffers();
+				}
 			}
 		}
 	}
@@ -70,10 +72,7 @@ class ManageJobOffersForm
 
 	public function printOutput()
 	{
-		if ( $_POST['delete'] != '' )
-			echo $this->processingResult;
-		else
-			$this->printManageJobOffersForm();
+		$this->printManageJobOffersForm();
 	}
 
 
@@ -82,40 +81,79 @@ class ManageJobOffersForm
 		$smarty = new Smarty;
 
 
-		// Job Offers
+		// Entries
 
-		$result = $this->manager->getJobOffersForEntity();
+		switch ($_GET["section"]) {
+			case "": case "offers":
+				$offerType = "Job offer";
+				break;
+
+			case "pledges":
+				$offerType = "Donation pledge group";
+				break;
+
+			case "volunteers":
+				$offerType = "Looking for volunteers";
+				break;
+
+			default:
+				$error = "<p>".$_SERVER["REQUEST_URI"].": ".gettext('ERROR: Unexpected condition')."</p>";
+				throw new Exception($error,false);
+		}
+		$result = $this->manager->getJobOffersForEntity(" AND J1_OfferType='".$offerType."' ");
 
 		$this->data['JobOfferId'] = $result[0];
 		$this->data['OfferDate'] = $result[1];
 		$this->data['ExpirationDate'] = $result[2];
 		$this->data['Closed'] = $result[3];
 		$this->data['VacancyTitle'] = isset($result[4]) ? $result[4] : '';
+		$this->data['OfferType'] = $result[5];
 
 
-		// Meters
+		// Details
 
-		$receivedMeter = array();
-		$inProcessMeter = array();
-		$ruledOutMeter = array();
-		$finalistMeter = array();
-		$selectedMeter = array();
+		switch ($_GET["section"]) {
+			case "": case "offers": // Meters
+				$receivedMeter = array();
+				$inProcessMeter = array();
+				$ruledOutMeter = array();
+				$finalistMeter = array();
+				$selectedMeter = array();
 
-		for ($i=0; $i < count($result[0]); $i++)
-		{
-			$receivedMeter[$i] = $this->manager->getApplicationsMeterForJobOffer( $result[0][$i], 'Received' );
-			$inProcessMeter[$i] = $this->manager->getApplicationsMeterForJobOffer( $result[0][$i], 'In process' );
-			$ruledOutMeter[$i] = $this->manager->getApplicationsMeterForJobOffer( $result[0][$i], 'Ruled out' );
-			$finalistMeter[$i] = $this->manager->getApplicationsMeterForJobOffer( $result[0][$i], 'Finalist' );
-			$selectedMeter[$i] = $this->manager->getApplicationsMeterForJobOffer( $result[0][$i], 'Selected' );
+				for ($i=0; $i < count($result[0]); $i++)
+				{
+					$receivedMeter[$i] = $this->manager->getApplicationsMeterForJobOffer( $result[0][$i], 'Received' );
+					$inProcessMeter[$i] = $this->manager->getApplicationsMeterForJobOffer( $result[0][$i], 'In process' );
+					$ruledOutMeter[$i] = $this->manager->getApplicationsMeterForJobOffer( $result[0][$i], 'Ruled out' );
+					$finalistMeter[$i] = $this->manager->getApplicationsMeterForJobOffer( $result[0][$i], 'Finalist' );
+					$selectedMeter[$i] = $this->manager->getApplicationsMeterForJobOffer( $result[0][$i], 'Selected' );
+				}
+
+				$smarty->assign('ReceivedMeter', $receivedMeter); //XXX: DELAYED: Set directly to $this->data['Meters'] the information got from getApplicationsMeterForJobOffer()
+				$smarty->assign('InProcessMeter', $inProcessMeter);
+				$smarty->assign('RuledOutMeter', $ruledOutMeter);
+				$smarty->assign('FinalistMeter', $finalistMeter);
+				$smarty->assign('SelectedMeter', $selectedMeter);
+
+				break;
+
+			case "pledges": // Donations
+				for ($i=0; $i < count($result[0]); $i++)
+				{
+					$this->data['MyDonations'][$i] = $this->manager->getMyDonationsForPledgeGroup( $result[0][$i] );
+				}
+				break;
+
+			case "volunteers":
+				break;
+
+			default:
+				$error = "<p>".$_SERVER["REQUEST_URI"].": ".gettext('ERROR: Unexpected condition')."</p>";
+				throw new Exception($error,false);
 		}
 
-		$smarty->assign('ReceivedMeter', $receivedMeter);
-		$smarty->assign('InProcessMeter', $inProcessMeter);
-		$smarty->assign('RuledOutMeter', $ruledOutMeter);
-		$smarty->assign('FinalistMeter', $finalistMeter);
-		$smarty->assign('SelectedMeter', $selectedMeter);
 
+		// Show
 
 		$smarty->assign('data', $this->data);
 		$smarty->display("Manage_Job_Offers_form.tpl");
