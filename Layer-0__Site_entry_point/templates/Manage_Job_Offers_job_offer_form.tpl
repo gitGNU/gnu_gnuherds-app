@@ -51,7 +51,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {foreach from=$data.JobOfferId item=Id key=i}
 
-<tr>
+<tr valign="top">
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 <input type="checkbox" name="DeleteJobOffers[]" value="{$Id}">
