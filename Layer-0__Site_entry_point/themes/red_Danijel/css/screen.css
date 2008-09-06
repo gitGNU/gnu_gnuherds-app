@@ -349,6 +349,7 @@ img{border:0px;}
 .frame{border:1px outset #666666;}
 
 .limitWidth{width:500px;}
+.limitJobOfferWidth{width:400px;}
 .splitWidth{width:200px;}
 .center{text-align:center;}
 .justify{text-align:justify;}

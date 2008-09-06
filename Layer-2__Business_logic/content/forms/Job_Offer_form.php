@@ -305,6 +305,9 @@ class JobOfferForm extends SkillsForm
 		switch($this->section2control)
 		{
 			case 'general':
+				$this->data['VacancyTitle'] = isset($_POST['VacancyTitle']) ? trim($_POST['VacancyTitle']) : '';
+				$this->data['Description'] = isset($_POST['Description']) ? trim($_POST['Description']) : '';
+
 				if (isset($_POST['AllowPersonApplications']) and $_POST['AllowPersonApplications']=='on')
 					$this->data['AllowPersonApplications'] = "true";
 				else
@@ -984,6 +987,9 @@ class JobOfferForm extends SkillsForm
 
 
 		// JobOffers table
+
+		$this->data['VacancyTitle'] = trim($result[60][0]);
+		$this->data['Description'] = trim($result[61][0]);
 
 		$this->data['EmployerJobOfferReference'] = $result[0][0];
 

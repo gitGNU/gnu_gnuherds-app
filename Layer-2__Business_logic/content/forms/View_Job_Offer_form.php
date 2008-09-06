@@ -209,6 +209,7 @@ class ViewJobOfferForm
 			$this->data['AvailableToTravel'] = "false";
 
 		$this->data['VacancyTitle'] = $result[60][0];
+		$this->data['Description'] = $result[61][0];
 
 
 		// Entity table

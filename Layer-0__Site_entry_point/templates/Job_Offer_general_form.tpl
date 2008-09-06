@@ -51,6 +51,20 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td colspan="2">&nbsp;</td> </tr>
 
 <tr valign="top">
+<td align="right"><label for="VacancyTitle">{t}Vacancy Title{/t}</td>
+<td> <input type="text" name="VacancyTitle" id="VacancyTitle" size="60" maxlength="100" class="notRequired" value="{$data.VacancyTitle}"> </td>
+</tr>
+
+<tr> <td colspan="2">&nbsp;</td> </tr>
+
+<tr valign="top">
+<td align="right"><label for="Description">{t}Short description{/t}</td>
+<td><textarea name="Description" id="Description" rows="10" cols="60" class="notRequired">{$data.Description}</textarea></td>
+</tr>
+
+<tr> <td colspan="2">&nbsp;</td> </tr>
+
+<tr valign="top">
 <td align="right"><span class="must">*</span>{t}Allow applications from{/t}</td>
 <td> <input type="checkbox" name="AllowPersonApplications" id="AllowPersonApplications" class="required" {if $data.AllowPersonApplications eq 'true'} checked {/if}><label for="AllowPersonApplications">{t}Persons{/t}</label></td>
 </tr>

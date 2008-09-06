@@ -63,6 +63,25 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </tr>
 
+{if $data.Description neq ''}
+
+<tr>
+<td colspan="4">&nbsp;</td>
+{if $data.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr>
+
+<tr valign="top">
+<td align="right"><strong>{'Description'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
+<td colspan="3" class="tdDark"><div class="limitJobOfferWidth">{$data.Description}</div></td>
+{if $data.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr>
+
+{/if}
+
 <tr>
 <td colspan="4">&nbsp;</td>
 {if $data.EntityId eq $smarty.session.EntityId}
