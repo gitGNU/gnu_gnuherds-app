@@ -539,10 +539,32 @@ class JobOffer
 
 	public function cancelSelectedDonations()
 	{
+		// Cancel selected donations
 		for ($i=0; $i < count($_POST['CancelDonations']); $i++)
 		{
-			$sqlQuery = "PREPARE query(integer) AS  DELETE FROM R1_Donations2JobOffersJoins WHERE R1_Id=$1;  EXECUTE query('{$_POST['CancelDonations'][$i]}');";
+			$donationId = $_POST['DonationId'][ $_POST['CancelDonations'][$i] ];
+
+			$sqlQuery = "PREPARE query(integer) AS  DELETE FROM R1_Donations2JobOffersJoins WHERE R1_Id=$1;  EXECUTE query('$donationId');";
 			$result = $this->postgresql->execute($sqlQuery,1);
+		}
+
+		// If after the canceling there is not any donation for a donations-pledge-group then auto-delete such donation-pledge-group
+		for ($i=0; $i < count($_POST['CancelDonations']); $i++)
+		{
+			$jobOfferId = $_POST['JobOfferId'][ $_POST['CancelDonations'][$i] ];
+
+			if ( $already_processed[$jobOfferId] != true ) // Avoid double-delete error
+			{
+				$sqlQuery = "PREPARE query(integer) AS  SELECT count(*) FROM R1_Donations2JobOffersJoins WHERE R1_J1_Id=$1;  EXECUTE query('$jobOfferId');";
+				$result = $this->postgresql->getOneField($sqlQuery,1);
+
+				if ( intval($result[0]) == 0 )
+				{
+					$this->deleteJobOffer($jobOfferId); // XXX: We could optimize this calling a custom method due to deleteJobOffer() tries to delete Skills, Language, etc. and DonationPledgeGroups do not use any of such properties.
+				}
+
+				$already_processed[$jobOfferId] = true;
+			}
 		}
 	}
 

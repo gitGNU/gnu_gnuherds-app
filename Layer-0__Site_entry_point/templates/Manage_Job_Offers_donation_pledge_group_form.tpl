@@ -45,6 +45,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {else}
 
 
+{assign var='x' value=0}
+
 {foreach from=$data.JobOfferId item=Id key=i}
 {foreach from=$data.MyDonations[$i].DonationId item=DonationId key=j}
 
@@ -76,11 +78,15 @@ $TODO USD {* XXX: Pending to add the donated money. *}
 
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<input type="checkbox" name="CancelDonations[]" value="{$data.MyDonations[$i].DonationId[$j]}">
+<input type="hidden" name="JobOfferId[]" value="{$Id}">
+<input type="hidden" name="DonationId[]" value="{$data.MyDonations[$i].DonationId[$j]}">
+<input type="checkbox" name="CancelDonations[]" value="{$x}">
 ${$data.MyDonations[$i].Donation[$j]} USD
 </td>
 
 </tr>
+
+{assign var='x' value=`$x+1`}
 
 {/foreach}
 {/foreach}
