@@ -493,7 +493,9 @@ CREATE TABLE J1_JobOffers ( -- XXX: TODO: The idea is that maybe some of the vol
 
         -- Offer:
 
+        J1_VacancyTitle    varchar(100), -- NOT NULL CHECK (J1_VacancyTitle <> ''),
         J1_Vacancies       varchar(3),
+        J1_Description     text, -- NOT NULL CHECK (J1_Description <> ''),
 
         -- Contract
         J1_LK_ContractType       varchar(15), -- REFERENCES LK_ContractType(LK_Id) NOT NULL,
