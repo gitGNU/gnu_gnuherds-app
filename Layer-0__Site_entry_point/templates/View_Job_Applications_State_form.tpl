@@ -1,8 +1,7 @@
 {*
-Authors: Davi Leal, Victor Engmark
+Authors: Davi Leal
 
-Copyright (C) 2006, 2007, 2008 Davi Leal <davi at leals dot com>
-              2007, 2008 Victor Engmark <victor dot engmark at gmail dot com>
+Copyright (C) 2008 Davi Leal <davi at leals dot com>
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Affero General Public License as published by the Free Software Foundation,
@@ -17,47 +16,22 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}Job applications{/t}</h3>
-{if count($jobOfferId) == 0 }
-	<p>&nbsp;</p>
-	<p>{t}You do not have your application subscribed to any open job offer.{/t}</p>
-	<p>&nbsp;</p>
+<h3>{t}My subscriptions{/t}</h3>
+
+
+<ul id="tablist">
+<li><a {if $smarty.get.section eq '' or $smarty.get.section eq 'offers'} class="current" {/if}
+	href="applications?owner=me&section=offers">{t}FS job offers{/t}</a></li>
+<li><a {if $smarty.get.section eq 'pledges'} class="current" {/if}
+	href="applications?owner=me&section=pledges">{t}FS pledges{/t}</a></li>
+</ul>
+
+<div id="tab">
+{if $smarty.get.section eq '' or $smarty.get.section eq 'offers'}
+	{include file="View_Job_Applications_State_job_offer_form.tpl"}
+{elseif $smarty.get.section eq 'pledges'}
+	{include file="View_Job_Applications_State_donation_pledge_group_form.tpl"}
 {else}
-<table border="0">
-<tr valign="top">
-<td class="tdTitle"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}</strong></td>
-<td class="tdTitle"><strong>{'Offer date'|gettext|strip:'&nbsp;'}</strong></td>
-<td></td>
-<td class="tdTitle">{'Subscription state'|gettext|strip:'&nbsp;'}</td>
-</tr>
-{foreach from=$jobOfferId item=Id key=i}
-<tr valign="top">
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="offers?id={$Id}">
-{$vacancyTitle[$i]}
-</a>
-</td>
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$offerDate[$i]}
-</td>
-<td></td>
-<td align="center" class="
-{if $state[$i] eq 'Received'}{if $i % 2}tdDark{else}tdLight{/if}{/if}
-{if $state[$i] eq 'In process'}blueApplicationState{/if}
-{if $state[$i] eq 'Ruled out'}redApplicationState{/if}
-{if $state[$i] eq 'Finalist'}almostGreenApplicationState{/if}
-{if $state[$i] eq 'Selected'}greenApplicationState{/if}
-">
-{t domain='database'}{$state[$i]}{/t}
-{*
-'Received'	without color
-'In process'	blue
-'Ruled out'	red
-'Finalist' 	almost green
-'Selected'	green
-*}
-</td>
-</tr>
-{/foreach}
-</table>
+	{t}ERROR: Unexpected condition{/t}
 {/if}
+</div>

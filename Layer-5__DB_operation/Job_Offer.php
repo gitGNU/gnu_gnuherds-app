@@ -682,9 +682,9 @@ class JobOffer
 	}
 
 
-	public function getJobApplicationsForEntity()
+	public function getJobApplicationsForEntity($extra_condition = '')
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_E1_Id,J1_OfferDate,R0_State,J1_VacancyTitle,J1_OfferType FROM J1_JobOffers,R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=J1_Id AND R0_E1_Id=$1 ;  EXECUTE query('$_SESSION[EntityId]');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_E1_Id,J1_OfferDate,R0_State,J1_VacancyTitle,J1_OfferType FROM J1_JobOffers,R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=J1_Id AND R0_E1_Id=$1 ".$extra_condition.";  EXECUTE query('$_SESSION[EntityId]');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 		$array = array();
 		$array[0] = pg_fetch_all_columns($result, 0);

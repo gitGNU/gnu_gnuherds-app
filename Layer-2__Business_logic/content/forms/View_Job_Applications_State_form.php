@@ -64,7 +64,24 @@ class ViewJobApplicationsStateForm
 
 		// Job Applications
 
-		$result = $this->manager->getJobApplicationsForEntity();
+		switch ($_GET["section"]) {
+			case "": case "offers":
+				$offerType = "Job offer";
+				break;
+
+			case "pledges":
+				$offerType = "Donation pledge group";
+				break;
+
+			case "volunteers":
+				$offerType = "Looking for volunteers";
+				break;
+
+			default:
+				$error = "<p>".$_SERVER["REQUEST_URI"].": ".gettext('ERROR: Unexpected condition')."</p>";
+				throw new Exception($error,false);
+		}
+		$result = $this->manager->getJobApplicationsForEntity(" AND J1_OfferType='".$offerType."' ");
 
 		$smarty->assign('jobOfferId', $result[0]);
 		$smarty->assign('entityId', $result[1]);

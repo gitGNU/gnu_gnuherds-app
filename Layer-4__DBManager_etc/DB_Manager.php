@@ -410,12 +410,12 @@ class DBManager
 		return $jobOffer->setApplicationState($JobOfferId,$State,$EntityId);
 	}
 
-	public function getJobApplicationsForEntity()
+	public function getJobApplicationsForEntity($extra_condition)
 	{
 		// This method does not need ACL check because of it works with SESSION[EntityId]
 
 		$jobOffer = new JobOffer();
-		return $jobOffer->getJobApplicationsForEntity();
+		return $jobOffer->getJobApplicationsForEntity($extra_condition);
 	}
 
 	public function pendingNewJobOfferAlerts()
