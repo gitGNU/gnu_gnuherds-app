@@ -285,11 +285,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<br>
 
 	<div class="splitWidth center">
-	<input type="submit" name="register_and_subscribe" value="{t}I do it{/t}">
+	<input type="submit" name="register_and_subscribe" value="{t}I will do it{/t}">
 	</div>
 {else}
 	<div class="splitWidth center">
-	<input type="submit" name="subscribe" value="{t}I do it{/t}"> {t}in exchange for that money.{/t}
+	<input type="submit" name="subscribe" value="{t}I will do it{/t}"> {t}in exchange for that money.{/t}
 	</div>
 {/if}
 	</form>
