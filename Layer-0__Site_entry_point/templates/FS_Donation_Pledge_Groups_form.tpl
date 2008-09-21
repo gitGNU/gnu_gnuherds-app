@@ -34,7 +34,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {t escape='no'
   1='<i>'
   2='</i>'
-}If you would like carry out some of the tasks below in exchange for the reported task money, just open and click "%1I will do it%2".{/t}
+}If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click "%1I will do it%2".{/t}
 </p>
 
 <br>
