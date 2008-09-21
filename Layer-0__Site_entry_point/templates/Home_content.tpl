@@ -29,6 +29,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
   3='<a href="business_models">'
 }The first step has been to develop the %1Job Site%2 modules and gather together several %3business models%2. Some of the JobSite's features are:{/t}</p>
 <ul>
+  <li>{t}Service free of any cost to its users{/t}</li>
   <li>{t}Controlled by its own users{/t}</li>
   <li>{t}FS skills data base{/t}</li>
   <li>{t}Telecommute{/t}</li>

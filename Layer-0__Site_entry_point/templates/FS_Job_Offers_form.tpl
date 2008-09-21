@@ -38,6 +38,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {t escape='no'
   1='<a href="mailto:association@gnuherds.org">association@gnuherds.org</a>'
 }The simplest way to post a job offer is to email all the details you have about it to %1{/t}
+</p>
+
+<p class="center">
+{t}Its cost is 0 cents.{/t} &nbsp; {t}The GNU Herds project does not charge by any of its services.{/t}
 <br>
 <br>
 </p>
