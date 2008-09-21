@@ -332,7 +332,7 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
 
         --------------------------------------------------------------------------
         -- To qualify for voting membership, the entity have to show a contribution to the Free Software community.
-        E1_PublicKey       varchar(255), -- XXX: What is the maximum lenght of a public key. Is it unlimited?. If so, should we allow a unlimited lenght? Yes, I think so.
+        E1_PublicKey       varchar(255), -- XXX: What is the maximum lenght of a public key. Is it unlimited? If so, should we allow a unlimited lenght? Yes, I think so.
         E1_Vote            bool, -- NOT NULL DEFAULT 'false', -- The vote feature is enabled by the committee based on the Contributions to FS (E2_EntityFreeSoftwareExperiences).
         E1_ReEvaluate      bool, -- NOT NULL DEFAULT 'true', -- At a new insert E1_ReEvaluate is set to 'true' automatically.
 
@@ -499,7 +499,7 @@ CREATE TABLE J1_JobOffers ( -- XXX: TODO: The idea is that maybe some of the vol
 
         -- Contract
         J1_LK_ContractType       varchar(15), -- REFERENCES LK_ContractType(LK_Id) NOT NULL,
-        -- J1_ContractDuration varchar(255), - - - XXX: Is this field already implicit in the J1_LK_ContractType field?.
+        -- J1_ContractDuration varchar(255), - - - XXX: Is this field already implicit in the J1_LK_ContractType field?
         J1_WageRank              varchar(90), -- point, -- Minimum-Optimum
         J1_CommissionsIncentives varchar(255), -- - - - XXX: This fields is not used. If we use it, use a combo box to avoid another free-to-fill field.
         J1_LU_Currency           char(3), -- REFERENCES LU_Currencies(LU_ThreeLetter), -- NOT NULL,
@@ -1277,8 +1277,8 @@ INSERT INTO LU_Currencies VALUES ( 'EUR', 'Euro', 'Euros', 'Andorra, Austria, Be
 INSERT INTO LU_Currencies VALUES ( 'AOA', 'Kwanza', 'Kwanzas', 'Angola' );
 INSERT INTO LU_Currencies VALUES ( 'AMD', 'Dram',   'Dram', 'Armenia' );
 
-INSERT INTO LU_Currencies VALUES ( 'AWG', 'Guilder, Aruba',                'Guilders, Aruba', 'Aruba' ); -- XXX: !!!: What is the Aruba's currency the Guilder or the Florin?. Reference: http://en.wikipedia.org/wiki/Aruban_florin
-INSERT INTO LU_Currencies VALUES ( 'ANG', 'Guilder, Netherlands Antilles', 'Guilders, Netherlands Antilles', 'Bonaire, Curaço, Netherlands Antilles, Saba, Sint Eustatius, Sint Maarten' );-- XXX: !!!: What is the Netherlands Antilles' currency the Guilder or the Gulden?. Reference: http://en.wikipedia.org/wiki/Netherlands_Antillean_gulden
+INSERT INTO LU_Currencies VALUES ( 'AWG', 'Guilder, Aruba',                'Guilders, Aruba', 'Aruba' ); -- XXX: !!!: What is the Aruba's currency the Guilder or the Florin? Reference: http://en.wikipedia.org/wiki/Aruban_florin
+INSERT INTO LU_Currencies VALUES ( 'ANG', 'Guilder, Netherlands Antilles', 'Guilders, Netherlands Antilles', 'Bonaire, Curaço, Netherlands Antilles, Saba, Sint Eustatius, Sint Maarten' );-- XXX: !!!: What is the Netherlands Antilles' currency the Guilder or the Gulden? Reference: http://en.wikipedia.org/wiki/Netherlands_Antillean_gulden
 
 INSERT INTO LU_Currencies VALUES ( 'AZM', 'Manat, Azerbaijan',   'Manats, Azerbaijan', 'Azerbaijan' );
 INSERT INTO LU_Currencies VALUES ( 'TMM', 'Manat, Turkmenistan', 'Manats, Turkmenistan', 'Turkmenistan' );

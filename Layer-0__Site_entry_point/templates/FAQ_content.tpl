@@ -617,7 +617,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<li>
 		{t}We want remark:{/t}<br>
-		{* &nbsp; &nbsp; <a href="http://www.votehere.net/products.htm">E-voting Solutions</a> The list of requirements of the above reference can be useful to check any design. Anyway, we think the "<i>Revisability: A voter can change their vote in a given period of time</i>" feature is not necessary and even no convenient. What do you think?. <br> *}
+		{* &nbsp; &nbsp; <a href="http://www.votehere.net/products.htm">E-voting Solutions</a> The list of requirements of the above reference can be useful to check any design. Anyway, we think the "<i>Revisability: A voter can change their vote in a given period of time</i>" feature is not necessary and even no convenient. What do you think? <br> *}
 		&nbsp; &nbsp; <a href="http://lorrie.cranor.org/">Lorrie Faith Cranor</a> <br>
 		&nbsp; &nbsp; <a href="http://www.vote.caltech.edu/">Caltech</a> <br>
 		&nbsp; &nbsp; <a href="http://www.notablesoftware.com/evote.html">Electronic Voting</a> <br>
