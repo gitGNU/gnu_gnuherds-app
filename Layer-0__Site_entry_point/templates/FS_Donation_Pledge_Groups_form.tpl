@@ -23,18 +23,18 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <p>
-{t}A pledge is a compromise somebody has done to donate something, for example two cents, to get some task done.{/t}
+{t}A pledge is a promise somebody has done to donate something, for example two cents, to get some task done.{/t}
 </p>
 
 <p>
-{t}If you like some of the ideas exposed at the below pledge groups, you can join to it contributing your two cents to help get it converted into an actual job offer. You can even edit it to add your ideas or corrections.{/t}
+{t}If you like some of the ideas listed in the below pledge groups, you can join to by contributing your two cents to help get it converted into an actual job offer. You can even edit it to add your ideas or corrections.{/t}
 </p>
 
 <p>
 {t escape='no'
   1='<i>'
   2='</i>'
-}If you would like carry out some of the below tasks in exchange for the reported task money, just open and click "%1I do it%2".{/t}
+}If you would like carry out some of the below tasks in exchange for the reported task money, just open and click "%1I will do it%2".{/t}
 </p>
 
 <br>
