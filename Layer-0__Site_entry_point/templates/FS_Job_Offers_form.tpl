@@ -29,7 +29,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {if $smarty.session.Logged neq '1' }
 <p>
-{t}Are you a Free Software author?. You could register and add your qualifications.{/t}
+{t}Are you a Free Software author? You could register and add your qualifications.{/t}
 </p>
 {/if}
 
