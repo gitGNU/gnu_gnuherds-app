@@ -41,7 +41,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td colspan="4" class="tdDark center">
-{t}There are no entries{/t}
+{t}You do not have any defined job offer{/t}
 </td>
 </tr>
 
