@@ -38,7 +38,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
   2='</a>'
   3='<i>'
   4='</i>'
-}You can compromise your two cents to convert some of the below volunteer entries into a %1FS pledge%2. Just open and click "%3My pledge%4".{/t}
+}You can promise your two cents to convert some of the below volunteer entries into a %1FS pledge%2. Just open it and click "%3My pledge%4".{/t}
 </p>
 -->
 
