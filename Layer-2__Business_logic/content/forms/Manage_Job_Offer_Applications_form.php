@@ -85,10 +85,10 @@ class ManageJobOfferApplicationsForm
 
 
 		$result = $this->manager->getJobOfferApplications($_GET['JobOfferId']);
+
 		$smarty->assign('vacancyTitle', $result['VacancyTitle']);
 
 		$smarty->assign('entityId', $result['EntityId']);
-
 		$smarty->assign('entityType', $result['EntityType']);
 
 		$smarty->assign('street', $result['Street']);
