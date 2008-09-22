@@ -26,7 +26,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {t escape='no'
   1='<a href="pledges">'
   2='</a>'
-}If you would pay something for realizing such task, please fill it as %1FS pledge%2 instead of as volunteer.{/t}
+  3='<i>'
+  4='</i>'
+}If you would like to donate something for fulfilling a task, please create it as a %1FS pledge%2 entry instead of as a %3looking for volunteers%4 one.{/t}
 </p>
 
 <!-- XXX: DELAYED: This feature is delayed.
