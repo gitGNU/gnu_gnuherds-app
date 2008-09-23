@@ -15,7 +15,7 @@ General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License along with this
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
-}
+*}
 
 <h3>{t}FS job offers{/t}</h3>
 
