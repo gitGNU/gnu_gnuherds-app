@@ -49,7 +49,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	</p>
 
 	<ul>
-		<li> {t}Service free of any cost to its users{/t}. {t}The GNU Herds project does not charge by any of its services.{/t}
+		<li> {t}Service is free of any cost to its users{/t}. {t}The GNU Herds project does not charge for any of its services.{/t}
 
 		<li> {t escape='no'
 		  1='<a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">'

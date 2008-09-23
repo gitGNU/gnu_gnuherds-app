@@ -15,7 +15,7 @@ General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License along with this
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
-*}
+}
 
 <h3>{t}FS job offers{/t}</h3>
 
@@ -41,7 +41,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </p>
 
 <p class="center">
-{t}Its cost is 0 cents.{/t} &nbsp; {t}The GNU Herds project does not charge by any of its services.{/t}
+{t}The cost is 0 cents.{/t} &nbsp; {t}The GNU Herds project does not charge for any of its services.{/t}
 <br>
 <br>
 </p>
