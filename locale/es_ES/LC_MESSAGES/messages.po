@@ -72,17 +72,17 @@ msgstr "Mis cualificaciones"
 msgid "Our qualifications"
 msgstr "Nuestra cualificación"
 
-msgid "My job offers"
-msgstr "Mis ofertas de empleo"
+msgid "My notices"
+msgstr "Mis anuncios"
 
-msgid "Our job offers"
-msgstr "Nuestras ofertas de empleo"
+msgid "Our notices"
+msgstr "Nuestros anuncios"
 
-msgid "My job applications"
-msgstr "Mis solicitudes"
+msgid "My subscriptions"
+msgstr "Mis suscripciones"
 
-msgid "Our job applications"
-msgstr "Nuestras solicitudes"
+msgid "Our subscriptions"
+msgstr "Nuestras suscripciones"
 
 msgid "Settings"
 msgstr "Configuraciones"
@@ -98,6 +98,12 @@ msgstr "Modelos de negocio SL"
 
 msgid "FS job offers"
 msgstr "Ofertas de empleo SL"
+
+msgid "FS pledges"
+msgstr "Promesas SL"
+
+msgid "FS volunteers"
+msgstr "Voluntarios SL"
 
 #
 # log_in_box.tpl
@@ -279,6 +285,9 @@ msgstr "GNU Herds es una asociación %1democrática%3 sin ánimo de lucro, cuyo 
 msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3business models%2. Some of the JobSite's features are:"
 msgstr "El primer paso ha consistido en desarrollar el módulo de %1web de Empleo%2 y recopilar algunos %3modelos de negocio%2. Algunas de las características de la web de empleo son:"
 
+msgid "Service is free of any cost to its users"
+msgstr "Servicio libre de cualquier coste para sus usuarios"
+
 msgid "Controlled by its own users"
 msgstr "Controlada por sus propios usuarios"
 
@@ -301,7 +310,7 @@ msgid "to carry on the web application development."
 msgstr "para proseguir el desarrollo de la aplicación web."
 
 msgid "For more information:"
-msgstr "Para mas información:"
+msgstr "Para más información:"
 
 #
 # Charter_content.tpl
@@ -406,7 +415,7 @@ msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as sev
 msgstr "Si usted quiere formar parte del equipo de GNU Herds, o simplemente colaborar esporádicamente, como algunos ya han hecho, puede %1suscribirse%2 a la lista de correo 'gnuherds-app-dev' o coordinarse con uno de los miembros del equipo. ¡Gracias!."
 
 msgid "To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this coders' guide. If you need support ask for it at"
-msgstr "Para jugar con la aplicación web, %1descargue%3 el código e %2instálelo%3 en su PC. Los traductores no necesitan descargar el código fuente, nosotros le enviaremos el fichero POT de gettext a traducir. En esta guía del desarrollador se responden las preguntas mas frecuentes. Si necesita ayuda pídala en"
+msgstr "Para jugar con la aplicación web, %1descargue%3 el código e %2instálelo%3 en su PC. Los traductores no necesitan descargar el código fuente, nosotros le enviaremos el fichero POT de gettext a traducir. En esta guía del desarrollador se responden las preguntas más frecuentes. Si necesita ayuda pídala en"
 
 msgid "Read the current draft of %1GNU Herds' Charter%2."
 msgstr "Véase el borrador actual de los %1Estatutos de GNU Herds%2."
@@ -771,8 +780,17 @@ msgstr "Nótese que todos esos sistemas están orientados a elecciones de país.
 msgid "Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc."
 msgstr "Contacte con algunos de los mejores expertos en Software Libre disponibles y sus empresas. Solucione sus problemas hoy con los mejores administradores de sistemas, desarrolladores, equipos de calidad, documentalistas, etc."
 
-msgid "Are you a Free Software author?. You could register and add your qualifications."
+msgid "Are you a Free Software author? You could register and add your qualifications."
 msgstr "¿Es usted un autor de Software Libre?. Usted puede registrarse y añadir sus cualificaciones."
+
+msgid "The simplest way to post a job offer is to email all the details you have about it to %1"
+msgstr "La forma más fácil de publicar una oferta de empleo es enviar todos los detalles de la oferta a %1"
+
+msgid "The cost is 0 cents."
+msgstr "El coste es de 0 céntimos."
+
+msgid "The GNU Herds project does not charge for any of its services."
+msgstr "El proyecto GNU Herds no cobra por ninguno de sus servicios."
 
 msgid "There are not active job offers"
 msgstr "No hay ofertas de empleo activas"
@@ -791,6 +809,50 @@ msgstr "Ofrecido por"
 
 msgid "telework"
 msgstr "teletrabajo"
+
+#
+# FS_Donation_Pledge_Groups_form.tpl
+#
+
+msgid "A pledge is a promise somebody has made to donate something, for example two cents, to get some task done."
+msgstr "Una promesa es un compromiso de donación, por ejemplo de dos céntimos, que alguien hace a cambio de que se realice alguna tarea."
+
+msgid "If you like some of the ideas listed in the pledge groups below, you can join to by contributing your two cents to help get it converted into an actual job offer. You can even edit it to add your ideas or corrections."
+msgstr "Si a usted le gusta alguna de las ideas listadas en los siguientes grupos de promesas, usted puede sumar contribuyendo sus dos céntimos para ayudar a que dicho grupo se convierta en una oferta de trabajo real. Usted puede también editar el grupo para añadir sus ideas o correcciones."
+
+msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I will do it%2\"."
+msgstr "Si a usted le gustaría llevar a cabo alguna de las siguientes tareas, a cambio del dinero apuntado en la tarea, simplemente ábrala y pulse el botón \"%1Yo lo haré%2\"."
+
+msgid "Donation pledge group title"
+msgstr "Título del grupo de promesas de donación"
+
+msgid "Last update"
+msgstr "Última actualización"
+
+msgid "There are no entries"
+msgstr "No hay entradas"
+
+#
+# FS_Look_For_Volunteers_form.tpl
+#
+
+msgid "Looking for volunteers"
+msgstr "Búsqueda de voluntarios"
+
+msgid "If you would like to donate something for fulfilling a task, please create it as a %1FS pledge%2 entry instead of as a %3looking for volunteers%4 one."
+msgstr "Si usted donaría algo por la realización de la tarea, por favor créela como %1Promesa SL%2 en lugar de como %3búsqueda de voluntarios%4."
+
+msgid "New look for volunteers"
+msgstr "Nueva búsqueda de voluntarios"
+
+msgid "Volunteer title"
+msgstr "Título del voluntario"
+
+msgid "Entry date"
+msgstr "Fecha de la entrada"
+
+msgid "Created by"
+msgstr "Creado por"
 
 #
 # View_Job_Offer_form.php
@@ -905,6 +967,36 @@ msgstr "se requiere"
 
 msgid "Subscribe to this job offer"
 msgstr "Suscribirse a esta oferta"
+
+#
+# View_Donation_Pledge_Group_form.tpl
+#
+msgid "Donation pledge group"
+msgstr "Grupo de promesas de donación"
+
+msgid "Donations"
+msgstr "Donaciones"
+
+msgid "Workers"
+msgstr "Trabajadores"
+
+msgid "donation pledge"
+msgstr "promesa de donación"
+
+msgid "I want to add my %1donation pledge%2 in exchange for getting those tasks done."
+msgstr "Quiero añadir mi %1promesa de donación%2 a cambio de obtener estas tareas hechas."
+
+msgid "I will do it"
+msgstr "Yo lo haré"
+
+msgid "in exchange for that money."
+msgstr "a cambio de este dinero."
+
+#
+# View_Look_For_Volunteers_form.php
+#
+### msgid ""
+### msgstr ""
 
 #
 # View_Qualifications_form.tpl
@@ -1227,7 +1319,7 @@ msgid "Staff with the below characteristic:"
 msgstr "Personal con las siguientes características:"
 
 msgid "Press Ctrl key to choose more than one Profile"
-msgstr "Presione la tecla Ctrl para seleccionar mas de un Perfil"
+msgstr "Presione la tecla Ctrl para seleccionar más de un Perfil"
 
 msgid "Profiles"
 msgstr "Perfiles"
@@ -1480,6 +1572,45 @@ msgstr "No llene ningún campo de dirección si la oferta es Teletrabajo."
 # msgstr ""
 
 #
+# DonationPledgeGroups form: Donation_Pledge_Group_form.tpl, Donation_Pledge_Group_form.php
+#
+# Donation_Pledge_Group_form.tpl
+msgid "New donation pledge group"
+msgstr "Nuevo grupo de promesas de donación"
+
+msgid "Tasks"
+msgstr "Tareas"
+
+msgid "Short description"
+msgstr "Descripción corta"
+
+msgid "Donation"
+msgstr "Donación"
+
+msgid "Your donation"
+msgstr "Su donación"
+
+msgid "in exchange for getting those tasks done"
+msgstr "a cambio de obtener estas tareas hechas"
+
+msgid "US Dollars (USD)"
+msgstr "Dólares (USD)"
+
+# Donation_Pledge_Group_form.php
+msgid "Please fill in here numeric greater or equal to %s"
+msgstr "Por favor, rellene aquí numérico mayor o igual a %s"
+
+#
+# LookForVolunteers form: Look_For_Volunteers_form.tpl
+#
+# Look_For_Volunteers_form.tpl
+msgid "New looking for volunteers notice"
+msgstr "Nuevo anuncio de búsqueda de voluntatios"
+
+msgid "Contact"
+msgstr "Contacto"
+
+#
 # Manage_Job_Offer_Applications_form.tpl
 #
 msgid "Manage the job offer applications"
@@ -1492,14 +1623,15 @@ msgid "Applicant"
 msgstr "Candidato,-a"
 
 #
-# Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_form.php
+# Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_job_offer_form.tpl, Manage_Job_Offers_donation_pledge_group_form.tpl, Manage_Job_Offers_look_for_volunteers_form.tpl, Manage_Job_Offers_form.php
 #
 # Manage_Job_Offers_form.tpl
-msgid "Manage job offers"
-msgstr "Gestionar ofertas de empleo"
+# msgid ""
+# msgstr ""
 
-msgid "You do not have any defined job offer."
-msgstr "Usted no tiene ninguna oferta de empleo definida."
+# Manage_Job_Offers_job_offer_form.tpl
+msgid "You do not have any defined job offer"
+msgstr "Usted no tiene ninguna oferta de empleo definida"
 
 msgid "Closed"
 msgstr "Cerrada"
@@ -1507,12 +1639,17 @@ msgstr "Cerrada"
 msgid "Delete selected offers"
 msgstr "Borrar las ofertas seleccionadas"
 
-# Manage_Job_Offers_form.php
-msgid "The selected job offers has been deleted from the data base."
-msgstr "Las ofertas de empleo seleccionadas han sido eliminadas de la base de datos."
+# Manage_Job_Offers_donation_pledge_group_form.tpl
+# msgid ""
+# msgstr ""
 
-msgid "Offers to delete have not been selected. Try again."
-msgstr "Usted no ha seleccionado ninguna oferta para borrar. Inténtelo de nuevo."
+# Manage_Job_Offers_look_for_volunteers_form.tpl
+# msgid ""
+# msgstr ""
+
+# Manage_Job_Offers_form.php
+# msgid ""
+# msgstr ""
 
 #
 # View_Job_Applications_State_form.tpl
