@@ -59,7 +59,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if count($JobOfferId) == 0 }
 <tr valign="top">
 <td colspan="4" class="tdDark center">
-{t}There are no job offers{/t}
+{t}There are no active job offers{/t}
 </td>
 </tr>
 {else}
