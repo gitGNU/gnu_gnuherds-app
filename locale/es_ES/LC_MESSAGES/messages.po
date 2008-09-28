@@ -792,7 +792,7 @@ msgstr "El coste es de 0 céntimos."
 msgid "The GNU Herds project does not charge for any of its services."
 msgstr "El proyecto GNU Herds no cobra por ninguno de sus servicios."
 
-msgid "There are not active job offers"
+msgid "There are no active job offers"
 msgstr "No hay ofertas de empleo activas"
 
 msgid "Vacancy title"
