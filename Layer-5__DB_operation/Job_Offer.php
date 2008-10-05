@@ -501,7 +501,7 @@ class JobOffer
 	}
 
 
-	public function getDonations($JobOfferId)
+	public function getDonators($JobOfferId)
 	{
 		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Donation,EP_FirstName,EP_LastName,EP_MiddleName,EC_CompanyName,EO_OrganizationName FROM R1_Donations2JobOffersJoins,E1_Entities WHERE R1_E1_Id=E1_Id AND R1_J1_Id=$1 ;  EXECUTE query('$JobOfferId');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);

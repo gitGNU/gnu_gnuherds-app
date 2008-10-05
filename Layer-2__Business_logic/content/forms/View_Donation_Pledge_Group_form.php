@@ -238,7 +238,7 @@ class ViewDonationPledgeGroupForm
 
 
 		// Donators table
-		$this->data['Donations'] = $this->manager->getDonations($_GET['JobOfferId']);
+		$this->data['Donators'] = $this->manager->getDonators($_GET['JobOfferId']);
 
 		// Donators table
 		$this->data['Applications'] = $this->manager->getJobOfferApplications($_GET['JobOfferId']);

@@ -151,7 +151,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <table cellpadding="0" rules="none" border="0" align="center">
 <tr>
 {assign var="Donations" value=0}
-{foreach from=$data.Donations.Donation item=Donation key=i}
+{foreach from=$data.Donators.Donation item=Donation key=i}
 	{assign var="Donations" value=$Donations+$Donation }
 {/foreach}
 <td class="greenLight"><strong>{t}Donations{/t}</strong>&nbsp;:&nbsp;${$Donations}&nbsp;USD</td><td>&nbsp;</td><td class="greenLight">{t}Workers{/t}</td>
@@ -161,17 +161,17 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td valign="top" style="background-color:#e0e1bf;">
 <div style="width:200px; height:70px; overflow:auto; padding:0px; border:1px solid black;">
 <table cellpadding="0" rules="none" border="0">
-{foreach from=$data.Donations.Donation item=Donation key=i}
+{foreach from=$data.Donators.Donation item=Donation key=i}
 <tr>
 <td class="{if $i % 2}tdDark{else}tdLight{/if}"> {* XXX: TODO: Fix the "Last name , First name" bug. Also at the job offers, pledges and volunteers listings. *}
-{if $data.Donations.CompanyName[$i] neq ''}
-	{$data.Donations.CompanyName[$i]|gettext|strip:'&nbsp;'}
+{if $data.Donators.CompanyName[$i] neq ''}
+	{$data.Donators.CompanyName[$i]|gettext|strip:'&nbsp;'}
 {else}
-{if $data.Donations.NonprofitName[$i] neq ''}
-	{$data.Donations.NonprofitName[$i]|gettext|strip:'&nbsp;'}
+{if $data.Donators.NonprofitName[$i] neq ''}
+	{$data.Donators.NonprofitName[$i]|gettext|strip:'&nbsp;'}
 {else}
-{if $data.Donations.LastName[$i] neq '' or $data.Donations.MiddleName[$i] neq '' or $data.Donations.FirstName[$i] neq ''}
-	{$data.Donations.LastName[$i]}{if trim($data.Donations.LastName[$i]) neq '' and trim($data.Donations.MiddleName[$i]) neq ''}&nbsp;{/if}{$data.Donations.MiddleName[$i]}{if trim($data.Donations.LastName[$i]) neq '' or trim($data.Donations.MiddleName[$i]) neq ''},&nbsp;{/if}{$data.Donations.FirstName[$i]}
+{if $data.Donators.LastName[$i] neq '' or $data.Donators.MiddleName[$i] neq '' or $data.Donators.FirstName[$i] neq ''}
+	{$data.Donators.LastName[$i]}{if trim($data.Donators.LastName[$i]) neq '' and trim($data.Donators.MiddleName[$i]) neq ''}&nbsp;{/if}{$data.Donators.MiddleName[$i]}{if trim($data.Donators.LastName[$i]) neq '' or trim($data.Donators.MiddleName[$i]) neq ''},&nbsp;{/if}{$data.Donators.FirstName[$i]}
 {else}
 	{'Email'|gettext|strip:'&nbsp;'}
 {/if}

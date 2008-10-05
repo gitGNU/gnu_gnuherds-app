@@ -324,12 +324,12 @@ class DBManager
 		return $jobOffer->updateJobOffer($Id,$section,$completedEdition);
 	}
 
-	public function getDonations($Id)
+	public function getDonators($Id)
 	{
 		// This method does not need ACL check. It gets public information.
 
 		$jobOffer = new JobOffer();
-		return $jobOffer->getDonations($Id);
+		return $jobOffer->getDonators($Id);
 	}
 
 	public function addDonation($Id)
