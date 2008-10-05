@@ -172,10 +172,18 @@ class AccessControlList
 				break;
 
 			case "WRITE":
-				$joboffers = $jobOffer->getJobOffersForEntity(); // Job Offers for the logged Entity
+				$joboffer = $jobOffer->getJobOffer($J1_Id);
+				if ( $joboffer[62][0] == 'Donation pledge group' )
+				{
+					$this->granted(); // For Donation pledge groups anyone can edit the group if they follows the web application work flow
+				}
+				else
+				{
+					$joboffers = $jobOffer->getJobOffersForEntity(); // Job Offers for the logged Entity
 
-				if ( !in_array( $J1_Id, $joboffers[0] ) )
-					$this->notGranted();
+					if ( !in_array( $J1_Id, $joboffers[0] ) )
+						$this->notGranted();
+				}
 
 				break;
 
