@@ -571,7 +571,7 @@ class JobOffer
 
 	public function getMyDonationsForPledgeGroup($JobOfferId)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Id, R1_Donation FROM R1_Donations2JobOffersJoins WHERE R1_J1_Id=$1 ;  EXECUTE query('$JobOfferId');";
+		$sqlQuery = "PREPARE query(integer,integer) AS  SELECT R1_Id, R1_Donation FROM R1_Donations2JobOffersJoins WHERE R1_E1_Id=$1 AND R1_J1_Id=$2 ;  EXECUTE query('$_SESSION[EntityId]','$JobOfferId');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array['DonationId'] = pg_fetch_all_columns($result, 0);
