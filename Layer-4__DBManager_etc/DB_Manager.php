@@ -332,6 +332,14 @@ class DBManager
 		return $jobOffer->getDonators($Id);
 	}
 
+	public function getDonationsForPledgeGroup($Id)
+	{
+		// This method does not need ACL check. It gets public information.
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->getDonationsForPledgeGroup($Id);
+	}
+
 	public function addDonation($Id)
 	{
 		// This method does not need ACL check. Everybody is allowed to donate.

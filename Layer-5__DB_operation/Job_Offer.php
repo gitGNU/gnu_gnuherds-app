@@ -520,6 +520,22 @@ class JobOffer
 	}
 
 
+	public function getDonationsForPledgeGroup($JobOfferId)
+	{
+		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Donation FROM R1_Donations2JobOffersJoins WHERE R1_J1_Id=$1 ;  EXECUTE query('$JobOfferId');";
+		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
+
+		$donations = 0;
+
+		foreach (pg_fetch_all_columns($result,0) as $donation)
+		{
+			$donations = $donations + $donation;
+		}
+
+		return $donations;
+	}
+
+
 	public function addDonation($JobOfferId)
 	{
 		$entity = new Entity();

@@ -95,6 +95,16 @@ class ViewJobApplicationsStateForm
 		$smarty->assign('offerType', $result[5]);
 
 
+		if ( $offerType == "Donation pledge group" )
+		{
+			for ($i=0; $i < count($result[0]); $i++)
+			{
+				$donations[$i] = $this->manager->getDonationsForPledgeGroup( $result[0][$i] );
+			}
+			$smarty->assign('donations', $donations);
+		}
+
+
 		$smarty->display("View_Job_Applications_State_form.tpl");
 	}
 }

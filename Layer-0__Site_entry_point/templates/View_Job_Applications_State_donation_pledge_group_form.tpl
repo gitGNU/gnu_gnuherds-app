@@ -57,7 +57,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-$TODO USD {* XXX: Pending to add the donated money. *}
+${$donations[$i]} USD
 </td>
 
 </tr>

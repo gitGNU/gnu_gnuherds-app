@@ -140,6 +140,7 @@ class ManageJobOffersForm
 			case "pledges": // Donations
 				for ($i=0; $i < count($result[0]); $i++)
 				{
+					$this->data['Donations'][$i] = $this->manager->getDonationsForPledgeGroup( $result[0][$i] );
 					$this->data['MyDonations'][$i] = $this->manager->getMyDonationsForPledgeGroup( $result[0][$i] );
 				}
 				break;
