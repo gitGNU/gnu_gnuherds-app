@@ -23,6 +23,15 @@ require_once "../Layer-4__DBManager_etc/DB_Manager.php";
 
 class FSDonationPledgeGroupsForm
 {
+	private $manager;
+
+
+	function __construct()
+	{
+		$this->manager = new DBManager();
+	}
+
+
 	public function processForm()
 	{
 	}
@@ -68,6 +77,15 @@ class FSDonationPledgeGroupsForm
 		$smarty->assign('EO_OrganizationName', $result[14]);
 
 		$smarty->assign('VacancyTitle', $result[15]);
+
+
+		// Donations
+
+		for ($i=0; $i < count($result[0]); $i++)
+		{
+			$donations[$i] = $this->manager->getDonationsForPledgeGroup( $result[0][$i] );
+		}
+		$smarty->assign('Donations', $donations);
 
 
 		$smarty->display("FS_Donation_Pledge_Groups_form.tpl");

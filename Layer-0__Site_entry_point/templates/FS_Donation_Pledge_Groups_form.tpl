@@ -53,6 +53,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr valign="top">
 <td class="tdTitle"><strong>{'Donation pledge group title'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
 <td class="tdTitle"><strong>{'Last update'|gettext|strip:'&nbsp;'}</strong></td>
+<td class="tdTitle"><strong>{'Donations'|gettext|strip:'&nbsp;'}</strong></td>
 </tr>
 
 {if count($JobOfferId) == 0 }
@@ -75,6 +76,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {$OfferDate[$i]}
+</td>
+
+<td class="{if $i % 2}tdDark{else}tdLight{/if}">
+${$Donations[$i]} USD
 </td>
 
 </tr>
