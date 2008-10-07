@@ -51,14 +51,15 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <table border="0">
 
 <tr valign="top">
-<td class="tdTitle"><strong>{'Donation pledge group title'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-<td class="tdTitle"><strong>{'Last update'|gettext|strip:'&nbsp;'}</strong></td>
-<td class="tdTitle"><strong>{'Donations'|gettext|strip:'&nbsp;'}</strong></td>
+<td class="tdTitle"><strong>{'Donation pledge group title'|gettext|strip:'&nbsp;'}&nbsp;</strong></td>
+<td class="tdTitle"><strong>{'Last update'|gettext|strip:'&nbsp;'}&nbsp;</strong></td>
+<td></td>
+<td class="tdTitle"><strong>{'Donations'|gettext|strip:'&nbsp;'}&nbsp;</strong></td>
 </tr>
 
 {if count($JobOfferId) == 0 }
 <tr valign="top">
-<td colspan="3" class="tdDark center">
+<td colspan="4" class="tdDark center">
 {t}There are no entries{/t}
 </td>
 </tr>
@@ -77,6 +78,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {$OfferDate[$i]}
 </td>
+
+
+<td>
+</td>
+
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 ${$Donations[$i]} USD
