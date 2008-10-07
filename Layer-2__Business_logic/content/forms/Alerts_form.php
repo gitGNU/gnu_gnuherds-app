@@ -77,6 +77,16 @@ class AlertsForm
 		else
 			$_POST['NewJobOffer'] = "false";
 
+		if (isset($_POST['NewDonationPledgeGroup']) and $_POST['NewDonationPledgeGroup']=='on')
+			$_POST['NewDonationPledgeGroup'] = "true";
+		else
+			$_POST['NewDonationPledgeGroup'] = "false";
+
+		if (isset($_POST['NewLookForVolunteers']) and $_POST['NewLookForVolunteers']=='on')
+			$_POST['NewLookForVolunteers'] = "true";
+		else
+			$_POST['NewLookForVolunteers'] = "false";
+
 		$this->manager->saveAlertsForEntity();
 		$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
 	}
@@ -86,10 +96,20 @@ class AlertsForm
 	{
 		$result = $this->manager->getAlertsForEntity();
 
-		if ($result[0][0]=='t')
+		if ($result['NewJobOffer'][0]=='t')
 			$this->data['NewJobOffer'] = "true";
 		else
 			$this->data['NewJobOffer'] = "false";
+
+		if ($result['NewDonationPledgeGroup'][0]=='t')
+			$this->data['NewDonationPledgeGroup'] = "true";
+		else
+			$this->data['NewDonationPledgeGroup'] = "false";
+
+		if ($result['NewLookForVolunteers'][0]=='t')
+			$this->data['NewLookForVolunteers'] = "true";
+		else
+			$this->data['NewLookForVolunteers'] = "false";
 
 		return true;
 	}

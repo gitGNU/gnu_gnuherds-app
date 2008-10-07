@@ -33,9 +33,23 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </label>
 <br>
 
+{* XXX: DELAYED
 <label>
 <input type="checkbox" name="MyQualifications" id="MyQualifications" class="notRequired" {if $data.MyQualifications eq 'true'} checked {/if} disabled>
 <span class="strike">{t}any new job offer which fits my qualifications{/t}</span>
+</label>
+<br>
+*}
+
+<label>
+<input type="checkbox" name="NewDonationPledgeGroup" id="NewDonationPledgeGroup" class="notRequired" {if $data.NewDonationPledgeGroup eq 'true'} checked {/if}>
+{t}any new donation pledge group{/t}
+</label>
+<br>
+
+<label>
+<input type="checkbox" name="NewLookForVolunteers" id="NewLookForVolunteers" class="notRequired" {if $data.NewLookForVolunteers eq 'true'} checked {/if}>
+{t}any new look-for-volunteers notice{/t}
 </label>
 <br>
 

@@ -357,7 +357,9 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
 CREATE TABLE A1_Alerts ( -- Alerts about anything: job offers, etc.
         A1_E1_Id           integer PRIMARY KEY REFERENCES E1_Entities(E1_Id) NOT NULL,
 
-        A1_NewJobOffer     bool NOT NULL DEFAULT 'true' -- Alert me when _any_ new job offer is added.
+        A1_NewJobOffer             bool NOT NULL DEFAULT 'true' -- Alert me when _any_ new job offer is added.
+        A1_NewDonationPledgeGroup  bool NOT NULL DEFAULT 'false' -- Alert me when _any_ new donation-pledge-group is added.
+        A1_NewLookForVolunteers    bool NOT NULL DEFAULT 'false' -- Alert me when _any_ new look-for-volunteers is added.
 );
 
 
@@ -530,8 +532,10 @@ CREATE TABLE J1_JobOffers ( -- XXX: TODO: The idea is that maybe some of the vol
         J1_LO_JobLicenseAt   char(2), -- REFERENCES LO_Countries(LO_TwoLetter) -- NOT NULL -- Required license to work at least at that country.
 
 	-- Flags about alerts on job offers
-        J1_NewJobOfferAlert          bool DEFAULT 'true' -- Must the new-job-offer alert be raised on this job offer?: true=Yes, false=No. -- NOT NULL
+        J1_NewJobOfferAlert             bool DEFAULT 'true' -- Must the new-job-offer alert be raised on this job offer?: true=Yes, false=No. -- NOT NULL
         -- J1_FitMyQualificationsAlert  bool DEFAULT 'true', -- Must the fit-my-qualifications alert be raised on this job offer?: true=Yes, false=No. -- NOT NULL
+        J1_NewDonationPledgeGroupAlert  bool DEFAULT 'true' -- Must the new-donation-pledge-group alert be raised on this donation-pledge-group?: true=Yes, false=No. -- NOT NULL
+        J1_NewLookForVolunteersAlert    bool DEFAULT 'true' -- Must the new-look-for-volunteers alert be raised on this look-for-volunteers?: true=Yes, false=No. -- NOT NULL
         -- J1_CustomAlert               bool DEFAULT 'true' -- Must the custom alerts be raised on this job offer?: true=Yes, false=No. -- NOT NULL
 );
 
