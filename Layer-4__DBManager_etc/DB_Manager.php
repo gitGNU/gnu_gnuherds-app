@@ -195,20 +195,20 @@ class DBManager
 		return $entity->allowLostPasswordEmail($email);
 	}
 
-	public function getNewJobOfferAlertsLocales()
+	public function getAlertsLocales($alert_type)
 	{
 		// This method does not need ACL check because of the information that it gets is not associated to any personal information. It get an abstract of statistical information.
 
 		$entity = new Entity();
-		return $entity->getNewJobOfferAlertsLocales();
+		return $entity->getAlertsLocales($alert_type);
 	}
 
-	public function getNewJobOfferAlertsEmails($locale)
+	public function getAlertsEmails($alert_type,$locale)
 	{
 		//XXX: ACL: This method gets entities' emails.  Add support to check sysadmin authentication for website-frontend + DB-backend.
 
 		$entity = new Entity();
-		return $entity->getNewJobOfferAlertsEmails($locale);
+		return $entity->getAlertsEmails($alert_type,$locale);
 	}
 
 
@@ -271,12 +271,28 @@ class DBManager
 		return $jobOffer->getJobOffers($extra_condition);
 	}
 
-	public function getNewJobOffers()
+	public function getAlerts($alert_type)
 	{
 		// This method does not need ACL check. It gets public information.
 
+		switch($alert_type)
+		{
+			case 'NewJobOffer':
+				$offer_type = 'Job offer';
+				break;
+			case 'NewDonationPledgeGroup':
+				$offer_type = 'Donation pledge group';
+				break;
+			case 'NewLookForVolunteers':
+				$offer_type = 'Looking for volunteers';
+				break;
+			default:
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
+				throw new Exception($error,false);
+		}
+
 		$jobOffer = new JobOffer();
-		return $jobOffer->getJobOffers(" AND J1_CompletedEdition='t' AND J1_NewJobOfferAlert='t' ");
+		return $jobOffer->getJobOffers(" AND J1_OfferType='${offer_type}' AND J1_CompletedEdition='t' AND J1_${alert_type}Alert='t' ");
 	}
 
 	public function getJobOffer($Id)
@@ -426,20 +442,20 @@ class DBManager
 		return $jobOffer->getJobApplicationsForEntity($extra_condition);
 	}
 
-	public function pendingNewJobOfferAlerts()
+	public function pendingAlerts($alert_type)
 	{
 		// This method does not need ACL check because of it works with JobOffer's public information.
 
 		$jobOffer = new JobOffer();
-		return $jobOffer->pendingNewJobOfferAlerts();
+		return $jobOffer->pendingAlerts($alert_type);
 	}
 
-	public function resetNewJobOfferAlerts()
+	public function resetAlerts($alert_type)
 	{
 		// XXX: Add the check needed to be sure that this method is only used by the 'alerts' cron job.
 
 		$jobOffer = new JobOffer();
-		return $jobOffer->resetNewJobOfferAlerts();
+		return $jobOffer->resetAlerts($alert_type);
 	}
 
 

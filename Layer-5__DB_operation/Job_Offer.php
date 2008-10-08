@@ -832,9 +832,9 @@ class JobOffer
 	}
 
 
-	public function pendingNewJobOfferAlerts()
+	public function pendingAlerts($alert_type)
 	{
-		$sqlQuery = "SELECT count(*) FROM J1_JobOffers WHERE J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' AND J1_NewJobOfferAlert='t';";
+		$sqlQuery = "SELECT count(*) FROM J1_JobOffers WHERE J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' AND J1_{$alert_type}Alert='t';";
 		$result = $this->postgresql->getOneField($sqlQuery,0);
 
 		if ( intval($result[0]) >= 1 )
@@ -843,9 +843,9 @@ class JobOffer
 			return false;
 	}
 
-	public function resetNewJobOfferAlerts()
+	public function resetAlerts($alert_type)
 	{
-		$sqlQuery = "UPDATE J1_JobOffers SET J1_NewJobOfferAlert='f' WHERE J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' AND J1_NewJobOfferAlert='t';";
+		$sqlQuery = "UPDATE J1_JobOffers SET J1_{$alert_type}Alert='f' WHERE J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' AND J1_{$alert_type}Alert='t';";
 		$this->postgresql->execute($sqlQuery,0);
 	}
 }
