@@ -177,6 +177,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 {/if}
 {/if}
+
+{if $state.IsAlreadySubscribed eq 't' or $state.IsAlreadyDonator eq 't'}
+<br>
+<a href="mailto:{$data.Donators.Email[$i]}">{$data.Donators.Email[$i]}</a>
+{/if}
+
 </td>
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">&nbsp;${$Donation}</td>
 </tr>
@@ -207,7 +213,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 {/if}
 
-{if $state.IsAlreadySubscribed eq 't'}
+{if $state.IsAlreadySubscribed eq 't' or $state.IsAlreadyDonator eq 't'}
 <br>
 <a href="mailto:{$data.Applications.Email[$i]}">{$data.Applications.Email[$i]}</a>
 {/if}
