@@ -178,7 +178,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 {/if}
 
-{if $state.IsAlreadySubscribed eq 't' or $state.IsAlreadyDonator eq 't'}
+{if $state.IsAlreadySubscribed eq 't' or $state.IsAlreadyDonator eq 't'  or  $smarty.post.donate or $smarty.post.save_donation  or  $smarty.post.register_and_subscribe or $smarty.post.subscribe }
 <br>
 <a href="mailto:{$data.Donators.Email[$i]}">{$data.Donators.Email[$i]}</a>
 {/if}
@@ -213,7 +213,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 {/if}
 
-{if $state.IsAlreadySubscribed eq 't' or $state.IsAlreadyDonator eq 't'}
+{if $state.IsAlreadySubscribed eq 't' or $state.IsAlreadyDonator eq 't'  or  $smarty.post.donate or $smarty.post.save_donation  or  $smarty.post.register_and_subscribe or $smarty.post.subscribe }
 <br>
 <a href="mailto:{$data.Applications.Email[$i]}">{$data.Applications.Email[$i]}</a>
 {/if}
