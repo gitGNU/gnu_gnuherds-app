@@ -56,7 +56,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="pledges?id={$Id}">{$data.VacancyTitle[$i]}</a>
+<a href="pledges?id={$data.MyDonations.DonationPledgeGroupId[$i]}">{$data.VacancyTitle[$i]}</a>
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
