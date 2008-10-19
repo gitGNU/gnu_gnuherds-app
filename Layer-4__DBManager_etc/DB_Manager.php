@@ -383,15 +383,6 @@ class DBManager
 		return $jobOffer->getMyDonations();
 	}
 
-	public function getMyDonationsForPledgeGroup($Id)
-	{
-		//XXX: TODO: $acl = new AccessControlList();
-		//XXX: TODO: $acl->checkJobOfferAccess("WRITE",$_POST['DeleteJobOffers'][$i]);
-
-		$jobOffer = new JobOffer();
-		return $jobOffer->getMyDonationsForPledgeGroup($Id);
-	}
-
 	public function getApplicationsMeterForJobOffer($Id,$meter)
 	{
 		$acl = new AccessControlList();

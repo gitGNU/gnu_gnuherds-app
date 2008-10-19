@@ -600,18 +600,6 @@ class JobOffer
 	}
 
 
-	public function getMyDonationsForPledgeGroup($JobOfferId)
-	{
-		$sqlQuery = "PREPARE query(integer,integer) AS  SELECT R1_Id, R1_Donation FROM R1_Donations2JobOffersJoins WHERE R1_E1_Id=$1 AND R1_J1_Id=$2 ;  EXECUTE query('$_SESSION[EntityId]','$JobOfferId');";
-		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
-
-		$array['DonationId'] = pg_fetch_all_columns($result, 0);
-		$array['Donation'] = pg_fetch_all_columns($result, 1);
-
-		return $array;
-	}
-
-
 	public function getApplicationsMeterForJobOffer($Id, $meter)
 	{
 		$sqlQuery = "PREPARE query(integer,text) AS  SELECT count(R0_E1_Id) FROM R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=$1 AND R0_State=$2;  EXECUTE query('$Id','$meter');";
