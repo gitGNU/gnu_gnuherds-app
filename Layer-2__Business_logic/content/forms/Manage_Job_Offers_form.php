@@ -81,39 +81,21 @@ class ManageJobOffersForm
 		$smarty = new Smarty;
 
 
-		// Entries
-
 		switch ($_GET["section"]) {
 			case "": case "offers":
-				$offerType = "Job offer";
-				break;
 
-			case "pledges":
-				$offerType = "Donation pledge group";
-				break;
+				// Entries
 
-			case "volunteers":
-				$offerType = "Looking for volunteers";
-				break;
+				$result = $this->manager->getJobOffersForEntity(" AND J1_OfferType='Job offer' ");
 
-			default:
-				$error = "<p>".$_SERVER["REQUEST_URI"].": ".gettext('ERROR: Unexpected condition')."</p>";
-				throw new Exception($error,false);
-		}
-		$result = $this->manager->getJobOffersForEntity(" AND J1_OfferType='".$offerType."' ");
+				$this->data['JobOfferId'] = $result[0];
+				$this->data['OfferDate'] = $result[1];
+				$this->data['ExpirationDate'] = $result[2];
+				$this->data['Closed'] = $result[3];
+				$this->data['VacancyTitle'] = isset($result[4]) ? $result[4] : '';
 
-		$this->data['JobOfferId'] = $result[0];
-		$this->data['OfferDate'] = $result[1];
-		$this->data['ExpirationDate'] = $result[2];
-		$this->data['Closed'] = $result[3];
-		$this->data['VacancyTitle'] = isset($result[4]) ? $result[4] : '';
-		$this->data['OfferType'] = $result[5];
+				// Meters
 
-
-		// Details
-
-		switch ($_GET["section"]) {
-			case "": case "offers": // Meters
 				$receivedMeter = array();
 				$inProcessMeter = array();
 				$ruledOutMeter = array();
@@ -137,15 +119,38 @@ class ManageJobOffersForm
 
 				break;
 
-			case "pledges": // Donations
-				for ($i=0; $i < count($result[0]); $i++)
+			case "pledges":
+
+				// Donations
+
+				$this->data['MyDonations'] = $this->manager->getMyDonations();
+
+				// Entries
+
+				for ($i=0; $i < count($this->data['MyDonations']['DonationPledgeGroupId']); $i++)
 				{
-					$this->data['Donations'][$i] = $this->manager->getDonationsForPledgeGroup( $result[0][$i] );
-					$this->data['MyDonations'][$i] = $this->manager->getMyDonationsForPledgeGroup( $result[0][$i] );
+					$this->data['Donations'][$i] = $this->manager->getDonationsForPledgeGroup( $this->data['MyDonations']['DonationPledgeGroupId'][$i] );
+
+					$result = $this->manager->getJobOffer( $this->data['MyDonations']['DonationPledgeGroupId'][$i] );
+
+					$this->data['OfferDate'][$i] = $result[1][0];
+					$this->data['ExpirationDate'][$i] = $result[2][0];
+					$this->data['VacancyTitle'][$i] = $result[60][0];
 				}
+
 				break;
 
 			case "volunteers":
+
+				// Entries
+
+				$result = $this->manager->getJobOffersForEntity(" AND J1_OfferType='Looking for volunteers' ");
+
+				$this->data['JobOfferId'] = $result[0];
+				$this->data['OfferDate'] = $result[1];
+				$this->data['ExpirationDate'] = $result[2];
+				$this->data['VacancyTitle'] = isset($result[4]) ? $result[4] : '';
+
 				break;
 
 			default:

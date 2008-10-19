@@ -21,7 +21,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <table border="0">
 
 <tr>
-{if count($data.JobOfferId) != 0 }
+{if count($data.MyDonations.DonationId) != 0 }
 <td class="tdTitle"></td>
 {/if}
 <td class="tdTitle"><strong>{'Donation pledge group title'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;</strong></td>
@@ -33,7 +33,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 
 
-{if count($data.JobOfferId) == 0 }
+{if count($data.MyDonations.DonationId) == 0 }
 
 <tr>
 <td colspan="4" class="tdDark center">
@@ -47,8 +47,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {assign var='x' value=0}
 
-{foreach from=$data.JobOfferId item=Id key=i}
-{foreach from=$data.MyDonations[$i].DonationId item=DonationId key=j}
+{foreach from=$data.MyDonations.DonationId item=DonationId key=i}
 
 <tr>
 
@@ -78,17 +77,16 @@ ${$data.Donations[$i]} USD
 
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<input type="hidden" name="JobOfferId[]" value="{$Id}">
-<input type="hidden" name="DonationId[]" value="{$data.MyDonations[$i].DonationId[$j]}">
+<input type="hidden" name="JobOfferId[]" value="{$data.MyDonations.DonationPledgeGroupId[$i]}"> {* Delete its DonationPledgeGroup if we cancel its last donation. *}
+<input type="hidden" name="DonationId[]" value="{$data.MyDonations.DonationId[$i]}">
 <input type="checkbox" name="CancelDonations[]" value="{$x}">
-${$data.MyDonations[$i].Donation[$j]} USD
+${$data.MyDonations.Donation[$i]} USD
 </td>
 
 </tr>
 
 {assign var='x' value=`$x+1`}
 
-{/foreach}
 {/foreach}
 
 <tr align="right">
