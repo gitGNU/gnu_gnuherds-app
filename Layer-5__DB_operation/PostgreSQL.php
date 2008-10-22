@@ -52,7 +52,16 @@ class PostgreSQL
 		// Check for query error
 		if (strlen ($r=pg_last_error ($GLOBALS["PG_CONNECT"])))
 		{
-			$error = "ERROR:<pre> {$sqlQuery} </pre> {$r}"; // DEBUG
+			if ( preg_match("/^.*out of range.*$/",$r) ) // PostgreSQL error codes ERRCODE_*_VALUE_OUT_OF_RANGE
+			{
+				// Error message to show to webapp users
+				$error = "<p>".gettext('Value out of range.')."</p>".
+					 "<p>".gettext('Please, try again.')."</p>";
+			}
+			else
+			{
+				$error = "ERROR:<pre> {$sqlQuery} </pre> {$r}"; // DEBUG
+			}
 			// $error = "$r"; // No DEBUG
 			throw new Exception($error,true);
 		}
