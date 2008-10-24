@@ -51,7 +51,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr valign="top">
 <td>
 <a href="offers?action=edit&amp;id=&amp;section=general">
-<img src="/themes/red_Danijel/images/class.gold.tiny.png" alt="{t}icon{/t}">
+<img src="/themes/red_Danijel/images/contracts.tiny.png" alt="{t}icon{/t}">
 </a>
 </td>
 <td>
@@ -64,7 +64,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr valign="top">
 <td>
 <a href="pledges?action=edit&amp;id=">
-<img src="/themes/red_Danijel/images/class.green.tiny.png" alt="{t}icon{/t}">
+<img src="/themes/red_Danijel/images/donations.tiny.png" alt="{t}icon{/t}">
 </a>
 </td>
 <td>
@@ -77,7 +77,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr valign="top">
 <td>
 <a href="volunteers?action=edit&amp;id=">
-<img src="/themes/red_Danijel/images/class.grey.tiny.png" alt="{t}icon{/t}">
+<img src="/themes/red_Danijel/images/volunteers.tiny.png" alt="{t}icon{/t}">
 </a>
 </td>
 <td>

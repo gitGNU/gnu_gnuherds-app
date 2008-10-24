@@ -18,7 +18,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <div id="offertypebar">
 <a href="offers">
-<img src="/themes/red_Danijel/images/class.gold.png" alt="{t}FS job offers{/t}"><br>
+<img src="/themes/red_Danijel/images/contracts.png" alt="{t}FS job offers{/t}"><br>
 </a>
 <a href="offers">
 {t}job offers{/t}<br>
@@ -27,7 +27,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <img src="/themes/red_Danijel/images/up-arrow.png" alt="{t}up{/t}"><br>
 <br>
 <a href="pledges">
-<img src="/themes/red_Danijel/images/class.green.png" alt="{t}FS pledges{/t}"><br>
+<img src="/themes/red_Danijel/images/donations.png" alt="{t}FS pledges{/t}"><br>
 </a>
 <a href="pledges">
 {t}pledges{/t}<br>
@@ -36,7 +36,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <img src="/themes/red_Danijel/images/up-arrow.png" alt="{t}up{/t}"><br>
 <br>
 <a href="volunteers">
-<img src="/themes/red_Danijel/images/class.grey.png" alt="{t}FS volunteers{/t}"><br>
+<img src="/themes/red_Danijel/images/volunteers.png" alt="{t}FS volunteers{/t}"><br>
 </a>
 <a href="volunteers">
 {t}volunteers{/t}<br>

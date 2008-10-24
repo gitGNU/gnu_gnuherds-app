@@ -58,7 +58,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<img src="/themes/red_Danijel/images/class.gold.tiny.png" alt="{t}icon{/t}">
+<img src="/themes/red_Danijel/images/contracts.tiny.png" alt="{t}icon{/t}">
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
