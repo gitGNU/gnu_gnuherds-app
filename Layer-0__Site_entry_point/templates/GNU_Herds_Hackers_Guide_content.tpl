@@ -109,8 +109,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<tr> <td><b>Charles</b>  <td>Auditor, Quality Assurance, etc.
 	<tr> <td><b>Davi</b>     <td>Web developer, Spanish Translator, etc.
 	<tr> <td><b>David</b>    <td>Web developer, second Italian Translator.
+	<tr> <td><b>deepinlife</b> <td>Web developer.
 	<tr> <td><b>Duarte</b>   <td>Portuguese Translator.
 	<tr> <td><b>Fatima</b>   <td>Quality Assurance and Functional Auditor.
+	<tr> <td><b>Federico</b> <td>Web developer.
 	<tr> <td><b>Gabriel</b>  <td>Data Base arquitecture Adviser.
 	<tr> <td><b>Jean-Michel</b> <td>French Translator.
 	<tr> <td><b>Jonas</b>    <td>GNU Business Network.
@@ -120,6 +122,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<tr> <td><b>MJ Ray</b>   <td>Key feedback.
 	<tr> <td><b>Neal</b>     <td>Initial proposal, project Chapter, Public Relations, etc.
 	<tr> <td><b>Nickolay</b> <td>Russian Translator.
+	<tr> <td><b>Nicodemo</b> <td>Web developer, Quality Assurance.
 	<tr> <td><b>RMS</b>      <td>Ethics Officer; he evaluates the project as a whole.
 	<tr> <td><b>Sameer Naik</b> <td>HTML/CSS Adviser and Developer.
 	<tr> <td><b>Victor</b>   <td>Web developer, Quality Assurance.
