@@ -91,7 +91,7 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 
 						$body .= "\n";
 
-						$body .= "  http://gnuherds.org/offers?id=".$result[0][$j]."\n";
+						$body .= "  https://gnuherds.org/offers?id=".$result[0][$j]."\n";
 
 						$body .= "\n";
 						$body .= "\n";
@@ -113,7 +113,7 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 
 						$body .= "\n";
 
-						$body .= "  http://gnuherds.org/pledges?id=".$result[0][$j]."\n";
+						$body .= "  https://gnuherds.org/pledges?id=".$result[0][$j]."\n";
 
 						$body .= "\n";
 						$body .= "\n";
@@ -130,7 +130,7 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 					throw new Exception($error,false);
 			}
 			$body .= "--\n";
-			$body .= vsprintf(gettext('You can disable this type of alerts at  %s'),"http://gnuherds.org/settings \n");
+			$body .= vsprintf(gettext('You can disable this type of alerts at  %s'),"https://gnuherds.org/settings \n");
 
 			// Send emails
 			mb_language("uni"); //XXX: Add support to Japanese, etc.  Reference: http://es.php.net/manual/en/function.mb-language.php
