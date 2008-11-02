@@ -122,7 +122,24 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 					break;
 
 				case 'NewLookForVolunteers':
-					// TODO: XXX
+
+					// Create the message's subject
+					$subject = "GNU Herds: ".gettext("Alert on new look-for-volunteers notices");
+
+					// Create the message's body
+					$body = "";
+					for ( $j=0; $j < count($result[0]); $j++ )
+					{
+						$body .= gettext("Vacancy title").":  ".$result[15][$j]."\n";
+
+						$body .= "\n";
+
+						$body .= "  https://gnuherds.org/volunteers?id=".$result[0][$j]."\n";
+
+						$body .= "\n";
+						$body .= "\n";
+					}
+
 					break;
 
 				default:
@@ -147,5 +164,5 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 // Raise the alerts
 raiseAlertsFor('NewJobOffer');
 raiseAlertsFor('NewDonationPledgeGroup');
-// TODO: raiseAlertsFor('NewLookForVolunteers');
+raiseAlertsFor('NewLookForVolunteers');
 ?> 
