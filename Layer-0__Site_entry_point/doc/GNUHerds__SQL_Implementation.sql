@@ -363,7 +363,7 @@ CREATE TABLE A1_Alerts ( -- Alerts about anything: job offers, etc.
         A1_NewLookForVolunteers    bool NOT NULL DEFAULT 'false', -- Alert me when _any_ new look-for-volunteers is added.
 
 	-- Alerts behavior
-        A1_AlertMeOnMyOwnNotices   bool NOT NULL DEFAULT 'true' -- Determines if the entity should be alerted on its own notices too.
+        A1_AlertMeOnMyOwnNotices   bool NOT NULL DEFAULT 'true' -- Determines if the entity should be alerted on its own notices too. So I will be able to note when alerts about my notices are sent to other association members.
 );
 
 
