@@ -357,9 +357,13 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
 CREATE TABLE A1_Alerts ( -- Alerts about anything: job offers, etc.
         A1_E1_Id           integer PRIMARY KEY REFERENCES E1_Entities(E1_Id) NOT NULL,
 
+	-- Alerts
         A1_NewJobOffer             bool NOT NULL DEFAULT 'true', -- Alert me when _any_ new job offer is added.
         A1_NewDonationPledgeGroup  bool NOT NULL DEFAULT 'false', -- Alert me when _any_ new donation-pledge-group is added.
-        A1_NewLookForVolunteers    bool NOT NULL DEFAULT 'false' -- Alert me when _any_ new look-for-volunteers is added.
+        A1_NewLookForVolunteers    bool NOT NULL DEFAULT 'false', -- Alert me when _any_ new look-for-volunteers is added.
+
+	-- Alerts behavior
+        A1_AlertMeOnMyOwnNotices   bool NOT NULL DEFAULT 'true' -- Determines if the entity should be alerted on its own notices too.
 );
 
 

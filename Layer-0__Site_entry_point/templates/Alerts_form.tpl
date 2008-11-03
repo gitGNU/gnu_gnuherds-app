@@ -22,7 +22,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <p>{t}Alerts via email on:{/t}</p>
 
-<table>
+<table class="margin">
 
 <tr>
 <td>
@@ -56,6 +56,27 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 </tr>
 
+</table>
+
+<br>
+
+<p>{t}Alerts behavior:{/t}</p>
+
+<table class="margin">
+
+<tr>
+<td>
+
+<label>
+<input type="checkbox" name="AlertMeOnMyOwnNotices" id="AlertMeOnMyOwnNotices" class="notRequired" {if $data.AlertMeOnMyOwnNotices eq 'true'} checked {/if}>
+{t}alert me on my own notices{/t}
+</label>
+<br>
+
+</td>
+</tr>
+
+<tr> <td>&nbsp;</td> </tr>
 <tr> <td>&nbsp;</td> </tr>
 
 <tr align="center">

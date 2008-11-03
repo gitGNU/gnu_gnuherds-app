@@ -46,7 +46,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <br>
 
 
-<table id="new_offer">
+<table class="margin">
 
 <tr valign="top">
 <td>

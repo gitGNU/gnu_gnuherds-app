@@ -87,6 +87,11 @@ class AlertsForm
 		else
 			$_POST['NewLookForVolunteers'] = "false";
 
+		if (isset($_POST['AlertMeOnMyOwnNotices']) and $_POST['AlertMeOnMyOwnNotices']=='on')
+			$_POST['AlertMeOnMyOwnNotices'] = "true";
+		else
+			$_POST['AlertMeOnMyOwnNotices'] = "false";
+
 		$this->manager->saveAlertsForEntity();
 		$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p><p>&nbsp;</p>\n";
 	}
@@ -110,6 +115,11 @@ class AlertsForm
 			$this->data['NewLookForVolunteers'] = "true";
 		else
 			$this->data['NewLookForVolunteers'] = "false";
+
+		if($result['AlertMeOnMyOwnNotices'][0]=='t')
+			$this->data['AlertMeOnMyOwnNotices'] = "true";
+		else
+			$this->data['AlertMeOnMyOwnNotices'] = "false";
 
 		return true;
 	}
