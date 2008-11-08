@@ -42,9 +42,25 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 		$emails = $manager->getAlertsEmails($alert_type,$languages[$i]);
 
 		// Get the array which describes what we are going to alert, with some parts already localized
-		$result = $manager->getAlerts($alert_type);
+		switch($alert_type)
+		{
+			case 'NewJobOffer':
+				$offer_type = 'Job offer';
+				break;
+			case 'NewDonationPledgeGroup':
+				$offer_type = 'Donation pledge group';
+				break;
+			case 'NewLookForVolunteers':
+				$offer_type = 'Looking for volunteers';
+				break;
+			default:
+				$error = gettext("ERROR: Unexpected condition");
+				throw new Exception($error,false);
+		}
+		$joboffers = $manager->getJobOffers(" AND J1_OfferType='${offer_type}' AND J1_CompletedEdition='t' AND J1_${alert_type}Alert='t' ");
 
-		if ( count($result[0]) > 0 )
+
+		if ( count($joboffers[0]) > 0 )
 		{
 			// Write the email
 			switch($alert_type)
@@ -56,42 +72,42 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 
 					// Create the message's body
 					$body = "";
-					for ( $j=0; $j < count($result[0]); $j++ )
+					for ( $j=0; $j < count($joboffers[0]); $j++ )
 					{
-						$body .= gettext("Vacancy title").":  ".$result[15][$j]."\n";
+						$body .= gettext("Vacancy title").":  ".$joboffers[15][$j]."\n";
 						$body .= gettext("Location").":  ";
-						if ( trim($result[2][$j]) == '' )
+						if ( trim($joboffers[2][$j]) == '' )
 						{
 							$body .= dgettext('database', "Any").", ".gettext("telework");
 						}
 						else
 						{
-							$body .= gettext($result[2][$j]);
-							if ($result[3][$j] != '') $body .= ", ".$result[3][$j];
-							if ($result[4][$j] != '') $body .= ", ".$result[4][$j];
+							$body .= gettext($joboffers[2][$j]);
+							if ($joboffers[3][$j] != '') $body .= ", ".$joboffers[3][$j];
+							if ($joboffers[4][$j] != '') $body .= ", ".$joboffers[4][$j];
 						}
 						$body .= "\n";
 
 						//XXX-remove-this-line:  $body .= gettext("Offer date").": ";
-						//XXX-remove-this-line:  $body .= $result[5][$j]."\n";
+						//XXX-remove-this-line:  $body .= $joboffers[5][$j]."\n";
 
 						$body .= gettext("Offered by").":  ";
-						if ($result[10][$j] != '') $body .= gettext("Person").": ";
-						if ($result[13][$j] != '') $body .= gettext("Company").": ";
-						if ($result[14][$j] != '') $body .= gettext("non-profit Organization").": ";
+						if ($joboffers[10][$j] != '') $body .= gettext("Person").": ";
+						if ($joboffers[13][$j] != '') $body .= gettext("Company").": ";
+						if ($joboffers[14][$j] != '') $body .= gettext("non-profit Organization").": ";
 
-						if ($result[10][$j] != '')
+						if ($joboffers[10][$j] != '')
 						{
-							$body .= $result[11][$j].$result[12][$j];
-							if ($result[11][$j] != '' or $result[12][$j] != '') $body .= ", ";
-							$body .= $result[10][$j]."\n";
+							$body .= $joboffers[11][$j].$joboffers[12][$j];
+							if ($joboffers[11][$j] != '' or $joboffers[12][$j] != '') $body .= ", ";
+							$body .= $joboffers[10][$j]."\n";
 						}
-						if ($result[13][$j] != '') $body .= $result[13][$j]."\n";
-						if ($result[14][$j] != '') $body .= $result[14][$j]."\n";
+						if ($joboffers[13][$j] != '') $body .= $joboffers[13][$j]."\n";
+						if ($joboffers[14][$j] != '') $body .= $joboffers[14][$j]."\n";
 
 						$body .= "\n";
 
-						$body .= "  https://gnuherds.org/offers?id=".$result[0][$j]."\n";
+						$body .= "  https://gnuherds.org/offers?id=".$joboffers[0][$j]."\n";
 
 						$body .= "\n";
 						$body .= "\n";
@@ -106,14 +122,14 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 
 					// Create the message's body
 					$body = "";
-					for ( $j=0; $j < count($result[0]); $j++ )
+					for ( $j=0; $j < count($joboffers[0]); $j++ )
 					{
-						$body .= gettext("Vacancy title").":  ".$result[15][$j]."\n";
+						$body .= gettext("Vacancy title").":  ".$joboffers[15][$j]."\n";
 						$body .= gettext("Location").":  ".dgettext('database', "Any").", ".gettext("telework")."\n";
 
 						$body .= "\n";
 
-						$body .= "  https://gnuherds.org/pledges?id=".$result[0][$j]."\n";
+						$body .= "  https://gnuherds.org/pledges?id=".$joboffers[0][$j]."\n";
 
 						$body .= "\n";
 						$body .= "\n";
@@ -128,13 +144,13 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 
 					// Create the message's body
 					$body = "";
-					for ( $j=0; $j < count($result[0]); $j++ )
+					for ( $j=0; $j < count($joboffers[0]); $j++ )
 					{
-						$body .= gettext("Vacancy title").":  ".$result[15][$j]."\n";
+						$body .= gettext("Vacancy title").":  ".$joboffers[15][$j]."\n";
 
 						$body .= "\n";
 
-						$body .= "  https://gnuherds.org/volunteers?id=".$result[0][$j]."\n";
+						$body .= "  https://gnuherds.org/volunteers?id=".$joboffers[0][$j]."\n";
 
 						$body .= "\n";
 						$body .= "\n";

@@ -271,30 +271,6 @@ class DBManager
 		return $jobOffer->getJobOffers($extra_condition);
 	}
 
-	public function getAlerts($alert_type)
-	{
-		// This method does not need ACL check. It gets public information.
-
-		switch($alert_type)
-		{
-			case 'NewJobOffer':
-				$offer_type = 'Job offer';
-				break;
-			case 'NewDonationPledgeGroup':
-				$offer_type = 'Donation pledge group';
-				break;
-			case 'NewLookForVolunteers':
-				$offer_type = 'Looking for volunteers';
-				break;
-			default:
-				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
-				throw new Exception($error,false);
-		}
-
-		$jobOffer = new JobOffer();
-		return $jobOffer->getJobOffers(" AND J1_OfferType='${offer_type}' AND J1_CompletedEdition='t' AND J1_${alert_type}Alert='t' ");
-	}
-
 	public function getJobOffer($Id)
 	{
 		$acl = new AccessControlList();
