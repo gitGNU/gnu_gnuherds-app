@@ -528,9 +528,13 @@ class Entity
 
 	public function getAlertsEmails($alert_type,$locale)
 	{
-		$sqlQuery = "SELECT E1_Email FROM E1_Entities,A1_Alerts WHERE E1_Id=A1_E1_Id AND E1_Email IS NOT NULL AND A1_{$alert_type}='t' AND E1_Locale='$locale';";
-		$result = $this->postgresql->getOneField($sqlQuery,0);
-		return $result;
+		$sqlQuery = "SELECT E1_Email,A1_AlertMeOnMyOwnNotices FROM E1_Entities,A1_Alerts WHERE E1_Id=A1_E1_Id AND E1_Email IS NOT NULL AND A1_{$alert_type}='t' AND E1_Locale='$locale';";
+		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
+
+		$array['Email'] = pg_fetch_all_columns($result, 0);
+		$array['AlertMeOnMyOwnNotices'] = pg_fetch_all_columns($result, 1);
+
+		return $array;
 	}
 }
 ?> 

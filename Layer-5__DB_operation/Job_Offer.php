@@ -56,7 +56,7 @@ class JobOffer
 
 	public function getJobOffers($extra_condition = '')
 	{
-		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Blog, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CompanyName, EO_OrganizationName, J1_VacancyTitle FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
+		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Blog, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CompanyName, EO_OrganizationName, J1_VacancyTitle, E1_Email FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
 		$array = array();
@@ -92,6 +92,8 @@ class JobOffer
 
 		$array[6] = pg_fetch_all_columns($result, 5); // E1_Id
 		$array[7] = pg_fetch_all_columns($result, 6); // E1_EntityType
+
+		$array['Email'] = pg_fetch_all_columns($result, 15); // E1_Email
 
 		$array[8] = pg_fetch_all_columns($result, 7); // E1_Blog
 		$array[9] = pg_fetch_all_columns($result, 8); // E1_Website

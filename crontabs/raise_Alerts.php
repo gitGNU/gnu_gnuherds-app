@@ -38,8 +38,11 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 		// Set the locale
 		$languageForm->setLocale($languages[$i]);
 
-		// Get the email set (E1_Email) for entities using that (E1_Locale)
-		$emails = $manager->getAlertsEmails($alert_type,$languages[$i]);
+		// Set language for mb_language()
+		mb_language("uni"); //XXX: Add support to Japanese, etc.  Reference: http://es.php.net/manual/en/function.mb-language.php
+
+		// Get the email set (E1_Email), and its alerts behavior flags (A1_AlertMeOnMyOwnNotices), for entities using that (E1_Locale)
+		$to = $manager->getAlertsEmails($alert_type,$languages[$i]);
 
 		// Get the array which describes what we are going to alert, with some parts already localized
 		switch($alert_type)
@@ -59,116 +62,129 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 		}
 		$joboffers = $manager->getJobOffers(" AND J1_OfferType='${offer_type}' AND J1_CompletedEdition='t' AND J1_${alert_type}Alert='t' ");
 
-
-		if ( count($joboffers[0]) > 0 )
+		// Send emails
+		for ( $j=0; $j < count($to['Email']); $j++ )
 		{
-			// Write the email
-			switch($alert_type)
+			if ( count($joboffers[0]) > 0 )
 			{
-				case 'NewJobOffer':
+				// Write the email
+				switch($alert_type)
+				{
+					case 'NewJobOffer':
 
-					// Create the message's subject
-					$subject = "GNU Herds: ".gettext("Alert on new job offers");
+						// Create the message's subject
+						$subject = "GNU Herds: ".gettext("Alert on new job offers");
 
-					// Create the message's body
-					$body = "";
-					for ( $j=0; $j < count($joboffers[0]); $j++ )
-					{
-						$body .= gettext("Vacancy title").":  ".$joboffers[15][$j]."\n";
-						$body .= gettext("Location").":  ";
-						if ( trim($joboffers[2][$j]) == '' )
+						// Create the message's body
+						$body = "";
+						for ( $k=0; $k < count($joboffers[0]); $k++ )
 						{
-							$body .= dgettext('database', "Any").", ".gettext("telework");
+							if (  $to['Email'][$j] != $joboffers['Email'][$k]   ||   ( $to['Email'][$j] == $joboffers['Email'][$k] && $to['AlertMeOnMyOwnNotices'][$j] == 't' )  )
+							{
+								$body .= gettext("Vacancy title").":  ".$joboffers[15][$k]."\n";
+								$body .= gettext("Location").":  ";
+								if ( trim($joboffers[2][$k]) == '' )
+								{
+									$body .= dgettext('database', "Any").", ".gettext("telework");
+								}
+								else
+								{
+									$body .= gettext($joboffers[2][$k]);
+									if ($joboffers[3][$k] != '') $body .= ", ".$joboffers[3][$k];
+									if ($joboffers[4][$k] != '') $body .= ", ".$joboffers[4][$k];
+								}
+								$body .= "\n";
+
+								//XXX-remove-this-line:  $body .= gettext("Offer date").": ";
+								//XXX-remove-this-line:  $body .= $joboffers[5][$k]."\n";
+
+								$body .= gettext("Offered by").":  ";
+								if ($joboffers[10][$k] != '') $body .= gettext("Person").": ";
+								if ($joboffers[13][$k] != '') $body .= gettext("Company").": ";
+								if ($joboffers[14][$k] != '') $body .= gettext("non-profit Organization").": ";
+
+								if ($joboffers[10][$k] != '')
+								{
+									$body .= $joboffers[11][$k].$joboffers[12][$k];
+									if ($joboffers[11][$k] != '' or $joboffers[12][$k] != '') $body .= ", ";
+									$body .= $joboffers[10][$k]."\n";
+								}
+								if ($joboffers[13][$k] != '') $body .= $joboffers[13][$k]."\n";
+								if ($joboffers[14][$k] != '') $body .= $joboffers[14][$k]."\n";
+
+								$body .= "\n";
+
+								$body .= "  https://gnuherds.org/offers?id=".$joboffers[0][$k]."\n";
+
+								$body .= "\n";
+								$body .= "\n";
+							}
 						}
-						else
+
+						break;
+
+					case 'NewDonationPledgeGroup':
+
+						// Create the message's subject
+						$subject = "GNU Herds: ".gettext("Alert on new donation pledge groups");
+
+						// Create the message's body
+						$body = "";
+						for ( $k=0; $k < count($joboffers[0]); $k++ )
 						{
-							$body .= gettext($joboffers[2][$j]);
-							if ($joboffers[3][$j] != '') $body .= ", ".$joboffers[3][$j];
-							if ($joboffers[4][$j] != '') $body .= ", ".$joboffers[4][$j];
+							if (  $to['Email'][$j] != $joboffers['Email'][$k]   ||   ( $to['Email'][$j] == $joboffers['Email'][$k] && $to['AlertMeOnMyOwnNotices'][$j] == 't' )  )
+							{
+								$body .= gettext("Vacancy title").":  ".$joboffers[15][$k]."\n";
+								$body .= gettext("Location").":  ".dgettext('database', "Any").", ".gettext("telework")."\n";
+
+								$body .= "\n";
+
+								$body .= "  https://gnuherds.org/pledges?id=".$joboffers[0][$k]."\n";
+
+								$body .= "\n";
+								$body .= "\n";
+							}
 						}
-						$body .= "\n";
 
-						//XXX-remove-this-line:  $body .= gettext("Offer date").": ";
-						//XXX-remove-this-line:  $body .= $joboffers[5][$j]."\n";
+						break;
 
-						$body .= gettext("Offered by").":  ";
-						if ($joboffers[10][$j] != '') $body .= gettext("Person").": ";
-						if ($joboffers[13][$j] != '') $body .= gettext("Company").": ";
-						if ($joboffers[14][$j] != '') $body .= gettext("non-profit Organization").": ";
+					case 'NewLookForVolunteers':
 
-						if ($joboffers[10][$j] != '')
+						// Create the message's subject
+						$subject = "GNU Herds: ".gettext("Alert on new look-for-volunteers notices");
+
+						// Create the message's body
+						$body = "";
+						for ( $k=0; $k < count($joboffers[0]); $k++ )
 						{
-							$body .= $joboffers[11][$j].$joboffers[12][$j];
-							if ($joboffers[11][$j] != '' or $joboffers[12][$j] != '') $body .= ", ";
-							$body .= $joboffers[10][$j]."\n";
+							if (  $to['Email'][$j] != $joboffers['Email'][$k]   ||   ( $to['Email'][$j] == $joboffers['Email'][$k] && $to['AlertMeOnMyOwnNotices'][$j] == 't' )  )
+							{
+								$body .= gettext("Vacancy title").":  ".$joboffers[15][$k]."\n";
+
+								$body .= "\n";
+
+								$body .= "  https://gnuherds.org/volunteers?id=".$joboffers[0][$k]."\n";
+
+								$body .= "\n";
+								$body .= "\n";
+							}
 						}
-						if ($joboffers[13][$j] != '') $body .= $joboffers[13][$j]."\n";
-						if ($joboffers[14][$j] != '') $body .= $joboffers[14][$j]."\n";
 
-						$body .= "\n";
+						break;
 
-						$body .= "  https://gnuherds.org/offers?id=".$joboffers[0][$j]."\n";
+					default:
+						$error = gettext("ERROR: Unexpected condition");
+						throw new Exception($error,false);
+				}
 
-						$body .= "\n";
-						$body .= "\n";
-					}
+				if ( $body != "" )
+				{
+					$body .= "--\n";
+					$body .= vsprintf(gettext('You can disable this type of alerts at  %s'),"https://gnuherds.org/settings \n");
 
-					break;
-
-				case 'NewDonationPledgeGroup':
-
-					// Create the message's subject
-					$subject = "GNU Herds: ".gettext("Alert on new donation pledge groups");
-
-					// Create the message's body
-					$body = "";
-					for ( $j=0; $j < count($joboffers[0]); $j++ )
-					{
-						$body .= gettext("Vacancy title").":  ".$joboffers[15][$j]."\n";
-						$body .= gettext("Location").":  ".dgettext('database', "Any").", ".gettext("telework")."\n";
-
-						$body .= "\n";
-
-						$body .= "  https://gnuherds.org/pledges?id=".$joboffers[0][$j]."\n";
-
-						$body .= "\n";
-						$body .= "\n";
-					}
-
-					break;
-
-				case 'NewLookForVolunteers':
-
-					// Create the message's subject
-					$subject = "GNU Herds: ".gettext("Alert on new look-for-volunteers notices");
-
-					// Create the message's body
-					$body = "";
-					for ( $j=0; $j < count($joboffers[0]); $j++ )
-					{
-						$body .= gettext("Vacancy title").":  ".$joboffers[15][$j]."\n";
-
-						$body .= "\n";
-
-						$body .= "  https://gnuherds.org/volunteers?id=".$joboffers[0][$j]."\n";
-
-						$body .= "\n";
-						$body .= "\n";
-					}
-
-					break;
-
-				default:
-					$error = gettext("ERROR: Unexpected condition");
-					throw new Exception($error,false);
+					mb_send_mail($to['Email'][$j], $subject, $body, "From: association@gnuherds.org");
+				}
 			}
-			$body .= "--\n";
-			$body .= vsprintf(gettext('You can disable this type of alerts at  %s'),"https://gnuherds.org/settings \n");
-
-			// Send emails
-			mb_language("uni"); //XXX: Add support to Japanese, etc.  Reference: http://es.php.net/manual/en/function.mb-language.php
-			for ( $j=0; $j < count($emails); $j++ )
-				mb_send_mail($emails[$j], $subject, $body, "From: association@gnuherds.org");
 		}
 	}
 
