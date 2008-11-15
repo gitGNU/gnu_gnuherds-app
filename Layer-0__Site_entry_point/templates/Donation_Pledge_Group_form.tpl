@@ -62,7 +62,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $checks.WageRank neq '' }
 <tr> <td><label for="WageRank" class="must">{$checks.WageRank}</label></td> </tr>
 {/if}
-<tr> <td><input type="text" name="WageRank" size="15" maxlength="30" class="required" value="{$data.WageRank}"> {t}US Dollars (USD){/t}</td> </tr>
+<tr> <td><input type="text" name="WageRank" size="15" maxlength="30" class="required" value="{$data.WageRank}" onblur="if(this.value=='') this.value='0.02';" onfocus="if(this.value=='0.02') this.value='';"> {t}US Dollars (USD){/t}</td> </tr>
 {* XXX: TODO: Pending feature: <tr> <td><input type="checkbox" name="Anonymous" class="notRequired" {if $data.Anonymous eq 'true'} checked {/if}> {t}Anonymous donation{/t}</td> </tr> *}
 
 {if $smarty.session.Logged neq '1'}
