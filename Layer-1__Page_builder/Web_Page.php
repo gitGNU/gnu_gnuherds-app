@@ -63,6 +63,8 @@ class WebPage
 
 	public function printPage()
 	{
+		ob_end_clean(); // Clean the output buffer to discart previous garbage, that is to say, the empty lines at page top.
+
 		$smarty = new Smarty;
 		$smarty->assign('webpage', $this);
 		$smarty->display("web_page.tpl");
