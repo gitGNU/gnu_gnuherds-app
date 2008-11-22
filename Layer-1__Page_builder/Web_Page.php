@@ -64,6 +64,7 @@ class WebPage
 	public function printPage()
 	{
 		ob_end_clean(); // Clean the output buffer to discart previous garbage, that is to say, the empty lines at page top.
+		ob_start(); // Turn on output buffering again to avoid webapp error.
 
 		$smarty = new Smarty;
 		$smarty->assign('webpage', $this);
