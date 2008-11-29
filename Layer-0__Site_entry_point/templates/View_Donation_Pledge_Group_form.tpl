@@ -63,6 +63,20 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {if $smarty.post.donate eq '' and $smarty.post.subscribe eq '' and $checks.result neq 'fail'}
 
+<tr>
+<td class="greenLight"> &nbsp; {'Last update'|gettext|strip:'&nbsp;'}&nbsp;: {$data.OfferDate}</td>
+{if $data.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+{if $state.IsAlreadyDonator eq 't'}
+<td class="edit"></td>
+{/if}
+</tr> 
+
 <tr valign="top">
 <td>
 <div class="greenLight limitWidth">{t}{$data.Description}{/t}</div>
