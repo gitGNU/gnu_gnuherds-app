@@ -31,9 +31,18 @@ session_start();
 require_once "../Layer-1__Page_builder/Web_Page.php";
 require_once "../Layer-2__Business_logic/content/forms/FS_Donation_Pledge_Groups_form.php";
 
-$fsDonationPledgeGroupsForm = new FSDonationPledgeGroupsForm();
+if ( $_GET['format'] == 'rss' )
+{
+	// If the requested format is RSS we do not apply the web page template.
+	$fsDonationPledgeGroupsForm = new FSDonationPledgeGroupsForm();
+	$fsDonationPledgeGroupsForm->printOutput();
+}
+else
+{
+	$fsDonationPledgeGroupsForm = new FSDonationPledgeGroupsForm();
 
-$webPage = new WebPage($fsDonationPledgeGroupsForm);
-$webPage->processPage();
-$webPage->printPage();
+	$webPage = new WebPage($fsDonationPledgeGroupsForm);
+	$webPage->processPage();
+	$webPage->printPage();
+}
 ?>

@@ -31,9 +31,18 @@ session_start();
 require_once "../Layer-1__Page_builder/Web_Page.php";
 require_once "../Layer-2__Business_logic/content/forms/FS_Job_Offers_form.php";
 
-$fsJobOffersForm = new FSJobOffersForm();
+if ( $_GET['format'] == 'rss' )
+{
+	// If the requested format is RSS we do not apply the web page template.
+	$fsJobOffersForm = new FSJobOffersForm();
+	$fsJobOffersForm->printOutput();
+}
+else
+{
+	$fsJobOffersForm = new FSJobOffersForm();
 
-$webPage = new WebPage($fsJobOffersForm);
-$webPage->processPage();
-$webPage->printPage();
+	$webPage = new WebPage($fsJobOffersForm);
+	$webPage->processPage();
+	$webPage->printPage();
+}
 ?>

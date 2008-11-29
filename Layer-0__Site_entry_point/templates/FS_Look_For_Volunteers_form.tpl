@@ -61,6 +61,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td class="tdTitle"><strong>{'Volunteer title'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
 <td class="tdTitle"><strong>{'Entry date'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
 <td class="tdTitle"><strong>{'Created by'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+<td></td>
+<td><a href="volunteers?format=rss"><img src="themes/red_Danijel/images/rss.png" alt="RSS"></a></td>
 </tr>
 
 {if count($JobOfferId) == 0 }

@@ -54,6 +54,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td class="tdTitle"><strong>{'Location'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
 <td class="tdTitle"><strong>{'Offer date'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;</strong></td>
 <td class="tdTitle"><strong>{'Offered by'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;</strong></td>
+<td></td>
+<td><a href="offers?format=rss"><img src="themes/red_Danijel/images/rss.png" alt="RSS"></a></td>
 </tr>
 
 {if count($JobOfferId) == 0 }

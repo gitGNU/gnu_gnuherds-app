@@ -70,7 +70,17 @@ class FSLookForVolunteersForm
 		$smarty->assign('VacancyTitle', $result[15]);
 
 
-		$smarty->display("FS_Look_For_Volunteers_form.tpl");
+		if ( $_GET['format'] == 'rss' )
+		{
+			ob_end_clean(); // Clean the output buffer to discart previous garbage, that is to say, the empty lines at page top.
+			ob_start(); // Turn on output buffering again to avoid webapp error.
+
+			$smarty->display("FS_Look_For_Volunteers_RSS.tpl");
+		}
+		else
+		{
+			$smarty->display("FS_Look_For_Volunteers_form.tpl");
+		}
 	}
 }
 ?> 
