@@ -44,8 +44,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <br>
 
-<form name="newLookForVolunteerForm" method="post" action="volunteers?action=edit&id=" class="center">
+<form name="newLookForVolunteerForm" method="post" action="volunteers?action=edit&amp;id=" class="center">
+<div>
 <input type="submit" name="new" value="{t}New look for volunteers{/t}">
+</div>
 </form>
 
 <br>

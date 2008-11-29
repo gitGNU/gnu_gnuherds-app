@@ -39,8 +39,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <br>
 
-<form name="newDonationPledgeGroupForm" method="post" action="pledges?action=edit&id=" class="center">
+<form name="newDonationPledgeGroupForm" method="post" action="pledges?action=edit&amp;id=" class="center">
+<div>
 <input type="submit" name="new" value="{t}New donation pledge group{/t}">
+</div>
 </form>
 
 <br>
