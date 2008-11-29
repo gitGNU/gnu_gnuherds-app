@@ -95,9 +95,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 		}Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4.{/t}
 
 		<li> {t escape='no'
-		  1='<a href="resume?action=edit&id='
+		  1='<a href="resume?action=edit&amp;id='
 		  2=$smarty.session.EntityId
-		  3='&section=profiles_etc">'
+		  3='&amp;section=profiles_etc">'
 		  4='</a>'
 		}Fill the %1%2%3Qualifications%4 form.{/t}
 		{t}It is recommended provide the more information possible.{/t}
