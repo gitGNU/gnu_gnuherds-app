@@ -51,4 +51,3 @@ class TimeUnits
 		return $this->postgresql->getOneField($sqlQuery,0);
 	}
 }
-?> 

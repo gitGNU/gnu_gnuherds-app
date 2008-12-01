@@ -108,4 +108,3 @@ class ViewJobApplicationsStateForm
 		$smarty->display("View_Job_Applications_State_form.tpl");
 	}
 }
-?> 

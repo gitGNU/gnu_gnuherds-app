@@ -124,4 +124,3 @@ class AlertsForm
 		return true;
 	}
 }
-?> 

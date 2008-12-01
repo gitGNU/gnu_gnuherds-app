@@ -84,4 +84,3 @@ class Countries
 		$this->postgresql->execute($sqlQuery,1);
 	}
 }
-?> 

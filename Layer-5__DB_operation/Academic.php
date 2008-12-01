@@ -118,4 +118,3 @@ class Academic
 		$this->postgresql->execute($sqlQuery,1);
 	}
 }
-?> 

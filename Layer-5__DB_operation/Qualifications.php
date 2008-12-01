@@ -324,4 +324,3 @@ class Qualifications
 			return false;
 	}
 }
-?> 

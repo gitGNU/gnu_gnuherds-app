@@ -51,4 +51,3 @@ class ByPeriod
 		return $this->postgresql->getOneField($sqlQuery,0);
 	}
 }
-?> 

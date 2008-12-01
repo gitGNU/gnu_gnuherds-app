@@ -63,4 +63,3 @@ class Alerts
 		$this->postgresql->execute($sqlQuery,1);
 	}
 }
-?> 

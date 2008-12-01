@@ -537,4 +537,3 @@ class Entity
 		return $array;
 	}
 }
-?> 

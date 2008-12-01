@@ -85,4 +85,3 @@ class PostgreSQL
 		return $result;
 	}
 }
-?> 

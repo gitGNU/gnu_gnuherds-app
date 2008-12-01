@@ -329,4 +329,3 @@ class Skills
 		$this->postgresql->execute($sqlQuery,1);
 	}
 }
-?> 

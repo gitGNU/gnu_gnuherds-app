@@ -65,4 +65,3 @@ class Currencies
 		return $this->postgresql->getOneField($sqlQuery,1);
 	}
 }
-?> 

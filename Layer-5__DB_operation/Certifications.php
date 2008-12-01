@@ -126,4 +126,3 @@ class Certifications
 			return false;
 	}
 }
-?> 

@@ -84,4 +84,3 @@ class Nationalities
 		$this->postgresql->execute($sqlQuery,1);
 	}
 }
-?> 

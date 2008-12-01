@@ -165,4 +165,3 @@ class ManageJobOffersForm
 		$smarty->display("Manage_Job_Offers_form.tpl");
 	}
 }
-?> 

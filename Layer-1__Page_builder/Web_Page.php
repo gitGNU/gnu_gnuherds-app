@@ -71,4 +71,3 @@ class WebPage
 		$smarty->display("web_page.tpl");
 	}
 }
-?> 

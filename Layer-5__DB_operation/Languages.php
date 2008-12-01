@@ -159,4 +159,3 @@ class Languages
 		$this->postgresql->execute($sqlQuery,1);
 	}
 }
-?> 

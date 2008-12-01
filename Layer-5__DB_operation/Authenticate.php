@@ -67,4 +67,3 @@ class Authenticate
 			return false;
 	}
 }
-?> 

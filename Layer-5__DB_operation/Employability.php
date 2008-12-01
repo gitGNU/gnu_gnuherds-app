@@ -46,4 +46,3 @@ class Employability
 		return $employability;
 	}
 }
-?> 

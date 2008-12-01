@@ -726,4 +726,3 @@ class DBManager
 		return $applicationStates->getApplicationStatesList();
 	}
 }
-?> 

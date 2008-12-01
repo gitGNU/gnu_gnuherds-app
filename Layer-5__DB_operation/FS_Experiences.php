@@ -76,4 +76,3 @@ class FreeSoftwareExperiences
 			return false;
 	}
 }
-?> 

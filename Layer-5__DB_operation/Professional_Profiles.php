@@ -117,4 +117,3 @@ class ProfessionalProfiles
 			return false;
 	}
 }
-?> 

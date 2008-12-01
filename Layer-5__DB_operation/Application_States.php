@@ -46,4 +46,3 @@ class ApplicationStates
 		return $applicationStates;
 	}
 }
-?> 

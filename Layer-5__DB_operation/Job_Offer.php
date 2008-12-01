@@ -854,4 +854,3 @@ class JobOffer
 		$this->postgresql->execute($sqlQuery,0);
 	}
 }
-?> 
