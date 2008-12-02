@@ -39,7 +39,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $data.EntityType eq 'Person' }
 	<strong>
 	{if trim($data.LastName) neq '' or trim($data.MiddleName) neq '' }
-		{$data.LastName} {$data.MiddleName},
+		{$data.LastName}{if trim($data.MiddleName) neq ''} {/if}{$data.MiddleName},
 	{/if}
 	{$data.FirstName}
 	</strong>

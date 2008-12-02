@@ -462,10 +462,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <strong>
 {if $data.EntityType eq 'Person' }
 	{if trim($data.Blog) neq ''}<a href="{$data.Blog}">{else} {if trim($data.Website) neq ''}<a href="{$data.Website}">{/if} {/if}
-	{if trim($data.LastName) neq '' or trim($data.MiddleName) neq ''}
-		{$data.LastName} {$data.MiddleName},
-	{/if}
-	{$data.FirstName}{if trim($data.Blog) neq '' or trim($data.Website) neq ''}</a>{/if}
+	{if trim($data.LastName) neq '' or trim($data.MiddleName) neq ''}{$data.LastName}{if trim($data.MiddleName) neq ''} {/if}{$data.MiddleName},{/if} {$data.FirstName}
+	{if trim($data.Blog) neq '' or trim($data.Website) neq ''}</a>{/if}
 {/if}
 
 {if $data.EntityType eq 'Company' }
