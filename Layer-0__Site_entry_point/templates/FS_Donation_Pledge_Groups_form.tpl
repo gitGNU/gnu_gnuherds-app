@@ -58,7 +58,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td></td>
 <td class="tdTitle"><strong>{'Donations'|gettext|strip:'&nbsp;'}&nbsp;</strong></td>
 <td></td>
-<td><a href="pledges?format=rss"><img src="themes/red_Danijel/images/rss.png" alt="RSS"></a></td>
+<td><a href="pledges?format=rss{if $smarty.session.Language neq 'en_US'}&language={$smarty.session.Language}{/if}"><img src="themes/red_Danijel/images/rss.png" alt="RSS"></a></td>
 </tr>
 
 {if count($JobOfferId) == 0 }
