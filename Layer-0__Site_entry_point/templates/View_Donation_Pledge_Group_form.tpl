@@ -177,7 +177,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <table cellpadding="0" rules="none" border="0">
 {foreach from=$data.Donators.Donation item=Donation key=i}
 <tr>
-<td class="{if $i % 2}tdDark{else}tdLight{/if}"> {* XXX: TODO: Fix the "Last name , First name" bug. Also at the job offers, pledges and volunteers listings. *}
+<td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $data.Donators.CompanyName[$i] neq ''}
 	{$data.Donators.CompanyName[$i]|gettext|strip:'&nbsp;'}
 {else}
@@ -212,7 +212,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <table cellpadding="0" rules="none" border="0">
 {foreach from=$data.Applications.FirstName item=Application key=i}
 <tr>
-<td class="{if $i % 2}tdDark{else}tdLight{/if}"> {* XXX: TODO: Fix the "Leal , Davi" bug. Also at the job offers, pledges and volunteers listings. *}
+<td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $data.Applications.CompanyName[$i] neq ''}
 	{$data.Applications.CompanyName[$i]|gettext|strip:'&nbsp;'}
 {else}
