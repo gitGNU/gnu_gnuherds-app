@@ -335,4 +335,17 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </tr>
 
+{if !$smarty.post.donate and !$smarty.post.save_donation  and  !$smarty.post.register_and_subscribe and !$smarty.post.subscribe }
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr align="center">
+<td align="center">{t}FAQ:{/t} <a href="faq#Payments">{t}Payments negotiation{/t}</a></td>
+<td>&nbsp;</td>
+</tr>
+{/if}
+
 </table>

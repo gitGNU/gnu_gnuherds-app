@@ -22,6 +22,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>{t}Index{/t}</p>
 <ol>
 <li><a href="#JobSite" style='text-decoration: none;'>{t}Why another Job Site?{/t}</a>
+<li><a href="#Payments" style='text-decoration: none;'>{t}Payments negotiation{/t}</a>
 <li><a href="#How_to_subscribe" style='text-decoration: none;'>{t}How to subscribe to a job offer?{/t}</a>
 <li><a href="#Who_can_subscribe" style='text-decoration: none;'>{t}Who can subscribe to a job offer?{/t}</a>
 <li><a href="#Who_can_post" style='text-decoration: none;'>{t}Who can post a job offer?{/t}</a>
@@ -84,7 +85,31 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 
 
-<h4>2. <a name="How_to_subscribe"></a>{t}How to subscribe to a job offer?{/t}</h4>
+<h4>2. <a name="Payments"></a>{t}Payments negotiation{/t}</h4>
+
+	<p>
+	{t}Companies and customers sign agreements.{/t}
+	</p>
+
+	<p>
+	{t escape='no'
+	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&item_id=199">'
+	  2='</a>'
+	}Donators and workers can %1negotiate%2 (30%, 25%, 20%, 25%) or sign the functional requirement specifications and payment agreement.{/t}
+	</p>
+
+	{*
+	<p>
+	{t}Disclaimer{/t}: {t}Right now GNU Herds do not guarantee workers will get the money or donators will get tasks done.{/t}
+	</p>
+	*}
+
+<p class="top"><a href="#top">{t}Back to top{/t}</a></p>
+
+<p>&nbsp;</p>
+
+
+<h4>3. <a name="How_to_subscribe"></a>{t}How to subscribe to a job offer?{/t}</h4>
 
 	<ul>
 		<li> {t escape='no'
@@ -116,7 +141,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 
 
-<h4>3. <a name="Who_can_subscribe"></a>{t}Who can subscribe to a job offer?{/t}</h4>
+<h4>4. <a name="Who_can_subscribe"></a>{t}Who can subscribe to a job offer?{/t}</h4>
 
 	<p>{t}Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly.{/t}</p>
 
@@ -125,7 +150,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 
 
-<h4>4. <a name="Who_can_post"></a>{t}Who can post a job offer?{/t}</h4>
+<h4>5. <a name="Who_can_post"></a>{t}Who can post a job offer?{/t}</h4>
 
 	<p>{t}Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:{/t}</p>
 
@@ -172,7 +197,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 
 
-<h4>5. <a name="FS_criteria"></a>{t}Which criteria are applied to classify a program, language, protocol, specification, software distribution, etc. as Free or Non-Free Software?{/t}</h4>
+<h4>6. <a name="FS_criteria"></a>{t}Which criteria are applied to classify a program, language, protocol, specification, software distribution, etc. as Free or Non-Free Software?{/t}</h4>
 
 	<ul>
 
@@ -400,7 +425,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 
 
-<h4>6. <a name="JobSite_module_related_to_the_GNU_Herds_association"></a>{t}How is the Job Site module related to the GNU Herds' association?{/t}</h4>
+<h4>7. <a name="JobSite_module_related_to_the_GNU_Herds_association"></a>{t}How is the Job Site module related to the GNU Herds' association?{/t}</h4>
 
 	<p>
 	{t escape='no'
@@ -414,7 +439,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 
 
-<h4>7. <a name="membership"></a>{t}Who can join or register?{/t}</h4>
+<h4>8. <a name="membership"></a>{t}Who can join or register?{/t}</h4>
 
 	<p>
 	{t escape='no'
@@ -428,7 +453,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 
 
-<h4>8. <a name="person_vs_company"></a>{t}Can I not be a member of the association because I am a member of a company?{/t}</h4>
+<h4>9. <a name="person_vs_company"></a>{t}Can I not be a member of the association because I am a member of a company?{/t}</h4>
 
 	<p>
 	{t}You can. You can be in any case an "associate member" or a "voting member".{/t}
@@ -446,7 +471,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 
 
-<h4>9. <a name="company_votes"></a>{t}How many votes is a company able to obtain?{/t}</h4>
+<h4>10. <a name="company_votes"></a>{t}How many votes is a company able to obtain?{/t}</h4>
 
 	<p>
 	{t escape='no'
@@ -461,7 +486,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 
 
-<h4>10. <a name="company_voices"></a>{t}A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?{/t}</h4>
+<h4>11. <a name="company_voices"></a>{t}A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?{/t}</h4>
 
 	<p>
 	{t}The company gets 100 voting-voices only if each one of its workers has individually contributed to the free software community, and each one of its workers take the personal decision to join and vote at the association.{/t}
@@ -479,7 +504,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 
 
-<h4>11. <a name="yearly_basis"></a>{t}Why voting membership is on a yearly basis?{/t}</h4>
+<h4>12. <a name="yearly_basis"></a>{t}Why voting membership is on a yearly basis?{/t}</h4>
 
 	<p>
 	{t escape='no'
@@ -494,7 +519,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 
 
-<h4>12. <a name="e-Voting"></a>{t}e-Voting{/t}</h4>
+<h4>13. <a name="e-Voting"></a>{t}e-Voting{/t}</h4>
 
 	<p>{t}Initially, GNU Herds' members can vote showing their hands, sending an email.{/t}</p>
 
