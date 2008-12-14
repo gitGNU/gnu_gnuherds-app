@@ -505,20 +505,21 @@ class JobOffer
 
 	public function getDonators($JobOfferId)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Donation,E1_Email,EP_FirstName,EP_LastName,EP_MiddleName,EC_CompanyName,EO_OrganizationName FROM R1_Donations2JobOffersJoins,E1_Entities WHERE R1_E1_Id=E1_Id AND R1_J1_Id=$1 ;  EXECUTE query('$JobOfferId');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Donation,E1_Email,E1_WantEmail,EP_FirstName,EP_LastName,EP_MiddleName,EC_CompanyName,EO_OrganizationName FROM R1_Donations2JobOffersJoins,E1_Entities WHERE R1_E1_Id=E1_Id AND R1_J1_Id=$1 ;  EXECUTE query('$JobOfferId');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array['Donation'] = pg_fetch_all_columns($result, 0);
 
 		$array['Email'] = pg_fetch_all_columns($result, 1);
+		$array['WantEmail'] = pg_fetch_all_columns($result, 2);
 
-		$array['FirstName'] = pg_fetch_all_columns($result, 2);
-		$array['LastName'] = pg_fetch_all_columns($result, 3);
-		$array['MiddleName'] = pg_fetch_all_columns($result, 4);
+		$array['FirstName'] = pg_fetch_all_columns($result, 3);
+		$array['LastName'] = pg_fetch_all_columns($result, 4);
+		$array['MiddleName'] = pg_fetch_all_columns($result, 5);
 
-		$array['CompanyName'] = pg_fetch_all_columns($result, 5);
+		$array['CompanyName'] = pg_fetch_all_columns($result, 6);
 
-		$array['NonprofitName'] = pg_fetch_all_columns($result, 6);
+		$array['NonprofitName'] = pg_fetch_all_columns($result, 7);
 
 		return $array;
 	}
@@ -682,6 +683,7 @@ class JobOffer
 				$arrayEN = $entity->getEntity($entities[$i]);
 
 				$array['Email'][$i] = $arrayEN[0][0];
+				$array['WantEmail'][$i] = $arrayEN[19][0];
 				$array['EntityType'][$i] = $arrayEN[2][0];
 
 				$array['Street'][$i] = $arrayEN[3][0];
