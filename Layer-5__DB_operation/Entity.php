@@ -187,6 +187,10 @@ class Entity
 		$countries = new Countries();
 		$countries->deleteJobLicenseAtForEntity();
 
+		// Delete its donations (for donation pledge groups)
+		$jobOffer = new JobOffer();
+		$jobOffer->cancelDonationsForEntity();
+
 		// Delete its job offers
 		$jobOffer = new JobOffer();
 		$jobOffer->deleteJobOffersForEntity();

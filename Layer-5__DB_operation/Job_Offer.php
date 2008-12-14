@@ -589,6 +589,35 @@ class JobOffer
 	}
 
 
+	public function cancelDonationsForEntity()
+	{
+		$donations = $this->getMyDonations(); // TODO: XXX: Change this method name?
+
+		// Cancel donations for Entity
+		$sqlQuery = "PREPARE query(integer) AS  DELETE FROM R1_Donations2JobOffersJoins WHERE R1_Id=$1;  EXECUTE query('$donationId');";
+		$result = $this->postgresql->execute($sqlQuery,1);
+
+		// If after the canceling there is not any donation for a donations-pledge-group then auto-delete such donation-pledge-group  // TODO: XXX: Almost-duplicated code. See the cancelSelectedDonations() method above.
+		for ($i=0; $i < count($donations['DonationId']); $i++)
+		{
+			$jobOfferId = $donations['DonationPledgeGroupId'][$i];
+
+			if ( $already_processed[$jobOfferId] != true ) // Avoid double-delete error
+			{
+				$sqlQuery = "PREPARE query(integer) AS  SELECT count(*) FROM R1_Donations2JobOffersJoins WHERE R1_J1_Id=$1;  EXECUTE query('$jobOfferId');";
+				$result = $this->postgresql->getOneField($sqlQuery,1);
+
+				if ( intval($result[0]) == 0 )
+				{
+					$this->deleteJobOffer($jobOfferId); // XXX: We could optimize this calling a custom method due to deleteJobOffer() tries to delete Skills, Language, etc. and DonationPledgeGroups do not use any of such properties.
+				}
+
+				$already_processed[$jobOfferId] = true;
+			}
+		}
+	}
+
+
 	public function getMyDonations()
 	{
 		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Id, R1_Donation, R1_J1_Id FROM R1_Donations2JobOffersJoins WHERE R1_E1_Id=$1 ;  EXECUTE query('$_SESSION[EntityId]');";
