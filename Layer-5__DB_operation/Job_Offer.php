@@ -594,7 +594,7 @@ class JobOffer
 		$donations = $this->getMyDonations(); // TODO: XXX: Change this method name?
 
 		// Cancel donations for Entity
-		$sqlQuery = "PREPARE query(integer) AS  DELETE FROM R1_Donations2JobOffersJoins WHERE R1_Id=$1;  EXECUTE query('$donationId');";
+		$sqlQuery = "PREPARE query(integer) AS  DELETE FROM R1_Donations2JobOffersJoins WHERE R1_E1_Id=$1;  EXECUTE query('$_SESSION[EntityId]');";
 		$result = $this->postgresql->execute($sqlQuery,1);
 
 		// If after the canceling there is not any donation for a donations-pledge-group then auto-delete such donation-pledge-group  // TODO: XXX: Almost-duplicated code. See the cancelSelectedDonations() method above.
