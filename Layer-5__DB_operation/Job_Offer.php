@@ -683,7 +683,7 @@ class JobOffer
 				$arrayEN = $entity->getEntity($entities[$i]);
 
 				$array['Email'][$i] = $arrayEN[0][0];
-				$array['WantEmail'][$i] = $arrayEN[19][0];
+				$array['WantEmail'][$i] = $arrayEN[20][0];
 				$array['EntityType'][$i] = $arrayEN[2][0];
 
 				$array['Street'][$i] = $arrayEN[3][0];
