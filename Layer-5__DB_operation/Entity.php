@@ -147,7 +147,7 @@ class Entity
 		$this->postgresql->execute("BEGIN",0);
 
 		$Email = trim($_POST['Email']);
-		$EntityType = isset($_SESSION['EntityType']) ? trim($_SESSION['EntityType']) : "To verify Email";
+		$EntityType = isset($_SESSION['EntityType']) ? trim($_SESSION['EntityType']) : "Person"; // else, we assume the entity type is Person
 
 		$sqlQuery = "PREPARE query(text,text) AS  INSERT INTO E1_Entities (E1_WantEmail,E1_EntityType) VALUES ($1,$2);  EXECUTE query('{$Email}','{$EntityType}');"; //XXX: TODO: Only list the E1_Email, not the WantEmail(not yet verified)
 		$this->postgresql->execute($sqlQuery,1);
