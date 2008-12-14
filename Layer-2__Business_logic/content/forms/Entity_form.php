@@ -70,7 +70,13 @@ abstract class EntityForm
 
 			if ( $new_password != false )
 			{
-				if ( $_GET['action'] == "register" )
+				if ( $_GET['action'] == "verify" )
+				{
+					$this->processingResult .= "<p>&nbsp;</p>\n";
+					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your email has been verified!")."</p>\n";
+				}
+
+				if ( $_GET['action'] == "register"  or  $_GET['action'] == "verify" )
 				{
 					$this->processingResult .= "<p>&nbsp;</p>\n";
 					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your account has been activated!")."</p>\n";
@@ -79,11 +85,6 @@ abstract class EntityForm
 					$this->processingResult .= "<p>&nbsp;</p>\n";
 					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your new password is:")." <strong>".$new_password."</strong></p>\n";
 					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("To improve your security, you should change your password after loging in.")."</p>";
-				}
-				elseif ( $_GET['action'] == "verify" )
-				{
-					$this->processingResult .= "<p>&nbsp;</p>\n";
-					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your email has been verified!")."</p>\n";
 				}
 			}
 		}

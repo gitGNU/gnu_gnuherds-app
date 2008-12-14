@@ -314,7 +314,7 @@ class Entity
 
 			$message .= gettext("Follow the below link to confirm.")." ".gettext("That link will expire in 48 hours.")."\n\n"; // If it is not confirmed it will be lost, and the creation or update process will have to begin again.
 
-			$message .= "http://".$_SERVER['HTTP_HOST']."/person?action=verify&email=".trim($_POST['Email'])."&magic=".$magic; // We assume the entity type is Person
+			$message .= "https://".$_SERVER['HTTP_HOST']."/person?action=verify&email=".trim($_POST['Email'])."&magic=".$magic; // We assume the entity type is Person
 
 			$message .= "\n\n";
 			$message .= gettext("If you have not asked for it, ignore this email.")."\n\n";
