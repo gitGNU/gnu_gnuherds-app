@@ -70,15 +70,15 @@ abstract class EntityForm
 
 			if ( $new_password != false )
 			{
+				$this->processingResult .= "<p>&nbsp;</p>\n";
+
 				if ( $_GET['action'] == "verify" )
 				{
-					$this->processingResult .= "<p>&nbsp;</p>\n";
 					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your email has been verified!")."</p>\n";
 				}
 
 				if ( $_GET['action'] == "register"  or  $_GET['action'] == "verify" )
 				{
-					$this->processingResult .= "<p>&nbsp;</p>\n";
 					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your account has been activated!")."</p>\n";
 
 					// Show the password
