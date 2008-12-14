@@ -46,3 +46,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <li><a href="http://lists.gnuherds.org/mailman/listinfo/association">association</a> {t}is the project main list.{/t}</li>
 <li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
 </ul>
+<p>&nbsp;</p>
+<p>IRC:</p>
+<ul>
+<li>/server irc.freenode.net <br> /join #gnuherds</li>
+</ul>
