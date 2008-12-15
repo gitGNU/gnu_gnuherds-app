@@ -316,11 +316,13 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {else}
 {if $state.IsAlreadySubscribed eq 't' }
 	<div class="modification splitWidth justify">
+	{t}The payments are negotiated by donators and workers.{/t}<br>
+	<br>
 {if $data.Applications.Count > 1 }
-	{t}You should take note of all the above emails to contact them and join a work team. Anyway you can choose just do it yourself.{/t}<br>
+	{t}You should take note of all the above emails to contact them all and join a work team, getting a subtask assigned. Anyway you can choose just do all it yourself.{/t}<br>
 	<br>
 {/if}
-	{t}The first team or indivual who finish all the tasks gets the money.{/t}
+	{t}GNU Herds show all emails so that all you can self organize and negotiate.{/t}
 	</div>
 {/if}
 {/if}
