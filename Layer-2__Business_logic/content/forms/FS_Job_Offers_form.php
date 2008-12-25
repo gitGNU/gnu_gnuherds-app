@@ -41,7 +41,7 @@ class FSJobOffersForm
 
 
 		// Job Offers
-		$result = $manager->getJobOffers(" AND J1_OfferType='Job offer' ");
+		$result = $manager->getJobOffers(" AND J1_OfferType='Job offer' ORDER BY J1_OfferDate DESC "); // Default ORDER BY, to stand out the last updated or added entries.  //TODO: XXX: Allow ORDER BY other fields via GET parameters.
 
 		$smarty->assign('JobOfferId', $result[0]);
 

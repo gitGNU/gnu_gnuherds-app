@@ -42,7 +42,7 @@ class FSLookForVolunteersForm
 
 		// Job Offers
 
-		$result = $manager->getJobOffers(" AND J1_OfferType='Looking for volunteers' ");
+		$result = $manager->getJobOffers(" AND J1_OfferType='Looking for volunteers' ORDER BY J1_OfferDate DESC "); // Default ORDER BY, to stand out the last updated or added entries.  //TODO: XXX: Allow ORDER BY other fields via GET parameters.
 
 		$smarty->assign('JobOfferId', $result[0]);
 
