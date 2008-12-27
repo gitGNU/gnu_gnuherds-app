@@ -104,6 +104,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<br>
 	</p>
 	<table>
+	<tr> <td><b>Amir</b>     <td>Web developer. {*XXX: Persian Translator. http://en.wikipedia.org/wiki/Persian_language *}
 	<tr> <td><b>Antenore</b> <td>Localization architecture Adviser, Auditor, initial and current Italian Translator, etc.
 	<tr> <td><b>Bill</b>     <td>Initial system administrator, architecture Adviser, etc.
 	<tr> <td><b>Charles</b>  <td>Auditor, Quality Assurance, etc.
