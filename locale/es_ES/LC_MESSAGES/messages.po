@@ -531,6 +531,15 @@ msgstr "Teniendo un alcance global, facilitar los modelos de negocio basados en 
 msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
 msgstr "Todo esto teniendo en cuenta que: \"%3Los %1objetivos%2 de la Asociación serán asistir y promover personas en trabajos remunerados como autores de Software Libre, obteniendo las más altas cotas de competencia y eficiencia.%4\""
 
+msgid "Payments negotiation"
+msgstr "Negociación de pagos"
+
+msgid "Companies and customers sign agreements."
+msgstr "Compañías y clientes firman acuerdos."
+
+msgid "Donators and workers can %1negotiate%2 (30%, 25%, 20%, 25%) or sign the functional requirement specifications and payments agreement."
+msgstr "Donantes y trabajadores pueden %1negociar%2 (30%, 25%, 20%, 25%) o firmar las especificaciones de requisitos funcionales y acuerdo de pagos."
+
 msgid "How to subscribe to a job offer?"
 msgstr "¿Cómo suscribirse a una oferta de empleo?"
 
@@ -991,6 +1000,15 @@ msgstr "Yo lo haré"
 
 msgid "in exchange for that money."
 msgstr "a cambio de este dinero."
+
+msgid "The payments are %1negotiated%2 by donators and workers."
+msgstr "Los pagos son %1negociados%2 por donantes y trabajadores."
+
+msgid "You should take note of all the above emails to contact them all and join a work team, getting a subtask assigned. Anyway you can choose just do all it yourself."
+msgstr "Usted debería tomar nota de todos los correos electrónicos anteriores para contactar con todos ellos y entrar en un equipo de trabajo, obteniendo una subtarea. De cualquier modo, usted puede decidir simplemente hacerlo todo usted mismo."
+
+msgid "GNU Herds show all emails so that all you can self-organize and negotiate."
+msgstr "GNU Herds muestra todos los correos electrónicos para que todos vosotros podáis autoorganizaros y negociar."
 
 #
 # View_Look_For_Volunteers_form.php
@@ -1674,6 +1692,18 @@ msgstr "cualquier nueva oferta de trabajo"
 
 msgid "any new job offer which fits my qualifications"
 msgstr "cualquier nueva oferta de trabajo que encaje con mis cualificaciones"
+
+msgid "any new donation pledge group"
+msgstr "cualquier nuevo grupo de promesas de donación"
+
+msgid "any new look-for-volunteers notice"
+msgstr "cualquier nuevo anuncio de búsqueda de voluntatios"
+
+msgid "Alerts behavior:"
+msgstr "Comportamiento de las alertas:"
+
+msgid "alert me on my own notices"
+msgstr "envíame alertas de mis propios anuncios"
 
 #
 # Admin_form.tpl
