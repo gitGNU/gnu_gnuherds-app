@@ -22,7 +22,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>{t}Index{/t}</p>
 <ol>
 <li><a href="#JobSite" style='text-decoration: none;'>{t}Why another Job Site?{/t}</a>
+<br><br>
 <li><a href="#Payments" style='text-decoration: none;'>{t}Payments negotiation{/t}</a>
+<br><br>
 <li><a href="#How_to_subscribe" style='text-decoration: none;'>{t}How to subscribe to a job offer?{/t}</a>
 <li><a href="#Who_can_subscribe" style='text-decoration: none;'>{t}Who can subscribe to a job offer?{/t}</a>
 <li><a href="#Who_can_post" style='text-decoration: none;'>{t}Who can post a job offer?{/t}</a>
@@ -95,10 +97,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{t escape='no'
 	  1='<a href="http://savannah.nongnu.org/cookbook/?func=detailitem&item_id=199">'
 	  2='</a>'
-	}Donators and workers can %1negotiate%2 (30%, 25%, 20%, 25%) or sign the functional requirement specifications and payment agreement.{/t}
+	}Donators and workers can %1negotiate%2 (30%, 25%, 20%, 25%) or sign the functional requirement specifications and payments agreement.{/t}
 	</p>
 
-	{*
+	{* XXX: DELETE ME
 	<p>
 	{t}Disclaimer{/t}: {t}Right now GNU Herds do not guarantee workers will get the money or donators will get tasks done.{/t}
 	</p>
