@@ -770,7 +770,7 @@ msgstr "Заметьте, что все эти системы были орие�
 msgid "Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc."
 msgstr "Вступите во взаимодействие с лучшими экспертами по свободному ПО и компаниями, разрабатывающими свободное программное обеспечение. Решайте свои задачи с лучшими системными администраторами, разработчиками, специалистами тестирования, специалистами по документации."
 
-msgid "Are you a Free Software author?. You could register and add your qualifications."
+msgid "Are you a Free Software author? You could register and add your qualifications."
 msgstr "Вы автор свободного ПО? Вы можете зарегистрироваться и добавить информацию о своих навыках."
 
 msgid "There are not active job offers"

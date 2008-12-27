@@ -770,7 +770,7 @@ msgstr "Note que todos esses sistemas estão orientados para eleições em país
 msgid "Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc."
 msgstr "Entre em contacto com alguns dos mais experientes participantes na comunidade de Software Livre e suas empresas. Resolva hoje os seus problemas com o apoio dos melhores administradores de sistemas, programadores, equipas de testes de qualidade, autores de documentação, etc."
 
-msgid "Are you a Free Software author?. You could register and add your qualifications."
+msgid "Are you a Free Software author? You could register and add your qualifications."
 msgstr "É um autor de Software Livre? Pode registar-se e adicionar as suas qualificações."
 
 msgid "There are not active job offers"

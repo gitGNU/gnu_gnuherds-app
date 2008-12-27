@@ -869,7 +869,7 @@ msgid "Get in contact with some of the best available Free Software experts and 
 msgstr "Contacte con algunos de los mejores expertos en Software Libre disponibles y sus empresas. Solucione sus problemas hoy con los mejores administradores de sistemas, desarrolladores, equipos de calidad, documentalistas, etc."
 
 #, fuzzy
-msgid "Are you a Free Software author?. You could register and add your qualifications."
+msgid "Are you a Free Software author? You could register and add your qualifications."
 msgstr "¿Es usted un autor de Software Libre?. Usted puede registrarse y añadir sus cualificaciones."
 
 msgid "There are not active job offers"
