@@ -325,7 +325,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{t}You should take note of all the above emails to contact them all and join a work team, getting a subtask assigned. Anyway you can choose just do all it yourself.{/t}<br>
 	<br>
 {/if}
-	{t}GNU Herds show all emails so that all you can self organize and negotiate.{/t}
+	{t}GNU Herds show all emails so that all you can self-organize and negotiate.{/t}
 	</div>
 {/if}
 {/if}
