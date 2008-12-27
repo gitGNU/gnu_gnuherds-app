@@ -77,17 +77,21 @@ msgstr "Le mie qualifiche"
 msgid "Our qualifications"
 msgstr "Le nostre qualifiche"
 
-msgid "My job offers"
-msgstr "Le mie offerte di impiego"
+#, fuzzy
+msgid "My notices"
+msgstr "Mis anuncios"
 
-msgid "Our job offers"
-msgstr "Le nostre offerte di lavoro"
+#, fuzzy
+msgid "Our notices"
+msgstr "Nuestros anuncios"
 
-msgid "My job applications"
-msgstr "Le mie candidature"
+#, fuzzy
+msgid "My subscriptions"
+msgstr "Mis suscripciones"
 
-msgid "Our job applications"
-msgstr "Le nostre candidature"
+#, fuzzy
+msgid "Our subscriptions"
+msgstr "Nuestras suscripciones"
 
 msgid "Settings"
 msgstr "Configurazioni"
@@ -103,6 +107,14 @@ msgstr "Rete Aziende SL"
 
 msgid "FS job offers"
 msgstr "Offerte di lavoro SL"
+
+#, fuzzy
+msgid "FS pledges"
+msgstr "Promesas SL"
+
+#, fuzzy
+msgid "FS volunteers"
+msgstr "Voluntarios SL"
 
 #
 # log_in_box.tpl
@@ -282,6 +294,10 @@ msgstr "GNU Herds è un'associazione %1democratica%3 senza scopo di lucro, il cu
 
 msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3business models%2. Some of the JobSite's features are:"
 msgstr "Il primo passo è stato quello di sviluppare i moduli del %1Portale del Lavoro%2 e raccogliere alcuni %3modelli di aziende%2. Alcune delle caratteristiche del portale sono:"
+
+#, fuzzy
+msgid "Service is free of any cost to its users"
+msgstr "Servicio libre de cualquier coste para sus usuarios"
 
 msgid "Controlled by its own users"
 msgstr "Controllata dai suoi utenti"
@@ -525,6 +541,18 @@ msgstr "Avere un obiettivo globale, supportare modelli di business basati sul te
 
 msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
 msgstr "Tutto questo tenendo conto che: \"%3Lo %1scopo%2 dell'Associazione dovrebbe essere di assistere ed incoraggiare le persone nel loro lavoro pagato come autori di Software Libero, ottenendo i massimi livelli di competenza ed efficienza.%4\""
+
+#, fuzzy
+msgid "Payments negotiation"
+msgstr "Negociación de pagos"
+
+#, fuzzy
+msgid "Companies and customers sign agreements."
+msgstr "Compañías y clientes firman acuerdos."
+
+#, fuzzy
+msgid "Donators and workers can %1negotiate%2 (30%, 25%, 20%, 25%) or sign the functional requirement specifications and payments agreement."
+msgstr "Donantes y trabajadores pueden %1negociar%2 (30%, 25%, 20%, 25%) o firmar las especificaciones de requisitos funcionales y acuerdo de pagos."
 
 msgid "How to subscribe to a job offer?"
 msgstr "Come sottoscrivere un'offerta di lavoro?"
@@ -775,8 +803,20 @@ msgstr "Nota che tutti questi sistemi sono orientati alle votazioni di nazioni."
 msgid "Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc."
 msgstr "Mettiti in contatto con alcuni dei migliori disponibili esperti del Software Libero e le loro compagnie. Risolvi oggi i tuoi problemi con i migliori amministratori di sistema, sviluppatori, testers, documentatori, etc."
 
-msgid "Are you a Free Software author?. You could register and add your qualifications."
+msgid "Are you a Free Software author? You could register and add your qualifications."
 msgstr "Sei un autore di Software Libero?. Puoi registrarti e aggiungere le tue qualifiche."
+
+#, fuzzy
+msgid "The simplest way to post a job offer is to email all the details you have about it to %1"
+msgstr "La forma más fácil de publicar una oferta de empleo es enviar todos los detalles de la oferta a %1"
+
+#, fuzzy
+msgid "The cost is 0 cents."
+msgstr "El coste es de 0 céntimos."
+
+#, fuzzy
+msgid "The GNU Herds project does not charge for any of its services."
+msgstr "El proyecto GNU Herds no cobra por ninguno de sus servicios."
 
 msgid "There are not active job offers"
 msgstr "Non ci sono offerte di impiego attive"
@@ -795,6 +835,62 @@ msgstr "Offerta da"
 
 msgid "telework"
 msgstr "telelavoro"
+
+#
+# FS_Donation_Pledge_Groups_form.tpl
+#
+
+#, fuzzy
+msgid "A pledge is a promise somebody has made to donate something, for example two cents, to get some task done."
+msgstr "Una promesa es un compromiso de donación, por ejemplo de dos céntimos, que alguien hace a cambio de que se realice alguna tarea."
+
+#, fuzzy
+msgid "If you like some of the ideas listed in the pledge groups below, you can join to by contributing your two cents to help get it converted into an actual job offer. You can even edit it to add your ideas or corrections."
+msgstr "Si a usted le gusta alguna de las ideas listadas en los siguientes grupos de promesas, usted puede sumar contribuyendo sus dos céntimos para ayudar a que dicho grupo se convierta en una oferta de trabajo real. Usted puede también editar el grupo para añadir sus ideas o correcciones."
+
+#, fuzzy
+msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I will do it%2\"."
+msgstr "Si a usted le gustaría llevar a cabo alguna de las siguientes tareas, a cambio del dinero apuntado en la tarea, simplemente ábrala y pulse el botón \"%1Yo lo haré%2\"."
+
+#, fuzzy
+msgid "Donation pledge group title"
+msgstr "Título del grupo de promesas de donación"
+
+#, fuzzy
+msgid "Last update"
+msgstr "Última actualización"
+
+#, fuzzy
+msgid "There are no entries"
+msgstr "No hay entradas"
+
+#
+# FS_Look_For_Volunteers_form.tpl
+#
+
+#, fuzzy
+msgid "Looking for volunteers"
+msgstr "Búsqueda de voluntarios"
+
+#, fuzzy
+msgid "If you would like to donate something for fulfilling a task, please create it as a %1FS pledge%2 entry instead of as a %3looking for volunteers%4 one."
+msgstr "Si usted donaría algo por la realización de la tarea, por favor créela como %1Promesa SL%2 en lugar de como %3búsqueda de voluntarios%4."
+
+#, fuzzy
+msgid "New look for volunteers"
+msgstr "Nueva búsqueda de voluntarios"
+
+#, fuzzy
+msgid "Volunteer title"
+msgstr "Título del voluntario"
+
+#, fuzzy
+msgid "Entry date"
+msgstr "Fecha de la entrada"
+
+#, fuzzy
+msgid "Created by"
+msgstr "Creado por"
 
 #
 # View_Job_Offer_form.php
@@ -909,6 +1005,55 @@ msgstr "richiesto"
 
 msgid "Subscribe to this job offer"
 msgstr "Sottoscrivi questa offerta"
+
+#
+# View_Donation_Pledge_Group_form.tpl
+#
+#, fuzzy
+msgid "Donation pledge group"
+msgstr "Grupo de promesas de donación"
+
+#, fuzzy
+msgid "Donations"
+msgstr "Donaciones"
+
+#, fuzzy
+msgid "Workers"
+msgstr "Trabajadores"
+
+#, fuzzy
+msgid "donation pledge"
+msgstr "promesa de donación"
+
+#, fuzzy
+msgid "I want to add my %1donation pledge%2 in exchange for getting those tasks done."
+msgstr "Quiero añadir mi %1promesa de donación%2 a cambio de obtener estas tareas hechas."
+
+#, fuzzy
+msgid "I will do it"
+msgstr "Yo lo haré"
+
+#, fuzzy
+msgid "in exchange for that money."
+msgstr "a cambio de este dinero."
+
+#, fuzzy
+msgid "The payments are %1negotiated%2 by donators and workers."
+msgstr "Los pagos son %1negociados%2 por donantes y trabajadores."
+
+#, fuzzy
+msgid "You should take note of all the above emails to contact them all and join a work team, getting a subtask assigned. Anyway you can choose just do all it yourself."
+msgstr "Usted debería tomar nota de todos los correos electrónicos anteriores para contactar con todos ellos y entrar en un equipo de trabajo, obteniendo una subtarea. De cualquier modo, usted puede decidir simplemente hacerlo todo usted mismo."
+
+#, fuzzy
+msgid "GNU Herds show all emails so that all you can self-organize and negotiate."
+msgstr "GNU Herds muestra todos los correos electrónicos para que todos vosotros podáis autoorganizaros y negociar."
+
+#
+# View_Look_For_Volunteers_form.php
+#
+### msgid ""
+### msgstr ""
 
 #
 # View_Qualifications_form.tpl
@@ -1473,6 +1618,55 @@ msgstr "Non inserire nessuna offerta se si tratta di Telelavoro."
 # msgid ""
 # msgstr ""
 #
+# DonationPledgeGroups form: Donation_Pledge_Group_form.tpl, Donation_Pledge_Group_form.php
+#
+# Donation_Pledge_Group_form.tpl
+#, fuzzy
+msgid "New donation pledge group"
+msgstr "Nuevo grupo de promesas de donación"
+
+#, fuzzy
+msgid "Tasks"
+msgstr "Tareas"
+
+#, fuzzy
+msgid "Short description"
+msgstr "Descripción corta"
+
+#, fuzzy
+msgid "Donation"
+msgstr "Donación"
+
+#, fuzzy
+msgid "Your donation"
+msgstr "Su donación"
+
+#, fuzzy
+msgid "in exchange for getting those tasks done"
+msgstr "a cambio de obtener estas tareas hechas"
+
+#, fuzzy
+msgid "US Dollars (USD)"
+msgstr "Dólares (USD)"
+
+# Donation_Pledge_Group_form.php
+#, fuzzy
+msgid "Please fill in here numeric greater or equal to %s"
+msgstr "Por favor, rellene aquí numérico mayor o igual a %s"
+
+#
+# LookForVolunteers form: Look_For_Volunteers_form.tpl
+#
+# Look_For_Volunteers_form.tpl
+#, fuzzy
+msgid "New looking for volunteers notice"
+msgstr "Nuevo anuncio de búsqueda de voluntatios"
+
+#, fuzzy
+msgid "Contact"
+msgstr "Contacto"
+
+#
 # Manage_Job_Offer_Applications_form.tpl
 #
 msgid "Manage the job offer applications"
@@ -1485,12 +1679,13 @@ msgid "Applicant"
 msgstr "Candidato"
 
 #
-# Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_form.php
+# Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_job_offer_form.tpl, Manage_Job_Offers_donation_pledge_group_form.tpl, Manage_Job_Offers_look_for_volunteers_form.tpl, Manage_Job_Offers_form.php
 #
 # Manage_Job_Offers_form.tpl
-msgid "Manage job offers"
-msgstr "Gestisci offerte di lavoro"
+# msgid ""
+# msgstr ""
 
+# Manage_Job_Offers_job_offer_form.tpl
 msgid "You do not have any defined job offer."
 msgstr "Non hai nessuna offerta di lavoro definita."
 
@@ -1500,12 +1695,17 @@ msgstr "Chiusa"
 msgid "Delete selected offers"
 msgstr "Elimina offerte selezionate"
 
-# Manage_Job_Offers_form.php
-msgid "The selected job offers has been deleted from the data base."
-msgstr "Le offerte di lavoro selezionate sono state eliminate dal data base."
+# Manage_Job_Offers_donation_pledge_group_form.tpl
+# msgid ""
+# msgstr ""
 
-msgid "Offers to delete have not been selected. Try again."
-msgstr "Non sono state selezionate offerte da cancellare. Riprova."
+# Manage_Job_Offers_look_for_volunteers_form.tpl
+# msgid ""
+# msgstr ""
+
+# Manage_Job_Offers_form.php
+# msgid ""
+# msgstr ""
 
 #
 # View_Job_Applications_State_form.tpl
@@ -1530,6 +1730,22 @@ msgstr "Ogni nuova offerta di lavoro"
 
 msgid "any new job offer which fits my qualifications"
 msgstr "Ogni nuova offerta di lavoro che soddisfi le mie qualifiche"
+
+#, fuzzy
+msgid "any new donation pledge group"
+msgstr "cualquier nuevo grupo de promesas de donación"
+
+#, fuzzy
+msgid "any new look-for-volunteers notice"
+msgstr "cualquier nuevo anuncio de búsqueda de voluntatios"
+
+#, fuzzy
+msgid "Alerts behavior:"
+msgstr "Comportamiento de las alertas:"
+
+#, fuzzy
+msgid "alert me on my own notices"
+msgstr "envíame alertas de mis propios anuncios"
 
 #
 # Admin_form.tpl
