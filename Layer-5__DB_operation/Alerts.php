@@ -1,7 +1,7 @@
 <?php
 // Authors: Davi Leal
 //
-// Copyright (C) 2007, 2008 Davi Leal <davi at leals dot com>
+// Copyright (C) 2007, 2008, 2009 Davi Leal <davi at leals dot com>
 //
 // This program is free software: you can redistribute it and/or modify it under
 // the terms of the GNU Affero General Public License as published by the Free Software Foundation,

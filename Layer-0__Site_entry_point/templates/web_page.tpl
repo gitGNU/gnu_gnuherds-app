@@ -3,9 +3,9 @@
 <!--
 Authors: Neal Coombes, Davi Leal, Sameer Naik
 
-Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008 Neal Coombes <Neal.Coombes at attbi dot com>
-              2002, 2003, 2004, 2005, 2006, 2007, 2008 Davi Leal <davi at leals dot com>
-              2007, 2008 Sameer Naik <sameer AT damagehead DOT com>
+Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Neal Coombes <Neal.Coombes at attbi dot com>
+              2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Davi Leal <davi at leals dot com>
+              2007, 2008, 2009 Sameer Naik <sameer AT damagehead DOT com>
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Affero General Public License as published by the Free Software Foundation,
