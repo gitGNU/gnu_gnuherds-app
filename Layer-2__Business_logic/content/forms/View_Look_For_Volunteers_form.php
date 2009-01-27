@@ -75,6 +75,28 @@ class ViewLookForVolunteersForm
 		$result = $this->manager->getJobOffer($_GET['JobOfferId']);
 
 
+		// If it is not the right notice type for this viewer then redirect to the right one.
+		switch($result[62][0])
+		{
+			case 'Job offer':
+				header('Location: /offers?id='.$_GET['JobOfferId']);
+				exit;
+			break;
+
+			case 'Donation pledge group':
+				header('Location: /pledges?id='.$_GET['JobOfferId']);
+				exit;
+			break;
+
+			case 'Looking for volunteers':
+			break;
+
+			default:
+				$error = "<p>".$_SERVER["REQUEST_URI"].": ".gettext('ERROR: Unexpected condition')."</p>";
+				throw new Exception($error,false);
+		}
+
+
 		// J1_JobOffers table
 
 		$this->data['EntityId'] = $result[26][0];
