@@ -50,6 +50,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{/if}
 {/if}
 
+{if $data.EntityType eq 'Cooperative' and trim($data.CooperativeName) neq ''}
+	<strong>{$data.CooperativeName}</strong><br>
+{/if}
+
 {if $data.EntityType eq 'Company' and trim($data.CompanyName) neq ''}
 	<strong>{$data.CompanyName}</strong><br>
 {/if}
@@ -138,6 +142,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {if $smarty.session.LoginType eq 'Person' }
 	{assign var="Entity" value="person"}
+{/if}
+{if $smarty.session.LoginType eq 'Cooperative' }
+	{assign var="Entity" value="cooperative"}
 {/if}
 {if $smarty.session.LoginType eq 'Company' }
 	{assign var="Entity" value="company"}

@@ -93,31 +93,47 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td align="right"><strong>{t}Vacancies{/t}</strong> : </td>
 <td colspan="3" class="greenLight">{$data.Vacancies}
 {if $data.AllowPersonApplications eq 'true'}
-	{assign var="entityTypeAAA" value="Persons"}
+	{assign var="entityType1" value="Persons"}
 {/if}
 
-{if $data.AllowCompanyApplications eq 'true'}
-	{if trim($entityTypeAAA) eq ''}
-		{assign var="entityTypeAAA" value="Companies"}
+{if $data.AllowCooperativeApplications eq 'true'}
+	{if trim($entityType1) eq ''}
+		{assign var="entityType1" value="Cooperatives"}
 	{else}
-		{assign var="entityTypeBBB" value="Companies"}
+		{assign var="entityType2" value="Cooperatives"}
 	{/if}
 {/if}
 
-{if $data.AllowOrganizationApplications eq 'true'}
-	{if trim($entityTypeAAA) eq ''}
-		{assign var="entityTypeAAA" value="non-profit Organizations"}
+{if $data.AllowCompanyApplications eq 'true'}
+	{if trim($entityType1) eq ''}
+		{assign var="entityType1" value="Companies"}
 	{else}
-		{if $entityTypeBBB eq ''}
-			{assign var="entityTypeBBB" value="non-profit Organizations"}
+		{if $entityType2 eq ''}
+			{assign var="entityType2" value="Companies"}
 		{else}
-			{assign var="entityTypeCCC" value="non-profit Organizations"}
+			{assign var="entityType3" value="Companies"}
 		{/if}
 	{/if}
 {/if}
 
-({t}{$entityTypeAAA}{/t}{if $entityTypeBBB neq ''}{if $entityTypeCCC neq ''}, {else} {t}or{/t} {/if} {t}{$entityTypeBBB}{/t} {/if}
-{if $entityTypeCCC neq ''} {t}or{/t} {t}{$entityTypeCCC}{/t}{/if})
+{if $data.AllowOrganizationApplications eq 'true'}
+	{if trim($entityType1) eq ''}
+		{assign var="entityType1" value="non-profit Organizations"}
+	{else}
+		{if $entityType2 eq ''}
+			{assign var="entityType2" value="non-profit Organizations"}
+		{else}
+			{if $entityType3 eq ''}
+				{assign var="entityType3" value="non-profit Organizations"}
+			{else}
+				{assign var="entityType4" value="non-profit Organizations"}
+			{/if}
+		{/if}
+	{/if}
+{/if}
+
+({t}{$entityType1}{/t}{if $entityType2 neq ''}{if $entityType3 neq ''}, {else} {t}or{/t} {/if} {t}{$entityType2}{/t} {/if}{if $entityType3 neq ''}{if $entityType4 neq ''}, {else} {t}or{/t} {/if} {t}{$entityType3}{/t} {/if}
+{if $entityType4 neq ''} {t}or{/t} {t}{$entityType4}{/t}{/if})
 </td>
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
@@ -436,6 +452,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $smarty.session.LoginType eq 'Person' }
 	{assign var="Entity" value="person"}
 {/if}
+{if $smarty.session.LoginType eq 'Cooperative' }
+	{assign var="Entity" value="cooperative"}
+{/if}
 {if $smarty.session.LoginType eq 'Company' }
 	{assign var="Entity" value="company"}
 {/if}
@@ -464,6 +483,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{if trim($data.Blog) neq ''}<a href="{$data.Blog}">{else} {if trim($data.Website) neq ''}<a href="{$data.Website}">{/if} {/if}
 	{if trim($data.LastName) neq '' or trim($data.MiddleName) neq ''}{$data.LastName}{if trim($data.MiddleName) neq ''} {/if}{$data.MiddleName},{/if} {$data.FirstName}
 	{if trim($data.Blog) neq '' or trim($data.Website) neq ''}</a>{/if}
+{/if}
+
+{if $data.EntityType eq 'Cooperative' }
+	{if trim($data.Website) neq ''}<a href="{$data.Website}">{/if}
+	{$data.CooperativeName}
+	{if trim($data.Website) neq ''}</a>{/if}
 {/if}
 
 {if $data.EntityType eq 'Company' }

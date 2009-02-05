@@ -33,6 +33,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <div class="quicks">
 <p>
 <a href="person">{t}Register person{/t}</a><br>
+<a href="cooperative">{t}Register cooperative{/t}</a><br>
 <a href="company">{t}Register company{/t}</a><br>
 <a href="nonprofit">{t}Register non-profit{/t}</a>
 </p>

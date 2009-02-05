@@ -37,7 +37,7 @@ DROP TABLE R27_Qualification2Academic;
 
 
 -- Qualifications
-DROP TABLE Q1_Qualifications; -- Resumes, for Persons, Companies and non-profit Organizations.
+DROP TABLE Q1_Qualifications; -- Resumes for Persons, Cooperatives, Companies and non-profit Organizations.
 
 -- Searches
 DROP TABLE QS_QualificationSearches;
@@ -158,6 +158,7 @@ CREATE TABLE LX_ProductProfiles (
 CREATE TABLE LC_Certifications (
         LC_Name               varchar(30) PRIMARY KEY CHECK (LC_Name <> ''),
 	LC_Apply2Person       bool NOT NULL DEFAULT 'false', -- This certification can be applied to Persons entities
+	LC_Apply2Cooperative  bool NOT NULL DEFAULT 'false', -- This certification can be applied to Cooperatives entities
 	LC_Apply2Company      bool NOT NULL DEFAULT 'false', -- This certification can be applied to Companies entities
 	LC_Apply2Organization bool NOT NULL DEFAULT 'false'  -- This certification can be applied to no-for-profit Organizations entities
 );
@@ -238,18 +239,18 @@ CREATE TABLE LN_ExperienceLevel (
 -- -- http://techdocs.postgresql.org/techdocs/hackingreferentialintegrity.php
 -- -- http://techdocs.postgresql.org/college/002_referentialintegrity/
 
-CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-profit Organization' entities.
+CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Cooperative', 'Company' and 'non-profit Organization' entities.
         E1_Id              SERIAL PRIMARY KEY, -- Entity identifier
 
         --------------------------------------------------------------------------
         -- Account identification
-        E1_Email           varchar(60) DEFAULT NULL CHECK (E1_Email <> ''), -- Person's email, or Company's or non-profit Organization contact email. It is used as identifier to log in.
+        E1_Email           varchar(60) DEFAULT NULL CHECK (E1_Email <> ''), -- Person's email, Cooperative's, Company's or non-profit Organization contact email. It is used as identifier to log in.
         E1_Password        varchar(512) DEFAULT NULL CHECK (E1_Password <> ''),
 
 	-- Others
         E1_Trusted         bool NOT NULL DEFAULT 'false', -- The web application will not block anything done by trusted entities. For example the web app will publish 'Pending'-to-classify skills present in offers and qualifications/resumes of FSF trusted accounts.
         E1_Revoked         bool NOT NULL DEFAULT 'false', -- Account disabled due to the members does not adhere to the Code of Ethics.
-        E1_EntityType      varchar(23) NOT NULL CHECK (E1_EntityType <> ''), -- We have to add this field due to we can not use Object Oriented PostgreSQL features. Values will be: "Person", "Company" or "non-profit Organization". 
+        E1_EntityType      varchar(23) NOT NULL CHECK (E1_EntityType <> ''), -- We have to add this field due to we can not use Object Oriented PostgreSQL features. Values will be: "Person", "Cooperative", "Company" or "non-profit Organization". 
 
 	-- Properties of web application administration roles
         E1_SkillsAdmin              bool NOT NULL DEFAULT 'false', -- Skills admin with all permission granted.
@@ -287,7 +288,7 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         E1_LO_Country      char(2), -- REFERENCES LO_Countries(LO_TwoLetter) NOT NULL,
 
         --------------------------------------------------------------------------
-        -- ISO Nationalities (Location of birth and other recognized ISO nationalities for Persons, or Location for Companies and non-profit Organizations). (E3_Nationalities)
+        -- ISO Nationalities (Location of birth and other recognized ISO nationalities for Persons, or Location for Cooperatives, Companies and non-profit Organizations). (E3_Nationalities)
 
         --------------------------------------------------------------------------
         -- List the countries where the entity has license to work. (E4_EntityJobLicenseAt)
@@ -315,7 +316,7 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
 
         --------------------------------------------------------------------------
         -- Website
-        E1_Website         varchar(255), -- Personal, Company or non-profit Organization website. Full URI, ie: http://lwn.net/ to be linked in your Job Offers
+        E1_Website         varchar(255), -- Personal, Cooperative, Company or non-profit Organization website. Full URI, ie: http://lwn.net/ to be linked in your Job Offers
 
         --------------------------------------------------------------------------
         -- Statistics
@@ -339,6 +340,12 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Company' and 'non-
         --------------------------------------------------------------------------
         -- Statistics
         EP_Motivation      text, -- It is just a survey, so it can be NULL. -- NOT NULL CHECK (EP_Motivation <> '') -- Company motivations to join the Association is supposed to be to get a profit. So, we do not ask for it.
+
+	-- Only for Cooperatives -- Note that cooperatives are just companies managed democratically by its workers, etc., etc.
+
+        --------------------------------------------------------------------------
+        -- Cooperative Name
+        EC_CooperativeName   varchar(30), -- NOT NULL CHECK (EC_CooperativeName <> ''),
 
 	-- Only for Companies
 
@@ -456,31 +463,31 @@ CREATE TABLE R27_Qualification2Academic (
 
 CREATE TABLE E2_EntityFreeSoftwareExperiences ( -- Contributions to Free Software projects
         E2_Id           SERIAL PRIMARY KEY, -- Identifier
-        E2_E1_Id        integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Entity identity: being a Person, a Company or a non-profit Organization.
+        E2_E1_Id        integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Entity identity: being a Person, Cooperative, Company or non-profit Organization.
         E2_Project      varchar(30),
         E2_Description  varchar(60),
 	E2_URI          varchar(255) -- One URI for each register. It will be checked automatically. Note the user can supply several URIs to the same FS project inserting several registers, one for each URI, due to E2_Project is not a primary key.
 );
 
 CREATE TABLE E3_Nationalities ( -- List the entity nationalities.
-        E3_E1_Id        integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Entity identity: being a Person, a Company or a non-profit Organization.
+        E3_E1_Id        integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Entity identity: being a Person, Cooperative, Company or non-profit Organization.
         E3_LN_Id        char(2) REFERENCES LN_Nationalities(LN_LO_TwoLetter) NOT NULL
 );
 
 CREATE TABLE E4_EntityJobLicenseAt ( -- List the countries where the entity has license to work.
-        E4_E1_Id        integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Entity identity: being a Person, a Company or a non-profit Organization.
+        E4_E1_Id        integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Entity identity: being a Person, Cooperative, Company or non-profit Organization.
         E4_LO_Id        char(2) REFERENCES LO_Countries(LO_TwoLetter) NOT NULL
 );
 
 CREATE TABLE E5_EntityRequireCertifications ( -- List the Certifications which this entity requires to its contractors entities or contracted entities. Take into account that some certifications can be only applyed to some entity types; See the content of the LC_Certifications table.
-        E5_E1_Id        integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Entity identity: being a Person, a Company or a non-profit Organization.
+        E5_E1_Id        integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Entity identity: being a Person, Cooperative, Company or non-profit Organization.
         E5_LC_Name      varchar(30) REFERENCES LC_Certifications(LC_Name) NOT NULL
 );
 
 
 CREATE TABLE J1_JobOffers ( -- XXX: TODO: The idea is that maybe some of the volunteer-looking or pledges can be converted to actual job offers if they success getting the support of the needed donators.
         J1_Id              SERIAL PRIMARY KEY, -- Job Offer identifier
-        J1_E1_Id           integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Employer identity: being a Person, a Company or a non-profit Organization.
+        J1_E1_Id           integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Employer identity: being a Person, Cooperative, Company or non-profit Organization.
         J1_CompletedEdition bool DEFAULT 'false', -- The edition has been successfully completed. All checks pass.
         J1_OfferType       varchar(22) REFERENCES LJ_OfferType(LJ_Id) NOT NULL,
 
@@ -494,6 +501,7 @@ CREATE TABLE J1_JobOffers ( -- XXX: TODO: The idea is that maybe some of the vol
         J1_HideEmployer    bool DEFAULT 'false', -- To hide the identity of the job supplier. -- NOT NULL
 
         J1_AllowPersonApplications       bool DEFAULT 'false', -- NOT NULL
+        J1_AllowCooperativeApplications  bool DEFAULT 'false', -- NOT NULL
         J1_AllowCompanyApplications      bool DEFAULT 'false', -- NOT NULL
         J1_AllowOrganizationApplications bool DEFAULT 'false', -- NOT NULL
 
@@ -585,7 +593,7 @@ CREATE TABLE R17_JobOffer2Nationalities (
 CREATE TABLE R0_Qualifications2JobOffersJoins (
         R0_J1_Id     integer REFERENCES J1_JobOffers(J1_Id) NOT NULL, -- Offer identifier
         R0_State     varchar(10) REFERENCES LZ_ApplicationStates NOT NULL,
-        R0_E1_Id     integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Applicant's identity, being a Person, Company or non-profit Organization.
+        R0_E1_Id     integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Applicant's identity, being a Person, Cooperative, Company or non-profit Organization.
 	PRIMARY KEY (R0_J1_Id,R0_E1_Id)
 );
 
@@ -593,7 +601,7 @@ CREATE TABLE R1_Donations2JobOffersJoins (
         R1_Id        SERIAL PRIMARY KEY, -- Identifier
         R1_J1_Id     integer REFERENCES J1_JobOffers(J1_Id) NOT NULL, -- Offer identifier
         R1_Donation  varchar(15) NOT NULL,
-        R1_E1_Id     integer REFERENCES E1_Entities(E1_Id) NOT NULL -- Donator's identity, being a Person, Company or non-profit Organization.
+        R1_E1_Id     integer REFERENCES E1_Entities(E1_Id) NOT NULL -- Donator's identity, being a Person, Cooperative, Company or non-profit Organization.
 );
 
 

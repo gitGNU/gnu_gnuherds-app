@@ -116,10 +116,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<ul>
 		<li> {t escape='no'
 		  1='<a href="person">'
-		  2='<a href="company">'
-		  3='<a href="nonprofit">'
-		  4='</a>'
-		}Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4.{/t}
+		  2='<a href="cooperative">'
+		  3='<a href="company">'
+		  4='<a href="nonprofit">'
+		  5='</a>'
+		}Register as new %1Person%5, %2Cooperative%5, %3Company%5 or %4non-profit Organization%5.{/t}
 
 		<li> {t escape='no'
 		  1='<a href="resume?action=edit&amp;id='
@@ -135,7 +136,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	</ul>
 
 	<p>
-	{t}Note that some offers could allow to subscribe only to some entity types: Persons, Companies or non-profit Organizations.{/t}
+	{t}Note that some offers could allow to subscribe only to some entity types: Persons, Cooperatives, Companies or non-profit Organizations.{/t}
 	</p>
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
@@ -145,7 +146,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <h4>4. <a name="Who_can_subscribe"></a>{t}Who can subscribe to a job offer?{/t}</h4>
 
-	<p>{t}Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly.{/t}</p>
+	<p>{t}Persons, Cooperatives, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly.{/t}</p>
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
@@ -154,7 +155,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <h4>5. <a name="Who_can_post"></a>{t}Who can post a job offer?{/t}</h4>
 
-	<p>{t}Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:{/t}</p>
+	<p>{t}Any Person, Cooperative, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:{/t}</p>
 
 	<ul>
 		<li>{t escape='no'

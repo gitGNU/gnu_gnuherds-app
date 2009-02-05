@@ -63,6 +63,7 @@ class FSJobOffersForm
 		$smarty->assign('EP_LastName', $result[11]);
 		$smarty->assign('EP_MiddleName', $result[12]);
 
+		$smarty->assign('EC_CooperativeName', $result[20]);
 		$smarty->assign('EC_CompanyName', $result[13]);
 		$smarty->assign('EO_OrganizationName', $result[14]);
 

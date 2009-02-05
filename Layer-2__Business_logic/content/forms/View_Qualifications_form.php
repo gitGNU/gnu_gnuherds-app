@@ -38,7 +38,7 @@ class ViewQualificationsForm
 		// Check the log in state
 		if ( $_SESSION['Logged'] == '1' )
 		{
-			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
+			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Cooperative' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
 			{
 				$error = "<p>".gettext('To access this section you have to login first.')."</p>";
 				throw new Exception($error,false);
@@ -188,6 +188,8 @@ class ViewQualificationsForm
 		$this->data['FirstName'] = $result[15][0];
 		$this->data['LastName'] = $result[16][0];
 		$this->data['MiddleName'] = $result[17][0];
+
+		$this->data['CooperativeName'] = $result[40][0];
 
 		$this->data['CompanyName'] = $result[18][0];
 

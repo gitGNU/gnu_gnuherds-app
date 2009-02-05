@@ -100,6 +100,7 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 
 								$body .= gettext("Offered by").":  ";
 								if ($joboffers[10][$k] != '') $body .= gettext("Person").": ";
+								if ($joboffers[20][$k] != '') $body .= gettext("Cooperative").": ";
 								if ($joboffers[13][$k] != '') $body .= gettext("Company").": ";
 								if ($joboffers[14][$k] != '') $body .= gettext("non-profit Organization").": ";
 
@@ -109,6 +110,7 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 									if ($joboffers[11][$k] != '' or $joboffers[12][$k] != '') $body .= ", ";
 									$body .= $joboffers[10][$k]."\n";
 								}
+								if ($joboffers[20][$k] != '') $body .= $joboffers[20][$k]."\n";
 								if ($joboffers[13][$k] != '') $body .= $joboffers[13][$k]."\n";
 								if ($joboffers[14][$k] != '') $body .= $joboffers[14][$k]."\n";
 

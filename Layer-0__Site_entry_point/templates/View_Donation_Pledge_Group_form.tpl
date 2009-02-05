@@ -178,6 +178,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {foreach from=$data.Donators.Donation item=Donation key=i}
 <tr>
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
+{if $data.Donators.CooperativeName[$i] neq ''}
+	{$data.Donators.CooperativeName[$i]|gettext|strip:'&nbsp;'}
+{else}
 {if $data.Donators.CompanyName[$i] neq ''}
 	{$data.Donators.CompanyName[$i]|gettext|strip:'&nbsp;'}
 {else}
@@ -188,6 +191,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{$data.Donators.LastName[$i]}{if trim($data.Donators.LastName[$i]) neq '' and trim($data.Donators.MiddleName[$i]) neq ''}&nbsp;{/if}{$data.Donators.MiddleName[$i]}{if trim($data.Donators.LastName[$i]) neq '' or trim($data.Donators.MiddleName[$i]) neq ''},&nbsp;{/if}{$data.Donators.FirstName[$i]}
 {else}
 	{'Email'|gettext|strip:'&nbsp;'}
+{/if}
 {/if}
 {/if}
 {/if}
@@ -213,6 +217,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {foreach from=$data.Applications.FirstName item=Application key=i}
 <tr>
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
+{if $data.Applications.CooperativeName[$i] neq ''}
+	{$data.Applications.CooperativeName[$i]|gettext|strip:'&nbsp;'}
+{else}
 {if $data.Applications.CompanyName[$i] neq ''}
 	{$data.Applications.CompanyName[$i]|gettext|strip:'&nbsp;'}
 {else}
@@ -223,6 +230,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{$data.Applications.LastName[$i]}{if trim($data.Applications.LastName[$i]) neq '' and trim($data.Applications.MiddleName[$i]) neq ''}&nbsp;{/if}{$data.Applications.MiddleName[$i]}{if trim($data.Applications.LastName[$i]) neq '' or trim($data.Applications.MiddleName[$i]) neq ''},&nbsp;{/if}{$data.Applications.FirstName[$i]}
 {else}
 	{'Email'|gettext|strip:'&nbsp;'}
+{/if}
 {/if}
 {/if}
 {/if}

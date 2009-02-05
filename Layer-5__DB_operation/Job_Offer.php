@@ -56,7 +56,7 @@ class JobOffer
 
 	public function getJobOffers($extra_condition = '')
 	{
-		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Blog, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CompanyName, EO_OrganizationName, J1_VacancyTitle, E1_Email FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
+		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Blog, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CooperativeName, EC_CompanyName, EO_OrganizationName, J1_VacancyTitle, E1_Email FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
 		$array = array();
@@ -102,10 +102,11 @@ class JobOffer
 		$array[11] = pg_fetch_all_columns($result, 10); // EP_LastName
 		$array[12] = pg_fetch_all_columns($result, 11); // EP_MiddleName
 
-		$array[13] = pg_fetch_all_columns($result, 12); // EC_CompanyName
-		$array[14] = pg_fetch_all_columns($result, 13); // EO_OrganizationName
+		$array[20] = pg_fetch_all_columns($result, 12); // EC_CooperativeName
+		$array[13] = pg_fetch_all_columns($result, 13); // EC_CompanyName
+		$array[14] = pg_fetch_all_columns($result, 14); // EO_OrganizationName
 
-		$array[15] = pg_fetch_all_columns($result, 14); // J1_VacancyTitle
+		$array[15] = pg_fetch_all_columns($result, 15); // J1_VacancyTitle
 
 		for( $i=0; $i < count($array[0]); $i++)
 			if ( $array[15][$i] == '' )
@@ -117,7 +118,7 @@ class JobOffer
 
 	public function getJobOffer($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_EstimatedEffort,J1_LM_TimeUnit,J1_E1_Id,J1_CompletedEdition,J1_Deadline,J1_VacancyTitle,J1_Description,J1_OfferType FROM J1_JobOffers WHERE J1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_EstimatedEffort,J1_LM_TimeUnit,J1_E1_Id,J1_CompletedEdition,J1_Deadline,J1_VacancyTitle,J1_Description,J1_OfferType,J1_AllowCooperativeApplications FROM J1_JobOffers WHERE J1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array = array();
@@ -132,6 +133,7 @@ class JobOffer
 		$array[4] = pg_fetch_all_columns($result, 4); // J1_HideEmployer
 
 		$array[5] = pg_fetch_all_columns($result, 5); // J1_AllowPersonApplications
+		$array[55]= pg_fetch_all_columns($result,29); // J1_AllowCooperativeApplications
 		$array[6] = pg_fetch_all_columns($result, 6); // J1_AllowCompanyApplications
 		$array[7] = pg_fetch_all_columns($result, 7); // J1_AllowOrganizationApplications
 
@@ -268,6 +270,10 @@ class JobOffer
 			$AllowPersonApplications = 'true';
 		else	$AllowPersonApplications = 'false';
 
+		if (isset($_POST['AllowCooperativeApplications']) and $_POST['AllowCooperativeApplications'] == 'on')
+			$AllowCooperativeApplications = 'true';
+		else	$AllowCooperativeApplications = 'false';
+
 		if (isset($_POST['AllowCompanyApplications']) and $_POST['AllowCompanyApplications'] == 'on')
 			$AllowCompanyApplications = 'true';
 		else	$AllowCompanyApplications = 'false';
@@ -286,7 +292,7 @@ class JobOffer
 		$this->postgresql->execute("BEGIN",0);
 
 
-		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,text,text,text,text,bool) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_VacancyTitle,J1_Description,J1_OfferType,J1_CompletedEdition) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13);  EXECUTE query('$EntityId','".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','".pg_escape_string($VacancyTitle)."','".pg_escape_string($Description)."','$offerType','$completedEdition');";
+		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,bool,text,text,text,text,bool) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCooperativeApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_VacancyTitle,J1_Description,J1_OfferType,J1_CompletedEdition) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14);  EXECUTE query('$EntityId','".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCooperativeApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','".pg_escape_string($VacancyTitle)."','".pg_escape_string($Description)."','$offerType','$completedEdition');";
 		$this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 
@@ -395,6 +401,10 @@ class JobOffer
 					$AllowPersonApplications = 'true';
 				else	$AllowPersonApplications = 'false';
 
+				if (isset($_POST['AllowCooperativeApplications']) and $_POST['AllowCooperativeApplications'] == 'on')
+					$AllowCooperativeApplications = 'true';
+				else	$AllowCooperativeApplications = 'false';
+
 				if (isset($_POST['AllowCompanyApplications']) and $_POST['AllowCompanyApplications'] == 'on')
 					$AllowCompanyApplications = 'true';
 				else	$AllowCompanyApplications = 'false';
@@ -408,7 +418,7 @@ class JobOffer
 				$VacancyTitle = isset($_POST['VacancyTitle']) ? trim($_POST['VacancyTitle']) : '';
 				$Description = isset($_POST['Description']) ? trim($_POST['Description']) : '';
 
-				$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_OfferDate='now',J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCompanyApplications=$6,J1_AllowOrganizationApplications=$7,J1_Vacancies=$8,J1_VacancyTitle=$9,J1_Description=$10,J1_CompletedEdition=$11 WHERE J1_Id=$12;  EXECUTE query('".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','".pg_escape_string($VacancyTitle)."','".pg_escape_string($Description)."','$completedEdition','$J1_Id');";
+				$sqlQuery = "PREPARE query(text,date,bool,bool,bool,bool,bool,bool,text,text,text,bool,integer) AS  UPDATE J1_JobOffers SET J1_EmployerJobOfferReference=$1,J1_OfferDate='now',J1_ExpirationDate=$2,J1_Closed=$3,J1_HideEmployer=$4,J1_AllowPersonApplications=$5,J1_AllowCooperativeApplications=$6,J1_AllowCompanyApplications=$7,J1_AllowOrganizationApplications=$8,J1_Vacancies=$9,J1_VacancyTitle=$10,J1_Description=$11,J1_CompletedEdition=$12 WHERE J1_Id=$13;  EXECUTE query('".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCooperativeApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','".pg_escape_string($VacancyTitle)."','".pg_escape_string($Description)."','$completedEdition','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
 			break;
 
@@ -505,7 +515,7 @@ class JobOffer
 
 	public function getDonators($JobOfferId)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Donation,E1_Email,E1_WantEmail,EP_FirstName,EP_LastName,EP_MiddleName,EC_CompanyName,EO_OrganizationName FROM R1_Donations2JobOffersJoins,E1_Entities WHERE R1_E1_Id=E1_Id AND R1_J1_Id=$1 ;  EXECUTE query('$JobOfferId');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Donation,E1_Email,E1_WantEmail,EP_FirstName,EP_LastName,EP_MiddleName,EC_CooperativeName,EC_CompanyName,EO_OrganizationName FROM R1_Donations2JobOffersJoins,E1_Entities WHERE R1_E1_Id=E1_Id AND R1_J1_Id=$1 ;  EXECUTE query('$JobOfferId');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array['Donation'] = pg_fetch_all_columns($result, 0);
@@ -517,9 +527,11 @@ class JobOffer
 		$array['LastName'] = pg_fetch_all_columns($result, 4);
 		$array['MiddleName'] = pg_fetch_all_columns($result, 5);
 
-		$array['CompanyName'] = pg_fetch_all_columns($result, 6);
+		$array['CooperativeName'] = pg_fetch_all_columns($result, 6);
 
-		$array['NonprofitName'] = pg_fetch_all_columns($result, 7);
+		$array['CompanyName'] = pg_fetch_all_columns($result, 7);
+
+		$array['NonprofitName'] = pg_fetch_all_columns($result, 8);
 
 		return $array;
 	}
@@ -696,6 +708,7 @@ class JobOffer
 				$array['LastName'][$i] = $arrayEN[16][0];
 				$array['MiddleName'][$i] = $arrayEN[17][0];
 
+				$array['CooperativeName'][$i] = $arrayEN[40][0];
 				$array['CompanyName'][$i] = $arrayEN[18][0];
 				$array['NonprofitName'][$i] = $arrayEN[19][0];
 
