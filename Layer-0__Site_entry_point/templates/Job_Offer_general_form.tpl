@@ -70,6 +70,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 <tr valign="top">
 <td></td>
+<td> <input type="checkbox" name="AllowCooperativeApplications" id="AllowCooperativeApplications" class="required" {if $data.AllowCooperativeApplications eq 'true'} checked {/if}><label for="AllowCooperativeApplications">{t}Cooperatives{/t}</label></td>
+</tr>
+<tr valign="top">
+<td></td>
 <td> <input type="checkbox" name="AllowCompanyApplications" id="AllowCompanyApplications" class="required" {if $data.AllowCompanyApplications eq 'true'} checked {/if}><label for="AllowCompanyApplications">{t}Companies{/t}</label></td>
 </tr>
 <tr valign="top">

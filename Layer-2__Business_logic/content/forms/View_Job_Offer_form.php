@@ -51,7 +51,7 @@ class ViewJobOfferForm
 		{
 			if ( isset($_SESSION['Logged']) and $_SESSION['Logged'] == '1' )
 			{
-				if ( ($_SESSION['LoginType']=='Person' and $this->data['AllowPersonApplications']=="true") or ($_SESSION['LoginType']=='Company' and $this->data['AllowCompanyApplications']=="true") or ($_SESSION['LoginType']=='non-profit Organization' and $this->data['AllowOrganizationApplications']=="true") )
+				if ( ($_SESSION['LoginType']=='Person' and $this->data['AllowPersonApplications']=="true") or ($_SESSION['LoginType']=='Cooperative' and $this->data['AllowCooperativeApplications']=="true") or ($_SESSION['LoginType']=='Company' and $this->data['AllowCompanyApplications']=="true") or ($_SESSION['LoginType']=='non-profit Organization' and $this->data['AllowOrganizationApplications']=="true") )
 				{
 					if ($this->data['Email'] == $_SESSION['LoginEmail'] )
 					{
@@ -170,6 +170,11 @@ class ViewJobOfferForm
 		else
 			$this->data['AllowPersonApplications'] = "false";
 
+		if ($result[55][0]=='t')
+			$this->data['AllowCooperativeApplications'] = "true";
+		else
+			$this->data['AllowCooperativeApplications'] = "false";
+
 		if ($result[6][0]=='t')
 			$this->data['AllowCompanyApplications'] = "true";
 		else
@@ -262,6 +267,8 @@ class ViewJobOfferForm
 		$this->data['FirstName'] = $result[15][0];
 		$this->data['LastName'] = $result[16][0];
 		$this->data['MiddleName'] = $result[17][0];
+
+		$this->data['CooperativeName'] = $result[40][0];
 
 		$this->data['CompanyName'] = $result[18][0];
 

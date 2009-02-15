@@ -39,7 +39,7 @@ class ManageJobOfferApplicationsForm
 		// Check the log in state
 		if ( $_SESSION['Logged'] == '1' )
 		{
-			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
+			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Cooperative' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
 			{
 				$error = "<p>".gettext('To access this section you have to login first.')."</p>";
 				throw new Exception($error,false);
@@ -101,6 +101,7 @@ class ManageJobOfferApplicationsForm
 		$smarty->assign('lastName', $result['LastName']);
 		$smarty->assign('middleName', $result['MiddleName']);
 
+		$smarty->assign('cooperativeName', $result['CooperativeName']);
 		$smarty->assign('companyName', $result['CompanyName']);
 		$smarty->assign('nonprofitName', $result['NonprofitName']);
 

@@ -43,7 +43,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td colspan="4">&nbsp;</td> </tr>
 
 {if $certificationsList[0]|@count >= 1}
-{if $data.AllowPersonApplications eq 'true' or $data.AllowCompanyApplications eq 'true' or $data.AllowOrganizationApplications eq 'true'}
+{if $data.AllowPersonApplications eq 'true' or $data.AllowCooperativeApplications eq 'true' or $data.AllowCompanyApplications eq 'true' or $data.AllowOrganizationApplications eq 'true'}
 
 <tr valign="top">
 <td align="right"><label for="CertificationsList">{t}Certifications{/t}</label><br> </td>
@@ -52,8 +52,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <table cellspacing="0" cellpadding="0">
 {foreach from=$certificationsList[0] item=certification key=i}
 	{if  ( $data.AllowPersonApplications eq 'true'       and $certificationsList[1][$i] eq 't' )
-	  or ( $data.AllowCompanyApplications eq 'true'      and $certificationsList[2][$i] eq 't' )
-	  or ( $data.AllowOrganizationApplications eq 'true' and $certificationsList[3][$i] eq 't' )
+	  or ( $data.AllowCooperativeApplications eq 'true'  and $certificationsList[2][$i] eq 't' )
+	  or ( $data.AllowCompanyApplications eq 'true'      and $certificationsList[3][$i] eq 't' )
+	  or ( $data.AllowOrganizationApplications eq 'true' and $certificationsList[4][$i] eq 't' )
 	}
 		{if is_array($data.CertificationsList) and in_array($certification, $data.CertificationsList) }
 			<tr> <td> <input type="checkbox" name="CertificationsList[]" id="CertificationsList" value="{$certification}" class="notRequired" checked>{$certification}</td> </tr>

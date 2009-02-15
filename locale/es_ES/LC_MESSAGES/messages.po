@@ -60,6 +60,9 @@ msgstr "Cuenta"
 msgid "My personal profile"
 msgstr "Mi perfil personal"
 
+msgid "Our cooperative"
+msgstr "Nuestra cooperativa"
+
 msgid "Our company"
 msgstr "Nuestra empresa"
 
@@ -116,6 +119,9 @@ msgstr "¿Olvidó su contraseña?"
 
 msgid "Register person"
 msgstr "Registrar persona"
+
+msgid "Register cooperative"
+msgstr "Registrar cooperativa"
 
 msgid "Register company"
 msgstr "Registrar compañía"
@@ -543,8 +549,8 @@ msgstr "Donantes y trabajadores pueden %1negociar%2 (30%, 25%, 20%, 25%) o firma
 msgid "How to subscribe to a job offer?"
 msgstr "¿Cómo suscribirse a una oferta de empleo?"
 
-msgid "Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4."
-msgstr "Regístrese como nueva %1Persona%4, %2Compañía%4 o %3Organización sin ánimo de lucro%4."
+msgid "Register as new %1Person%5, %2Cooperative%5, %3Company%5 or %4non-profit Organization%5."
+msgstr "Regístrese como nueva %1Persona%5, %2Cooperativa%5, %3Compañía%5 o %4Organización sin ánimo de lucro%5."
 
 msgid "Fill the %1%2%3Qualifications%4 form."
 msgstr "Rellene el formulario de %1%2%3Cualificaciones%4."
@@ -558,20 +564,20 @@ msgstr "Entre."
 msgid "Subscribe to the offer."
 msgstr "Suscríbase a la oferta."
 
-msgid "Note that some offers could allow to subscribe only to some entity types: Persons, Companies or non-profit Organizations."
-msgstr "Nótese que algunas ofertas podrían permitir suscribirse sólo a algunos tipos de entidades: Personas, Compañías u Organizaciones sin ánimo de lucro."
+msgid "Note that some offers could allow to subscribe only to some entity types: Persons, Cooperatives, Companies or non-profit Organizations."
+msgstr "Nótese que algunas ofertas podrían permitir suscribirse sólo a algunos tipos de entidades: Personas, Cooperativas, Compañías u Organizaciones sin ánimo de lucro."
 
 msgid "Who can subscribe to a job offer?"
 msgstr "¿Quién puede suscribirse a una oferta de empleo?"
 
-msgid "Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly."
-msgstr "Las Personas, Compañías u Organizaciones sin ánimo de lucro que hayan satisfecho las condiciones impuestas por el formulario de Cualificaciones, es decir, aquellos que lo hayan cumplimentado correctamente."
+msgid "Persons, Cooperatives, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly."
+msgstr "Las Personas, Cooperativas, Compañías u Organizaciones sin ánimo de lucro que hayan satisfecho las condiciones impuestas por el formulario de Cualificaciones, es decir, aquellos que lo hayan cumplimentado correctamente."
 
 msgid "Who can post a job offer?"
 msgstr "¿Quién puede crear una oferta de empleo?"
 
-msgid "Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:"
-msgstr "Cualquier Persona, Compañía u Organización sin ánimo de lucro cumpliendo las condiciones impuestas por el formulario de Oferta de Empleo y cuya oferta se ajuste a uno de los siguientes requisitos:"
+msgid "Any Person, Cooperative, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:"
+msgstr "Cualquier Persona, Cooperativa, Compañía u Organización sin ánimo de lucro cumpliendo las condiciones impuestas por el formulario de Oferta de Empleo y cuya oferta se ajuste a uno de los siguientes requisitos:"
 
 msgid "Development or maintenance of software for distribution to the public, if all the software to be developed or maintained is %1Free Software%2."
 msgstr "Desarrollo o mantenimiento de software para distribución al publico, si todo el software a ser desarrollado o mantenido es %1Software Libre%2."
@@ -901,6 +907,9 @@ msgstr "Oferta de empleo"
 
 msgid "Persons"
 msgstr "Personas"
+
+msgid "Cooperatives"
+msgstr "Cooperativas"
 
 msgid "Companies"
 msgstr "Compañías"
@@ -1244,6 +1253,19 @@ msgstr "Los campos contraseña son diferentes"
 #XXX: msgstr "Su contribución al Software Libre será evaluada. Se le enviará el resultado vía correo electrónico, habilitando su capacidad para votar en el caso de una evaluación positiva."
 
 #
+# Cooperative form: Cooperative_form.tpl, Cooperative_form.php
+#
+# Cooperative_form.tpl
+msgid "Update cooperative data"
+msgstr "Actualizar datos de cooperativa"
+
+msgid "Cooperative"
+msgstr "Cooperativa"
+
+# Cooperative_form.php
+# msgid ""
+# msgstr ""#
+
 # Company form: Company_form.tpl, Company_form.php
 #
 # Company_form.tpl

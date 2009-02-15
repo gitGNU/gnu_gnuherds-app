@@ -77,7 +77,7 @@ class JobOfferForm extends SkillsForm
 		// Check the log in state
 		if ( $_SESSION['Logged'] == '1' )
 		{
-			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
+			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Cooperative' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
 			{
 				$error = "<p>".gettext('To access this section you have to login first.')."</p>";
 				throw new Exception($error,false);
@@ -313,6 +313,11 @@ class JobOfferForm extends SkillsForm
 				else
 					$this->data['AllowPersonApplications'] = "false";
 
+				if (isset($_POST['AllowCooperativeApplications']) and $_POST['AllowCooperativeApplications']=='on')
+					$this->data['AllowCooperativeApplications'] = "true";
+				else
+					$this->data['AllowCooperativeApplications'] = "false";
+
 				if (isset($_POST['AllowCompanyApplications']) and $_POST['AllowCompanyApplications']=='on')
 					$this->data['AllowCompanyApplications'] = "true";
 				else
@@ -484,7 +489,7 @@ class JobOfferForm extends SkillsForm
 		// 'general' section
 		$this->checkresults['general'] = "pass";
 
-		if ( ($this->data['AllowPersonApplications']=="false" or $this->data['AllowPersonApplications']=='') and ($this->data['AllowCompanyApplications']=="false" or $this->data['AllowCompanyApplications']=='') and ($this->data['AllowOrganizationApplications']=="false" or $this->data['AllowOrganizationApplications']=='') )
+		if ( ($this->data['AllowPersonApplications']=="false" or $this->data['AllowPersonApplications']=='') and ($this->data['AllowCooperativeApplications']=="false" or $this->data['AllowCooperativeApplications']=='') and ($this->data['AllowCompanyApplications']=="false" or $this->data['AllowCompanyApplications']=='') and ($this->data['AllowOrganizationApplications']=="false" or $this->data['AllowOrganizationApplications']=='') )
 		{
 			$this->checkresults['general'] = "fail";
 
@@ -1009,6 +1014,11 @@ class JobOfferForm extends SkillsForm
 			$this->data['AllowPersonApplications'] = "true";
 		else
 			$this->data['AllowPersonApplications'] = "false";
+
+		if ($result[55][0]=='t')
+			$this->data['AllowCooperativeApplications'] = "true";
+		else
+			$this->data['AllowCooperativeApplications'] = "false";
 
 		if ($result[6][0]=='t')
 			$this->data['AllowCompanyApplications'] = "true";

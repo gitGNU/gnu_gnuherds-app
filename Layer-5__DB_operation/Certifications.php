@@ -63,6 +63,9 @@ class Certifications
 		if ( $_SESSION['LoginType'] == 'Person' )
 			$sqlQuery = "PREPARE query(integer) AS  SELECT LC_Name FROM LC_Certifications WHERE LC_Apply2Person=true AND LC_Name NOT IN ( SELECT R26_LC_Name FROM R26_Qualification2Certifications WHERE R26_Q1_E1_Id=$1 );  EXECUTE query('$_SESSION[EntityId]');";
 
+		if ( $_SESSION['LoginType'] == 'Cooperative' )
+			$sqlQuery = "PREPARE query(integer) AS  SELECT LC_Name FROM LC_Certifications WHERE LC_Apply2Cooperative=true AND LC_Name NOT IN ( SELECT R26_LC_Name FROM R26_Qualification2Certifications WHERE R26_Q1_E1_Id=$1 );  EXECUTE query('$_SESSION[EntityId]');";
+
 		if ( $_SESSION['LoginType'] == 'Company' )
 			$sqlQuery = "PREPARE query(integer) AS  SELECT LC_Name FROM LC_Certifications WHERE LC_Apply2Company=true AND LC_Name NOT IN ( SELECT R26_LC_Name FROM R26_Qualification2Certifications WHERE R26_Q1_E1_Id=$1 );  EXECUTE query('$_SESSION[EntityId]');";
 
@@ -75,7 +78,7 @@ class Certifications
 
 	public function getCertificationsList()
 	{
-		$sqlQuery = "SELECT LC_Name,LC_Apply2Person,LC_Apply2Company,LC_Apply2Organization FROM LC_Certifications";
+		$sqlQuery = "SELECT LC_Name,LC_Apply2Person,LC_Apply2Cooperative,LC_Apply2Company,LC_Apply2Organization FROM LC_Certifications";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
 		$array = array();
@@ -83,6 +86,7 @@ class Certifications
 		$array[1] = pg_fetch_all_columns($result, 1);
 		$array[2] = pg_fetch_all_columns($result, 2);
 		$array[3] = pg_fetch_all_columns($result, 3);
+		$array[4] = pg_fetch_all_columns($result, 4);
 		
 		return $array;
 	}

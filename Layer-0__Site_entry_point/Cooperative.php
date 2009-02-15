@@ -16,31 +16,26 @@
 // program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 
-require_once "../Layer-4__DBManager_etc/DB_Manager.php";
-
-
-class DeletePhotoOrLogo
+// We have to use SSL for encryption of the password, PHPSESSID, etc., because else
+// it is sent to the web server as plain text.
+// Insert the following code snippet into the top of secure page.
+if ( ( $_SESSION['Logged'] == '1' and ( !isset($_SERVER['HTTPS']) or $_SERVER['HTTPS'] != 'on' ) )
+     or
+     ( $_GET['action'] == 'register' and ( !isset($_SERVER['HTTPS']) or $_SERVER['HTTPS'] != 'on' ) ) )
 {
-	private function goBack()
-	{
-		if ( $_SESSION['LoginType'] == 'Person' )
-			$request_uri = "person"; // The request come from that URI
-		elseif ( $_SESSION['LoginType'] == 'Cooperative' )
-			$request_uri = "cooperative";
-		elseif ( $_SESSION['LoginType'] == 'Company' )
-			$request_uri = "company";
-		elseif ( $_SESSION['LoginType'] == 'non-profit Organization' )
-			$request_uri = "nonprofit";
-
-		header("Location: https://$_SERVER[HTTP_HOST]/$request_uri");
-	}
-
-	public function deletePhotoOrLogo()
-	{
-		$manager = new DBManager();
-		$manager->deletePhotoOrLogo();
-
-		$this->goBack();
-	}
+        header("Location: https://$_SERVER[SERVER_NAME]$_SERVER[REQUEST_URI]");
+        exit;
 }
+
+
+session_start();
+
+require_once "../Layer-1__Page_builder/Web_Page.php";
+require_once "../Layer-2__Business_logic/content/forms/Cooperative_form.php";
+
+$cooperativeForm = new CooperativeForm();
+
+$webPage = new WebPage($cooperativeForm);
+$webPage->processPage();
+$webPage->printPage();
 ?>

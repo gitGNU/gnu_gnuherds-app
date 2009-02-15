@@ -35,6 +35,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <li><a href="person">{t}My personal profile{/t}</a></li>
 {/if}
 
+{if $smarty.session.LoginType eq 'Cooperative' }
+<li><a href="cooperative">{t}Our cooperative{/t}</a></li>
+{/if}
+
 {if $smarty.session.LoginType eq 'Company' }
 <li><a href="company">{t}Our company{/t}</a></li>
 {/if}
