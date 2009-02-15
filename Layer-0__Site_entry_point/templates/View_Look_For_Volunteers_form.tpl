@@ -36,7 +36,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr valign="top">
 <td>
-<div class="tdDark limitWidth"><strong>{t}{$data.VacancyTitle}{/t}</strong></div>
+<div class="tdDark limitWidth"><strong>{$data.VacancyTitle}</strong></div>
 </td>
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="/volunteers?action=edit&amp;id={$smarty.get.JobOfferId}" title="{t}Edit section{/t}: {t}Tasks{/t}">{t}edit{/t}</a></td>
@@ -53,7 +53,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr valign="top">
 <td>
-<div class="greenLight limitWidth">{t}{$data.Description}{/t}</div>
+<div class="greenLight limitWidth">{$data.Description}</div>
 </td>
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"><a href="/volunteers?action=edit&amp;id={$smarty.get.JobOfferId}" title="{t}Edit section{/t}: {t}Tasks{/t}">{t}edit{/t}</a></td>

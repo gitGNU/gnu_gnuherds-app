@@ -230,8 +230,8 @@ class ViewJobOfferForm
 		else
 			$this->data['AvailableToTravel'] = "false";
 
-		$this->data['VacancyTitle'] = $result[60][0];
-		$this->data['Description'] = $result[61][0];
+		$this->data['VacancyTitle'] = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]", "<a href=\"\\0\">\\0</a>", $result[60][0] ); // Replace URLs with links
+		$this->data['Description'] = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]", "<a href=\"\\0\">\\0</a>", $result[61][0] ); // Replace URLs with links
 
 
 		// Entity table
