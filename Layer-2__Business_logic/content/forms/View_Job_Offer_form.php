@@ -235,8 +235,8 @@ class ViewJobOfferForm
 		else
 			$this->data['AvailableToTravel'] = "false";
 
-		$this->data['VacancyTitle'] = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]", "<a href=\"\\0\">\\0</a>", $result[60][0] ); // Replace URLs with links
-		$this->data['Description'] = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]", "<a href=\"\\0\">\\0</a>", $result[61][0] ); // Replace URLs with links
+		$this->data['VacancyTitle'] = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]", "<a href=\"\\0\">\\0</a>", nl2br($result[60][0]) ); // Inserts HTML line breaks before all newlines and replace URLs with links
+		$this->data['Description'] = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]", "<a href=\"\\0\">\\0</a>", nl2br($result[61][0]) ); // Inserts HTML line breaks before all newlines and replace URLs with links
 
 
 		// Entity table
