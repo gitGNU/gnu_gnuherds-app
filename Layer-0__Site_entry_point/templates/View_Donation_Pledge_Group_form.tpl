@@ -32,14 +32,14 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td class="subsection head">
 {t}Donation pledge group{/t}
 </td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr>
 
 <tr>
 <td>&nbsp;</td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr> 
@@ -48,14 +48,14 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td>
 <div class="tdDark limitWidth"><strong>{$data.VacancyTitle}</strong></div>
 </td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"><a href="/pledges?action=edit&amp;id={$smarty.get.JobOfferId}" title="{t}Edit section{/t}: {t}Tasks{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
 <tr>
 <td>&nbsp;</td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr> 
@@ -72,7 +72,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td>&nbsp;</td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr> 
@@ -81,28 +81,28 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td>
 <div class="greenLight limitWidth">{$data.Description}</div>
 </td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"><a href="/pledges?action=edit&amp;id={$smarty.get.JobOfferId}" title="{t}Edit section{/t}: {t}Tasks{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
 <tr>
 <td>&nbsp;</td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr> 
 
 <tr>
 <td class="subsection">&nbsp;</td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr>
 
 <tr>
 <td>&nbsp;</td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr> 
@@ -129,14 +129,14 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </div>
 
 </td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr>
 
 <tr>
 <td>&nbsp;</td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr>
@@ -146,14 +146,14 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td class="subsection">&nbsp;</td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr>
 
 <tr>
 <td>&nbsp;</td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr>
@@ -343,7 +343,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </table>
 
 </td>
-{if $state.IsAlreadyDonator eq 't'}
+{if $smarty.session.Logged == '1' }
 <td class="edit"></td>
 {/if}
 </tr>
