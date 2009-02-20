@@ -46,6 +46,7 @@ class LanguageForm
 			  or $_SESSION["Language"] == "es_ES" /*
 			  or $_SESSION["Language"] == "fr_FR" */
 			  or $_SESSION["Language"] == "it_IT"
+			  or $_SESSION["Language"] == "pl_PL"
 			  or $_SESSION["Language"] == "pt_PT"
 			  or $_SESSION["Language"] == "ru_RU" )
 			{
@@ -69,6 +70,8 @@ class LanguageForm
 					"fr_BE" => true, "fr_CA" => true, "fr_CH" => true, "fr_FR" => true, "fr_LU" => true, */
 					"it" => true,
 					"it_IT" => true, "it_CH" => true,
+					"pl" => true,
+					"pl_PL" => true,
 					"pt" => true,
 					"pt_PT" => true, "pt_BR" => true,
 					"ru" => true,
@@ -99,6 +102,9 @@ class LanguageForm
 					elseif ( $chosen == "it"
 					      or $chosen == "it_IT" or $chosen == "it_CH" )
 					    $this->setLanguage("it_IT");
+					elseif ( $chosen == "pl"
+					      or $chosen == "pl_PL" )
+					    $this->setLanguage("pl_PL");
 					elseif ( $chosen == "pt"
 					      or $chosen == "pt_PT" or $chosen == "pt_BR" )
 					    $this->setLanguage("pt_PT");
@@ -135,6 +141,8 @@ class LanguageForm
 			$locale = 'fr_FR.utf8';
 		elseif ($language == "it_IT")
 			$locale = 'it_IT.utf8';
+		elseif ($language == "pl_PL")
+			$locale = 'pl_PL.utf8';
 		elseif ($language == "pt_PT")
 			$locale = 'pt_PT.utf8';
 		elseif ($language == "ru_RU")

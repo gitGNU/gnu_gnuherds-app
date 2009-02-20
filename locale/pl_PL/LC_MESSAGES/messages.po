@@ -1,0 +1,1802 @@
+# Authors: Davi Leal
+#
+# Copyright (C) 2006, 2007, 2008 Davi Leal <davi at leals dot com>
+#
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU Affero General Public License as published by the Free Software Foundation,
+# either version 3 of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License along with this
+# program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNU Herds\n"
+"Report-Msgid-Bugs-To: davi@leals.com\n"
+"POT-Creation-Date: 2006-04-10 19:12+0200\n"
+"PO-Revision-Date: 2008-12-21 00:51+0100\n"
+"Last-Translator: Witold Adamus <witekadamus@gmail.com>\n"
+"Language-Team: Witold Adamus, Michał Ściubidło <witekadamus@gmail.com, michal.sciubidlo@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: POLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+# header.tpl
+msgid "Change language"
+msgstr "Zmień język"
+
+# To jest na głównej stronie. Zatem wypadało by chyba zostawić jak jest
+#, fuzzy
+msgid "Free Software Association"
+msgstr "Stowarzyszenie Wolnego Oprogramowania"
+
+msgid "%1Download the project source code!%2"
+msgstr "%1Pobierz kod źródłowy projektu%2"
+
+# menu.tpl
+msgid "Home"
+msgstr "Strona główna"
+
+msgid "Charter (draft)"
+msgstr "Statut (szkic)"
+
+msgid "Coders' guide"
+msgstr "Przewodnik dla programistów"
+
+msgid "FAQ"
+msgstr "Najczęstsze pytania (FAQ)"
+
+msgid "Account"
+msgstr "Konto"
+
+msgid "My personal profile"
+msgstr "Mój profil"
+
+msgid "Our company"
+msgstr "Nasza firma"
+
+msgid "Our non-profit"
+msgstr "Nasza organizacja niedochodowa"
+
+msgid "My qualifications"
+msgstr "Moje kwalifikacje"
+
+msgid "Our qualifications"
+msgstr "Nasze kwalifikacje"
+
+msgid "My notices"
+msgstr "Moje powiadomienia"
+
+msgid "Our notices"
+msgstr "Nasze powiadomienia"
+
+msgid "My subscriptions"
+msgstr "Moje subskrypcje"
+
+msgid "Our subscriptions"
+msgstr "Nasze subskrypcje"
+
+msgid "Settings"
+msgstr "Ustawienia"
+
+msgid "Administration"
+msgstr "Administracja"
+
+msgid "Resources"
+msgstr "Zasoby"
+
+msgid "FS business models"
+msgstr "Modelowy biznes WO"
+
+msgid "FS job offers"
+msgstr "Oferty pracy WO"
+
+msgid "FS pledges"
+msgstr "Deklaracje WO"
+
+msgid "FS volunteers"
+msgstr "Wolontariat WO"
+
+# log_in_box.tpl
+msgid "Log in"
+msgstr "Zaloguj się"
+
+msgid "Lost password?"
+msgstr "Zapomniałeś hasło?"
+
+msgid "Register person"
+msgstr "Zarejestruj się"
+
+msgid "Register company"
+msgstr "Zarejestruj swoją firmę"
+
+msgid "Register non-profit organization"
+msgstr "Zarejestruj swoją organizację niedochodową"
+
+msgid "Register non-profit"
+msgstr "Zarejestruj organizację"
+
+# log_out_box.tpl
+msgid "Log out"
+msgstr "Wyloguj się"
+
+# content.tpl
+msgid "Log in successful!"
+msgstr "Logowanie powiodło się"
+
+msgid "Now, you can go to the account menu to manage your data."
+msgstr "Teraz możesz przejść do ustawień konta by doprecyzować informacje o sobie"
+
+msgid "Log in unsuccessful!"
+msgstr "Logowanie zakończyło się niepowodzeniem!"
+
+msgid "Invalid user or password, or some problem with the data base."
+msgstr "Wpisałeś niepoprawne hasło lub login, tudzież wystąpił problem z bazą danych"
+
+msgid "Log out successful."
+msgstr "Wylogowałeś się."
+
+# msgid "The %2GNU Herds%3 project is an official part of %1the GNU Project%3."
+# msgstr "El proyecto %2GNU Herds%3 es oficialmente parte de %1El Proyecto GNU%3."
+# foot.tpl
+msgid "Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!"
+msgstr "Wszelkie uwagi proszę wysyłać na adres %1. Możesz np. przesłać raport nt. problemów technicznych takich jak niedziające odnośniki, błędy w renderowaniu strony itd. Poza tym jesteśmy otwarci na wszelką krytykę i sugestie. GNU Herds jest dla ciebie!"
+
+# Lost_Password_form.tpl
+msgid "Write your email and click the Send button."
+msgstr "Wpisz swój adres e-mail i wciśnij przycisk 'Wyślij'."
+
+msgid "Send"
+msgstr "Wyślij"
+
+# Lost_Password_form.php
+msgid "You are already logged!. So we suppose you know your password. Anyway, log out and ask for it again if you want we send it to you."
+msgstr "Już jesteś zalogowany! Więc prawdopodobnie znasz swoje hasło. Jeśli nie - wyloguj się i poproś o nie ponownie, a wyślemy ci je na podany adres e-mail"
+
+msgid "For security reasons, GNU Herds does not send passwords by electronic mail."
+msgstr "Ze względów bezpieczeństwa, nie przesyłamy haseł pocztą elektroniczną."
+
+msgid "To get your new password follow the below link."
+msgstr "By uzyskać nowe hasło przejdź do strony z poniższego odnośnika"
+
+msgid "That link will expire in 2 hours:"
+msgstr "Strona wygasa w ciągu dwóch godzin:"
+
+msgid "If you have not asked for a new password, ignore it and your password will not be changed."
+msgstr "Jeśli to nie ty prosiłeś o nowe hasło to zignoruj tę wiadomość, a twoje hasło pozostanie niezmienione."
+
+msgid "An email has been sent to %s with the instructions to change the password."
+msgstr "Na adres %s został wysłany email z instrukcjami jak zmienić hasło."
+
+msgid "Your new password is:"
+msgstr "Twoje nowe hasło to:"
+
+msgid "To improve your security, you should change your password after loging in."
+msgstr "W trosce o własne bezpieczeństwo powinieneś zmienić swoje hasło po zalogowaniu się."
+
+# Entity_form.php
+msgid "An attempt was made to activate a new GNU Herds' account with this email address."
+msgstr "Próbowano utworzyć nowe konto na stronie GNU Herds z użyciem tego adresu email."
+
+msgid "However, you have already an active account!"
+msgstr "Jednakowoż posiadasz już aktywne konto!."
+
+msgid "Follow the below link to get a new password if it is needed:"
+msgstr "Przejdź do poniższej strony jeśli potrzebujesz nowego hasła:"
+
+msgid "If you have not asked for this new account, someone else has asked for it with your email!"
+msgstr "Jeśli to nie ty chciałeś założyć nowe konto, oznacza to że ktoś inny chciał to zrobić podając twój adres email!."
+
+msgid "Your account has been activated!"
+msgstr "Twoje konto zostało aktywowane!."
+
+msgid "The email has been changed!"
+msgstr "Adres email został zmieniony!."
+
+msgid "To change your GNU Herds account's email, first log in and then follow the below link."
+msgstr "By zmienić adres email dla swojego konta na GNU Herds, najpierw zaloguj się, a następnie przejdź do poniższej strony."
+
+msgid "That link will expire in 7 days:"
+msgstr "Ten odnośnik wygaśnie za 7 dni:"
+
+msgid "If you have not asked for it, just ignore this email."
+msgstr "Jeśli to nie ty, po prostu zignoruj ten list."
+
+msgid "Change account's email"
+msgstr "Zmień adres email dla swojego konta"
+
+msgid "An email has been sent to the new email address to validate it."
+msgstr "Na podany adres został wysłany list z prośbą o potwierdzenie."
+
+msgid "An attempt was made to register a new GNU Herds' account with this email address."
+msgstr "Poproszono o nowe konto na stronie GNU Herds z użyciem tego adresu email."
+
+msgid "Your email has been used to create an account at GNU Herds."
+msgstr "Twój email został użyty by utworzyć nowe konto na stronie GNU Herds."
+
+msgid "To activate it follow the below link."
+msgstr "By je aktywować, kliknij poniższy odnośnik."
+
+msgid "That link will expire in 48 hours."
+msgstr "Link traci ważność po upływie 48 godzin."
+
+msgid "To get a new non-expired link just register at gnuherds.org again."
+msgstr "By otrzymać nowy i aktywny odnośnik, po prostu zarejestruj się na gnuherds.org jeszcze raz."
+
+msgid "If you have not asked for this new account, ignore this email."
+msgstr "Jeśli to nie ty chciałeś się zarejestrować na GNU Herds, zignoruj ten list."
+
+msgid "Note: To avoid 'Spam' you can only get this email at the most once each 48 hours."
+msgstr "Uwaga: By uniknąć 'spamowania', możesz otrzymać tylko jeden taki list w ciągu kolejnych 48 godzin."
+
+msgid "If this email is Spam for you, please let it knows to  association AT gnuherds.org"
+msgstr "Jeśli uznasz ten list za 'niechcianą pocztę', prosimy być dał nam znać na adres association AT gnuherds.org"
+
+msgid "Activate account"
+msgstr "Aktywuj konto"
+
+msgid "Success. An email has been sent to %s with the instructions to activate the account."
+msgstr "Sukces. Wysłano list na adres %s z instrukcjami jak aktywować konto."
+
+msgid "If you do not receive such email, you can inform about it at %s."
+msgstr "Jeśli nie otrzymasz przesyłki, możesz nas o tym poinformować pod %s."
+
+# Entity.php
+msgid "ERROR: Wrong magic number!"
+msgstr "BŁĄD: Magiczny numerek niepoprawny"
+
+msgid "ERROR: Can not save the uploaded file!"
+msgstr "BŁĄD: Nie można zapisać pliku"
+
+msgid "ERROR: Can not delete the photo or logo file!"
+msgstr "BŁĄD: Nie można usunąć zdjęcia lub avatara!"
+
+# Home_content.tpl
+msgid "GNU Herds is a not-for-profit %1true-democratic%3 association which %2aims%3 to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
+msgstr "GNU Herds to niedochodowe %1w pełni demokratyczne%3 stowarzyszenie, które %1ma na celu%3 wspomaganie i zachęcanie ludzi do rozwijania swoich kompetencji podczas komercyjnej pracy jako twórcy Wolnego Oprogramowania."
+
+msgid "The first step has been to develop the %1Job Site%2 modules and gather together several %3business models%2. Some of the JobSite's features are:"
+msgstr "Pierwszym etapem naszej drogi było stworzenie strony zajmującej się pośrednictwem pracy tzw. '%1Job Site%2 oraz skolekcjonowanie kilku %3modeli biznesowych%2. Kilka z cech tej strony to:"
+
+msgid "Service is free of any cost to its users"
+msgstr "Usługa jest w pełni darmowa"
+
+msgid "Controlled by its own users"
+msgstr "Jest kontrolowana przez użytkowników"
+
+msgid "FS skills data base"
+msgstr "Baza danych umiejętności WO"
+
+msgid "Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side."
+msgstr "Portal jest otwarty na świeże pomysły i cały czas się rozwija. Jeśli masz jakieś propozycje możesz w każdej chwili wysłać je na listę mailingową %1 . Czekamy na twoją inicjatywę!"
+
+msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
+msgstr "Cały projekt został zrealizowany przez małą %1grupę członków społeczności wspierającej Wolne Oprogramowanie."
+
+msgid "Mailing lists:"
+msgstr "Listy wysyłkowe związane z projektem:"
+
+msgid "is the project main list."
+msgstr " - główna lista projektu."
+
+msgid "to carry on the web application development."
+msgstr " - lista skupiona na procesie tworzenia aplikacji webowej"
+
+msgid "For more information:"
+msgstr "By uzyskać więcej informacji:"
+
+# Charter_content.tpl
+msgid "Charter for GNU Herds (draft)"
+msgstr "Statut GNU Herds (szkic)"
+
+msgid "Title"
+msgstr "Tytuł"
+
+msgid "The name of the Association shall be GNU Herds, to be known publicly as GNU Herds - Free Software Association."
+msgstr "Nazwa Stowarzyszenia winna brzmieć GNU Herds, znana publicznie jako GNU Herds - Free Software Association (Stowarzyszenie na rzecz Wolnego Oprogramowania)."
+
+msgid "Aims"
+msgstr "Cele"
+
+msgid "The aims of the Association shall be to %1assist and encourage%2 people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
+msgstr "Celem Stowarzyszenia ma być %1pomoc i wspieranie%2 ludzi podczas ich komercyjnej pracy jako autorów Wolnego Oprogramowania tak by mogli rozwijać swoje kompetencje i wydajność."
+
+msgid "Membership"
+msgstr "Członkowstwo"
+
+msgid "There shall be two kinds of members, voting members, to be known simply as a member, and non-voting members, to be known as an associate member."
+msgstr "Są dwa rodzaje członkowstwa. Członkowie z prawem do głosowania zwani dalej po prostu \"członkami\", oraz członkowie bez prawa do głosowania zwani dalej \"członkami nadzwyczajnymi\"."
+
+msgid "All members must subscribe to the purposes of GNU Herds and adhere to the Code of Ethics at the penalty of their membership being revoked."
+msgstr "Wszyscy członkowie muszą przyczyniać się do zamierzeń GNU Herds oraz stosować się do Kodeksu Etycznego pod groźba unieważnienia członkowstwa."
+
+msgid "To qualify for voting membership one must show a contribution to the Free Software movement."
+msgstr "By zakwalifikować się jako członek z prawem do głosowania należy okazać dowód swojego wkładu w rozwój ruchu Wolnego Oprogramowania."
+
+msgid "Voting memberships and associate memberships are both free of charge. However, voting memberships %1expire yearly%2 but they can be renewed."
+msgstr "Członkowstwo oraz członkowstwo nadzwyczajne są zwolnione z opłat. Członkowstwo (z prawem do głosowania) %1wygasa po roku%2, przy czym może ono być odnawiane."
+
+msgid "Committee"
+msgstr "Komitet"
+
+# [Ethics Officer] jak nazwać po polsku takie stanowisko?
+#, fuzzy
+msgid "The Committee shall consist of the following: the members of the system administrator team, the web master team, the development team, the translator teams, the public relations team and the Ethics Officer."
+msgstr "Komitet winien składać się z: członków grupy administratorów systemu, grupy webmasterów, grupy programistów, grupy tłumaczy, grupy odpowiedzialnej za stosunki z otoczeniem(PR) oraz Etyka."
+
+msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
+msgstr ""
+
+# To 'skalanie' to specjalnie. Nie wiem czy ten przejaw czegoś co można u mnie nazwać poczuciem humoru, nie zostanie zrozumiany jako patetyczna paplanina jakiejś sekty.
+#, fuzzy
+msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6"
+msgstr "Etyk będzie powołany przez Fundację Wolnego Oprogramowania (Free Software Foundation, Inc.) by zapewnić dochowanie poniższych postulatów:%1 %2Nie zostanie skalane dobre imię GNU.%3 %2Stowarzyszenie będzie działać zgodnie z filozofią %4Wolnego Oprogramowania%5. %3 %2Działania będą prowadzone tak by nie można było ich nadużyć ze szkodą dla filozofii %4Wolnego Oprogramowania%5. %6"
+
+# Projektu GNU? Chyba raczej chodziło o FSF
+#, fuzzy
+msgid "To depart from the above GNU requirements the Association have to discuss it previously with the GNU Project. Any conflict which can not be resolved in the discussion will raise the removal of the GNU Project approval, and so the GNU part of the Association name."
+msgstr "By odstąpić od któregoś powyższych wymagań GNU, Stowarzyszenie musi najpierw przedyskutować dane zagadnienie z [GNU PROJECT]. Wszelkie nierozwiązywalne podczas dyskusji konflikty skutkują utratą aprobaty [Projektu GNU], oraz usunięciem przedrostka GNU z nazwy Stowarzyszenia."
+
+msgid "All other officers will be elected by the membership."
+msgstr "Wszelki inne miejsca w zarządzie obsadzane są przez członków."
+
+# Temu oficerowi to tak od członków?
+#, fuzzy
+msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or him out of office."
+msgstr "Kadencja trwa przez okres 4 lat. Pełnienie wszelkich czynności jest dobrowolne, członkowie zarządu mogą zrezygnować w dowolnym momencie. Jeśli po sześciu miesiącach członkowie są niezadowoleni z pracy członka zarządu, mogą oddać pod głosowanie propozycję jego usunięcia z piastowanego stanowiska."
+
+msgid "Decisions"
+msgstr "Decyzje"
+
+msgid "The goal of the committee is to administer the Association and execute the decisions taken by the members.  Therefore, all decisions will be voted upon by the membership."
+msgstr "Zarząd jest powołany do administrowania Stowarzyszeniem oraz wykonywania decyzji podjętych przez członków. Dlatego też, wszystkie decyzje będą poddawane pod głosowanie pośród członków."
+
+msgid "Voting"
+msgstr "Głosowanie"
+
+msgid "In addition to the issues at hand in a vote, the option to abstain, delegate your vote to another individual, and delegate your vote to the committee shall be present.  Through membership options a member can set one of these to be the default if they do not vote.  The option will initially be set to abstain.  Officer elections, amendments or dissolutions may not be delegated."
+msgstr ""
+
+msgid "Guidelines: %1Do not vote on technical subjects. Just discuss it to get the best technical solution. Only if the time needed for discussion is too long should there be a vote.%2Vote on non-technical subjects.%3"
+msgstr "Zalecenia: %1Nie ma sensu przeprowadzania głosowań w związku z zagadnieniami technicznymi. Należy po prostu wybrać najlepsze rozwiązanie podczas dyskusji. Jeśli nie uda się osiągnąć konsensusu, jedynym wyjściem pozostaje głosowanie.%2Zagadnienia nietechniczne należy poddawać pod głosowanie.%3"
+
+msgid "Special interest groups"
+msgstr "Zespoły wyspecjalizowane"
+
+msgid "Groups will be formed at the discretion of the committee based on the demand within the membership."
+msgstr "Zespoły będą tworzone według uznania komitetu pośród członków w razie stwierdzenia że zainstniała taka potrzeba."
+
+msgid "See the %1e-Voting%2 Special Interest Group section. We could work on the design of the official voting mechanism."
+msgstr "Dowiedz się więcej o %1e-głosowaniach%2 na naszej stronie. Mamy zamiar opracować własny system głosowania."
+
+msgid "Amendments"
+msgstr "Poprawki"
+
+msgid "Any member may motion for amendments to this Charter for any reason.  All proposed amendments will be put to a vote of the general membership."
+msgstr "Każdy członek może zgłaszać poprawki do powyższego Statutu według swojego uznania. Wszelkie proponowane poprawki będą oddawane pod głosowanie pośród członków."
+
+msgid "Dissolution"
+msgstr "Rozwiązanie"
+
+msgid "The committee may motion for dissolution of the Association if they feel it is no longer serving a useful purpose.  Upon the motion being passed 75% of the membership must vote in favour of dissolution for it to occur."
+msgstr "Komitet może zaproponować Rozwiązanie Stowarzyszenia jeśli stwierdzi że nie spełnia ono stawianych mu wcześniej oczekiwań. Po zaproponowaniu Rozwiązania, 75% członków musi głosować 'Za' w głosowaniu, by nastąpiło rozwiązanie."
+
+msgid "Send comments to"
+msgstr "Wyślij komentarz do"
+
+# GNU_Herds_Hackers_Guide_content.tpl
+msgid "GNU Herds coders' guide"
+msgstr "Przewodnik programisty GNU Herds"
+
+msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as several guys already have done, please %1subscribe%2 to the 'gnuherds-app-dev' mailing list or coordinate with one of the team members. Thanks!."
+msgstr "Jeśli chcesz przyłączyć się do zespołu, lub zrobić coś dla projektu sporadycznie, tak jak zrobiło to kilka osób, %1dopisz się%2\" do listy wysyłkowej 'gnuherds-app-dev'. Możesz też poprostu skontaktować się z którymś z dotychczasowych członków. Dziękujemy!"
+
+msgid "To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this coders' guide. If you need support ask for it at"
+msgstr "Jeśli chcesz się pobawić aplikacją internetową %1pobierz%3 jej źródła i %2zainstaluj%3\" na swojej maszynie. Osoby zajmujące się tłumaczeniami nie potrzebują kodów źródłowych. Tłumaczom wysyłamy pliki POT które można przetłumaczyć np. używając aplikacji 'Poedit'. Wszelki wskazówki znajdują się w tym przewodniku dla programistów. Gdybyś miał problemy możesz zapytać pod "
+
+msgid "Read the current draft of %1GNU Herds' Charter%2."
+msgstr "Przeczytaj aktualny szkic %1Statutu GNU Herds%2."
+
+msgid "Roadmap"
+msgstr "Mapa drogowa"
+
+msgid "DONE!"
+msgstr "UKOŃCZONO! "
+
+msgid "ONGOING PROCESS"
+msgstr "NAJBLIŻSZE PLANY"
+
+msgid "Add the member support."
+msgstr "Dodanie obsługi użytkowników."
+
+msgid "Add the FS Job Offers support."
+msgstr "Dodanie wsparcia dla Ofert Pracy WO."
+
+msgid "Give a little progress report, with reference to this web site, to Richard Stallman so they review our activities and tell us what, if anything, needs to be changed."
+msgstr "Stworzyć dla Richarda Stallmana krótki raport odnośnie strony by mógł go zrecenzować i ewentualnie podpowiedzieć nam co należy poprawić."
+
+msgid "To keep the access to the user data physically secure, we have proposed to move the PostgreSQL and HTTP service of the gnuherds.org domain to offices managed by %1FSF%2 staff."
+msgstr "By zadbać o bezpieczeństwo danych, zwróciliśmy się z prośbą o udostępnienie serwera BD i HTTP na potrzeby gnuherds.org do %1FSF%2"
+
+msgid "Translate the web site to other languages."
+msgstr "Przetłumaczyć stronę na inne języki."
+
+msgid "Official job site and association announcement."
+msgstr "Oficjalne obwieszczenie działalności portalu i Stowarzyszenia."
+
+msgid "Work on e-Vote subjects:"
+msgstr "Popracować nad systemem głosowania:"
+
+msgid "Be ready to use at least a primitive e-Vote system, as for example, to count emails."
+msgstr "Przygotować choćby najprymitywniejszy system np. zliczający emaile."
+
+msgid "Work on others e-Vote proposals."
+msgstr "Popracować nad różnymi propozycjami systemu."
+
+msgid "Finish and show the draft of the P2P based e-Vote system proposal."
+msgstr "Ukończyć pracę i stworzyć szkic systemu głosowań opartego o P2P"
+
+msgid "Technologies"
+msgstr "Technologie"
+
+msgid "Web application Architecture"
+msgstr "Architektura aplikacji webowej"
+
+msgid "Web application Design"
+msgstr "Projekt aplikacji webowej"
+
+msgid "Coding Standards"
+msgstr "Wytyczne dla programistów"
+
+msgid "Internationalization and Localization"
+msgstr "Tłumaczenia i lokalizacje"
+
+msgid "How the development team and production is integrated?"
+msgstr "Jak zaaranżowano proces współpracy?"
+
+msgid "Task list"
+msgstr "Lista zadań"
+
+msgid "The Git master server"
+msgstr "Główny serwer GIT"
+
+msgid "The PostgreSQL data base"
+msgstr "Baza danych PostgreSQL"
+
+msgid "How to install a development environment?"
+msgstr "Jak zainstalować środowisko programistyczne?"
+
+msgid "Current work team"
+msgstr "Obecny zespół"
+
+msgid "The list could be outdated:"
+msgstr "Lista może być zdezaktualizowana:"
+
+# FAQ_content.tpl
+msgid "Frequently asked questions (FAQ)"
+msgstr "Najczęstsze pytania (FAQ)"
+
+msgid "Index"
+msgstr "Indeks"
+
+msgid "Back to top"
+msgstr "Do góry"
+
+msgid "Why another Job Site?"
+msgstr "Po co kolejny portal pośrednictwa pracy?"
+
+msgid "Because no one comply the below proposed conditions:"
+msgstr "Ponieważ żaden nie spełnia poniższych warunków:"
+
+msgid "Use a license to cover use of the software over a computer network. We are using the %1GNU AGPLv3%2 license. Anyhow, the project is always open to discuss this and any other subject."
+msgstr "Stosuje licencję podejmującą tematykę użytkowania oprogramowania sieciowego. Stosujemy %1GNU AGPLv3%2, a więc projekt jest wiecznie otwarty na dyskusję pod każdym względem."
+
+msgid "Moreover, the management of the jobsite must be %1controlled by its own users%2 using the democratic policy. That will be guaranteed by the GNU Herds association policy. So, being sure the evolution of the jobsite will be controlled and led by its users."
+msgstr "Ponadto zarządzanie portalem musi być %1kontrolowane przez użytkowników%2 wg. demokratycznych zasad. Będzie to zagwarantowane przez umowę stowarzyszenia GNU Herds. Z pewnością, więc, dalszy rozwój będzie prowadzony i kontrolowany przez użytkowników."
+
+msgid "Supplying support to engage among companies and persons, it doesn't matter the which or the order, helping the raise of a diversity of business models.  That is flexibility."
+msgstr "Dostarcza wsparcie dla zatrudnienia między firmami i pojedyńczymi ludźmi nie bacząc na podziały. Wspiera rozwój różnych modeli biznesowych - jest elastyczny."
+
+msgid "Make it easy the contacts among persons and companies interested in Free Software business."
+msgstr "Zapewnia łatwy kontakt pomiędzy osobami i firmami zainteresowanymi Wolnym Oprogramowaniem."
+
+msgid "Having a global scope, supporting business models based on long-distance jobs. With future technologies the localisation must not be an obstacle to establish relationships about IT services. So, the goal, already got, to translate the webapp to other languages, and to support the fact that a job offer could be inserted in several languages."
+msgstr "Posiada globalny zasięg, ułatwiając pozyskanie pracy zdalnej. Dzięki technologiom przyszłości, lokalizacja nie jest przeszkodą w pozyskiwaniu kontaktów i usłóg IT. Więc nasz cel właściwie jest dość jasny - strona musi być wielojęzyczna i musimy pamiętać że oferty pracy mogą być zamieszczane w kilku językach."
+
+msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
+msgstr "Reasumując: \"%3 %1Celem%2 Stowarzyszenia winno wspomagać i zachęcać ludzi do rozwijania swoich kompetencji podczas komercyjnej pracy jako twórcy Wolnego Oprogramowania.%4\""
+
+msgid "How to subscribe to a job offer?"
+msgstr "Jak mogę ubiegać się o konkretne zlecenie?"
+
+msgid "Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4."
+msgstr "Zarejestruj jako nowa %1Osoba%4, %2Firma%4 lub %3organizacja niedochodowa%4."
+
+msgid "Fill the %1%2%3Qualifications%4 form."
+msgstr "Wypełnij %1%2%3Kwestionariusz kwalifikacyjny%4."
+
+msgid "It is recommended provide the more information possible."
+msgstr "Zaleca się podanie najwięcej informacji jak to tylko możliwe."
+
+msgid "Log in."
+msgstr "Wejdź."
+
+msgid "Subscribe to the offer."
+msgstr "Subskrybuj wybraną ofertę."
+
+msgid "Note that some offers could allow to subscribe only to some entity types: Persons, Companies or non-profit Organizations."
+msgstr "Zważ że niektóre oferty mogą zezwalać na subskrybcje tylko pośród podmiotów określonego typu: Osób, Firm, lub Ogranizacji niedochodowych."
+
+msgid "Who can subscribe to a job offer?"
+msgstr "Kto może ubiegać się o konkretne zlecenie?"
+
+msgid "Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly."
+msgstr "Osoby, Firmy, lub Organizacje niedochodowe które spełniają kryteria zawarte w kwestionariuszu kwalifikacyjnym, czyli właściwie wszyscy którzy potrafili go poprawnie wypełnić."
+
+msgid "Who can post a job offer?"
+msgstr "Kto może umieścić swoją ofertę pracy?"
+
+msgid "Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:"
+msgstr "Dowolna Osoba, Firma, lub organizacja niedochodowa spełniająca wymogi formularza zgłoszeniowego i której oferta mieści się w poniższych kryteriach:"
+
+msgid "Development or maintenance of software for distribution to the public, if all the software to be developed or maintained is %1Free Software%2."
+msgstr "Tworzenie lub rozwój oprogramowania użytecznego dla ogółu, tworzone oprogramowanie musi być %1Wolnym Oprogramowaniem%2."
+
+msgid "Writing or maintenance of documentation for software, if all the software to be documented is %1Free Software%2, and all the documentation to be written or maintained is free in the same sense."
+msgstr "Pisanie lub dostosowywanie dokumentacji dla oprogramowania jeśli całość dokumentowanego oprogramowania jest %1Wolna%2 i tworzona, lub rozwijana dokumentacja jest wolna w podobnym sensie."
+
+msgid "Development or maintenance of software for private use by specific clients, if the clients will have the source code and rights to modify and distribute it, and if the software to be used for the development is all %1Free Software%2."
+msgstr "Tworzenie lub rozwój oprogramowanie dla specyficznych klientów posiadających kody źródłowe i prawa do ich modyfikacji, z użyciem %1Wolnego Oprogramowania%2."
+
+msgid "Providing support of software, if all the software to be supported is %1Free Software%2."
+msgstr "Udzielanie wsparcia technicznego, dla oprogramowania będącego %1Wolnym Oprogramowaniem%2."
+
+msgid "Promotion or marketing of software, if all the software to be promoted and/or marketed is %1Free Software%2."
+msgstr "Promocja lub marketing oprogramowania, które jest %1Wolnym Oprogramowaniem%2."
+
+msgid "Installation of software, if all the software to be installed is %1Free Software%2."
+msgstr "Instalacja oprogramowania, jeśli jest to %1Wolne Oprogramowanie%2."
+
+msgid "Report to %1 about any offer that seems improper."
+msgstr "Wszelkie ofery wyglądające na niepoprawne można zgłaszać pod %1 ."
+
+msgid "Which criteria are applied to classify a program, language, protocol, specification, software distribution, etc. as Free or Non-Free Software?"
+msgstr "Jakie kryteria są stosowane przy kwalifikacji programu, języka, protokołu, specyfikacji, dystrybucji, itp. jako Wolnego lub Niewolnego Oprogramowania?"
+
+msgid "For a program, read the %1Free Software%2 definition to know the criteria."
+msgstr "Dla programów - zapoznaj się z definicją %1Wolnego Oprogramowania%2 by poznać kryteria."
+
+msgid "For development languages, protocols, specifications, etc. the meaningful question is whether it is %1supported%3 by software licensed under any of the %2Free Software Licenses%3: BSD, GPL, etc.  Can you use it with Free Software exclusively?"
+msgstr "Dla języków programowania, protokołów, specyfikacji, itp. ważnym pytaniem jest czy są one %1wspierane%3 przez oprogramowanie publikowane na jednej z %2Licencji Wolnego Oprogramowania%3:BSD, GPL, itp. oraz: Czy jest możliwe by je stosować posługując się wyłączeni Wolnym Oprogramowaniem?"
+
+msgid "For software distributions, they must not recommend, promote or grant legitimacy to Non-Free Software."
+msgstr "Dla dystrybucji - nie może zalecać, promować, lub gratyfikować za wybór, oprogramowania niewolnego."
+
+msgid "Currently, the tags applyed to classify skills are:"
+msgstr "Obecne 'tagi' stosowane do zaklasyfikowania umiejętności:"
+
+msgid "only for software distributions"
+msgstr "wyłączenie dla dystrybucji"
+
+msgid "For example, applying such criteria to Java:"
+msgstr "Przykład zastosowania tych kryterów dla Javy:"
+
+msgid "The %1Java%2 technology-skill is tagged as %3Free Software%4 due to there are free software Java compilers."
+msgstr "Umiejętność %1Java%2 jest zaklasyfikowana jako %3Wolne Oprogramowanie%4 gdyż istnieje kilka Wolnych kompilatorów Javy."
+
+msgid "However the below Sun Java technologies are tagged as %1Non-Free Software%2 because of the license you have to agree to download them is not a Free Software license. Anyhow, most of the Java Sun technologies are GPL'd. Sun has made substantial progress towards freeing the JDK under the GPL. The %3IcedTea%5 project is filling in the %4gaps%5."
+msgstr "Jednocześnie poniższe technologie związane z Javą od Sun są 'otagowane' jako %1niewolne oprogramowanie%2 ponieważ licencja którą musisz przyjąć nie jest licencją Wolnego Oprogramowania. Większość części Javy została wydana na GPL. Sun wykonał spory postęp w kierunku uwalniania JDK. Istnieje też projektu %3IcedTea%5 wypełniający pewne %4luki%5."
+
+msgid "Applying it to .NET:"
+msgstr "Zastosowanie powyższych regół do .NET:"
+
+msgid "%1Microsoft .NET%2 is tagged as %3Non-Free Software%4."
+msgstr "%1Microsoft .NET%2 jest %3niewolnym oprogramowaniem%4."
+
+msgid "%1Mono .NET%2 is a set of tools under GPL, LGPL and MIT, or dual licenses. It is tagged as %3Free Software%4."
+msgstr "%1Mono .NET%2 to zbiór narzędzi wydanych na licencjach GPL, LGPL, MIT lub kilku jednocześnie. Klasyfikowane jest jako %3Wolne Oprogramowanie%4."
+
+msgid "%1.NET%2 is tagged as %3Non-Free Software%4 because of the Mono tools are not 100% complete. Mono does not cover all .NET"
+msgstr "%1.NET%2 jest traktowane jako %3niewolne oprogramowanie%4 ponieważ Mono nie jest ukończone w 100%. Mono nie obejmuje jeszcze całej funkcjonalności .NET"
+
+msgid "%1C#%2 is tagged as %3Free Software%4 due to there are free software C# compilers."
+msgstr "%1C#%2 jest traktowany jako %3Wolny%4 ze wględu na istnienie kilku wolnych kompilatorów tego języka."
+
+msgid "Applying it to some software distributions:"
+msgstr "Zastosowanie regół w odniesieniu do dystrybucji:"
+
+msgid "%1 is %3Almost-Free Software%4 because it contains Non-Free Software %2 in its kernel."
+msgstr "%1 to %3Prawie-Wolne Oprogramowanie%4 gdyż posiada niewolne oprogramowanie (%2) dołączone do jądra."
+
+msgid "%1 is %2Free Software%3 because it does not ship anything that is Non-Free Software."
+msgstr "%1 to %2Wolne Oprogramowanie%3 gdyż nie zawiera jakiegokolwiek niewolnego oprogramowania"
+
+msgid "%1 is not classified yet."
+msgstr "%1 jeszcze nie sklasyfikowano."
+
+msgid "%1 is %2Almost-Free Software%3. Debian is a general term which refer to Debian GNU/Linux and all Debian %4ports%6. The Debian project %5offers%6 the download of some Non-Free Software packages from its archives and website."
+msgstr "%1 to %2Prawie Wolne Oprogramowanie%3. Debian to termin odnoszący się ogólnie do dystrybucji Debian GNU/Linux i jej %4adaptacji%6. Sam projekt Debian %5oferuje%6 do pewnych niewolnych paczek ze swojego archiwum i strony internetowej."
+
+msgid "%1 is %2Partially-Free Software%3 %4because%5 it is made of many programs; some are free and some are not."
+msgstr "%1 to %2Oprogramowanie Częściowo Wolne %3 %4gdyż%5 składa się z wielu aplikacji wydawanych na różnych licencjach i niektóre z nich nie są Wolne."
+
+msgid "%1 is %3Free Software%4 because it does not ship anything that is Non-Free Software neither work to provide easy access to Non-Free Software. A Non-Free Software %2 not removed from gNewSense is a bug. The gNewSense's %5policy%6 is to delete any non-free software found in the Linux kernel or elsewhere in the GNU/Linux system."
+msgstr "%1 to %3Wolne Oprogramowanie%4 gdyż nie zawiera jakiegokolwiek niewolnego oprogramowania, ani nie ułatwia jego pozyskania. Niewolna część ( %2 ) nie usunięta gNewSense to błąd.  %5Założeniem%6 gNewSense jest usuwanie jakiegokolwiek niewolnego oprogramowania znalezionego w jądrze Linuxa, lub gdziekolwiek w systemie operacyjnym GNU/Linux."
+
+msgid "%1 is %2Almost-Free Software%3 because although it does not ship anything that is Non-Free Software it provides for easy installation of Non-Free Software through the %4ports system%5. Not many packages though: Java and a few others."
+msgstr "%1 to %2Prawie Wolne Oprogramowanie%3 gdyż samo nie zawiera niewolnego oprogramowanie jednakowoż poprzez %4system portów%5 umożliwia łatwą instalację niewolnego oprogramowania. Nie jest go dużo (niewolna Java i kilka pomniejszych).."
+
+msgid "%1 and %2 are %4Almost-Free Software%5 because provide for easy installation of some Non-Free Software products through the %6ports system%7. Besides both contain Non-Free Software %3 in its kernel too."
+msgstr "%1 i %2 są %4Oprogramowaniem Prawie Wolnym%5 gdyż umożwiają łatwą instalację niewolnego oprogramowania poprzez %6system portół%7. Ponadto zawierają niewolne oprogramowanie ( %3 ) w jądrze."
+
+msgid "%1Mac OS X%2 is tagged as %3Non-Free Software%4."
+msgstr "%1Mac OS X%2 to %3niewolne oprogramowanie%4."
+
+msgid "%1Microsoft Windows Vista%2 is tagged as %3Non-Free Software%4."
+msgstr "%1Microsoft Windows Vista%2 to %3niewolne oprogramowanie%4."
+
+msgid "Note that not all %1 are Non-Free Software, because %1 can be data (not compiled source code) licensed under a Free Software license. However, we need to verify that it really is data, because the non-free object code is typically dressed up as data."
+msgstr "Zauważ że %1 to nie zawsze niewolne oprogramowanie, %1 może być danymi (nieskompilowanym kodem źródłowym) publikowanym na Wolnej Licencji. Jednakowoż musimy sprawdzić czy aby na pewno są to dane, ponieważ mogą one je jedynie udawać będąc w rzeczywistości kodem wykonywalnym."
+
+msgid "How is the Job Site module related to the GNU Herds' association?"
+msgstr "Jakie są relacje między portalem pośrednictwa pracy, a Stowarzyszeniem GNU Herds?"
+
+msgid "The Job Site module is %1controlled%2 by the association. Any new module will be controlled by the association too."
+msgstr "Portal jest %1kontrolowany%2 przez Stowarzyszenie. Wszelkie nowe inicjatywy będą traktowana na podobnych zasadach."
+
+msgid "Who can join or register?"
+msgstr "Kto może się przyłączyć lub zarejestrować?"
+
+msgid "Any entity type can join the association or just register into the web application and use its services. Showing a Free Software contribution is not a requirement to register or join. It is just a requirement to be able to %1vote%2 at the association."
+msgstr "Dowolny podmiot może przyłączyć się do stowarzyszenia, albo jedynie zarejestrować się na portalu i korzystać z jego usług. Okazywanie wkładu w rozwój Wolnego Oprogramowania nie jest obligatoryjne - jest on jedynie wymagany od członków chcących brać udział w %1głosowaniach%2."
+
+msgid "Can I not be a member of the association because I am a member of a company?"
+msgstr "Czy mogę nie zostać członkiem Stowarzyszenia ponieważ jestem członkiem firmy?"
+
+msgid "You can. You can be in any case an \"associate member\" or a \"voting member\"."
+msgstr "Nie. Każdy może zostać \"członkiem\" lub \"członkiem nadzwyczajnym\"."
+
+msgid "The association's %1Charter%2 reads:"
+msgstr "W %1Statucie%2 widnieje zapis:"
+
+msgid "How many votes is a company able to obtain?"
+msgstr "Ile głosów może uzyskać jedna firma?"
+
+msgid "A company could be able to get:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4"
+msgstr "Firma możę uzyskać:%1 %2jeden głos jako \"firma\" oraz: %3 %2dowolną ilość głosów oddaną przez pracowników, przy czym każdy z nich musi udokumentować swój wkład w rozwój Wolnego Oprogramowania%3%4"
+
+msgid "A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?"
+msgstr "Firma zatrudniająca stu ludzi może uzyskać sto głosów, podczas gdy moja trzy osobowa firma jedynie trzy?"
+
+msgid "The company gets 100 voting-voices only if each one of its workers has individually contributed to the free software community, and each one of its workers take the personal decision to join and vote at the association."
+msgstr "Firma otrzymuje 100 głosów jedynie gdy każdy z jej pracowników wykaże się własnym wkładem na rzecz społeczności Wolnego Oprogramowania, oraz gdy sam zdecyduje się oddać głos będąc 'członkiem' Stowarzyszenia"
+
+msgid "Why voting membership is on a yearly basis?"
+msgstr "Dlaczego członkowstwo trwa tylko rok?"
+
+msgid "Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low."
+msgstr "Mogło by dojść do sytuacji w której Stowarzyszenia nie da się rozwiązać, ze względu na dużą ilość mało aktywnych członków."
+
+msgid "The membership renew process is automated to reduce bureaucracy."
+msgstr "Proces odnawiania członkowstwa pozwala wyeliminować biurokratyzację."
+
+msgid "e-Voting"
+msgstr "Elekcja"
+
+msgid "Initially, GNU Herds' members can vote showing their hands, sending an email."
+msgstr "Inicialmente, los afiliados a GNU Herds pueden votar a mano alzada, enviando un correo electrónico."
+
+msgid "The GNU Herds' official voting mechanism is not intented to:"
+msgstr "El mecanismo de votación oficial de GNU Herds no pretende:"
+
+msgid "be used as a country voting system."
+msgstr "ser usado como sistema de votación de un país."
+
+msgid "be used as the FS community voting system. The FS community does not need a voting system. As Barry Fitzgerald exposes:"
+msgstr "ser usado como sistema de votación para la comunidad de Software Libre. Dicha comunidad no necesita un sistema de votación. Como Barry Fitzgerald expuso:"
+
+msgid "The GNU Herds' official voting mechanism is only intented to:"
+msgstr "El sistema de votación de GNU Herds solo pretende:"
+
+msgid "be used as voting system to this Association. The voting mechanism must be used as a tool to keep GNU Herds moving in the right direction, helping members guide the board members. It can also be used to get opinions about ideas, etc.: binding vote, opinion vote."
+msgstr "ser usado como sistema de votación para esta Asociación. El mecanismo de votación debe ser usado como una herramienta para mantener GNU Herds en la dirección correcta, ayudando a los afiliados a guiar al Comité. También puede ser usado para obtener opiniones acerca de ideas, etc.: voto vinculante, voto de opinión."
+
+msgid "See references to documentation at bottom of this page."
+msgstr "Véase la documentación de referencia al pie de esta página."
+
+msgid "Options"
+msgstr "Opciones"
+
+msgid "There are several projects which try to solve the e-Voting trouble. The goal of each project can be different. Some of them has modified its aims or are stalled:"
+msgstr "Hay varios proyectos que intentan resolver el problema del voto electrónico. El objetivo de cada proyecto puede ser diferente. Algunos de ellos han modificado sus pretensiones o no están activos:"
+
+msgid "The development has been discontinued due to"
+msgstr "El desarrollo ha sido suspendido debido a que"
+
+msgid "It seems to support the %1Condorcet method%2 and even \"a mix of secret and public ballots\"."
+msgstr "Parece que soporta el %1método Condorcet%2 e incluso \"una mezcla de papeletas secretas y publicas\"."
+
+msgid "Some free GNU/Linux distributions use it own voting system."
+msgstr "Algunas distribuciones libres de GNU/Linux usan su propio sistema de votación."
+
+msgid "Stalled since March 2002."
+msgstr "Congelado desde marzo de 2002."
+
+msgid "It is dormant."
+msgstr ""
+
+msgid "It is interested in exploring alternative voting methods."
+msgstr "Enfocado a la exploración de métodos de votación alternativos."
+
+msgid "It is too young to have released any useful code."
+msgstr "Es demasiado joven. Su código fuente no es útil."
+
+msgid "It has already been used in at least one election for the Legislative Assembly in the Australian Capitol Territory in October 2001 and is approved for use in future elections."
+msgstr "Ha sido ya usado en al menos unas elecciones para el Legislative Assembly en el Australian Capitol Territory en octubre de 2001, y está aprobado para su uso en futuras elecciones."
+
+msgid "It is a already implemented, working solution for electronic voting."
+msgstr "Es una solución para voto electrónico que ya está desarrollada y funciona."
+
+msgid "References to documentation"
+msgstr "Documentación de referencia"
+
+msgid "A 16 page nontechnical paper, on 16 requirements that a voting system \"must\" meet. Read it to know a bit more about efforts underway at coming up with secure voting (and what may constitute a definition of secure voting). Consider in particular the requirement that anonimity be maintained."
+msgstr "Un artículo no técnico de 16 páginas, sobre los 16 requisitos que un sistema de voto \"debe\" cumplir. Léase para conocer un poco mas acerca del proceso necesario para obtener un sistema de voto seguro, y lo que puede constituir la definición del mismo. Considérese en particular el requerimiento de mantener el anonimato."
+
+msgid "We want remark:"
+msgstr "Destacamos:"
+
+msgid "Note that all those systems are country voting oriented."
+msgstr "Nótese que todos esos sistemas están orientados a elecciones de país."
+
+# FS_Job_Offers_form.tpl
+msgid "Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc."
+msgstr "Contacte con algunos de los mejores expertos en Software Libre disponibles y sus empresas. Solucione sus problemas hoy con los mejores administradores de sistemas, desarrolladores, equipos de calidad, documentalistas, etc."
+
+msgid "Are you a Free Software author? You could register and add your qualifications."
+msgstr "¿Es usted un autor de Software Libre?. Usted puede registrarse y añadir sus cualificaciones."
+
+msgid "The simplest way to post a job offer is to email all the details you have about it to %1"
+msgstr "La forma más fácil de publicar una oferta de empleo es enviar todos los detalles de la oferta a %1"
+
+msgid "The cost is 0 cents."
+msgstr "El coste es de 0 céntimos."
+
+msgid "The GNU Herds project does not charge for any of its services."
+msgstr "GNU Herds nie pobiera jakichkolwiek opłat od użytkowników."
+
+msgid "There are no active job offers"
+msgstr "No hay ofertas de empleo activas"
+
+msgid "Vacancy title"
+msgstr "Título de la vacante"
+
+msgid "Location"
+msgstr "Ubicación"
+
+msgid "Offer date"
+msgstr "Fecha de la oferta"
+
+msgid "Offered by"
+msgstr "Ofrecido por"
+
+msgid "telework"
+msgstr "teletrabajo"
+
+# FS_Donation_Pledge_Groups_form.tpl
+msgid "A pledge is a promise somebody has made to donate something, for example two cents, to get some task done."
+msgstr "Una promesa es un compromiso de donación, por ejemplo de dos céntimos, que alguien hace a cambio de que se realice alguna tarea."
+
+msgid "If you like some of the ideas listed in the pledge groups below, you can join to by contributing your two cents to help get it converted into an actual job offer. You can even edit it to add your ideas or corrections."
+msgstr "Si a usted le gusta alguna de las ideas listadas en los siguientes grupos de promesas, usted puede sumar contribuyendo sus dos céntimos para ayudar a que dicho grupo se convierta en una oferta de trabajo real. Usted puede también editar el grupo para añadir sus ideas o correcciones."
+
+msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I will do it%2\"."
+msgstr "Si a usted le gustaría llevar a cabo alguna de las siguientes tareas, a cambio del dinero apuntado en la tarea, simplemente ábrala y pulse el botón \"%1Yo lo haré%2\"."
+
+msgid "Donation pledge group title"
+msgstr "Título del grupo de promesas de donación"
+
+msgid "Last update"
+msgstr "Última actualización"
+
+msgid "There are no entries"
+msgstr "No hay entradas"
+
+# FS_Look_For_Volunteers_form.tpl
+msgid "Looking for volunteers"
+msgstr "Búsqueda de voluntarios"
+
+msgid "If you would like to donate something for fulfilling a task, please create it as a %1FS pledge%2 entry instead of as a %3looking for volunteers%4 one."
+msgstr "Si usted donaría algo por la realización de la tarea, por favor créela como %1Promesa SL%2 en lugar de como %3búsqueda de voluntarios%4."
+
+msgid "New look for volunteers"
+msgstr "Nueva búsqueda de voluntarios"
+
+msgid "Volunteer title"
+msgstr "Título del voluntario"
+
+msgid "Entry date"
+msgstr "Fecha de la entrada"
+
+msgid "Created by"
+msgstr "Creado por"
+
+# View_Job_Offer_form.php
+msgid "To be able to subscribe your application, you have to fill the Qualification form."
+msgstr "Para poder subscribir su solicitud, usted tiene que rellenar el formulario de Cualificaciones."
+
+msgid "To be able to subscribe your application, you have to log in first."
+msgstr "Para poder subscribir su solicitud, usted tiene que identificarse primero."
+
+msgid "See the"
+msgstr "Véase la"
+
+msgid "Note that this job offer is not looking for a"
+msgstr "Observe que esta oferta de empleo no está buscando una"
+
+msgid "You can not subscribe to you own offer."
+msgstr "Usted no puede suscribirse a su propia oferta."
+
+msgid "ERROR: Unexpected condition"
+msgstr "ERROR: Condición inesperada"
+
+# View_Job_Offer_form.tpl
+msgid "Your application has been subscribed to this job offer"
+msgstr "Twoja aplikacja, dotycząca tej oferty, została wysłana"
+
+msgid "The edition of this offer is not finished! It is not ready to be published."
+msgstr "Pisanie tej oferty nie zostało ukończone!. Nie jest gotowa do publikacji."
+
+msgid "View contact information"
+msgstr "Zobacz informacje o kontrakcie"
+
+msgid "Job offer"
+msgstr "Oferta pracy"
+
+msgid "Persons"
+msgstr "Osoby"
+
+msgid "Companies"
+msgstr "Firmy"
+
+msgid "non-profit Organizations"
+msgstr "Organizacje pożytku publicznego"
+
+msgid "or"
+msgstr "lub"
+
+msgid "Vacancies"
+msgstr "Wakaty"
+
+msgid "Ref."
+msgstr "Ref."
+
+msgid "Contract type"
+msgstr "Rodzaj umowy"
+
+msgid "Deadline"
+msgstr "Termin oddania"
+
+msgid "Wage rank"
+msgstr "Wysokość zarobków"
+
+msgid "Salary"
+msgstr "Pensja"
+
+msgid "Estimated effort"
+msgstr "Przybliżona ilość pracy"
+
+msgid "Professional experience since"
+msgstr "Doświadczenie zawodowe od"
+
+msgid "Experience since"
+msgstr "Doświadczenie od"
+
+msgid "Academic qualification"
+msgstr "Wykształcenie akademickie"
+
+msgid "Skills"
+msgstr "Umiejętności"
+
+msgid "Skill"
+msgstr "Umiejętność"
+
+msgid "Languages"
+msgstr "Języki"
+
+msgid "Language"
+msgstr "Język"
+
+msgid "Description"
+msgstr "Opis"
+
+msgid "Certifications"
+msgstr "Certyfikaty"
+
+msgid "Experience with FS projects"
+msgstr "Doświadczenie zdobyte w projektach WO"
+
+msgid "Currently you are"
+msgstr "Obecnie jesteś"
+
+msgid "Telecommute"
+msgstr "Praca zdalna"
+
+msgid "any location"
+msgstr "dowolna lokalizacja"
+
+msgid "required"
+msgstr "wymagania"
+
+msgid "Subscribe to this job offer"
+msgstr "Zgłoś chęć współpracy"
+
+# View_Donation_Pledge_Group_form.tpl
+msgid "Donation pledge group"
+msgstr "Grupa dotująca"
+
+msgid "Donations"
+msgstr "Dotacje"
+
+msgid "Workers"
+msgstr "Pracownicy"
+
+msgid "donation pledge"
+msgstr "zobowiązanie wykonania dotacji"
+
+msgid "I want to add my %1donation pledge%2 in exchange for getting those tasks done."
+msgstr "Chcę dodać %1dotację%2 wzamian za wykonanie tych zadań."
+
+msgid "I will do it"
+msgstr "Podejmę się tego"
+
+msgid "in exchange for that money."
+msgstr "w zamian za tą sumę."
+
+# View_Look_For_Volunteers_form.php
+# # msgid ""
+# # msgstr ""
+# View_Qualifications_form.tpl
+msgid "The edition of these qualifications is not finished! It does not comply the minimum requisites to allow it subscribe to offers."
+msgstr "Edycja kwalifikacji nie została skończona!. Nie spełniają one minimalnych wymagań pozwalających na zgłoszenie się do projektu."
+
+msgid "Edit section"
+msgstr "Edutuj sekcję"
+
+msgid "edit"
+msgstr "edytuj"
+
+msgid "Born"
+msgstr "Urodzony"
+
+msgid "Nationality"
+msgstr "Narodowość"
+
+msgid "Nationalities"
+msgstr "Narodowości"
+
+msgid "Besides license to work at"
+msgstr "Poza zezwoleniami do pracy w"
+
+msgid "Landline"
+msgstr "Telefom stacjonarny"
+
+msgid "Mobile phone"
+msgstr "Telefon komórkowy"
+
+msgid "IP phone or videophone"
+msgstr "telefon internetowy bądź widoefon"
+
+msgid "none"
+msgstr "żaden"
+
+msgid "not specified"
+msgstr "nie wybrany"
+
+msgid "Contributions to FS projects"
+msgstr "Wkład w projekty WO"
+
+msgid "Yes"
+msgstr "Tak"
+
+msgid "No"
+msgstr "Nie"
+
+msgid "Delete qualifications"
+msgstr "Skasuj kwalifikacje"
+
+msgid "Delete qualifications from the data base"
+msgstr "Skasuj kwalifikacje z bazy danych"
+
+# View_Qualifications_form.php
+msgid "ERROR: The identifier to show has not been specified!"
+msgstr "BŁĄD: Nie wybrano identyfikatora do pokazania!."
+
+# FS_Business_Networks_content.tpl
+msgid "These are the possible business models we know about:"
+msgstr "Możliwe modele biznesowe o których wiemy:"
+
+msgid "Its"
+msgstr "Jego"
+
+msgid "draft"
+msgstr "zarys"
+
+msgid "December"
+msgstr "Grudzień"
+
+msgid "Flexible Business Networks"
+msgstr "Flexible Business Networks"
+
+msgid "If your company is not able to undertake fully a project, instead of losing the contract, you %1could choose to work with %2outsourcers%3. You can cut costs and foster competition between vendors, while taking advantage of vendor specialization and technical expertise%4."
+msgstr "Jeśli Twoja firma nie jest w stanie zrealizować projektu, zamiast tracić kontrakt %1możesz zawiązać współpracę z %2pracownikami zewnętrznymi%3. Możesz zmiejszyć koszty i zwiększyć konkurencję między podwykonawcami, jednocześnie korzystać z ich specjalizacji i doświadczenia%4."
+
+msgid "Cooperatives & non-profit Franchises"
+msgstr "Przywileje organizacji pożytku publicznego"
+
+msgid "Following the way of successful organizations as %1Best Western%2 or %3Mondragon Cooperative Corporation%2. You can read comments at the %4 email list."
+msgstr "Działając podobnie do organizacji odnoszących sukcesy takich jak %1Best Western%2 lub %3Mondragon Cooperative Corporation%2. Możesz przeczytać komentaże na liście mailowej %4."
+
+# Person form: Person_form.tpl, Person_form.php
+# Person_form.tpl
+msgid "Read the %1Membership%2 Charte rsection."
+msgstr "Przeczytaj regulamin %1członkowski%2."
+
+msgid "Update person data"
+msgstr "Aktualizuj dane osobowe"
+
+msgid "Some fields does not match."
+msgstr "Część pól się nie zgadza."
+
+msgid "Please try again."
+msgstr "Spróbuj ponownie."
+
+msgid "The fields indicated with an asterisk %1*%2 are required to complete this transaction; other fields are optional."
+msgstr "Pola oznaczone gwiazdką %1*%2 są wymagane do zakończenia operacji."
+
+msgid "Account identification"
+msgstr "Informacje o koncie"
+
+msgid "Email"
+msgstr "Adres email"
+
+msgid "Change the account email"
+msgstr "Zmień adres email"
+
+msgid "Password"
+msgstr "Hasło"
+
+msgid "Retype Password"
+msgstr "Powtórz hasło"
+
+msgid "Change the account password"
+msgstr "Zmień hasło"
+
+msgid "Person"
+msgstr "Osoba"
+
+msgid "First name"
+msgstr "Imię"
+
+msgid "Last name"
+msgstr "Nazwisko"
+
+msgid "Middle name"
+msgstr "Drugie imię"
+
+msgid "Year of birth"
+msgstr "Rok urodzenia"
+
+msgid "Photo"
+msgstr "Fotografia"
+
+msgid "Default image size"
+msgstr "Domyślny rozmiar fotografii"
+
+msgid "Delete"
+msgstr "Skasuj"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Web site"
+msgstr "Strona web"
+
+msgid "ISO Nationalities"
+msgstr "Narodowości ISO"
+
+msgid "Mark to delete"
+msgstr "Zaznacz do skasowania"
+
+msgid "More"
+msgstr "Więcej"
+
+msgid "Save and or delete and stay here to add more"
+msgstr "Zapisz i/lub skasuj oraz zostań by dodać więcej"
+
+msgid "License to work at"
+msgstr "Pozwolenie na pracę w"
+
+msgid "Besides the inferred from the ISO nationalities fields"
+msgstr "Poza wynikającymi z narodowości ISO"
+
+msgid "Postal address"
+msgstr "Adres pocztowy"
+
+msgid "Street"
+msgstr "Ulica"
+
+msgid "Suite"
+msgstr "Mieszkanie"
+
+msgid "City"
+msgstr "Miasto"
+
+msgid "State / Province"
+msgstr "Województwo"
+
+msgid "Postal code"
+msgstr "Kod pocztowy"
+
+msgid "Country"
+msgstr "Kraj"
+
+msgid "Interactive communication medias"
+msgstr "Metody komunikacji interaktywnej"
+
+msgid "Save"
+msgstr "Zapisz"
+
+msgid "Register"
+msgstr "Zarejestruj"
+
+msgid "Delete me from this Association"
+msgstr "Usuń mnie z tej grupy"
+
+# Person_form.php
+msgid "You can not access this section been logged as"
+msgstr "Odmowa do tej sekcji będą zalogowanym jako"
+
+msgid "Your information has been deleted from the data base. You have been logout automatically."
+msgstr "Twoje dane zostały usunięte z bazy danych. Zostałeś automatycznie wylogowany."
+
+msgid "Updated successfully"
+msgstr "Uaktualniono dane"
+
+msgid "Invalid email address"
+msgstr "Nieprawidłowy adres email"
+
+msgid "Password fields differ"
+msgstr "Pola hasła różnią się"
+
+# XX: msgid "If you want to qualify to vote, you have to supply both the contributions and your public key."
+# XX: msgstr "Si usted quiere obtener el derecho de voto, tiene que rellenar tanto el campo contribución como su clave pública. "
+# XX: msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
+# XX: msgstr "Su contribución al Software Libre será evaluada. Se le enviará el resultado vía correo electrónico, habilitando su capacidad para votar en el caso de una evaluación positiva."
+# Company form: Company_form.tpl, Company_form.php
+# Company_form.tpl
+msgid "Update company data"
+msgstr "Uaktualnij dane firmy"
+
+msgid "Company"
+msgstr "Firma"
+
+msgid "Photo or logo"
+msgstr "Fotografia lub logo"
+
+msgid "Delete me"
+msgstr "Skasuj mnie"
+
+# Company_form.php
+# msgid ""
+# msgstr ""
+
+#
+# non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
+#
+# non-profit_Organization_form.tpl
+#, fuzzy
+msgid "Update non-profit organization data"
+msgstr "Uaktualnij dane organizacji pożytku publicznego"
+
+#, fuzzy
+msgid "non-profit"
+msgstr "pożytku publicznego"
+
+#, fuzzy
+msgid "non-profit Organization"
+msgstr "Organizacja pożytku publicznego"
+
+#, fuzzy
+msgid "Name"
+msgstr "Nazwa"
+
+# non-profit_Organization_form.php
+# msgid ""
+# msgstr ""
+
+#
+# Qualifications form: Qualifications_edit-guide-bar.tpl, Qualifications_*_form.tpl, Qualifications_form.php
+#
+#, fuzzy
+msgid "New qualifications"
+msgstr "Nowe kwalifikacje"
+
+#, fuzzy
+msgid "Update qualifications data"
+msgstr "Uaktualnij dane kwalifikacji"
+
+msgid "Check qualifications view"
+msgstr "Sprawdź kwalifikacje"
+
+#, fuzzy
+msgid "Previous"
+msgstr "Poprzednia"
+
+#, fuzzy
+msgid "Save and move to the previous section"
+msgstr "Zapisz zmiany i wróć do poprzedniej sekcji"
+
+#, fuzzy
+msgid "Next"
+msgstr "Następna"
+
+#, fuzzy
+msgid "Save and move to the next section"
+msgstr "Zapisz zmiany i idź do następnej sekcji"
+
+#, fuzzy
+msgid "Finish"
+msgstr "Zakończ"
+
+#, fuzzy
+msgid "Save and finish the edition"
+msgstr "Zapisz zmiany i zakończ edycję"
+
+# Qualifications_edit-guide-bar.tpl
+#, fuzzy
+msgid "Save and move to section"
+msgstr "Zapisz zmiany i przejdź do sekcji"
+
+#, fuzzy
+msgid "Academic"
+msgstr "Wykształcenie"
+
+#, fuzzy
+msgid "FS projects"
+msgstr "Projekty WO"
+
+#, fuzzy
+msgid "Residence location"
+msgstr "Adres"
+
+msgid "Contract"
+msgstr "Kontakt"
+
+# Qualifications_profiles_etc_form.tpl
+#, fuzzy
+msgid "Technical"
+msgstr "Techniczne"
+
+#, fuzzy
+msgid "Staff with the below characteristic:"
+msgstr "Współpracownik z poniższymi cechami:"
+
+#, fuzzy
+msgid "Press Ctrl key to choose more than one Profile"
+msgstr "Naciśnij Ctrl by zaznaczyć więcej niż jeden profil"
+
+#, fuzzy
+msgid "Profiles"
+msgstr "Profile"
+
+#, fuzzy
+msgid "Product profiles"
+msgstr "Profile produktów"
+
+#, fuzzy
+msgid "Professional profiles"
+msgstr "Profile zawodowe"
+
+#, fuzzy
+msgid "Field profiles"
+msgstr "Grupy tematyczne"
+
+# Qualifications_academic_form.tpl
+#, fuzzy
+msgid "Degree"
+msgstr "Tytuł"
+
+#, fuzzy
+msgid "Academic level"
+msgstr "Poziom akademicki"
+
+#, fuzzy
+msgid "Degree granted"
+msgstr "Tytuł przyznano"
+
+#, fuzzy
+msgid "Start date"
+msgstr "Data początkowa"
+
+#, fuzzy
+msgid "Finish date"
+msgstr "Data końcowa"
+
+#, fuzzy
+msgid "Institution"
+msgstr "Instytucja"
+
+#, fuzzy
+msgid "University or education institution"
+msgstr "Uniwersystel lub instytucja edukacyjna"
+
+#, fuzzy
+msgid "Institution's URI"
+msgstr "Adres URI insytucji"
+
+#, fuzzy
+msgid "Short comment"
+msgstr "Krótki opis"
+
+# Qualifications_skills_form.tpl
+#, fuzzy
+msgid "Some fields offer suggestions."
+msgstr "Niektóre pola zawierają podpowiedzi."
+
+#, fuzzy
+msgid "The form has not been saved yet."
+msgstr "Formularz nie został jeszcze zapisany."
+
+#, fuzzy
+msgid "Please, choose or edit again."
+msgstr "Wybierz lub edytuj ponownie."
+
+#, fuzzy
+msgid "Checks"
+msgstr "Weryfikacja"
+
+#, fuzzy
+msgid "Non-Free or Pending skills are not showed in the view."
+msgstr "Niewolne oraz oczekujące umiejętności nie są pokazane w tym widoku."
+
+#, fuzzy
+msgid "Add skills and theirs knowledge and experience levels."
+msgstr "Dodaj umiejętności, poziom ich znajomości i doświadczenia."
+
+#, fuzzy
+msgid "Knowledge level"
+msgstr "Poziom znajomości"
+
+#, fuzzy
+msgid "Experience level"
+msgstr "Poziom doświadczenia"
+
+msgid "Add"
+msgstr "Dodaj"
+
+#, fuzzy
+msgid "This skill is pending for checking."
+msgstr "Ta umiejętność czeka na zatwierdzenie."
+
+#, fuzzy
+msgid "This skill is unknown."
+msgstr "Ta umiejętność jest nieznana."
+
+#, fuzzy
+msgid "This skill is abstract."
+msgstr "Ta umiejętność jest abstrakcyjna."
+
+#, fuzzy
+msgid "This skill is almost Free."
+msgstr "Ta umiejętność nie jest calkiem wolna."
+
+#, fuzzy
+msgid "This skill is partially Free."
+msgstr "Ta umiejętność jest częściowo wolna."
+
+#, fuzzy
+msgid "This skill is Hardware."
+msgstr "Ta umiejętność dotyczy sprzętu."
+
+#, fuzzy
+msgid "This skill is Documentation."
+msgstr "Ta umiejętność dotyczy dokumentacji."
+
+#, fuzzy
+msgid "This skill is Data."
+msgstr "Ta umiejętność dotyczy danych."
+
+#, fuzzy
+msgid "This skill is Art."
+msgstr "Ta umiejętność dotyczy grafiki i mediów."
+
+#, fuzzy
+msgid "This skill is Free."
+msgstr "Ta umiejętność jest wolna."
+
+#, fuzzy
+msgid "This skill is not Free."
+msgstr "Ta umiejętność jest niewolna."
+
+#, fuzzy
+msgid "Software criteria at the FAQ."
+msgstr "Kryteria programu znajdują się w FAQ."
+
+#, fuzzy
+msgid "Report any mistake!"
+msgstr "Zgłoś każdą pomyłkę!"
+
+#, fuzzy
+msgid "Please choose:"
+msgstr "Wybierz:"
+
+#, fuzzy
+msgid "Keep as is"
+msgstr "Zachowaj w obecnej postaci"
+
+# Qualifications_languages_form.tpl
+#, fuzzy
+msgid "Add idioms and theirs spoken and written levels"
+msgstr "Dodaj idiomy i ich poziom w mowie i piśmie"
+
+#, fuzzy
+msgid "Spoken level"
+msgstr "Poziom w mowie"
+
+#, fuzzy
+msgid "Written level"
+msgstr "Poziom w piśmie"
+
+# Qualifications_certifications_form.tpl
+# msgid ""
+# msgstr ""
+
+# Qualifications_projects_form.tpl
+#, fuzzy
+msgid "Add URIs to the work you or your staff have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you or your staff expose your knowledge, rationales, feedback, etc."
+msgstr "Dodaj adresy URI pokazujący pracę twoją lub twojego zespołu na rzecz projektów wolnego oprogramowania. Dobrą praktyką jest dodanie więcej informacji niż tylko adres URI programu np.: adresy URI dokumentujące najlepsze poprawki w projekcie, dyskusje gdzie Ty lub Twoja grupa prezentuje swoją wiedzę, tok rozumowania, wsparcie dla użytkowników itp."
+
+#, fuzzy
+msgid "Project"
+msgstr "Projekt"
+
+# Qualifications_location_form.tpl
+#, fuzzy
+msgid "Available to travel"
+msgstr "Możliwość podróżowania"
+
+#, fuzzy
+msgid "Available to change residence"
+msgstr "Możliwość zmiany adresu zamieszkania"
+
+#, fuzzy
+msgid "Request your certifications"
+msgstr "Poproś o poświadczenie"
+
+# Qualifications_contract_form.tpl
+#, fuzzy
+msgid "Desired contract type"
+msgstr "Preferowana forma kontraktu"
+
+#, fuzzy
+msgid "Desired wage rank"
+msgstr "Preferowana wysokość wynagrodzenia"
+
+#, fuzzy
+msgid "The format has to be:"
+msgstr "Format musi być:"
+
+#, fuzzy
+msgid "Minimum"
+msgstr "Minimalnie"
+
+#, fuzzy
+msgid "Optimum"
+msgstr "Optymalnie"
+
+msgid "For example:"
+msgstr "Na przykład:"
+
+msgid "Currency"
+msgstr "Waluta"
+
+#, fuzzy
+msgid "Current employability"
+msgstr "Obecna możliwość zatrudnienia"
+
+# Qualifications_form.php
+#, fuzzy
+msgid "To access this section you have to login first."
+msgstr "Musisz być zalogowany aby wejść do tej sekcji."
+
+#, fuzzy
+msgid "Please fill in here"
+msgstr "Uzupełnij pole"
+
+#, fuzzy
+msgid "Incorrect date format."
+msgstr "Nieprawidłowy format daty."
+
+#, fuzzy
+msgid "The qualifications information has been deleted from the data base."
+msgstr "Informacje o kwalifikacjach zostały usunięte z bazy danych."
+
+#, fuzzy
+msgid "Success. Your qualifications have been saved."
+msgstr "Twoje kwalifikacjie zostały pomyślnie zapisane."
+
+#
+# JobOffer form: Job_Offer_edit-quide-bar.tpl, Job_Offer_*_form.tpl, Job_Offer_form.php
+#
+#, fuzzy
+msgid "Update job offer"
+msgstr "Uaktualnij ofertę pracy"
+
+#, fuzzy
+msgid "New job offer"
+msgstr "Nowa oferta pracy"
+
+#, fuzzy
+msgid "Check offer view"
+msgstr "Podgląd oferty"
+
+# Job_Offer_edit-quide-bar.tpl
+#, fuzzy
+msgid "General"
+msgstr "Ogólny"
+
+# Job_Offer_general_form.tpl
+#, fuzzy
+msgid "Allow applications from"
+msgstr "Dopuść aplikacje od"
+
+#, fuzzy
+msgid "The offer is closed"
+msgstr "Ta oferta jest zamknięta"
+
+#, fuzzy
+msgid "Expiration date"
+msgstr "Data wygaśnięcia"
+
+#, fuzzy
+msgid "The format could be for example"
+msgstr "Format mógłby być np. taki"
+
+#, fuzzy
+msgid "Your offer reference"
+msgstr "Referencja Twojej oferty"
+
+# Job_Offer_profiles_etc_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_skills_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_languages_form.tpl
+#, fuzzy
+msgid "Required languages"
+msgstr "Wymagane języki"
+
+# Job_Offer_certifications_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_projects_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_location_form.tpl
+#, fuzzy
+msgid "Do not fill any address field if the offer is Telecommute."
+msgstr "Nie wypełniaj pól adresowych gdy oferta dotyczy pracy zdalnej."
+
+# Job_Offer_contract_form.tpl
+# msgid ""
+# msgstr ""
+
+# Job_Offer_form.php
+# msgid ""
+# msgstr ""
+
+#
+# Manage_Job_Offer_Applications_form.tpl
+#
+#, fuzzy
+msgid "Manage the job offer applications"
+msgstr "Zarządzanie aplikacjami kandydatów"
+
+#, fuzzy
+msgid "Offer title"
+msgstr "Nazwa oferty"
+
+#, fuzzy
+msgid "Applicant"
+msgstr "Kandydat"
+
+#
+# Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_form.php
+#
+# Manage_Job_Offers_form.tpl
+#, fuzzy
+msgid "Manage job offers"
+msgstr "Zarządzanie ofertami pracy"
+
+#, fuzzy
+msgid "You do not have any defined job offer."
+msgstr "Nie stworzyłeś jeszcze żadnej oferty pracy."
+
+#, fuzzy
+msgid "Closed"
+msgstr "Zamknięto"
+
+#, fuzzy
+msgid "Delete selected offers"
+msgstr "Skasuj zaznaczone oferty"
+
+# Manage_Job_Offers_form.php
+#, fuzzy
+msgid "The selected job offers has been deleted from the data base."
+msgstr "Wybrane oferty pracy zostały usunięte z bazy danych."
+
+#, fuzzy
+msgid "Offers to delete have not been selected. Try again."
+msgstr "Nie zaznaczono ofert pracy do skasowania. Spróbuj jeszcze raz."
+
+#
+# View_Job_Applications_State_form.tpl
+#
+msgid "Job applications"
+msgstr "Aplikacje do pracy"
+
+#, fuzzy
+msgid "You do not have your application subscribed to any open job offer."
+msgstr "Nie masz aplikacji przypisanej do aktualnej oferty pracy."
+
+msgid "Subscription state"
+msgstr "Status subskrypcji"
+
+#
+# Alerts_form.tpl
+#
+#, fuzzy
+msgid "Alerts via email on:"
+msgstr "Informuj mnie przez email o:"
+
+#, fuzzy
+msgid "any new job offer"
+msgstr "każdej ofercie pracy"
+
+#, fuzzy
+msgid "any new job offer which fits my qualifications"
+msgstr "ofertach pracy odpowiadających moim kwalifikacjom"
+
+#
+# Admin_form.tpl
+#
+#, fuzzy
+msgid "Skills administration"
+msgstr "Zarządzanie umiejętnościami"
+
+#, fuzzy
+msgid "Attend pending to classify skills"
+msgstr "Przejrzyj umiejętności czekające na klasyfikację"
+
+#, fuzzy
+msgid "Classify"
+msgstr "Zaklasyfikuj"
+
+#, fuzzy
+msgid "Attend reclassify skill requests"
+msgstr "Przejrzyj umiejętności czekające na zmianę klasyfikacji"
+
+#, fuzzy
+msgid "Reclassify"
+msgstr "Ponownie zaklasyfikuj"
+
+#, fuzzy
+msgid "Add new skills"
+msgstr "Dodaj nowe umiejętności"
+
+#, fuzzy
+msgid "There are not pending to classify skills."
+msgstr "Nie ma umiejętności czekających na klasyfikację."
+
+#, fuzzy
+msgid "Search"
+msgstr "Szukaj"
+
+#, fuzzy
+msgid "Skill properties"
+msgstr "Właśniwości umiejętności"
+
+#, fuzzy
+msgid "Change the skill name"
+msgstr "Zmień nazwę umiejętności"
+
+#, fuzzy
+msgid "Change the classification tag"
+msgstr "Zmien etykietę klasyfikacyjną"
+
+#, fuzzy
+msgid "Tag"
+msgstr "Etykieta"
+
+#, fuzzy
+msgid "Type"
+msgstr "Typ"
+
+#, fuzzy
+msgid "License or licenses used by such skill"
+msgstr "Licencja lub licencje użyte z tą umiejętnością"
+
+#, fuzzy
+msgid "License name"
+msgstr "Nazwa licencji"
+
+#, fuzzy
+msgid "License URI"
+msgstr "Adres URI licencji"
+
+#, fuzzy
+msgid "Notes taken to make it more clear the rationale behind the current classification decision"
+msgstr "Zanotowano by poprawić argumentację stojącą za obecną klasyfikacją"
+
+#, fuzzy
+msgid "Rationale"
+msgstr "Uzasadnienie"
+
+msgid "Cancel"
+msgstr "Anuluj"
+
+#, fuzzy
+msgid "Not found."
+msgstr "Nie znaleziono."
+
+#, fuzzy
+msgid "Please, try again."
+msgstr "Spróbuj ponownie."
+
+#
+# Access_Control_List.php
+#
+#, fuzzy
+msgid "The access is not granted."
+msgstr "Odmowa dostępu."
+
+#, fuzzy
+msgid "Such job offer is already closed, removed, or never was here."
+msgstr "Szukana oferta pracy jest już zamknięta, usunięta lub nigdy jej nie było."
+
+#
+# raise_NewJobOffer_Alert.php # "na" "w" "w
+#
+#, fuzzy
+msgid "You can disable this type of alerts at  %s"
+msgstr "Możesz wyłączyć powiadomienia tego typu na %s"
+
+#, fuzzy
+msgid "Alert on new job offers"
+msgstr "Powiadamiaj o nowych ofertach pracy"
+
+#
+# PostgreSQL.php
+#
+#, fuzzy
+msgid "ERROR: Connection to database failed!"
+msgstr "BŁĄD: Nie można połączyć się do bazy danych!."
+
+#, fuzzy
+msgid "Data base under maintenance. Excuse the inconveniences."
+msgstr "Baza danych w trakcie konserwacji. Przepraszamy za niedogodności."
+
