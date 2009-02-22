@@ -33,10 +33,15 @@ msgstr ""
 msgid "Change language"
 msgstr "Zmień język"
 
+# Most popular translation is:
+# "Ruch na rzecz Wolnego Oprogramowania"
+# or:
+# "Stowarzyszenie na rzecz Wolnego Oprogramowania"
+# but it's commonly left without translation.
 # To jest na głównej stronie. Zatem wypadało by chyba zostawić jak jest
 #, fuzzy
 msgid "Free Software Association"
-msgstr "Stowarzyszenie Wolnego Oprogramowania"
+msgstr "Free Software Association"
 
 msgid "%1Download the project source code!%2"
 msgstr "%1Pobierz kod źródłowy projektu%2"
@@ -692,161 +697,161 @@ msgid "e-Voting"
 msgstr "Elekcja"
 
 msgid "Initially, GNU Herds' members can vote showing their hands, sending an email."
-msgstr "Inicialmente, los afiliados a GNU Herds pueden votar a mano alzada, enviando un correo electrónico."
+msgstr "Początkowo członkowie GNU Herds mogą głosować podnosząc rękę, wysyłając email."
 
 msgid "The GNU Herds' official voting mechanism is not intented to:"
-msgstr "El mecanismo de votación oficial de GNU Herds no pretende:"
+msgstr "Oficjalny mechanizm głosowania GNU Herds nie jest przeznaczony do:"
 
 msgid "be used as a country voting system."
-msgstr "ser usado como sistema de votación de un país."
+msgstr "użycia jako krajowy system głosowania."
 
 msgid "be used as the FS community voting system. The FS community does not need a voting system. As Barry Fitzgerald exposes:"
-msgstr "ser usado como sistema de votación para la comunidad de Software Libre. Dicha comunidad no necesita un sistema de votación. Como Barry Fitzgerald expuso:"
+msgstr "użycia jako system głosowania ruchu na rzecz WO. Ruch na rzecz WO nie potrzebuje systemu głosowania. Jak Barry Fitzgerald tłumaczy:"
 
 msgid "The GNU Herds' official voting mechanism is only intented to:"
-msgstr "El sistema de votación de GNU Herds solo pretende:"
+msgstr "Oficjalny mechanizm głosowania GNU Herds jest przeznaczony tylko do:"
 
 msgid "be used as voting system to this Association. The voting mechanism must be used as a tool to keep GNU Herds moving in the right direction, helping members guide the board members. It can also be used to get opinions about ideas, etc.: binding vote, opinion vote."
-msgstr "ser usado como sistema de votación para esta Asociación. El mecanismo de votación debe ser usado como una herramienta para mantener GNU Herds en la dirección correcta, ayudando a los afiliados a guiar al Comité. También puede ser usado para obtener opiniones acerca de ideas, etc.: voto vinculante, voto de opinión."
+msgstr "użycia jako system głosowania przez to stowarzyszenie. Mechanizm głosowania ma służyć temu aby GNU Herds zmierzało w dobrym kierunku, pomaganiu członkom nakierowywać zarządu. Może być również użyty do zbierania opinii na temat pomysłów, itp.: głosowanie, zebranie opinii."
 
 msgid "See references to documentation at bottom of this page."
-msgstr "Véase la documentación de referencia al pie de esta página."
+msgstr "Zobacz odnośniki do dokumentacji na dole strony."
 
 msgid "Options"
-msgstr "Opciones"
+msgstr "Opcje"
 
 msgid "There are several projects which try to solve the e-Voting trouble. The goal of each project can be different. Some of them has modified its aims or are stalled:"
-msgstr "Hay varios proyectos que intentan resolver el problema del voto electrónico. El objetivo de cada proyecto puede ser diferente. Algunos de ellos han modificado sus pretensiones o no están activos:"
+msgstr "Istnieje wiele projektów próbujących rozwiązać problem e-głosowania. Cel każdego projektu może być inny. Niektóre zmieniły swoje cele albo zaprzestały rozwoju:"
 
 msgid "The development has been discontinued due to"
-msgstr "El desarrollo ha sido suspendido debido a que"
+msgstr "Rozwój został przerwany ponieważ"
 
 msgid "It seems to support the %1Condorcet method%2 and even \"a mix of secret and public ballots\"."
-msgstr "Parece que soporta el %1método Condorcet%2 e incluso \"una mezcla de papeletas secretas y publicas\"."
+msgstr "Zdaję się wspierać %1metodę Condorceta%2 a nawet \"mieszanie tajnym i jawnych głosów\"."
 
 msgid "Some free GNU/Linux distributions use it own voting system."
-msgstr "Algunas distribuciones libres de GNU/Linux usan su propio sistema de votación."
+msgstr "Niektóre z dystrybucji GNU/Linux używają własnych systemów głosowania."
 
 msgid "Stalled since March 2002."
-msgstr "Congelado desde marzo de 2002."
+msgstr "Wstrzymany od marcja 2002."
 
 msgid "It is dormant."
-msgstr ""
+msgstr "Uśpiony."
 
 msgid "It is interested in exploring alternative voting methods."
-msgstr "Enfocado a la exploración de métodos de votación alternativos."
+msgstr "Jest zainteresowany poszukiwaniem alternatywnych metod głosowania."
 
 msgid "It is too young to have released any useful code."
-msgstr "Es demasiado joven. Su código fuente no es útil."
+msgstr "Jest za młode do wypuszczenia użytecznego kodu."
 
 msgid "It has already been used in at least one election for the Legislative Assembly in the Australian Capitol Territory in October 2001 and is approved for use in future elections."
-msgstr "Ha sido ya usado en al menos unas elecciones para el Legislative Assembly en el Australian Capitol Territory en octubre de 2001, y está aprobado para su uso en futuras elecciones."
+msgstr "Już było użyte w przynajmniej jednych wyborach do Legislative Assembly w Australian Capitol Territory w październiku 2001 i zostało zatwierdzone do użycia w przyszłych wyborach."
 
 msgid "It is a already implemented, working solution for electronic voting."
-msgstr "Es una solución para voto electrónico que ya está desarrollada y funciona."
+msgstr "Już zostało zaimplementowane, działające rozwiązanie do przeprowadzenia e-głosowania."
 
 msgid "References to documentation"
-msgstr "Documentación de referencia"
+msgstr "Odnośniki do dokumentacji"
 
 msgid "A 16 page nontechnical paper, on 16 requirements that a voting system \"must\" meet. Read it to know a bit more about efforts underway at coming up with secure voting (and what may constitute a definition of secure voting). Consider in particular the requirement that anonimity be maintained."
-msgstr "Un artículo no técnico de 16 páginas, sobre los 16 requisitos que un sistema de voto \"debe\" cumplir. Léase para conocer un poco mas acerca del proceso necesario para obtener un sistema de voto seguro, y lo que puede constituir la definición del mismo. Considérese en particular el requerimiento de mantener el anonimato."
+msgstr "Szesnasto stronnicowa, nietechniczna publikacja na temat 16 wymagań stawianych przed systemem głosowania. Przeczytaj dokument by zapoznać się z wymaganiami związanymi z bezpiecznym głosowaniem (tym co może stanowić definicję bezbiecznego głosowania). Rozważ w szczególności wymaganie zachowania anonimowości."
 
 msgid "We want remark:"
-msgstr "Destacamos:"
+msgstr "Uwagi:"
 
 msgid "Note that all those systems are country voting oriented."
-msgstr "Nótese que todos esos sistemas están orientados a elecciones de país."
+msgstr "Wszystkie te systemy są zorientowane jako krajowe systemy głosowania."
 
 # FS_Job_Offers_form.tpl
 msgid "Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc."
-msgstr "Contacte con algunos de los mejores expertos en Software Libre disponibles y sus empresas. Solucione sus problemas hoy con los mejores administradores de sistemas, desarrolladores, equipos de calidad, documentalistas, etc."
+msgstr "Poznaj niektórych z najlepszych ekspertów wolnego oprogramowania i ich firmy. Rozwiąż swoje problemy dziś razem z najlepszymi administratorami, programistami, testerami, twórcami dokumentacji itp."
 
 msgid "Are you a Free Software author? You could register and add your qualifications."
-msgstr "¿Es usted un autor de Software Libre?. Usted puede registrarse y añadir sus cualificaciones."
+msgstr "Czy jesteś autorem wolnego oprogramowania? Możesz się zarejestrować i dodać swoje kwalifikacje."
 
 msgid "The simplest way to post a job offer is to email all the details you have about it to %1"
-msgstr "La forma más fácil de publicar una oferta de empleo es enviar todos los detalles de la oferta a %1"
+msgstr "Najprostrzym sposobem publikacji oferty pracy jest wysłanie maila z wszystkimi detalami na adres %1"
 
 msgid "The cost is 0 cents."
-msgstr "El coste es de 0 céntimos."
+msgstr "Koszt wynosi 0 centów."
 
 msgid "The GNU Herds project does not charge for any of its services."
-msgstr "GNU Herds nie pobiera jakichkolwiek opłat od użytkowników."
+msgstr "Projekt GNU Herds nie pobiera opłat za swoje usługi."
 
 msgid "There are no active job offers"
-msgstr "No hay ofertas de empleo activas"
+msgstr "Brak ofert pracy"
 
 msgid "Vacancy title"
-msgstr "Título de la vacante"
+msgstr "Nazwa stanowiska"
 
 msgid "Location"
-msgstr "Ubicación"
+msgstr "Lokalizacja"
 
 msgid "Offer date"
-msgstr "Fecha de la oferta"
+msgstr "Data oferty"
 
 msgid "Offered by"
-msgstr "Ofrecido por"
+msgstr "Oferowana przez"
 
 msgid "telework"
-msgstr "teletrabajo"
+msgstr "praca zdalna"
 
 # FS_Donation_Pledge_Groups_form.tpl
 msgid "A pledge is a promise somebody has made to donate something, for example two cents, to get some task done."
-msgstr "Una promesa es un compromiso de donación, por ejemplo de dos céntimos, que alguien hace a cambio de que se realice alguna tarea."
+msgstr "Dotacja jest obietnicą dania czegoś, np. dwóch dolarów, gdy zadanie zostanie wykonane."
 
 msgid "If you like some of the ideas listed in the pledge groups below, you can join to by contributing your two cents to help get it converted into an actual job offer. You can even edit it to add your ideas or corrections."
-msgstr "Si a usted le gusta alguna de las ideas listadas en los siguientes grupos de promesas, usted puede sumar contribuyendo sus dos céntimos para ayudar a que dicho grupo se convierta en una oferta de trabajo real. Usted puede también editar el grupo para añadir sus ideas o correcciones."
+msgstr "Jeśli podobają Ci się pomysły zaprezentowane na liście grup dotujących możesz dodać własną dotację, aby pomóc przekształcić ją w ofertę pracy. Możesz również dodawać własne idee albo poprawki."
 
 msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I will do it%2\"."
 msgstr "Si a usted le gustaría llevar a cabo alguna de las siguientes tareas, a cambio del dinero apuntado en la tarea, simplemente ábrala y pulse el botón \"%1Yo lo haré%2\"."
 
 msgid "Donation pledge group title"
-msgstr "Título del grupo de promesas de donación"
+msgstr "Nazwa grupy dotujących"
 
 msgid "Last update"
-msgstr "Última actualización"
+msgstr "Ostatnia aktualizacja"
 
 msgid "There are no entries"
-msgstr "No hay entradas"
+msgstr "Brak wpisów"
 
 # FS_Look_For_Volunteers_form.tpl
 msgid "Looking for volunteers"
-msgstr "Búsqueda de voluntarios"
+msgstr "Szukanie wolontariuszy"
 
 msgid "If you would like to donate something for fulfilling a task, please create it as a %1FS pledge%2 entry instead of as a %3looking for volunteers%4 one."
-msgstr "Si usted donaría algo por la realización de la tarea, por favor créela como %1Promesa SL%2 en lugar de como %3búsqueda de voluntarios%4."
+msgstr "Jeśli chciałbyś zaoferować coś za wypełnienie zadania dodaj to jako %1 zobowiązanie%2 a nie jako %3szukanie wolontariuszy%4."
 
 msgid "New look for volunteers"
-msgstr "Nueva búsqueda de voluntarios"
+msgstr "Nowe szukanie wolontariuszy"
 
 msgid "Volunteer title"
-msgstr "Título del voluntario"
+msgstr "Tytuł wolontariusza"
 
 msgid "Entry date"
-msgstr "Fecha de la entrada"
+msgstr "Data wpisu"
 
 msgid "Created by"
-msgstr "Creado por"
+msgstr "Tworzony przez"
 
 # View_Job_Offer_form.php
 msgid "To be able to subscribe your application, you have to fill the Qualification form."
-msgstr "Para poder subscribir su solicitud, usted tiene que rellenar el formulario de Cualificaciones."
+msgstr "Aby dodać swoją aplikację musisz wypełnić formularz kwalifikacyjny."
 
 msgid "To be able to subscribe your application, you have to log in first."
-msgstr "Para poder subscribir su solicitud, usted tiene que identificarse primero."
+msgstr "Aby dodać swoją aplikację musisz się zalogować."
 
 msgid "See the"
-msgstr "Véase la"
+msgstr "Zobacz"
 
 msgid "Note that this job offer is not looking for a"
-msgstr "Observe que esta oferta de empleo no está buscando una"
+msgstr "Zauważ, że ta oferta pracy nie jest dla"
 
 msgid "You can not subscribe to you own offer."
-msgstr "Usted no puede suscribirse a su propia oferta."
+msgstr "Nie możesz się zapisać do własnej oferty."
 
 msgid "ERROR: Unexpected condition"
-msgstr "ERROR: Condición inesperada"
+msgstr "BŁĄD: Niespodziewany stan"
 
 # View_Job_Offer_form.tpl
 msgid "Your application has been subscribed to this job offer"

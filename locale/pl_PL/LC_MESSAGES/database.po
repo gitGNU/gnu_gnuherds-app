@@ -113,7 +113,7 @@ msgstr "Administrator"
 
 #, fuzzy
 msgid "Documentalist"
-msgstr "Documentalista"
+msgstr "Twórca dokumentacji"
 
 #, fuzzy
 msgid "Technical Redactor"
