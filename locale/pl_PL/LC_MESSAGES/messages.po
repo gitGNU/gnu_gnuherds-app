@@ -39,7 +39,6 @@ msgstr "Zmień język"
 # "Stowarzyszenie na rzecz Wolnego Oprogramowania"
 # but it's commonly left without translation.
 # To jest na głównej stronie. Zatem wypadało by chyba zostawić jak jest
-#, fuzzy
 msgid "Free Software Association"
 msgstr "Free Software Association"
 
@@ -333,7 +332,6 @@ msgid "Committee"
 msgstr "Komitet"
 
 # [Ethics Officer] jak nazwać po polsku takie stanowisko?
-#, fuzzy
 msgid "The Committee shall consist of the following: the members of the system administrator team, the web master team, the development team, the translator teams, the public relations team and the Ethics Officer."
 msgstr "Komitet winien składać się z: członków grupy administratorów systemu, grupy webmasterów, grupy programistów, grupy tłumaczy, grupy odpowiedzialnej za stosunki z otoczeniem(PR) oraz Etyka."
 
@@ -341,12 +339,10 @@ msgid "The certifications team liabilities shall be evaluate, upon request, the 
 msgstr ""
 
 # To 'skalanie' to specjalnie. Nie wiem czy ten przejaw czegoś co można u mnie nazwać poczuciem humoru, nie zostanie zrozumiany jako patetyczna paplanina jakiejś sekty.
-#, fuzzy
 msgid "The Ethics Officer will be appointed by the Free Software Foundation, Inc. to ensure the below points: %1 %2The integrity of the GNU name is not breached.%3 %2The Association follows the %4Free Software%5 philosophy.%3 %2The activities are operated in ways that do not lend themselves to be abused to the detriment of the %4Free Software%5 philosophy.%6"
 msgstr "Etyk będzie powołany przez Fundację Wolnego Oprogramowania (Free Software Foundation, Inc.) by zapewnić dochowanie poniższych postulatów:%1 %2Nie zostanie skalane dobre imię GNU.%3 %2Stowarzyszenie będzie działać zgodnie z filozofią %4Wolnego Oprogramowania%5. %3 %2Działania będą prowadzone tak by nie można było ich nadużyć ze szkodą dla filozofii %4Wolnego Oprogramowania%5. %6"
 
 # Projektu GNU? Chyba raczej chodziło o FSF
-#, fuzzy
 msgid "To depart from the above GNU requirements the Association have to discuss it previously with the GNU Project. Any conflict which can not be resolved in the discussion will raise the removal of the GNU Project approval, and so the GNU part of the Association name."
 msgstr "By odstąpić od któregoś powyższych wymagań GNU, Stowarzyszenie musi najpierw przedyskutować dane zagadnienie z [GNU PROJECT]. Wszelkie nierozwiązywalne podczas dyskusji konflikty skutkują utratą aprobaty [Projektu GNU], oraz usunięciem przedrostka GNU z nazwy Stowarzyszenia."
 
@@ -354,7 +350,6 @@ msgid "All other officers will be elected by the membership."
 msgstr "Wszelki inne miejsca w zarządzie obsadzane są przez członków."
 
 # Temu oficerowi to tak od członków?
-#, fuzzy
 msgid "An Office term will be 4 years.  All committee positions are voluntary, an officer may step down at any time.  After 6 months if the membership is dissatisfied with an officer they may vote her or him out of office."
 msgstr "Kadencja trwa przez okres 4 lat. Pełnienie wszelkich czynności jest dobrowolne, członkowie zarządu mogą zrezygnować w dowolnym momencie. Jeśli po sześciu miesiącach członkowie są niezadowoleni z pracy członka zarządu, mogą oddać pod głosowanie propozycję jego usunięcia z piastowanego stanowiska."
 
@@ -1208,19 +1203,15 @@ msgstr "Skasuj mnie"
 # non-profit Organization form: non-profit_Organization_form.tpl, non-profit_Organization_form.php
 #
 # non-profit_Organization_form.tpl
-#, fuzzy
 msgid "Update non-profit organization data"
 msgstr "Uaktualnij dane organizacji pożytku publicznego"
 
-#, fuzzy
 msgid "non-profit"
 msgstr "pożytku publicznego"
 
-#, fuzzy
 msgid "non-profit Organization"
 msgstr "Organizacja pożytku publicznego"
 
-#, fuzzy
 msgid "Name"
 msgstr "Nazwa"
 
@@ -1231,55 +1222,43 @@ msgstr "Nazwa"
 #
 # Qualifications form: Qualifications_edit-guide-bar.tpl, Qualifications_*_form.tpl, Qualifications_form.php
 #
-#, fuzzy
 msgid "New qualifications"
 msgstr "Nowe kwalifikacje"
 
-#, fuzzy
 msgid "Update qualifications data"
 msgstr "Uaktualnij dane kwalifikacji"
 
 msgid "Check qualifications view"
 msgstr "Sprawdź kwalifikacje"
 
-#, fuzzy
 msgid "Previous"
 msgstr "Poprzednia"
 
-#, fuzzy
 msgid "Save and move to the previous section"
 msgstr "Zapisz zmiany i wróć do poprzedniej sekcji"
 
-#, fuzzy
 msgid "Next"
 msgstr "Następna"
 
-#, fuzzy
 msgid "Save and move to the next section"
 msgstr "Zapisz zmiany i idź do następnej sekcji"
 
-#, fuzzy
 msgid "Finish"
 msgstr "Zakończ"
 
-#, fuzzy
 msgid "Save and finish the edition"
 msgstr "Zapisz zmiany i zakończ edycję"
 
 # Qualifications_edit-guide-bar.tpl
-#, fuzzy
 msgid "Save and move to section"
 msgstr "Zapisz zmiany i przejdź do sekcji"
 
-#, fuzzy
 msgid "Academic"
 msgstr "Wykształcenie"
 
-#, fuzzy
 msgid "FS projects"
 msgstr "Projekty WO"
 
-#, fuzzy
 msgid "Residence location"
 msgstr "Adres"
 
@@ -1287,177 +1266,135 @@ msgid "Contract"
 msgstr "Kontakt"
 
 # Qualifications_profiles_etc_form.tpl
-#, fuzzy
 msgid "Technical"
 msgstr "Techniczne"
 
-#, fuzzy
 msgid "Staff with the below characteristic:"
 msgstr "Współpracownik z poniższymi cechami:"
 
-#, fuzzy
 msgid "Press Ctrl key to choose more than one Profile"
 msgstr "Naciśnij Ctrl by zaznaczyć więcej niż jeden profil"
 
-#, fuzzy
 msgid "Profiles"
 msgstr "Profile"
 
-#, fuzzy
 msgid "Product profiles"
 msgstr "Profile produktów"
 
-#, fuzzy
 msgid "Professional profiles"
 msgstr "Profile zawodowe"
 
-#, fuzzy
 msgid "Field profiles"
 msgstr "Grupy tematyczne"
 
 # Qualifications_academic_form.tpl
-#, fuzzy
 msgid "Degree"
 msgstr "Tytuł"
 
-#, fuzzy
 msgid "Academic level"
 msgstr "Poziom akademicki"
 
-#, fuzzy
 msgid "Degree granted"
 msgstr "Tytuł przyznano"
 
-#, fuzzy
 msgid "Start date"
 msgstr "Data początkowa"
 
-#, fuzzy
 msgid "Finish date"
 msgstr "Data końcowa"
 
-#, fuzzy
 msgid "Institution"
 msgstr "Instytucja"
 
-#, fuzzy
 msgid "University or education institution"
 msgstr "Uniwersystel lub instytucja edukacyjna"
 
-#, fuzzy
 msgid "Institution's URI"
 msgstr "Adres URI insytucji"
 
-#, fuzzy
 msgid "Short comment"
 msgstr "Krótki opis"
 
 # Qualifications_skills_form.tpl
-#, fuzzy
 msgid "Some fields offer suggestions."
 msgstr "Niektóre pola zawierają podpowiedzi."
 
-#, fuzzy
 msgid "The form has not been saved yet."
 msgstr "Formularz nie został jeszcze zapisany."
 
-#, fuzzy
 msgid "Please, choose or edit again."
 msgstr "Wybierz lub edytuj ponownie."
 
-#, fuzzy
 msgid "Checks"
 msgstr "Weryfikacja"
 
-#, fuzzy
 msgid "Non-Free or Pending skills are not showed in the view."
 msgstr "Niewolne oraz oczekujące umiejętności nie są pokazane w tym widoku."
 
-#, fuzzy
 msgid "Add skills and theirs knowledge and experience levels."
 msgstr "Dodaj umiejętności, poziom ich znajomości i doświadczenia."
 
-#, fuzzy
 msgid "Knowledge level"
 msgstr "Poziom znajomości"
 
-#, fuzzy
 msgid "Experience level"
 msgstr "Poziom doświadczenia"
 
 msgid "Add"
 msgstr "Dodaj"
 
-#, fuzzy
 msgid "This skill is pending for checking."
 msgstr "Ta umiejętność czeka na zatwierdzenie."
 
-#, fuzzy
 msgid "This skill is unknown."
 msgstr "Ta umiejętność jest nieznana."
 
-#, fuzzy
 msgid "This skill is abstract."
 msgstr "Ta umiejętność jest abstrakcyjna."
 
-#, fuzzy
 msgid "This skill is almost Free."
 msgstr "Ta umiejętność nie jest calkiem wolna."
 
-#, fuzzy
 msgid "This skill is partially Free."
 msgstr "Ta umiejętność jest częściowo wolna."
 
-#, fuzzy
 msgid "This skill is Hardware."
 msgstr "Ta umiejętność dotyczy sprzętu."
 
-#, fuzzy
 msgid "This skill is Documentation."
 msgstr "Ta umiejętność dotyczy dokumentacji."
 
-#, fuzzy
 msgid "This skill is Data."
 msgstr "Ta umiejętność dotyczy danych."
 
-#, fuzzy
 msgid "This skill is Art."
 msgstr "Ta umiejętność dotyczy grafiki i mediów."
 
-#, fuzzy
 msgid "This skill is Free."
 msgstr "Ta umiejętność jest wolna."
 
-#, fuzzy
 msgid "This skill is not Free."
 msgstr "Ta umiejętność jest niewolna."
 
-#, fuzzy
 msgid "Software criteria at the FAQ."
 msgstr "Kryteria programu znajdują się w FAQ."
 
-#, fuzzy
 msgid "Report any mistake!"
 msgstr "Zgłoś każdą pomyłkę!"
 
-#, fuzzy
 msgid "Please choose:"
 msgstr "Wybierz:"
 
-#, fuzzy
 msgid "Keep as is"
 msgstr "Zachowaj w obecnej postaci"
 
 # Qualifications_languages_form.tpl
-#, fuzzy
 msgid "Add idioms and theirs spoken and written levels"
 msgstr "Dodaj idiomy i ich poziom w mowie i piśmie"
 
-#, fuzzy
 msgid "Spoken level"
 msgstr "Poziom w mowie"
 
-#, fuzzy
 msgid "Written level"
 msgstr "Poziom w piśmie"
 
@@ -1466,45 +1403,35 @@ msgstr "Poziom w piśmie"
 # msgstr ""
 
 # Qualifications_projects_form.tpl
-#, fuzzy
 msgid "Add URIs to the work you or your staff have contributed to public Free Software projects. It is good practice add more than just the project's URI, adding too URIs to some of your best commits, or email discussion threads where you or your staff expose your knowledge, rationales, feedback, etc."
 msgstr "Dodaj adresy URI pokazujący pracę twoją lub twojego zespołu na rzecz projektów wolnego oprogramowania. Dobrą praktyką jest dodanie więcej informacji niż tylko adres URI programu np.: adresy URI dokumentujące najlepsze poprawki w projekcie, dyskusje gdzie Ty lub Twoja grupa prezentuje swoją wiedzę, tok rozumowania, wsparcie dla użytkowników itp."
 
-#, fuzzy
 msgid "Project"
 msgstr "Projekt"
 
 # Qualifications_location_form.tpl
-#, fuzzy
 msgid "Available to travel"
 msgstr "Możliwość podróżowania"
 
-#, fuzzy
 msgid "Available to change residence"
 msgstr "Możliwość zmiany adresu zamieszkania"
 
-#, fuzzy
 msgid "Request your certifications"
 msgstr "Poproś o poświadczenie"
 
 # Qualifications_contract_form.tpl
-#, fuzzy
 msgid "Desired contract type"
 msgstr "Preferowana forma kontraktu"
 
-#, fuzzy
 msgid "Desired wage rank"
 msgstr "Preferowana wysokość wynagrodzenia"
 
-#, fuzzy
 msgid "The format has to be:"
 msgstr "Format musi być:"
 
-#, fuzzy
 msgid "Minimum"
 msgstr "Minimalnie"
 
-#, fuzzy
 msgid "Optimum"
 msgstr "Optymalnie"
 
@@ -1514,69 +1441,54 @@ msgstr "Na przykład:"
 msgid "Currency"
 msgstr "Waluta"
 
-#, fuzzy
 msgid "Current employability"
 msgstr "Obecna możliwość zatrudnienia"
 
 # Qualifications_form.php
-#, fuzzy
 msgid "To access this section you have to login first."
 msgstr "Musisz być zalogowany aby wejść do tej sekcji."
 
-#, fuzzy
 msgid "Please fill in here"
 msgstr "Uzupełnij pole"
 
-#, fuzzy
 msgid "Incorrect date format."
 msgstr "Nieprawidłowy format daty."
 
-#, fuzzy
 msgid "The qualifications information has been deleted from the data base."
 msgstr "Informacje o kwalifikacjach zostały usunięte z bazy danych."
 
-#, fuzzy
 msgid "Success. Your qualifications have been saved."
 msgstr "Twoje kwalifikacjie zostały pomyślnie zapisane."
 
 #
 # JobOffer form: Job_Offer_edit-quide-bar.tpl, Job_Offer_*_form.tpl, Job_Offer_form.php
 #
-#, fuzzy
 msgid "Update job offer"
 msgstr "Uaktualnij ofertę pracy"
 
-#, fuzzy
 msgid "New job offer"
 msgstr "Nowa oferta pracy"
 
-#, fuzzy
 msgid "Check offer view"
 msgstr "Podgląd oferty"
 
 # Job_Offer_edit-quide-bar.tpl
-#, fuzzy
 msgid "General"
 msgstr "Ogólny"
 
 # Job_Offer_general_form.tpl
-#, fuzzy
 msgid "Allow applications from"
 msgstr "Dopuść aplikacje od"
 
-#, fuzzy
 msgid "The offer is closed"
 msgstr "Ta oferta jest zamknięta"
 
-#, fuzzy
 msgid "Expiration date"
 msgstr "Data wygaśnięcia"
 
-#, fuzzy
 msgid "The format could be for example"
 msgstr "Format mógłby być np. taki"
 
-#, fuzzy
 msgid "Your offer reference"
 msgstr "Referencja Twojej oferty"
 
@@ -1589,7 +1501,6 @@ msgstr "Referencja Twojej oferty"
 # msgstr ""
 
 # Job_Offer_languages_form.tpl
-#, fuzzy
 msgid "Required languages"
 msgstr "Wymagane języki"
 
@@ -1602,7 +1513,6 @@ msgstr "Wymagane języki"
 # msgstr ""
 
 # Job_Offer_location_form.tpl
-#, fuzzy
 msgid "Do not fill any address field if the offer is Telecommute."
 msgstr "Nie wypełniaj pól adresowych gdy oferta dotyczy pracy zdalnej."
 
@@ -1617,15 +1527,12 @@ msgstr "Nie wypełniaj pól adresowych gdy oferta dotyczy pracy zdalnej."
 #
 # Manage_Job_Offer_Applications_form.tpl
 #
-#, fuzzy
 msgid "Manage the job offer applications"
 msgstr "Zarządzanie aplikacjami kandydatów"
 
-#, fuzzy
 msgid "Offer title"
 msgstr "Nazwa oferty"
 
-#, fuzzy
 msgid "Applicant"
 msgstr "Kandydat"
 
@@ -1633,28 +1540,22 @@ msgstr "Kandydat"
 # Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_form.php
 #
 # Manage_Job_Offers_form.tpl
-#, fuzzy
 msgid "Manage job offers"
 msgstr "Zarządzanie ofertami pracy"
 
-#, fuzzy
 msgid "You do not have any defined job offer."
 msgstr "Nie stworzyłeś jeszcze żadnej oferty pracy."
 
-#, fuzzy
 msgid "Closed"
 msgstr "Zamknięto"
 
-#, fuzzy
 msgid "Delete selected offers"
 msgstr "Skasuj zaznaczone oferty"
 
 # Manage_Job_Offers_form.php
-#, fuzzy
 msgid "The selected job offers has been deleted from the data base."
 msgstr "Wybrane oferty pracy zostały usunięte z bazy danych."
 
-#, fuzzy
 msgid "Offers to delete have not been selected. Try again."
 msgstr "Nie zaznaczono ofert pracy do skasowania. Spróbuj jeszcze raz."
 
@@ -1664,7 +1565,6 @@ msgstr "Nie zaznaczono ofert pracy do skasowania. Spróbuj jeszcze raz."
 msgid "Job applications"
 msgstr "Aplikacje do pracy"
 
-#, fuzzy
 msgid "You do not have your application subscribed to any open job offer."
 msgstr "Nie masz aplikacji przypisanej do aktualnej oferty pracy."
 
@@ -1674,134 +1574,105 @@ msgstr "Status subskrypcji"
 #
 # Alerts_form.tpl
 #
-#, fuzzy
 msgid "Alerts via email on:"
 msgstr "Informuj mnie przez email o:"
 
-#, fuzzy
 msgid "any new job offer"
 msgstr "każdej ofercie pracy"
 
-#, fuzzy
 msgid "any new job offer which fits my qualifications"
 msgstr "ofertach pracy odpowiadających moim kwalifikacjom"
 
 #
 # Admin_form.tpl
 #
-#, fuzzy
 msgid "Skills administration"
 msgstr "Zarządzanie umiejętnościami"
 
-#, fuzzy
 msgid "Attend pending to classify skills"
 msgstr "Przejrzyj umiejętności czekające na klasyfikację"
 
-#, fuzzy
 msgid "Classify"
 msgstr "Zaklasyfikuj"
 
-#, fuzzy
 msgid "Attend reclassify skill requests"
 msgstr "Przejrzyj umiejętności czekające na zmianę klasyfikacji"
 
-#, fuzzy
 msgid "Reclassify"
 msgstr "Ponownie zaklasyfikuj"
 
-#, fuzzy
 msgid "Add new skills"
 msgstr "Dodaj nowe umiejętności"
 
-#, fuzzy
 msgid "There are not pending to classify skills."
 msgstr "Nie ma umiejętności czekających na klasyfikację."
 
-#, fuzzy
 msgid "Search"
 msgstr "Szukaj"
 
-#, fuzzy
 msgid "Skill properties"
 msgstr "Właśniwości umiejętności"
 
-#, fuzzy
 msgid "Change the skill name"
 msgstr "Zmień nazwę umiejętności"
 
-#, fuzzy
 msgid "Change the classification tag"
 msgstr "Zmien etykietę klasyfikacyjną"
 
-#, fuzzy
 msgid "Tag"
 msgstr "Etykieta"
 
-#, fuzzy
 msgid "Type"
 msgstr "Typ"
 
-#, fuzzy
 msgid "License or licenses used by such skill"
 msgstr "Licencja lub licencje użyte z tą umiejętnością"
 
-#, fuzzy
 msgid "License name"
 msgstr "Nazwa licencji"
 
-#, fuzzy
 msgid "License URI"
 msgstr "Adres URI licencji"
 
-#, fuzzy
 msgid "Notes taken to make it more clear the rationale behind the current classification decision"
 msgstr "Zanotowano by poprawić argumentację stojącą za obecną klasyfikacją"
 
-#, fuzzy
 msgid "Rationale"
 msgstr "Uzasadnienie"
 
 msgid "Cancel"
 msgstr "Anuluj"
 
-#, fuzzy
 msgid "Not found."
 msgstr "Nie znaleziono."
 
-#, fuzzy
 msgid "Please, try again."
 msgstr "Spróbuj ponownie."
 
 #
 # Access_Control_List.php
 #
-#, fuzzy
 msgid "The access is not granted."
 msgstr "Odmowa dostępu."
 
-#, fuzzy
 msgid "Such job offer is already closed, removed, or never was here."
 msgstr "Szukana oferta pracy jest już zamknięta, usunięta lub nigdy jej nie było."
 
 #
 # raise_NewJobOffer_Alert.php # "na" "w" "w
 #
-#, fuzzy
 msgid "You can disable this type of alerts at  %s"
 msgstr "Możesz wyłączyć powiadomienia tego typu na %s"
 
-#, fuzzy
 msgid "Alert on new job offers"
 msgstr "Powiadamiaj o nowych ofertach pracy"
 
 #
 # PostgreSQL.php
 #
-#, fuzzy
 msgid "ERROR: Connection to database failed!"
 msgstr "BŁĄD: Nie można połączyć się do bazy danych!."
 
-#, fuzzy
 msgid "Data base under maintenance. Excuse the inconveniences."
 msgstr "Baza danych w trakcie konserwacji. Przepraszamy za niedogodności."
 
