@@ -490,8 +490,8 @@ msgstr "Traduire le site web dans d'autres langues."
 msgid "Official job site and association announcement."
 msgstr "Annonce de l'associtation."
 
-msgid "Work on e-Vote subjects:"
-msgstr "Travailler sur le vote électronique :"
+msgid "Work on %1e-Vote subjects%2:"
+msgstr "Travailler sur le %1vote électronique%2 :"
 
 msgid "Be ready to use at least a primitive e-Vote system, as for example, to count emails."
 msgstr "Être prêt à utiliser au moins un système de vote électronique primitif qui peut compter les mails."

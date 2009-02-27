@@ -458,8 +458,8 @@ msgstr "Tradurre il sito web in altre lingue."
 msgid "Official job site and association announcement."
 msgstr "Annuncio ufficiale del portale del lavoro e dell'associazione."
 
-msgid "Work on e-Vote subjects:"
-msgstr "Lavorare sui temi del voto elettronico:"
+msgid "Work on %1e-Vote%2 subjects:"
+msgstr "Lavorare sui temi del %1voto elettronico%2:"
 
 msgid "Be ready to use at least a primitive e-Vote system, as for example, to count emails."
 msgstr "Essere pronti ad usare almeno un sistema primitivo di voto elettronico come, per esempio, contando i messaggi di posta elettronica."

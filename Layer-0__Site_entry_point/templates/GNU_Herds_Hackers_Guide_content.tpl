@@ -76,7 +76,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	</p></li>
 	<li><p><span class="modification">{t}ONGOING PROCESS{/t}</span>: {t}Translate the web site to other languages.{/t}</p></li>
 	<li><p>{t}Official job site and association announcement.{/t}</p></li>
-	<li><p>{t}Work on e-Vote subjects:{/t}</p>
+	<li><p>{t escape='no'
+		 1='<a href="faq#e-Voting">'
+		 2='</a>'
+	       }Work on %1e-Vote%2 subjects:{/t}</p>
 		<ul>
 		<li> {t}Be ready to use at least a primitive e-Vote system, as for example, to count emails.{/t}</li>
 		<li> {t}Work on others e-Vote proposals.{/t}</li>

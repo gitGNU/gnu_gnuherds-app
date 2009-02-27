@@ -437,8 +437,8 @@ msgstr "Перевести сайт на другие языки."
 msgid "Official job site and association announcement."
 msgstr "Сделать официальное объявление об ассоциации"
 
-msgid "Work on e-Vote subjects:"
-msgstr "Проработать другие аспекты электронного голосования:"
+msgid "Work on %1e-Vote%2 subjects:"
+msgstr "Проработать другие аспекты %1электронного голосования%2:"
 
 msgid "Be ready to use at least a primitive e-Vote system, as for example, to count emails."
 msgstr "Подготовиться к использованию примитивной системы электронного голосования, например, для подсчёта писем."

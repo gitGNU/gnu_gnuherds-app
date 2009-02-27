@@ -432,8 +432,8 @@ msgstr "Przetłumaczyć stronę na inne języki."
 msgid "Official job site and association announcement."
 msgstr "Oficjalne obwieszczenie działalności portalu i Stowarzyszenia."
 
-msgid "Work on e-Vote subjects:"
-msgstr "Popracować nad systemem głosowania:"
+msgid "Work on %1e-Vote%2 subjects:"
+msgstr "Popracować nad %1systemem%2 głosowania:"
 
 msgid "Be ready to use at least a primitive e-Vote system, as for example, to count emails."
 msgstr "Przygotować choćby najprymitywniejszy system np. zliczający emaile."

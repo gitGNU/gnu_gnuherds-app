@@ -507,8 +507,8 @@ msgstr "Die Web-Seite in andere Sprachen überstezen."
 msgid "Official job site and association announcement."
 msgstr "Die Anzeige der Gesellschaft."
 
-msgid "Work on e-Vote subjects:"
-msgstr "Mit der elektronische Abstimmung arbeiten"
+msgid "Work on %1e-Vote%2 subjects:"
+msgstr "Mit der %1elektronische Abstimmung%2 arbeiten"
 
 #, fuzzy
 msgid "Be ready to use at least a primitive e-Vote system, as for example, to count emails."
