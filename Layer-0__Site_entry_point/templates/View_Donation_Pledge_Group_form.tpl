@@ -286,7 +286,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{t escape='no'
 	  1='<input type="submit" name="donate" value="'
 	  2='">'
-	}I want to add my %1donation pledge%2 in exchange for getting those tasks done.{/t}
+	}I want to add my %1donation pledge%2 to get these tasks done.{/t}
 	</div>
 {/if}
 	</form>
@@ -313,11 +313,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<br>
 
 	<div class="splitWidth center">
-	<input type="submit" name="register_and_subscribe" value="{t}I will do it{/t}">
+	<input type="submit" name="register_and_subscribe" value="{t}I accept{/t}">
 	</div>
 {else}
 	<div class="splitWidth center">
-	<input type="submit" name="subscribe" value="{t}I will do it{/t}"> {t}in exchange for that money.{/t}
+	<input type="submit" name="subscribe" value="{t}I accept{/t}"> {t}to do the work for the money you are offering.{/t}
 	</div>
 {/if}
 	</form>
