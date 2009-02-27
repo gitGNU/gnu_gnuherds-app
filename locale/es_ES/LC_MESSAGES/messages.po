@@ -1001,14 +1001,14 @@ msgstr "Trabajadores"
 msgid "donation pledge"
 msgstr "promesa de donación"
 
-msgid "I want to add my %1donation pledge%2 in exchange for getting those tasks done."
+msgid "I want to add my %1donation pledge%2 to get these tasks done."
 msgstr "Quiero añadir mi %1promesa de donación%2 a cambio de obtener estas tareas hechas."
 
-msgid "I will do it"
-msgstr "Yo lo haré"
+msgid "I accept"
+msgstr "Acepto"
 
-msgid "in exchange for that money."
-msgstr "a cambio de este dinero."
+msgid "to do the work for the money you are offering."
+msgstr "hacer el trabajo a cambio de este dinero."
 
 msgid "The payments are %1negotiated%2 by donators and workers."
 msgstr "Los pagos son %1negociados%2 por donantes y trabajadores."
