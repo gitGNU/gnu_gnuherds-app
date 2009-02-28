@@ -22,6 +22,7 @@ require_once "../Layer-5__DB_operation/Entity.php";
 require_once "../Layer-5__DB_operation/Qualifications.php";
 require_once "../Layer-5__DB_operation/Job_Offer.php";
 require_once "../Layer-5__DB_operation/Alerts.php";
+require_once "../Layer-5__DB_operation/Donation.php";
 
 // Lists
 require_once "../Layer-5__DB_operation/Countries.php";
@@ -320,24 +321,24 @@ class DBManager
 	{
 		// This method does not need ACL check. It gets public information.
 
-		$jobOffer = new JobOffer();
-		return $jobOffer->getDonators($Id);
+		$donation = new Donation();
+		return $donation->getDonators($Id);
 	}
 
 	public function getDonationsForPledgeGroup($Id)
 	{
 		// This method does not need ACL check. It gets public information.
 
-		$jobOffer = new JobOffer();
-		return $jobOffer->getDonationsForPledgeGroup($Id);
+		$donation = new Donation();
+		return $donation->getDonationsForPledgeGroup($Id);
 	}
 
 	public function addDonation($Id)
 	{
 		// This method does not need ACL check. Everybody is allowed to donate.
 
-		$jobOffer = new JobOffer();
-		$jobOffer->addDonation($Id);
+		$donation = new Donation();
+		$donation->addDonation($Id);
 	}
 
 	public function cancelSelectedDonations()
@@ -346,8 +347,8 @@ class DBManager
 		//XXX: TODO: for ($i=0; $i < count($_POST['DeleteJobOffers']); $i++)
 		//XXX: TODO:	 $acl->checkJobOfferAccess("WRITE",$_POST['DeleteJobOffers'][$i]);
 
-		$jobOffer = new JobOffer();
-		return $jobOffer->cancelSelectedDonations();
+		$donation = new Donation();
+		return $donation->cancelSelectedDonations();
 	}
 
 	public function getMyDonations()
@@ -355,8 +356,8 @@ class DBManager
 		//XXX: TODO: $acl = new AccessControlList();
 		//XXX: TODO: $acl->checkJobOfferAccess("WRITE",$_POST['DeleteJobOffers'][$i]);
 
-		$jobOffer = new JobOffer();
-		return $jobOffer->getMyDonations();
+		$donation = new Donation();
+		return $donation->getMyDonations();
 	}
 
 	public function getApplicationsMeterForJobOffer($Id,$meter)
@@ -388,8 +389,8 @@ class DBManager
 	{
 		// With the current use of this method, it does not need ACL check.
 
-		$jobOffer = new JobOffer();
-		return $jobOffer->IsAlreadyDonator($EntityId,$JobOfferId);
+		$donation = new Donation();
+		return $donation->IsAlreadyDonator($EntityId,$JobOfferId);
 	}
 
 	public function getJobOfferApplications($JobOfferId)

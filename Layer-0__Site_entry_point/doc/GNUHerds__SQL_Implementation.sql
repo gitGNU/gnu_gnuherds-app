@@ -45,7 +45,7 @@ DROP TABLE JS_JobOfferSearches;
 
 -- Relations
 DROP TABLE R0_Qualifications2JobOffersJoins; -- Application state. Resume, that is to say, entities Qualifications to JobOffer relationships.
-DROP TABLE R1_Donations2JobOffersJoins; -- Donation pledge groups.
+DROP TABLE D1_Donations2JobOffers; -- Donations for donation-pledge-groups.
 DROP TABLE E2_EntityFreeSoftwareExperiences; -- Contributions to Free Software projects. It extends the E1_Entities table.
 DROP TABLE E3_Nationalities; -- List the entity nationalities. It extends the E1_Entities table.
 DROP TABLE E4_EntityJobLicenseAt; -- List the countries where the entity has license to work. It extends the E1_Entities table.
@@ -597,17 +597,24 @@ CREATE TABLE R0_Qualifications2JobOffersJoins (
 	PRIMARY KEY (R0_J1_Id,R0_E1_Id)
 );
 
-CREATE TABLE R1_Donations2JobOffersJoins (
-        R1_Id        SERIAL PRIMARY KEY, -- Identifier
-        R1_J1_Id     integer REFERENCES J1_JobOffers(J1_Id) NOT NULL, -- Offer identifier
-        R1_Donation  varchar(15) NOT NULL,
-        R1_E1_Id     integer REFERENCES E1_Entities(E1_Id) NOT NULL -- Donator's identity, being a Person, Cooperative, Company or non-profit Organization.
+CREATE TABLE D1_Donations2JobOffers (
+	-- Identifiers
+	D1_Id                    SERIAL PRIMARY KEY, -- Identifier
+	D1_J1_Id                 integer REFERENCES J1_JobOffers(J1_Id) NOT NULL, -- Offer identifier
+	D1_E1_Id                 integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Donator's identity, being a Person, Company or non-profit Organization.
+
+	-- The donation
+	D1_Donation              varchar(15) NOT NULL,
+
+	-- To confirm the donation
+	D1_DonationMagic         varchar(512) DEFAULT NULL,
+	D1_DonationMagicExpire   timestamp NOT NULL DEFAULT 'now'
 );
 
 
 
 GRANT SELECT, INSERT, UPDATE, DELETE
-ON TABLE E1_Entities, E1_Entities_e1_id_seq, E2_EntityFreeSoftwareExperiences, E2_EntityFreeSoftwareExperiences_e2_id_seq, E3_Nationalities, E4_EntityJobLicenseAt, E5_EntityRequireCertifications, Q1_Qualifications, QS_QualificationSearches, JS_JobOfferSearches, J1_JobOffers, J1_JobOffers_j1_id_seq, A1_Alerts, R0_Qualifications2JobOffersJoins, R1_Donations2JobOffersJoins, R1_Donations2JobOffersJoins_r1_id_seq, R16_JobOffer2Certifications, R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles, R14_JobOffer2Skills, R15_JobOffer2Languages, R17_JobOffer2Nationalities, R26_Qualification2Certifications, R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles, R24_Qualification2Skills, R25_Qualification2Languages, R27_Qualification2Academic
+ON TABLE E1_Entities, E1_Entities_e1_id_seq, E2_EntityFreeSoftwareExperiences, E2_EntityFreeSoftwareExperiences_e2_id_seq, E3_Nationalities, E4_EntityJobLicenseAt, E5_EntityRequireCertifications, Q1_Qualifications, QS_QualificationSearches, JS_JobOfferSearches, J1_JobOffers, J1_JobOffers_j1_id_seq, A1_Alerts, R0_Qualifications2JobOffersJoins, D1_Donations2JobOffers, D1_Donations2JobOffers_d1_id_seq, R16_JobOffer2Certifications, R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles, R14_JobOffer2Skills, R15_JobOffer2Languages, R17_JobOffer2Nationalities, R26_Qualification2Certifications, R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles, R24_Qualification2Skills, R25_Qualification2Languages, R27_Qualification2Academic
 TO "www-data" ;
 
 GRANT SELECT  -- Note these tables are not modified by the webapp.

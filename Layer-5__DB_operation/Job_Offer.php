@@ -310,7 +310,10 @@ class JobOffer
 
 
 		if ( $offerType == 'Donation pledge group' )
-			$this->addDonation($J1_Id);
+		{
+			$donation = new Donation();
+			$donation->addDonation($J1_Id);
+		}
 
 		return $J1_Id;
 	}
@@ -513,137 +516,6 @@ class JobOffer
 	}
 
 
-	public function getDonators($JobOfferId)
-	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Donation,E1_Email,E1_WantEmail,EP_FirstName,EP_LastName,EP_MiddleName,EC_CooperativeName,EC_CompanyName,EO_OrganizationName FROM R1_Donations2JobOffersJoins,E1_Entities WHERE R1_E1_Id=E1_Id AND R1_J1_Id=$1 ;  EXECUTE query('$JobOfferId');";
-		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
-
-		$array['Donation'] = pg_fetch_all_columns($result, 0);
-
-		$array['Email'] = pg_fetch_all_columns($result, 1);
-		$array['WantEmail'] = pg_fetch_all_columns($result, 2);
-
-		$array['FirstName'] = pg_fetch_all_columns($result, 3);
-		$array['LastName'] = pg_fetch_all_columns($result, 4);
-		$array['MiddleName'] = pg_fetch_all_columns($result, 5);
-
-		$array['CooperativeName'] = pg_fetch_all_columns($result, 6);
-
-		$array['CompanyName'] = pg_fetch_all_columns($result, 7);
-
-		$array['NonprofitName'] = pg_fetch_all_columns($result, 8);
-
-		return $array;
-	}
-
-
-	public function getDonationsForPledgeGroup($JobOfferId)
-	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Donation FROM R1_Donations2JobOffersJoins WHERE R1_J1_Id=$1 ;  EXECUTE query('$JobOfferId');";
-		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
-
-		$donations = 0;
-
-		foreach (pg_fetch_all_columns($result,0) as $donation)
-		{
-			$donations = $donations + $donation;
-		}
-
-		return $donations;
-	}
-
-
-	public function addDonation($JobOfferId)
-	{
-		$entity = new Entity();
-		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : $entity->getEntityId(trim($_POST['Email']),'REQUEST_ADD_DONATION_TO_NOTICE_OPERATION'); // It registers the email and send the verification email if it is needed
-
-		$WageRank = isset($_POST['WageRank']) ? trim($_POST['WageRank']) : '';
-
-		// We do not increase the value of previous donations. We just add another donation to the notice, with the email
-		// the user used.  No DELETE + INSERT, just INSERT.
-		// If the user was not logged when [s]he filled the donation then [s]he have to confirm the donation clicking the
-		// link sent via email.
-
-		$sqlQuery = "PREPARE query(integer,text,integer) AS  INSERT INTO R1_Donations2JobOffersJoins (R1_J1_Id,R1_Donation,R1_E1_Id) VALUES ($1,$2,$3);  EXECUTE query('$JobOfferId','".pg_escape_string($WageRank)."','$EntityId');";
-		$this->postgresql->execute($sqlQuery,1);
-	}
-
-
-	public function cancelSelectedDonations()
-	{
-		// Cancel selected donations
-		for ($i=0; $i < count($_POST['CancelDonations']); $i++)
-		{
-			$donationId = $_POST['DonationId'][ $_POST['CancelDonations'][$i] ];
-
-			$sqlQuery = "PREPARE query(integer) AS  DELETE FROM R1_Donations2JobOffersJoins WHERE R1_Id=$1;  EXECUTE query('$donationId');";
-			$result = $this->postgresql->execute($sqlQuery,1);
-		}
-
-		// If after the canceling there is not any donation for a donations-pledge-group then auto-delete such donation-pledge-group
-		for ($i=0; $i < count($_POST['CancelDonations']); $i++)
-		{
-			$jobOfferId = $_POST['JobOfferId'][ $_POST['CancelDonations'][$i] ];
-
-			if ( $already_processed[$jobOfferId] != true ) // Avoid double-delete error
-			{
-				$sqlQuery = "PREPARE query(integer) AS  SELECT count(*) FROM R1_Donations2JobOffersJoins WHERE R1_J1_Id=$1;  EXECUTE query('$jobOfferId');";
-				$result = $this->postgresql->getOneField($sqlQuery,1);
-
-				if ( intval($result[0]) == 0 )
-				{
-					$this->deleteJobOffer($jobOfferId); // XXX: We could optimize this calling a custom method due to deleteJobOffer() tries to delete Skills, Language, etc. and DonationPledgeGroups do not use any of such properties.
-				}
-
-				$already_processed[$jobOfferId] = true;
-			}
-		}
-	}
-
-
-	public function cancelDonationsForEntity()
-	{
-		$donations = $this->getMyDonations(); // TODO: XXX: Change this method name?
-
-		// Cancel donations for Entity
-		$sqlQuery = "PREPARE query(integer) AS  DELETE FROM R1_Donations2JobOffersJoins WHERE R1_E1_Id=$1;  EXECUTE query('$_SESSION[EntityId]');";
-		$result = $this->postgresql->execute($sqlQuery,1);
-
-		// If after the canceling there is not any donation for a donations-pledge-group then auto-delete such donation-pledge-group  // TODO: XXX: Almost-duplicated code. See the cancelSelectedDonations() method above.
-		for ($i=0; $i < count($donations['DonationId']); $i++)
-		{
-			$jobOfferId = $donations['DonationPledgeGroupId'][$i];
-
-			if ( $already_processed[$jobOfferId] != true ) // Avoid double-delete error
-			{
-				$sqlQuery = "PREPARE query(integer) AS  SELECT count(*) FROM R1_Donations2JobOffersJoins WHERE R1_J1_Id=$1;  EXECUTE query('$jobOfferId');";
-				$result = $this->postgresql->getOneField($sqlQuery,1);
-
-				if ( intval($result[0]) == 0 )
-				{
-					$this->deleteJobOffer($jobOfferId); // XXX: We could optimize this calling a custom method due to deleteJobOffer() tries to delete Skills, Language, etc. and DonationPledgeGroups do not use any of such properties.
-				}
-
-				$already_processed[$jobOfferId] = true;
-			}
-		}
-	}
-
-
-	public function getMyDonations()
-	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT R1_Id, R1_Donation, R1_J1_Id FROM R1_Donations2JobOffersJoins WHERE R1_E1_Id=$1 ;  EXECUTE query('$_SESSION[EntityId]');";
-		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
-
-		$array['DonationId'] = pg_fetch_all_columns($result, 0);
-		$array['Donation'] = pg_fetch_all_columns($result, 1);
-		$array['DonationPledgeGroupId'] = pg_fetch_all_columns($result, 2);
-
-		return $array;
-	}
-
-
 	public function getApplicationsMeterForJobOffer($Id, $meter)
 	{
 		$sqlQuery = "PREPARE query(integer,text) AS  SELECT count(R0_E1_Id) FROM R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=$1 AND R0_State=$2;  EXECUTE query('$Id','$meter');";
@@ -662,16 +534,6 @@ class JobOffer
 		$sqlQuery = "PREPARE query(integer,integer) AS  SELECT R0_J1_Id FROM R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=$1 AND R0_E1_Id=$2;  EXECUTE query('$JobOfferId','$EntityId');";
 		$result = $this->postgresql->getOneField($sqlQuery,1);
 		if ( is_array($result) and count($result)==1 )
-			return true;
-		else
-			return false;
-	}
-
-	public function IsAlreadyDonator($EntityId,$JobOfferId)
-	{
-		$sqlQuery = "PREPARE query(integer,integer) AS  SELECT R1_J1_Id FROM R1_Donations2JobOffersJoins WHERE R1_J1_Id=$1 AND R1_E1_Id=$2;  EXECUTE query('$JobOfferId','$EntityId');";
-		$result = $this->postgresql->getOneField($sqlQuery,1);
-		if ( is_array($result) and count($result)>=1 )
 			return true;
 		else
 			return false;

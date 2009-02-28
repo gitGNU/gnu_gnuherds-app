@@ -189,8 +189,8 @@ class Entity
 		$countries->deleteJobLicenseAtForEntity();
 
 		// Delete its donations (for donation pledge groups)
-		$jobOffer = new JobOffer();
-		$jobOffer->cancelDonationsForEntity();
+		$donation = new Donation();
+		$donation->cancelDonationsForEntity();
 
 		// Delete its job offers
 		$jobOffer = new JobOffer();
@@ -297,12 +297,32 @@ class Entity
 		}
 	}
 
-	public function getEntityId($email) // This method is used to get the EntityId, when the user is not logged in, or to create and get a EntityId when the user is even not registered (auto-registering).
+	public function getEntityId($email,$requestOperation='',$magic='') // This method is used to get the EntityId, when the user is not logged in, or to create and get a EntityId when the user is even not registered (auto-registering). In the first case it also sends a confirmation email if a donation add has been requested
 	{
 		$E1_Id = $this->lookForEntity($email);
 
 		if ( $E1_Id )
 		{
+			// Check if we have to send confirmation email for not logged users adding a donation
+			if($requestOperation == 'REQUEST_TO_ADD_DONATION')
+			{
+				// Send the email
+				$message = gettext("Your email has been used to create or update a notice at GNU Herds.")."\n\n";
+
+				$message .= gettext("Follow the below link to confirm.")." ".gettext("That link will expire in 48 hours.")."\n\n"; // If it is not confirmed it will be lost, and the creation or update process will have to begin again.
+
+				$message .= "http://".$_SERVER['HTTP_HOST']."/pledges?action=donate&email=".trim($_POST['Email'])."&magic=".$magic;
+
+				$message .= "\n\n";
+
+				$message .= gettext("If you have not asked for it, ignore this email.")."\n\n";
+
+				$message .= gettext("If this email is Spam for you, please let it knows to  association AT gnuherds.org")."\n\n";
+
+				mb_language("uni");
+				mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Donation confirmation"), "$message", "From: association@gnuherds.org");
+			}
+
 			return $E1_Id;
 		}
 		else
