@@ -607,11 +607,11 @@ CREATE TABLE R1_Donations2JobOffersJoins (
 
 
 GRANT SELECT, INSERT, UPDATE, DELETE
-ON TABLE E1_Entities, E1_Entities_e1_id_seq, E2_EntityFreeSoftwareExperiences, E2_EntityFreeSoftwareExperiences_e2_id_seq, E3_Nationalities, E4_EntityJobLicenseAt, E5_EntityRequireCertifications, Q1_Qualifications, QS_QualificationSearches, JS_JobOfferSearches, J1_JobOffers, J1_JobOffers_j1_id_seq, R0_Qualifications2JobOffersJoins, R1_Donations2JobOffersJoins, R16_JobOffer2Certifications, R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles, R14_JobOffer2Skills, R15_JobOffer2Languages, R17_JobOffer2Nationalities, R26_Qualification2Certifications, R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles, R24_Qualification2Skills, R25_Qualification2Languages, R27_Qualification2Academic
+ON TABLE E1_Entities, E1_Entities_e1_id_seq, E2_EntityFreeSoftwareExperiences, E2_EntityFreeSoftwareExperiences_e2_id_seq, E3_Nationalities, E4_EntityJobLicenseAt, E5_EntityRequireCertifications, Q1_Qualifications, QS_QualificationSearches, JS_JobOfferSearches, J1_JobOffers, J1_JobOffers_j1_id_seq, A1_Alerts, R0_Qualifications2JobOffersJoins, R1_Donations2JobOffersJoins, R1_Donations2JobOffersJoins_r1_id_seq, R16_JobOffer2Certifications, R11_JobOffer2FieldProfiles, R12_JobOffer2ProfessionalProfiles, R13_JobOffer2ProductProfiles, R14_JobOffer2Skills, R15_JobOffer2Languages, R17_JobOffer2Nationalities, R26_Qualification2Certifications, R21_Qualification2FieldProfiles, R22_Qualification2ProfessionalProfiles, R23_Qualification2ProductProfiles, R24_Qualification2Skills, R25_Qualification2Languages, R27_Qualification2Academic
 TO "www-data" ;
 
 GRANT SELECT  -- Note these tables are not modified by the webapp.
-ON TABLE LJ_OfferType, LO_Countries, LU_Currencies, LL_Languages, LA_AcademicLevels, LC_Certifications, LK_ContractType, LB_ByPeriod, LM_TimeUnits, LE_Employability, LS_SpokenLevel, LW_WrittenLevel, LF_FieldProfiles, LP_ProfessionalProfiles, LX_ProductProfiles, LI_Skills, LT_SkillSetTypes, LG_KnowledgeLevel, LN_ExperienceLevel, LZ_ApplicationStates
+ON TABLE LJ_OfferType, LO_Countries, LN_Nationalities, LU_Currencies, LL_Languages, LA_AcademicLevels, LC_Certifications, LK_ContractType, LB_ByPeriod, LM_TimeUnits, LE_Employability, LS_SpokenLevel, LW_WrittenLevel, LF_FieldProfiles, LP_ProfessionalProfiles, LX_ProductProfiles, LI_Skills, LT_SkillSetTypes, LG_KnowledgeLevel, LN_ExperienceLevel, LZ_ApplicationStates
 TO "www-data" ;
 
 
@@ -1296,7 +1296,7 @@ INSERT INTO LU_Currencies VALUES ( 'AMD', 'Dram',   'Dram', 'Armenia' );
 INSERT INTO LU_Currencies VALUES ( 'AWG', 'Guilder, Aruba',                'Guilders, Aruba', 'Aruba' ); -- XXX: !!!: What is the Aruba's currency the Guilder or the Florin? Reference: http://en.wikipedia.org/wiki/Aruban_florin
 INSERT INTO LU_Currencies VALUES ( 'ANG', 'Guilder, Netherlands Antilles', 'Guilders, Netherlands Antilles', 'Bonaire, Curaço, Netherlands Antilles, Saba, Sint Eustatius, Sint Maarten' );-- XXX: !!!: What is the Netherlands Antilles' currency the Guilder or the Gulden? Reference: http://en.wikipedia.org/wiki/Netherlands_Antillean_gulden
 
-INSERT INTO LU_Currencies VALUES ( 'AZM', 'Manat, Azerbaijan',   'Manats, Azerbaijan', 'Azerbaijan' );
+INSERT INTO LU_Currencies VALUES ( 'AZN', 'Manat, Azerbaijan',   'Manats, Azerbaijan', 'Azerbaijan' );
 INSERT INTO LU_Currencies VALUES ( 'TMM', 'Manat, Turkmenistan', 'Manats, Turkmenistan', 'Turkmenistan' );
 
 INSERT INTO LU_Currencies VALUES ( 'BDT', 'Taka',  'Taka', 'Bangladesh' );
@@ -1377,7 +1377,6 @@ INSERT INTO LU_Currencies VALUES ( 'GMD', 'Dalasi', 'Dalasis', 'Gambia' );
 INSERT INTO LU_Currencies VALUES ( 'ILS', 'Israel New Shekel', 'Israel New Shekels', 'Gaza Strip, Israel' );
 
 INSERT INTO LU_Currencies VALUES ( 'GEL', 'Lari', 'Lari', 'Georgia' );
-INSERT INTO LU_Currencies VALUES ( 'GHC', 'Cedi', 'Cedis', 'Ghana' );
 
 INSERT INTO LU_Currencies VALUES ( 'GTQ', 'Quetzal',       'Quetzales', 'Guatemala' );
 INSERT INTO LU_Currencies VALUES ( 'HTG', 'Gourde, Haiti', 'Gourdes, Haiti', 'Haiti, Navassa' );
@@ -1420,19 +1419,18 @@ INSERT INTO LU_Currencies VALUES ( 'MYR', 'Ringgit, Malaysia', 'Ringgits, Malays
 INSERT INTO LU_Currencies VALUES ( 'MVR', 'Rufiyaa',      'Rufiyaa', 'Maldives' );
 
 INSERT INTO LU_Currencies VALUES ( 'MTL', 'Lira, Malta',  'Liras, Malta', 'Malta' );
-INSERT INTO LU_Currencies VALUES ( 'TRL', 'Lira, Turkey', 'Liras, Turkey', 'Turkey' );
+INSERT INTO LU_Currencies VALUES ( 'TRY', 'New Turkish Lira', 'New Turkish Liras', 'Turkey' );
 
 INSERT INTO LU_Currencies VALUES ( 'MRO', 'Ouguiya', 'Ouguiya', 'Mauritania' );
 
 INSERT INTO LU_Currencies VALUES ( 'MDL', 'Leu, Moldova', 'Lei, Moldova', 'Moldova, Transnistria' );
-INSERT INTO LU_Currencies VALUES ( 'ROL', 'Leu, Romania', 'Lei, Romania', 'Romania' );
 
 INSERT INTO LU_Currencies VALUES ( 'MNT', 'Tugrug', 'Tugrug', 'Mongolia' );
 
 INSERT INTO LU_Currencies VALUES ( 'MAD', 'Dirham, Morocco',              'Dirhams, Morocco', 'Morocco, Western Sahara' );
 INSERT INTO LU_Currencies VALUES ( 'AED', 'Dirham, United Arab Emirates', 'Dirhams, United Arab Emirates', 'United Arab Emirates' );
 
-INSERT INTO LU_Currencies VALUES ( 'MZM', 'Metical',      'Meticais', 'Mozambique' );
+INSERT INTO LU_Currencies VALUES ( 'MZN', 'Metical',      'Meticais', 'Mozambique' );
 INSERT INTO LU_Currencies VALUES ( 'NIO', 'Córdoba',      'Córdobas', 'Nicaragua' );
 INSERT INTO LU_Currencies VALUES ( 'NGN', 'Naira',        'Nairas', 'Nigeria' );
 
@@ -1449,13 +1447,11 @@ INSERT INTO LU_Currencies VALUES ( 'PLN', 'Złoty, Poland', 'Złotych, Poland', 
 INSERT INTO LU_Currencies VALUES ( 'QAR', 'Riyal, Qatar',        'Riyals, Qatar', 'Qatar' );
 INSERT INTO LU_Currencies VALUES ( 'SAR', 'Riyal, Saudi Arabia', 'Riyals, Saudi Arabia', 'Saudi Arabia' );
 
-INSERT INTO LU_Currencies VALUES ( 'RUR', 'Ruble, Russia', 'Rubles, Russia', 'Russia, Tajikistan' );
+INSERT INTO LU_Currencies VALUES ( 'RUB', 'Ruble, Russia', 'Rubles, Russia', 'Russia, Tajikistan' );
 
 INSERT INTO LU_Currencies VALUES ( 'WST', 'Tala',    'Tala', 'Samoa, Western Samoa' );
 INSERT INTO LU_Currencies VALUES ( 'STD', 'Dobra',   'Dobras', 'São Tome and Principe' );
--- INSERT INTO LU_Currencies VALUES ( 'SPL', 'Luigino', 'Luigino', 'Seborga' );  -- XXX: The legal currency is nevertheless the euro. Reference: http://en.wikipedia.org/wiki/Luigino
 INSERT INTO LU_Currencies VALUES ( 'SLL', 'Leone',   'Leones', 'Sierra Leone' );
--- INSERT INTO LU_Currencies VALUES ( 'SIT', 'Tolar',   'Tolarjev', 'Slovenia' );  -- XXX: Will be replaced by the euro (EUR) on 1 January 2007. Reference: http://en.wikipedia.org/wiki/Slovenia
 
 INSERT INTO LU_Currencies VALUES ( 'ZAR', 'Rand, South Africa', 'Rand, South Africa', 'South Africa, Swaziland' );
 
@@ -1468,7 +1464,7 @@ INSERT INTO LU_Currencies VALUES ( 'TOP', 'Pa\'anga', 'Pa\'anga', 'Tonga' ); -- 
 INSERT INTO LU_Currencies VALUES ( 'UAH', 'Hryvna',   'Hryvnias', 'Ukraine' );
 INSERT INTO LU_Currencies VALUES ( 'VUV', 'Vatu',     'Vatu', 'Vanuatu' );
 
-INSERT INTO LU_Currencies VALUES ( 'VEB', 'Bolivar', 'Bolivares', 'Venezuela' );
+INSERT INTO LU_Currencies VALUES ( 'VEF', 'Bolívar fuerte', 'Bolívares fuertes', 'Venezuela' );
 
 INSERT INTO LU_Currencies VALUES ( 'VND', 'Dong', 'Dong', 'Vietnam' );
 

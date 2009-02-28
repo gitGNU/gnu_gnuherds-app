@@ -114,7 +114,7 @@ msgstr "Florín, Aruba"
 msgid "Guilders, Aruba"
 msgstr "Florines, Aruba"
 
-#. currency_name for AZN, currency_name for AZM
+#. currency_name for AZN
 msgid "Azerbaijanian Manat"
 msgstr "Manat de Azerbaiyán"
 
@@ -153,7 +153,7 @@ msgstr "Taka"
 
 # plural
 
-#. currency_name for BGN, currency_name for BGL
+#. currency_name for BGN
 msgid "Bulgarian Lev"
 msgstr "Lev búlgaro"
 
@@ -262,7 +262,7 @@ msgstr "Pula"
 
 # plural
 
-#. currency_name for BYR, currency_name for BYB
+#. currency_name for BYR
 msgid "Belarussian Rouble"
 msgstr "Rubla bielorruso"
 
@@ -564,17 +564,6 @@ msgstr "Lari"
 
 # plural
 
-#. currency_name for GHC
-msgid "Ghanaian Cedi"
-msgstr "Cedi ghanés"
-
-msgid "Cedi"
-msgstr "Cedi"
-
-# plural
-msgid "Cedis"
-msgstr "Cedis"
-
 #. currency_name for GIP
 msgid "Gibraltar Pound"
 msgstr "Libra de Gibraltar"
@@ -618,12 +607,6 @@ msgstr "Quetzal"
 # plural
 msgid "Quetzales"
 msgstr "Quetzales"
-
-#. currency_name for GWP
-msgid "Guinea-Bissau Peso"
-msgstr "Peso de Guinea-Bissau"
-
-# plural
 
 #. currency_name for GYD
 msgid "Guyana Dollar"
@@ -1092,7 +1075,7 @@ msgstr "Ringgit, Malasia"
 msgid "Ringgits, Malaysia"
 msgstr "Ringgits, Malasia"
 
-#. currency_name for MZN, currency_name for MZM
+#. currency_name for MZN
 msgid "Mozambique Metical"
 msgstr "Metical mozambiqueño"
 
@@ -1233,16 +1216,16 @@ msgstr "Rupia, Pakistán"
 msgid "Rupees, Pakistan"
 msgstr "Rupias, Pakistán"
 
-#. currency_name for PLN, currency_name for PLZ
+#. currency_name for PLN
 msgid "Polish Złoty"
-msgstr "Zloty polaco"
+msgstr "Złoty polaco"
 
 msgid "Złoty, Poland"
-msgstr ""
+msgstr "Złoty, Polonia"
 
 # plural
 msgid "Złotych, Poland"
-msgstr ""
+msgstr "Złotych, Polonia"
 
 #. currency_name for PYG
 msgid "Paraguay Guaraní"
@@ -1266,17 +1249,6 @@ msgstr "Rial, Qatar"
 msgid "Riyals, Qatar"
 msgstr "Riales, Qatar"
 
-#. currency_name for ROL
-msgid "Romanian Old Leu"
-msgstr "antigüo Leu rumano"
-
-msgid "Old Leu, Romania"
-msgstr ""
-
-# plural
-msgid "Old Lei, Romania"
-msgstr ""
-
 #. currency_name for RON
 msgid "Romanian New Leu"
 msgstr "nuevo Leu rumano"
@@ -1288,7 +1260,7 @@ msgstr ""
 msgid "New Lei, Romania"
 msgstr ""
 
-#. currency_name for RUB, currency_name for RUR
+#. currency_name for RUB
 msgid "Russian Ruble"
 msgstr "Rublo ruso"
 
@@ -1383,12 +1355,6 @@ msgstr "Libra, Santa Helena"
 # plural
 msgid "Pounds, Saint Helena"
 msgstr "Libras, Santa Helena"
-
-#. currency_name for SIT
-msgid "Slovenian Tolar"
-msgstr "Tolar esloveno"
-
-# plural
 
 #. currency_name for SKK
 msgid "Slovak Koruna"
@@ -1493,11 +1459,11 @@ msgid "Turkmenistan Manat"
 msgstr "Manat turcomano"
 
 msgid "Manat, Turkmenistan"
-msgstr ""
+msgstr "Manat, Turkmenistán"
 
 # plural
 msgid "Manats, Turkmenistan"
-msgstr ""
+msgstr "Manats, Turkmenistán"
 
 #. currency_name for TND
 msgid "Tunisian Dinar"
@@ -1524,6 +1490,8 @@ msgid "New Turkish Lira"
 msgstr "Nueva lira turca"
 
 # plural
+msgid "New Turkish Liras"
+msgstr "Nuevas liras turcas"
 
 #. currency_name for TTD
 msgid "Trinidad and Tobago Dollar"
@@ -1606,8 +1574,8 @@ msgstr "Peso uruguayo"
 
 msgid "Peso, Uruguay"
 msgstr "Peso, Uruguay"
-# plural
 
+# plural
 msgid "Pesos, Uruguay"
 msgstr "Pesos, Uruguay"
 
@@ -1619,17 +1587,6 @@ msgid "Som, Uzbekistan"
 msgstr "Som, Uzbekistán"
 
 # plural
-
-#. currency_name for VEB
-msgid "Venezuela Bolivar"
-msgstr "Bolívar venezolano"
-
-msgid "Bolivar"
-msgstr "Bolívar"
-
-# plural
-msgid "Bolivares"
-msgstr "Bolivares"
 
 #. currency_name for VND
 msgid "Viet Nam Dong"
@@ -1816,534 +1773,3 @@ msgstr "Dólar, Zimbabwe"
 # plural
 msgid "Dollars, Zimbabwe"
 msgstr "Dólares, Zimbabwe"
-
-#. currency_name for ADP
-msgid "Andorran Peseta"
-msgstr "Peseta andorrana"
-
-# plural
-
-#. currency_name for ALK
-msgid "Albanian Old Lek"
-msgstr "viejo lek de Albania"
-
-# plural
-
-#. currency_name for AON
-msgid "Angola New Kwanza"
-msgstr "Nuevo kwanza angolés"
-
-# plural
-
-#. currency_name for AOR
-msgid "Angola Kwanza Reajustado"
-msgstr "Kwanza reajustado angolés"
-
-# plural
-
-#. currency_name for ARA
-msgid "Argentine Austral"
-msgstr "Austral argentino"
-
-# plural
-
-#. currency_name for ARP
-msgid "Peso Argentino"
-msgstr "Peso argentino"
-
-msgid "Peso, Argentina"
-msgstr "Peso, Argentina"
-
-# plural
-msgid "Pesos, Argentina"
-msgstr "Pesos, Argentina"
-
-#. currency_name for ATS
-msgid "Austrian Schilling"
-msgstr "Chelín austríaco"
-
-# plural
-
-#. currency_name for BAD
-msgid "Bosnia and Herzegovina Dinar"
-msgstr "Dinar bosnio herzegovino"
-
-# plural
-
-#. currency_name for BEC
-msgid "Belgian Convertible Franc"
-msgstr "Franco convertible belga"
-
-# plural
-
-#. currency_name for BEF
-msgid "Belgian Franc"
-msgstr "Franco belga"
-
-# plural
-
-#. currency_name for BEL
-msgid "Belgian Financial Franc"
-msgstr "Franco financiero belga"
-
-# plural
-
-#. currency_name for BGJ
-msgid "Bulgarian Lev A/52"
-msgstr "Lev A/52 búlgaro"
-
-# plural
-
-#. currency_name for BGK
-msgid "Bulgarian Lev A/62"
-msgstr "Lev A/62 búlgaro"
-
-# plural
-
-#. currency_name for BOP
-msgid "Bolivian Peso"
-msgstr "Peso boliviano"
-
-# plural
-
-#. currency_name for BRB, currency_name for BRE
-msgid "Brazilian Cruzeiro"
-msgstr "Cruceiro brasileño"
-
-# plural
-
-#. currency_name for BRC
-msgid "Brazilian Cruzado"
-msgstr "Cruzado brasileño"
-
-# plural
-
-#. currency_name for BRN
-msgid "Brazilian New Cruzado"
-msgstr "nuevo cruzado brasileño"
-
-# plural
-
-#. currency_name for BRR
-msgid "Brazilian Cruzeiro Real"
-msgstr "Cruceiro real brasileño"
-
-# plural
-
-#. currency_name for BUK
-msgid "Kyat"
-msgstr ""
-
-# plural
-msgid "Kyats"
-msgstr ""
-
-#. currency_name for CNX
-msgid "Chinese Peoples Bank Dollar"
-msgstr "Dólar del banco popular chino"
-
-# plural
-
-#. currency_name for CSJ
-msgid "Czechoslovakian Krona A/53"
-msgstr "Corona A/53 checa"
-
-# plural
-
-#. currency_name for CSK
-msgid "Czechoslovakian Koruna"
-msgstr "Corona checa"
-
-# plural
-
-#. currency_name for DDM
-msgid "Mark der DDR"
-msgstr "Marco de RDFA"
-
-# plural
-
-#. currency_name for DEM
-msgid "Deutsche Mark"
-msgstr "Marco alemán"
-
-# plural
-
-#. currency_name for ECS
-msgid "Ecuador Sucre"
-msgstr "Sucre ecuatoriano"
-
-# plural
-
-#. currency_name for ECV
-msgid "Unidad de Valor Constante UVC"
-msgstr "Unidad de Valor Constante UVC"
-
-# plural
-
-#. currency_name for ESA
-msgid "Spanish Peseta ('A' Account)"
-msgstr "Peseta española (cuenta 'A')"
-
-# plural
-
-#. currency_name for ESB
-msgid "Spanish Peseta (convertible)"
-msgstr "Peseta española (convertible)"
-
-# plural
-
-#. currency_name for ESP
-msgid "Spanish Peseta"
-msgstr "Peseta española"
-
-# plural
-
-#. currency_name for FIM
-msgid "Finnish Markka"
-msgstr "Marco finlandés"
-
-# plural
-
-#. currency_name for FRF
-msgid "French Franc"
-msgstr "Franco francés"
-
-# plural
-
-#. currency_name for GEK
-msgid "Georgian Coupon"
-msgstr "Cupón georgiano"
-
-# plural
-
-#. currency_name for GNE, currency_name for GNS
-msgid "Guinea Syli"
-msgstr "Syli guineano"
-
-# plural
-
-#. currency_name for GQE
-msgid "Equatorial Guinea Ekwele"
-msgstr "Ekwele de Guinea Ecuatorial"
-
-# plural
-
-#. currency_name for GRD
-msgid "Greek Drachma"
-msgstr "Dracma griego"
-
-# plural
-
-#. currency_name for GWE
-msgid "Guinea Escudo"
-msgstr "Escudo guineano"
-
-# plural
-
-#. currency_name for HRD
-msgid "Croatian Dinar"
-msgstr "Dinar croata"
-
-# plural
-
-#. currency_name for IEP
-msgid "Irish Pound"
-msgstr "Libra irlandesa"
-
-# plural
-
-#. currency_name for ILP
-msgid "Israeli Pound"
-msgstr "Libra israelí"
-
-# plural
-
-#. currency_name for ILR
-msgid "Israeli Old Shekel"
-msgstr "antigüo shekel israelí"
-
-# plural
-
-#. currency_name for ISJ
-msgid "Iceland Old Krona"
-msgstr "antigüa corona islandesa"
-
-# plural
-
-#. currency_name for ITL
-msgid "Italian Lira"
-msgstr "Lira italiana"
-
-# plural
-
-#. currency_name for LAJ
-msgid "Lao Pot Pol"
-msgstr "Pot Pol laosiano"
-
-# plural
-
-#. currency_name for LSM
-msgid "Lesotho Maloti"
-msgstr "Maloti lesothense"
-
-# plural
-msgid "Maloti, Lesotho"
-msgstr "Lotis, Lesoto"
-
-#. currency_name for LTT
-msgid "Lithuanian Talonas"
-msgstr "Talonas lituano"
-
-# plural
-
-#. currency_name for LUC
-msgid "Luxembourg Convertible Franc"
-msgstr "Franco convertible luxemburgués"
-
-# plural
-
-#. currency_name for LUF
-msgid "Luxembourg Franc"
-msgstr "Franco luxemburgués"
-
-# plural
-
-#. currency_name for LUL
-msgid "Luxembourg Financial Franc"
-msgstr "Franco financiero luxemburgués"
-
-# plural
-
-#. currency_name for LVR
-msgid "Latvian Ruble"
-msgstr "Rubla letón"
-
-msgid "Ruble"
-msgstr "Rublo"
-
-# plural
-msgid "Rubles"
-msgstr "Rublos"
-
-#. currency_name for MAF, currency_name for MLF
-msgid "Mali Franc"
-msgstr "Franco malí"
-
-# plural
-
-#. currency_name for MGF
-msgid "Malagasy Franc"
-msgstr "Franco malgache"
-
-# plural
-
-#. currency_name for MTP
-msgid "Maltese Pound"
-msgstr "Libra maltesa"
-
-# plural
-
-#. currency_name for MVQ
-msgid "Maldive Rupee"
-msgstr "Rupia maldiva"
-
-# plural
-
-#. currency_name for MZE
-msgid "Mozambique Escudo"
-msgstr "Escudo mozambiqueño"
-
-# plural
-
-#. currency_name for NIC
-msgid "Nicaraguan Cordoba"
-msgstr "Córdoba nicaraguense"
-
-# plural
-
-#. currency_name for NLG
-msgid "Netherlands Guilder"
-msgstr "Florín neerlandés"
-
-# plural
-
-#. currency_name for PEH, currency_name for PES
-msgid "Peruvian Sol"
-msgstr "Sol peruano"
-
-# plural
-
-#. currency_name for PEI
-msgid "Peruvian Inti"
-msgstr "Inti peruano"
-
-# plural
-
-#. currency_name for PTE
-msgid "Portuguese Escudo"
-msgstr "Escudo portugués"
-
-# plural
-
-#. currency_name for RHD
-msgid "Rhodesian Dollar"
-msgstr "Dólar rodesiano"
-
-# plural
-
-#. currency_name for ROK
-msgid "Romanian Leu A/52"
-msgstr "Leu A/52 rumano"
-
-# plural
-
-#. currency_name for SDP
-msgid "Sudanese Pound"
-msgstr "Libra sudanesa"
-
-# plural
-
-#. currency_name for SRG
-msgid "Suriname Guilder"
-msgstr "Florín surinamés"
-
-# plural
-
-#. currency_name for SUR
-msgid "USSR Rouble"
-msgstr "Rublo soviético"
-
-# plural
-
-#. currency_name for TJR
-msgid "Tajik Rouble"
-msgstr "Rubla tayiko"
-
-# plural
-
-#. currency_name for TLE
-msgid "Timor Escudo"
-msgstr "Escudo de Timor"
-
-# plural
-
-#. currency_name for TRL
-msgid "Turkish Lira"
-msgstr "Lira turca"
-
-msgid "Lira, Turkey"
-msgstr "Lira, Turquía"
-
-# plural
-msgid "Liras, Turkey"
-msgstr "Liras, Turquía"
-
-#. currency_name for UAK
-msgid "Ukrainian Karbovanet"
-msgstr "Karbovanet ukraniano"
-
-# plural
-
-#. currency_name for UGS
-msgid "Uganda Schilling"
-msgstr "Chelín ugandés"
-
-# plural
-
-#. currency_name for UGW
-msgid "Uganda Old Schilling"
-msgstr "Viejo chelín ugandés"
-
-# plural
-
-#. currency_name for UYN
-msgid "Old Uruguayan Peso"
-msgstr "antigüo peso uruguayo"
-
-# plural
-
-#. currency_name for UYP
-msgid "Uruguayan Peso"
-msgstr "Peso uruguayo"
-
-# plural
-
-#. currency_name for VNC
-msgid "Viet Nam Old Dong"
-msgstr "antigüo dong vietnamita"
-
-# plural
-
-#. currency_name for XEU
-msgid "European Currency Unit ECU"
-msgstr "unidad de modenda europea (EUM)"
-
-# plural
-
-#. currency_name for XRE
-msgid "RINET Funds Code"
-msgstr "fondos RINET"
-
-# plural
-
-#. currency_name for YDD
-msgid "Yemeni Dinar"
-msgstr "Dinar yemení"
-
-# plural
-
-#. currency_name for YUD, currency_name for YUN
-msgid "Yugoslavian Dinar"
-msgstr "Dinar yugoslavo"
-
-# plural
-
-#. currency_name for ZAL
-msgid "South African Financial Rand"
-msgstr "Rand financiero sudafricano"
-
-# plural
-
-#. currency_name for ZRN
-msgid "New Zaire"
-msgstr "Nuevo Zaire"
-
-# plural
-
-#. currency_name for ZRZ
-msgid "Zaire"
-msgstr "Zaire"
-
-# plural
-
-#~ msgid "Burma"
-#~ msgstr "Burma"
-
-#~ msgid "Bond Markets Units"
-#~ msgstr "Unidades de bonos de mercado"
-
-#~ msgid "Afghanistan afghani"
-#~ msgstr "Afghani afgano"
-
-#~ msgid "Republic of Korea won"
-#~ msgstr "Won sudcoreano"
-
-#~ msgid "Sierra Leone leone"
-#~ msgstr "Leone de Sierra Leona"
-
-#~ msgid "Democratic Yemeni dinar"
-#~ msgstr "Dinar de Yemén Democrático"
-
-#XXX(david@leals.com): Maybe we should remove some of these. Maybe they are obsolete, and not used anymore.
-msgid "Dollars, Tuvalu"
-msgstr "Dólares, Tuvalu"
-
-msgid "Pounds, Guernsey"
-msgstr "Libras, Guernsey"
-
-msgid "Pounds, Isle of Man"
-msgstr "Libras, Isle of Man"
-
-msgid "Pounds, Jersey"
-msgstr "Libras, Jersey"
-
