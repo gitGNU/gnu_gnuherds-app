@@ -341,6 +341,14 @@ class DBManager
 		$donation->addDonation($Id);
 	}
 
+	public function confirmDonation($email,$magic)
+	{
+		// This method does not need ACL check.
+
+		$donation = new Donation();
+		return $donation->confirmDonation($email,$magic);
+	}
+
 	public function cancelSelectedDonations()
 	{
 		//XXX: TODO: $acl = new AccessControlList();

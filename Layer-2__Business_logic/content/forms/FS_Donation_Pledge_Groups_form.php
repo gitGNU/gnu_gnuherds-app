@@ -34,12 +34,23 @@ class FSDonationPledgeGroupsForm
 
 	public function processForm()
 	{
+		if ( isset($_GET['action']) and $_GET['action'] == "donate" ) // Donation confirmation
+		{
+			if ( $this->manager->confirmDonation($_GET['email'],$_GET['magic']) == true )
+			{
+				$this->processingResult .= "<p>&nbsp;</p>\n";
+				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Donation pledge confirmed!")."</p>\n";
+			}
+		}
 	}
 
 
 	public function printOutput()
 	{
-		$this->printFSDonationPledgeGroupsForm();
+		if ( isset($_GET['action']) and $_GET['action'] == "donate" )
+			echo $this->processingResult;
+		else
+			$this->printFSDonationPledgeGroupsForm();
 	}
 
 
