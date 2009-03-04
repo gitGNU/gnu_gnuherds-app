@@ -311,7 +311,7 @@ class Entity
 
 				$message .= gettext("Follow the below link to confirm.")." ".gettext("That link will expire in 48 hours.")."\n\n"; // If it is not confirmed it will be lost, and the creation or update process will have to begin again.
 
-				$message .= "http://".$_SERVER['HTTP_HOST']."/pledges?action=donate&email=".trim($_POST['Email'])."&magic=".$magic;
+				$message .= "https://".$_SERVER['HTTP_HOST']."/pledges?action=donate&email=".trim($_POST['Email'])."&magic=".$magic;
 
 				$message .= "\n\n";
 
