@@ -327,9 +327,6 @@ class Entity
 		}
 		else
 		{
-			// Make the 'magic' flag
-			$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
-
 			$E1_Id = $this->addEntity($magic);
 
 			// Send the email

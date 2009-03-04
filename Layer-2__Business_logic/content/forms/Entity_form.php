@@ -75,6 +75,13 @@ abstract class EntityForm
 				if ( $_GET['action'] == "verify" )
 				{
 					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your email has been verified!")."</p>\n";
+
+					// If the "Email verification" was raised by REQUEST_TO_ADD_DONATION then we have a donation to confirm too
+					if ( $this->manager->confirmDonation($_GET['email'],$_GET['magic']) == true )
+					{
+						$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Donation pledge confirmed!")."</p>\n";
+					}
+					//else do nothing. We just checked for a donation to confirm.
 				}
 
 				if ( $_GET['action'] == "register"  or  $_GET['action'] == "verify" )

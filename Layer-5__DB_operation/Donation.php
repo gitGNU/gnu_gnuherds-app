@@ -118,9 +118,7 @@ class Donation
 		}
 		else
 		{
-			// Raise the usual error message
-			$error = "<p>".gettext("ERROR: Wrong magic number!")."</p>";
-			throw new Exception($error,false);
+			return false;
 		}
 	}
 

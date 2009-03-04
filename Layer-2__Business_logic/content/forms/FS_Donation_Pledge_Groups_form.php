@@ -41,6 +41,12 @@ class FSDonationPledgeGroupsForm
 				$this->processingResult .= "<p>&nbsp;</p>\n";
 				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Donation pledge confirmed!")."</p>\n";
 			}
+			else
+			{
+				// Raise the usual error message
+				$error = "<p>".gettext("ERROR: Wrong magic number!")."</p>";
+				throw new Exception($error,false);
+			}
 		}
 	}
 
