@@ -123,6 +123,15 @@ class Donation
 	}
 
 
+	public function delNonConfirmedDonations()
+	{
+		// This is done to clean non-confirmed donations whose time-window to confirm has expired.
+
+		$sqlQuery = "DELETE FROM D1_Donations2JobOffers WHERE D1_DonationMagicExpire IS NOT NULL  AND  D1_DonationMagicExpire < 'now' ;";
+		$this->postgresql->execute($sqlQuery,0);
+	}
+
+
 	public function cancelSelectedDonations()
 	{
 		// Cancel selected donations

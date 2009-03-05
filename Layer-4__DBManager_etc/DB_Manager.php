@@ -349,6 +349,14 @@ class DBManager
 		return $donation->confirmDonation($email,$magic);
 	}
 
+	public function delNonConfirmedDonations()
+	{
+		//XXX: ACL: This method deletes donations.  Add support to check sysadmin authentication for website-frontend + DB-backend.
+
+		$donation = new Donation();
+		return $donation->delNonConfirmedDonations();
+	}
+
 	public function cancelSelectedDonations()
 	{
 		//XXX: TODO: $acl = new AccessControlList();
