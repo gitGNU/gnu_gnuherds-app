@@ -683,7 +683,7 @@ msgid "Why voting membership is on a yearly basis?"
 msgstr "Dlaczego członkowstwo trwa tylko rok?"
 
 msgid "Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low."
-msgstr "Mogło by dojść do sytuacji w której Stowarzyszenia nie da się rozwiązać, %1ze względu%2 na dużą ilość mało aktywnych członków."
+msgstr "Mogłoby dojść do sytuacji, w której, %1ze względu%2 na duzą ilość mało aktywnych członków, nie da się  rozwiązać Stowarzyszenia."
 
 msgid "The membership renew process is automated to reduce bureaucracy."
 msgstr "Proces odnawiania członkowstwa pozwala wyeliminować biurokratyzację."
