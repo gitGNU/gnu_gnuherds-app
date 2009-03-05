@@ -799,7 +799,7 @@ msgid "If you like some of the ideas listed in the pledge groups below, you can 
 msgstr "Jeśli podobają Ci się pomysły zaprezentowane na liście grup dotujących możesz dodać własną dotację, aby pomóc przekształcić ją w ofertę pracy. Możesz również dodawać własne idee albo poprawki."
 
 msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I accept%2\" to try it."
-msgid "Jeżeli chciałbyś wykonać kilka z poniższych zadań w zamian za pieniądze, po prostu otwórz je i kliknij \"%1spróbuję%2\" zmnienić."
+msgstr "Jeżeli chciałbyś wykonać kilka z poniższych zadań w zamian za pieniądze, po prostu otwórz je i kliknij \"%1spróbuję%2\" zmnienić."
 
 msgid "Donation pledge group title"
 msgstr "Nazwa grupy dotujących"
