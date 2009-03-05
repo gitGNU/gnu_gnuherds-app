@@ -152,7 +152,7 @@ msgstr "Wylogowałeś się."
 # msgstr "El proyecto %2GNU Herds%3 es oficialmente parte de %1El Proyecto GNU%3."
 # foot.tpl
 msgid "Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!"
-msgstr "Wszelkie uwagi proszę wysyłać na adres %1. Możesz np. przesłać raport nt. problemów technicznych takich jak niedziające odnośniki, błędy w renderowaniu strony itd. Poza tym jesteśmy otwarci na wszelką krytykę i sugestie. GNU Herds jest dla ciebie!"
+msgstr "Wszelkie uwagi proszę wysyłać na adres %1. Możesz np. przesłać raport nt. problemów technicznych takich jak niedziałające odnośniki, błędy w renderowaniu strony itd. Poza tym jesteśmy otwarci na wszelką krytykę i sugestie. GNU Herds jest dla Ciebie!"
 
 # Lost_Password_form.tpl
 msgid "Write your email and click the Send button."
