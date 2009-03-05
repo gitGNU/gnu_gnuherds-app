@@ -20,5 +20,5 @@ require_once "../Layer-4__DBManager_etc/DB_Manager.php";
 
 
 $manager = new DBManager();
-$manager->delNotUsedPendingSkills();
+$manager->delNonUsedPendingSkills();
 ?> 

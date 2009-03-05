@@ -86,7 +86,7 @@ class Skills
 		return $array;
 	}
 
-	public function delNotUsedPendingSkills()
+	public function delNonUsedPendingSkills()
 	{
 		// This is done to clean not used 'garbage'
 

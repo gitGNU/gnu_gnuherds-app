@@ -559,12 +559,12 @@ class DBManager
 		return $skills->getPendingSkillsList();
 	}
 
-	public function delNotUsedPendingSkills()
+	public function delNonUsedPendingSkills()
 	{
 		//XXX: ACL: This method deletes skills.  Add support to check sysadmin authentication for website-frontend + DB-backend.
 
 		$skills = new Skills();
-		return $skills->delNotUsedPendingSkills();
+		return $skills->delNonUsedPendingSkills();
 	}
 
 	public function getSkillSetTypesList()
