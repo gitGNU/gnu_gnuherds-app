@@ -835,8 +835,8 @@ msgstr "Una promesa es un compromiso de donación, por ejemplo de dos céntimos,
 msgid "If you like some of the ideas listed in the pledge groups below, you can join to by contributing your two cents to help get it converted into an actual job offer. You can even edit it to add your ideas or corrections."
 msgstr "Si a usted le gusta alguna de las ideas listadas en los siguientes grupos de promesas, usted puede sumar contribuyendo sus dos céntimos para ayudar a que dicho grupo se convierta en una oferta de trabajo real. Usted puede también editar el grupo para añadir sus ideas o correcciones."
 
-msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I will do it%2\"."
-msgstr "Si a usted le gustaría llevar a cabo alguna de las siguientes tareas, a cambio del dinero apuntado en la tarea, simplemente ábrala y pulse el botón \"%1Yo lo haré%2\"."
+msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I accept%2\" to try it."
+msgstr "Si a usted le gustaría llevar a cabo alguna de las siguientes tareas, a cambio del dinero apuntado en la tarea, simplemente ábrala y pulse el botón \"%1Acepto%2\" intentarlo."
 
 msgid "Donation pledge group title"
 msgstr "Título del grupo de promesas de donación"

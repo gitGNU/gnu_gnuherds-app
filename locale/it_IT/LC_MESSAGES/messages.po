@@ -849,8 +849,8 @@ msgid "If you like some of the ideas listed in the pledge groups below, you can 
 msgstr "Si a usted le gusta alguna de las ideas listadas en los siguientes grupos de promesas, usted puede sumar contribuyendo sus dos céntimos para ayudar a que dicho grupo se convierta en una oferta de trabajo real. Usted puede también editar el grupo para añadir sus ideas o correcciones."
 
 #, fuzzy
-msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I will do it%2\"."
-msgstr "Si a usted le gustaría llevar a cabo alguna de las siguientes tareas, a cambio del dinero apuntado en la tarea, simplemente ábrala y pulse el botón \"%1Yo lo haré%2\"."
+msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I accept%2\" to try it."
+msgstr "Si a usted le gustaría llevar a cabo alguna de las siguientes tareas, a cambio del dinero apuntado en la tarea, simplemente ábrala y pulse el botón \"%1Acepto%2\" intentarlo."
 
 #, fuzzy
 msgid "Donation pledge group title"
@@ -1030,8 +1030,8 @@ msgid "I want to add my %1donation pledge%2 in exchange for getting those tasks 
 msgstr "Quiero añadir mi %1promesa de donación%2 a cambio de obtener estas tareas hechas."
 
 #, fuzzy
-msgid "I will do it"
-msgstr "Yo lo haré"
+msgid "I accept"
+msgstr "Acepto"
 
 #, fuzzy
 msgid "in exchange for that money."

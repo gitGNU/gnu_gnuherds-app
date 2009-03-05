@@ -798,8 +798,8 @@ msgstr "Dotacja jest obietnicą dania czegoś, np. dwóch dolarów, gdy zadanie 
 msgid "If you like some of the ideas listed in the pledge groups below, you can join to by contributing your two cents to help get it converted into an actual job offer. You can even edit it to add your ideas or corrections."
 msgstr "Jeśli podobają Ci się pomysły zaprezentowane na liście grup dotujących możesz dodać własną dotację, aby pomóc przekształcić ją w ofertę pracy. Możesz również dodawać własne idee albo poprawki."
 
-msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I will do it%2\"."
-msgstr "Si a usted le gustaría llevar a cabo alguna de las siguientes tareas, a cambio del dinero apuntado en la tarea, simplemente ábrala y pulse el botón \"%1Yo lo haré%2\"."
+msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I accept%2\" to try it."
+msgid "Jeżeli chciałbyś wykonać kilka z poniższych zadań w zamian za pieniądze, po prostu otwórz je i kliknij \"%1spróbuję%2\" zmnienić."
 
 msgid "Donation pledge group title"
 msgstr "Nazwa grupy dotujących"
@@ -955,8 +955,8 @@ msgstr "zobowiązanie wykonania dotacji"
 msgid "I want to add my %1donation pledge%2 in exchange for getting those tasks done."
 msgstr "Chcę dodać %1dotację%2 wzamian za wykonanie tych zadań."
 
-msgid "I will do it"
-msgstr "Podejmę się tego"
+msgid "I accept"
+msgstr "Akceptuję"
 
 msgid "in exchange for that money."
 msgstr "w zamian za tą sumę."
