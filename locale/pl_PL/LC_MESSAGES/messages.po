@@ -283,7 +283,7 @@ msgid "Other modules could be developed. Send an email with your proposal to the
 msgstr "Portal jest otwarty na świeże pomysły i cały czas się rozwija. Jeśli masz jakieś propozycje możesz w każdej chwili wysłać je na listę mailingową %1 . Czekamy na twoją inicjatywę!"
 
 msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
-msgstr "Cały projekt został zrealizowany przez małą %1grupę członków społeczności wspierającej Wolne Oprogramowanie."
+msgstr "Cały projekt został zrealizowany przez małą %1grupę%2 członków społeczności wspierającej Wolne Oprogramowanie."
 
 msgid "Mailing lists:"
 msgstr "Listy wysyłkowe związane z projektem:"
