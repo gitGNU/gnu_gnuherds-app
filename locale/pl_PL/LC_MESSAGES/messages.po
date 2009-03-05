@@ -114,7 +114,7 @@ msgid "Log in"
 msgstr "Zaloguj się"
 
 msgid "Lost password?"
-msgstr "Zapomniałeś hasło?"
+msgstr "Zapomniałeś hasła?"
 
 msgid "Register person"
 msgstr "Zarejestruj się"
@@ -320,7 +320,7 @@ msgid "There shall be two kinds of members, voting members, to be known simply a
 msgstr "Są dwa rodzaje członkowstwa. Członkowie z prawem do głosowania zwani dalej po prostu \"członkami\", oraz członkowie bez prawa do głosowania zwani dalej \"członkami nadzwyczajnymi\"."
 
 msgid "All members must subscribe to the purposes of GNU Herds and adhere to the Code of Ethics at the penalty of their membership being revoked."
-msgstr "Wszyscy członkowie muszą przyczyniać się do zamierzeń GNU Herds oraz stosować się do Kodeksu Etycznego pod groźba unieważnienia członkowstwa."
+msgstr "Wszyscy członkowie muszą przyczyniać się do zamierzeń GNU Herds oraz stosować się do Kodeksu Etycznego pod groźbą unieważnienia członkowstwa."
 
 msgid "To qualify for voting membership one must show a contribution to the Free Software movement."
 msgstr "By zakwalifikować się jako członek z prawem do głosowania należy okazać dowód swojego wkładu w rozwój ruchu Wolnego Oprogramowania."
@@ -400,7 +400,7 @@ msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as sev
 msgstr "Jeśli chcesz przyłączyć się do zespołu, lub zrobić coś dla projektu sporadycznie, tak jak zrobiło to kilka osób, %1dopisz się%2\" do listy wysyłkowej 'gnuherds-app-dev'. Możesz też poprostu skontaktować się z którymś z dotychczasowych członków. Dziękujemy!"
 
 msgid "To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this coders' guide. If you need support ask for it at"
-msgstr "Jeśli chcesz się pobawić aplikacją internetową %1pobierz%3 jej źródła i %2zainstaluj%3\" na swojej maszynie. Osoby zajmujące się tłumaczeniami nie potrzebują kodów źródłowych. Tłumaczom wysyłamy pliki POT które można przetłumaczyć np. używając aplikacji 'Poedit'. Wszelki wskazówki znajdują się w tym przewodniku dla programistów. Gdybyś miał problemy możesz zapytać pod "
+msgstr "Jeśli chcesz się pobawić aplikacją internetową %1pobierz%3 jej źródła i %2zainstaluj%3\" na swojej maszynie. Osoby zajmujące się tłumaczeniami nie potrzebują kodów źródłowych. Tłumaczom wysyłamy pliki POT które można przetłumaczyć np. używając aplikacji 'Poedit'. Wszelkie wskazówki znajdują się w tym przewodniku dla programistów. Gdybyś miał problemy możesz zapytać pod "
 
 msgid "Read the current draft of %1GNU Herds' Charter%2."
 msgstr "Przeczytaj aktualny szkic %1Statutu GNU Herds%2."
@@ -512,7 +512,7 @@ msgid "Having a global scope, supporting business models based on long-distance 
 msgstr "Posiada globalny zasięg, ułatwiając pozyskanie pracy zdalnej. Dzięki technologiom przyszłości, lokalizacja nie jest przeszkodą w pozyskiwaniu kontaktów i usłóg IT. Więc nasz cel właściwie jest dość jasny - strona musi być wielojęzyczna i musimy pamiętać że oferty pracy mogą być zamieszczane w kilku językach."
 
 msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
-msgstr "Reasumując: \"%3 %1Celem%2 Stowarzyszenia winno wspomagać i zachęcać ludzi do rozwijania swoich kompetencji podczas komercyjnej pracy jako twórcy Wolnego Oprogramowania.%4\""
+msgstr "Reasumując: \"%3 %1Celem%2 Stowarzyszenia jest wspomaganie i zachęcanie ludzi do rozwijania swoich kompetencji podczas komercyjnej pracy jako twórcy Wolnego Oprogramowania.%4\""
 
 msgid "How to subscribe to a job offer?"
 msgstr "Jak mogę ubiegać się o konkretne zlecenie?"
