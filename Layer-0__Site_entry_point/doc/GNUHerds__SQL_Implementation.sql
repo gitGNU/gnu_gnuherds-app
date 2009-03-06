@@ -267,9 +267,9 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Cooperative', 'Com
 	E1_WantEmailMagic           varchar(512) DEFAULT NULL CHECK (E1_WantEmailMagic <> ''), -- Code which a user must supply to allow the change to use that email.
 
 	-- Magic expiration
-	E1_LostPasswordMagicExpire  timestamp NOT NULL DEFAULT 'now',
-	E1_RegisterMagicExpire      timestamp NOT NULL DEFAULT 'now',
-	E1_WantEmailMagicExpire     timestamp NOT NULL DEFAULT 'now',
+	E1_LostPasswordMagicExpire  timestamp DEFAULT 'now',
+	E1_RegisterMagicExpire      timestamp DEFAULT 'now',
+	E1_WantEmailMagicExpire     timestamp DEFAULT 'now',
 
 	-- To avoid Spam
 	-- Each email which needs to avoid Spam has a flag
@@ -608,7 +608,7 @@ CREATE TABLE D1_Donations2JobOffers (
 
 	-- To confirm the donation
 	D1_DonationMagic         varchar(512) DEFAULT NULL,
-	D1_DonationMagicExpire   timestamp NOT NULL DEFAULT 'now'
+	D1_DonationMagicExpire   timestamp DEFAULT 'now'
 );
 
 

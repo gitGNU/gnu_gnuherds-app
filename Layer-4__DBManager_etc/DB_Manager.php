@@ -341,6 +341,22 @@ class DBManager
 		$donation->addDonation($Id);
 	}
 
+	public function confirmDonation($email,$magic)
+	{
+		// This method does not need ACL check.
+
+		$donation = new Donation();
+		return $donation->confirmDonation($email,$magic);
+	}
+
+	public function delNonConfirmedDonations()
+	{
+		//XXX: ACL: This method deletes donations.  Add support to check sysadmin authentication for website-frontend + DB-backend.
+
+		$donation = new Donation();
+		return $donation->delNonConfirmedDonations();
+	}
+
 	public function cancelSelectedDonations()
 	{
 		//XXX: TODO: $acl = new AccessControlList();
@@ -551,12 +567,12 @@ class DBManager
 		return $skills->getPendingSkillsList();
 	}
 
-	public function delNotUsedPendingSkills()
+	public function delNonUsedPendingSkills()
 	{
 		//XXX: ACL: This method deletes skills.  Add support to check sysadmin authentication for website-frontend + DB-backend.
 
 		$skills = new Skills();
-		return $skills->delNotUsedPendingSkills();
+		return $skills->delNonUsedPendingSkills();
 	}
 
 	public function getSkillSetTypesList()

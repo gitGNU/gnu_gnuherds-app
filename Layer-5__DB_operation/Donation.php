@@ -101,6 +101,37 @@ class Donation
 	}
 
 
+	public function confirmDonation($email,$magic)
+	{
+		$sqlQuery = "PREPARE query(text,text) AS  SELECT D1_Donation FROM D1_Donations2JobOffers,E1_Entities WHERE D1_E1_Id=E1_Id AND E1_Email=$1 AND D1_DonationMagic=$2 AND D1_DonationMagicExpire > 'now';  EXECUTE query('$email','$magic');";
+		$result = $this->postgresql->getPostgreSQLObject($sqlQuery, 1);
+
+		$array = pg_fetch_all_columns($result, 0);
+		$numrows = count($array);
+
+		if ($numrows == 1)
+		{
+			$sqlQuery = "PREPARE query(text) AS  UPDATE D1_Donations2JobOffers SET D1_DonationMagic=NULL, D1_DonationMagicExpire=NULL WHERE D1_DonationMagic=$1;  EXECUTE query('$magic');";
+			$this->postgresql->execute($sqlQuery,1);
+
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+
+	public function delNonConfirmedDonations()
+	{
+		// This is done to clean non-confirmed donations whose time-window to confirm has expired.
+
+		$sqlQuery = "DELETE FROM D1_Donations2JobOffers WHERE D1_DonationMagicExpire IS NOT NULL  AND  D1_DonationMagicExpire < 'now' ;";
+		$this->postgresql->execute($sqlQuery,0);
+	}
+
+
 	public function cancelSelectedDonations()
 	{
 		// Cancel selected donations

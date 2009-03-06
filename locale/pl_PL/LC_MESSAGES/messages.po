@@ -114,7 +114,7 @@ msgid "Log in"
 msgstr "Zaloguj się"
 
 msgid "Lost password?"
-msgstr "Zapomniałeś hasło?"
+msgstr "Zapomniałeś hasła?"
 
 msgid "Register person"
 msgstr "Zarejestruj się"
@@ -152,7 +152,7 @@ msgstr "Wylogowałeś się."
 # msgstr "El proyecto %2GNU Herds%3 es oficialmente parte de %1El Proyecto GNU%3."
 # foot.tpl
 msgid "Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!"
-msgstr "Wszelkie uwagi proszę wysyłać na adres %1. Możesz np. przesłać raport nt. problemów technicznych takich jak niedziające odnośniki, błędy w renderowaniu strony itd. Poza tym jesteśmy otwarci na wszelką krytykę i sugestie. GNU Herds jest dla ciebie!"
+msgstr "Wszelkie uwagi proszę wysyłać na adres %1. Możesz np. przesłać raport nt. problemów technicznych takich jak niedziałające odnośniki, błędy w renderowaniu strony itd. Poza tym jesteśmy otwarci na wszelką krytykę i sugestie. GNU Herds jest dla Ciebie!"
 
 # Lost_Password_form.tpl
 msgid "Write your email and click the Send button."
@@ -283,7 +283,7 @@ msgid "Other modules could be developed. Send an email with your proposal to the
 msgstr "Portal jest otwarty na świeże pomysły i cały czas się rozwija. Jeśli masz jakieś propozycje możesz w każdej chwili wysłać je na listę mailingową %1 . Czekamy na twoją inicjatywę!"
 
 msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
-msgstr "Cały projekt został zrealizowany przez małą %1grupę członków społeczności wspierającej Wolne Oprogramowanie."
+msgstr "Cały projekt został zrealizowany przez małą %1grupę%2 członków społeczności wspierającej Wolne Oprogramowanie."
 
 msgid "Mailing lists:"
 msgstr "Listy wysyłkowe związane z projektem:"
@@ -320,7 +320,7 @@ msgid "There shall be two kinds of members, voting members, to be known simply a
 msgstr "Są dwa rodzaje członkowstwa. Członkowie z prawem do głosowania zwani dalej po prostu \"członkami\", oraz członkowie bez prawa do głosowania zwani dalej \"członkami nadzwyczajnymi\"."
 
 msgid "All members must subscribe to the purposes of GNU Herds and adhere to the Code of Ethics at the penalty of their membership being revoked."
-msgstr "Wszyscy członkowie muszą przyczyniać się do zamierzeń GNU Herds oraz stosować się do Kodeksu Etycznego pod groźba unieważnienia członkowstwa."
+msgstr "Wszyscy członkowie muszą przyczyniać się do zamierzeń GNU Herds oraz stosować się do Kodeksu Etycznego pod groźbą unieważnienia członkowstwa."
 
 msgid "To qualify for voting membership one must show a contribution to the Free Software movement."
 msgstr "By zakwalifikować się jako członek z prawem do głosowania należy okazać dowód swojego wkładu w rozwój ruchu Wolnego Oprogramowania."
@@ -400,7 +400,7 @@ msgid "If you want to join the GNU Herds team, or collaborate sporadicly, as sev
 msgstr "Jeśli chcesz przyłączyć się do zespołu, lub zrobić coś dla projektu sporadycznie, tak jak zrobiło to kilka osób, %1dopisz się%2\" do listy wysyłkowej 'gnuherds-app-dev'. Możesz też poprostu skontaktować się z którymś z dotychczasowych członków. Dziękujemy!"
 
 msgid "To play with the web application, %1download%3 the code and %2install%3 it at your host. Translators do not need to download the source code. We will send them the gettext POT file to translate. Seek advice from this coders' guide. If you need support ask for it at"
-msgstr "Jeśli chcesz się pobawić aplikacją internetową %1pobierz%3 jej źródła i %2zainstaluj%3\" na swojej maszynie. Osoby zajmujące się tłumaczeniami nie potrzebują kodów źródłowych. Tłumaczom wysyłamy pliki POT które można przetłumaczyć np. używając aplikacji 'Poedit'. Wszelki wskazówki znajdują się w tym przewodniku dla programistów. Gdybyś miał problemy możesz zapytać pod "
+msgstr "Jeśli chcesz się pobawić aplikacją internetową %1pobierz%3 jej źródła i %2zainstaluj%3\" na swojej maszynie. Osoby zajmujące się tłumaczeniami nie potrzebują kodów źródłowych. Tłumaczom wysyłamy pliki POT które można przetłumaczyć np. używając aplikacji 'Poedit'. Wszelkie wskazówki znajdują się w tym przewodniku dla programistów. Gdybyś miał problemy możesz zapytać pod "
 
 msgid "Read the current draft of %1GNU Herds' Charter%2."
 msgstr "Przeczytaj aktualny szkic %1Statutu GNU Herds%2."
@@ -512,7 +512,7 @@ msgid "Having a global scope, supporting business models based on long-distance 
 msgstr "Posiada globalny zasięg, ułatwiając pozyskanie pracy zdalnej. Dzięki technologiom przyszłości, lokalizacja nie jest przeszkodą w pozyskiwaniu kontaktów i usłóg IT. Więc nasz cel właściwie jest dość jasny - strona musi być wielojęzyczna i musimy pamiętać że oferty pracy mogą być zamieszczane w kilku językach."
 
 msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
-msgstr "Reasumując: \"%3 %1Celem%2 Stowarzyszenia winno wspomagać i zachęcać ludzi do rozwijania swoich kompetencji podczas komercyjnej pracy jako twórcy Wolnego Oprogramowania.%4\""
+msgstr "Reasumując: \"%3 %1Celem%2 Stowarzyszenia jest wspomaganie i zachęcanie ludzi do rozwijania swoich kompetencji podczas komercyjnej pracy jako twórcy Wolnego Oprogramowania.%4\""
 
 msgid "How to subscribe to a job offer?"
 msgstr "Jak mogę ubiegać się o konkretne zlecenie?"
@@ -683,7 +683,7 @@ msgid "Why voting membership is on a yearly basis?"
 msgstr "Dlaczego członkowstwo trwa tylko rok?"
 
 msgid "Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low."
-msgstr "Mogło by dojść do sytuacji w której Stowarzyszenia nie da się rozwiązać, ze względu na dużą ilość mało aktywnych członków."
+msgstr "Mogłoby dojść do sytuacji, w której, %1ze względu%2 na duzą ilość mało aktywnych członków, nie da się  rozwiązać Stowarzyszenia."
 
 msgid "The membership renew process is automated to reduce bureaucracy."
 msgstr "Proces odnawiania członkowstwa pozwala wyeliminować biurokratyzację."
@@ -798,8 +798,8 @@ msgstr "Dotacja jest obietnicą dania czegoś, np. dwóch dolarów, gdy zadanie 
 msgid "If you like some of the ideas listed in the pledge groups below, you can join to by contributing your two cents to help get it converted into an actual job offer. You can even edit it to add your ideas or corrections."
 msgstr "Jeśli podobają Ci się pomysły zaprezentowane na liście grup dotujących możesz dodać własną dotację, aby pomóc przekształcić ją w ofertę pracy. Możesz również dodawać własne idee albo poprawki."
 
-msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I will do it%2\"."
-msgstr "Si a usted le gustaría llevar a cabo alguna de las siguientes tareas, a cambio del dinero apuntado en la tarea, simplemente ábrala y pulse el botón \"%1Yo lo haré%2\"."
+msgid "If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click \"%1I accept%2\" to try it."
+msgstr "Jeżeli chciałbyś wykonać kilka z poniższych zadań w zamian za pieniądze, po prostu otwórz je i kliknij \"%1spróbuję%2\" zmnienić."
 
 msgid "Donation pledge group title"
 msgstr "Nazwa grupy dotujących"
@@ -955,8 +955,8 @@ msgstr "zobowiązanie wykonania dotacji"
 msgid "I want to add my %1donation pledge%2 in exchange for getting those tasks done."
 msgstr "Chcę dodać %1dotację%2 wzamian za wykonanie tych zadań."
 
-msgid "I will do it"
-msgstr "Podejmę się tego"
+msgid "I accept"
+msgstr "Akceptuję"
 
 msgid "in exchange for that money."
 msgstr "w zamian za tą sumę."

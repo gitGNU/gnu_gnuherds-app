@@ -86,9 +86,9 @@ class Skills
 		return $array;
 	}
 
-	public function delNotUsedPendingSkills()
+	public function delNonUsedPendingSkills()
 	{
-		// This is done to clean not used 'garbage'
+		// This is done to clean non-used Skills which have not been classified, that is to say, non-used 'garbage'.
 
 		$sqlQuery = "DELETE FROM LI_Skills WHERE LI_LH_Id='Pending' AND LI_Id NOT IN (SELECT DISTINCT R24_LI_Id FROM R24_Qualification2Skills) AND LI_Id NOT IN (SELECT DISTINCT R14_LI_Id FROM R14_JobOffer2Skills);";
 		$this->postgresql->execute($sqlQuery,0);

@@ -34,12 +34,29 @@ class FSDonationPledgeGroupsForm
 
 	public function processForm()
 	{
+		if ( isset($_GET['action']) and $_GET['action'] == "donate" ) // Donation confirmation
+		{
+			if ( $this->manager->confirmDonation($_GET['email'],$_GET['magic']) == true )
+			{
+				$this->processingResult .= "<p>&nbsp;</p>\n";
+				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Donation pledge confirmed!")."</p>\n";
+			}
+			else
+			{
+				// Raise the usual error message
+				$error = "<p>".gettext("ERROR: Wrong magic number!")."</p>";
+				throw new Exception($error,false);
+			}
+		}
 	}
 
 
 	public function printOutput()
 	{
-		$this->printFSDonationPledgeGroupsForm();
+		if ( isset($_GET['action']) and $_GET['action'] == "donate" )
+			echo $this->processingResult;
+		else
+			$this->printFSDonationPledgeGroupsForm();
 	}
 
 
