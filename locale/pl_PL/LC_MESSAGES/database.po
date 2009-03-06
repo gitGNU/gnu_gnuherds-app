@@ -44,7 +44,6 @@ msgstr "Bezpieczeństwo"
 msgid "Web"
 msgstr "Strony internetowe"
 
-#, fuzzy
 msgid "Creative design"
 msgstr "Projekty graficzne"
 
@@ -93,29 +92,24 @@ msgstr "Doradca"
 msgid "Technician"
 msgstr "Technik"
 
-#, fuzzy
 msgid "Functional Analyst"
 msgstr "Analityk funkcyjny"
 
-#, fuzzy
 msgid "Technician Analyst"
 msgstr "Analityk techniczny"
 
 msgid "Developer"
 msgstr "Programista"
 
-#, fuzzy
 msgid "Beta tester"
 msgstr "Beta tester"
 
 msgid "Administrator"
 msgstr "Administrator"
 
-#, fuzzy
 msgid "Documentalist"
 msgstr "Twórca dokumentacji"
 
-#, fuzzy
 msgid "Technical Redactor"
 msgstr "Redaktor techniczny"
 
@@ -137,21 +131,17 @@ msgstr "Informacja"
 #
 # Data Base LA_AcademicLevels table
 #
-#, fuzzy
 msgid "Enrolled at a University (Undergraduate)"
-msgstr "Student ()"
+msgstr "Student"
 
-#, fuzzy
 msgid "Bachelor's degree (1st University cycle)"
-msgstr "Inżynier ()"
+msgstr "Inżynier"
 
-#, fuzzy
 msgid "Master's degree (2nd University cycle)"
-msgstr "Magister ()"
+msgstr "Magister"
 
-#, fuzzy
 msgid "Doctoral degree (3rd University cycle)"
-msgstr "Doktor ()"
+msgstr "Doktor"
 
 msgid "Other"
 msgstr "Inne"
@@ -159,75 +149,57 @@ msgstr "Inne"
 #
 # Data Base LH_Skills table
 #
-#, fuzzy
 msgid "Pending"
 msgstr "W trakcie"
 
-#, fuzzy
 msgid "Unknown"
 msgstr "Nieznany"
 
-#, fuzzy
 msgid "Abstract"
 msgstr "Abstrakcyjny"
 
-#, fuzzy
 msgid "Free Software"
 msgstr "Wolne oprogramowanie"
 
-#, fuzzy
 msgid "Almost-Free Software"
 msgstr "Niecałkiem wolne oprogramowanie"
 
-#, fuzzy
 msgid "Partially-Free Software"
 msgstr "Częściowo wolne oprogramowanie"
 
-#, fuzzy
 msgid "Non-Free Software"
 msgstr "Niewolne oprogramowanie"
 
-#, fuzzy
 msgid "Hardware"
 msgstr "Sprzęt"
 
-#, fuzzy
 msgid "Documentation"
 msgstr "Dokumentacja"
 
-#, fuzzy
 msgid "Free Documentation"
 msgstr "Wolna dokumentacja"
 
-#, fuzzy
 msgid "Non-Free Documentation"
 msgstr "Niewolna dokumentacja"
 
-#, fuzzy
 msgid "Data"
 msgstr "Dane"
 
-#, fuzzy
 msgid "Free Data"
 msgstr "Wolne dane"
 
-#, fuzzy
 msgid "Non-Free Data"
 msgstr "Niewolne dane"
 
-#, fuzzy
+#sztuka, media, grafika
 msgid "Art"
 msgstr "Media"
-#sztuka, media, grafika
-#, fuzzy
+
 msgid "Sharable Art"
 msgstr "Wolne media"
 
-#, fuzzy
 msgid "Non-Sharable Art"
 msgstr "Niewolne media"
-
-
 
 #
 # Data Base LK_ContractType table
@@ -235,11 +207,9 @@ msgstr "Niewolne media"
 msgid "Any"
 msgstr "Dowolny"
 
-#, fuzzy
 msgid "Vacation cover"
 msgstr "Praca wakacyjna"
 
-#, fuzzy
 msgid "Maternity cover"
 msgstr "Podczas urlopu macieżyńskiego"
 
@@ -315,11 +285,9 @@ msgstr "lata"
 msgid "Working"
 msgstr "Pracuję"
 
-#, fuzzy
 msgid "Working and Studying"
 msgstr "Pracuję i studiuję"
 
-#, fuzzy
 msgid "Freelance and Studying"
 msgstr "Pracuję jako wolny strzelec i studiuję"
 
@@ -327,13 +295,14 @@ msgid "Studying"
 msgstr "Studiuję"
 
 msgid "Without job"
-msgstr "Nie pracuję"
+msgstr "Bez pracy"
 
 #
 # Data Base LS_SpokenLevel table
 #
+# Translated as "Żaden" or "Zerowy". We choose the last one but we are not sure. As usual, Let us know if you think the translation is wrong.
 msgid "Null"
-msgstr "Null"
+msgstr "Zerowy"
 
 msgid "Basic"
 msgstr "Podstawy"
