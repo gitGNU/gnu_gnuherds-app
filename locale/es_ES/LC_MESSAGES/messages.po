@@ -1022,8 +1022,8 @@ msgstr "GNU Herds muestra todos los correos electrónicos para que todos vosotro
 #
 # View_Look_For_Volunteers_form.php
 #
-### msgid ""
-### msgstr ""
+# msgid ""
+# msgstr ""
 
 #
 # View_Qualifications_form.tpl
