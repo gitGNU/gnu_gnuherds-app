@@ -829,8 +829,8 @@ msgid "Why voting membership is on a yearly basis?"
 msgstr "Porque é que a afiliação com capacidade de voto tem uma validade anual?"
 
 #, fuzzy
-msgid "Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low."
-msgstr "Não caducar a possibilidade de voto poderia tornar impossível dissolver a associação %1devido aos%2 elevados níveis de abstenção."
+msgid "Not doing it so could make it impossible to %1dissolve%3 the association %2due to%3 making all turnout figures low."
+msgstr "Não caducar a possibilidade de voto poderia tornar impossível %1dissolver%3 a associação %2devido aos%3 elevados níveis de abstenção."
 
 #, fuzzy
 msgid "The membership renew process is automated to reduce bureaucracy."

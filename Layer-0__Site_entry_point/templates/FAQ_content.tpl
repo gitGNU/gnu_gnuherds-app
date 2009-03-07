@@ -511,9 +511,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<p>
 	{t escape='no'
-	  1='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-09/msg00051.html">'
-	  2='</a>'
-	}Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low.{/t}
+	  1='<a href="charter#Dissolution">'
+	  2='<a href="http://lists.gnu.org/archive/html/gnuherds-app-dev/2007-09/msg00051.html">'
+	  3='</a>'
+	}Not doing it so could make it impossible to %1dissolve%3 the association %2due to%3 making all turnout figures low.{/t}
 	{t}The membership renew process is automated to reduce bureaucracy.{/t}
 	</p>
 

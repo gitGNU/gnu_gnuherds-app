@@ -722,8 +722,8 @@ msgstr "La compagnia ottiene 100 votanti solo se ognuno dei suoi lavoratori ha c
 msgid "Why voting membership is on a yearly basis?"
 msgstr "Perchè la capacità di voto decade dopo un anno?"
 
-msgid "Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low."
-msgstr "Se non si dispone di questo meccanismo, potrebbe diventare impossibile la dissoluzione dell'associazione %1a causa%2 della bassa affluenza delle persone."
+msgid "Not doing it so could make it impossible to %1dissolve%3 the association %2due to%3 making all turnout figures low."
+msgstr "Se non si dispone di questo meccanismo, potrebbe diventare impossibile la %1dissoluzione%3 dell'associazione %2a causa%3 della bassa affluenza delle persone."
 
 msgid "The membership renew process is automated to reduce bureaucracy."
 msgstr "Il processo di rinnovo dell'affiliazione è stato automatizzato per ridurre la burocrazia."

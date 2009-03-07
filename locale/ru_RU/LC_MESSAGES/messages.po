@@ -689,8 +689,9 @@ msgstr "Компания может получить 100 голосов, тол�
 msgid "Why voting membership is on a yearly basis?"
 msgstr "Почему участие в голосованиях нужно обновлять ежегодно?"
 
-msgid "Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low."
-msgstr "Без этого не будет возможности распустить ассоциацию %1из-за%2 забастовок."
+#, fuzzy    XXXXX: Added two new %N
+msgid "Not doing it so could make it impossible to %1dissolve%3 the association %2due to%3 making all turnout figures low."
+msgstr "Без этого не будет возможности распустить ассоциацию %2из-за%3 забастовок."
 
 msgid "The membership renew process is automated to reduce bureaucracy."
 msgstr "Процесс обновления членства в ассоциации автоматизирован, чтобы избежать бюрократических задержек."

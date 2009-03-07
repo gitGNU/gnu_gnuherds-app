@@ -140,7 +140,7 @@ Chapters may be formed in any local area.  There must be ten or more people in a
 </p>
 
 
-<h4>{t}Dissolution{/t}</h4>
+<h4>{t}Dissolution{/t} <a name="Dissolution"></a> </h4>
 
 <p>
 {t}The committee may motion for dissolution of the Association if they feel it is no longer serving a useful purpose.  Upon the motion being passed 75% of the membership must vote in favour of dissolution for it to occur.{/t}
