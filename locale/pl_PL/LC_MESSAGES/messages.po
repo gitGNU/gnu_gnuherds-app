@@ -64,6 +64,10 @@ msgstr "Konto"
 msgid "My personal profile"
 msgstr "Mój profil"
 
+#, fuzzy
+msgid "Our cooperative"
+msgstr ""
+
 msgid "Our company"
 msgstr "Nasza firma"
 
@@ -118,6 +122,10 @@ msgstr "Zapomniałeś hasła?"
 
 msgid "Register person"
 msgstr "Zarejestruj się"
+
+#, fuzzy
+msgid "Register cooperative"
+msgstr ""
 
 msgid "Register company"
 msgstr "Zarejestruj swoją firmę"
@@ -280,7 +288,7 @@ msgid "FS skills data base"
 msgstr "Baza danych umiejętności WO"
 
 msgid "Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side."
-msgstr "Portal jest otwarty na świeże pomysły i cały czas się rozwija. Jeśli masz jakieś propozycje możesz w każdej chwili wysłać je na listę mailingową %1 . Czekamy na twoją inicjatywę!"
+msgstr "Portal jest otwarty na świeże pomysły i cały czas się rozwija. Jeśli masz jakieś propozycje możesz w każdej chwili wysłać je na listę mailingową %1. Czekamy na twoją inicjatywę!"
 
 msgid "This project has been put together by a small %1team%2 of members of the Free Software community."
 msgstr "Cały projekt został zrealizowany przez małą %1grupę%2 członków społeczności wspierającej Wolne Oprogramowanie."
@@ -292,7 +300,7 @@ msgid "is the project main list."
 msgstr " - główna lista projektu."
 
 msgid "to carry on the web application development."
-msgstr " - lista skupiona na procesie tworzenia aplikacji webowej"
+msgstr " - lista skupiona na procesie tworzenia aplikacji webowej."
 
 msgid "For more information:"
 msgstr "By uzyskać więcej informacji:"
@@ -512,13 +520,25 @@ msgid "Having a global scope, supporting business models based on long-distance 
 msgstr "Posiada globalny zasięg, ułatwiając pozyskanie pracy zdalnej. Dzięki technologiom przyszłości, lokalizacja nie jest przeszkodą w pozyskiwaniu kontaktów i usłóg IT. Więc nasz cel właściwie jest dość jasny - strona musi być wielojęzyczna i musimy pamiętać że oferty pracy mogą być zamieszczane w kilku językach."
 
 msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
-msgstr "Reasumując: \"%3 %1Celem%2 Stowarzyszenia jest wspomaganie i zachęcanie ludzi do rozwijania swoich kompetencji podczas komercyjnej pracy jako twórcy Wolnego Oprogramowania.%4\""
+msgstr "Reasumując: \"%3%1Celem%2 Stowarzyszenia jest wspomaganie i zachęcanie ludzi do rozwijania swoich kompetencji podczas komercyjnej pracy jako twórcy Wolnego Oprogramowania.%4\""
+
+#, fuzzy
+msgid "Payments negotiation"
+msgstr ""
+
+#, fuzzy
+msgid "Companies and customers sign agreements."
+msgstr ""
+
+#, fuzzy
+msgid "Donators and workers can %1negotiate%2 (30%, 25%, 20%, 25%) or sign the functional requirement specifications and payments agreement."
+msgstr "Donantes y trabajadores pueden %1negociar%2 (30%, 25%, 20%, 25%) o firmar las especificaciones de requisitos funcionales y acuerdo de pagos."
 
 msgid "How to subscribe to a job offer?"
 msgstr "Jak mogę ubiegać się o konkretne zlecenie?"
 
-msgid "Register as new %1Person%4, %2Company%4 or %3non-profit Organization%4."
-msgstr "Zarejestruj jako nowa %1Osoba%4, %2Firma%4 lub %3organizacja niedochodowa%4."
+msgid "Register as new %1Person%5, %2Cooperative%5, %3Company%5 or %4non-profit Organization%5."
+msgstr "Zarejestruj jako nowa %1Osoba%5, %2XXXXXX%5, %3Firma%5 lub %4organizacja niedochodowa%5."
 
 msgid "Fill the %1%2%3Qualifications%4 form."
 msgstr "Wypełnij %1%2%3Kwestionariusz kwalifikacyjny%4."
@@ -532,20 +552,22 @@ msgstr "Wejdź."
 msgid "Subscribe to the offer."
 msgstr "Subskrybuj wybraną ofertę."
 
-msgid "Note that some offers could allow to subscribe only to some entity types: Persons, Companies or non-profit Organizations."
-msgstr "Zważ że niektóre oferty mogą zezwalać na subskrybcje tylko pośród podmiotów określonego typu: Osób, Firm, lub Ogranizacji niedochodowych."
+#, fuzzy
+msgid "Note that some offers could allow to subscribe only to some entity types: Persons, Cooperatives, Companies or non-profit Organizations."
+msgstr "Zważ że niektóre oferty mogą zezwalać na subskrybcje tylko pośród podmiotów określonego typu: Osób, XXXXXX, Firm, lub Ogranizacji niedochodowych."
 
 msgid "Who can subscribe to a job offer?"
 msgstr "Kto może ubiegać się o konkretne zlecenie?"
 
-msgid "Persons, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly."
-msgstr "Osoby, Firmy, lub Organizacje niedochodowe które spełniają kryteria zawarte w kwestionariuszu kwalifikacyjnym, czyli właściwie wszyscy którzy potrafili go poprawnie wypełnić."
+#, fuzzy
+msgid "Persons, Cooperatives, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly."
+msgstr "Osoby, XXXXXX, Firmy, lub Organizacje niedochodowe które spełniają kryteria zawarte w kwestionariuszu kwalifikacyjnym, czyli właściwie wszyscy którzy potrafili go poprawnie wypełnić."
 
 msgid "Who can post a job offer?"
 msgstr "Kto może umieścić swoją ofertę pracy?"
 
-msgid "Any Person, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:"
-msgstr "Dowolna Osoba, Firma, lub organizacja niedochodowa spełniająca wymogi formularza zgłoszeniowego i której oferta mieści się w poniższych kryteriach:"
+msgid "Any Person, Cooperative, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:"
+msgstr "Dowolna Osoba, XXXXXX, Firma, lub organizacja niedochodowa spełniająca wymogi formularza zgłoszeniowego i której oferta mieści się w poniższych kryteriach:"
 
 msgid "Development or maintenance of software for distribution to the public, if all the software to be developed or maintained is %1Free Software%2."
 msgstr "Tworzenie lub rozwój oprogramowania użytecznego dla ogółu, tworzone oprogramowanie musi być %1Wolnym Oprogramowaniem%2."
@@ -682,8 +704,9 @@ msgstr "Firma otrzymuje 100 głosów jedynie gdy każdy z jej pracowników wyka�
 msgid "Why voting membership is on a yearly basis?"
 msgstr "Dlaczego członkowstwo trwa tylko rok?"
 
-msgid "Not doing it so could make it impossible to dissolve the association %1due to%2 making all turnout figures low."
-msgstr "Mogłoby dojść do sytuacji, w której, %1ze względu%2 na duzą ilość mało aktywnych członków, nie da się  rozwiązać Stowarzyszenia."
+#, fuzzy    XXXXXX: Added two %N
+msgid "Not doing it so could make it impossible to %1dissolve%3 the association %2due to%3 making all turnout figures low."
+msgstr "Mogłoby dojść do sytuacji, w której, %2ze względu%3 na duzą ilość mało aktywnych członków, nie da się  rozwiązać Stowarzyszenia."
 
 msgid "The membership renew process is automated to reduce bureaucracy."
 msgstr "Proces odnawiania członkowstwa pozwala wyeliminować biurokratyzację."
@@ -864,6 +887,10 @@ msgstr "Oferta pracy"
 msgid "Persons"
 msgstr "Osoby"
 
+#, fuzzy
+msgid "Cooperatives"
+msgstr ""
+
 msgid "Companies"
 msgstr "Firmy"
 
@@ -952,18 +979,33 @@ msgstr "Pracownicy"
 msgid "donation pledge"
 msgstr "zobowiązanie wykonania dotacji"
 
-msgid "I want to add my %1donation pledge%2 in exchange for getting those tasks done."
+#, fuzzy  XXXXXX  Just check if the translation must be updated or not.
+msgid "I want to add my %1donation pledge%2 to get these tasks done."
 msgstr "Chcę dodać %1dotację%2 wzamian za wykonanie tych zadań."
 
 msgid "I accept"
 msgstr "Akceptuję"
 
-msgid "in exchange for that money."
-msgstr "w zamian za tą sumę."
+#, fuzzy
+msgid "to do the work for the money you are offering."
+msgstr ""
+
+#, fuzzy
+msgid "The payments are %1negotiated%2 by donators and workers."
+msgstr ""
+
+#, fuzzy
+msgid "You should take note of all the above emails to contact them all and join a work team, getting a subtask assigned. Anyway you can choose just do all it yourself."
+msgstr ""
+
+#, fuzzy
+msgid "GNU Herds show all emails so that all you can self-organize and negotiate."
+msgstr ""
 
 # View_Look_For_Volunteers_form.php
-# # msgid ""
-# # msgstr ""
+# msgid ""
+# msgstr ""
+
 # View_Qualifications_form.tpl
 msgid "The edition of these qualifications is not finished! It does not comply the minimum requisites to allow it subscribe to offers."
 msgstr "Edycja kwalifikacji nie została skończona!. Nie spełniają one minimalnych wymagań pozwalających na zgłoszenie się do projektu."
@@ -1047,7 +1089,7 @@ msgstr "Działając podobnie do organizacji odnoszących sukcesy takich jak %1Be
 
 # Person form: Person_form.tpl, Person_form.php
 # Person_form.tpl
-msgid "Read the %1Membership%2 Charte rsection."
+msgid "Read the %1Membership%2 Charter section."
 msgstr "Przeczytaj regulamin %1członkowski%2."
 
 msgid "Update person data"
@@ -1177,10 +1219,26 @@ msgstr "Nieprawidłowy adres email"
 msgid "Password fields differ"
 msgstr "Pola hasła różnią się"
 
-# XX: msgid "If you want to qualify to vote, you have to supply both the contributions and your public key."
-# XX: msgstr "Si usted quiere obtener el derecho de voto, tiene que rellenar tanto el campo contribución como su clave pública. "
-# XX: msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
-# XX: msgstr "Su contribución al Software Libre será evaluada. Se le enviará el resultado vía correo electrónico, habilitando su capacidad para votar en el caso de una evaluación positiva."
+#XXX: msgid "If you want to qualify to vote, you have to supply both the contributions and your public key."
+#XXX: msgstr "Si usted quiere obtener el derecho de voto, tiene que rellenar tanto el campo contribución como su clave pública. "
+
+#XXX: msgid "Your contribution to the Free Software community will be evaluated. The result will be forwarded to you via email, enabling your vote power if the evaluation is positive."
+#XXX: msgstr "Su contribución al Software Libre será evaluada. Se le enviará el resultado vía correo electrónico, habilitando su capacidad para votar en el caso de una evaluación positiva."
+
+# Cooperative form: Cooperative_form.tpl, Cooperative_form.php
+# Cooperative_form.tpl
+#, fuzzy
+msgid "Update cooperative data"
+msgstr ""
+
+#, fuzzy
+msgid "Cooperative"
+msgstr ""
+
+# Cooperative_form.php
+# msgid ""
+# msgstr ""
+
 # Company form: Company_form.tpl, Company_form.php
 # Company_form.tpl
 msgid "Update company data"
@@ -1525,6 +1583,55 @@ msgstr "Nie wypełniaj pól adresowych gdy oferta dotyczy pracy zdalnej."
 # msgstr ""
 
 #
+# DonationPledgeGroups form: Donation_Pledge_Group_form.tpl, Donation_Pledge_Group_form.php
+#
+# Donation_Pledge_Group_form.tpl
+#, fuzzy
+msgid "New donation pledge group"
+msgstr ""
+
+#, fuzzy
+msgid "Tasks"
+msgstr ""
+
+#, fuzzy
+msgid "Short description"
+msgstr ""
+
+#, fuzzy
+msgid "Donation"
+msgstr ""
+
+#, fuzzy
+msgid "Your donation"
+msgstr ""
+
+#, fuzzy
+msgid "in exchange for getting those tasks done"
+msgstr ""
+
+#, fuzzy
+msgid "US Dollars (USD)"
+msgstr "Dólares (USD)"
+
+# Donation_Pledge_Group_form.php
+#, fuzzy
+msgid "Please fill in here numeric greater or equal to %s"
+msgstr ""
+
+#
+# LookForVolunteers form: Look_For_Volunteers_form.tpl
+#
+# Look_For_Volunteers_form.tpl
+#, fuzzy
+msgid "New looking for volunteers notice"
+msgstr ""
+
+#, fuzzy
+msgid "Contact"
+msgstr "Contacto"
+
+#
 # Manage_Job_Offer_Applications_form.tpl
 #
 msgid "Manage the job offer applications"
@@ -1537,14 +1644,15 @@ msgid "Applicant"
 msgstr "Kandydat"
 
 #
-# Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_form.php
+# Manage_Job_Offers form: Manage_Job_Offers_form.tpl, Manage_Job_Offers_job_offer_form.tpl, Manage_Job_Offers_donation_pledge_group_form.tpl, Manage_Job_Offers_look_for_volunteers_form.tpl, Manage_Job_Offers_form.php
 #
 # Manage_Job_Offers_form.tpl
-msgid "Manage job offers"
-msgstr "Zarządzanie ofertami pracy"
+# msgid ""
+# msgstr ""
 
-msgid "You do not have any defined job offer."
-msgstr "Nie stworzyłeś jeszcze żadnej oferty pracy."
+# Manage_Job_Offers_job_offer_form.tpl
+msgid "You do not have any defined job offer"
+msgstr "Nie stworzyłeś jeszcze żadnej oferty pracy"
 
 msgid "Closed"
 msgstr "Zamknięto"
@@ -1552,12 +1660,17 @@ msgstr "Zamknięto"
 msgid "Delete selected offers"
 msgstr "Skasuj zaznaczone oferty"
 
-# Manage_Job_Offers_form.php
-msgid "The selected job offers has been deleted from the data base."
-msgstr "Wybrane oferty pracy zostały usunięte z bazy danych."
+# Manage_Job_Offers_donation_pledge_group_form.tpl
+# msgid ""
+# msgstr ""
 
-msgid "Offers to delete have not been selected. Try again."
-msgstr "Nie zaznaczono ofert pracy do skasowania. Spróbuj jeszcze raz."
+# Manage_Job_Offers_look_for_volunteers_form.tpl
+# msgid ""
+# msgstr ""
+
+# Manage_Job_Offers_form.php
+# msgid ""
+# msgstr ""
 
 #
 # View_Job_Applications_State_form.tpl
@@ -1582,6 +1695,22 @@ msgstr "każdej ofercie pracy"
 
 msgid "any new job offer which fits my qualifications"
 msgstr "ofertach pracy odpowiadających moim kwalifikacjom"
+
+#, fuzzy
+msgid "any new donation pledge group"
+msgstr ""
+
+#, fuzzy
+msgid "any new look-for-volunteers notice"
+msgstr ""
+
+#, fuzzy
+msgid "Alerts behavior:"
+msgstr ""
+
+#, fuzzy
+msgid "alert me on my own notices"
+msgstr ""
 
 #
 # Admin_form.tpl
@@ -1675,4 +1804,3 @@ msgstr "BŁĄD: Nie można połączyć się do bazy danych!."
 
 msgid "Data base under maintenance. Excuse the inconveniences."
 msgstr "Baza danych w trakcie konserwacji. Przepraszamy za niedogodności."
-
