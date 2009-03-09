@@ -71,9 +71,9 @@ class Skills
 		return $array;
 	}
 
-	public function getPendingSkillsList()
+	public function getPendingSkillsList($extra_condition = '')
 	{
-		$sqlQuery = "SELECT LI_Id,LI_LH_Id,LI_LT_Id,LI_LicenseName,LI_LicenseURL,LI_ClassificationRationale FROM LI_Skills WHERE LI_LH_Id='Pending'";
+		$sqlQuery = "SELECT LI_Id,LI_LH_Id,LI_LT_Id,LI_LicenseName,LI_LicenseURL,LI_ClassificationRationale FROM LI_Skills WHERE LI_LH_Id='Pending' ".$extra_condition.";";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
 		$array[0] = pg_fetch_all_columns($result, 0 );
@@ -104,39 +104,50 @@ class Skills
 	{
 		// Send warning to SkillsAdmin so that they classify the new Pending to classify Skills.
 
-		$pendingSkills = $this->getPendingSkillsList();
+		$pendingSkills = $this->getPendingSkillsList(" AND LI_RaisePendingSkillEvent='true' ");
 
-		$entity = new Entity();
-		$skillsAdminsEmail = $entity->getSkillsAdminsEmail();
-
-		// REJECTED: Use the SkillsAdmin locate to translate some sentences.
-		// Not translated because of English is the administration language of the GNU Herds project, so SkillsAdmin must be able to understand this English email.
-		$message = "Log in and go to the Administration menu to classify the below Skills:\n";
-		$message .= "\n";
-		$message .= " Skills classifycation guide:\n";
-		$message .= "   http://savannah.nongnu.org/cookbook/?func=detailitem&item_id=209\n";
-		$message .= "\n";
-		$message .= "\n";
-		$message .= "You could use wikipedia to see quickly the license of such Skill, or\n";
-		$message .= "to help to classify it quickly as Abstract, Hardware, etc.\n";
-
-		foreach ( $pendingSkills[0] as $pendingSkill )
+		if ( count($pendingSkills[0]) > 0 )
 		{
-			$message .= "\n";
-			$message .= " * ".$pendingSkill."\n";
-			$message .= "     http://en.wikipedia.org/wiki/Special:Search?search=".rawurlencode($pendingSkill)."&go=Go\n";
+			$entity = new Entity();
+			$skillsAdminsEmail = $entity->getSkillsAdminsEmail();
+
+			if ( count($skillsAdminsEmail) > 0 )
+			{
+				// REJECTED: Use the SkillsAdmin locate to translate some sentences.
+				// Not translated because of English is the administration language of the GNU Herds project, so SkillsAdmin must be able to understand this English email.
+				$message = "Log in and go to the Administration menu to classify the below Skills:\n";
+				$message .= "\n";
+				$message .= " Skills classifycation guide:\n";
+				$message .= "   http://savannah.nongnu.org/cookbook/?func=detailitem&item_id=209\n";
+				$message .= "\n";
+				$message .= "\n";
+				$message .= "You could use wikipedia to see quickly the license of such Skill, or\n";
+				$message .= "to help to classify it quickly as Abstract, Hardware, etc.\n";
+
+				foreach ( $pendingSkills[0] as $pendingSkill )
+				{
+					$message .= "\n";
+					$message .= " * ".$pendingSkill."\n";
+					$message .= "     http://en.wikipedia.org/wiki/Special:Search?search=".rawurlencode($pendingSkill)."&go=Go\n";
+				}
+				$message .= "\n\n";
+				$message .= "You receive this email because you are a GNU Herds' Skills administrator.\n";
+				$message .= "If you do not want to be Skills administrator anymore, please let it know\n";
+				$message .= "to association@gnuherds.org";
+
+				// Send warning email
+				mb_language("uni");
+				foreach ( $skillsAdminsEmail as $skillsAdminEmail )
+					mb_send_mail(trim($skillsAdminEmail), "GNU Herds: ".gettext("Attend pending to classify skills"), "$message", "From: association@gnuherds.org");
+
+				$this->disablePendingSkillsWarning();
+			}
+			else
+			{
+				$error = "<p>raisePendingSkillsWarning: ".gettext("ERROR: Unexpected condition")."</p>";
+				throw new Exception($error,false);
+			}
 		}
-		$message .= "\n\n";
-		$message .= "You receive this email because you are a GNU Herds' Skills administrator.\n";
-		$message .= "If you do not want to be Skills administrator anymore, please let it know\n";
-		$message .= "to association@gnuherds.org";
-
-		// Send warning email
-		mb_language("uni");
-		foreach ( $skillsAdminsEmail as $skillsAdminEmail )
-			mb_send_mail(trim($skillsAdminEmail), "GNU Herds: ".gettext("Attend pending to classify skills"), "$message", "From: association@gnuherds.org");
-
-		$this->disablePendingSkillsWarning();
 	}
 
 	public function getSkillSetTypesList()
