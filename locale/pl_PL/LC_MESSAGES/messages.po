@@ -39,6 +39,7 @@ msgstr "Zmień język"
 # "Stowarzyszenie na rzecz Wolnego Oprogramowania"
 # but it's commonly left without translation.
 # To jest na głównej stronie. Zatem wypadało by chyba zostawić jak jest
+# non-profit sie nie tlumaczy !
 msgid "Free Software Association"
 msgstr "Free Software Association"
 
@@ -64,15 +65,16 @@ msgstr "Konto"
 msgid "My personal profile"
 msgstr "Mój profil"
 
-#, fuzzy
 msgid "Our cooperative"
-msgstr ""
+msgstr "Nasza spółka"
 
 msgid "Our company"
 msgstr "Nasza firma"
 
 msgid "Our non-profit"
-msgstr "Nasza organizacja niedochodowa"
+#Non-profit sie nie tlumaczy...
+#Non-profit not translating...
+msgstr "Nasza organizacja non-profit"
 
 msgid "My qualifications"
 msgstr "Moje kwalifikacje"
@@ -123,9 +125,8 @@ msgstr "Zapomniałeś hasła?"
 msgid "Register person"
 msgstr "Zarejestruj się"
 
-#, fuzzy
 msgid "Register cooperative"
-msgstr ""
+msgstr "Zarejestrój spółkę"
 
 msgid "Register company"
 msgstr "Zarejestruj swoją firmę"
@@ -522,17 +523,17 @@ msgstr "Posiada globalny zasięg, ułatwiając pozyskanie pracy zdalnej. Dzięki
 msgid "All this taking into account that: \"%3The %1aims%2 of the Association shall be to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.%4\""
 msgstr "Reasumując: \"%3%1Celem%2 Stowarzyszenia jest wspomaganie i zachęcanie ludzi do rozwijania swoich kompetencji podczas komercyjnej pracy jako twórcy Wolnego Oprogramowania.%4\""
 
-#, fuzzy
+# Michal Kulling <rootdevel@gmail.com> changes...
 msgid "Payments negotiation"
-msgstr ""
+msgstr "Negocjacja płatności"
 
-#, fuzzy
+# Michal Kulling <rootdevel@gmail.com> changes...
 msgid "Companies and customers sign agreements."
-msgstr ""
+msgstr "Podpisanie umowy przez firmę oraz klientów."
 
-#, fuzzy
+# Michal Kulling <rootdevel@gmail.com> changes... 
 msgid "Donators and workers can %1negotiate%2 (30%, 25%, 20%, 25%) or sign the functional requirement specifications and payments agreement."
-msgstr "Donantes y trabajadores pueden %1negociar%2 (30%, 25%, 20%, 25%) o firmar las especificaciones de requisitos funcionales y acuerdo de pagos."
+msgstr "Darczyńcy i pracownicy mogą %1negocjować%2 (30%, 25%, 20%, 25%) lub podpisać listę funkcjonalności i zawrzeć umowę o zapłatę. "
 
 msgid "How to subscribe to a job offer?"
 msgstr "Jak mogę ubiegać się o konkretne zlecenie?"
@@ -552,16 +553,16 @@ msgstr "Wejdź."
 msgid "Subscribe to the offer."
 msgstr "Subskrybuj wybraną ofertę."
 
-#, fuzzy
+# Michal Kulling <rootdevel@gmail.com> changes...
 msgid "Note that some offers could allow to subscribe only to some entity types: Persons, Cooperatives, Companies or non-profit Organizations."
-msgstr "Zważ że niektóre oferty mogą zezwalać na subskrybcje tylko pośród podmiotów określonego typu: Osób, XXXXXX, Firm, lub Ogranizacji niedochodowych."
+msgstr "Należy pamiętać, że niektóre oferty pozwalają tylko na subksrybcję tylko spośród podmiotów określonego typu: Osób, Spółki, Firm, lub Ogranizacji non-profit."
 
 msgid "Who can subscribe to a job offer?"
 msgstr "Kto może ubiegać się o konkretne zlecenie?"
 
-#, fuzzy
+# Michal Kulling <rootdevel@gmail.com> changes...
 msgid "Persons, Cooperatives, Companies or non-profit Organizations that have met the conditions imposed by the Qualifications form. That is to say, who has been able to fill it rightly."
-msgstr "Osoby, XXXXXX, Firmy, lub Organizacje niedochodowe które spełniają kryteria zawarte w kwestionariuszu kwalifikacyjnym, czyli właściwie wszyscy którzy potrafili go poprawnie wypełnić."
+msgstr "Osoby, Spółki, Firmy, lub Organizacje non-profit które spełniają kryteria zawarte w kwestionariuszu kwalifikacyjnym, czyli właściwie wszyscy którzy potrafili go poprawnie wypełnić."
 
 msgid "Who can post a job offer?"
 msgstr "Kto może umieścić swoją ofertę pracy?"
@@ -706,7 +707,7 @@ msgstr "Dlaczego członkowstwo trwa tylko rok?"
 
 #, fuzzy    XXXXXX: Added two %N
 msgid "Not doing it so could make it impossible to %1dissolve%3 the association %2due to%3 making all turnout figures low."
-msgstr "Mogłoby dojść do sytuacji, w której, %2ze względu%3 na duzą ilość mało aktywnych członków, nie da się  rozwiązać Stowarzyszenia."
+msgstr "Mogłoby dojść do sytuacji, w której, %2ze względu%3 na duzą ilość mało aktywnych członków, nie da się rozwiązać Stowarzyszenia."
 
 msgid "The membership renew process is automated to reduce bureaucracy."
 msgstr "Proces odnawiania członkowstwa pozwala wyeliminować biurokratyzację."
@@ -887,9 +888,9 @@ msgstr "Oferta pracy"
 msgid "Persons"
 msgstr "Osoby"
 
-#, fuzzy
+# Michal Kulling <rootdevel@gmail.com> changes...
 msgid "Cooperatives"
-msgstr ""
+msgstr "Spółki"
 
 msgid "Companies"
 msgstr "Firmy"
@@ -979,28 +980,27 @@ msgstr "Pracownicy"
 msgid "donation pledge"
 msgstr "zobowiązanie wykonania dotacji"
 
-#, fuzzy  XXXXXX  Just check if the translation must be updated or not.
 msgid "I want to add my %1donation pledge%2 to get these tasks done."
 msgstr "Chcę dodać %1dotację%2 wzamian za wykonanie tych zadań."
 
 msgid "I accept"
 msgstr "Akceptuję"
 
-#, fuzzy
+# Michal Kulling <rootdevel@gmail.com> changes...
 msgid "to do the work for the money you are offering."
-msgstr ""
+msgstr "jaką kwotę za pracę oferujesz"
 
-#, fuzzy
+# Michal Kulling <rootdevel@gmail.com> changes...
 msgid "The payments are %1negotiated%2 by donators and workers."
-msgstr ""
+msgstr "Płatności negocjowane przez darczyńców oraz pracowników."
 
-#, fuzzy
+# Michal Kulling <rootdevel@gmail.com> changes...  Check it
 msgid "You should take note of all the above emails to contact them all and join a work team, getting a subtask assigned. Anyway you can choose just do all it yourself."
-msgstr ""
+msgstr "Należy wziąć pod uwagę wszystkie wyżej wymienione e-maile, skontaktować się z nimi i przyłączyć się do prac zespołu oraz zdobyć plan zadań. W każdym razie można dołączyć i robić wszystko samemu."
 
-#, fuzzy
+# Michal Kulling <rootdevel@gmail.com> changes...  Check it
 msgid "GNU Herds show all emails so that all you can self-organize and negotiate."
-msgstr ""
+msgstr "GNU Herds pokazuje wszystkie emaile aby wszyscy mogli się zorganizować i negocjować."
 
 # View_Look_For_Volunteers_form.php
 # msgid ""
@@ -1227,13 +1227,11 @@ msgstr "Pola hasła różnią się"
 
 # Cooperative form: Cooperative_form.tpl, Cooperative_form.php
 # Cooperative_form.tpl
-#, fuzzy
 msgid "Update cooperative data"
-msgstr ""
+msgstr "Uaktoalnij dane spółki"
 
-#, fuzzy
 msgid "Cooperative"
-msgstr ""
+msgstr "Spółka"
 
 # Cooperative_form.php
 # msgid ""
@@ -1264,8 +1262,9 @@ msgstr "Skasuj mnie"
 msgid "Update non-profit organization data"
 msgstr "Uaktualnij dane organizacji pożytku publicznego"
 
+#non-profit sie nie tlumaczy!
 msgid "non-profit"
-msgstr "pożytku publicznego"
+msgstr "non-profit"
 
 msgid "non-profit Organization"
 msgstr "Organizacja pożytku publicznego"
@@ -1586,50 +1585,42 @@ msgstr "Nie wypełniaj pól adresowych gdy oferta dotyczy pracy zdalnej."
 # DonationPledgeGroups form: Donation_Pledge_Group_form.tpl, Donation_Pledge_Group_form.php
 #
 # Donation_Pledge_Group_form.tpl
-#, fuzzy
 msgid "New donation pledge group"
-msgstr ""
+msgstr "Nowe wpłaty dla grupy"
 
-#, fuzzy
 msgid "Tasks"
-msgstr ""
+msgstr "Zadania"
 
-#, fuzzy
 msgid "Short description"
-msgstr ""
+msgstr "Krótki opis"
 
-#, fuzzy
 msgid "Donation"
-msgstr ""
+msgstr "Darowizny"
 
-#, fuzzy
 msgid "Your donation"
-msgstr ""
+msgstr "Twoja darowizna"
 
-#, fuzzy
 msgid "in exchange for getting those tasks done"
-msgstr ""
+msgstr "w zamian za uzyskanie tych zadań zrobić"
 
 #, fuzzy
 msgid "US Dollars (USD)"
 msgstr "Dólares (USD)"
 
 # Donation_Pledge_Group_form.php
-#, fuzzy
+#, fuzzy   XXXXXX Need to add the %s in the translated string.
 msgid "Please fill in here numeric greater or equal to %s"
-msgstr ""
+msgstr "Proszę wypełnić tutaj cyframi większymi lub równymi"
 
 #
 # LookForVolunteers form: Look_For_Volunteers_form.tpl
 #
 # Look_For_Volunteers_form.tpl
-#, fuzzy
 msgid "New looking for volunteers notice"
-msgstr ""
+msgstr "Nowe ogłoszenia dla wolontariuszy"
 
-#, fuzzy
 msgid "Contact"
-msgstr "Contacto"
+msgstr "Kontakt"
 
 #
 # Manage_Job_Offer_Applications_form.tpl
@@ -1696,21 +1687,17 @@ msgstr "każdej ofercie pracy"
 msgid "any new job offer which fits my qualifications"
 msgstr "ofertach pracy odpowiadających moim kwalifikacjom"
 
-#, fuzzy
 msgid "any new donation pledge group"
-msgstr ""
+msgstr "inna darowizna dla grupy"
 
-#, fuzzy
 msgid "any new look-for-volunteers notice"
-msgstr ""
+msgstr "inna nowa oferta dla wolontariuszy"
 
-#, fuzzy
 msgid "Alerts behavior:"
-msgstr ""
+msgstr "Uwagi zachowania:"
 
-#, fuzzy
 msgid "alert me on my own notices"
-msgstr ""
+msgstr "infomuj mnie o moich nowych ofertach"
 
 #
 # Admin_form.tpl
