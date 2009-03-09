@@ -482,7 +482,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	  2='<li>'
 	  3='</li>'
 	  4='</ul>'
-	}A company could be able to get:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4{/t}
+	}A company is eligible for:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4{/t}
 
 <p class="top"><a href="#top">{t}Back to top{/t}</a></p>
 
