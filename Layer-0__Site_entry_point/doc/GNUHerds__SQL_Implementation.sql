@@ -215,6 +215,9 @@ CREATE TABLE LI_Skills (
 	LI_LH_Id varchar(23) REFERENCES LH_Skills(LH_Id) NOT NULL,
 	LI_LT_Id varchar(35), -- REFERENCES LT_SkillSetTypes(LT_Id) NOT NULL
 
+	-- Send warning to E1_SkillsAdmin to attend pending to classify skills.
+	LI_RaisePendingSkillEvent bool NOT NULL DEFAULT 'true',
+
 	-- To make the audit and maintenance of the LI_LH_Id skill tags easier.
 	LI_LicenseName varchar(128), -- XXX: We could add a new table to keep a license list later.
 	LI_LicenseURL  varchar(255),

@@ -560,4 +560,12 @@ class Entity
 
 		return $array;
 	}
+
+
+	public function getSkillsAdminsEmail()
+	{
+		$sqlQuery = "SELECT E1_Email FROM E1_Entities WHERE E1_SkillsAdmin='t';";
+		$result = $this->postgresql->getOneField($sqlQuery,0);
+		return $result;
+	}
 }

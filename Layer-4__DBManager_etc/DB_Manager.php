@@ -575,6 +575,14 @@ class DBManager
 		return $skills->delNonUsedPendingSkills();
 	}
 
+	public function raisePendingSkillsWarning()
+	{
+		//XXX: ACL: This method raise warnings.  Add support to check sysadmin authentication for website-frontend + DB-backend ?
+
+		$skills = new Skills();
+		return $skills->raisePendingSkillsWarning();
+	}
+
 	public function getSkillSetTypesList()
 	{
 		$acl = new AccessControlList();

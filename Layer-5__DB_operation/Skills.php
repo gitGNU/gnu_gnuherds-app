@@ -94,6 +94,51 @@ class Skills
 		$this->postgresql->execute($sqlQuery,0);
 	}
 
+	public function disablePendingSkillsWarning()
+	{
+		$sqlQuery = "UPDATE LI_Skills SET LI_RaisePendingSkillEvent='false' WHERE LI_LH_Id='Pending' AND LI_RaisePendingSkillEvent='true';";
+		$this->postgresql->execute($sqlQuery,0);
+	}
+
+	public function raisePendingSkillsWarning()
+	{
+		// Send warning to SkillsAdmin so that they classify the new Pending to classify Skills.
+
+		$pendingSkills = $this->getPendingSkillsList();
+
+		$entity = new Entity();
+		$skillsAdminsEmail = $entity->getSkillsAdminsEmail();
+
+		// REJECTED: Use the SkillsAdmin locate to translate some sentences.
+		// Not translated because of English is the administration language of the GNU Herds project, so SkillsAdmin must be able to understand this English email.
+		$message = "Log in and go to the Administration menu to classify the below Skills:\n";
+		$message .= "\n";
+		$message .= " Skills classifycation guide:\n";
+		$message .= "   http://savannah.nongnu.org/cookbook/?func=detailitem&item_id=209\n";
+		$message .= "\n";
+		$message .= "\n";
+		$message .= "You could use wikipedia to see quickly the license of such Skill, or\n";
+		$message .= "to help to classify it quickly as Abstract, Hardware, etc.\n";
+
+		foreach ( $pendingSkills[0] as $pendingSkill )
+		{
+			$message .= "\n";
+			$message .= " * ".$pendingSkill."\n";
+			$message .= "     http://en.wikipedia.org/wiki/Special:Search?search=".rawurlencode($pendingSkill)."&go=Go\n";
+		}
+		$message .= "\n\n";
+		$message .= "You receive this email because you are a GNU Herds' Skills administrator.\n";
+		$message .= "If you do not want to be Skills administrator anymore, please let it know\n";
+		$message .= "to association@gnuherds.org";
+
+		// Send warning email
+		mb_language("uni");
+		foreach ( $skillsAdminsEmail as $skillsAdminEmail )
+			mb_send_mail(trim($skillsAdminEmail), "GNU Herds: ".gettext("Attend pending to classify skills"), "$message", "From: association@gnuherds.org");
+
+		$this->disablePendingSkillsWarning();
+	}
+
 	public function getSkillSetTypesList()
 	{
 		$sqlQuery = "SELECT LT_Id FROM LT_SkillSetTypes";
