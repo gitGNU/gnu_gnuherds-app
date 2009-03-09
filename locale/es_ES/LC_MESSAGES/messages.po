@@ -702,7 +702,7 @@ msgstr "En los %1Estatutos%2 de la asociación se puede leer:"
 msgid "How many votes is a company able to obtain?"
 msgstr "¿Cuantos votos puede obtener una compañía?"
 
-msgid "A company could be able to get:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4"
+msgid "A company is eligible for:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4"
 msgstr "Una compañía podría obtener:%1 %2un solo voto como 'compañía' y%3 %2cualquier número de votos como 'personas' (sus trabajadores), habiendo todos ellos individualmente contribuido al software libre.%3%4"
 
 msgid "A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?"

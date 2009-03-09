@@ -71,9 +71,9 @@ msgstr "Nasza spółka"
 msgid "Our company"
 msgstr "Nasza firma"
 
-msgid "Our non-profit"
 #Non-profit sie nie tlumaczy...
 #Non-profit not translating...
+msgid "Our non-profit"
 msgstr "Nasza organizacja non-profit"
 
 msgid "My qualifications"
@@ -344,6 +344,7 @@ msgstr "Komitet"
 msgid "The Committee shall consist of the following: the members of the system administrator team, the web master team, the development team, the translator teams, the public relations team and the Ethics Officer."
 msgstr "Komitet winien składać się z: członków grupy administratorów systemu, grupy webmasterów, grupy programistów, grupy tłumaczy, grupy odpowiedzialnej za stosunki z otoczeniem(PR) oraz Etyka."
 
+#, fuzzy
 msgid "The certifications team liabilities shall be evaluate, upon request, the %1Free Software Contributor%2 certification, the %3GNU Business Network%4 certification, etc."
 msgstr ""
 
@@ -538,6 +539,7 @@ msgstr "Darczyńcy i pracownicy mogą %1negocjować%2 (30%, 25%, 20%, 25%) lub p
 msgid "How to subscribe to a job offer?"
 msgstr "Jak mogę ubiegać się o konkretne zlecenie?"
 
+#, fuzzy  Replace XXXXXX by the Cooperative translation
 msgid "Register as new %1Person%5, %2Cooperative%5, %3Company%5 or %4non-profit Organization%5."
 msgstr "Zarejestruj jako nowa %1Osoba%5, %2XXXXXX%5, %3Firma%5 lub %4organizacja niedochodowa%5."
 
@@ -567,6 +569,7 @@ msgstr "Osoby, Spółki, Firmy, lub Organizacje non-profit które spełniają kr
 msgid "Who can post a job offer?"
 msgstr "Kto może umieścić swoją ofertę pracy?"
 
+#, fuzzy  Replace XXXXXX by the Cooperative translation
 msgid "Any Person, Cooperative, Company or non-profit Organization meeting the conditions imposed by the JobOffer form and whose offer fits one of the following requirements:"
 msgstr "Dowolna Osoba, XXXXXX, Firma, lub organizacja niedochodowa spełniająca wymogi formularza zgłoszeniowego i której oferta mieści się w poniższych kryteriach:"
 
@@ -693,7 +696,7 @@ msgstr "W %1Statucie%2 widnieje zapis:"
 msgid "How many votes is a company able to obtain?"
 msgstr "Ile głosów może uzyskać jedna firma?"
 
-msgid "A company could be able to get:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4"
+msgid "A company is eligible for:%1 %2only one vote as 'company' and%3 %2any number of votes as 'people' (their workers), all having individually contributed to free software.%3%4"
 msgstr "Firma możę uzyskać:%1 %2jeden głos jako \"firma\" oraz: %3 %2dowolną ilość głosów oddaną przez pracowników, przy czym każdy z nich musi udokumentować swój wkład w rozwój Wolnego Oprogramowania%3%4"
 
 msgid "A 100-worker company can get 100 voices, while my 3-worker company can have only 3 voices?"
@@ -991,6 +994,7 @@ msgid "to do the work for the money you are offering."
 msgstr "jaką kwotę za pracę oferujesz"
 
 # Michal Kulling <rootdevel@gmail.com> changes...
+#, fuzzy    XXXXXX: Add two %N
 msgid "The payments are %1negotiated%2 by donators and workers."
 msgstr "Płatności negocjowane przez darczyńców oraz pracowników."
 
@@ -1603,7 +1607,7 @@ msgstr "Twoja darowizna"
 msgid "in exchange for getting those tasks done"
 msgstr "w zamian za uzyskanie tych zadań zrobić"
 
-#, fuzzy
+#, fuzzy   The translation is in Spanish?
 msgid "US Dollars (USD)"
 msgstr "Dólares (USD)"
 
