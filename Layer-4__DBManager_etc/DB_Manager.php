@@ -333,12 +333,12 @@ class DBManager
 		return $donation->getDonationsForPledgeGroup($Id);
 	}
 
-	public function addDonation($Id)
+	public function addDonation($JobOfferId)
 	{
 		// This method does not need ACL check. Everybody is allowed to donate.
 
 		$donation = new Donation();
-		$donation->addDonation($Id);
+		$donation->addDonation($JobOfferId);
 	}
 
 	public function confirmDonation($email,$magic)
