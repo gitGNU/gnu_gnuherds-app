@@ -329,7 +329,7 @@ class Entity
 		{
 			$E1_Id = $this->addEntity($magic);
 
-			// Send the email
+			// Send the email -- TODO: Use an external method to send the emails. For example $emails->sendWarningEmail('REQUEST_TO_ADD_DONATION');
 			$message = gettext("Your email has been used to create or update a notice at GNU Herds.")."\n\n";
 
 			$message .= gettext("Follow the below link to confirm.")." ".gettext("That link will expire in 48 hours.")."\n\n"; // If it is not confirmed it will be lost, and the creation or update process will have to begin again.
