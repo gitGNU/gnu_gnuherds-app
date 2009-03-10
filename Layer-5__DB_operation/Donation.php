@@ -79,7 +79,7 @@ class Donation
 		// If the user was not logged when [s]he filled the donation then [s]he have to confirm the donation clicking the
 		// link sent via email.
 
-		// If the user is logged in then the donation is already confirmed; else, we create confirmation fields
+		// If the user is logged in then the donation is already confirmed; else, we create confirmation fields.
 		if(isset($_SESSION['EntityId']))
 		{
 			// Logged in
