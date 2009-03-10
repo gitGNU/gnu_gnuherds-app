@@ -609,7 +609,7 @@ CREATE TABLE D1_Donations2JobOffers (
 	-- The donation
 	D1_Donation              varchar(15) NOT NULL,
 
-	-- To confirm the donation
+	-- To confirm the donation. Note: If the Entity is logged in then both fields have to be set to NULL due to there is not need of confirmation.
 	D1_DonationMagic         varchar(512) DEFAULT NULL,
 	D1_DonationMagicExpire   timestamp DEFAULT 'now'
 );
