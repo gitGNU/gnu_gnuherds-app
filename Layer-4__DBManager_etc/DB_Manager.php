@@ -308,6 +308,14 @@ class DBManager
 		return $jobOffer->deleteSelectedJobOffers();
 	}
 
+	public function deleteEmptyDonationPledgeGroups()
+	{
+		//XXX: ACL: This method deletes empty donation-plege-groups.  Add support to check sysadmin authentication.
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->deleteEmptyDonationPledgeGroups();
+	}
+
 	public function updateJobOffer($Id,$section,$completedEdition)
 	{
 		$acl = new AccessControlList();

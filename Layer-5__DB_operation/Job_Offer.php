@@ -362,6 +362,18 @@ class JobOffer
 	}
 
 
+	public function deleteEmptyDonationPledgeGroups()
+	{
+		$sqlQuery = "SELECT J1_Id from J1_JobOffers WHERE J1_OfferType='Donation pledge group' AND J1_Id NOT IN (SELECT DISTINCT D1_J1_Id FROM D1_Donations2JobOffers);";
+		$donationPledgeGroups = $this->postgresql->getOneField($sqlQuery,0);
+
+		foreach ($donationPledgeGroups as $donationPledgeGroup)
+		{
+			$this->deleteJobOffer($donationPledgeGroup);
+		}
+	}
+
+
 	public function deleteJobOffersForEntity()
 	{
 		// We get the Job Offers for the logged Entity. Therefore the Access Control List (ACL) check is implicit.
