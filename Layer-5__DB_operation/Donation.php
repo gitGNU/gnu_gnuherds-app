@@ -85,7 +85,7 @@ class Donation
 			// Logged in
 			$EntityId = trim($_SESSION['EntityId']);
 
-			$sqlQuery = "PREPARE query(integer,text,integer) AS  INSERT INTO D1_Donations2JobOffers (D1_J1_Id,D1_Donation,D1_E1_Id) VALUES ($1,$2,$3);  EXECUTE query('$JobOfferId','".pg_escape_string($WageRank)."','$EntityId');";
+			$sqlQuery = "PREPARE query(integer,text,integer) AS  INSERT INTO D1_Donations2JobOffers (D1_J1_Id,D1_Donation,D1_E1_Id,D1_DonationMagic,D1_DonationMagicExpire) VALUES ($1,$2,$3,NULL,NULL);  EXECUTE query('$JobOfferId','".pg_escape_string($WageRank)."','$EntityId');";
 		}
 		else
 		{
