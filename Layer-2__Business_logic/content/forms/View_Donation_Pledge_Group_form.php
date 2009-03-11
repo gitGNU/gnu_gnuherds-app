@@ -101,13 +101,16 @@ class ViewDonationPledgeGroupForm
 
 			if ( $this->checks['result'] == "pass" )
 			{
-				$EntityId = $this->manager->getEntityId(trim($_POST['Email']),'REQUEST_SUBSCRIBE_TO_NOTICE_OPERATION'); // It registers the email and send the verification email if it is needed
+				// Not logged in. Make the 'magic' flag.
+				$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
+
+				$EntityId = $this->manager->getEntityId(trim($_POST['Email']),'REQUEST_TO_SUBSCRIBE_TO_NOTICE',$magic); // It registers the email and send the verification email if it is needed
 
 				$this->state['IsAlreadySubscribed'] = $this->manager->IsAlreadySubscribed( $EntityId, $_GET['JobOfferId'] );
 
 				if ( $this->state['IsAlreadySubscribed'] == false )
 				{
-					$this->manager->subscribeApplication( $EntityId, $_GET['JobOfferId'] );
+					$this->manager->subscribeApplication( $EntityId, $_GET['JobOfferId'], $magic );
 					$this->state['IsAlreadySubscribed'] = true;
 				}
 

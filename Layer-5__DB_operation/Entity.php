@@ -303,11 +303,11 @@ class Entity
 
 		if ( $E1_Id )
 		{
-			// Check if we have to send confirmation email for not logged users adding a donation
-			if($requestOperation == 'REQUEST_TO_ADD_DONATION')
+			// Check if we have to send confirmation email for not logged users adding a donation, creating a notice or subscribing to a donation-pledge-group
+			if( $requestOperation == 'REQUEST_TO_ADD_DONATION' or $requestOperation == 'REQUEST_TO_SUBSCRIBE_TO_NOTICE' )
 			{
 				// Send the email
-				$message = gettext("Your email has been used to create or update a notice at GNU Herds.")."\n\n";
+				$message = gettext("Your email has been used to create, update or subscribe to a notice at GNU Herds.")."\n\n";
 
 				$message .= gettext("Follow the below link to confirm.")." ".gettext("That link will expire in 48 hours.")."\n\n"; // If it is not confirmed it will be lost, and the creation or update process will have to begin again.
 
@@ -330,7 +330,7 @@ class Entity
 			$E1_Id = $this->addEntity($magic);
 
 			// Send the email -- TODO: Use an external method to send the emails. For example $emails->sendWarningEmail('REQUEST_TO_ADD_DONATION');
-			$message = gettext("Your email has been used to create or update a notice at GNU Herds.")."\n\n";
+			$message = gettext("Your email has been used to create, update or subscribe to a notice at GNU Herds.")."\n\n";
 
 			$message .= gettext("Follow the below link to confirm.")." ".gettext("That link will expire in 48 hours.")."\n\n"; // If it is not confirmed it will be lost, and the creation or update process will have to begin again.
 

@@ -76,12 +76,12 @@ class DBManager
 		return $entity->getEntityPhotoOrLogo($Id);
 	}
 
-	public function getEntityId($email,$requestOperation)
+	public function getEntityId($email,$requestOperation,$magic)
 	{
 		// This method does not need ACL check because of we have to allow it even to not logged entities.
 
 		$entity = new Entity();
-		return $entity->getEntityId($email,$requestOperation);
+		return $entity->getEntityId($email,$requestOperation,$magic);
 	}
 
 	public function addEntity($magic)
@@ -393,12 +393,20 @@ class DBManager
 		return $jobOffer->getApplicationsMeterForJobOffer($Id,$meter);
 	}
 
-	public function subscribeApplication($EntityId,$JobOfferId)
+	public function subscribeApplication($EntityId,$JobOfferId,$magic='')
 	{
 		// With the current use of this method, it does not need ACL check.
 
 		$jobOffer = new JobOffer();
-		$jobOffer->subscribeApplication($EntityId,$JobOfferId);
+		$jobOffer->subscribeApplication($EntityId,$JobOfferId,$magic);
+	}
+
+	public function confirmApplication($email,$magic)
+	{
+		// This method does not need ACL check.
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->confirmApplication($email,$magic);
 	}
 
 	public function IsAlreadySubscribed($EntityId,$JobOfferId)

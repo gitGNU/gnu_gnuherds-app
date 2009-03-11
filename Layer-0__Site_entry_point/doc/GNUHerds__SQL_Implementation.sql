@@ -598,6 +598,10 @@ CREATE TABLE R0_Qualifications2JobOffersJoins (
         R0_State     varchar(10) REFERENCES LZ_ApplicationStates NOT NULL,
         R0_E1_Id     integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Applicant's identity, being a Person, Cooperative, Company or non-profit Organization.
 	PRIMARY KEY (R0_J1_Id,R0_E1_Id)
+
+	-- To confirm the subscription. Note: If the Entity is logged in then both fields have to be set to NULL due to there is not need of confirmation.
+	R0_SubscriptionMagic         varchar(512) DEFAULT NULL,
+	R0_SubscriptionMagicExpire   timestamp DEFAULT 'now'
 );
 
 CREATE TABLE D1_Donations2JobOffers (

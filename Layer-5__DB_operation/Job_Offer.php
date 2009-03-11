@@ -252,7 +252,7 @@ class JobOffer
 		// J1_JobOffers table
 
 		$entity = new Entity();
-		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : $entity->getEntityId(trim($_POST['Email']),'REQUEST_ADD_NOTICE_OPERATION'); // It registers the email and send the verification email if it is needed
+		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : $entity->getEntityId(trim($_POST['Email']),'REQUEST_TO_ADD_NOTICE'); // It registers the email and send the verification email if it is needed
 
 		$EmployerJobOfferReference = isset($_POST['EmployerJobOfferReference']) ? trim($_POST['EmployerJobOfferReference']) : '';
 
@@ -535,10 +535,41 @@ class JobOffer
 		return $result[0];
 	}
 
-	public function subscribeApplication($EntityId,$JobOfferId)
+	public function subscribeApplication($EntityId,$JobOfferId,$magic='')
 	{
-		$sqlQuery = "PREPARE query(integer,integer) AS  INSERT INTO R0_Qualifications2JobOffersJoins (R0_J1_Id,R0_State,R0_E1_Id) VALUES ($1,'Received',$2);  EXECUTE query('$JobOfferId','$EntityId');";
-		$this->postgresql->getPostgreSQLObject($sqlQuery,1);
+		// If the user is logged in then the subscription is already confirmed; else, we create confirmation fields
+		if(isset($_SESSION['EntityId']))
+		{
+			// Logged in
+			$sqlQuery = "PREPARE query(integer,integer) AS  INSERT INTO R0_Qualifications2JobOffersJoins (R0_J1_Id,R0_State,R0_E1_Id,R0_SubscriptionMagic,R0_SubscriptionMagicExpire) VALUES ($1,'Received',$2,NULL,NULL);  EXECUTE query('$JobOfferId','$EntityId');";
+		}
+		else
+		{
+			// Not logged in
+			$sqlQuery = "PREPARE query(integer,integer,text) AS  INSERT INTO R0_Qualifications2JobOffersJoins (R0_J1_Id,R0_State,R0_E1_Id,R0_SubscriptionMagic,R0_SubscriptionMagicExpire) VALUES ($1,'Received',$2,$3,now() + '7 days'::interval);  EXECUTE query('$JobOfferId','$EntityId','$magic');";
+		}
+		$this->postgresql->execute($sqlQuery,1);
+	}
+
+	public function confirmApplication($email,$magic)
+	{
+		$sqlQuery = "PREPARE query(text,text) AS  SELECT R0_E1_Id FROM R0_Qualifications2JobOffersJoins,E1_Entities WHERE R0_E1_Id=E1_Id AND E1_Email=$1 AND R0_SubscriptionMagic=$2 AND R0_SubscriptionMagicExpire > 'now';  EXECUTE query('$email','$magic');";
+		$result = $this->postgresql->getPostgreSQLObject($sqlQuery, 1);
+
+		$array = pg_fetch_all_columns($result, 0);
+		$numrows = count($array);
+
+		if ($numrows == 1)
+		{
+			$sqlQuery = "PREPARE query(text) AS  UPDATE R0_Qualifications2JobOffersJoins SET R0_SubscriptionMagic=NULL, R0_SubscriptionMagicExpire=NULL WHERE R0_SubscriptionMagic=$1;  EXECUTE query('$magic');";
+			$this->postgresql->execute($sqlQuery,1);
+
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	public function IsAlreadySubscribed($EntityId,$JobOfferId)
