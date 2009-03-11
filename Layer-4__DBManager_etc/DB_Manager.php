@@ -409,6 +409,14 @@ class DBManager
 		return $jobOffer->confirmApplication($email,$magic);
 	}
 
+	public function delNonConfirmedApplications()
+	{
+		//XXX: ACL: This method deletes application-subscriptins.  Add support to check sysadmin authentication.
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->delNonConfirmedApplications();
+	}
+
 	public function IsAlreadySubscribed($EntityId,$JobOfferId)
 	{
 		// With the current use of this method, it does not need ACL check.

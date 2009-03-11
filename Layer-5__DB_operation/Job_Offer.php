@@ -572,6 +572,14 @@ class JobOffer
 		}
 	}
 
+	public function delNonConfirmedApplications()
+	{
+		// This is done to clean non-confirmed application-subscriptions whose time-window to confirm has expired.
+
+		$sqlQuery = "DELETE FROM R0_Qualifications2JobOffersJoins WHERE R0_SubscriptionMagicExpire IS NOT NULL  AND  R0_SubscriptionMagicExpire < 'now' ;";
+		$this->postgresql->execute($sqlQuery,0);
+	}
+
 	public function IsAlreadySubscribed($EntityId,$JobOfferId)
 	{
 		$sqlQuery = "PREPARE query(integer,integer) AS  SELECT R0_J1_Id FROM R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=$1 AND R0_E1_Id=$2;  EXECUTE query('$JobOfferId','$EntityId');";
