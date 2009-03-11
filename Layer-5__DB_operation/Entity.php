@@ -311,7 +311,11 @@ class Entity
 
 				$message .= gettext("Follow the below link to confirm.")." ".gettext("That link will expire in 48 hours.")."\n\n"; // If it is not confirmed it will be lost, and the creation or update process will have to begin again.
 
-				$message .= "https://".$_SERVER['HTTP_HOST']."/pledges?action=donate&email=".trim($_POST['Email'])."&magic=".$magic;
+				if( $requestOperation == 'REQUEST_TO_ADD_DONATION' )
+					$message .= "https://".$_SERVER['HTTP_HOST']."/pledges?action=donate&email=".trim($_POST['Email'])."&magic=".$magic;
+
+				if( $requestOperation == 'REQUEST_TO_SUBSCRIBE_TO_NOTICE' )
+					$message .= "https://".$_SERVER['HTTP_HOST']."/pledges?action=subscribe&email=".trim($_POST['Email'])."&magic=".$magic;
 
 				$message .= "\n\n";
 
@@ -320,7 +324,12 @@ class Entity
 				$message .= gettext("If this email is Spam for you, please let it knows to  association AT gnuherds.org")."\n\n";
 
 				mb_language("uni");
-				mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Donation confirmation"), "$message", "From: association@gnuherds.org");
+
+				if( $requestOperation == 'REQUEST_TO_ADD_DONATION' )
+					mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Donation confirmation"), "$message", "From: association@gnuherds.org");
+
+				if( $requestOperation == 'REQUEST_TO_SUBSCRIBE_TO_NOTICE' )
+					mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Subscription confirmation"), "$message", "From: association@gnuherds.org");
 			}
 
 			return $E1_Id;
