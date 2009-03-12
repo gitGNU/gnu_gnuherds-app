@@ -96,6 +96,7 @@ class ManageJobOffersForm
 
 				// Meters
 
+				$this->data['Visits'] = $result[6];
 				$receivedMeter = array();
 				$inProcessMeter = array();
 				$ruledOutMeter = array();

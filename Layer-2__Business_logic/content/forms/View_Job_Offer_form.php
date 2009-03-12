@@ -312,6 +312,17 @@ class ViewJobOfferForm
 				unset( $this->data['CheckList'][$i] );
 			}
 		}
+
+
+		// Increase the visits counter for any entity different to the job offer's owner.
+		if ( isset($_SESSION['Logged']) and $_SESSION['Logged'] == '1' )
+		{
+			// Increase only if the logged in entity is not the offer's owner.
+			if ( $_SESSION['EntityId'] != $this->data['EntityId'] )
+				$this->manager->increaseVisits($_GET['JobOfferId']);
+		}
+		else // If not logged in we increase the view request counter.
+			$this->manager->increaseVisits($_GET['JobOfferId']);
 	}
 }
 ?> 

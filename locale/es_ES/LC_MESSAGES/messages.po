@@ -1676,6 +1676,9 @@ msgstr "Usted no tiene ninguna oferta de empleo definida"
 msgid "Closed"
 msgstr "Cerrada"
 
+msgid "Visits"
+msgstr "Visitas"
+
 msgid "Delete selected offers"
 msgstr "Borrar las ofertas seleccionadas"
 

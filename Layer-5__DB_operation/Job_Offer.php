@@ -35,7 +35,7 @@ class JobOffer
 
 	public function getJobOffersForEntity($extra_condition = '')
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_VacancyTitle,J1_OfferType FROM J1_JobOffers WHERE J1_E1_Id=$1 ".$extra_condition.";  EXECUTE query('$_SESSION[EntityId]');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_Id,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_VacancyTitle,J1_OfferType,J1_Visits FROM J1_JobOffers WHERE J1_E1_Id=$1 ".$extra_condition.";  EXECUTE query('$_SESSION[EntityId]');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 		$array = array();
 		$array[0] = pg_fetch_all_columns($result, 0);
@@ -50,6 +50,7 @@ class JobOffer
 				$array[4][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
 
 		$array[5] = pg_fetch_all_columns($result, 5);
+		$array[6] = pg_fetch_all_columns($result, 6);
 
 		return $array;
 	}
@@ -241,6 +242,12 @@ class JobOffer
 		$array[62] = pg_fetch_all_columns($result, 28); // J1_OfferType
 
 		return $array;
+	}
+
+	public function increaseVisits($JobOfferId)
+	{
+		$sqlQuery = "PREPARE query(integer) AS  UPDATE J1_JobOffers SET J1_Visits=J1_Visits+1 WHERE J1_Id=$1;  EXECUTE query('$JobOfferId');";
+		$result = $this->postgresql->execute($sqlQuery,1);
 	}
 
 

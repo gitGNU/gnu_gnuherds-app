@@ -281,6 +281,15 @@ class DBManager
 		return $jobOffer->getJobOffer($Id);
 	}
 
+	public function increaseVisits($JobOfferId)
+	{
+		$acl = new AccessControlList();
+		$acl->checkJobOfferAccess("READ",$JobOfferId);
+
+		$jobOffer = new JobOffer();
+		$jobOffer->increaseVisits($JobOfferId);
+	}
+
 	public function getJobOfferPhotoOrLogoForEntity($Id)
 	{
 		$acl = new AccessControlList();

@@ -29,6 +29,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td class="tdTitle"><strong>{'Expiration date'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;</strong></td>
 <td class="tdTitle"><strong>{'Closed'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;</strong></td>
 <td></td>
+<td class="tdTitle">{'Visits'|gettext|strip:'&nbsp;'}</td>
 <td class="tdTitle">{'Received'|dgettext:'database'|strip:'&nbsp;'}</td>
 <td class="tdTitle">{'In process'|dgettext:'database'|strip:'&nbsp;'}</td>
 <td class="tdTitle">{'Ruled out'|dgettext:'database'|strip:'&nbsp;'}</td>
@@ -85,6 +86,14 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td>
 </td>
 
+
+<td class="{if $i % 2}tdDark{else}tdLight{/if}">
+{if $data.Visits[$i] eq '0'}
+{t}none{/t}
+{else}
+{$data.Visits[$i]}
+{/if}
+</td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $ReceivedMeter[$i] eq '0'}

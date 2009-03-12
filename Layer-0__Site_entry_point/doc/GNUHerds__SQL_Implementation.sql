@@ -491,6 +491,7 @@ CREATE TABLE E5_EntityRequireCertifications ( -- List the Certifications which t
 CREATE TABLE J1_JobOffers ( -- XXX: TODO: The idea is that maybe some of the volunteer-looking or pledges can be converted to actual job offers if they success getting the support of the needed donators.
         J1_Id              SERIAL PRIMARY KEY, -- Job Offer identifier
         J1_E1_Id           integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Employer identity: being a Person, Cooperative, Company or non-profit Organization.
+        J1_Visits          integer NOT NULL DEFAULT 0,
         J1_CompletedEdition bool DEFAULT 'false', -- The edition has been successfully completed. All checks pass.
         J1_OfferType       varchar(22) REFERENCES LJ_OfferType(LJ_Id) NOT NULL,
 
