@@ -188,7 +188,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{$data.Donators.NonprofitName[$i]|gettext|strip:'&nbsp;'}
 {else}
 {if $data.Donators.LastName[$i] neq '' or $data.Donators.MiddleName[$i] neq '' or $data.Donators.FirstName[$i] neq ''}
-	{$data.Donators.LastName[$i]}{if trim($data.Donators.LastName[$i]) neq '' and trim($data.Donators.MiddleName[$i]) neq ''}&nbsp;{/if}{$data.Donators.MiddleName[$i]}{if trim($data.Donators.LastName[$i]) neq '' or trim($data.Donators.MiddleName[$i]) neq ''},&nbsp;{/if}{$data.Donators.FirstName[$i]}
+	{$data.Donators.LastName[$i]}{if trim($data.Donators.LastName[$i]) neq '' and (trim($data.Donators.FirstName[$i]) neq '' or trim($data.Donators.MiddleName[$i]) neq '')},{/if}{if trim($data.Donators.FirstName[$i]) neq ''}&nbsp;{$data.Donators.FirstName[$i]}{/if}{if trim($data.Donators.MiddleName[$i]) neq ''}&nbsp;{$data.Donators.MiddleName[$i]}{/if}
 {else}
 	{'Email'|gettext|strip:'&nbsp;'}
 {/if}
@@ -227,7 +227,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	{$data.Applications.NonprofitName[$i]|gettext|strip:'&nbsp;'}
 {else}
 {if $data.Applications.LastName[$i] neq '' or $data.Applications.MiddleName[$i] neq '' or $data.Applications.FirstName[$i] neq ''}
-	{$data.Applications.LastName[$i]}{if trim($data.Applications.LastName[$i]) neq '' and trim($data.Applications.MiddleName[$i]) neq ''}&nbsp;{/if}{$data.Applications.MiddleName[$i]}{if trim($data.Applications.LastName[$i]) neq '' or trim($data.Applications.MiddleName[$i]) neq ''},&nbsp;{/if}{$data.Applications.FirstName[$i]}
+	{$data.Applications.LastName[$i]}{if trim($data.Applications.LastName[$i]) neq '' and (trim($data.Applications.FirstName[$i]) neq '' or trim($data.Applications.MiddleName[$i]) neq '')},{/if}{if trim($data.Applications.FirstName[$i]) neq ''}&nbsp;{$data.Applications.FirstName[$i]}{/if}{if trim($data.Applications.MiddleName[$i]) neq ''}&nbsp;{$data.Applications.MiddleName[$i]}{/if}
 {else}
 	{'Email'|gettext|strip:'&nbsp;'}
 {/if}

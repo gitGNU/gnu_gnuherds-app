@@ -93,7 +93,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $EC_CompanyName[$i]}<strong>{t}Company{/t}</strong>: {/if}
 {if $EO_OrganizationName[$i]}<strong>{t}non-profit Organization{/t}</strong>: {/if}
 {if $EP_FirstName[$i] and trim($Blog[$i]) neq ''}<a href="{$Blog[$i]}">{else}{if trim($Website[$i]) neq ''}<a href="{$Website[$i]}">{/if}{/if}
-{if $EP_FirstName[$i]}{$EP_LastName[$i]}{if $EP_MiddleName[$i]} {/if}{$EP_MiddleName[$i]}{if $EP_LastName[$i] or $EP_MiddleName[$i]},{/if} {$EP_FirstName[$i]}{/if}
+{if $EP_FirstName[$i]}{$EP_LastName[$i]}{if $EP_LastName[$i] and ($EP_FirstName[$i] or $EP_MiddleName[$i])},{/if} {$EP_FirstName[$i]} {$EP_MiddleName[$i]}{/if}
 {if $EC_CooperativeName[$i]}{$EC_CooperativeName[$i]}{/if}
 {if $EC_CompanyName[$i]}{$EC_CompanyName[$i]}{/if}
 {if $EO_OrganizationName[$i]}{$EO_OrganizationName[$i]}{/if}

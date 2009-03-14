@@ -37,13 +37,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {t}{$data.EntityType}{/t}:
 
 {if $data.EntityType eq 'Person' }
-	<strong>
-	{if trim($data.LastName) neq '' or trim($data.MiddleName) neq '' }
-		{$data.LastName}{if trim($data.MiddleName) neq ''} {/if}{$data.MiddleName},
-	{/if}
-	{$data.FirstName}
-	</strong>
-	<br>
+	<strong>{$data.LastName}{if trim($data.LastName) and (trim($data.FirstName) or trim($data.MiddleName))},{/if} {$data.FirstName} {$data.MiddleName}</strong><br>
 
 	{if trim($data.BirthYear) neq ''}
 		{t}Born{/t}: <strong>{$data.BirthYear}</strong><br>
