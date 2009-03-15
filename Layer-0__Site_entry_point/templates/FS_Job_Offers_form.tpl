@@ -28,10 +28,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </p>
 
 {if $smarty.session.Logged neq '1' }
+
 <p>
 {t}Are you a Free Software author? You could register and add your qualifications.{/t}
 </p>
-{/if}
 
 <p class="center">
 <br>
@@ -45,6 +45,20 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <br>
 <br>
 </p>
+
+{else}
+
+<form name="newJobOfferForm" method="post" action="offers?action=edit&amp;id=&amp;section=general" class="center">
+<div>
+<input type="submit" name="new" value="{t}New job offer{/t}">
+</div>
+</form>
+
+<br>
+<br>
+<br>
+
+{/if}
 
 
 <table border="0">
