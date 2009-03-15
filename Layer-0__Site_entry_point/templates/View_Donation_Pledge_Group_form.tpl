@@ -178,16 +178,16 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {foreach from=$data.Donators.Donation item=Donation key=i}
 <tr>
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $data.Donators.CooperativeName[$i] neq ''}
+{if $data.Donators.EntityType[$i] eq 'Cooperative'}
 	{$data.Donators.CooperativeName[$i]|gettext|strip:'&nbsp;'}
 {else}
-{if $data.Donators.CompanyName[$i] neq ''}
+{if $data.Donators.EntityType[$i] eq 'Company'}
 	{$data.Donators.CompanyName[$i]|gettext|strip:'&nbsp;'}
 {else}
-{if $data.Donators.NonprofitName[$i] neq ''}
+{if $data.Donators.EntityType[$i] eq 'non-profit Organization'}
 	{$data.Donators.NonprofitName[$i]|gettext|strip:'&nbsp;'}
 {else}
-{if $data.Donators.LastName[$i] neq '' or $data.Donators.MiddleName[$i] neq '' or $data.Donators.FirstName[$i] neq ''}
+{if $data.Donators.EntityType[$i] eq 'Person'}
 	{$data.Donators.LastName[$i]}{if trim($data.Donators.LastName[$i]) neq '' and (trim($data.Donators.FirstName[$i]) neq '' or trim($data.Donators.MiddleName[$i]) neq '')},{/if}{if trim($data.Donators.FirstName[$i]) neq ''}&nbsp;{$data.Donators.FirstName[$i]}{/if}{if trim($data.Donators.MiddleName[$i]) neq ''}&nbsp;{$data.Donators.MiddleName[$i]}{/if}
 {else}
 	{'Email'|gettext|strip:'&nbsp;'}
@@ -217,16 +217,16 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {foreach from=$data.Applications.FirstName item=Application key=i}
 <tr>
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $data.Applications.CooperativeName[$i] neq ''}
+{if $data.Applications.EntityType[$i] eq 'Cooperative'}
 	{$data.Applications.CooperativeName[$i]|gettext|strip:'&nbsp;'}
 {else}
-{if $data.Applications.CompanyName[$i] neq ''}
+{if $data.Applications.EntityType[$i] eq 'Company'}
 	{$data.Applications.CompanyName[$i]|gettext|strip:'&nbsp;'}
 {else}
-{if $data.Applications.NonprofitName[$i] neq ''}
+{if $data.Applications.EntityType[$i] eq 'non-profit Organization'}
 	{$data.Applications.NonprofitName[$i]|gettext|strip:'&nbsp;'}
 {else}
-{if $data.Applications.LastName[$i] neq '' or $data.Applications.MiddleName[$i] neq '' or $data.Applications.FirstName[$i] neq ''}
+{if $data.Applications.EntityType[$i] eq 'Person'}
 	{$data.Applications.LastName[$i]}{if trim($data.Applications.LastName[$i]) neq '' and (trim($data.Applications.FirstName[$i]) neq '' or trim($data.Applications.MiddleName[$i]) neq '')},{/if}{if trim($data.Applications.FirstName[$i]) neq ''}&nbsp;{$data.Applications.FirstName[$i]}{/if}{if trim($data.Applications.MiddleName[$i]) neq ''}&nbsp;{$data.Applications.MiddleName[$i]}{/if}
 {else}
 	{'Email'|gettext|strip:'&nbsp;'}
