@@ -86,7 +86,7 @@ class ManageJobOffersForm
 
 				// Entries
 
-				$result = $this->manager->getJobOffersForEntity(" AND J1_OfferType='Job offer' ");
+				$result = $this->manager->getJobOffersForEntity(" AND J1_OfferType='Job offer' ORDER BY J1_OfferDate DESC ");
 
 				$this->data['JobOfferId'] = $result[0];
 				$this->data['OfferDate'] = $result[1];
@@ -145,7 +145,7 @@ class ManageJobOffersForm
 
 				// Entries
 
-				$result = $this->manager->getJobOffersForEntity(" AND J1_OfferType='Looking for volunteers' ");
+				$result = $this->manager->getJobOffersForEntity(" AND J1_OfferType='Looking for volunteers' ORDER BY J1_OfferDate DESC ");
 
 				$this->data['JobOfferId'] = $result[0];
 				$this->data['OfferDate'] = $result[1];
