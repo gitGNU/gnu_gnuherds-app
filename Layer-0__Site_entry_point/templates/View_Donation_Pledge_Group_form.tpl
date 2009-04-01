@@ -179,16 +179,32 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $data.Donators.EntityType[$i] eq 'Cooperative'}
-	{$data.Donators.CooperativeName[$i]|gettext|strip:'&nbsp;'}
+	{if $data.Donators.CooperativeName[$i]}
+		{$data.Donators.CooperativeName[$i]|gettext|strip:'&nbsp;'}
+	{else}
+		{'Cooperative'|gettext|strip:'&nbsp;'}
+	{/if}
 {else}
 {if $data.Donators.EntityType[$i] eq 'Company'}
-	{$data.Donators.CompanyName[$i]|gettext|strip:'&nbsp;'}
+	{if $data.Donators.CompanyName[$i]}
+		{$data.Donators.CompanyName[$i]|gettext|strip:'&nbsp;'}
+	{else}
+		{'Company'|gettext|strip:'&nbsp;'}
+	{/if}
 {else}
 {if $data.Donators.EntityType[$i] eq 'non-profit Organization'}
-	{$data.Donators.NonprofitName[$i]|gettext|strip:'&nbsp;'}
+	{if $data.Donators.NonprofitName[$i]}
+		{$data.Donators.NonprofitName[$i]|gettext|strip:'&nbsp;'}
+	{else}
+		{'non-profit Organization'|gettext|strip:'&nbsp;'}
+	{/if}
 {else}
 {if $data.Donators.EntityType[$i] eq 'Person'}
-	{$data.Donators.LastName[$i]}{if trim($data.Donators.LastName[$i]) neq '' and (trim($data.Donators.FirstName[$i]) neq '' or trim($data.Donators.MiddleName[$i]) neq '')},{/if}{if trim($data.Donators.FirstName[$i]) neq ''}&nbsp;{$data.Donators.FirstName[$i]}{/if}{if trim($data.Donators.MiddleName[$i]) neq ''}&nbsp;{$data.Donators.MiddleName[$i]}{/if}
+	{if $data.Donators.LastName[$i] or $data.Donators.FirstName[$i] or $data.Donators.MiddleName[$i]}
+		{$data.Donators.LastName[$i]}{if trim($data.Donators.LastName[$i]) neq '' and (trim($data.Donators.FirstName[$i]) neq '' or trim($data.Donators.MiddleName[$i]) neq '')},{/if}{if trim($data.Donators.FirstName[$i]) neq ''}&nbsp;{$data.Donators.FirstName[$i]}{/if}{if trim($data.Donators.MiddleName[$i]) neq ''}&nbsp;{$data.Donators.MiddleName[$i]}{/if}
+	{else}
+		{'Email'|gettext|strip:'&nbsp;'}
+	{/if}
 {else}
 	{'Email'|gettext|strip:'&nbsp;'}
 {/if}
@@ -218,16 +234,32 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 {if $data.Applications.EntityType[$i] eq 'Cooperative'}
-	{$data.Applications.CooperativeName[$i]|gettext|strip:'&nbsp;'}
+	{if $data.Applications.CooperativeName[$i]}
+		{$data.Applications.CooperativeName[$i]|gettext|strip:'&nbsp;'}
+	{else}
+		{'Cooperative'|gettext|strip:'&nbsp;'}
+	{/if}
 {else}
 {if $data.Applications.EntityType[$i] eq 'Company'}
-	{$data.Applications.CompanyName[$i]|gettext|strip:'&nbsp;'}
+	{if $data.Applications.CompanyName[$i]}
+		{$data.Applications.CompanyName[$i]|gettext|strip:'&nbsp;'}
+	{else}
+		{'Company'|gettext|strip:'&nbsp;'}
+	{/if}
 {else}
 {if $data.Applications.EntityType[$i] eq 'non-profit Organization'}
-	{$data.Applications.NonprofitName[$i]|gettext|strip:'&nbsp;'}
+	{if $data.Applications.NonprofitName[$i]}
+		{$data.Applications.NonprofitName[$i]|gettext|strip:'&nbsp;'}
+	{else}
+		{'non-profit Organization'|gettext|strip:'&nbsp;'}
+	{/if}
 {else}
 {if $data.Applications.EntityType[$i] eq 'Person'}
-	{$data.Applications.LastName[$i]}{if trim($data.Applications.LastName[$i]) neq '' and (trim($data.Applications.FirstName[$i]) neq '' or trim($data.Applications.MiddleName[$i]) neq '')},{/if}{if trim($data.Applications.FirstName[$i]) neq ''}&nbsp;{$data.Applications.FirstName[$i]}{/if}{if trim($data.Applications.MiddleName[$i]) neq ''}&nbsp;{$data.Applications.MiddleName[$i]}{/if}
+	{if $data.Applications.LastName[$i] or $data.Applications.FirstName[$i] or $data.Applications.MiddleName[$i]}
+		{$data.Applications.LastName[$i]}{if trim($data.Applications.LastName[$i]) neq '' and (trim($data.Applications.FirstName[$i]) neq '' or trim($data.Applications.MiddleName[$i]) neq '')},{/if}{if trim($data.Applications.FirstName[$i]) neq ''}&nbsp;{$data.Applications.FirstName[$i]}{/if}{if trim($data.Applications.MiddleName[$i]) neq ''}&nbsp;{$data.Applications.MiddleName[$i]}{/if}
+	{else}
+		{'Email'|gettext|strip:'&nbsp;'}
+	{/if}
 {else}
 	{'Email'|gettext|strip:'&nbsp;'}
 {/if}
