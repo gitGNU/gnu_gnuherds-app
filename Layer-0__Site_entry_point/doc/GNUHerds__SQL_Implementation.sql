@@ -330,9 +330,9 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Cooperative', 'Com
 
         --------------------------------------------------------------------------
         -- Person Name
-        EP_FirstName       varchar(20), -- NOT NULL CHECK (EP_FirstName <> ''),
-        EP_LastName        varchar(20),
-        EP_MiddleName      varchar(20),
+        EP_FirstName       varchar(80), -- NOT NULL CHECK (EP_FirstName <> ''),
+        EP_LastName        varchar(80),
+        EP_MiddleName      varchar(80),
 
         --------------------------------------------------------------------------
         -- To qualify for voting membership, the entity have to show a contribution to the Free Software community.
@@ -348,19 +348,19 @@ CREATE TABLE E1_Entities ( -- This table keeps the 'Person', 'Cooperative', 'Com
 
         --------------------------------------------------------------------------
         -- Cooperative Name
-        EC_CooperativeName   varchar(30), -- NOT NULL CHECK (EC_CooperativeName <> ''),
+        EC_CooperativeName   varchar(80), -- NOT NULL CHECK (EC_CooperativeName <> ''),
 
 	-- Only for Companies
 
         --------------------------------------------------------------------------
         -- Company Name
-        EC_CompanyName       varchar(30), -- NOT NULL CHECK (EC_CompanyName <> ''),
+        EC_CompanyName       varchar(80), -- NOT NULL CHECK (EC_CompanyName <> ''),
 
 	-- Only for non-profit Organizations
 
         --------------------------------------------------------------------------
         -- Organization Name
-        EO_OrganizationName  varchar(30) -- NOT NULL CHECK (EO_OrganizationName <> '')
+        EO_OrganizationName  varchar(80) -- NOT NULL CHECK (EO_OrganizationName <> '')
 );
 
 

@@ -87,7 +87,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td align="right"><label for="FirstName">{t}First name{/t}</label></td>
-<td> <input type="text" name="FirstName" id="FirstName" size="20" maxlength="20" class="notRequired" value="{$data.FirstName}"> </td>
+<td> <input type="text" name="FirstName" id="FirstName" size="40" maxlength="80" class="notRequired" value="{$data.FirstName}"> </td>
 <th rowspan="7" valign="top" align="center">
 {if $data.ViewPhotoOrLogo eq 'true' }
 	<img src="photo?acl=me&id={$smarty.session.EntityId}" alt="{t}Photo{/t}" class="frame">
@@ -103,12 +103,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td align="right"><label for="MiddleName">{t}Middle name{/t}</label></td>
-<td> <input type="text" name="MiddleName" id="MiddleName" size="20" maxlength="20" class="notRequired" value="{$data.MiddleName}"> </td>
+<td> <input type="text" name="MiddleName" id="MiddleName" size="40" maxlength="80" class="notRequired" value="{$data.MiddleName}"> </td>
 </tr>
 
 <tr valign="top">
 <td align="right"><label for="LastName">{t}Last name{/t}</label></td>
-<td> <input type="text" name="LastName" id="LastName" size="20" maxlength="20" class="notRequired" value="{$data.LastName}"> </td>
+<td> <input type="text" name="LastName" id="LastName" size="40" maxlength="80" class="notRequired" value="{$data.LastName}"> </td>
 </tr>
 
 <tr>

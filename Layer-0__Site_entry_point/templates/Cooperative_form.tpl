@@ -82,7 +82,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr>
 <td align="right"><label for="CooperativeName">{t}Name{/t}</label></td>
-<td> <input type="text" name="CooperativeName" id="CooperativeName" size="20" maxlength="30" class="notRequired" value="{$data.CooperativeName}"> </td>
+<td> <input type="text" name="CooperativeName" id="CooperativeName" size="40" maxlength="80" class="notRequired" value="{$data.CooperativeName}"> </td>
 <th rowspan="5" valign="top" align="center">
 {if $data.ViewPhotoOrLogo eq 'true' }
 	<img src="photo?acl=me&id={$smarty.session.EntityId}" alt="{t}Photo or logo{/t}" class="frame">

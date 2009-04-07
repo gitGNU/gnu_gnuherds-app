@@ -81,7 +81,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td colspan="3" class="subsection">{t}non-profit{/t}</td> </tr>
 <tr>
 <td align="right"><label for="NonprofitName">{t}Name{/t}</label></td>
-<td> <input type="text" name="NonprofitName" id="NonprofitName" size="20" maxlength="30" class="notRequired" value="{$data.NonprofitName}"> </td>
+<td> <input type="text" name="NonprofitName" id="NonprofitName" size="40" maxlength="80" class="notRequired" value="{$data.NonprofitName}"> </td>
 <th rowspan="5" valign="top" align="center">
 {if $data.ViewPhotoOrLogo eq 'true' }
 	<img src="photo?acl=me&id={$smarty.session.EntityId}" alt="{t}Photo or logo{/t}" class="frame">
