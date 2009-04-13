@@ -64,7 +64,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td><a href="pledges?format=rss{if $smarty.session.Language neq 'en_US'}&language={$smarty.session.Language}{/if}"><img src="themes/red_Danijel/images/rss.png" alt="RSS"></a></td>
 </tr>
 
-{if count($JobOfferId) == 0 }
+{if count($data.DonationPledgeGroup.JobOfferId) == 0 }
 <tr valign="top">
 <td colspan="4" class="tdDark center">
 {t}There are no entries{/t}
@@ -72,18 +72,18 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 {else}
 
-{foreach from=$JobOfferId item=Id key=i}
+{foreach from=$data.DonationPledgeGroup.JobOfferId item=Id key=i}
 
 <tr valign="top">
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 <a href="pledges?id={$Id}">
-{$VacancyTitle[$i]}
+{$data.DonationPledgeGroup.VacancyTitle[$i]}
 </a>
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$OfferDate[$i]}
+{$data.DonationPledgeGroup.OfferDate[$i]}
 </td>
 
 
@@ -92,7 +92,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-${$Donations[$i]} USD
+${$data.DonationPledgeGroup.Donations[$i]} USD
 </td>
 
 </tr>

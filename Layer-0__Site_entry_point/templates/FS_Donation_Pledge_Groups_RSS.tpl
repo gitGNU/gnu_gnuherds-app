@@ -10,7 +10,7 @@ xmlns="http://purl.org/rss/1.0/"
 <title>GNU Herds - {t}FS pledges{/t}</title>
 <link>http://gnuherds.org/pledges</link>
 <description>
-{if count($JobOfferId) == 0 }
+{if count($data.DonationPledgeGroup.JobOfferId) == 0 }
   {t}There are no entries{/t}
 {/if}
 </description>
@@ -18,23 +18,23 @@ xmlns="http://purl.org/rss/1.0/"
 
 <items>
 <rdf:Seq>
-{foreach from=$JobOfferId item=Id key=i}
+{foreach from=$data.DonationPledgeGroup.JobOfferId item=Id key=i}
 <rdf:li resource="http://gnuherds.org/offers?id={$Id}"/>
 {/foreach}
 </rdf:Seq>
 </items>
 </channel>
 
-{foreach from=$JobOfferId item=Id key=i}
+{foreach from=$data.DonationPledgeGroup.JobOfferId item=Id key=i}
 
 <item rdf:about="http://gnuherds.org/offers?id={$Id}">
-<title>{$VacancyTitle[$i]}</title>
+<title>{$data.DonationPledgeGroup.VacancyTitle[$i]}</title>
 <link>http://gnuherds.org/pledges?id={$Id}</link>
 <content:encoded>&lt;PRE&gt;
 &amp;nbsp;&amp;nbsp; &lt;B&gt;&lt;FONT COLOR=&quot;#5F9EA0&quot;&gt;{t}Location{/t}:&lt;/FONT&gt;&lt;/B&gt; &lt;FONT COLOR=&quot;#A020F0&quot;&gt;{t domain='database'}Any{/t}, {t}telework{/t}&lt;/FONT&gt;
 
-&amp;nbsp;&amp;nbsp; &lt;B&gt;&lt;FONT COLOR=&quot;#5F9EA0&quot;&gt;{t}Last update{/t}:&lt;/FONT&gt;&lt;/B&gt; {$OfferDate[$i]}&lt;/FONT&gt;
-&amp;nbsp;&amp;nbsp; &lt;B&gt;&lt;FONT COLOR=&quot;#5F9EA0&quot;&gt;{t}Donations{/t}:&lt;/FONT&gt;&lt;/B&gt; $&lt;B&gt;&lt;FONT COLOR=&quot;#BC8F8F&quot;&gt;{$Donations[$i]}&lt;/FONT&gt;&lt;/B&gt; &lt;FONT COLOR=&quot;#B8860B&quot;&gt;USD&lt;/FONT&gt;&lt;/FONT&gt;
+&amp;nbsp;&amp;nbsp; &lt;B&gt;&lt;FONT COLOR=&quot;#5F9EA0&quot;&gt;{t}Last update{/t}:&lt;/FONT&gt;&lt;/B&gt; {$data.DonationPledgeGroup.OfferDate[$i]}&lt;/FONT&gt;
+&amp;nbsp;&amp;nbsp; &lt;B&gt;&lt;FONT COLOR=&quot;#5F9EA0&quot;&gt;{t}Donations{/t}:&lt;/FONT&gt;&lt;/B&gt; $&lt;B&gt;&lt;FONT COLOR=&quot;#BC8F8F&quot;&gt;{$data.DonationPledgeGroup.Donations[$i]}&lt;/FONT&gt;&lt;/B&gt; &lt;FONT COLOR=&quot;#B8860B&quot;&gt;USD&lt;/FONT&gt;&lt;/FONT&gt;
 
 
 &lt;/PRE&gt;

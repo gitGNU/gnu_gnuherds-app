@@ -40,36 +40,12 @@ class FSLookForVolunteersForm
 		$smarty = new Smarty;
 
 
-		// Job Offers
+		// Job Offers table
 
-		$result = $manager->getJobOffers(" AND J1_OfferType='Looking for volunteers' ORDER BY J1_OfferDate DESC "); // Default ORDER BY, to stand out the last updated or added entries.  //TODO: XXX: Allow ORDER BY other fields via GET parameters.
+		$this->data['LookForVolunteers'] = $manager->getJobOffers(" AND J1_OfferType='Looking for volunteers' ORDER BY J1_OfferDate DESC "); // Default ORDER BY, to stand out the last updated or added entries.  //TODO: XXX: Allow ORDER BY other fields via GET parameters.
 
-		$smarty->assign('JobOfferId', $result[0]);
 
-		$smarty->assign('Telework', $result[1]);
-
-		$smarty->assign('CountryName', $result[2]);
-		$smarty->assign('StateProvince', $result[3]);
-		$smarty->assign('City', $result[4]);
-
-		$smarty->assign('OfferDate', $result[5]);
-
-		$smarty->assign('EntityId', $result[6]);
-		$smarty->assign('EntityType', $result[7]);
-
-		$smarty->assign('Blog', $result[8]);
-		$smarty->assign('Website', $result[9]);
-
-		$smarty->assign('EP_FirstName', $result[10]);
-		$smarty->assign('EP_LastName', $result[11]);
-		$smarty->assign('EP_MiddleName', $result[12]);
-
-		$smarty->assign('EC_CooperativeName', $result[20]);
-		$smarty->assign('EC_CompanyName', $result[13]);
-		$smarty->assign('EO_OrganizationName', $result[14]);
-
-		$smarty->assign('VacancyTitle', $result[15]);
-
+		$smarty->assign('data', $this->data);
 
 		if ( $_GET['format'] == 'rss' )
 		{

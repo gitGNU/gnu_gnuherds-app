@@ -65,7 +65,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td><a href="volunteers?format=rss{if $smarty.session.Language neq 'en_US'}&language={$smarty.session.Language}{/if}"><img src="themes/red_Danijel/images/rss.png" alt="RSS"></a></td>
 </tr>
 
-{if count($JobOfferId) == 0 }
+{if count($data.LookForVolunteers.JobOfferId) == 0 }
 <tr valign="top">
 <td colspan="3" class="tdDark center">
 {t}There are no entries{/t}
@@ -73,31 +73,31 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 {else}
 
-{foreach from=$JobOfferId item=Id key=i}
+{foreach from=$data.LookForVolunteers.JobOfferId item=Id key=i}
 
 <tr valign="top">
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 <a href="volunteers?id={$Id}">
-{$VacancyTitle[$i]}
+{$data.LookForVolunteers.VacancyTitle[$i]}
 </a>
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$OfferDate[$i]}
+{$data.LookForVolunteers.OfferDate[$i]}
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $EntityType[$i] eq 'Person'}<strong>{t}Person{/t}</strong>: {/if}
-{if $EntityType[$i] eq 'Cooperative'}<strong>{t}Cooperative{/t}</strong>: {/if}
-{if $EntityType[$i] eq 'Company'}<strong>{t}Company{/t}</strong>: {/if}
-{if $EntityType[$i] eq 'non-profit Organization'}<strong>{t}non-profit Organization{/t}</strong>: {/if}
-{if $EntityType[$i] eq 'Person' and trim($Blog[$i]) neq ''}<a href="{$Blog[$i]}">{else}{if trim($Website[$i]) neq ''}<a href="{$Website[$i]}">{/if}{/if}
-{if $EntityType[$i] eq 'Person'}{$EP_LastName[$i]}{if $EP_LastName[$i] and ($EP_FirstName[$i] or $EP_MiddleName[$i])},{/if} {$EP_FirstName[$i]} {$EP_MiddleName[$i]}{/if}
-{if $EntityType[$i] eq 'Cooperative'}{$EC_CooperativeName[$i]}{/if}
-{if $EntityType[$i] eq 'Company'}{$EC_CompanyName[$i]}{/if}
-{if $EntityType[$i] eq 'non-profit Organization'}{$EO_OrganizationName[$i]}{/if}
-{if ($EntityType[$i] eq 'Person' and trim($Blog[$i]) neq '') or trim($Website[$i]) neq ''}</a>{/if}
+{if $data.LookForVolunteers.EntityType[$i] eq 'Person'}<strong>{t}Person{/t}</strong>: {/if}
+{if $data.LookForVolunteers.EntityType[$i] eq 'Cooperative'}<strong>{t}Cooperative{/t}</strong>: {/if}
+{if $data.LookForVolunteers.EntityType[$i] eq 'Company'}<strong>{t}Company{/t}</strong>: {/if}
+{if $data.LookForVolunteers.EntityType[$i] eq 'non-profit Organization'}<strong>{t}non-profit Organization{/t}</strong>: {/if}
+{if $data.LookForVolunteers.EntityType[$i] eq 'Person' and trim($data.LookForVolunteers.Blog[$i]) neq ''}<a href="{$data.LookForVolunteers.Blog[$i]}">{else}{if trim($data.LookForVolunteers.Website[$i]) neq ''}<a href="{$data.LookForVolunteers.Website[$i]}">{/if}{/if}
+{if $data.LookForVolunteers.EntityType[$i] eq 'Person'}{$data.LookForVolunteers.LastName[$i]}{if $data.LookForVolunteers.LastName[$i] and ($data.LookForVolunteers.FirstName[$i] or $data.LookForVolunteers.MiddleName[$i])},{/if} {$data.LookForVolunteers.FirstName[$i]} {$data.LookForVolunteers.MiddleName[$i]}{/if}
+{if $data.LookForVolunteers.EntityType[$i] eq 'Cooperative'}{$data.LookForVolunteers.CooperativeName[$i]}{/if}
+{if $data.LookForVolunteers.EntityType[$i] eq 'Company'}{$data.LookForVolunteers.CompanyName[$i]}{/if}
+{if $data.LookForVolunteers.EntityType[$i] eq 'non-profit Organization'}{$data.LookForVolunteers.OrganizationName[$i]}{/if}
+{if ($data.LookForVolunteers.EntityType[$i] eq 'Person' and trim($data.LookForVolunteers.Blog[$i]) neq '') or trim($data.LookForVolunteers.Website[$i]) neq ''}</a>{/if}
 </td>
 
 </tr>

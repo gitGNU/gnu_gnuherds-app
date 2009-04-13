@@ -60,16 +60,14 @@ class JobOffer
 		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Blog, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CooperativeName, EC_CompanyName, EO_OrganizationName, J1_VacancyTitle, E1_Email FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
-		$array = array();
+		$array['JobOfferId'] = pg_fetch_all_columns($result, 0);
 
-		$array[0] = pg_fetch_all_columns($result, 0); // J1_Id
-
-		$array[2] = pg_fetch_all_columns($result, 1); // J1_LO_Country --> LO_Name
-		for( $i=0; $i < count($array[2]); $i++)
+		$array['Country'] = pg_fetch_all_columns($result, 1);
+		for( $i=0; $i < count($array['Country']); $i++)
 		{
-			if ( trim($array[2][$i]) != '' )
+			if ( trim($array['Country'][$i]) != '' )
 			{
-				$e1_lo_country = $array[2][$i];
+				$e1_lo_country = $array['Country'][$i];
 				$sqlQuery = "SELECT LO_Name FROM LO_Countries WHERE LO_TwoLetter='$e1_lo_country'";
 				$loResult = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
@@ -79,39 +77,39 @@ class JobOffer
 				if ( pg_num_rows($loResult) == '1' )
 				{
 					$row = pg_fetch_object($loResult, 0);
-					$array[2][$i] = trim($row->lo_name);
+					$array['Country'][$i] = trim($row->lo_name);
 				}
 			}
 			else
-				$array[2][$i] = '';
+				$array['Country'][$i] = '';
 		}
 
-		$array[3] = pg_fetch_all_columns($result, 2); // J1_StateProvince
-		$array[4] = pg_fetch_all_columns($result, 3); // J1_City
+		$array['StateProvince'] = pg_fetch_all_columns($result, 2);
+		$array['City'] = pg_fetch_all_columns($result, 3);
 
-		$array[5] = pg_fetch_all_columns($result, 4); // J1_OfferDate
+		$array['OfferDate'] = pg_fetch_all_columns($result, 4);
 
-		$array[6] = pg_fetch_all_columns($result, 5); // E1_Id
-		$array[7] = pg_fetch_all_columns($result, 6); // E1_EntityType
+		$array['EntityId'] = pg_fetch_all_columns($result, 5);
+		$array['EntityType'] = pg_fetch_all_columns($result, 6);
 
-		$array['Email'] = pg_fetch_all_columns($result, 15); // E1_Email
+		$array['Email'] = pg_fetch_all_columns($result, 15);
 
-		$array[8] = pg_fetch_all_columns($result, 7); // E1_Blog
-		$array[9] = pg_fetch_all_columns($result, 8); // E1_Website
+		$array['Blog'] = pg_fetch_all_columns($result, 7);
+		$array['Website'] = pg_fetch_all_columns($result, 8);
 
-		$array[10] = pg_fetch_all_columns($result, 9); // EP_FirstName
-		$array[11] = pg_fetch_all_columns($result, 10); // EP_LastName
-		$array[12] = pg_fetch_all_columns($result, 11); // EP_MiddleName
+		$array['FirstName'] = pg_fetch_all_columns($result, 9);
+		$array['LastName'] = pg_fetch_all_columns($result, 10);
+		$array['MiddleName'] = pg_fetch_all_columns($result, 11);
 
-		$array[20] = pg_fetch_all_columns($result, 12); // EC_CooperativeName
-		$array[13] = pg_fetch_all_columns($result, 13); // EC_CompanyName
-		$array[14] = pg_fetch_all_columns($result, 14); // EO_OrganizationName
+		$array['CooperativeName'] = pg_fetch_all_columns($result, 12);
+		$array['CompanyName'] = pg_fetch_all_columns($result, 13);
+		$array['OrganizationName'] = pg_fetch_all_columns($result, 14);
 
-		$array[15] = pg_fetch_all_columns($result, 15); // J1_VacancyTitle
+		$array['VacancyTitle'] = pg_fetch_all_columns($result, 15);
 
-		for( $i=0; $i < count($array[0]); $i++)
-			if ( $array[15][$i] == '' )
-				$array[15][$i] = $this->makeUp_VacancyTitle($array[0][$i]);
+		for( $i=0; $i < count($array['JobOfferId']); $i++)
+			if ( $array['VacancyTitle'][$i] == '' )
+				$array['VacancyTitle'][$i] = $this->makeUp_VacancyTitle($array['JobOfferId'][$i]);
 
 		return $array;
 	}

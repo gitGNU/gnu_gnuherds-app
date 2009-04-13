@@ -65,7 +65,7 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 		// Send emails
 		for ( $j=0; $j < count($to['Email']); $j++ )
 		{
-			if ( count($joboffers[0]) > 0 )
+			if ( count($joboffers['JobOfferId']) > 0 )
 			{
 				// Write the email
 				switch($alert_type)
@@ -77,46 +77,46 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 
 						// Create the message's body
 						$body = "";
-						for ( $k=0; $k < count($joboffers[0]); $k++ )
+						for ( $k=0; $k < count($joboffers['JobOfferId']); $k++ )
 						{
 							if (  $to['Email'][$j] != $joboffers['Email'][$k]   ||   ( $to['Email'][$j] == $joboffers['Email'][$k] && $to['AlertMeOnMyOwnNotices'][$j] == 't' )  )
 							{
-								$body .= gettext("Vacancy title").":  ".$joboffers[15][$k]."\n";
+								$body .= gettext("Vacancy title").":  ".$joboffers['VacancyTitle'][$k]."\n";
 								$body .= gettext("Location").":  ";
-								if ( trim($joboffers[2][$k]) == '' )
+								if ( trim($joboffers['Country'][$k]) == '' )
 								{
 									$body .= dgettext('database', "Any").", ".gettext("telework");
 								}
 								else
 								{
-									$body .= gettext($joboffers[2][$k]);
-									if ($joboffers[3][$k] != '') $body .= ", ".$joboffers[3][$k];
-									if ($joboffers[4][$k] != '') $body .= ", ".$joboffers[4][$k];
+									$body .= gettext($joboffers['Country'][$k]);
+									if ($joboffers['StateProvince'][$k] != '') $body .= ", ".$joboffers['StateProvince'][$k];
+									if ($joboffers['City'][$k] != '') $body .= ", ".$joboffers['City'][$k];
 								}
 								$body .= "\n";
 
 								//XXX-remove-this-line:  $body .= gettext("Offer date").": ";
-								//XXX-remove-this-line:  $body .= $joboffers[5][$k]."\n";
+								//XXX-remove-this-line:  $body .= $joboffers['OfferDate'][$k]."\n";
 
 								$body .= gettext("Offered by").":  ";
-								if ($joboffers[10][$k] != '') $body .= gettext("Person").": ";
-								if ($joboffers[20][$k] != '') $body .= gettext("Cooperative").": ";
-								if ($joboffers[13][$k] != '') $body .= gettext("Company").": ";
-								if ($joboffers[14][$k] != '') $body .= gettext("non-profit Organization").": ";
+								if ($joboffers['FirstName'][$k] != '') $body .= gettext("Person").": ";
+								if ($joboffers['CooperativeName'][$k] != '') $body .= gettext("Cooperative").": ";
+								if ($joboffers['CompanyName'][$k] != '') $body .= gettext("Company").": ";
+								if ($joboffers['OrganizationName'][$k] != '') $body .= gettext("non-profit Organization").": ";
 
-								if ($joboffers[10][$k] != '')
+								if ($joboffers['FirstName'][$k] != '')
 								{
-									$body .= $joboffers[11][$k].$joboffers[12][$k];
-									if ($joboffers[11][$k] != '' or $joboffers[12][$k] != '') $body .= ", ";
-									$body .= $joboffers[10][$k]."\n";
+									$body .= $joboffers['LastName'][$k].$joboffers['MiddleName'][$k];
+									if ($joboffers['LastName'][$k] != '' or $joboffers['MiddleName'][$k] != '') $body .= ", ";
+									$body .= $joboffers['FirstName'][$k]."\n";
 								}
-								if ($joboffers[20][$k] != '') $body .= $joboffers[20][$k]."\n";
-								if ($joboffers[13][$k] != '') $body .= $joboffers[13][$k]."\n";
-								if ($joboffers[14][$k] != '') $body .= $joboffers[14][$k]."\n";
+								if ($joboffers['CooperativeName'][$k] != '') $body .= $joboffers['CooperativeName'][$k]."\n";
+								if ($joboffers['CompanyName'][$k] != '') $body .= $joboffers['CompanyName'][$k]."\n";
+								if ($joboffers['OrganizationName'][$k] != '') $body .= $joboffers['OrganizationName'][$k]."\n";
 
 								$body .= "\n";
 
-								$body .= "  https://gnuherds.org/offers?id=".$joboffers[0][$k]."\n";
+								$body .= "  https://gnuherds.org/offers?id=".$joboffers['JobOfferId'][$k]."\n";
 
 								$body .= "\n";
 								$body .= "\n";
@@ -132,16 +132,16 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 
 						// Create the message's body
 						$body = "";
-						for ( $k=0; $k < count($joboffers[0]); $k++ )
+						for ( $k=0; $k < count($joboffers['JobOfferId']); $k++ )
 						{
 							if (  $to['Email'][$j] != $joboffers['Email'][$k]   ||   ( $to['Email'][$j] == $joboffers['Email'][$k] && $to['AlertMeOnMyOwnNotices'][$j] == 't' )  )
 							{
-								$body .= gettext("Vacancy title").":  ".$joboffers[15][$k]."\n";
+								$body .= gettext("Vacancy title").":  ".$joboffers['VacancyTitle'][$k]."\n";
 								$body .= gettext("Location").":  ".dgettext('database', "Any").", ".gettext("telework")."\n";
 
 								$body .= "\n";
 
-								$body .= "  https://gnuherds.org/pledges?id=".$joboffers[0][$k]."\n";
+								$body .= "  https://gnuherds.org/pledges?id=".$joboffers['JobOfferId'][$k]."\n";
 
 								$body .= "\n";
 								$body .= "\n";
@@ -157,15 +157,15 @@ function raiseAlertsFor($alert_type) // Raise any alert type
 
 						// Create the message's body
 						$body = "";
-						for ( $k=0; $k < count($joboffers[0]); $k++ )
+						for ( $k=0; $k < count($joboffers['JobOfferId']); $k++ )
 						{
 							if (  $to['Email'][$j] != $joboffers['Email'][$k]   ||   ( $to['Email'][$j] == $joboffers['Email'][$k] && $to['AlertMeOnMyOwnNotices'][$j] == 't' )  )
 							{
-								$body .= gettext("Vacancy title").":  ".$joboffers[15][$k]."\n";
+								$body .= gettext("Vacancy title").":  ".$joboffers['VacancyTitle'][$k]."\n";
 
 								$body .= "\n";
 
-								$body .= "  https://gnuherds.org/volunteers?id=".$joboffers[0][$k]."\n";
+								$body .= "  https://gnuherds.org/volunteers?id=".$joboffers['JobOfferId'][$k]."\n";
 
 								$body .= "\n";
 								$body .= "\n";

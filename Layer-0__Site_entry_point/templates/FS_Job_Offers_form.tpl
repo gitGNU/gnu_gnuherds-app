@@ -72,7 +72,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td><a href="offers?format=rss{if $smarty.session.Language neq 'en_US'}&language={$smarty.session.Language}{/if}"><img src="themes/red_Danijel/images/rss.png" alt="RSS"></a></td>
 </tr>
 
-{if count($JobOfferId) == 0 }
+{if count($data.JobOffers.JobOfferId) == 0 }
 <tr valign="top">
 <td colspan="4" class="tdDark center">
 {t}There are no active job offers{/t}
@@ -80,47 +80,47 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 {else}
 
-{foreach from=$JobOfferId item=Id key=i}
+{foreach from=$data.JobOffers.JobOfferId item=Id key=i}
 
 <tr valign="top">
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
 <a href="offers?id={$Id}">
-{$VacancyTitle[$i]}
+{$data.JobOffers.VacancyTitle[$i]}
 </a>
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if trim($City[$i]) eq '' and trim($StateProvince[$i]) eq '' and trim($CountryName[$i]) eq ''}
+{if trim($data.JobOffers.City[$i]) eq '' and trim($data.JobOffers.StateProvince[$i]) eq '' and trim($data.JobOffers.CountryName[$i]) eq ''}
 <strong>{t domain='database'}Any{/t}</strong>, {t}telework{/t}
 {else}
-{if trim($CountryName[$i]) neq ''}
-<strong>{t domain='iso_3166'}{$CountryName[$i]}{/t}</strong>{if $StateProvince[$i]}, {$StateProvince[$i]}{/if}{if $City[$i]}, {$City[$i]}{/if}
+{if trim($data.JobOffers.CountryName[$i]) neq ''}
+<strong>{t domain='iso_3166'}{$data.JobOffers.CountryName[$i]}{/t}</strong>{if $data.JobOffers.StateProvince[$i]}, {$data.JobOffers.StateProvince[$i]}{/if}{if $data.JobOffers.City[$i]}, {$data.JobOffers.City[$i]}{/if}
 {else}
-{if trim($StateProvince[$i]) neq ''}
-{$StateProvince[$i]}{if $City[$i]}, {$City[$i]}{/if}
+{if trim($data.JobOffers.StateProvince[$i]) neq ''}
+{$data.JobOffers.StateProvince[$i]}{if $data.JobOffers.City[$i]}, {$data.JobOffers.City[$i]}{/if}
 {else}
-{$City[$i]}
+{$data.JobOffers.City[$i]}
 {/if}
 {/if}
 {/if}
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$OfferDate[$i]}
+{$data.JobOffers.OfferDate[$i]}
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $EntityType[$i] eq 'Person'}<strong>{t}Person{/t}</strong>: {/if}
-{if $EntityType[$i] eq 'Cooperative'}<strong>{t}Cooperative{/t}</strong>: {/if}
-{if $EntityType[$i] eq 'Company'}<strong>{t}Company{/t}</strong>: {/if}
-{if $EntityType[$i] eq 'non-profit Organization'}<strong>{t}non-profit Organization{/t}</strong>: {/if}
-{if $EntityType[$i] eq 'Person' and trim($Blog[$i]) neq ''}<a href="{$Blog[$i]}">{else}{if trim($Website[$i]) neq ''}<a href="{$Website[$i]}">{/if}{/if}
-{if $EntityType[$i] eq 'Person'}{$EP_LastName[$i]}{if $EP_LastName[$i] and ($EP_FirstName[$i] or $EP_MiddleName[$i])},{/if} {$EP_FirstName[$i]} {$EP_MiddleName[$i]}{/if}
-{if $EntityType[$i] eq 'Cooperative'}{$EC_CooperativeName[$i]}{/if}
-{if $EntityType[$i] eq 'Company'}{$EC_CompanyName[$i]}{/if}
-{if $EntityType[$i] eq 'non-profit Organization'}{$EO_OrganizationName[$i]}{/if}
-{if ($EntityType[$i] eq 'Person' and trim($Blog[$i]) neq '') or trim($Website[$i]) neq ''}</a>{/if}
+{if $data.JobOffers.EntityType[$i] eq 'Person'}<strong>{t}Person{/t}</strong>: {/if}
+{if $data.JobOffers.EntityType[$i] eq 'Cooperative'}<strong>{t}Cooperative{/t}</strong>: {/if}
+{if $data.JobOffers.EntityType[$i] eq 'Company'}<strong>{t}Company{/t}</strong>: {/if}
+{if $data.JobOffers.EntityType[$i] eq 'non-profit Organization'}<strong>{t}non-profit Organization{/t}</strong>: {/if}
+{if $data.JobOffers.EntityType[$i] eq 'Person' and trim($data.JobOffers.Blog[$i]) neq ''}<a href="{$data.JobOffers.Blog[$i]}">{else}{if trim($data.JobOffers.Website[$i]) neq ''}<a href="{$data.JobOffers.Website[$i]}">{/if}{/if}
+{if $data.JobOffers.EntityType[$i] eq 'Person'}{$data.JobOffers.LastName[$i]}{if $data.JobOffers.LastName[$i] and ($data.JobOffers.FirstName[$i] or $data.JobOffers.MiddleName[$i])},{/if} {$data.JobOffers.FirstName[$i]} {$data.JobOffers.MiddleName[$i]}{/if}
+{if $data.JobOffers.EntityType[$i] eq 'Cooperative'}{$data.JobOffers.CooperativeName[$i]}{/if}
+{if $data.JobOffers.EntityType[$i] eq 'Company'}{$data.JobOffers.CompanyName[$i]}{/if}
+{if $data.JobOffers.EntityType[$i] eq 'non-profit Organization'}{$data.JobOffers.OrganizationName[$i]}{/if}
+{if ($data.JobOffers.EntityType[$i] eq 'Person' and trim($data.JobOffers.Blog[$i]) neq '') or trim($data.JobOffers.Website[$i]) neq ''}</a>{/if}
 </td>
 
 </tr>
