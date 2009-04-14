@@ -111,11 +111,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td colspan="4">
 </td>
 <td>
-<input type="submit" name="save" id="save" value="{t}Save{/t}" disabled>
+<input type="submit" name="save" id="save" value="{t}Save{/t}">
 </td>
 </tr>
 
 </table>
 </form>
 
+{literal}<script type="text/javascript">window.onload=function(){document.applicationStateForm.save.disabled=true;}</script>{/literal}
 {/if}
