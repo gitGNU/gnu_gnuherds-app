@@ -125,7 +125,6 @@ class LookForVolunteersForm
 
 		$this->data['VacancyTitle'] = isset($_POST['VacancyTitle']) ? trim($_POST['VacancyTitle']) : '';
 		$this->data['Description'] = isset($_POST['Description']) ? trim($_POST['Description']) : '';
-		$this->data['WageRank'] = isset($_POST['WageRank']) ? trim($_POST['WageRank']) : '';
 		$this->data['Email'] = isset($_POST['Email']) ? trim($_POST['Email']) : '';
 	}
 
