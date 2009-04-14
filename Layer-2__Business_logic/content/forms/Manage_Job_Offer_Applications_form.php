@@ -25,6 +25,7 @@ class ManageJobOfferApplicationsForm
 {
 	private $manager;
 	private $processingResult;
+	private $data;
 
 
 	function __construct()
@@ -77,40 +78,13 @@ class ManageJobOfferApplicationsForm
 	{
 		$smarty = new Smarty;
 
-
 		$applicationStates = $this->manager->getApplicationStatesList();
-
 		$smarty->assign('applicationStatesId', array_keys($applicationStates));
 		$smarty->assign('applicationStatesIdTranslated', array_values($applicationStates));
 
+		$this->data['Applications'] = $this->manager->getJobOfferApplications($_GET['JobOfferId']);
 
-		$result = $this->manager->getJobOfferApplications($_GET['JobOfferId']);
-
-		$smarty->assign('vacancyTitle', $result['VacancyTitle']);
-
-		$smarty->assign('entityId', $result['EntityId']);
-		$smarty->assign('entityType', $result['EntityType']);
-
-		$smarty->assign('street', $result['Street']);
-		$smarty->assign('city', $result['City']);
-		$smarty->assign('stateProvince', $result['StateProvince']);
-
-		$smarty->assign('website', $result['Website']);
-
-		$smarty->assign('firstName', $result['FirstName']);
-		$smarty->assign('lastName', $result['LastName']);
-		$smarty->assign('middleName', $result['MiddleName']);
-
-		$smarty->assign('cooperativeName', $result['CooperativeName']);
-		$smarty->assign('companyName', $result['CompanyName']);
-		$smarty->assign('nonprofitName', $result['NonprofitName']);
-
-		$smarty->assign('countryName', $result['CountryName']);
-		$smarty->assign('professionalExperienceSinceYear', $result['ProfessionalExperienceSinceYear']);
-
-		$smarty->assign('applicationState', $result['ApplicationState']);
-
-
+		$smarty->assign('data', $this->data);
 		$smarty->display("Manage_Job_Offer_Applications_form.tpl");
 	}
 }

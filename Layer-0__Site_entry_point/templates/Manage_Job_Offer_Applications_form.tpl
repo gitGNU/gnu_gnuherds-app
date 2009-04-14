@@ -19,9 +19,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <h3>{t}Manage job offer applications{/t}</h3>
 
-<p class="footnote"><strong>{t}Offer title{/t}</strong>: <a href="offers?id={$smarty.get.JobOfferId}">{$vacancyTitle}</a></p>
+<p class="footnote"><strong>{t}Offer title{/t}</strong>: <a href="offers?id={$smarty.get.JobOfferId}">{$data.Applications.VacancyTitle}</a></p>
 
-{if count($entityId) == 0 }
+{if count($data.Applications.EntityId) == 0 }
 	<p>&nbsp;</p>
 	<p>{t}There are not any application subscribed to this job offer{/t}.</p><p>&nbsp;</p>
 {else}
@@ -37,27 +37,57 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td class="tdTitle"><strong>{t}Subscription state{/t}</strong></td>
 </tr>
 
-{foreach from=$entityId item=Id key=i}
+{foreach from=$data.Applications.EntityId item=Id key=i}
 
 <tr valign="top">
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<strong>{t}{$entityType[$i]}{/t}</strong>
+<strong>{t}{$data.Applications.EntityType[$i]}{/t}</strong>
 
 <a href="resume?id={$Id}">
-{if $firstName[$i]}{$lastName[$i]}{if $middleName[$i]} {/if}{$middleName[$i]}{if $lastName[$i] or $middleName[$i]},{/if} {$firstName[$i]}{/if}
-{if $companyName[$i]}{$companyName[$i]}{/if}
-{if $organizationName[$i]}{$organizationName[$i]}{/if}
+{if $data.Applications.EntityType[$i] eq 'Cooperative'}
+	{if $data.Applications.CooperativeName[$i]}
+		{$data.Applications.CooperativeName[$i]|gettext|strip:'&nbsp;'}
+	{else}
+		{t}Name{/t}:&nbsp;{'not specified'|gettext|strip:'&nbsp;'}
+	{/if}
+{else}
+{if $data.Applications.EntityType[$i] eq 'Company'}
+	{if $data.Applications.CompanyName[$i]}
+		{$data.Applications.CompanyName[$i]|gettext|strip:'&nbsp;'}
+	{else}
+		{t}Name{/t}:&nbsp;{'not specified'|gettext|strip:'&nbsp;'}
+	{/if}
+{else}
+{if $data.Applications.EntityType[$i] eq 'non-profit Organization'}
+	{if $data.Applications.NonprofitName[$i]}
+		{$data.Applications.NonprofitName[$i]|gettext|strip:'&nbsp;'}
+	{else}
+		{t}Name{/t}:&nbsp;{'not specified'|gettext|strip:'&nbsp;'}
+	{/if}
+{else}
+{if $data.Applications.EntityType[$i] eq 'Person'}
+	{if $data.Applications.LastName[$i] or $data.Applications.FirstName[$i] or $data.Applications.MiddleName[$i]}
+		{$data.Applications.LastName[$i]}{if trim($data.Applications.LastName[$i]) neq '' and (trim($data.Applications.FirstName[$i]) neq '' or trim($data.Applications.MiddleName[$i]) neq '')},{/if}{if trim($data.Applications.FirstName[$i]) neq ''}&nbsp;{$data.Applications.FirstName[$i]}{/if}{if trim($data.Applications.MiddleName[$i]) neq ''}&nbsp;{$data.Applications.MiddleName[$i]}{/if}
+	{else}
+		{t}Name{/t}:&nbsp;{'not specified'|gettext|strip:'&nbsp;'}
+	{/if}
+{else}
+	{'ERROR: Unexpected condition'|gettext|strip:'&nbsp;'}
+{/if}
+{/if}
+{/if}
+{/if}
 </a>
 
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<strong>{if $countryName[$i]}{t domain='iso_3166'}{$countryName[$i]}{/t}{/if}</strong>{if $stateProvince[$i]}{if $countryName[$i]}, {/if}{$stateProvince[$i]}{/if}{if $city[$i]}{if $countryName[$i] or $stateProvince[$i]}, {/if}{$city[$i]}{/if}
+<strong>{if $data.Applications.CountryName[$i]}{t domain='iso_3166'}{$data.Applications.CountryName[$i]}{/t}{/if}</strong>{if $data.Applications.StateProvince[$i]}{if $data.Applications.CountryName[$i]}, {/if}{$data.Applications.StateProvince[$i]}{/if}{if $data.Applications.City[$i]}{if $data.Applications.CountryName[$i] or $data.Applications.StateProvince[$i]}, {/if}{$data.Applications.City[$i]}{/if}
 </td>
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$professionalExperienceSinceYear[$i]}
+{$data.Applications.ProfessionalExperienceSinceYear[$i]}
 </td>
 
 <td></td>
@@ -66,7 +96,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <div>
 <input type="hidden" name="EntityId[]" value="{$Id}">
 <select name="ApplicationState[]" OnChange="javascript:document.applicationStateForm.save.disabled=false;">
-{html_options values=$applicationStatesId output=$applicationStatesIdTranslated selected=$applicationState[$i]}
+{html_options values=$applicationStatesId output=$applicationStatesIdTranslated selected=$data.Applications.ApplicationState[$i]}
 </select>
 </div>
 </td>
