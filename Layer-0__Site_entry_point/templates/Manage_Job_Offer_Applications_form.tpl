@@ -17,7 +17,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}Manage the job offer applications{/t}</h3>
+<h3>{t}Manage job offer applications{/t}</h3>
 
 <p class="footnote"><strong>{t}Offer title{/t}</strong>: <a href="offers?id={$smarty.get.JobOfferId}">{$vacancyTitle}</a></p>
 
