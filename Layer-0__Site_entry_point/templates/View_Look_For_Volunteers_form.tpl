@@ -68,7 +68,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr> 
 
 <tr>
-<td align="center">{t}Contact{/t}: <a href="mailto:{$data.Email}">{$data.Email}</a> </td>
+<td align="center">{t}Contact{/t}: <a href="mailto:{$data.Email}">{if $data.Email}{$data.Email}{else}{$data.WantEmail}{/if}</a> {if not $data.Email}{t}Email not verified!{/t}{/if} </td>
 {if $data.EntityId eq $smarty.session.EntityId}
 <td class="edit"></td>
 {/if}
