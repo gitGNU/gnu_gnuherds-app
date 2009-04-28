@@ -160,7 +160,8 @@ class Donation
 
 				if ( intval($result[0]) == 0 )
 				{
-					$this->deleteJobOffer($jobOfferId); // XXX: We could optimize this calling a custom method due to deleteJobOffer() tries to delete Skills, Language, etc. and DonationPledgeGroups do not use any of such properties.
+					$jobOffer = new JobOffer();
+					$jobOffer->deleteJobOffer($jobOfferId); // This method tries to delete too Skills, Languages, etc. and DonationPledgeGroups do not use any of such properties. Anyway, we must not optimize this calling a custom method due to it would add duplicated source code.
 				}
 
 				$already_processed[$jobOfferId] = true;
@@ -189,7 +190,8 @@ class Donation
 
 				if ( intval($result[0]) == 0 )
 				{
-					$this->deleteJobOffer($jobOfferId); // XXX: We could optimize this calling a custom method due to deleteJobOffer() tries to delete Skills, Language, etc. and DonationPledgeGroups do not use any of such properties.
+					$jobOffer = new JobOffer();
+					$jobOffer->deleteJobOffer($jobOfferId); // This method tries to delete too Skills, Languages, etc. and DonationPledgeGroups do not use any of such properties. Anyway, we must not optimize this calling a custom method due to it would add duplicated source code.
 				}
 
 				$already_processed[$jobOfferId] = true;
