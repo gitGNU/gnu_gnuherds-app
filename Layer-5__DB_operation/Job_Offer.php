@@ -92,7 +92,7 @@ class JobOffer
 		$array['EntityId'] = pg_fetch_all_columns($result, 5);
 		$array['EntityType'] = pg_fetch_all_columns($result, 6);
 
-		$array['Email'] = pg_fetch_all_columns($result, 15);
+		$array['Email'] = pg_fetch_all_columns($result, 16);
 
 		$array['Blog'] = pg_fetch_all_columns($result, 7);
 		$array['Website'] = pg_fetch_all_columns($result, 8);
