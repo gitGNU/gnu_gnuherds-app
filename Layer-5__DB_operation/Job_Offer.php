@@ -324,7 +324,7 @@ class JobOffer
 	}
 
 
-	private function deleteJobOffer($J1_Id)
+	public function deleteJobOffer($J1_Id)
 	{
 		// Delete the subscribed applicants
 		$sqlQuery = "PREPARE query(integer) AS  DELETE FROM R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=$1;  EXECUTE query('$J1_Id');";
