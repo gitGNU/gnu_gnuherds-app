@@ -249,7 +249,7 @@ class JobOffer
 	}
 
 
-	public function addJobOffer($offerType,$completedEdition)
+	public function addJobOffer($offerType,$completedEdition,$magic='')
 	{
 		// As there are several tables involved, we use a transaction to be sure, all operations are done, or nothing is done.
 
@@ -257,7 +257,7 @@ class JobOffer
 		// J1_JobOffers table
 
 		$entity = new Entity();
-		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : $entity->getEntityId(trim($_POST['Email']),'REQUEST_TO_ADD_NOTICE'); // It registers the email and send the verification email if it is needed
+		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : $entity->getEntityId(trim($_POST['Email']),'REQUEST_TO_ADD_NOTICE',$magic); // It registers the email and send the verification email if it is needed
 
 		$EmployerJobOfferReference = isset($_POST['EmployerJobOfferReference']) ? trim($_POST['EmployerJobOfferReference']) : '';
 

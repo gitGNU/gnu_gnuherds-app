@@ -299,12 +299,12 @@ class DBManager
 		return $entity->getEntityPhotoOrLogo($Id);
 	}
 
-	public function addJobOffer($offerType,$completedEdition)
+	public function addJobOffer($offerType,$completedEdition,$magic)
 	{
 		// This method does not need ACL check because of it works with SESSION[EntityId]
 
 		$jobOffer = new JobOffer();
-		return $jobOffer->addJobOffer($offerType,$completedEdition);
+		return $jobOffer->addJobOffer($offerType,$completedEdition,$magic);
 	}
 
 	public function deleteSelectedJobOffers()

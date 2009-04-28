@@ -111,8 +111,11 @@ class DonationPledgeGroupForm
 			}
 			else // new
 			{
+				// Make the 'magic' flag.  The 'magic' is needed if the entity is not registered yet.
+				$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
+
 				$offerType = 'Donation pledge group';
-				$_GET['JobOfferId'] = $this->manager->addJobOffer($offerType,$completedEdition); // Add a new job offer with the data from the 'general' section
+				$_GET['JobOfferId'] = $this->manager->addJobOffer($offerType,$completedEdition,$magic); // Add a new job offer with the data from the 'general' section
 			}
 		}
 
