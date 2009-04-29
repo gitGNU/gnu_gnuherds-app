@@ -93,10 +93,45 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $data.LookForVolunteers.EntityType[$i] eq 'Company'}<strong>{t}Company{/t}</strong>: {/if}
 {if $data.LookForVolunteers.EntityType[$i] eq 'non-profit Organization'}<strong>{t}non-profit Organization{/t}</strong>: {/if}
 {if $data.LookForVolunteers.EntityType[$i] eq 'Person' and trim($data.LookForVolunteers.Blog[$i]) neq ''}<a href="{$data.LookForVolunteers.Blog[$i]}">{else}{if trim($data.LookForVolunteers.Website[$i]) neq ''}<a href="{$data.LookForVolunteers.Website[$i]}">{/if}{/if}
-{if $data.LookForVolunteers.EntityType[$i] eq 'Person'}{$data.LookForVolunteers.LastName[$i]}{if $data.LookForVolunteers.LastName[$i] and ($data.LookForVolunteers.FirstName[$i] or $data.LookForVolunteers.MiddleName[$i])},{/if} {$data.LookForVolunteers.FirstName[$i]} {$data.LookForVolunteers.MiddleName[$i]}{/if}
-{if $data.LookForVolunteers.EntityType[$i] eq 'Cooperative'}{$data.LookForVolunteers.CooperativeName[$i]}{/if}
-{if $data.LookForVolunteers.EntityType[$i] eq 'Company'}{$data.LookForVolunteers.CompanyName[$i]}{/if}
-{if $data.LookForVolunteers.EntityType[$i] eq 'non-profit Organization'}{$data.LookForVolunteers.OrganizationName[$i]}{/if}
+
+{if $data.LookForVolunteers.Email[$i]}
+
+{if $data.LookForVolunteers.EntityType[$i] eq 'Person'}
+{if $data.LookForVolunteers.LastName[$i] or $data.LookForVolunteers.FirstName[$i] or $data.LookForVolunteers.MiddleName[$i]}
+{$data.LookForVolunteers.LastName[$i]}{if $data.LookForVolunteers.LastName[$i] and ($data.LookForVolunteers.FirstName[$i] or $data.LookForVolunteers.MiddleName[$i])},{/if} {$data.LookForVolunteers.FirstName[$i]} {$data.LookForVolunteers.MiddleName[$i]}
+{else}
+{t}Name{/t}: {t}not specified{/t}
+{/if}
+{/if}
+
+{if $data.LookForVolunteers.EntityType[$i] eq 'Cooperative'}
+{if $data.LookForVolunteers.CooperativeName[$i]}
+{$data.LookForVolunteers.CooperativeName[$i]}
+{else}
+{t}Name{/t}: {t}not specified{/t}
+{/if}
+{/if}
+
+{if $data.LookForVolunteers.EntityType[$i] eq 'Company'}
+{if $data.LookForVolunteers.CompanyName[$i]}
+{$data.LookForVolunteers.CompanyName[$i]}
+{else}
+{t}Name{/t}: {t}not specified{/t}
+{/if}
+{/if}
+
+{if $data.LookForVolunteers.EntityType[$i] eq 'non-profit Organization'}
+{if $data.LookForVolunteers.OrganizationName[$i]}
+{$data.LookForVolunteers.OrganizationName[$i]}
+{else}
+{t}Name{/t}: {t}not specified{/t}
+{/if}
+{/if}
+
+{else}
+{t}Email not verified!{/t}
+{/if}
+
 {if ($data.LookForVolunteers.EntityType[$i] eq 'Person' and trim($data.LookForVolunteers.Blog[$i]) neq '') or trim($data.LookForVolunteers.Website[$i]) neq ''}</a>{/if}
 </td>
 
