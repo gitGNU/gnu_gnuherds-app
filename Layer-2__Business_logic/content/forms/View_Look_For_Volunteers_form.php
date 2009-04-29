@@ -112,6 +112,7 @@ class ViewLookForVolunteersForm
 		$result = $this->manager->getEntity($this->data['EntityId']);
 
 		$this->data['Email'] = $result[0][0];
+		$this->data['WantEmail'] = $result[20][0];
 	}
 }
 ?> 

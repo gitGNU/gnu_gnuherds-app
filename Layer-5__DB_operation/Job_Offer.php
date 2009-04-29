@@ -92,7 +92,7 @@ class JobOffer
 		$array['EntityId'] = pg_fetch_all_columns($result, 5);
 		$array['EntityType'] = pg_fetch_all_columns($result, 6);
 
-		$array['Email'] = pg_fetch_all_columns($result, 15);
+		$array['Email'] = pg_fetch_all_columns($result, 16);
 
 		$array['Blog'] = pg_fetch_all_columns($result, 7);
 		$array['Website'] = pg_fetch_all_columns($result, 8);
@@ -249,7 +249,7 @@ class JobOffer
 	}
 
 
-	public function addJobOffer($offerType,$completedEdition)
+	public function addJobOffer($offerType,$completedEdition,$magic='')
 	{
 		// As there are several tables involved, we use a transaction to be sure, all operations are done, or nothing is done.
 
@@ -257,7 +257,7 @@ class JobOffer
 		// J1_JobOffers table
 
 		$entity = new Entity();
-		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : $entity->getEntityId(trim($_POST['Email']),'REQUEST_TO_ADD_NOTICE'); // It registers the email and send the verification email if it is needed
+		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : $entity->getEntityId(trim($_POST['Email']),'REQUEST_TO_ADD_NOTICE',$magic); // It registers the email and send the verification email if it is needed
 
 		$EmployerJobOfferReference = isset($_POST['EmployerJobOfferReference']) ? trim($_POST['EmployerJobOfferReference']) : '';
 
@@ -324,7 +324,7 @@ class JobOffer
 	}
 
 
-	private function deleteJobOffer($J1_Id)
+	public function deleteJobOffer($J1_Id)
 	{
 		// Delete the subscribed applicants
 		$sqlQuery = "PREPARE query(integer) AS  DELETE FROM R0_Qualifications2JobOffersJoins WHERE R0_J1_Id=$1;  EXECUTE query('$J1_Id');";
