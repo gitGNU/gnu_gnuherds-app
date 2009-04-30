@@ -31,11 +31,3 @@ require_once '../Layer-2__Business_logic/others/View_Photo_or_Logo.php';
 
 $viewPhotoOrLogo = new ViewPhotoOrLogo();
 $viewPhotoOrLogo->viewPhotoOrLogo();
-
-// This function have to be outside the ViewPhotoOrLogo class, else the PNG format will be wrong and the browser, at least FireFox 1.5, will not show it.
-function pngOutputHandler($img)
-{
-	header('Content-Type: image/png');
-	header('Content-Length: ' . strlen($img));
-	return $img;
-}

@@ -48,6 +48,6 @@ class ViewPhotoOrLogo
 
 		// Send the image to the web browser.
 		header('Content-Type: image/png');
-  		echo $im;
+		echo $im;
 	}
 }
