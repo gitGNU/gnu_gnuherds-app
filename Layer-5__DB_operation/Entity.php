@@ -473,7 +473,10 @@ class Entity
 
 	public function getEntityPhotoOrLogo($Id)
 	{
-		return imagecreatefrompng("../entity_photos/".$Id);
+		$i = new Imagick("../entity_photos/".$Id);
+		
+		return $i;
+		
 	}
 
 	private function savePhotoOrLogo($E1_Id)
@@ -485,18 +488,21 @@ class Entity
 				$error = "<p>".gettext("ERROR: Can not save the uploaded file!")."</p>";
 				throw new Exception($error,false);
 			}
-
-			$handle = imagick_readimage("../entity_photos/".$E1_Id);
-			if ( imagick_iserror($handle) )
+			//La ultima version de Imagick
+			chmod("../entity_photos/".$E1_Id, 0777);
+			$image=new Imagick("../entity_photos/".$E1_Id);
+					
+			//$handle = $image->readImage("../entity_photos/".$E1_Id);
+			/*if ( imagick_iserror($handle) )
 			{
 				$reason      = imagick_failedreason($handle);
 				$description = imagick_faileddescription($handle);
 
 				$error = "<p>"."image handle failed!<BR>\nReason: $reason<BR>\nDescription: $description<BR>"."</p>";
 				throw new Exception($error,false);
-			}
-
-			imagick_convert($handle,"PNG");
+			}*/
+			$image->setImageFormat("PNG");
+			//imagick_convert($handle,"PNG");
 
 			if ( $_SESSION['EntityType'] == 'Person' ) // Suggested geometry
 			{
@@ -511,23 +517,23 @@ class Entity
 
 			// Before resizing we check the width and height of the original image to avoid an image zoom.
 
-			$size = getimagesize("../entity_photos/".$E1_Id);
-			$width  = $size[0];
-			$height = $size[1];
+			$size = $image->getImageSize();//getimagesize("../entity_photos/".$E1_Id);
+			$width  = $image->getImageWidth();
+			$height = $image->getImageHeight();
 
 			if ( $width > $hsize  or  $height > $vsize )
 			{
-				if ( !imagick_resize($handle,$hsize,$vsize,IMAGICK_FILTER_UNKNOWN,0) )
+				if ( !$image->resizeImage($hsize,$vsize,Imagick::FILTER_LANCZOS,1) )
 				{
-					$reason      = imagick_failedreason($handle);
+					/*$reason      = imagick_failedreason($handle);
 					$description = imagick_faileddescription($handle);
 
 					$error = "<p>"."imagick_resize() failed<BR>\nReason: $reason<BR>\nDescription: $description<BR>"."</p>";
-					throw new Exception($error,false);
+					throw new Exception($error,false);*/
 				}
 			}
 
-			if ( !imagick_writeimage($handle,"../entity_photos/".$E1_Id) )
+			if ( !$image->writeImage("../entity_photos/".$E1_Id) )
 			{
 				$reason      = imagick_failedreason($handle);
 				$description = imagick_faileddescription($handle);

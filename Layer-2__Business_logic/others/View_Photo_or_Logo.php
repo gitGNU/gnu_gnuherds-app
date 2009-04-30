@@ -47,8 +47,7 @@ class ViewPhotoOrLogo
 			$im = $manager->getJobOfferPhotoOrLogoForEntity($_GET['EntityId']);
 
 		// Send the image to the web browser.
-		ob_start("pngOutputHandler");
-		imagepng($im,NULL);
-		ob_end_flush();
+		header('Content-Type: image/png');
+  		echo $im;
 	}
 }
