@@ -488,8 +488,6 @@ class Entity
 
 			$image = new Imagick("../entity_photos/".$E1_Id);
 
-			$image->setImageFormat("PNG");
-
 			if ( $_SESSION['EntityType'] == 'Person' ) // Suggested geometry
 			{
 				$hsize = 90;
@@ -501,15 +499,13 @@ class Entity
 				$vsize = 120;
 			}
 
-			// Before resizing we check the width and height of the original image to avoid an image zoom.
-			$width  = $image->getImageWidth();
-			$height = $image->getImageHeight();
-
-			if ( $width > $hsize  or  $height > $vsize )
+			// Before scaling the image we check the width and height of the original image to avoid an image zoom.
+			if ( $image->getImageWidth() > $hsize  or  $image->getImageHeight() > $vsize )
 			{
-				$image->resizeImage($hsize,$vsize,Imagick::FILTER_LANCZOS,1);
+				$image->scaleImage($hsize,$vsize,true);
 			}
 
+			$image->setImageFormat("PNG");
 			$image->writeImage("../entity_photos/".$E1_Id);
 		}
 	}
