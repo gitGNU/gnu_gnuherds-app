@@ -297,25 +297,34 @@ class Entity
 		}
 	}
 
-	public function getEntityId($email,$requestOperation='',$magic='') // This method is used to get the EntityId, when the user is not logged in, or to create and get a EntityId when the user is even not registered (auto-registering). In the first case it also sends a confirmation email if a donation add has been requested
+	public function getEntityId($email,$requestOperation='',$offerType='',$magic='') // This method is used to get the EntityId, when the user is not logged in, or to create and get a EntityId when the user is even not registered (auto-registering). In the first case it also sends a confirmation email if a donation add has been requested
 	{
 		$E1_Id = $this->lookForEntity($email);
 
 		if ( $E1_Id )
 		{
+			// For donation-pledge-groups the email will not be sent at REQUEST_TO_ADD_NOTICE but at REQUEST_TO_ADD_DONATION. So we avoid sending double email.
+			if ( $offerType == 'Donation pledge group' and $requestOperation == 'REQUEST_TO_ADD_NOTICE' )
+			{
+				return $E1_Id;
+			}
+
 			// Check if we have to send confirmation email for not logged users adding a donation, creating a notice or subscribing to a donation-pledge-group
-			if( $requestOperation == 'REQUEST_TO_ADD_DONATION' or $requestOperation == 'REQUEST_TO_SUBSCRIBE_TO_NOTICE' )
+			if ( $requestOperation == 'REQUEST_TO_ADD_NOTICE' or $requestOperation == 'REQUEST_TO_ADD_DONATION' or $requestOperation == 'REQUEST_TO_SUBSCRIBE_TO_NOTICE' )
 			{
 				// Send the email
 				$message = gettext("Your email has been used to create, update or subscribe to a notice at GNU Herds.")."\n\n";
 
 				$message .= gettext("Follow the below link to confirm.")." ".gettext("That link will expire in 48 hours.")."\n\n"; // If it is not confirmed it will be lost, and the creation or update process will have to begin again.
 
+				if( $requestOperation == 'REQUEST_TO_ADD_NOTICE' )
+					$message .= "https://".$_SERVER['HTTP_HOST']."/notices?action=create&email=".trim($_POST['Email'])."&magic=".$magic;
+
 				if( $requestOperation == 'REQUEST_TO_ADD_DONATION' )
 					$message .= "https://".$_SERVER['HTTP_HOST']."/pledges?action=donate&email=".trim($_POST['Email'])."&magic=".$magic;
 
 				if( $requestOperation == 'REQUEST_TO_SUBSCRIBE_TO_NOTICE' )
-					$message .= "https://".$_SERVER['HTTP_HOST']."/pledges?action=subscribe&email=".trim($_POST['Email'])."&magic=".$magic;
+					$message .= "https://".$_SERVER['HTTP_HOST']."/notices?action=subscribe&email=".trim($_POST['Email'])."&magic=".$magic;
 
 				$message .= "\n\n";
 
@@ -325,8 +334,11 @@ class Entity
 
 				mb_language("uni");
 
+				if( $requestOperation == 'REQUEST_TO_ADD_NOTICE' )
+					mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Notice confirmation"), "$message", "From: association@gnuherds.org");
+
 				if( $requestOperation == 'REQUEST_TO_ADD_DONATION' )
-					mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Donation confirmation"), "$message", "From: association@gnuherds.org");
+					mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Donation pledge confirmation"), "$message", "From: association@gnuherds.org");
 
 				if( $requestOperation == 'REQUEST_TO_SUBSCRIBE_TO_NOTICE' )
 					mb_send_mail(trim($_POST['Email']), "GNU Herds: ".gettext("Subscription confirmation"), "$message", "From: association@gnuherds.org");
@@ -337,6 +349,12 @@ class Entity
 		else
 		{
 			$E1_Id = $this->addEntity($magic);
+
+			// For donation-pledge-groups the email will not be sent at REQUEST_TO_ADD_NOTICE but at REQUEST_TO_ADD_DONATION. So we avoid sending double email.
+			if ( $offerType == 'Donation pledge group' and $requestOperation == 'REQUEST_TO_ADD_NOTICE' )
+			{
+			  return $E1_Id;
+			}
 
 			// Send the email -- TODO: Use an external method to send the emails. For example $emails->sendWarningEmail('REQUEST_TO_ADD_DONATION');
 			$message = gettext("Your email has been used to create, update or subscribe to a notice at GNU Herds.")."\n\n";

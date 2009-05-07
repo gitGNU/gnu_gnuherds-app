@@ -86,7 +86,7 @@ class ManageJobOffersForm
 
 				// Entries
 
-				$result = $this->manager->getJobOffersForEntity(" AND J1_OfferType='Job offer' ORDER BY J1_OfferDate DESC ");
+				$result = $this->manager->getJobOffersForEntity(" AND ( J1_OfferType='Job offer' OR J1_OfferType='Job offer (post faster)' ) ORDER BY J1_OfferDate DESC ");
 
 				$this->data['JobOfferId'] = $result[0];
 				$this->data['OfferDate'] = $result[1];

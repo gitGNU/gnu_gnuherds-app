@@ -37,68 +37,14 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 }If you would like carry out some of the tasks below in exchange for the reported task money, just open it and click "%1I accept%2" to try it.{/t}
 </p>
 
-<br>
-
-<form name="newDonationPledgeGroupForm" method="post" action="pledges?action=edit&amp;id=" class="center">
-<div>
-<input type="submit" name="new" value="{t}New donation pledge group{/t}">
-<br>
-<br>
-{t}FAQ:{/t} <a href="faq#Payments">{t}Payments negotiation{/t}</a>
-</div>
-</form>
+<table class="marginA">
+{include file="button-to-create-donation-pledge-group.tpl"}
+</table>
 
 <br>
 <br>
 <br>
-
 
 <table border="0">
-
-<tr valign="top">
-<td class="tdTitle"><strong>{'Donation pledge group title'|gettext|strip:'&nbsp;'}&nbsp;</strong></td>
-<td class="tdTitle"><strong>{'Last update'|gettext|strip:'&nbsp;'}&nbsp;</strong></td>
-<td></td>
-<td class="tdTitle"><strong>{'Donations'|gettext|strip:'&nbsp;'}&nbsp;</strong></td>
-<td></td>
-<td><a href="pledges?format=rss{if $smarty.session.Language neq 'en_US'}&language={$smarty.session.Language}{/if}"><img src="themes/red_Danijel/images/rss.png" alt="RSS"></a></td>
-</tr>
-
-{if count($data.DonationPledgeGroup.JobOfferId) == 0 }
-<tr valign="top">
-<td colspan="4" class="tdDark center">
-{t}There are no entries{/t}
-</td>
-</tr>
-{else}
-
-{foreach from=$data.DonationPledgeGroup.JobOfferId item=Id key=i}
-
-<tr valign="top">
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="pledges?id={$Id}">
-{$data.DonationPledgeGroup.VacancyTitle[$i]}
-</a>
-</td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$data.DonationPledgeGroup.OfferDate[$i]}
-</td>
-
-
-<td>
-</td>
-
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-${$data.DonationPledgeGroup.Donations[$i]} USD
-</td>
-
-</tr>
-
-{/foreach}
-
-{/if}
-
+{include file="table-to-list-donation-pledge-groups.tpl"}
 </table>

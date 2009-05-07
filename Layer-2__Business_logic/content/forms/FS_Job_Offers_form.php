@@ -42,7 +42,7 @@ class FSJobOffersForm
 
 		// Job Offers table
 
-		$this->data['JobOffers'] = $manager->getJobOffers(" AND J1_OfferType='Job offer' ORDER BY J1_OfferDate DESC "); // Default ORDER BY, to stand out the last updated or added entries.  //TODO: XXX: Allow ORDER BY other fields via GET parameters.
+		$this->data['JobOffers'] = $manager->getJobOffers(" AND ( J1_OfferType='Job offer' OR J1_OfferType='Job offer (post faster)' ) ORDER BY J1_OfferDate DESC "); // Default ORDER BY, to stand out the last updated or added entries.  //TODO: XXX: Allow ORDER BY other fields via GET parameters.
 
 
 		$smarty->assign('data', $this->data);

@@ -44,7 +44,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=general" title="{t}Edit section{/t}: {t}General{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}{if $data.OfferType eq 'Job offer'}&amp;section=general{/if}" title="{t}Edit section{/t}: {t}General{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -88,6 +88,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td class="edit"></td>
 {/if}
 </tr> 
+
+
+{if $data.OfferType neq 'Job offer (post faster)'}
 
 <tr>
 <td align="right"><strong>{t}Vacancies{/t}</strong> : </td>
@@ -140,6 +143,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </tr>
 
+{/if}
+
+
 <tr>
 <td align="right"><strong>{'Offer date'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 <td colspan="3" class="greenLight">{$data.OfferDate}</td>
@@ -165,10 +171,13 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 </tr> 
 
+
+{if $data.OfferType neq 'Job offer (post faster)'}
+
 <tr>
 <td colspan="4" class="subsection">{t}Technical{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Technical{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}{if $data.OfferType eq 'Job offer'}&amp;section=profiles_etc{/if}" title="{t}Edit section{/t}: {t}Technical{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -177,7 +186,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<td align="right"><strong>{'Professional experience since'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 	<td colspan="3" class="greenLight">{$data.ProfessionalExperienceSinceYear}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Professional experience since{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}{if $data.OfferType eq 'Job offer'}&amp;section=profiles_etc{/if}" title="{t}Edit section{/t}: {t}Professional experience since{/t}">{t}edit{/t}</a></td>
 {/if}
 	</tr>
 {/if}
@@ -187,7 +196,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<td align="right"><strong>{'Academic level'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
 	<td colspan="3" class="greenLight">{t domain='database'}{$data.AcademicLevel}{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Academic level{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}{if $data.OfferType eq 'Job offer'}&amp;section=profiles_etc{/if}" title="{t}Edit section{/t}: {t}Academic level{/t}">{t}edit{/t}</a></td>
 {/if}
 	</tr>
 {/if}
@@ -230,7 +239,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	</td>
 
 	{if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=profiles_etc" title="{t}Edit section{/t}: {t}Profiles{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}{if $data.OfferType eq 'Job offer'}&amp;section=profiles_etc{/if}" title="{t}Edit section{/t}: {t}Profiles{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
@@ -258,7 +267,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	</td>
 
 	{if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=skills" title="{t}Edit section{/t}: {t}Skills{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}{if $data.OfferType eq 'Job offer'}&amp;section=skills{/if}" title="{t}Edit section{/t}: {t}Skills{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
@@ -286,7 +295,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	</td>
 
 	{if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=languages" title="{t}Edit section{/t}: {t}Languages{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}{if $data.OfferType eq 'Job offer'}&amp;section=languages{/if}" title="{t}Edit section{/t}: {t}Languages{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
@@ -301,7 +310,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 		{/foreach}
 	</td>
 	{if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=certifications" title="{t}Edit section{/t}: {t}Certifications{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}{if $data.OfferType eq 'Job offer'}&amp;section=certifications{/if}" title="{t}Edit section{/t}: {t}Certifications{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
@@ -312,7 +321,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<td align="right"><strong>{'Experience with FS projects'|gettext|strip:'&nbsp;'}</strong>&nbsp;:</td>
 	<td colspan="3" class="greenLight">{$data.FreeSoftwareExperiences}</td>
 	{if $data.EntityId eq $smarty.session.EntityId}
-	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=projects" title="{t}Edit section{/t}: {t}Experience with FS projects{/t}">{t}edit{/t}</a></td>
+	<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}{if $data.OfferType eq 'Job offer'}&amp;section=projects{/if}" title="{t}Edit section{/t}: {t}Experience with FS projects{/t}">{t}edit{/t}</a></td>
 	{/if}
 	</tr>
 {/if}
@@ -327,7 +336,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td colspan="4" class="subsection">{t}Residence location{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=location" title="{t}Edit section{/t}: {t}Residence location{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}{if $data.OfferType eq 'Job offer'}&amp;section=location{/if}" title="{t}Edit section{/t}: {t}Residence location{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -391,7 +400,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td colspan="4" class="subsection">{t}Contract{/t}</td>
 {if $data.EntityId eq $smarty.session.EntityId}
-<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}&amp;section=contract" title="{t}Edit section{/t}: {t}Contract{/t}">{t}edit{/t}</a></td>
+<td class="edit"><a href="/offers?action=edit&amp;id={$smarty.get.JobOfferId}{if $data.OfferType eq 'Job offer'}&amp;section=contract{/if}" title="{t}Edit section{/t}: {t}Contract{/t}">{t}edit{/t}</a></td>
 {/if}
 </tr>
 
@@ -442,6 +451,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {/if}
 
+{/if}
+
+
 <tr>
 <td colspan="4">&nbsp;</td>
 {if $data.EntityId eq $smarty.session.EntityId}
@@ -471,42 +483,66 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr valign="top">
 <td align="right">
+{if $data.Email}
 <strong>{t}Name{/t}</strong>&nbsp;:{if trim($data.BirthYear) neq ''}<br>
-<strong>{t}Born{/t}</strong> :{/if}{if count($data.NationalityNameList) > 0 }<br>
-<strong>{if count($data.NationalityNameList) == 1 }{t}Nationality{/t}{else}{t}Nationalities{/t}{/if}</strong> :{/if}{if count($data.JobLicenseAtNameList) > 0 }<br>
+<strong>{t}Born{/t}</strong>&nbsp;:{/if}{if count($data.NationalityNameList) > 0 }<br>
+<strong>{if count($data.NationalityNameList) == 1 }{t}Nationality{/t}{else}{t}Nationalities{/t}{/if}</strong>&nbsp;:{/if}{if count($data.JobLicenseAtNameList) > 0 }<br>
 <strong>{'Besides license to work at'|gettext|strip:'&nbsp;'}</strong>&nbsp;:{/if}
+{/if}
 </td>
 
 <td colspan="2" class="greenLight">
-<strong>
-{if $data.EntityType eq 'Person' }
-	{if trim($data.Blog) neq ''}<a href="{$data.Blog}">{else} {if trim($data.Website) neq ''}<a href="{$data.Website}">{/if} {/if}
-	{$data.LastName}{if trim($data.LastName) and (trim($data.FirstName) or trim($data.MiddleName))},{/if} {$data.FirstName} {$data.MiddleName}
-	{if trim($data.Blog) neq '' or trim($data.Website) neq ''}</a>{/if}
+{if $data.EntityType eq 'Person' and trim($data.Blog) neq ''}<a href="{$data.Blog}">{else}{if trim($data.Website) neq ''}<a href="{$data.Website}">{/if}{/if}
+
+
+{if $data.Email}
+
+{if $data.EntityType eq 'Person'}
+{if $data.LastName or $data.FirstName or $data.MiddleName}
+{$data.LastName}{if $data.LastName and ($data.FirstName or $data.MiddleName)},{/if} {$data.FirstName} {$data.MiddleName}
+{else}
+{t}not specified{/t}
+{/if}
 {/if}
 
-{if $data.EntityType eq 'Cooperative' }
-	{if trim($data.Website) neq ''}<a href="{$data.Website}">{/if}
-	{$data.CooperativeName}
-	{if trim($data.Website) neq ''}</a>{/if}
+{if $data.EntityType eq 'Cooperative'}
+{if $data.CooperativeName}
+{$data.CooperativeName}
+{else}
+{t}not specified{/t}
+{/if}
 {/if}
 
-{if $data.EntityType eq 'Company' }
-	{if trim($data.Website) neq ''}<a href="{$data.Website}">{/if}
-	{$data.CompanyName}
-	{if trim($data.Website) neq ''}</a>{/if}
+{if $data.EntityType eq 'Company'}
+{if $data.CompanyName}
+{$data.CompanyName}
+{else}
+{t}not specified{/t}
+{/if}
 {/if}
 
-{if $data.EntityType eq 'non-profit Organization' }
-	{if trim($data.Website) neq ''}<a href="{$data.Website}">{/if}
-	{$data.NonprofitName}
-	{if trim($data.Website) neq ''}</a>{/if}
+{if $data.EntityType eq 'non-profit Organization'}
+{if $data.OrganizationName}
+{$data.OrganizationName}
+{else}
+{t}not specified{/t}
 {/if}
-</strong>
+{/if}
+
+{else}
+{t}Email not verified!{/t}
+{/if}
+
+
+{if ($data.EntityType eq 'Person' and trim($data.Blog) neq '') or trim($data.Website) neq ''}</a>{/if}
+
+
+
 {if trim($data.BirthYear) neq ''}
 <br>
 {$data.BirthYear}
 {/if}
+
 {if count($data.NationalityNameList) > 0 }
 <br>
 {if count($data.NationalityNameList) == 1 }
@@ -515,6 +551,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {foreach from=$data.NationalityNameList item=profile key=i}{if $i == 0}{$data.NationalityNameList[$i]}{else}, {$data.NationalityNameList[$i]}{/if}{/foreach}
 {/if}
 {/if}
+
 {if count($data.JobLicenseAtNameList) > 0 }
 <br>
 {if count($data.JobLicenseAtNameList) == 1 }

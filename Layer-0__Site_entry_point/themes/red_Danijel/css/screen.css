@@ -24,14 +24,14 @@ body{margin:0px;}
 
 /* locale area: Sameer's CSS */
 
-.locale{
+#locale{
 width:100%;
 float:left;
 background-color:#021625;
 border-bottom:1px solid #666666;
 }
 
-.locale ul{
+#locale ul{
 padding:0px;
 margin:0px;
 float:right;
@@ -39,12 +39,12 @@ font-size:70%;
 background-color:#021625;
 }
 
-.locale ul li{
+#locale ul li{
 list-style:none;
 display:inline;
 }
 
-.locale ul li a{
+#locale ul li a{
 padding:4px 10px;
 text-decoration:none;
 float:left;
@@ -53,7 +53,7 @@ border-left:1px solid #333333;
 background-color:#021625;
 }
 
-.locale ul li a:hover{
+#locale ul li a:hover{
 background-color:#777777;
 }
 
@@ -65,7 +65,7 @@ color:#FFFFFE;
 
 /* header area: Sameer's CSS */
 
-.header{
+#header{
 clear:both;
 float:left;
 width:100%;
@@ -74,31 +74,70 @@ background-color:#bd0000;
 border-bottom:2px solid #999999;
 }
 
-.logo{
+#logo{
 float:left;
 }
 
 #header_title{
 float:left;
 color:#FFFFFE;
-padding:20px 25px 0px 0px;
+padding:10px 25px 0px 15px;
 font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
 font-size: 20px;
 font-weight:bold;
 }
 
-.agpl{
+#agpl{
 padding:0px;
 float:right;
 }
 
-.agpl a{
+#agpl a{
 color:#470000;
 }
 
-.header p{
+#header p{
 padding:0px;
 margin:1px;
+}
+
+/* header buttons */
+
+#float_center{
+width:100%;
+text-align:center;
+}
+
+#buttons{
+margin:20px 0px 0px 0px;
+}
+
+#buttons ul{
+padding:0px;
+margin:0px;
+background-color:#BD0000;
+}
+
+#buttons ul li{
+list-style:none;
+display:inline;
+}
+
+#buttons ul li a{
+padding:4px 15px;
+text-decoration:none;
+color:#DDDDDC;
+font-family:Arial, Helvetica, Georgia, sans-serif;
+font-size: 18px;
+}
+
+#buttons ul li a:hover{
+background-color:#FDCA01;
+color:#BD0000;
+-moz-border-radius-topleft:5px !important;
+-moz-border-radius-topright:5px !important;
+-moz-border-radius-bottomleft:5px !important;
+-moz-border-radius-bottomright:5px !important;
 }
 
 
@@ -404,9 +443,10 @@ border-top:none;
 
 /* content area: Setting for Create Entries */
 
-.margin{
-margin-left:30px;
-}
+.marginA{margin-left:30px;}
+
+.marginB{margin-left:77px;}
+.spacerB{width:70px;}
 
 
 /* foot area: Sameer's CSS */

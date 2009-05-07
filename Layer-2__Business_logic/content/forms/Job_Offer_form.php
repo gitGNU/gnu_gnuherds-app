@@ -61,60 +61,61 @@ class JobOfferForm extends SkillsForm
 		if ( $_POST['section2control'] != '' )
 			$this->section2control = $_POST['section2control'];
 		else
-			$this->section2control = ''; // GET request from language change, POST request from "New job offer", etc.
+			$this->section2control = ''; // GET request from language change, POST request from new 'Job offer' or 'Job offer (post faster)', etc.
 
 		// Find out the JobOfferId. It is used at saveJobOfferForm() and at the Smarty templates
 		if ( $_GET['JobOfferId'] != '' )
 			$_SESSION['JobOfferId'] = $_GET['JobOfferId']; // Updating a job offer
-		elseif ( $_POST['new'] != '' )
-			$_SESSION['JobOfferId'] = ''; // Create the first section of a new job offer
+		elseif ( $_POST['new'] != ''  or // new (from click-button 'Job offer'). Create the first section of a new 'Job offer'
+			 $_POST['new_faster'] != ''  or // new (from click-button 'Job offer (post faster)'). Create new 'Job offer (post faster)'
+			 ( count($_POST) == 0 and $_GET['JobOfferId'] == '' )  ) // new (from icon-link). Create new 'Job offer (post faster)'
+			$_SESSION['JobOfferId'] = '';
 		elseif ( $_SESSION['JobOfferId'] != '' )
 			; // After being created at least the first section of a new job offer
 		else
 			; // We are trying to create the first section of a job offer
 
 
-		// Check the log in state
-		if ( $_SESSION['Logged'] == '1' )
+		// Initialization
+		if ( $_SESSION['JobOfferId'] != '' ) // We load the data from the data base and later overwrite it with the POST variables if it is needed. If JobOfferId comes from $_SESSION['JobOfferId'] we have to call to the loadJobOfferForm method too.
 		{
-			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Cooperative' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
-			{
-				$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-				throw new Exception($error,false);
-			}
-
-			if ( $_SESSION['JobOfferId'] != '' ) // We load the data from the data base and later overwrite it with the POST variables if it is needed. If JobOfferId comes from $_SESSION['JobOfferId'] we have to call to the loadJobOfferForm method too.
-			{
-			 	$this->loadJobOfferForm();
-			}
-			else
-			{
-				// Reset the visited-marks set by a previous qualifications edition
-				$_SESSION['VisitedJobOffer_skills'] = false;
-				$_SESSION['VisitedJobOffer_certifications'] = false;
-				$_SESSION['VisitedJobOffer_projects'] = false;
-				$_SESSION['VisitedJobOffer_location'] = false;
-			}
+		 	$this->loadJobOfferForm();
 		}
 		else
 		{
-			$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-			throw new Exception($error,false);
+			// Reset the visited-marks set by a previous qualifications edition
+			$_SESSION['VisitedJobOffer_skills'] = false;
+			$_SESSION['VisitedJobOffer_certifications'] = false;
+			$_SESSION['VisitedJobOffer_projects'] = false;
+			$_SESSION['VisitedJobOffer_location'] = false;
 		}
 
 		// Process each button event
-		if ( isset($_POST['new']) and $_POST['new'] != '' ) // new (from click-button)
+		if ( $_POST['new'] != '' ) // new from click-button 'Job offer'
+		{
+			header('Location: /offers?action=edit&id=&section='); // Note that this is a hack to change the URL and so avoid the language-change-bug.
+			exit;
+		}
+		elseif ( $_POST['new_faster'] != '' ) // new from click-button 'Job offer (post faster)'
 		{
 		}
-		elseif ( count($_POST) == 0 and $_GET['id'] == '' ) // new (from icon-link)
+		elseif ( count($_POST) == 0 and $_GET['JobOfferId'] == '' ) // new from icon-link
 		{
 		}
-		elseif ( $_POST['previous'] != '' or $_POST['next'] != '' or $_POST['jump'] != '' or $_POST['finish'] != '' or $_POST['more'] != '' ) // update
+		elseif ( $_POST['previous'] != '' or $_POST['next'] != '' or $_POST['jump'] != '' or $_POST['finish'] != '' or $_POST['more'] != '' ) // update 'Job offer'
 		{
 			// POST request from *_form.tpl: Edit JobOfferId
 			$this->saveJobOfferForm();
 		}
-		elseif ( count($_GET)==2 and isset($_GET['JobOfferId']) and $_GET['JobOfferId'] != '' and isset($_GET['section']) and $_GET['section'] != '' ) // edit
+		elseif ( $_POST['save'] != '' ) // update 'Job offer (post faster)'
+		{
+			$this->saveJobOfferForm_post_faster();
+		}
+		elseif ( count($_GET)==2 and isset($_GET['JobOfferId']) and $_GET['JobOfferId'] != '' and isset($_GET['section']) and $_GET['section'] != '' ) // edit 'Job offer'
+		{
+			// GET request from View_Job_Offer_form.tpl: Edit JobOfferId
+		}
+		elseif ( count($_GET)==1 and isset($_GET['JobOfferId']) and $_GET['JobOfferId'] != '' and !isset($_GET['section']) ) // edit 'Job offer (post faster)'
 		{
 			// GET request from View_Job_Offer_form.tpl: Edit JobOfferId
 		}
@@ -132,14 +133,21 @@ class JobOfferForm extends SkillsForm
 
 	public function printOutput()
 	{
-		if ( $_POST['finish'] != '' and $this->checks['result'] == "pass" and $this->can_save == true )
+		if ( ( $_POST['finish'] != '' and $this->checks['result'] == "pass" and $this->can_save == true )  or  ($_POST['save'] != '' and $this->checks['result'] == "pass") )
 		{
 			header('Location: /offers?id='.$_SESSION['JobOfferId']); // We reditect to the view-OfferType web page
 			exit;
 		}
 		else
 		{
-			$this->printJobOfferForm();
+			if ( isset($_GET['section']) ) // new from click-button 'Job offer', saving or edit 'Job offer'
+			{
+				$this->printJobOfferForm();
+			}
+			else // new from click-button 'Job offer (post faster)', new from icon-link, saving or edit 'Job offer (post faster)'
+			{
+				$this->printJobOfferForm_post_faster();
+			}
 		}
 	}
 
@@ -1137,6 +1145,102 @@ class JobOfferForm extends SkillsForm
 			default:
 				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
+		}
+	}
+
+
+
+	// Methods to manage 'Job offer (post faster)'
+
+	private function printJobOfferForm_post_faster()
+	{
+		$smarty = new Smarty;
+
+		$smarty->assign('data', $this->data);
+		$smarty->assign('checks', $this->checks);
+		$smarty->display("Job_Offer_post_faster_form.tpl");
+	}
+
+	private function saveJobOfferForm_post_faster()
+	{
+		// Prepare data for view: $this->data  and  $_POST  array.
+		$this->prepareData4View_post_faster();
+
+		// Set the check marks
+		$this->checkJobOfferForm_post_faster();
+
+		if ( $this->checks['result'] == "pass" )
+		{
+			$completedEdition = "true";
+			$_POST['ExpirationDate'] = date("Y/m/d", mktime(0, 0, 0, date("m")+1, date("d"), date("Y")) ); // '+1' means the JobOffer will expire in one month.  XXX: TODO: cronjob to clean expired entries.
+
+			// Update or insert the values
+			if ( $_GET['JobOfferId'] != '' ) // update
+			{
+				$section = "general";
+				$this->manager->updateJobOffer($_GET['JobOfferId'],$section,$completedEdition);
+			}
+			else // new
+			{
+				// Make the 'magic' flag.  The 'magic' is needed if the entity is not registered yet.
+				$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
+
+				$offerType = 'Job offer (post faster)';
+				$_SESSION['JobOfferId'] = $this->manager->addJobOffer($offerType,$completedEdition,$magic); // Add a new job offer with the data from the 'general' section
+			}
+		}
+
+	}
+
+	private function prepareData4View_post_faster()
+	{
+		// Save the section values in the $data variable
+
+		$this->data['VacancyTitle'] = isset($_POST['VacancyTitle']) ? trim($_POST['VacancyTitle']) : '';
+		$this->data['Description'] = isset($_POST['Description']) ? trim($_POST['Description']) : '';
+		$this->data['Email'] = isset($_POST['Email']) ? trim($_POST['Email']) : '';
+	}
+
+	private function checkJobOfferForm_post_faster()
+	{
+		$this->checks['result'] = "pass"; // By default the checks pass
+
+		// Note that the POST values has been saved in $data before calling this method. We use $data instead POST due to they have the isset check done, and we want to avoid to repeat it.  :P
+
+
+		// Some field can not be empty
+
+		if ( $this->data['VacancyTitle']=='' )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['VacancyTitle'] = gettext('Please fill in here');
+		}
+
+		if ( $this->data['Description']=='' )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['Description'] = gettext('Please fill in here');
+		}
+
+		if ( $_GET['JobOfferId'] == '' ) // new
+		{
+			if ( $_SESSION['Logged'] != '1' )
+			{
+				if ( $this->data['Email']=='' )
+				{
+					$this->checks['result'] = "fail";
+					$this->checks['Email'] = gettext('Please fill in here');
+				}
+				else
+				{
+					// The Email field have to keep the right syntax
+					if (!preg_match("/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/", $this->data['Email']))
+					{
+						$this->checks['result'] = "fail";
+						$this->checks['Email'] = gettext('Invalid email address');
+					}
+				}
+			}
 		}
 	}
 }

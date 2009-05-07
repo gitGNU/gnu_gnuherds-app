@@ -22,7 +22,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <p>{t}Alerts via email on:{/t}</p>
 
-<table class="margin">
+<table class="marginA">
 
 <tr>
 <td>
@@ -62,7 +62,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <p>{t}Alerts behavior:{/t}</p>
 
-<table class="margin">
+<table class="marginA">
 
 <tr>
 <td>

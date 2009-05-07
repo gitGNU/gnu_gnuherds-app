@@ -76,12 +76,12 @@ class DBManager
 		return $entity->getEntityPhotoOrLogo($Id);
 	}
 
-	public function getEntityId($email,$requestOperation,$magic)
+	public function getEntityId($email,$requestOperation,$offerType,$magic)
 	{
 		// This method does not need ACL check because of we have to allow it even to not logged entities.
 
 		$entity = new Entity();
-		return $entity->getEntityId($email,$requestOperation,$magic);
+		return $entity->getEntityId($email,$requestOperation,$offerType,$magic);
 	}
 
 	public function addEntity($magic)
@@ -305,6 +305,22 @@ class DBManager
 
 		$jobOffer = new JobOffer();
 		return $jobOffer->addJobOffer($offerType,$completedEdition,$magic);
+	}
+
+	public function confirmJobOffer($email,$magic)
+	{
+		// This method does not need ACL check.
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->confirmJobOffer($email,$magic);
+	}
+
+	public function delNonConfirmedJobOffers()
+	{
+		//XXX: ACL: This method deletes JobOffers.  Add support to check sysadmin authentication for website-frontend + DB-backend.
+
+		$jobOffer = new JobOffer();
+		return $jobOffer->delNonConfirmedJobOffers();
 	}
 
 	public function deleteSelectedJobOffers()

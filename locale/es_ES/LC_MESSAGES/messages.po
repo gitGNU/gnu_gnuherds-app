@@ -33,11 +33,11 @@ msgstr ""
 msgid "Change language"
 msgstr "Cambia lenguaje"
 
-msgid "Free Software Association"
-msgstr "Asociación de Software Libre"
+msgid "Free Software%1Association"
+msgstr "Asociación de%1Software Libre"
 
-msgid "%1Download the project source code!%2"
-msgstr "%1¡Descargue el código fuente del proyecto!%2"
+msgid "%1Download the source code!%2"
+msgstr "%1¡Descargue el código fuente!%2"
 
 #
 # menu.tpl
@@ -1556,6 +1556,12 @@ msgstr "Actualizar oferta de empleo"
 msgid "New job offer"
 msgstr "Nueva oferta de empleo"
 
+msgid "Post job offer"
+msgstr "Publicar oferta de empleo"
+
+msgid "faster"
+msgstr "más rápico"
+
 msgid "Check offer view"
 msgstr "Comprobar la vista de la oferta"
 
@@ -1653,7 +1659,7 @@ msgstr "Contacto"
 #
 # Manage_Job_Offer_Applications_form.tpl
 #
-msgid "Manage the job offer applications"
+msgid "Manage job offer applications"
 msgstr "Gestionar candidaturas de ofertas de empleo"
 
 msgid "Offer title"

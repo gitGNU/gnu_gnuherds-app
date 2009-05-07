@@ -42,104 +42,14 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </p>
 -->
 
-<br>
-
-<form name="newLookForVolunteerForm" method="post" action="volunteers?action=edit&amp;id=" class="center">
-<div>
-<input type="submit" name="new" value="{t}New look for volunteers{/t}">
-</div>
-</form>
-
-<br>
-<br>
-<br>
-
-
-<table border="0">
-
-<tr valign="top">
-<td class="tdTitle"><strong>{'Volunteer title'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-<td class="tdTitle"><strong>{'Entry date'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-<td class="tdTitle"><strong>{'Created by'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-<td></td>
-<td><a href="volunteers?format=rss{if $smarty.session.Language neq 'en_US'}&language={$smarty.session.Language}{/if}"><img src="themes/red_Danijel/images/rss.png" alt="RSS"></a></td>
-</tr>
-
-{if count($data.LookForVolunteers.JobOfferId) == 0 }
-<tr valign="top">
-<td colspan="3" class="tdDark center">
-{t}There are no entries{/t}
-</td>
-</tr>
-{else}
-
-{foreach from=$data.LookForVolunteers.JobOfferId item=Id key=i}
-
-<tr valign="top">
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-<a href="volunteers?id={$Id}">
-{$data.LookForVolunteers.VacancyTitle[$i]}
-</a>
-</td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{$data.LookForVolunteers.OfferDate[$i]}
-</td>
-
-<td class="{if $i % 2}tdDark{else}tdLight{/if}">
-{if $data.LookForVolunteers.EntityType[$i] eq 'Person'}<strong>{t}Person{/t}</strong>: {/if}
-{if $data.LookForVolunteers.EntityType[$i] eq 'Cooperative'}<strong>{t}Cooperative{/t}</strong>: {/if}
-{if $data.LookForVolunteers.EntityType[$i] eq 'Company'}<strong>{t}Company{/t}</strong>: {/if}
-{if $data.LookForVolunteers.EntityType[$i] eq 'non-profit Organization'}<strong>{t}non-profit Organization{/t}</strong>: {/if}
-{if $data.LookForVolunteers.EntityType[$i] eq 'Person' and trim($data.LookForVolunteers.Blog[$i]) neq ''}<a href="{$data.LookForVolunteers.Blog[$i]}">{else}{if trim($data.LookForVolunteers.Website[$i]) neq ''}<a href="{$data.LookForVolunteers.Website[$i]}">{/if}{/if}
-
-{if $data.LookForVolunteers.Email[$i]}
-
-{if $data.LookForVolunteers.EntityType[$i] eq 'Person'}
-{if $data.LookForVolunteers.LastName[$i] or $data.LookForVolunteers.FirstName[$i] or $data.LookForVolunteers.MiddleName[$i]}
-{$data.LookForVolunteers.LastName[$i]}{if $data.LookForVolunteers.LastName[$i] and ($data.LookForVolunteers.FirstName[$i] or $data.LookForVolunteers.MiddleName[$i])},{/if} {$data.LookForVolunteers.FirstName[$i]} {$data.LookForVolunteers.MiddleName[$i]}
-{else}
-{t}Name{/t}: {t}not specified{/t}
-{/if}
-{/if}
-
-{if $data.LookForVolunteers.EntityType[$i] eq 'Cooperative'}
-{if $data.LookForVolunteers.CooperativeName[$i]}
-{$data.LookForVolunteers.CooperativeName[$i]}
-{else}
-{t}Name{/t}: {t}not specified{/t}
-{/if}
-{/if}
-
-{if $data.LookForVolunteers.EntityType[$i] eq 'Company'}
-{if $data.LookForVolunteers.CompanyName[$i]}
-{$data.LookForVolunteers.CompanyName[$i]}
-{else}
-{t}Name{/t}: {t}not specified{/t}
-{/if}
-{/if}
-
-{if $data.LookForVolunteers.EntityType[$i] eq 'non-profit Organization'}
-{if $data.LookForVolunteers.OrganizationName[$i]}
-{$data.LookForVolunteers.OrganizationName[$i]}
-{else}
-{t}Name{/t}: {t}not specified{/t}
-{/if}
-{/if}
-
-{else}
-{t}Email not verified!{/t}
-{/if}
-
-{if ($data.LookForVolunteers.EntityType[$i] eq 'Person' and trim($data.LookForVolunteers.Blog[$i]) neq '') or trim($data.LookForVolunteers.Website[$i]) neq ''}</a>{/if}
-</td>
-
-</tr>
-
-{/foreach}
-
-{/if}
-
+<table class="marginA">
+{include file="button-to-create-look-for-volunteers.tpl"}
 </table>
 
+<br>
+<br>
+<br>
+
+<table border="0">
+{include file="table-to-list-look-for-volunteers.tpl"}
+</table>

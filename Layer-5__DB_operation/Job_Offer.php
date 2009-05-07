@@ -57,7 +57,7 @@ class JobOffer
 
 	public function getJobOffers($extra_condition = '')
 	{
-		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferDate, E1_Id,E1_EntityType, E1_Blog, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CooperativeName, EC_CompanyName, EO_OrganizationName, J1_VacancyTitle, E1_Email FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
+		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferType,J1_OfferDate, E1_Id,E1_EntityType, E1_Blog, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CooperativeName, EC_CompanyName, EO_OrganizationName, J1_VacancyTitle, E1_Email,E1_WantEmail FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
 		$array['JobOfferId'] = pg_fetch_all_columns($result, 0);
@@ -87,25 +87,27 @@ class JobOffer
 		$array['StateProvince'] = pg_fetch_all_columns($result, 2);
 		$array['City'] = pg_fetch_all_columns($result, 3);
 
-		$array['OfferDate'] = pg_fetch_all_columns($result, 4);
+		$array['OfferType'] = pg_fetch_all_columns($result, 4);
+		$array['OfferDate'] = pg_fetch_all_columns($result, 5);
 
-		$array['EntityId'] = pg_fetch_all_columns($result, 5);
-		$array['EntityType'] = pg_fetch_all_columns($result, 6);
+		$array['EntityId'] = pg_fetch_all_columns($result, 6);
+		$array['EntityType'] = pg_fetch_all_columns($result, 7);
 
-		$array['Email'] = pg_fetch_all_columns($result, 16);
+		$array['Email'] = pg_fetch_all_columns($result, 17);
+		$array['WantEmail'] = pg_fetch_all_columns($result, 18);
 
-		$array['Blog'] = pg_fetch_all_columns($result, 7);
-		$array['Website'] = pg_fetch_all_columns($result, 8);
+		$array['Blog'] = pg_fetch_all_columns($result, 8);
+		$array['Website'] = pg_fetch_all_columns($result, 9);
 
-		$array['FirstName'] = pg_fetch_all_columns($result, 9);
-		$array['LastName'] = pg_fetch_all_columns($result, 10);
-		$array['MiddleName'] = pg_fetch_all_columns($result, 11);
+		$array['FirstName'] = pg_fetch_all_columns($result, 10);
+		$array['LastName'] = pg_fetch_all_columns($result, 11);
+		$array['MiddleName'] = pg_fetch_all_columns($result, 12);
 
-		$array['CooperativeName'] = pg_fetch_all_columns($result, 12);
-		$array['CompanyName'] = pg_fetch_all_columns($result, 13);
-		$array['OrganizationName'] = pg_fetch_all_columns($result, 14);
+		$array['CooperativeName'] = pg_fetch_all_columns($result, 13);
+		$array['CompanyName'] = pg_fetch_all_columns($result, 14);
+		$array['OrganizationName'] = pg_fetch_all_columns($result, 15);
 
-		$array['VacancyTitle'] = pg_fetch_all_columns($result, 15);
+		$array['VacancyTitle'] = pg_fetch_all_columns($result, 16);
 
 		for( $i=0; $i < count($array['JobOfferId']); $i++)
 			if ( $array['VacancyTitle'][$i] == '' )
@@ -257,7 +259,7 @@ class JobOffer
 		// J1_JobOffers table
 
 		$entity = new Entity();
-		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : $entity->getEntityId(trim($_POST['Email']),'REQUEST_TO_ADD_NOTICE',$magic); // It registers the email and send the verification email if it is needed
+		$EntityId = isset($_SESSION['EntityId']) ? trim($_SESSION['EntityId']) : $entity->getEntityId(trim($_POST['Email']),'REQUEST_TO_ADD_NOTICE',$offerType,$magic); // It registers the email and send the verification email if it is needed
 
 		$EmployerJobOfferReference = isset($_POST['EmployerJobOfferReference']) ? trim($_POST['EmployerJobOfferReference']) : '';
 
@@ -297,7 +299,21 @@ class JobOffer
 		$this->postgresql->execute("BEGIN",0);
 
 
-		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,bool,text,text,text,text,bool) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCooperativeApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_VacancyTitle,J1_Description,J1_OfferType,J1_CompletedEdition) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14);  EXECUTE query('$EntityId','".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCooperativeApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','".pg_escape_string($VacancyTitle)."','".pg_escape_string($Description)."','$offerType','$completedEdition');";
+		// If the user is logged in then the notice creation is already confirmed; else, we set the confirmation fields
+		if(isset($_SESSION['EntityId']))
+		{
+			// Logged in
+			$magic = 'NULL';
+			$expire = 'NULL';
+		}
+		else
+		{
+			// Not logged in
+			$magic = "'$magic'";
+			$expire = "now() + '7 days'::interval";
+		}
+
+		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,bool,text,text,text,text,bool,text,timestamp) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCooperativeApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_VacancyTitle,J1_Description,J1_OfferType,J1_CompletedEdition,J1_CreationMagic,J1_CreationMagicExpire) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16);  EXECUTE query('$EntityId','".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCooperativeApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','".pg_escape_string($VacancyTitle)."','".pg_escape_string($Description)."','$offerType','$completedEdition',$magic,$expire);";
 		$this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 
@@ -321,6 +337,43 @@ class JobOffer
 		}
 
 		return $J1_Id;
+	}
+
+
+	public function confirmJobOffer($email,$magic)
+	{
+		$sqlQuery = "PREPARE query(text,text) AS  SELECT J1_Id FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND E1_Email=$1 AND J1_CreationMagic=$2 AND J1_CreationMagicExpire > 'now';  EXECUTE query('$email','$magic');";
+		$result = $this->postgresql->getPostgreSQLObject($sqlQuery, 1);
+
+		$array = pg_fetch_all_columns($result, 0);
+		$numrows = count($array);
+
+		if ($numrows == 1)
+		{
+			$sqlQuery = "PREPARE query(text) AS  UPDATE J1_JobOffers SET J1_CreationMagic=NULL, J1_CreationMagicExpire=NULL WHERE J1_CreationMagic=$1;  EXECUTE query('$magic');";
+			$this->postgresql->execute($sqlQuery,1);
+
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+
+	public function delNonConfirmedJobOffers()
+	{
+		// This is done to clean non-confirmed notices (JobOffers) whose time-window to confirm has expired.
+
+		$sqlQuery = "SELECT J1_Id FROM J1_JobOffers WHERE J1_CreationMagicExpire IS NOT NULL  AND  J1_CreationMagicExpire < 'now'   AND  J1_OfferType='Job offer (post faster)';";
+		$result = $this->postgresql->getPostgreSQLObject($sqlQuery, 0);
+
+		$array = pg_fetch_all_columns($result, 0);
+		foreach ( $array as $J1_Id )
+		{
+			$this->deleteJobOffer($J1_Id);
+		}
 	}
 
 
@@ -542,7 +595,7 @@ class JobOffer
 
 	public function subscribeApplication($EntityId,$JobOfferId,$magic='')
 	{
-		// If the user is logged in then the subscription is already confirmed; else, we create confirmation fields
+		// If the user is logged in then the subscription is already confirmed; else, we set the confirmation fields
 		if(isset($_SESSION['EntityId']))
 		{
 			// Logged in

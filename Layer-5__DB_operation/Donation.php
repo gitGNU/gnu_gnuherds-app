@@ -98,7 +98,8 @@ class Donation
 			$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
 
 			$entity = new Entity();
-			$EntityId = $entity->getEntityId(trim($_POST['Email']),'REQUEST_TO_ADD_DONATION',$magic); // It registers the email or send the verification message if the address is already registered
+			$offerType = 'Donation pledge group';
+			$EntityId = $entity->getEntityId(trim($_POST['Email']),'REQUEST_TO_ADD_DONATION',$offerType,$magic); // It registers the email or send the verification message if the address is already registered
 
 			$sqlQuery = "PREPARE query(integer,text,integer,text) AS  INSERT INTO D1_Donations2JobOffers (D1_J1_Id,D1_Donation,D1_E1_Id,D1_DonationMagic,D1_DonationMagicExpire) VALUES ($1,$2,$3,$4,now() + '7 days'::interval);  EXECUTE query('$JobOfferId','".pg_escape_string($WageRank)."','$EntityId','$magic');";
 		}

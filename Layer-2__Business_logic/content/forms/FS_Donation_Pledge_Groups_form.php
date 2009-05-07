@@ -34,7 +34,7 @@ class FSDonationPledgeGroupsForm
 
 	public function processForm()
 	{
-		if ( isset($_GET['action']) and $_GET['action'] == "donate" ) // Donation confirmation
+		if ( isset($_GET['action']) and $_GET['action'] == "donate" ) // Donation pledge confirmation
 		{
 			if ( $this->manager->confirmDonation($_GET['email'],$_GET['magic']) == true )
 			{
@@ -48,27 +48,12 @@ class FSDonationPledgeGroupsForm
 				throw new Exception($error,false);
 			}
 		}
-
-		if ( isset($_GET['action']) and $_GET['action'] == "subscribe" ) // Application subscription confirmation
-		{
-			if ( $this->manager->confirmApplication($_GET['email'],$_GET['magic']) == true )
-			{
-				$this->processingResult .= "<p>&nbsp;</p>\n";
-				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Subscription confirmed!")."</p>\n";
-			}
-			else
-			{
-				// Raise the usual error message
-				$error = "<p>".gettext("ERROR: Wrong magic number!")."</p>";
-				throw new Exception($error,false);
-			}
-		}
 	}
 
 
 	public function printOutput()
 	{
-		if ( isset($_GET['action']) and ( $_GET['action'] == "donate" or  $_GET['action'] == "subscribe" ) )
+		if ( isset($_GET['action']) and $_GET['action'] == "donate" )
 			echo $this->processingResult;
 		else
 			$this->printFSDonationPledgeGroupsForm();

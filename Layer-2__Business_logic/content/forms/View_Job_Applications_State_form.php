@@ -66,22 +66,22 @@ class ViewJobApplicationsStateForm
 
 		switch ($_GET["section"]) {
 			case "": case "offers":
-				$offerType = "Job offer";
+				$offerFilter = " AND (  J1_OfferType='Job offer'  OR  J1_OfferType='Job offer (post faster)'  ) ";
 				break;
 
 			case "pledges":
-				$offerType = "Donation pledge group";
+				$offerFilter = " AND J1_OfferType='Donation pledge group' ";
 				break;
 
 			case "volunteers":
-				$offerType = "Looking for volunteers";
+				$offerFilter = " AND J1_OfferType='Looking for volunteers' ";
 				break;
 
 			default:
 				$error = "<p>".$_SERVER["REQUEST_URI"].": ".gettext('ERROR: Unexpected condition')."</p>";
 				throw new Exception($error,false);
 		}
-		$result = $this->manager->getJobApplicationsForEntity(" AND J1_OfferType='".$offerType."' ");
+		$result = $this->manager->getJobApplicationsForEntity($offerFilter);
 
 		$smarty->assign('jobOfferId', $result[0]);
 		$smarty->assign('entityId', $result[1]);
@@ -95,7 +95,7 @@ class ViewJobApplicationsStateForm
 		$smarty->assign('offerType', $result[5]);
 
 
-		if ( $offerType == "Donation pledge group" )
+		if ( $_GET["section"] == "pledges" )
 		{
 			for ($i=0; $i < count($result[0]); $i++)
 			{

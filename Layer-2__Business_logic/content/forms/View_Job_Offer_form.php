@@ -125,10 +125,13 @@ class ViewJobOfferForm
 		$result = $this->manager->getJobOffer($_GET['JobOfferId']);
 
 
+		$this->data['OfferType'] = $result[62][0];
+
 		// If it is not the right notice type for this viewer then redirect to the right one
-		switch($result[62][0])
+		switch($this->data['OfferType'])
 		{
 			case 'Job offer':
+			case 'Job offer (post faster)':
 			break;
 
 			case 'Donation pledge group':
@@ -244,6 +247,7 @@ class ViewJobOfferForm
 		$result = $this->manager->getEntity($this->data['EntityId']); // EntityId, owner of the JobOffer, to be shown at the template.
 
 		$this->data['Email'] = $result[0][0];
+		$this->data['WantEmail'] = $result[20][0];
 
 		$this->data['EntityType'] = $result[2][0];
 

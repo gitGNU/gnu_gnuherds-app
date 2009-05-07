@@ -1,8 +1,7 @@
 {*
-Authors: Davi Leal, Victor Engmark
+Authors: Davi Leal
 
-Copyright (C) 2006, 2007, 2008, 2009 Davi Leal <davi at leals dot com>
-              2007, 2008, 2009 Victor Engmark <victor dot engmark at gmail dot com>
+Copyright (C) 2009 Davi Leal <davi at leals dot com>
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Affero General Public License as published by the Free Software Foundation,
@@ -17,36 +16,68 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}My notices{/t}</h3>
+<h3>{t}Post offer{/t}</h3>
 
 
-<ul id="tablist">
-<li><a {if $smarty.get.section eq '' or $smarty.get.section eq 'offers'} class="current" {/if}
-	href="offers?owner=me&section=offers">{t}FS job offers{/t}</a></li>
-<li><a {if $smarty.get.section eq 'pledges'} class="current" {/if}
-	href="offers?owner=me&section=pledges">{t}FS pledges{/t}</a></li>
-<li><a {if $smarty.get.section eq 'volunteers'} class="current" {/if}
-	href="offers?owner=me&section=volunteers">{t}FS volunteers{/t}</a></li>
-</ul>
+<p>
+{t escape='no'
+  1='<a href="offers?action=edit&amp;id=">'
+  2='<a href="pledges?action=edit&amp;id=">'
+  3='<a href="volunteers?action=edit&amp;id=">'
+  4='</a>'
+}Are you posting a %1paid job%4, making a donation %2pledge%4, or looking for %3volunteers%4?{/t}
+</p>
 
-<div id="tab">
-{if $smarty.get.section eq '' or $smarty.get.section eq 'offers'}
-	{include file="Manage_Job_Offers_job_offer_form.tpl"}
-{elseif $smarty.get.section eq 'pledges'}
-	{include file="Manage_Job_Offers_donation_pledge_group_form.tpl"}
-{elseif $smarty.get.section eq 'volunteers'}
-	{include file="Manage_Job_Offers_look_for_volunteers_form.tpl"}
-{else}
-	{t}ERROR: Unexpected condition{/t}
-{/if}
-</div>
+<br>
 
+<table class="center">
+<tr>
+
+<td><div class="spacerB"></div></td>
+
+<td>
+<a href="offers?action=edit&amp;id=">
+<img src="/themes/red_Danijel/images/contracts.png" alt="{t}FS job offers{/t}"><br>
+</a>
+<a href="offers?action=edit&amp;id=">
+{t}job offers{/t}
+</a>
+</td>
+
+<td><div class="spacerB"></div></td>
+
+<td>
+<a href="pledges?action=edit&amp;id=">
+<img src="/themes/red_Danijel/images/donations.png" alt="{t}FS pledges{/t}"><br>
+</a>
+<a href="pledges?action=edit&amp;id=">
+{t}pledges{/t}
+</a>
+</td>
+
+<td><div class="spacerB"></div></td>
+
+<td>
+<a href="volunteers?action=edit&amp;id=">
+<img src="/themes/red_Danijel/images/volunteers.png" alt="{t}FS volunteers{/t}"><br>
+</a>
+<a href="volunteers?action=edit&amp;id=">
+{t}volunteers{/t}
+</a>
+</td>
+
+<tr>
+</table>
+
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
 
 
-<table class="marginA">
+<table class="marginB">
 {include file="button-to-create-job-offer.tpl"}
 
 <!-- {include file="button-to-create-donation-pledge-group.tpl"} -->

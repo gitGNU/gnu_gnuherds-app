@@ -19,7 +19,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<div class="locale">
+<div id="locale">
 <ul>
 {assign var='cleanURI' value=$smarty.server.REQUEST_URI|regex_replace:"/.language=.._../":""}
 
@@ -40,9 +40,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </ul>
 </div>
 
-<div class="header">
+<div id="header"> 
 
-<div class="logo">
+<div id="logo">
 {if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/Home.php" and $smarty.server.REQUEST_URI neq "/index.php"}
 <a href="/">
 {/if}
@@ -53,14 +53,25 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </div>
 
 <div id="header_title">
-{t}Free Software Association{/t}
+{t escape='no'
+  1='<br>'
+}Free Software%1Association{/t}
 </div>
 
-<div class="agpl">
+<div id="agpl">
 <p><a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html"><img src="themes/red_Danijel/images/agplv3-155x51.png" alt="GNU Affero GPL v3"></a><br>{t escape='no'
   1='<a href="gnuherds-online.tar.gz">'
   2='</a>'
-}%1Download the project source code!%2{/t}</p>
+}%1Download the source code!%2{/t}</p>
+</div>
+
+<div id="float_center">
+<div id="buttons">
+<ul>
+<li><a href="notices">{'List offers'|gettext|strip:'&nbsp;'}</a></li>
+<li><a href="notices?action=edit">{'Post offer'|gettext|strip:'&nbsp;'}</a></li>
+</ul>
+</div>
 </div>
 
 </div>

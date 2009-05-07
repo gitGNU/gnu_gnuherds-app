@@ -17,7 +17,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<form name="dataForm" method="post" action="offers?action=edit&id={$smarty.get.JobOfferId}">
+<form name="dataForm" method="post" action="offers?action=edit&id={$smarty.get.JobOfferId}&section=">
 
 <table>
 

@@ -104,7 +104,8 @@ class ViewDonationPledgeGroupForm
 				// Not logged in. Make the 'magic' flag.
 				$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
 
-				$EntityId = $this->manager->getEntityId(trim($_POST['Email']),'REQUEST_TO_SUBSCRIBE_TO_NOTICE',$magic); // It registers the email and send the verification email if it is needed
+				$offerType = 'Donation pledge group';
+				$EntityId = $this->manager->getEntityId(trim($_POST['Email']),'REQUEST_TO_SUBSCRIBE_TO_NOTICE',$offerType,$magic); // It registers the email and send the verification email if it is needed
 
 				$this->state['IsAlreadySubscribed'] = $this->manager->IsAlreadySubscribed( $EntityId, $_GET['JobOfferId'] );
 

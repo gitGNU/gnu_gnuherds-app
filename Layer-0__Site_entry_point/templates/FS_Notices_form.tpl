@@ -1,8 +1,7 @@
 {*
-Authors: Davi Leal, Victor Engmark
+Authors: Davi Leal
 
-Copyright (C) 2006, 2007, 2008, 2009 Davi Leal <davi at leals dot com>
-              2007, 2008, 2009 Victor Engmark <victor dot engmark at gmail dot com>
+Copyright (C) 2009 Davi Leal <davi at leals dot com>
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Affero General Public License as published by the Free Software Foundation,
@@ -19,13 +18,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <h3>{t}FS job offers{/t}</h3>
 
+<table border="0" class="marginA">
+{include file="table-to-list-job-offers.tpl"}
+</table>
 
-{include file="offer-type-bar.tpl"}
-
-
-<p>
-{t}Get in contact with some of the best available Free Software experts and their companies. Solve your problems today with the best system administrators, developers, testers, documentalists, etc.{/t}
-</p>
+<br>
 
 <table class="marginA">
 {include file="button-to-create-job-offer.tpl"}
@@ -35,6 +32,32 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <br>
 <br>
 
-<table border="0">
-{include file="table-to-list-job-offers.tpl"}
+
+<h3>{t}FS pledges{/t}</h3>
+
+<table border="0" class="marginA">
+{include file="table-to-list-donation-pledge-groups.tpl"}
+</table>
+
+<br>
+
+<table class="marginA">
+{include file="button-to-create-donation-pledge-group.tpl"}
+</table>
+
+<br>
+<br>
+<br>
+
+
+<h3>{t}Looking for volunteers{/t}</h3>
+
+<table border="0" class="marginA">
+{include file="table-to-list-look-for-volunteers.tpl"}
+</table>
+
+<br>
+
+<table class="marginA">
+{include file="button-to-create-look-for-volunteers.tpl"}
 </table>

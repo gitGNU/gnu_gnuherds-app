@@ -21,7 +21,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <div class="menu">
 
 <ul>
-<li>{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/index.php"}<a href="/">{/if}{t}Home{/t}{if $smarty.server.REQUEST_URI neq "/" and $smarty.server.REQUEST_URI neq "/index.php"}</a>{/if}</li>
+<li>{if $smarty.server.REQUEST_URI neq "/home"}<a href="home">{/if}{t}Home{/t}{if $smarty.server.REQUEST_URI neq "/home"}</a>{/if}</li>
 <li>{if $smarty.server.REQUEST_URI neq "/charter"}<a href="charter">{/if}{t}Charter (draft){/t}{if $smarty.server.REQUEST_URI neq "/charter"}</a>{/if}</li>
 <li>{if $smarty.server.REQUEST_URI neq "/development"}<a href="development">{/if}{t}Coders' guide{/t}{if $smarty.server.REQUEST_URI neq "/development"}</a>{/if}</li>
 <li>{if $smarty.server.REQUEST_URI neq "/faq"}<a href="faq">{/if}{t}FAQ{/t}{if $smarty.server.REQUEST_URI neq "/faq"}</a>{/if}</li>

@@ -90,7 +90,7 @@ DROP TABLE LL_Languages;
 
 
 CREATE TABLE LJ_OfferType (
-        LJ_Id            varchar(22) PRIMARY KEY CHECK (LJ_Id <> '')
+        LJ_Id            varchar(23) PRIMARY KEY CHECK (LJ_Id <> '')
 );
 
 
@@ -493,7 +493,7 @@ CREATE TABLE J1_JobOffers ( -- XXX: TODO: The idea is that maybe some of the vol
         J1_E1_Id           integer REFERENCES E1_Entities(E1_Id) NOT NULL, -- Employer identity: being a Person, Cooperative, Company or non-profit Organization.
         J1_Visits          integer NOT NULL DEFAULT 0,
         J1_CompletedEdition bool DEFAULT 'false', -- The edition has been successfully completed. All checks pass.
-        J1_OfferType       varchar(22) REFERENCES LJ_OfferType(LJ_Id) NOT NULL,
+        J1_OfferType       varchar(23) REFERENCES LJ_OfferType(LJ_Id) NOT NULL,
 
         -- General data
 
@@ -551,8 +551,12 @@ CREATE TABLE J1_JobOffers ( -- XXX: TODO: The idea is that maybe some of the vol
         J1_NewJobOfferAlert             bool DEFAULT 'true', -- Must the new-job-offer alert be raised on this job offer?: true=Yes, false=No. -- NOT NULL
         -- J1_FitMyQualificationsAlert  bool DEFAULT 'true', -- Must the fit-my-qualifications alert be raised on this job offer?: true=Yes, false=No. -- NOT NULL
         J1_NewDonationPledgeGroupAlert  bool DEFAULT 'true', -- Must the new-donation-pledge-group alert be raised on this donation-pledge-group?: true=Yes, false=No. -- NOT NULL
-        J1_NewLookForVolunteersAlert    bool DEFAULT 'true' -- Must the new-look-for-volunteers alert be raised on this look-for-volunteers?: true=Yes, false=No. -- NOT NULL
-        -- J1_CustomAlert               bool DEFAULT 'true' -- Must the custom alerts be raised on this job offer?: true=Yes, false=No. -- NOT NULL
+        J1_NewLookForVolunteersAlert    bool DEFAULT 'true', -- Must the new-look-for-volunteers alert be raised on this look-for-volunteers?: true=Yes, false=No. -- NOT NULL
+        -- J1_CustomAlert               bool DEFAULT 'true', -- Must the custom alerts be raised on this job offer?: true=Yes, false=No. -- NOT NULL
+
+	-- To confirm notice creation. Note: If the Entity is logged in then both fields have to be set to NULL due to there is not need of confirmation.
+	J1_CreationMagic        varchar(512) DEFAULT NULL,
+	J1_CreationMagicExpire  timestamp DEFAULT 'now'
 );
 
 
@@ -632,6 +636,7 @@ TO "www-data" ;
 
 
 INSERT INTO LJ_OfferType VALUES ( 'Job offer' ); -- That is the same text which is shown in the head of offers view.
+INSERT INTO LJ_OfferType VALUES ( 'Job offer (post faster)' );
 INSERT INTO LJ_OfferType VALUES ( 'Donation pledge group' );
 INSERT INTO LJ_OfferType VALUES ( 'Looking for volunteers' );
 
