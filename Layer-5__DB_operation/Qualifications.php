@@ -198,7 +198,7 @@ class Qualifications
 
 				$ProfessionalExperienceSinceYear = isset($_POST['ProfessionalExperienceSinceYear']) ? trim($_POST['ProfessionalExperienceSinceYear']) : '';
 
-				$sqlQuery = "PREPARE query(integer,bool,integer) AS  UPDATE Q1_Qualifications SET Q1_ProfessionalExperienceSinceYear=$1,Q1_CompletedEdition=$2 WHERE Q1_E1_Id=$3;  EXECUTE query('".pg_escape_string($ProfessionalExperienceSinceYear)."','$completedEdition','{$_SESSION['EntityId']}');";
+				$sqlQuery = "PREPARE query(text,bool,integer) AS  UPDATE Q1_Qualifications SET Q1_ProfessionalExperienceSinceYear=$1,Q1_CompletedEdition=$2 WHERE Q1_E1_Id=$3;  EXECUTE query('".pg_escape_string($ProfessionalExperienceSinceYear)."','$completedEdition','{$_SESSION['EntityId']}');";
 				$this->postgresql->execute($sqlQuery,1);
 
 				// Profiles
