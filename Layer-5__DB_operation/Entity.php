@@ -520,7 +520,7 @@ class Entity
 			// Before scaling the image we check the width and height of the original image to avoid an image zoom.
 			if ( $image->getImageWidth() > $hsize  or  $image->getImageHeight() > $vsize )
 			{
-				$image->scaleImage($hsize,$vsize);
+				$image->scaleImage($hsize,$vsize, true);
 			}
 
 			$image->setImageFormat("PNG");
