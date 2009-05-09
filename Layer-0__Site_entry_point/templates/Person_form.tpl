@@ -114,12 +114,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td align="right"><label for="BirthYear">{t}Year of birth{/t}</label></td>
 <td>
-{if $data.BirthYear eq ''}
-	{assign var=BirthYear value='--'}
-{else}
-	{assign var=BirthYear value="01-01-`$data.BirthYear`"}
-{/if}
-{html_select_date prefix="Birth" time="$BirthYear" start_year="-100" end_year="-18" display_days=false display_months=false year_empty="" year_extra="id=BirthYear class=notRequired"}
+<input type="text" name="BirthYear" id="BirthYear" size="4" maxlength="4" class="notRequired" value="{$data.BirthYear}">
 </td>
 </tr>
 

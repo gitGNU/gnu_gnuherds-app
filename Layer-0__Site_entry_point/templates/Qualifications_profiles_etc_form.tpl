@@ -57,12 +57,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr>
 <td align="right"><span class="must">*</span><label for="ProfessionalExperienceSinceYear">{'Professional experience since'|gettext|strip:'&nbsp;'}</label></td>
 <td colspan="3">
-{if $data.ProfessionalExperienceSinceYear eq ''}
-	{assign var=ProfessionalExperienceSinceYear value='--'}
-{else}
-	{assign var=ProfessionalExperienceSinceYear value="01-01-`$data.ProfessionalExperienceSinceYear`"}
-{/if}
-{html_select_date prefix="ProfessionalExperienceSince" time="$ProfessionalExperienceSinceYear" start_year="-82" end_year="+0" display_days=false display_months=false year_empty="" year_extra="id= ProfessionalExperienceSinceYear class=required"}
+<input type="text" name="ProfessionalExperienceSinceYear" id="ProfessionalExperienceSinceYear" size="4" maxlength="4" class="notRequired" value="{$data.ProfessionalExperienceSinceYear}">
+
 </td>
 </tr>
 
