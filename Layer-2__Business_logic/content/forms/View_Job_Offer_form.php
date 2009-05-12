@@ -199,6 +199,13 @@ class ViewJobOfferForm
 		$this->data['TimeUnit'] = $result[24][0];
 		$this->data['Deadline'] = $result[28][0];
 
+		if ($result[130][0]=='t')
+			$this->data['Negotiable'] = "Yes";
+		elseif ($result[130][0]=='f')
+			$this->data['Negotiable'] = "No";
+		else
+			$this->data['Negotiable'] = "";
+
 		$this->data['ProfessionalExperienceSinceYear'] = trim($result[14][0]);
 		$this->data['AcademicLevel'] = trim($result[15][0]);
 
