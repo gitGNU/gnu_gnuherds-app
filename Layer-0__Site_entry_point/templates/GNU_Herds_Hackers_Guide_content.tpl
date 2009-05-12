@@ -114,6 +114,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 	<tr> <td><b>Davi</b>     <td>Web developer, Spanish Translator, etc.
 	<tr> <td><b>David</b>    <td>Web developer, second Italian Translator.
 	<tr> <td><b>Duarte</b>   <td>Portuguese Translator.
+	<tr> <td><b>Edgar</b>    <td>Web developer.
 	<tr> <td><b>Fatima</b>   <td>Quality Assurance and Functional Auditor.
 	<tr> <td><b>Federico</b> <td>Web developer.
 	<tr> <td><b>Gabriel</b>  <td>Data Base arquitecture Adviser.
