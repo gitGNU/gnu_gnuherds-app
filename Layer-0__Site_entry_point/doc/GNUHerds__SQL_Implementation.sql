@@ -526,6 +526,7 @@ CREATE TABLE J1_JobOffers ( -- XXX: TODO: The idea is that maybe some of the vol
 	J1_LM_TimeUnit           varchar(6), -- REFERENCES LM_TimeUnits(LM_Id), -- NOT NULL,
 	J1_Deadline              date,
         J1_LaborDay_Schedule     varchar(255), -- NOT NULL CHECK (J1_LaborDay_Schedule <> '') -- Days of labor, (e.g.: Monday-Friday), and it schedule. -- The payment can be at finishing the project. - - - XXX: This fields is not used. If we use it, use a combo box to avoid another free-to-fill field.
+        J1_Negotiable            bool DEFAULT NULL,
 
         -- Requirements: The JobOffer demand:
 

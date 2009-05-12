@@ -138,7 +138,20 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 {/if}
 
-<tr> <td colspan="4">&nbsp;</td> </tr> 
+<tr> <td colspan="4">&nbsp;</td> </tr>
+
+<tr>
+<td align="right"><label for="Negotiable">{'Negotiable'|gettext|strip:'&nbsp;'}</label></td>
+<td colspan="3">
+<select name="Negotiable" class="notRequired">
+<option label="" value=""></option>
+<option label="{t}No{/t}" value="No" {if $data.Negotiable eq 'No'}selected="selected"{/if}>{t}No{/t}</option>
+<option label="{t}Yes{/t}" value="Yes" {if $data.Negotiable eq 'Yes'}selected="selected"{/if}>{t}Yes{/t}</option>
+</select>
+</td>
+</tr>
+
+<tr> <td colspan="4">&nbsp;</td> </tr>
 
 <tr> <td colspan="4" class="subsection">&nbsp;</td> </tr>
 

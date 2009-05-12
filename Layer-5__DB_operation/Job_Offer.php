@@ -119,7 +119,7 @@ class JobOffer
 
 	public function getJobOffer($Id)
 	{
-		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_EstimatedEffort,J1_LM_TimeUnit,J1_E1_Id,J1_CompletedEdition,J1_Deadline,J1_VacancyTitle,J1_Description,J1_OfferType,J1_AllowCooperativeApplications FROM J1_JobOffers WHERE J1_Id=$1;  EXECUTE query('$Id');";
+		$sqlQuery = "PREPARE query(integer) AS  SELECT J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_LK_ContractType,J1_WageRank,J1_LU_Currency,J1_LB_WageRankByPeriod,J1_ProfessionalExperienceSinceYear,J1_LA_Id,J1_FreeSoftwareProjects,J1_City,J1_StateProvince,J1_LO_Country,J1_AvailableToTravel,J1_LO_JobLicenseAt,J1_EstimatedEffort,J1_LM_TimeUnit,J1_E1_Id,J1_CompletedEdition,J1_Deadline,J1_VacancyTitle,J1_Description,J1_OfferType,J1_AllowCooperativeApplications,J1_Negotiable FROM J1_JobOffers WHERE J1_Id=$1;  EXECUTE query('$Id');";
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 		$array = array();
@@ -167,6 +167,7 @@ class JobOffer
 		$array[23] = pg_fetch_all_columns($result, 21); // J1_EstimatedEffort
 		$array[24] = pg_fetch_all_columns($result, 22); // J1_LM_TimeUnit
 		$array[28] = pg_fetch_all_columns($result, 25); // J1_Deadline
+		$array[130] = pg_fetch_all_columns($result, 30); // J1_Negotiable
 
 		$array[14] = pg_fetch_all_columns($result, 13); // J1_ProfessionalExperienceSinceYear
 		$array[15] = pg_fetch_all_columns($result, 14); // J1_LA_Id
@@ -572,7 +573,14 @@ class JobOffer
 				$TimeUnit = isset($_POST['TimeUnit']) ? trim($_POST['TimeUnit']) : '';
 				$Deadline = ( isset($_POST['Deadline']) and trim($_POST['Deadline']) != '' ) ? "'".trim($_POST['Deadline'])."'" : 'null';
 
-				$sqlQuery = "PREPARE query(text,text,text,text,text,text,date,bool,integer) AS  UPDATE J1_JobOffers SET J1_LK_ContractType=$1,J1_WageRank=$2,J1_LU_Currency=$3,J1_LB_WageRankByPeriod=$4,J1_EstimatedEffort=$5,J1_LM_TimeUnit=$6,J1_Deadline=$7,J1_CompletedEdition=$8 WHERE J1_Id=$9;  EXECUTE query('$ContractType','".pg_escape_string($WageRank)."','".pg_escape_string($WageRankCurrency)."','$WageRankByPeriod','".pg_escape_string($EstimatedEffort)."','$TimeUnit',$Deadline,'$completedEdition','$J1_Id');";
+				if ($_POST['Negotiable'] == 'Yes')
+					$Negotiable = 'true';
+				elseif ($_POST['Negotiable'] == 'No')
+					$Negotiable = 'false';
+				else
+					$Negotiable = 'null';
+
+				$sqlQuery = "PREPARE query(text,text,text,text,text,text,date,bool,bool,integer) AS  UPDATE J1_JobOffers SET J1_LK_ContractType=$1,J1_WageRank=$2,J1_LU_Currency=$3,J1_LB_WageRankByPeriod=$4,J1_EstimatedEffort=$5,J1_LM_TimeUnit=$6,J1_Deadline=$7,J1_Negotiable=$8,J1_CompletedEdition=$9 WHERE J1_Id=$10;  EXECUTE query('$ContractType','".pg_escape_string($WageRank)."','".pg_escape_string($WageRankCurrency)."','$WageRankByPeriod','".pg_escape_string($EstimatedEffort)."','$TimeUnit',$Deadline,$Negotiable,'$completedEdition','$J1_Id');";
 				$this->postgresql->execute($sqlQuery,1);
 			break;
 

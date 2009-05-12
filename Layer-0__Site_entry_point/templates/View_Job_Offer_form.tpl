@@ -449,6 +449,23 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </tr>
 {/if}
 
+{if $data.Negotiable}
+<tr>
+<td colspan="4">&nbsp;</td>
+{if $data.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+{/if}
+</tr>
+
+<tr>
+<td align="right"><strong>{'Negotiable'|gettext|strip:'&nbsp;'}</strong>&nbsp;: </td>
+<td colspan="3" class="greenLight">{t}{$data.Negotiable}{/t}</td>
+{if $data.EntityId eq $smarty.session.EntityId}
+<td class="edit"></td>
+</tr>
+{/if}
+{/if}
+
 {/if}
 
 {/if}

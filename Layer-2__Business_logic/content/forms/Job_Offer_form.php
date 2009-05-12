@@ -466,6 +466,7 @@ class JobOfferForm extends SkillsForm
 				$this->data['EstimatedEffort'] = isset($_POST['EstimatedEffort']) ? trim($_POST['EstimatedEffort']) : '';
 				$this->data['TimeUnit'] = isset($_POST['TimeUnit']) ? $_POST['TimeUnit'] : '';
 				$this->data['Deadline'] = isset($_POST['Deadline']) ? trim($_POST['Deadline']) : '';
+				$this->data['Negotiable'] = $_POST['Negotiable']; // Same value, therefore we do not do the usual conversion, we just assign it.
 			break;
 
 			default:
@@ -1048,6 +1049,13 @@ class JobOfferForm extends SkillsForm
 		$this->data['EstimatedEffort'] = $result[23][0];
 		$this->data['TimeUnit'] = $result[24][0];
 		$this->data['Deadline'] = $result[28][0];
+
+		if ($result[130][0]=='t')
+			$this->data['Negotiable'] = "Yes";
+		elseif ($result[130][0]=='f')
+			$this->data['Negotiable'] = "No";
+		else
+			$this->data['Negotiable'] = "";
 
 		$this->data['ProfessionalExperienceSinceYear'] = $result[14][0];
 		$this->data['AcademicLevel'] = $result[15][0];
