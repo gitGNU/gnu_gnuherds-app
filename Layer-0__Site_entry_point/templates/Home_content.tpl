@@ -43,8 +43,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <p>&nbsp;</p>
 <p>{t}Mailing lists:{/t}</p>
 <ul>
-<li><a href="http://lists.gnuherds.org/mailman/listinfo/association">association</a> {t}is the project main list.{/t}</li>
-<li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev">gnuherds-app-dev</a> {t}to carry on the web application development.{/t}</li>
+<li><a href="http://lists.gnuherds.org/mailman/listinfo/association">association@gnuherds.org</a>: {t}It is the project public mailing list.{/t}</li>
+<li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev">gnuherds-app-dev@nongnu.org</a>: {t}It is used to carry on the development of this web application.{/t}</li>
 </ul>
 <p>&nbsp;</p>
 <p>IRC:</p>
