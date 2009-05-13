@@ -16,7 +16,7 @@
 // program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 
-class HomeContent
+class AboutContent
 {
 	public function processForm()
 	{
@@ -26,7 +26,7 @@ class HomeContent
 	{
 		$smarty = new Smarty;
 		$smarty->assign('webpage', $this);
-		$smarty->display("Home_content.tpl");
+		$smarty->display("About_content.tpl");
 	}
 }
 ?>

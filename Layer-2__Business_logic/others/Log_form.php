@@ -72,7 +72,7 @@ class LogForm
 		$phpTools = new PHPTools();
 		$phpTools->resetPHPsession();
 
-		header("Location: http://$_SERVER[SERVER_NAME]/"); // We reditect to the home page
+		header("Location: http://$_SERVER[SERVER_NAME]/"); // We reditect to the main page, that is to say, '/'.
 		exit;
 	}
 }

@@ -29,11 +29,11 @@ if ( $_SESSION['Logged'] == '1' and ( !isset($_SERVER['HTTPS']) or $_SERVER['HTT
 session_start(); 
 
 require_once "../Layer-1__Page_builder/Web_Page.php";
-require_once "../Layer-2__Business_logic/content/static/Home_content.php";
+require_once "../Layer-2__Business_logic/content/static/About_content.php";
 
-$homeContent = new HomeContent();
+$aboutContent = new AboutContent();
 
-$webPage = new WebPage($homeContent);
+$webPage = new WebPage($aboutContent);
 $webPage->processPage();
 $webPage->printPage();
 ?>

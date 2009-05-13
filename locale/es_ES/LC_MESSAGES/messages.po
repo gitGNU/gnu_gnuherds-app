@@ -42,8 +42,8 @@ msgstr "%1¡Descargue el código fuente!%2"
 #
 # menu.tpl
 #
-msgid "Home"
-msgstr "Portada"
+msgid "About GNU Herds"
+msgstr "Acerca de GNU Herds"
 
 msgid "Charter (draft)"
 msgstr "Estatutos (borrador)"
@@ -283,7 +283,7 @@ msgid "ERROR: Can not delete the photo or logo file!"
 msgstr "ERROR: ¡No se puede borrar el fichero de foto o logotipo!."
 
 #
-# Home_content.tpl
+# About_content.tpl
 #
 msgid "GNU Herds is a not-for-profit %1true-democratic%3 association which %2aims%3 to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency."
 msgstr "GNU Herds es una asociación %1democrática%3 sin ánimo de lucro, cuyo %2objeto%3 es asistir y promover personas en trabajos remunerados como autores de Software Libre, obteniendo las más altas cotas de competencia y eficiencia."
