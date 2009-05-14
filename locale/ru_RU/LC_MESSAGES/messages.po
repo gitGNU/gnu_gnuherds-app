@@ -1481,7 +1481,7 @@ msgstr "Не заполняйте поля адресов если сделан�
 #
 # Manage_Job_Offer_Applications_form.tpl
 #
-msgid "Manage the job offer applications"
+msgid "Manage job offer applications"
 msgstr "Управление заявками на предложенную работу"
 
 msgid "Offer title"

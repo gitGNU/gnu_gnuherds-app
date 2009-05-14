@@ -1669,7 +1669,7 @@ msgstr "Contacto"
 #
 # Manage_Job_Offer_Applications_form.tpl
 #
-msgid "Manage the job offer applications"
+msgid "Manage job offer applications"
 msgstr "Gestisci le candidature alle offerte di Lavoro"
 
 msgid "Offer title"

@@ -1480,7 +1480,7 @@ msgstr "Não preencha qualquer campo de endereço caso a oferta seja em Tele-tra
 #
 # Manage_Job_Offer_Applications_form.tpl
 #
-msgid "Manage the job offer applications"
+msgid "Manage job offer applications"
 msgstr "Gerir as candidaturas à oferta de emprego"
 
 msgid "Offer title"

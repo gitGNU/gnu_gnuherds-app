@@ -1666,7 +1666,7 @@ msgstr "No llene ningún campo de dirección si la oferta es Teletrabajo."
 #
 # Manage_Job_Offer_Applications_form.tpl
 #
-msgid "Manage the job offer applications"
+msgid "Manage job offer applications"
 msgstr "Gérer les candidatures à l'offre d'emploi"
 
 msgid "Offer title"
