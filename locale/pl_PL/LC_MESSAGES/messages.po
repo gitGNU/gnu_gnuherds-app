@@ -40,11 +40,11 @@ msgstr "Zmień język"
 # but it's commonly left without translation.
 # To jest na głównej stronie. Zatem wypadało by chyba zostawić jak jest
 # non-profit sie nie tlumaczy !
-msgid "Free Software Association"
-msgstr "Free Software Association"
+msgid "Free Software%1Association"
+msgstr "Free Software%1Association"
 
-msgid "%1Download the project source code!%2"
-msgstr "%1Pobierz kod źródłowy projektu%2"
+msgid "%1Download the source code!%2"
+msgstr "%1Pobierz kod źródłowy%2"
 
 # menu.tpl
 msgid "Home"

@@ -34,12 +34,12 @@ msgstr ""
 msgid "Change language"
 msgstr "Cambia lenguaje"
 
-msgid "Free Software Association"
-msgstr "Association pour le Logiciel Libre"
+msgid "Free Software%1Association"
+msgstr "Association pour le%1Logiciel Libre"
 
 #, fuzzy
-msgid "%1Download the project source code!%2"
-msgstr "%1¡Descargue el código fuente del proyecto!%2"
+msgid "%1Download the source code!%2"
+msgstr "%1¡Descargue el código fuente!%2"
 
 #
 # menu.tpl
