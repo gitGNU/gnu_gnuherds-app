@@ -43,8 +43,8 @@ class LanguageForm
 
 			if ( /* $_SESSION["Language"] == "de_DE"
 			  or */ $_SESSION["Language"] == "en_US"
-			  or $_SESSION["Language"] == "es_ES" /*
-			  or $_SESSION["Language"] == "fr_FR" */
+			  or $_SESSION["Language"] == "es_ES"
+			  or $_SESSION["Language"] == "fr_FR"
 			  or $_SESSION["Language"] == "it_IT"
 			  or $_SESSION["Language"] == "pl_PL"
 			  or $_SESSION["Language"] == "pt_PT"
@@ -65,9 +65,9 @@ class LanguageForm
 					"es_AD" => true, "es_AR" => true, "es_BO" => true, "es_CL" => true, "es_CO" => true, "es_CR" => true,
 					"es_CU" => true, "es_DO" => true, "es_EC" => true, "es_ES" => true, "es_GI" => true, "es_GT" => true,
 					"es_HN" => true, "es_MX" => true, "es_NI" => true, "es_PA" => true, "es_PE" => true, "es_PR" => true,
-					"es_PY" => true, "es_SV" => true, "es_US" => true, "es_UY" => true, "es_VE" => true, /*
+					"es_PY" => true, "es_SV" => true, "es_US" => true, "es_UY" => true, "es_VE" => true,
 					"fr" => true,
-					"fr_BE" => true, "fr_CA" => true, "fr_CH" => true, "fr_FR" => true, "fr_LU" => true, */
+					"fr_BE" => true, "fr_CA" => true, "fr_CH" => true, "fr_FR" => true, "fr_LU" => true,
 					"it" => true,
 					"it_IT" => true, "it_CH" => true,
 					"pl" => true,
