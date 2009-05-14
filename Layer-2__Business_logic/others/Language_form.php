@@ -41,8 +41,8 @@ class LanguageForm
 		{
 			$default_language = "en_US"; // The main and default language of this project is the English language
 
-			if ( $_SESSION["Language"] == "de_DE"
-			  or $_SESSION["Language"] == "en_US"
+			if ( /* $_SESSION["Language"] == "de_DE"
+			  or */ $_SESSION["Language"] == "en_US"
 			  or $_SESSION["Language"] == "es_ES"
 			  or $_SESSION["Language"] == "fr_FR"
 			  or $_SESSION["Language"] == "it_IT"
@@ -54,9 +54,9 @@ class LanguageForm
 			}
 			else // The client has not specified a language, so we try to guess the best default language according to the user browser settings.
 			{
-				$supported = array(
+				$supported = array( /*
 					"de" => true,
-					"de_AT" => true, "de_BE" => true, "de_CH" => true, "de_DE" => true, "de_LU" => true,
+					"de_AT" => true, "de_BE" => true, "de_CH" => true, "de_DE" => true, "de_LU" => true, */
 					"en" => true,
 					"en_AU" => true, "en_BW" => true, "en_CA" => true, "en_DK" => true, "en_GB" => true, "en_HK" => true,
 					"en_IE" => true, "en_IN" => true, "en_NZ" => true, "en_PH" => true, "en_SG" => true, "en_US" => true,

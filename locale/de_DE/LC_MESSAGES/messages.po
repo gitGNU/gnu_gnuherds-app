@@ -99,6 +99,8 @@ msgstr "Definições"
 msgid "Administration"
 msgstr "Administração"
 
+#, fuzzy
+# This translation does not really match, but I not have an idea how to translate it either.
 msgid "Resources"
 msgstr "Hilfsmittel/Quelle"
 
@@ -138,6 +140,8 @@ msgstr "Neue Oganisation?"
 #
 # log_out_box.tpl
 #
+#, fuzzy
+### We must not show two options in the translations. We must do it right!
 msgid "Log out"
 msgstr "Ausloggen/Ausgang"
 
