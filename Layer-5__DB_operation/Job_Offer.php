@@ -809,7 +809,7 @@ class JobOffer
 			$VacancyTitle = gettext("not specified");
 
 		if (strlen($VacancyTitle) > 100)
-			return substr($VacancyTitle,0,100);
+			return substr($VacancyTitle,0,97)."...";
 		else
 			return $VacancyTitle;
 	}
