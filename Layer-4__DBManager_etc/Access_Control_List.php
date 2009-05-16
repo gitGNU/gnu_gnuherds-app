@@ -31,6 +31,12 @@ class AccessControlList
 		throw new Exception($error,false);
 	}
 
+	private function notGranted_hintSessionExpired()
+	{
+		$error = "<p>".gettext('The access is not granted.')."</p><p>".gettext('Has the logged session expired?')."</p>";
+		throw new Exception($error,false);
+	}
+
 	private function notActive()
 	{
 		$error = "<p>".gettext('Such job offer is already closed, removed, or never was here.')."</p>";
@@ -173,16 +179,34 @@ class AccessControlList
 
 			case "WRITE":
 				$joboffer = $jobOffer->getJobOffer($J1_Id);
-				if ( $joboffer[62][0] == 'Donation pledge group' )
-				{
-					$this->granted(); // For Donation pledge groups anyone can edit the group if they follows the web application work flow
-				}
-				else
-				{
-					$joboffers = $jobOffer->getJobOffersForEntity(); // Job Offers for the logged Entity
 
-					if ( !in_array( $J1_Id, $joboffers[0] ) )
+				switch ($joboffer[62][0]) {
+					case 'Job offer':
+					case 'Job offer (post faster)':
+
+						if ( $_SESSION['Logged'] == '1' )
+						{
+							$joboffers = $jobOffer->getJobOffersForEntity(); // Job Offers for the logged Entity
+						}
+
+						if ( !in_array( $J1_Id, $joboffers[0] ) )
+							$this->notGranted_hintSessionExpired();
+						else
+							$this->granted();
+
+						break;
+
+					case 'Donation pledge group':
+						$this->granted(); // Anyone can edit if they follows the web application work flow
+						break;
+
+					case 'Looking for volunteers':
+						$this->granted(); // Anyone can edit if they follows the web application work flow
+						break;
+
+					default:
 						$this->notGranted();
+
 				}
 
 				break;
