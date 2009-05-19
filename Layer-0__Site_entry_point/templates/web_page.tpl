@@ -46,11 +46,13 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {include file="header.tpl"}
 </div>
    <div id="bd" role="main">
+    <div id="yui-main"> 
      <div class="yui-b">
        <div class="yui-g">
 	 {include file="content.tpl"}
        </div>
      </div>
+    </div>
      <div class="yui-b">
        {include file="menu.tpl"}
 
