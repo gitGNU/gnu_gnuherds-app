@@ -34,7 +34,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <style type="text/css" media="screen">
 
-@import url(/themes/red_Danijel/css/screen.css);
+@import url(/themes/mattl/screen.css);
 
 </style>
 
