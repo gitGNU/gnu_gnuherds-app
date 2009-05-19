@@ -17,10 +17,6 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<table id="content" cellpadding="0" cellspacing="0" rules="none" border="0">
-<tr>
-<td>
-
 {if $smarty.post.login != '' }{* The user is asking for testing him/her account-password. *}
 	{* Show the result of the logForm processing to the user *}
 	{if $smarty.session.Logged eq '1' }
@@ -43,7 +39,3 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 		{/if}
 	{/if}
 {/if}
-
-</td>
-</tr>
-</table>
