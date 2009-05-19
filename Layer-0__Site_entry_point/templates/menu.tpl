@@ -18,8 +18,6 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<div class="menu">
-
 <ul>
 <li>{if $smarty.server.REQUEST_URI neq "/about"}<a href="about">{/if}{t}About GNU Herds{/t}{if $smarty.server.REQUEST_URI neq "/about"}</a>{/if}</li>
 <li>{if $smarty.server.REQUEST_URI neq "/charter"}<a href="charter">{/if}{t}Charter (draft){/t}{if $smarty.server.REQUEST_URI neq "/charter"}</a>{/if}</li>
@@ -87,5 +85,3 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <li>{if $smarty.server.REQUEST_URI neq "/volunteers"}<a href="volunteers">{/if}{t}FS volunteers{/t}{if $smarty.server.REQUEST_URI neq "/volunteers"}</a>{/if}</li>
 <li>{if $smarty.server.REQUEST_URI neq "/business_models"}<a href="business_models">{/if}{t}FS business models{/t}{if $smarty.server.REQUEST_URI neq "/business_models"}</a>{/if}</li>
 </ul>
-
-</div>

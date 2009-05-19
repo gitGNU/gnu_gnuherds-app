@@ -1,4 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
 
 <!--
 Authors: Neal Coombes, Davi Leal, Sameer Naik
@@ -28,7 +29,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <title>GNU Herds - {t}Free Software Association{/t}</title>
 <link rel="icon" href="/themes/red_Danijel/icons/gh-icon.png" type="image/png">
-
 <link rel="stylesheet" type="text/css" href="/themes/common/reset-fonts-grids.css">
 <link rel="stylesheet" type="text/css" href="/themes/common/base.css">
 
@@ -40,28 +40,27 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 </head>
 
-<body onload="if ('LoginEmail' in document.LogForm)  if(document.LogForm.LoginEmail.value=='') document.LogForm.LoginEmail.value='email';">
-<div id="app">
+<body>
+<div id="doc2" class="yui-t4">
+<div id="hd" role="banner">
 {include file="header.tpl"}
-
-<div id="main">
-
-<div class="sidebar">
-{include file="menu.tpl"}
-
-{if $smarty.session.Logged == '1' }
-{include file="log_out_box.tpl"}
-{else}
-{include file="log_in_box.tpl"}
-{/if}
 </div>
+   <div id="bd" role="main">
+     <div class="yui-b">
+       <div class="yui-g">
+	 {include file="content.tpl"}
+       </div>
+     </div>
+     <div class="yui-b">
+       {include file="menu.tpl"}
 
-{include file="content.tpl"}
-</div>
-
-</div>
-
-{include file="foot.tpl"}
+       {if $smarty.session.Logged == '1' }
+       {include file="log_out_box.tpl"}
+       {else}
+       {include file="log_in_box.tpl"}
+       {/if}
+     </div>
+   </div>
+   <div id="ft" role="contentinfo">{include file="foot.tpl"}</div>
 </body>
-
 </html>
