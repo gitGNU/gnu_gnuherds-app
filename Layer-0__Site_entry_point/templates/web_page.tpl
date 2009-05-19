@@ -28,7 +28,16 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <title>GNU Herds - {t}Free Software Association{/t}</title>
 <link rel="icon" href="/themes/red_Danijel/icons/gh-icon.png" type="image/png">
-<link rel="stylesheet" type="text/css" href="/themes/red_Danijel/css/screen.css">
+
+<link rel="stylesheet" type="text/css" href="/themes/common/reset-fonts-grids.css">
+<link rel="stylesheet" type="text/css" href="/themes/common/base.css">
+
+<style type="text/css" media="screen">
+
+@import url(/themes/red_Danijel/css/screen.css);
+
+</style>
+
 </head>
 
 <body onload="if ('LoginEmail' in document.LogForm)  if(document.LogForm.LoginEmail.value=='') document.LogForm.LoginEmail.value='email';">
