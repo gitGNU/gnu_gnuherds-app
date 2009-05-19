@@ -35,35 +35,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
   <li>{t}Telecommute{/t}</li>
 </ul>
 
-<p>&nbsp;</p>
-
-<table class="center">
-<tr>
-<td><div class="spacerB"></div></td>
-<td>
-<a href="notices">
-<img src="/themes/red_Danijel/images/contracts.png" alt="{t}FS job offers{/t}"><br>
-</a>
-{t}job offers{/t}
-</td>
-<td><div class="spacerB"></div></td>
-<td>
-<a href="notices">
-<img src="/themes/red_Danijel/images/donations.png" alt="{t}FS pledges{/t}"><br>
-</a>
-{t}pledges{/t}
-</td>
-<td><div class="spacerB"></div></td>
-<td>
-<a href="notices">
-<img src="/themes/red_Danijel/images/volunteers.png" alt="{t}FS volunteers{/t}"><br>
-</a>
-{t}volunteers{/t}
-</td>
-<tr>
-</table>
-
-<p>&nbsp;</p>
+<ul id="job-types">
+<li id="offers"><a href="notices">{t}FS job offers{/t}</a></li>
+<li id="donations"><a href="notices">{t}FS pledges{/t}</a></li>
+<li id="volunteers"><a href="notices">{t}FS volunteers{/t}</a></li>
+</ul>
 
 <p>{t escape='no' 1='<a href="mailto:gnuherds-app-dev@nongnu.org">gnuherds-app-dev</a>'}Other modules could be developed. Send an email with your proposal to the %1 email list. The next steps can be on your side.{/t}</p>
 <p>{t escape='no'
@@ -76,8 +52,5 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <li><a href="http://lists.gnuherds.org/mailman/listinfo/association">association@gnuherds.org</a>: {t}It is the project public mailing list.{/t}</li>
 <li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev">gnuherds-app-dev@nongnu.org</a>: {t}It is used to carry on the development of this web application.{/t}</li>
 </ul>
-<p>&nbsp;</p>
-<p>IRC:</p>
-<ul>
-<li>/server irc.freenode.net <br> /join #gnuherds</li>
-</ul>
+
+<p>IRC: <a href="irc://irc.gnu.org#gnuherds">#gnuherds</a></p>
