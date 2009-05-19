@@ -19,16 +19,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h1 id="logo">
-{if $smarty.server.REQUEST_URI neq "/about" and $smarty.server.REQUEST_URI neq "/About.php"}
-<a href="/about">
-{/if}
-{t}GNU Herds &mdash; Free Software Association{/t}
-
-{if $smarty.server.REQUEST_URI neq "/about" and $smarty.server.REQUEST_URI neq "/About.php"}
-</a>
-{/if}
-</h1>
+<h1 id="logo"><a href="/about/">GNU Herds &mdash; Free Software Association</a></h1>
 
 <ul>
 <li><a href="notices">{'List offers'|gettext|strip:'&nbsp;'}</a></li>
