@@ -17,12 +17,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
 <tr valign="top">
-<td class="tdTitle"><strong>{'Donation pledge group title'|gettext|strip:'&nbsp;'}&nbsp;</strong></td>
-<td class="tdTitle"><strong>{'Last update'|gettext|strip:'&nbsp;'}&nbsp;</strong></td>
-<td></td>
-<td class="tdTitle"><strong>{'Donations'|gettext|strip:'&nbsp;'}&nbsp;</strong></td>
-<td></td>
-<td><a href="pledges?format=rss{if $smarty.session.Language neq 'en_US'}&language={$smarty.session.Language}{/if}"><img src="themes/red_Danijel/images/rss.png" alt="RSS"></a></td>
+<th>{'Donation pledge group title'|gettext|strip:'&nbsp;'}</th>
+<th>{'Last update'|gettext|strip:'&nbsp;'}</th>
+<th>{'Donations'|gettext|strip:'&nbsp;'}</th>
 </tr>
 
 {if count($data.DonationPledgeGroup.JobOfferId) == 0 }

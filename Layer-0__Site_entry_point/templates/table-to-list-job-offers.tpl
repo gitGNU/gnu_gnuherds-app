@@ -17,12 +17,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
 <tr valign="top">
-<td class="tdTitle"><strong>{'Vacancy title'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-<td class="tdTitle"><strong>{'Location'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-<td class="tdTitle"><strong>{'Offer date'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;</strong></td>
-<td class="tdTitle"><strong>{'Offered by'|gettext|strip:'&nbsp;'}&nbsp;&nbsp;</strong></td>
-<td></td>
-<td><a href="offers?format=rss{if $smarty.session.Language neq 'en_US'}&language={$smarty.session.Language}{/if}"><img src="themes/red_Danijel/images/rss.png" alt="RSS"></a></td>
+<th>{'Vacancy title'|gettext|strip:'&nbsp;'}</th>
+<th>{'Location'|gettext|strip:'&nbsp;'}</th>
+<th>{'Offer date'|gettext|strip:'&nbsp;'}</th>
+<th>{'Offered by'|gettext|strip:'&nbsp;'}</th>
 </tr>
 
 {if count($data.JobOffers.JobOfferId) == 0 }
