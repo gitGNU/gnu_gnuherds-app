@@ -41,8 +41,8 @@ msgstr "Cambia lingua"
 msgid "Free Software%1Association"
 msgstr "Associazione%1Software Libero"
 
-msgid "%1Download the source code!%2"
-msgstr "%1Scarica il codice sorgente%2"
+msgid "Download the source code!"
+msgstr "Scarica il codice sorgente"
 
 #
 # menu.tpl

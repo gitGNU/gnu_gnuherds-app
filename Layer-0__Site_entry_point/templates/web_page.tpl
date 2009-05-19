@@ -32,10 +32,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </head>
 
 <body onload="if ('LoginEmail' in document.LogForm)  if(document.LogForm.LoginEmail.value=='') document.LogForm.LoginEmail.value='email';">
-<div>
+<div id="app">
 {include file="header.tpl"}
 
-<div id="app">
+<div id="main">
 
 <div class="sidebar">
 {include file="menu.tpl"}
@@ -51,6 +51,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </div>
 
 </div>
+
+{include file="foot.tpl"}
 </body>
 
 </html>

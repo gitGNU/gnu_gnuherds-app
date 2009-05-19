@@ -37,8 +37,8 @@ msgid "Free Software%1Association"
 msgstr "Assoziation der%1Freie Software"
 
 #, fuzzy
-msgid "%1Download the source code!%2"
-msgstr "%1Faça download do código fonte!%2"
+msgid "Download the source code!"
+msgstr "Faça download do código fonte!"
 
 #
 # menu.tpl

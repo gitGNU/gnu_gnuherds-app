@@ -46,5 +46,4 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 </td>
 </tr>
-{include file="foot.tpl"}
 </table>

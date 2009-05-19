@@ -58,13 +58,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 }Free Software%1Association{/t}
 </div>
 
-<div id="agpl">
-<p><a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html"><img src="themes/red_Danijel/images/agplv3-155x51.png" alt="GNU Affero GPL v3"></a><br>{t escape='no'
-  1='<a href="gnuherds-online.tar.gz">'
-  2='</a>'
-}%1Download the source code!%2{/t}</p>
-</div>
-
 <div id="float_center">
 <div id="buttons">
 <ul>

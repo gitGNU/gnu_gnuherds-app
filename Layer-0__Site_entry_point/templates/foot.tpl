@@ -16,15 +16,21 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<tr><td>&nbsp;</td></tr>
-<tr><td>&nbsp;</td></tr>
-
-<tr>
+<table id="foot">
+<tr valign="bottom">
 <td>
-<p class="foot">
 {t escape='no'
   1='<a href="mailto:association@gnuherds.org">association@gnuherds.org</a>'
 }Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!{/t}
-</p>
+</td>
+<td width="1%">&nbsp;</td>
+<td width="1%">
+<div>
+<a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html"><img src="themes/red_Danijel/images/agplv3-88x31.png" alt="GNU Affero GPL v3"></a>
+<a href="gnuherds-online.tar.gz">
+{'Download the source code!'|gettext|strip:'&nbsp;'}
+</a>
+</div>
 </td>
 </tr>
+</table>
