@@ -24,7 +24,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 {if count($data.DonationPledgeGroup.JobOfferId) == 0 }
 <tr valign="top">
-<td colspan="4" class="tdDark center">
+<td colspan="3" class="tdDark center">
 {t}There are no entries{/t}
 </td>
 </tr>
@@ -45,8 +45,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 
 
-<td>
-</td>
 
 
 <td class="{if $i % 2}tdDark{else}tdLight{/if}">
