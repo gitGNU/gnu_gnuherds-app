@@ -16,6 +16,17 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
+<ul>
+<li><a href="/about/">{t}About GNU Herds{/t}</a></li>
+<li><a href="/charter/">{t}Charter (draft){/t}</a></li>
+<li><a href="/development/">{t}Coders' guide{/t}</a></li>
+<li><a href="/faq/">{t}FAQ{/t}</a></li>
+<li><a href="/offers/">{t}FS job offers{/t}</a></li>
+<li><a href="/pledges/">{t}FS pledges{/t}</a></li>
+<li><a href="/volunteers/">{t}FS volunteers{/t}</a></li>
+<li><a href="/business_models/">{t}FS business models{/t}</a></li>
+</ul>
+
 <p>{t escape='no'
   1='<a href="mailto:association@gnuherds.org">association@gnuherds.org</a>'
 }Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!{/t}

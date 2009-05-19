@@ -18,13 +18,6 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<ul>
-<li>{if $smarty.server.REQUEST_URI neq "/about"}<a href="about">{/if}{t}About GNU Herds{/t}{if $smarty.server.REQUEST_URI neq "/about"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/charter"}<a href="charter">{/if}{t}Charter (draft){/t}{if $smarty.server.REQUEST_URI neq "/charter"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/development"}<a href="development">{/if}{t}Coders' guide{/t}{if $smarty.server.REQUEST_URI neq "/development"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/faq"}<a href="faq">{/if}{t}FAQ{/t}{if $smarty.server.REQUEST_URI neq "/faq"}</a>{/if}</li>
-</ul>
-
 {if $smarty.session.Logged eq '1'}
 <h4>{t}Account{/t}</h4>
 <ul>
@@ -77,11 +70,3 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 </ul>
 {/if}
-
-<h4>{t}Resources{/t}</h4>
-<ul>
-<li>{if $smarty.server.REQUEST_URI neq "/offers"}<a href="offers">{/if}{t}FS job offers{/t}{if $smarty.server.REQUEST_URI neq "/offers"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/pledges"}<a href="pledges">{/if}{t}FS pledges{/t}{if $smarty.server.REQUEST_URI neq "/pledges"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/volunteers"}<a href="volunteers">{/if}{t}FS volunteers{/t}{if $smarty.server.REQUEST_URI neq "/volunteers"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/business_models"}<a href="business_models">{/if}{t}FS business models{/t}{if $smarty.server.REQUEST_URI neq "/business_models"}</a>{/if}</li>
-</ul>
