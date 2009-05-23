@@ -77,7 +77,4 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <li><a href="http://lists.nongnu.org/mailman/listinfo/gnuherds-app-dev">gnuherds-app-dev@nongnu.org</a>: {t}It is used to carry on the development of this web application.{/t}</li>
 </ul>
 <p>&nbsp;</p>
-<p>IRC:</p>
-<ul>
-<li>/server irc.freenode.net <br> /join #gnuherds</li>
-</ul>
+<p>IRC: <a href="irc://irc.gnu.org#gnuherds">#gnuherds</a></p>
