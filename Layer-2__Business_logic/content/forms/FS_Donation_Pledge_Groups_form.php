@@ -38,6 +38,13 @@ class FSDonationPledgeGroupsForm
 		{
 			if ( $this->manager->confirmDonation($_GET['email'],$_GET['magic']) == true )
 			{
+				// Try to confirm a notice with the same magic number
+				if ( $this->manager->confirmJobOffer($_GET['email'],$_GET['magic']) == true )
+				{
+					$this->processingResult .= "<p>&nbsp;</p>\n";
+					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Notice confirmed!")."</p>\n";
+				}
+
 				$this->processingResult .= "<p>&nbsp;</p>\n";
 				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Donation pledge confirmed!")."</p>\n";
 			}

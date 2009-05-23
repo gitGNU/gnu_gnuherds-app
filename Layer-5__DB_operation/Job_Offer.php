@@ -57,7 +57,7 @@ class JobOffer
 
 	public function getJobOffers($extra_condition = '')
 	{
-		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferType,J1_OfferDate, E1_Id,E1_EntityType, E1_Blog, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CooperativeName, EC_CompanyName, EO_OrganizationName, J1_VacancyTitle, E1_Email,E1_WantEmail FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' ".$extra_condition;
+		$sqlQuery = "SELECT J1_Id, J1_LO_Country,J1_StateProvince,J1_City, J1_OfferType,J1_OfferDate, E1_Id,E1_EntityType, E1_Blog, E1_Website, EP_FirstName,EP_LastName,EP_MiddleName, EC_CooperativeName, EC_CompanyName, EO_OrganizationName, J1_VacancyTitle, E1_Email,E1_WantEmail FROM J1_JobOffers,E1_Entities WHERE J1_E1_Id=E1_Id AND J1_CompletedEdition='t' AND J1_Closed='f' AND J1_ExpirationDate > 'now' AND J1_CreationMagic IS NULL ".$extra_condition;
 		$result = $this->postgresql->getPostgreSQLObject($sqlQuery,0);
 
 		$array['JobOfferId'] = pg_fetch_all_columns($result, 0);
@@ -301,20 +301,20 @@ class JobOffer
 
 
 		// If the user is logged in then the notice creation is already confirmed; else, we set the confirmation fields
-		if(isset($_SESSION['EntityId']))
+		if ( $_SESSION['Logged'] == '1' )
 		{
 			// Logged in
-			$magic = 'NULL';
+			$magic_aux = 'NULL';
 			$expire = 'NULL';
 		}
 		else
 		{
 			// Not logged in
-			$magic = "'$magic'";
+			$magic_aux = "'$magic'";
 			$expire = "now() + '7 days'::interval";
 		}
 
-		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,bool,text,text,text,text,bool,text,timestamp) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCooperativeApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_VacancyTitle,J1_Description,J1_OfferType,J1_CompletedEdition,J1_CreationMagic,J1_CreationMagicExpire) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16);  EXECUTE query('$EntityId','".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCooperativeApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','".pg_escape_string($VacancyTitle)."','".pg_escape_string($Description)."','$offerType','$completedEdition',$magic,$expire);";
+		$sqlQuery = "PREPARE query(integer,text,date,bool,bool,bool,bool,bool,bool,text,text,text,text,bool,text,timestamp) AS  INSERT INTO J1_JobOffers (J1_E1_Id,J1_EmployerJobOfferReference,J1_OfferDate,J1_ExpirationDate,J1_Closed,J1_HideEmployer,J1_AllowPersonApplications,J1_AllowCooperativeApplications,J1_AllowCompanyApplications,J1_AllowOrganizationApplications,J1_Vacancies,J1_VacancyTitle,J1_Description,J1_OfferType,J1_CompletedEdition,J1_CreationMagic,J1_CreationMagicExpire) VALUES ($1,$2,'now',$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16);  EXECUTE query('$EntityId','".pg_escape_string($EmployerJobOfferReference)."','".pg_escape_string($ExpirationDate)."','$Closed','$HideEmployer','$AllowPersonApplications','$AllowCooperativeApplications','$AllowCompanyApplications','$AllowOrganizationApplications','".pg_escape_string($Vacancies)."','".pg_escape_string($VacancyTitle)."','".pg_escape_string($Description)."','$offerType','$completedEdition',$magic_aux,$expire);";
 		$this->postgresql->getPostgreSQLObject($sqlQuery,1);
 
 
@@ -334,7 +334,7 @@ class JobOffer
 		if ( $offerType == 'Donation pledge group' )
 		{
 			$donation = new Donation();
-			$donation->addDonation($J1_Id);
+			$donation->addDonation($J1_Id,$magic);
 		}
 
 		return $J1_Id;

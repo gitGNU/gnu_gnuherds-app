@@ -75,7 +75,7 @@ class Donation
 	}
 
 
-	public function addDonation($JobOfferId)
+	public function addDonation($JobOfferId,$magic='')
 	{
 		$WageRank = isset($_POST['WageRank']) ? trim($_POST['WageRank']) : '';
 
@@ -85,7 +85,7 @@ class Donation
 		// link sent via email.
 
 		// If the user is logged in then the donation is already confirmed; else, we create confirmation fields.
-		if(isset($_SESSION['EntityId']))
+		if ( $_SESSION['Logged'] == '1' )
 		{
 			// Logged in
 			$EntityId = trim($_SESSION['EntityId']);
@@ -94,8 +94,11 @@ class Donation
 		}
 		else
 		{
-			// Not logged in. Make the 'magic' flag.
-			$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
+			// Not logged in.  Make the 'magic' flag if it does not already come in the $magic parameter.
+			if ( $magic == '' )
+			{
+				$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
+			}
 
 			$entity = new Entity();
 			$offerType = 'Donation pledge group';
