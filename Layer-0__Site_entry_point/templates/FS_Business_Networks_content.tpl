@@ -32,7 +32,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 	<li>
 		<p>
-		<a href="http://www.ttllp.co.uk/">Turo Technology LLP</a>, {t}Cooperative{/t}. ({t domain='iso_639'}English{/t})<br>
+		<a href="http://www.software.coop/">Software COOP</a>, {t}Cooperative{/t}. ({t domain='iso_639'}English{/t})<br>
 		</p>
 	</li>
 
