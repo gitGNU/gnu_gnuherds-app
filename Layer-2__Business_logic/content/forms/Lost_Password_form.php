@@ -131,9 +131,7 @@ class LostPassword
 	private function printPersonForm()
 	{
 		$smarty = new Smarty;
-
 		$smarty->assign('checks', $this->checks);
-
 		$smarty->display("Lost_Password_form.tpl");
 	}
 
