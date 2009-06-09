@@ -118,7 +118,6 @@ class DonationPledgeGroupForm
 				$_GET['JobOfferId'] = $this->manager->addJobOffer($offerType,$completedEdition,$magic); // Add a new job offer with the data from the 'general' section
 			}
 		}
-
 	}
 
 
