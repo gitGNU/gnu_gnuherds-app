@@ -49,7 +49,7 @@ class AccessControlList
 		{
 			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Cooperative' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
 			{
-				$error = "<p>".gettext('To access this section you have to login first.')."</p>";
+				$error = "<p>".gettext("ERROR: Unexpected condition")."</p>";
 				throw new Exception($error,false);
 			}
 		}
