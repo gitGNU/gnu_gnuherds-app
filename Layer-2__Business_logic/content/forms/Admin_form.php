@@ -19,6 +19,7 @@
 
 require_once "../Layer-2__Business_logic/content/forms/Skills_form.php";
 require_once "../Layer-4__DBManager_etc/DB_Manager.php";
+require_once "../lib/PHP_Tools.php";
 
 
 class AdminForm extends SkillsForm
@@ -33,11 +34,10 @@ class AdminForm extends SkillsForm
 	{
 		$phpTools = new PHPTools();
 
-		// Check the log in state and load the data
+		// Check the log in state
 		if ( $_SESSION['Logged'] != '1' )
 		{
-			$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-			throw new Exception($error,false);
+			return;
 		}
 
 		// Process each button event
@@ -83,9 +83,19 @@ class AdminForm extends SkillsForm
 
 	public function printOutput()
 	{
-		// This page does not report to the webapp user (Skills administrator) operation success. It just report if the operation does _not_ success.
+		if ( $_SESSION['Logged'] == '1' )
+		{
+			// This page does not report to the webapp user (Skills administrator) operation success. It just report if the operation does _not_ success.
 
-		$this->printAdminForm();
+			$this->printAdminForm();
+		}
+		else
+		{
+			echo "<p>".gettext('To access this section you have to login first.')."</p><p>&nbsp;</p>";
+
+			$smarty = new Smarty;
+			$smarty->display("Access_form.tpl");
+		}
 	}
 
 

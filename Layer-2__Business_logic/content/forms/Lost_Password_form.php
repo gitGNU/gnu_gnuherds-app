@@ -83,7 +83,7 @@ class LostPassword
 				$this->processingResult .= "<p>&nbsp;</p><p>".vsprintf(gettext('An email has been sent to %s with the instructions to change the password.'),"<span class='must'>{$_POST['Email']}</span>")."<p>\n";
 			}
 		}
-		elseif ( isset($_GET['email']) and $_GET['email'] != '' )
+		elseif ( $_GET['email'] != '' )
 		{
 			// Get and set a new password for the Entity who has that email
 			$new_password = $this->manager->setNewPasswordForEntity();
@@ -91,9 +91,9 @@ class LostPassword
 			if ( $new_password != false )
 			{
 				// Show the new password
-				$this->processingResult .= "<p>&nbsp;</p>\n";
-				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your new password is:")." <strong>".$new_password."</strong></p>\n";
-				$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("To improve your security, you should change your password after loging in.")."</p>";
+				$this->processingResult .= "<p>".gettext("Your new password is:")." <strong>".$new_password."</strong></p>\n";
+				$this->processingResult .= "<p>".gettext("To improve your security, you should change your password after loging in.")."</p>";
+				$this->processingResult .= "<p>&nbsp;</p><p>&nbsp;</p>\n";
 			}
 		}
 	}
@@ -103,12 +103,17 @@ class LostPassword
 	{
 		if ( $_POST['send'] != '' )
 		{
-			// Show the form
-			$this->printPersonForm();
+			if ( $this->checks['result'] == "pass" )
+				echo $this->processingResult;
+			else
+				$this->printPersonForm();
 		}
-		elseif ( isset($_GET['email']) and $_GET['email'] != '' )
+		elseif ( $_GET['email'] != '' )
 		{
-			// Show just the processingResult
+			echo $this->processingResult;
+
+			$smarty = new Smarty;
+			$smarty->display("Access_form.tpl");
 		}
 		elseif( isset($_GET['language']) )
 		{
@@ -122,9 +127,6 @@ class LostPassword
 			// Show the form
 			$this->printPersonForm();
 		}
-
-		if ( ( $_POST['send'] != '' and $this->checks['result'] == "pass" )  or $_GET['email'] != '' )
-			echo $this->processingResult;
 	}
 
 

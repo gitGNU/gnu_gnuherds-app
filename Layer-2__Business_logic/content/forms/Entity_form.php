@@ -70,35 +70,40 @@ abstract class EntityForm
 
 			if ( $new_password != false )
 			{
-				$this->processingResult .= "<p>&nbsp;</p>\n";
-
 				if ( $_GET['action'] == "verify" )
 				{
-					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your email has been verified!")."</p>\n";
+					$this->processingResult .= "<p>".gettext("Your email has been verified!")."</p>\n";
 
 					// If the "Email verification" was raised by REQUEST_TO_ADD_DONATION then we have a donation to confirm too
 					if ( $this->manager->confirmDonation($_GET['email'],$_GET['magic']) == true )
 					{
-						$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Donation pledge confirmed!")."</p>\n";
+						$this->processingResult .= "<p>".gettext("Donation pledge confirmed!")."</p>\n";
 					}
 					//else do nothing. We just checked for a donation to confirm.
+
+					// If the "Email verification" was raised by REQUEST_TO_ADD_NOTICE then we have a notice to confirm too
+					if ( $this->manager->confirmJobOffer($_GET['email'],$_GET['magic']) == true )
+					{
+						$this->processingResult .= "<p>".gettext("Notice confirmed!")."</p>\n";
+					}
+					//else do nothing. We just checked for a notice to confirm.
 
 					// If the "Email verification" was raised by REQUEST_TO_SUBSCRIBE_TO_NOTICE then we have a subscription to confirm too
 					if ( $this->manager->confirmApplication($_GET['email'],$_GET['magic']) == true )
 					{
-						$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Subscription confirmed!")."</p>\n";
+						$this->processingResult .= "<p>".gettext("Subscription confirmed!")."</p>\n";
 					}
 					//else do nothing. We just checked for a subscription to confirm.
 				}
 
 				if ( $_GET['action'] == "register"  or  $_GET['action'] == "verify" )
 				{
-					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your account has been activated!")."</p>\n";
+					$this->processingResult .= "<p>".gettext("Your account has been activated!")."</p>\n";
 
 					// Show the password
 					$this->processingResult .= "<p>&nbsp;</p>\n";
-					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("Your new password is:")." <strong>".$new_password."</strong></p>\n";
-					$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("To improve your security, you should change your password after loging in.")."</p>";
+					$this->processingResult .= "<p>".gettext("Your new password is:")." <strong>".$new_password."</strong></p>\n";
+					$this->processingResult .= "<p>".gettext("To improve your security, you should change your password after loging in.")."</p>";
 				}
 			}
 		}
@@ -111,7 +116,7 @@ abstract class EntityForm
 		if ( $this->manager->changeEmailForEntity() == true )
 		{
 			$this->processingResult .= "<p>&nbsp;</p>\n";
-			$this->processingResult .= "<p>&nbsp; &nbsp; &nbsp; &nbsp; ".gettext("The email has been changed!")."</p>\n";
+			$this->processingResult .= "<p>".gettext("The email has been changed!")."</p>\n";
 		}
 	}
 
@@ -159,17 +164,22 @@ abstract class EntityForm
 		}
 		else
 		{
+			if ($_POST['EntityType'] == 'Person' )				$entityType = "person";
+			elseif ($_POST['EntityType'] == 'Cooperative' )			$entityType = "cooperative";
+			elseif ($_POST['EntityType'] == 'Company' )			$entityType = "company";
+			elseif ($_POST['EntityType'] == 'non-profit Organization' )	$entityType = "nonprofit";
+
 			// Make the 'magic' flag
 			$magic = md5( rand().rand().rand().rand().rand().rand().rand().rand().rand().rand().rand() );
 
-			$this->manager->addEntity($magic);
+			$this->manager->addEntity($magic,$_POST['EntityType']);
 
 			// Send the email
 			$message = gettext("Your email has been used to create an account at GNU Herds.")."\n\n";
 
 			$message .= gettext("To activate it follow the below link.")." ".gettext("That link will expire in 48 hours.")." ".gettext("To get a new non-expired link just register at gnuherds.org again.")."\n\n";
 
-			$message .= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']."?action=register&email=".trim($_POST['Email'])."&magic=".$magic;
+			$message .= "https://".$_SERVER['HTTP_HOST']."/".$entityType."?action=register&email=".trim($_POST['Email'])."&magic=".$magic;
 
 			$message .= "\n\n";
 			$message .= gettext("If you have not asked for this new account, ignore this email.")."\n\n";
@@ -181,7 +191,7 @@ abstract class EntityForm
 		}
 
 		// Report to the user
-		$this->processingResult .= "<p>&nbsp;</p><p>".vsprintf(gettext('Success. An email has been sent to %s with the instructions to activate the account.'),"<span class='must'>{$_POST['Email']}</span>")."</p>";
+		$this->processingResult .= "<p>&nbsp;</p><p>".vsprintf(gettext('An email has been sent to %s with the instructions to activate the account.'),"<span class='must'>{$_POST['Email']}</span>")."</p>";
 		$this->processingResult .= "<p>".vsprintf(gettext('If you do not receive such email, you can inform about it at %s.'),"<a href='mailto:association@gnuherds.org'>association@gnuherds.org</a>")."</p>";
 	}
 }

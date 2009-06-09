@@ -20,28 +20,11 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <table id="content" cellpadding="0" cellspacing="0" rules="none" border="0">
 <tr>
 <td>
-
-{if $smarty.post.login != '' }{* The user is asking for testing him/her account-password. *}
-	{* Show the result of the logForm processing to the user *}
-	{if $smarty.session.Logged eq '1' }
-		<p>{t}Log in successful!{/t}</p>
-		<p>{t}Now, you can go to the account menu to manage your data.{/t}</p>
-	{else}
-		<p class="error">{t}Log in unsuccessful!{/t}</p>
-		<p>{t}Invalid user or password, or some problem with the data base.{/t}</p>
-	{/if}
+{if $webpage->contentExceptionOutput eq '' }
+	{php} $GLOBALS[webPage]->content->printOutput(); {/php}
 {else}
-	{if $smarty.post.logout != '' }
-		<p>{t}Log out successful.{/t}</p> {* XXX: This is not being used. We redirect to another web page. *}
-	{else}
-		{* Show the standard page content *}
-		{if $webpage->contentExceptionOutput eq '' }
-			{php} $GLOBALS[webPage]->content->printOutput(); {/php}
-		{else}
-			{*echo $GLOBALS[webPage]->contentExceptionOutput;*}
-			{$webpage->contentExceptionOutput}
-		{/if}
-	{/if}
+	{*echo $GLOBALS[webPage]->contentExceptionOutput;*}
+	{$webpage->contentExceptionOutput}
 {/if}
 
 <p>

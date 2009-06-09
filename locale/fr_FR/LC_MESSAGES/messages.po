@@ -294,8 +294,8 @@ msgid "Activate account"
 msgstr "Activar cuenta"
 
 #, fuzzy
-msgid "Success. An email has been sent to %s with the instructions to activate the account."
-msgstr "Correcto. Un correo electrónico ha sido enviado a %s con las instrucciones para activar la cuenta."
+msgid "An email has been sent to %s with the instructions to activate the account."
+msgstr "Un correo electrónico ha sido enviado a %s con las instrucciones para activar la cuenta."
 
 #, fuzzy
 msgid "If you do not receive such email, you can inform about it at %s."
@@ -1590,9 +1590,6 @@ msgstr "Formato de fecha incorrecto."
 
 msgid "The qualifications information has been deleted from the data base."
 msgstr "Vos qualifications ont été supprimées de la base de données."
-
-msgid "Success. Your qualifications have been saved."
-msgstr "Réussi. Vos qualifications ont été sauvegardées."
 
 #
 # JobOffer form: Job_Offer_edit-quide-bar.tpl, Job_Offer_*_form.tpl, Job_Offer_form.php

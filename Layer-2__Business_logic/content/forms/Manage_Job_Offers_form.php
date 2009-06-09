@@ -38,18 +38,9 @@ class ManageJobOffersForm
 	public function processForm()
 	{
 		// Check the log in state
-		if ( $_SESSION['Logged'] == '1' )
+		if ( $_SESSION['Logged'] != '1' )
 		{
-			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Cooperative' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
-			{
-				$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-				throw new Exception($error,false);
-			}
-		}
-		else
-		{
-			$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-			throw new Exception($error,false);
+			return;
 		}
 
 		// Process each button event
@@ -72,7 +63,17 @@ class ManageJobOffersForm
 
 	public function printOutput()
 	{
-		$this->printManageJobOffersForm();
+		if ( $_SESSION['Logged'] == '1' )
+		{
+			$this->printManageJobOffersForm();
+		}
+		else
+		{
+			echo "<p>".gettext('To access this section you have to login first.')."</p><p>&nbsp;</p>";
+
+			$smarty = new Smarty;
+			$smarty->display("Access_form.tpl");
+		}
 	}
 
 

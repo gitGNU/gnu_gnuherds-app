@@ -67,12 +67,6 @@ class QualificationsForm extends SkillsForm
 		// Check the log in state
 		if ( $_SESSION['Logged'] == '1' )
 		{
-			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Cooperative' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
-			{
-				$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-				throw new Exception($error,false);
-			}
-
 			$_SESSION['HasQualifications'] = $this->loadQualificationsForm(); // Update the HasQualifications SESSION flag used to set the URL at the webapp menu
 
 			if ( $_SESSION['HasQualifications'] != '1' ) // creating qualifications
@@ -87,8 +81,7 @@ class QualificationsForm extends SkillsForm
 		}
 		else
 		{
-			$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-			throw new Exception($error,false);
+			return;
 		}
 
 		// Process each button event
@@ -118,14 +111,24 @@ class QualificationsForm extends SkillsForm
 
 	public function printOutput()
 	{
-		if ( $_POST['finish'] != '' and $this->checks['result'] == "pass" and $this->can_save == true )
+		if ( $_SESSION['Logged'] == '1' )
 		{
-			header('Location: /resume?id='.$_SESSION['EntityId']); // We reditect to the view-offer web page
-			exit;
+			if ( $_POST['finish'] != '' and $this->checks['result'] == "pass" and $this->can_save == true )
+			{
+				header('Location: /resume?id='.$_SESSION['EntityId']); // We reditect to the view-offer web page
+				exit;
+			}
+			else
+			{
+				$this->printQualificationsForm();
+			}
 		}
 		else
 		{
-			$this->printQualificationsForm();
+			echo "<p>".gettext('To access this section you have to login first.')."</p><p>&nbsp;</p>";
+
+			$smarty = new Smarty;
+			$smarty->display("Access_form.tpl");
 		}
 	}
 

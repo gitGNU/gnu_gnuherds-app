@@ -17,6 +17,7 @@
 
 
 require_once "../Layer-4__DBManager_etc/DB_Manager.php";
+require_once "../lib/PHP_Tools.php";
 
 
 class AlertsForm
@@ -37,11 +38,10 @@ class AlertsForm
 	{
 		$phpTools = new PHPTools();
 
-		// Check the log in state and load the data
+		// Check the log in state
 		if ( $_SESSION['Logged'] != '1' )
 		{
-			$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-			throw new Exception($error,false);
+			return;
 		}
 
 		// Process each button event
@@ -54,10 +54,20 @@ class AlertsForm
 
 	public function printOutput()
 	{
-		if ( $_POST['save'] != '' )
-			echo $this->processingResult;
+		if ( $_SESSION['Logged'] == '1' )
+		{
+			if ( $_POST['save'] != '' )
+				echo $this->processingResult;
+			else
+				$this->printAlertsForm();
+		}
 		else
-			$this->printAlertsForm();
+		{
+			echo "<p>".gettext('To access this section you have to login first.')."</p><p>&nbsp;</p>";
+
+			$smarty = new Smarty;
+			$smarty->display("Access_form.tpl");
+		}
 	}
 
 

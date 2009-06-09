@@ -21,60 +21,75 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <div class="menu">
 
 <ul>
-<li>{if $smarty.server.REQUEST_URI neq "/about"}<a href="about">{/if}{t}About GNU Herds{/t}{if $smarty.server.REQUEST_URI neq "/about"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/charter"}<a href="charter">{/if}{t}Charter (draft){/t}{if $smarty.server.REQUEST_URI neq "/charter"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/development"}<a href="development">{/if}{t}Coders' guide{/t}{if $smarty.server.REQUEST_URI neq "/development"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/faq"}<a href="faq">{/if}{t}FAQ{/t}{if $smarty.server.REQUEST_URI neq "/faq"}</a>{/if}</li>
+<li>{if $smarty.server.SCRIPT_URL neq "/about"}<a href="about">{/if}{t}About GNU Herds{/t}{if $smarty.server.SCRIPT_URL neq "/about"}</a>{/if}</li>
+<li>{if $smarty.server.SCRIPT_URL neq "/charter"}<a href="charter">{/if}{t}Charter (draft){/t}{if $smarty.server.SCRIPT_URL neq "/charter"}</a>{/if}</li>
+<li>{if $smarty.server.SCRIPT_URL neq "/development"}<a href="development">{/if}{t}Coders' guide{/t}{if $smarty.server.SCRIPT_URL neq "/development"}</a>{/if}</li>
+<li>{if $smarty.server.SCRIPT_URL neq "/faq"}<a href="faq">{/if}{t}FAQ{/t}{if $smarty.server.SCRIPT_URL neq "/faq"}</a>{/if}</li>
 </ul>
 
 {if $smarty.session.Logged eq '1'}
 <h4>{t}Account{/t}</h4>
 <ul>
 
-{if $smarty.session.LoginType eq 'Person' }
-<li><a href="person">{t}My personal profile{/t}</a></li>
+{if $smarty.session.Logged neq '1'}
+<li>{if $smarty.server.SCRIPT_URL neq "/login"}<a href="login">{/if}{t}Log in{/t}{if $smarty.server.SCRIPT_URL neq "/login"}</a>{/if}</li>
+<li><a href="register" {if $smarty.server.SCRIPT_URL eq "/register"}id="current"{/if}>{t}Register{/t}</a></li>
+{/if}
+
+{if $smarty.session.LoginType eq 'Person' or not isset($smarty.session.LoginType) }
+<li><a href="person" {if $smarty.server.SCRIPT_URL eq "/person"}id="current"{/if}>{t}My personal profile{/t}</a></li>
 {/if}
 
 {if $smarty.session.LoginType eq 'Cooperative' }
-<li><a href="cooperative">{t}Our cooperative{/t}</a></li>
+<li><a href="cooperative" {if $smarty.server.SCRIPT_URL eq "/cooperative"}id="current"{/if}>{t}Our cooperative{/t}</a></li>
 {/if}
 
 {if $smarty.session.LoginType eq 'Company' }
-<li><a href="company">{t}Our company{/t}</a></li>
+<li><a href="company" {if $smarty.server.SCRIPT_URL eq "/company"}id="current"{/if}>{t}Our company{/t}</a></li>
 {/if}
 
 {if $smarty.session.LoginType eq 'non-profit Organization' }
-<li><a href="nonprofit">{t}Our non-profit{/t}</a></li>
+<li><a href="nonprofit" {if $smarty.server.SCRIPT_URL eq "/nonprofit"}id="current"{/if}>{t}Our non-profit{/t}</a></li>
 {/if}
 
-{if $smarty.session.HasQualifications eq '1' }
+{if $smarty.session.HasQualifications eq '1' or not isset($smarty.session.LoginType) }
 	{assign var="url" value="resume?id=`$smarty.session.EntityId`"}
 {else}
 	{assign var="url" value="resume?action=edit&id=&section=profiles_etc"}
 {/if}
 
-{if $smarty.session.LoginType eq "Person" }
-<li><a href="{$url}">{t}My qualifications{/t}</a></li>
+{if $smarty.session.LoginType eq "Person" or not isset($smarty.session.LoginType) }
+<li>{if not ($smarty.server.SCRIPT_URL eq "/resume" and $smarty.get.EntityId eq $smarty.session.EntityId) }<a href="{$url}">{/if}{t}My qualifications{/t}{if not ($smarty.server.SCRIPT_URL eq "/resume" and $smarty.get.EntityId eq $smarty.session.EntityId) }</a>{/if}</li>
 {else}
-<li><a href="{$url}">{t}Our qualifications{/t}</a></li>
+<li>{if not ($smarty.server.SCRIPT_URL eq "/resume" and $smarty.get.EntityId eq $smarty.session.EntityId) }<a href="{$url}">{/if}{t}Our qualifications{/t}{if not ($smarty.server.SCRIPT_URL eq "/resume" and $smarty.get.EntityId eq $smarty.session.EntityId) }</a>{/if}</li>
 {/if}
 
-{if $smarty.session.LoginType eq "Person" }
-<li><a href="offers?owner=me">{t}My notices{/t}</a></li>
+{if $smarty.session.LoginType eq "Person" or not isset($smarty.session.LoginType) }
+<li>
+{if not ($smarty.server.SCRIPT_URL eq "/offers" and $smarty.get.owner eq "me") }
+<a href="offers?owner=me"
+{if $smarty.server.SCRIPT_URL eq "/applications" and $smarty.get.JobOfferId neq '' }id="current"{/if}
+>
+{/if}
+{t}My notices{/t}
+{if not ($smarty.server.SCRIPT_URL eq "/offers" and $smarty.get.owner eq "me") and not ($smarty.server.SCRIPT_URL eq "/applications" and $smarty.get.JobOfferId neq '') }
+</a>
+{/if}
+</li>
 {else}
-<li><a href="offers?owner=me">{t}Our notices{/t}</a></li>
+<li>{if not ($smarty.server.SCRIPT_URL eq "/offers" and $smarty.get.owner eq "me") and not ($smarty.server.SCRIPT_URL eq "/applications" and $smarty.get.JobOfferId neq '') }<a href="offers?owner=me">{/if}{t}Our notices{/t}{if not ($smarty.server.SCRIPT_URL eq "/offers" and $smarty.get.owner eq "me") and not ($smarty.server.SCRIPT_URL eq "/applications" and $smarty.get.JobOfferId neq '') }</a>{/if}</li>
 {/if}
 
-{if $smarty.session.LoginType eq "Person" }
-<li><a href="applications">{t}My subscriptions{/t}</a></li>
+{if $smarty.session.LoginType eq "Person" or not isset($smarty.session.LoginType) }
+<li>{if not ($smarty.server.SCRIPT_URL eq "/applications" and not isset($smarty.get.JobOfferId)) }<a href="applications">{/if}{t}My subscriptions{/t}{if not ($smarty.server.SCRIPT_URL eq "/applications" and not isset($smarty.get.JobOfferId)) }</a>{/if}</li>
 {else}
-<li><a href="applications">{t}Our subscriptions{/t}</a></li>
+<li>{if not ($smarty.server.SCRIPT_URL eq "/applications" and not isset($smarty.get.JobOfferId)) }<a href="applications">{/if}{t}Our subscriptions{/t}{if not ($smarty.server.SCRIPT_URL eq "/applications" and not isset($smarty.get.JobOfferId)) }</a>{/if}</li>
 {/if}
 
-<li><a href="settings">{t}Settings{/t}</a></li>
+<li>{if $smarty.server.SCRIPT_URL neq "/settings"}<a href="settings">{/if}{t}Settings{/t}{if $smarty.server.SCRIPT_URL neq "/settings"}</a>{/if}</li>
 
 {if $smarty.session.Logged eq '1' and $smarty.session.SkillsAdmin == true }
-<li><a href="admin">{t}Administration{/t}</a></li>
+<li>{if $smarty.server.SCRIPT_URL neq "/admin"}<a href="admin">{/if}{t}Administration{/t}{if $smarty.server.SCRIPT_URL neq "/admin"}</a>{/if}</li>
 {/if}
 
 </ul>
@@ -82,10 +97,12 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <h4>{t}Resources{/t}</h4>
 <ul>
-<li>{if $smarty.server.REQUEST_URI neq "/offers"}<a href="offers">{/if}{t}FS job offers{/t}{if $smarty.server.REQUEST_URI neq "/offers"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/pledges"}<a href="pledges">{/if}{t}FS pledges{/t}{if $smarty.server.REQUEST_URI neq "/pledges"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/volunteers"}<a href="volunteers">{/if}{t}FS volunteers{/t}{if $smarty.server.REQUEST_URI neq "/volunteers"}</a>{/if}</li>
-<li>{if $smarty.server.REQUEST_URI neq "/business_models"}<a href="business_models">{/if}{t}FS business models{/t}{if $smarty.server.REQUEST_URI neq "/business_models"}</a>{/if}</li>
+<li>{if not ($smarty.server.SCRIPT_URL eq "/notices" and not isset($smarty.get.action)) and $smarty.server.SCRIPT_URL neq "/" and $smarty.server.SCRIPT_URL neq "/index.php" }<a href="notices">{/if}{t}List offers{/t}{if not ($smarty.server.SCRIPT_URL eq "/notices" and not isset($smarty.get.action)) and $smarty.server.SCRIPT_URL neq "/" and $smarty.server.SCRIPT_URL neq "/index.php" }</a>{/if}</li>
+<li>{if not ($smarty.server.SCRIPT_URL eq "/notices" and $smarty.get.action eq "edit") }<a href="notices?action=edit">{/if}{t}Post offer{/t}{if not ($smarty.server.SCRIPT_URL eq "/notices" and $smarty.get.action eq "edit") }</a>{/if}</li>
+<li><a href="offers" {if $smarty.server.SCRIPT_URL eq "/offers" and not isset($smarty.get.owner) }id="current"{/if}>{t}FS job offers{/t}</a></li>
+<li><a href="pledges" {if $smarty.server.SCRIPT_URL eq "/pledges"}id="current"{/if}>{t}FS pledges{/t}</a></li>
+<li><a href="volunteers" {if $smarty.server.SCRIPT_URL eq "/volunteers"}id="current"{/if}>{t}FS volunteers{/t}</a></li>
+<li>{if $smarty.server.SCRIPT_URL neq "/business_models"}<a href="business_models">{/if}{t}FS business models{/t}{if $smarty.server.SCRIPT_URL neq "/business_models"}</a>{/if}</li>
 </ul>
 
 </div>

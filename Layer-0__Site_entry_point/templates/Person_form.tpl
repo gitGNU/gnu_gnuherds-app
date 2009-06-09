@@ -21,17 +21,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <table>
 
-{if $smarty.session.Logged != '1' }
-<tr> <td colspan="3"><h3>{t}Register person{/t}</h3></td> </tr>
-{/if}
-
-{if $smarty.session.Logged == '1' }
 <tr> <td colspan="3" align="center" class="mainsection">{t}Update person data{/t}</td> </tr>
-{/if}
 
 <tr> <td colspan="3">&nbsp;</td> </tr>
-
-{if $smarty.session.Logged == '1' }
 
 {if $checks.result eq '' }
 <tr> <td colspan="3" class="footnote">{t escape=no 1='<a href="charter#Membership">' 2='</a>'}Read the %1Membership%2 Charter section.{/t}</td> </tr>
@@ -47,12 +39,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <tr> <td colspan="3" class="subsection">{t}Account identification{/t}</td> </tr>
 
-{/if}
-
 <tr>
 <td align="right"><span class="must">*</span><label for="Email" class="raisePopUp" title="{t}Change the account email{/t}">{t}Email{/t}</label></td>
 <td colspan="2"> <input type="text" name="Email" id="Email" maxlength="60" class="required" value="{$data.Email}">
-{if $smarty.session.WantEmail neq '' and $smarty.session.Logged eq '1'}<strong>[</strong>{$smarty.session.WantEmail}<strong>]</strong>{/if}
+{if $smarty.session.WantEmail neq ''}<strong>[</strong>{$smarty.session.WantEmail}<strong>]</strong>{/if}
 </td>
 </tr>
 
@@ -62,8 +52,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td colspan="2"><p class="must">{$checks.Email}</p></td>
 </tr>
 {/if}
-
-{if $smarty.session.Logged eq '1'}
 
 <tr>
 <td align="right"><label for="Password" class="raisePopUp" title="{t}Change the account password{/t}">{t}Password{/t}</label></td>
@@ -295,19 +283,15 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td colspan="2"> <input type="text" name="MobilePhone" id="MobilePhone" size="30" maxlength="30" class="notRequired" value="{$data.MobilePhone}"> </td>
 </tr>
 
-{/if}
-
 <tr> <td colspan="3">&nbsp;</td> </tr> 
 <tr> <td colspan="3">&nbsp;</td> </tr> 
 
 <tr>
 <td colspan="3" align="center">
-<input type="submit" name="save" value="{t}{if $smarty.session.Logged == '1'}Save{else}Register{/if}{/t}">
+<input type="submit" name="save" value="{t}Save{/t}">
 
-{if $smarty.session.Logged == '1' } <!-- update -->
 <br><br>
 <input type="submit" name="delete" value="{t}Delete me from this Association{/t}">
-{/if}
 
 </td>
 </tr>

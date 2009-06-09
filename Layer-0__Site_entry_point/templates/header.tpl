@@ -19,27 +19,6 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<div id="locale">
-<ul>
-{assign var='cleanURI' value=$smarty.server.REQUEST_URI|regex_replace:"/.language=.._../":""}
-
-{if strpos($cleanURI,"?") !== false}
-	{assign var='startParameter' value='&amp;'}
-{else}
-	{assign var='startParameter' value='?'}
-{/if}
-
-{* {if $smarty.session.Language eq 'de_DE'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=de_DE" lang="de_DE" hreflang="de_DE" title="{t}Change language{/t}">Deutsch</a></li> *}
-{if $smarty.session.Language eq 'en_US'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=en_US" lang="en_US" hreflang="en_US" title="{t}Change language{/t}">English</a></li>
-{if $smarty.session.Language eq 'es_ES'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=es_ES" lang="es_ES" hreflang="es_ES" title="{t}Change language{/t}">Español</a></li>
-{if $smarty.session.Language eq 'fr_FR'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=fr_FR" lang="fr_FR" hreflang="fr_FR" title="{t}Change language{/t}">Français</a></li>
-{if $smarty.session.Language eq 'it_IT'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=it_IT" lang="it_IT" hreflang="it_IT" title="{t}Change language{/t}">Italiano</a></li>
-{if $smarty.session.Language eq 'pl_PL'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=pl_PL" lang="pl_PL" hreflang="pl_PL" title="{t}Change language{/t}">Polski</a></li>
-{if $smarty.session.Language eq 'pt_PT'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=pt_PT" lang="pt_PT" hreflang="pt_PT" title="{t}Change language{/t}">Português</a></li>
-{if $smarty.session.Language eq 'ru_RU'}<li id="lang_active">{else}<li>{/if}<a href="{$cleanURI}{$startParameter}language=ru_RU" lang="ru_RU" hreflang="ru_RU" title="{t}Change language{/t}">Русский</a></li>
-</ul>
-</div>
-
 <div id="header"> 
 
 <div id="logo">
@@ -56,6 +35,17 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {t escape='no'
   1='<br>'
 }Free Software%1Association{/t}
+</div>
+
+<div id="access">
+<ul>
+{if $smarty.session.Logged == '1' }
+<li><a href="logout">{'Log out'|gettext|strip:'&nbsp;'}</a></li>
+{else}
+<li><a href="login">{'Log in'|gettext|strip:'&nbsp;'}</a></li>
+<li><a href="register">{'Register'|gettext|strip:'&nbsp;'}</a></li>
+{/if}
+</ul>
 </div>
 
 <div id="float_center">

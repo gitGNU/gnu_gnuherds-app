@@ -84,12 +84,12 @@ class DBManager
 		return $entity->getEntityId($email,$requestOperation,$offerType,$magic);
 	}
 
-	public function addEntity($magic)
+	public function addEntity($magic,$entityType='Person')
 	{
 		// This method does not need ACL check
 
 		$entity = new Entity();
-		$entity->addEntity($magic);
+		$entity->addEntity($magic,$entityType);
 	}
 
 	public function deleteEntity()
@@ -366,12 +366,12 @@ class DBManager
 		return $donation->getDonationsForPledgeGroup($Id);
 	}
 
-	public function addDonation($JobOfferId)
+	public function addDonation($JobOfferId,$magic='',$EntityId='')
 	{
 		// This method does not need ACL check. Everybody is allowed to donate.
 
 		$donation = new Donation();
-		$donation->addDonation($JobOfferId);
+		$donation->addDonation($JobOfferId,$magic,$EntityId);
 	}
 
 	public function confirmDonation($email,$magic)

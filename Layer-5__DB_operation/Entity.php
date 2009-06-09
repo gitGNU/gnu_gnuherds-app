@@ -141,16 +141,15 @@ class Entity
 		return $array;
 	}
 
-	public function addEntity($magic)
+	public function addEntity($magic,$entityType='Person')
 	{
 		// There are not several tables involved, however we use a transaction to be able to get the E1_Id, and to be sure the PhotoOrLogo has been saved rightly.
 		$this->postgresql->execute("SET TRANSACTION   ISOLATION LEVEL  SERIALIZABLE  READ WRITE",0);
 		$this->postgresql->execute("BEGIN",0);
 
 		$Email = trim($_POST['Email']);
-		$EntityType = isset($_SESSION['EntityType']) ? trim($_SESSION['EntityType']) : "Person"; // else, we assume the entity type is Person. -- XXX: Analyze this solution again.
 
-		$sqlQuery = "PREPARE query(text,text) AS  INSERT INTO E1_Entities (E1_WantEmail,E1_EntityType) VALUES ($1,$2);  EXECUTE query('{$Email}','{$EntityType}');"; //XXX: TODO: Only list the E1_Email, not the WantEmail(not yet verified)
+		$sqlQuery = "PREPARE query(text,text) AS  INSERT INTO E1_Entities (E1_WantEmail,E1_EntityType) VALUES ($1,$2);  EXECUTE query('{$Email}','{$entityType}');"; //XXX: TODO: Only list the E1_Email, not the WantEmail(not yet verified)
 		$this->postgresql->execute($sqlQuery,1);
 
 		// Get the Id of the insert to the E1_Entities table // Ref.: http://www.postgresql.org/docs/current/static/functions-sequence.html
@@ -303,12 +302,6 @@ class Entity
 
 		if ( $E1_Id )
 		{
-			// For donation-pledge-groups the email will not be sent at REQUEST_TO_ADD_NOTICE but at REQUEST_TO_ADD_DONATION. So we avoid sending double email.
-			if ( $offerType == 'Donation pledge group' and $requestOperation == 'REQUEST_TO_ADD_NOTICE' )
-			{
-				return $E1_Id;
-			}
-
 			// Check if we have to send confirmation email for not logged users adding a donation, creating a notice or subscribing to a donation-pledge-group
 			if ( $requestOperation == 'REQUEST_TO_ADD_NOTICE' or $requestOperation == 'REQUEST_TO_ADD_DONATION' or $requestOperation == 'REQUEST_TO_SUBSCRIBE_TO_NOTICE' )
 			{
@@ -349,12 +342,6 @@ class Entity
 		else
 		{
 			$E1_Id = $this->addEntity($magic);
-
-			// For donation-pledge-groups the email will not be sent at REQUEST_TO_ADD_NOTICE but at REQUEST_TO_ADD_DONATION. So we avoid sending double email.
-			if ( $offerType == 'Donation pledge group' and $requestOperation == 'REQUEST_TO_ADD_NOTICE' )
-			{
-			  return $E1_Id;
-			}
 
 			// Send the email -- TODO: Use an external method to send the emails. For example $emails->sendWarningEmail('REQUEST_TO_ADD_DONATION');
 			$message = gettext("Your email has been used to create, update or subscribe to a notice at GNU Herds.")."\n\n";

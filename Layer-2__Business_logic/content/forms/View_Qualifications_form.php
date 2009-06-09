@@ -38,12 +38,6 @@ class ViewQualificationsForm
 		// Check the log in state
 		if ( $_SESSION['Logged'] == '1' )
 		{
-			if ( $_SESSION['LoginType'] != 'Person' && $_SESSION['LoginType'] != 'Cooperative' && $_SESSION['LoginType'] != 'Company' && $_SESSION['LoginType'] != 'non-profit Organization' )
-			{
-				$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-				throw new Exception($error,false);
-			}
-
 			// Load the data
 			if ( !isset( $_GET['EntityId'] ) or $_GET['EntityId']=='' )
 			{
@@ -55,8 +49,7 @@ class ViewQualificationsForm
 		}
 		else
 		{
-			$error = "<p>".gettext('To access this section you have to login first.')."</p>";
-			throw new Exception($error,false);
+			return;
 		}
 
 		// Process each button event
@@ -70,10 +63,20 @@ class ViewQualificationsForm
 
 	public function printOutput()
 	{
-		if ( $_POST['delete'] != '' )
-			echo "<p>&nbsp;</p><p>".gettext('The qualifications information has been deleted from the data base.')."<p>\n";
+		if ( $_SESSION['Logged'] == '1' )
+		{
+			if ( $_POST['delete'] != '' )
+				echo "<p>&nbsp;</p><p>".gettext('The qualifications information has been deleted from the data base.')."<p>\n";
+			else
+				$this->printQualificationsForm();
+		}
 		else
-			$this->printQualificationsForm();
+		{
+			echo "<p>".gettext('To access this section you have to login first.')."</p><p>&nbsp;</p>";
+
+			$smarty = new Smarty;
+			$smarty->display("Access_form.tpl");
+		}
 	}
 
 

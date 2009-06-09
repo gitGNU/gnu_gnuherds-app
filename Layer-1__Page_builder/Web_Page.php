@@ -18,7 +18,6 @@
 
 require_once 'Smarty.class.php';
 require_once "../Layer-2__Business_logic/others/Language_form.php";
-require_once "../Layer-2__Business_logic/others/Log_form.php";
 
 
 // This class is a template according which the web pages are printed.
@@ -55,10 +54,6 @@ class WebPage
 			$this->contentExceptionOutput = $e->getMessage();
 			$this->contentExceptionCode = $e->getCode();
 		}
-
-		// logForm: Create and process the LogForm object, which depend on the Language and the content form processing.
-		$this->logForm = new LogForm();
-		$this->logForm->processForm();
 	}
 
 	public function printPage()

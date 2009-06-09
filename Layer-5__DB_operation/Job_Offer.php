@@ -334,7 +334,7 @@ class JobOffer
 		if ( $offerType == 'Donation pledge group' )
 		{
 			$donation = new Donation();
-			$donation->addDonation($J1_Id,$magic);
+			$donation->addDonation($J1_Id,$magic,$EntityId );
 		}
 
 		return $J1_Id;

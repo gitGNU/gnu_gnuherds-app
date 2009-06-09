@@ -36,6 +36,12 @@ msgstr "Cambia lenguaje"
 msgid "Free Software%1Association"
 msgstr "Asociación de%1Software Libre"
 
+msgid "List offers"
+msgstr "Mostrar ofertas"
+
+msgid "Post offer"
+msgstr "Publicar oferta"
+
 msgid "Download the source code!"
 msgstr "¡Descargue el código fuente!"
 
@@ -264,11 +270,11 @@ msgstr "Si este correo electrónico es Spam para usted, por favor hágalo saber 
 msgid "Activate account"
 msgstr "Activar cuenta"
 
-msgid "Success. An email has been sent to %s with the instructions to activate the account."
-msgstr "Correcto. Un correo electrónico ha sido enviado a %s con las instrucciones para activar la cuenta."
+msgid "An email has been sent to %s with the instructions to activate the account."
+msgstr "Un correo electrónico ha sido enviado a %s con las instrucciones para activar la cuenta."
 
 msgid "If you do not receive such email, you can inform about it at %s."
-msgstr "Si usted no recibe tal correo electrónico, puede informar a %s."
+msgstr "Si usted no recibe dicho correo electrónico, puede informar a %s."
 
 #
 # Entity.php
@@ -1543,9 +1549,6 @@ msgstr "Formato de fecha incorrecto."
 
 msgid "The qualifications information has been deleted from the data base."
 msgstr "La ficha de cualificaciones ha sido borrada de la base de datos."
-
-msgid "Success. Your qualifications have been saved."
-msgstr "Correcto. Sus cualificaciones han sido guardadas."
 
 #
 # JobOffer form: Job_Offer_edit-quide-bar.tpl, Job_Offer_*_form.tpl, Job_Offer_form.php

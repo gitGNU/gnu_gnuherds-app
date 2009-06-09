@@ -23,14 +23,19 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
   1='<a href="mailto:association@gnuherds.org">association@gnuherds.org</a>'
 }Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!{/t}
 </td>
-<td width="1%">&nbsp;</td>
-<td width="1%">
+<td>&nbsp;</td>
+<td>
 <div>
 <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html"><img src="themes/red_Danijel/images/agplv3-88x31.png" alt="GNU Affero GPL v3"></a>
 <a href="gnuherds-online.tar.gz">
 {'Download the source code!'|gettext|strip:'&nbsp;'}
 </a>
 </div>
+</td>
+</tr>
+<tr valign="bottom">
+<td colspan="3" align="center">
+{include file="locale.tpl"}
 </td>
 </tr>
 </table>

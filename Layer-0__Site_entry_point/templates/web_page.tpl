@@ -39,12 +39,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <div class="sidebar">
 {include file="menu.tpl"}
-
-{if $smarty.session.Logged == '1' }
-{include file="log_out_box.tpl"}
-{else}
-{include file="log_in_box.tpl"}
-{/if}
 </div>
 
 {include file="content.tpl"}

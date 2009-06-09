@@ -48,16 +48,13 @@ min-height:100%;
 #locale{
 width:100%;
 float:left;
-background-color:#021625;
-border-bottom:1px solid #666666;
+background-color:#DFBCBC;
+border-top:1px solid #C8AAAA;
 }
 
 #locale ul{
 padding:0;
 margin:0;
-float:right;
-font-size:70%;
-background-color:#021625;
 }
 
 #locale ul li{
@@ -68,19 +65,19 @@ display:inline;
 #locale ul li a{
 padding:4px 10px;
 text-decoration:none;
-float:left;
-color:#FFFFFE;
-border-left:1px solid #333333;
-background-color:#021625;
+font-size:80%;
 }
 
 #locale ul li a:hover{
-background-color:#777777;
+color:#000000;
+}
+
+#locale ul li a:link{
+color:#7C1900;
 }
 
 #lang_active{
 font-weight:bold;
-color:#FFFFFE;
 }
 
 
@@ -104,14 +101,48 @@ float:left;
 color:#FFFFFE;
 padding:10px 25px 0 15px;
 font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
-font-size: 20px;
+font-size:20px;
 font-weight:bold;
+}
+
+#access{
+margin:6px 0 0 0;
+float:right;
+}
+
+#access ul{
+padding:0;
+margin:0;
+}
+
+#access ul li{
+margin:6px 3px 3px 0;
+list-style:none;
+display:inline;
+background-color:#A70000;
+border:1px solid #C8AAAA;
+-moz-border-radius-topleft:5px !important;
+-moz-border-radius-topright:5px !important;
+-moz-border-radius-bottomleft:5px !important;
+-moz-border-radius-bottomright:5px !important;
+}
+
+#access ul li a{
+padding:2px 9px 0px 9px;
+text-decoration:none;
+color:#E3D4D4;
+font-weight:bold;
+font-size:12px;
+}
+
+#access ul li:hover{
+background-color:#C20000;
+border:1px solid #D4BDBD;
 }
 
 /* header buttons */
 
 #float_center{
-width:57%;
 text-align:center;
 }
 
@@ -122,7 +153,6 @@ margin:20px 0 0 0;
 #buttons ul{
 padding:0;
 margin:0;
-background-color:#BD0000;
 }
 
 #buttons ul li{
@@ -191,35 +221,13 @@ margin:10px 0 0 0;
 font-weight:bold;
 }
 
+#current{color:#000000;}
+
 
 /* logbox area: Sameer's CSS */
 
-#logbox {
-margin:30px 6px 6px 6px;
-background-color:#d0d0a0;
-border:1px solid #d0c482;
--moz-border-radius-topright:1em !important;
--moz-border-radius-bottomleft:1em !important;
-}
-
-#logbox form{
-padding:0 0 0 5px;
-margin-top:0;
-margin-bottom:0;
-}
-
-#logbox p{
-margin-top:0;
-margin-bottom:0;
-padding:0;
-text-align:center;
-}
-
 .in{
-margin-bottom:5px;
 padding-left:20px;
-margin:0;
-border:1px solid #d0c482;
 }
 .u_icon{background:url(/themes/green_Davi/icons/user.gif) left no-repeat #e0e0c5;}
 .k_icon{background:url(/themes/green_Davi/icons/key.gif) left no-repeat #e0e0c5;}
@@ -430,18 +438,19 @@ margin-right:3px;
 font-size:12px;
 border:1px solid #C8AAAA;
 border-bottom:none;
-background:#DFBCBC;
+background:#F0DEDE;
 }
 
 #tablist li a.current{
-border-bottom:1px solid #FEF5ED;
-background:#FEF5ED;
+border-bottom:1px solid #FEF9F4;
+background:#FEF9F4;
 }
 
 #tab{
 margin-left:5px;
 border:1px solid #C8AAAA;
 border-top:none;
+background:#FEF9F4;
 }
 
 
@@ -459,7 +468,7 @@ border-top:none;
 clear:both;
 float:left;
 width:100%;
-height:5em;
-margin-top:-5em;
+height:6em;
+margin-top:-6em;
 text-align:justify;
 }

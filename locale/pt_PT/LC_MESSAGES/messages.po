@@ -251,8 +251,8 @@ msgstr "Caso considere este email Spam, agradecemos que nos informe através do 
 msgid "Activate account"
 msgstr "Activar a conta"
 
-msgid "Success. An email has been sent to %s with the instructions to activate the account."
-msgstr "Sucesso. Foi enviado um email para %s com as instruções para activar a conta."
+msgid "An email has been sent to %s with the instructions to activate the account."
+msgstr "Foi enviado um email para %s com as instruções para activar a conta."
 
 msgid "If you do not receive such email, you can inform about it at %s."
 msgstr "Caso não receba esse email, poderá informar-nos disso através do endereço %s."
@@ -1409,9 +1409,6 @@ msgstr "Formato de data incorrecto."
 
 msgid "The qualifications information has been deleted from the data base."
 msgstr "A informação de qualificações foi apagada da base de dados."
-
-msgid "Success. Your qualifications have been saved."
-msgstr "Sucesso. As suas qualificações foram gravadas."
 
 #
 # JobOffer form: Job_Offer_edit-quide-bar.tpl, Job_Offer_*_form.tpl, Job_Offer_form.php

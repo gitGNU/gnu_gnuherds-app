@@ -256,8 +256,8 @@ msgstr "Jeśli uznasz ten list za 'niechcianą pocztę', prosimy być dał nam z
 msgid "Activate account"
 msgstr "Aktywuj konto"
 
-msgid "Success. An email has been sent to %s with the instructions to activate the account."
-msgstr "Sukces. Wysłano list na adres %s z instrukcjami jak aktywować konto."
+msgid "An email has been sent to %s with the instructions to activate the account."
+msgstr "Wysłano list na adres %s z instrukcjami jak aktywować konto."
 
 msgid "If you do not receive such email, you can inform about it at %s."
 msgstr "Jeśli nie otrzymasz przesyłki, możesz nas o tym poinformować pod %s."
@@ -1517,9 +1517,6 @@ msgstr "Nieprawidłowy format daty."
 
 msgid "The qualifications information has been deleted from the data base."
 msgstr "Informacje o kwalifikacjach zostały usunięte z bazy danych."
-
-msgid "Success. Your qualifications have been saved."
-msgstr "Twoje kwalifikacjie zostały pomyślnie zapisane."
 
 #
 # JobOffer form: Job_Offer_edit-quide-bar.tpl, Job_Offer_*_form.tpl, Job_Offer_form.php

@@ -32,7 +32,7 @@ class CooperativeForm extends EntityForm
 		$phpTools = new PHPTools();
 
 		// Check the log in state
-		if ( $_SESSION['Logged'] == '1' ) // update
+		if ( $_SESSION['Logged'] == '1' )
 		{
 			if ( $_SESSION['LoginType'] != 'Cooperative' )
 			{
@@ -45,10 +45,6 @@ class CooperativeForm extends EntityForm
 				$error = "<p>Exception at [Cooperative.php]: loadCooperativeForm() != true</p>\n";
 				throw new Exception($error,false);
 			}
-		}
-		else // new
-		{
-			// Reset the PHP session is not needed because we have done it at logout and delete-entity time, leaving so a clean state.
 		}
 
 		// Process each button event
@@ -78,10 +74,35 @@ class CooperativeForm extends EntityForm
 
 	public function printOutput()
 	{
-		if ( $_POST['delete'] != '' or  ( $_POST['save'] != '' and $this->checks['result'] == "pass" )  or $_GET['email'] != '' )
-			echo $this->processingResult;
+		if ( $_SESSION['Logged'] == '1' )
+		{
+			if ( $_POST['save'] != '' and $this->checks['result'] == "pass" )
+				echo $this->processingResult;
+			else
+				$this->printCooperativeForm();
+		}
 		else
-			$this->printCooperativeForm();
+		{
+			if ( $_POST['delete'] != '' or $_GET['email'] != '' )
+			{
+				echo $this->processingResult;
+
+				if ( $_GET['action'] == "register" or $_GET['action'] == "verify" )
+				{
+					echo "<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>";
+
+					$smarty = new Smarty;
+					$smarty->display("Access_form.tpl");
+				}
+			}
+			else
+			{
+				echo "<p>".gettext('To access this section you have to login first.')."</p><p>&nbsp;</p>";
+
+				$smarty = new Smarty;
+				$smarty->display("Access_form.tpl");
+			}
+		}
 	}
 
 
@@ -115,7 +136,6 @@ class CooperativeForm extends EntityForm
 
 		// Checks
 		$this->checkCooperativeForm();
-
 
 		// Clean empty rows and the one marked to be deleted
 		$this->cleanPOST();
@@ -157,21 +177,14 @@ class CooperativeForm extends EntityForm
 
 		//XXX $this->data['PhotoOrLogo'] = 
 
-		// Update or insert the values
+		// Update the values
 		if ($this->checks['result'] == "pass" )
 		{
-			if ( $_SESSION['Logged'] == '1' ) // update
-			{
-				$this->manager->updateEntity();
-				$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p>\n";
+			$this->manager->updateEntity();
+			$this->processingResult .= "<p>&nbsp;</p><p>".gettext('Updated successfully')."</p>\n";
 
-				if ( $changeEmail == true )
-					$this->requestChangeEmail();
-			}
-			else // new
-			{
-				$this->requestRegister();
-			}
+			if ( $changeEmail == true )
+				$this->requestChangeEmail();
 		}
 	}
 
