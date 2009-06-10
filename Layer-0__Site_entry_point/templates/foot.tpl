@@ -24,7 +24,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 }Please send any feedback to %1. For example, you may send reports of technical problems such as broken links, bad page rendering, etc. We would also welcome any criticisms or suggestions. GNU Herds works for you!{/t}
 </td>
 <td>&nbsp;</td>
-<td>
+<td id="agpl">
 <div>
 <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html"><img src="themes/red_Danijel/images/agplv3-88x31.png" alt="GNU Affero GPL v3"></a>
 <a href="gnuherds-online.tar.gz">
