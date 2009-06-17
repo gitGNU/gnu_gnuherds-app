@@ -97,8 +97,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <h4>{t}Resources{/t}</h4>
 <ul>
-<li>{if not ($smarty.server.SCRIPT_URL eq "/notices" and not isset($smarty.get.action)) and $smarty.server.SCRIPT_URL neq "/" and $smarty.server.SCRIPT_URL neq "/index.php" }<a href="notices">{/if}{t}List offers{/t}{if not ($smarty.server.SCRIPT_URL eq "/notices" and not isset($smarty.get.action)) and $smarty.server.SCRIPT_URL neq "/" and $smarty.server.SCRIPT_URL neq "/index.php" }</a>{/if}</li>
-<li>{if not ($smarty.server.SCRIPT_URL eq "/notices" and $smarty.get.action eq "edit") }<a href="notices?action=edit">{/if}{t}Post offer{/t}{if not ($smarty.server.SCRIPT_URL eq "/notices" and $smarty.get.action eq "edit") }</a>{/if}</li>
 <li><a href="offers" {if $smarty.server.SCRIPT_URL eq "/offers" and not isset($smarty.get.owner) }id="current"{/if}>{t}FS job offers{/t}</a></li>
 <li><a href="pledges" {if $smarty.server.SCRIPT_URL eq "/pledges"}id="current"{/if}>{t}FS pledges{/t}</a></li>
 <li><a href="volunteers" {if $smarty.server.SCRIPT_URL eq "/volunteers"}id="current"{/if}>{t}FS volunteers{/t}</a></li>
