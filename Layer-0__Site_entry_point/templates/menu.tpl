@@ -95,11 +95,4 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </ul>
 {/if}
 
-<h4>{t}Resources{/t}</h4>
-<ul>
-<li><a href="offers" {if $smarty.server.SCRIPT_URL eq "/offers" and not isset($smarty.get.owner) }id="current"{/if}>{t}FS job offers{/t}</a></li>
-<li><a href="pledges" {if $smarty.server.SCRIPT_URL eq "/pledges"}id="current"{/if}>{t}FS pledges{/t}</a></li>
-<li><a href="volunteers" {if $smarty.server.SCRIPT_URL eq "/volunteers"}id="current"{/if}>{t}FS volunteers{/t}</a></li>
-</ul>
-
 </div>
