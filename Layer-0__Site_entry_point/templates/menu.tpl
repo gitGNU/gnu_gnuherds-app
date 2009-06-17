@@ -20,13 +20,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <div class="menu">
 
-<ul>
-<li>{if $smarty.server.SCRIPT_URL neq "/about"}<a href="about">{/if}{t}About GNU Herds{/t}{if $smarty.server.SCRIPT_URL neq "/about"}</a>{/if}</li>
-<li>{if $smarty.server.SCRIPT_URL neq "/charter"}<a href="charter">{/if}{t}Charter (draft){/t}{if $smarty.server.SCRIPT_URL neq "/charter"}</a>{/if}</li>
-<li>{if $smarty.server.SCRIPT_URL neq "/development"}<a href="development">{/if}{t}Coders' guide{/t}{if $smarty.server.SCRIPT_URL neq "/development"}</a>{/if}</li>
-<li>{if $smarty.server.SCRIPT_URL neq "/faq"}<a href="faq">{/if}{t}FAQ{/t}{if $smarty.server.SCRIPT_URL neq "/faq"}</a>{/if}</li>
-</ul>
-
 {if $smarty.session.Logged eq '1'}
 <h4>{t}Account{/t}</h4>
 <ul>

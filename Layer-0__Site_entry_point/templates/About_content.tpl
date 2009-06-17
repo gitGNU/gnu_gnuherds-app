@@ -23,6 +23,15 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
   2='<a href="charter#Aims">'
   3='</a>'
 }GNU Herds is a not-for-profit %1true-democratic%3 association which %2aims%3 to assist and encourage people in their paid work as Free Software authors, getting the highest levels of competence and efficiency.{/t}</p>
+
+<ul>
+<li><a href="charter">{t}Charter (draft){/t}</a></li>
+<li><a href="development">{t}Coders' guide{/t}</a></li>
+<li><a href="faq">{t}FAQ{/t}</a></li>
+</ul>
+
+<p>&nbsp;</p>
+
 <p>{t escape='no'
   1='<a href="faq#JobSite">'
   2='</a>'
