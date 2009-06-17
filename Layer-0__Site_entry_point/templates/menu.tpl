@@ -102,7 +102,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <li><a href="offers" {if $smarty.server.SCRIPT_URL eq "/offers" and not isset($smarty.get.owner) }id="current"{/if}>{t}FS job offers{/t}</a></li>
 <li><a href="pledges" {if $smarty.server.SCRIPT_URL eq "/pledges"}id="current"{/if}>{t}FS pledges{/t}</a></li>
 <li><a href="volunteers" {if $smarty.server.SCRIPT_URL eq "/volunteers"}id="current"{/if}>{t}FS volunteers{/t}</a></li>
-<li>{if $smarty.server.SCRIPT_URL neq "/business_models"}<a href="business_models">{/if}{t}FS business models{/t}{if $smarty.server.SCRIPT_URL neq "/business_models"}</a>{/if}</li>
 </ul>
 
 </div>
