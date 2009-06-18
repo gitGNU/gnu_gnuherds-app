@@ -1229,7 +1229,7 @@ class JobOfferForm extends SkillsForm
 		if ( $_POST["captcha"] != $_POST["result"] )
 		{
 			$this->checks['result'] = "fail";
-			$this->checks['captcha'] = gettext('Please fill correctly the solution');
+			$this->checks['captcha'] = gettext('Please fill correctly');
 		}
 		if ( $this->data['VacancyTitle']=='' )
 		{

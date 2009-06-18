@@ -70,8 +70,8 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 <tr> <td><input type="text" name="Email" maxlength="60" class="required" value="{$data.Email}"></td> </tr>
 {if $smarty.session.Logged neq '1'}
-<tr> <td><label>If you are a human do the following math problem: </label>{$num1} + {$num2}</td><input type="hidden" name="result" value="{$result}"></tr>
-<tr><td><input type="text" name="captcha" maxlength="60" class="required"><label for="Email" class="must">{$checks.captcha}</label></td> </tr>
+<tr> <td><label>Verify you are human by solving: </label>{$num1} + {$num2} = <input type="text" name="captcha" maxlength="60" class="required"><input type="hidden" name="result" value="{$result}"></td></tr>
+<tr><td><label for="Email" class="must">{$checks.captcha}</label></td> </tr>
 {/if}
 
 {/if}
