@@ -89,6 +89,7 @@ float:left;
 width:100%;
 padding:0;
 background-color:#bd0000;
+border-bottom:2px solid #999999;
 }
 
 #logo{
@@ -203,26 +204,26 @@ font-family:Verdana, Tahoma, Arial, Helvetica, sans-serif;
 
 /* menu area: Sameer's CSS */
 
-#menu{
+.menu{
 margin:5px 5px 5px 5px;
 padding:0;
 background-color:#d0c482;
 }
 
-#menu ul{
+.menu ul{
 margin:0;
 padding:0;
-border-bottom:1px solid  #C8AAAA;
 }
 
-#menu ul li{
+.menu ul li{
 padding:2px 10px;
 margin:0;
-display:inline;
 }
 
-#menu ul li a{
-text-decoration:none;
+.menu h4{
+padding:2px 10px;
+margin:10px 0 0 0;
+font-weight:bold;
 }
 
 #current{color:#000000;}
@@ -260,7 +261,7 @@ font-size:12px;
 
 /* content area: Sameer's CSS */
 
-#content{background-color:#e8eecb; margin:0; padding:5px;}
+#content{background-color:#e8eecb; margin:5px; padding:5px;}
 
 
 /* content area: Setting for texts */
