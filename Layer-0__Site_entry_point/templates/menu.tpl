@@ -18,9 +18,8 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<div class="menu">
+<div id="menu">
 
-{if $smarty.session.Logged eq '1'}
 <ul>
 
 {if $smarty.session.Logged neq '1'}
@@ -85,6 +84,5 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 
 </ul>
-{/if}
 
 </div>

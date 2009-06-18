@@ -37,9 +37,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <div id="main">
 
-<div class="sidebar">
+{if $smarty.session.Logged eq '1'}
 {include file="menu.tpl"}
-</div>
+{/if}
 
 {include file="content.tpl"}
 </div>
