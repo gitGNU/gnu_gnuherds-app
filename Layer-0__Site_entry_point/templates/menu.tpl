@@ -21,7 +21,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <div class="menu">
 
 {if $smarty.session.Logged eq '1'}
-<h4>{t}Account{/t}</h4>
 <ul>
 
 {if $smarty.session.Logged neq '1'}
