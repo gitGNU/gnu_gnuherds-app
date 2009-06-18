@@ -1166,6 +1166,15 @@ class JobOfferForm extends SkillsForm
 
 		$smarty->assign('data', $this->data);
 		$smarty->assign('checks', $this->checks);
+		if ( $_SESSION[Logged] != 1){
+		$num1 = rand(1,9);
+		$num2 = rand(1,9);
+		$result = $num1 + $num2;
+		$smarty->assign('num1', $num1);
+		$smarty->assign('num2', $num2);
+		$smarty->assign('result', $result);
+		}
+		
 		$smarty->display("Job_Offer_post_faster_form.tpl");
 	}
 
@@ -1217,7 +1226,11 @@ class JobOfferForm extends SkillsForm
 
 
 		// Some field can not be empty
-
+		if ( $_POST["captcha"] != $_POST["result"] )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['captcha'] = gettext('Please fill correctly the solution');
+		}
 		if ( $this->data['VacancyTitle']=='' )
 		{
 			$this->checks['result'] = "fail";

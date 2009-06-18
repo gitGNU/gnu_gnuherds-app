@@ -69,6 +69,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td><label for="Email" class="must">{$checks.Email}</label></td> </tr>
 {/if}
 <tr> <td><input type="text" name="Email" maxlength="60" class="required" value="{$data.Email}"></td> </tr>
+{if $smarty.session.Logged neq '1'}
+<tr> <td><label>If you are a human do the following math problem: </label>{$num1} + {$num2}</td><input type="hidden" name="result" value="{$result}"></tr>
+<tr><td><input type="text" name="captcha" maxlength="60" class="required"><label for="Email" class="must">{$checks.captcha}</label></td> </tr>
+{/if}
 
 {/if}
 
