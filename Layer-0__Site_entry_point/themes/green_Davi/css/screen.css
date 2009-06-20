@@ -89,6 +89,7 @@ float:left;
 width:100%;
 padding:0;
 background-color:#bd0000;
+border-bottom:2px solid #C8AAAA;
 }
 
 #logo{
@@ -201,7 +202,6 @@ background-color:#d0c482;
 #menu ul{
 margin:0;
 padding:0;
-border-top:1px solid  #C8AAAA;
 border-bottom:2px solid  #C8AAAA;
 }
 
