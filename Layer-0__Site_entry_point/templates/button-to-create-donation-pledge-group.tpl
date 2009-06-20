@@ -24,7 +24,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 <td>
 <form name="newDonationPledgeGroupForm" method="post" action="pledges?action=edit&amp;id=">
+<div>
 <input type="submit" name="new" value="{t}New donation pledge group{/t}"> &nbsp; {t}FAQ:{/t} <a href="faq#Payments">{t}Payments negotiation{/t}</a>
+</div>
 </form>
 </td>
 </tr>

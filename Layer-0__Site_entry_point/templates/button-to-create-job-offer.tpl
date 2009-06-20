@@ -24,7 +24,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 <td>
 <form name="newJobOfferForm" method="post" action="offers?action=edit&amp;id=">
-<input type="submit" name="new" value="{t}Post job offer{/t}"{if $smarty.session.Logged neq '1' }disabled{/if}> <input type="submit" name="new_faster" value="{t}faster{/t}">
+<div>
+<input type="submit" name="new" value="{t}Post job offer{/t}" {if $smarty.session.Logged neq '1' }disabled{/if}> <input type="submit" name="new_faster" value="{t}faster{/t}">
+</div>
 </form>
 </td>
 </tr>

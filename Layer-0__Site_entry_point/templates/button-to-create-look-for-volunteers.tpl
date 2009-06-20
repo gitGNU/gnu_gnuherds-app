@@ -24,7 +24,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 </td>
 <td>
 <form name="newLookForVolunteerForm" method="post" action="volunteers?action=edit&amp;id=">
+<div>
 <input type="submit" name="new" value="{t}New look for volunteers{/t}">
+</div>
 </form>
 </td>
 </tr>
