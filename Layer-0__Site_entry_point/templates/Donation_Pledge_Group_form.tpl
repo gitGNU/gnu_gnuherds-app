@@ -78,13 +78,13 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <tr> <td>&nbsp;</td> </tr>
 
 {if $checks.Captcha eq 'Human verified'}
-<tr> <td><input type="hidden" name="Captcha" value="{$data.OperationResult}"><input type="hidden" name="OperationResult" value="{$data.OperationResult}"></td> </tr>
+<tr> <td><input type="hidden" name="Captcha" value="1983"></td> </tr>
 {else}
 <tr> <td><span class="must">*</span><label for="Captcha">{t}Verify you are human by solving{/t}</label></td> </tr>
 {if $checks.Captcha neq '' }
 <tr> <td><label class="must">{$checks.Captcha}</label></td> </tr>
 {/if}
-<tr> <td>{$data.OperationNumber1} + {$data.OperationNumber2} = <input type="text" name="Captcha"  size="3" maxlength="3" class="required"><input type="hidden" name="OperationResult" value="{$data.OperationResult}"></td> </tr>
+<tr> <td>{t}In what year was the GNU project announced?{/t} [<a href='http://www.gnu.org/gnu/gnu-history.html'>{t}click for a hint{/t}</a>] <input type="text" name="Captcha" value="{$data.Captcha}" size="5" maxlength="5" class="required"></td> </tr>
 {/if}
 
 {/if}

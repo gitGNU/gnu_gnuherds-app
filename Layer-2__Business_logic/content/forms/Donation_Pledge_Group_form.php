@@ -84,14 +84,6 @@ class DonationPledgeGroupForm
 		//   2. It is in $data array.
 		//   3. It is set in the smarty templates.
 
-		if ( $_SESSION['Logged'] != '1' )
-		{
-			// Captcha initialization
-			$this->data['OperationNumber1'] = rand(1,9);
-			$this->data['OperationNumber2'] = rand(1,9);
-			$this->data['OperationResult'] = $this->data['OperationNumber1'] + $this->data['OperationNumber2'];
-		}
-
 		$smarty->assign('data', $this->data);
 		$smarty->assign('checks', $this->checks);
 		$smarty->display("Donation_Pledge_Group_form.tpl");
@@ -138,7 +130,6 @@ class DonationPledgeGroupForm
 		$this->data['WageRank'] = isset($_POST['WageRank']) ? trim($_POST['WageRank']) : '';
 		$this->data['Email'] = isset($_POST['Email']) ? trim($_POST['Email']) : '';
 		$this->data['Captcha'] = isset($_POST['Captcha']) ? trim($_POST['Captcha']) : '';
-		$this->data['OperationResult'] = isset($_POST['OperationResult']) ? trim($_POST['OperationResult']) : '';
 	}
 
 
@@ -202,7 +193,7 @@ class DonationPledgeGroupForm
 				}
 				else
 				{
-					if ( $this->data['Captcha'] != $this->data['OperationResult'] )
+					if ( $this->data['Captcha'] != '1983' )
 					{
 						$this->checks['result'] = "fail";
 						$this->checks['Captcha'] = gettext('Please fill in correctly');
