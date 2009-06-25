@@ -129,6 +129,7 @@ class DonationPledgeGroupForm
 		$this->data['Description'] = isset($_POST['Description']) ? trim($_POST['Description']) : '';
 		$this->data['WageRank'] = isset($_POST['WageRank']) ? trim($_POST['WageRank']) : '';
 		$this->data['Email'] = isset($_POST['Email']) ? trim($_POST['Email']) : '';
+		$this->data['Captcha'] = isset($_POST['Captcha']) ? trim($_POST['Captcha']) : '';
 	}
 
 
@@ -182,6 +183,24 @@ class DonationPledgeGroupForm
 					{
 						$this->checks['result'] = "fail";
 						$this->checks['Email'] = gettext('Invalid email address');
+					}
+				}
+
+				if ( $this->data['Captcha']=='' )
+				{
+					$this->checks['result'] = "fail";
+					$this->checks['Captcha'] = gettext('Please fill in here');
+				}
+				else
+				{
+					if ( $this->data['Captcha'] != '1983' )
+					{
+						$this->checks['result'] = "fail";
+						$this->checks['Captcha'] = gettext('Please fill in correctly');
+					}
+					else
+					{
+						$this->checks['Captcha'] = 'Human verified';
 					}
 				}
 			}

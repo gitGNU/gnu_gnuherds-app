@@ -25,16 +25,22 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {if $smarty.server.REQUEST_URI neq "/about" and $smarty.server.REQUEST_URI neq "/About.php"}
 <a href="/about">
 {/if}
-<img src="/themes/red_Danijel/images/logo.beta.png" alt="{t}GNU Herds' logo{/t}">
+<img src="/themes/red_Danijel/images/logo.beta.png" alt="{t}About GNU Herds{/t}">
 {if $smarty.server.REQUEST_URI neq "/about" and $smarty.server.REQUEST_URI neq "/About.php"}
 </a>
 {/if}
 </div>
 
 <div id="header_title">
+{if $smarty.server.REQUEST_URI neq "/about" and $smarty.server.REQUEST_URI neq "/About.php"}
+<a href="/about">
+{/if}
 {t escape='no'
   1='<br>'
 }Free Software%1Association{/t}
+{if $smarty.server.REQUEST_URI neq "/about" and $smarty.server.REQUEST_URI neq "/About.php"}
+</a>
+{/if}
 </div>
 
 <div id="access">

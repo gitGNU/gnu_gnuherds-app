@@ -18,17 +18,9 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<div class="menu">
-
-<ul>
-<li>{if $smarty.server.SCRIPT_URL neq "/about"}<a href="about">{/if}{t}About GNU Herds{/t}{if $smarty.server.SCRIPT_URL neq "/about"}</a>{/if}</li>
-<li>{if $smarty.server.SCRIPT_URL neq "/charter"}<a href="charter">{/if}{t}Charter (draft){/t}{if $smarty.server.SCRIPT_URL neq "/charter"}</a>{/if}</li>
-<li>{if $smarty.server.SCRIPT_URL neq "/development"}<a href="development">{/if}{t}Coders' guide{/t}{if $smarty.server.SCRIPT_URL neq "/development"}</a>{/if}</li>
-<li>{if $smarty.server.SCRIPT_URL neq "/faq"}<a href="faq">{/if}{t}FAQ{/t}{if $smarty.server.SCRIPT_URL neq "/faq"}</a>{/if}</li>
-</ul>
-
 {if $smarty.session.Logged eq '1'}
-<h4>{t}Account{/t}</h4>
+<div id="menu">
+
 <ul>
 
 {if $smarty.session.Logged neq '1'}
@@ -93,13 +85,6 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 
 </ul>
-{/if}
-
-<h4>{t}Resources{/t}</h4>
-<ul>
-<li><a href="offers" {if $smarty.server.SCRIPT_URL eq "/offers" and not isset($smarty.get.owner) }id="current"{/if}>{t}FS job offers{/t}</a></li>
-<li><a href="pledges" {if $smarty.server.SCRIPT_URL eq "/pledges"}id="current"{/if}>{t}FS pledges{/t}</a></li>
-<li><a href="volunteers" {if $smarty.server.SCRIPT_URL eq "/volunteers"}id="current"{/if}>{t}FS volunteers{/t}</a></li>
-</ul>
 
 </div>
+{/if}

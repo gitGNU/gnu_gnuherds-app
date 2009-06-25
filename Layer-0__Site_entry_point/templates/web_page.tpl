@@ -36,11 +36,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {include file="header.tpl"}
 
 <div id="main">
-
-<div class="sidebar">
 {include file="menu.tpl"}
-</div>
-
 {include file="content.tpl"}
 </div>
 

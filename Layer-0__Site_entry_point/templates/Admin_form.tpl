@@ -19,6 +19,8 @@ Suite 225, San Francisco, CA 94107, USA
 
 <h3>{t}Skills administration{/t}</h3>
 
+<div class="set_font">
+
 <a href="/admin?section=classify_skills" title="{t}Attend pending to classify skills{/t}">{t}Classify{/t}</a>
  | 
 <a href="/admin?section=reclassify_skills" title="{t}Attend reclassify skill requests{/t}">{t}Reclassify{/t}</a>
@@ -191,3 +193,4 @@ Suite 225, San Francisco, CA 94107, USA
 </div>
 </form>
 
+</div>
