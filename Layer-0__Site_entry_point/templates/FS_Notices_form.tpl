@@ -16,7 +16,7 @@ You should have received a copy of the GNU Affero General Public License along w
 program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 *}
 
-<h3>{t}FS job offers{/t}</h3>
+<h3>{t}Job offers{/t}</h3>
 
 <table border="0" class="marginA">
 {include file="table-to-list-job-offers.tpl"}
@@ -33,7 +33,7 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <br>
 
 
-<h3>{t}FS pledges{/t}</h3>
+<h3>{t}Pledges{/t}</h3>
 
 <table border="0" class="marginA">
 {include file="table-to-list-donation-pledge-groups.tpl"}

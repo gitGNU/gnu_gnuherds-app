@@ -7,7 +7,7 @@ xmlns:content="http://purl.org/rss/1.0/modules/content/"
 xmlns="http://purl.org/rss/1.0/"
 >
 <channel rdf:about="http://gnuherds.org/offers">
-<title>GNU Herds - {t}FS job offers{/t}</title>
+<title>GNU Herds - {t}Job offers{/t}</title>
 <link>http://gnuherds.org/offers</link>
 <description>
 {if count($data.JobOffers.JobOfferId) == 0 }

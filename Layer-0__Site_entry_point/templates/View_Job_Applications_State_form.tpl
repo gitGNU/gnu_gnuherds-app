@@ -21,9 +21,9 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <ul id="tablist">
 <li><a {if $smarty.get.section eq '' or $smarty.get.section eq 'offers'} class="current" {/if}
-	href="applications?owner=me&section=offers">{t}FS job offers{/t}</a></li>
+	href="applications?owner=me&section=offers">{t}Job offers{/t}</a></li>
 <li><a {if $smarty.get.section eq 'pledges'} class="current" {/if}
-	href="applications?owner=me&section=pledges">{t}FS pledges{/t}</a></li>
+	href="applications?owner=me&section=pledges">{t}Pledges{/t}</a></li>
 </ul>
 
 <div id="tab">
