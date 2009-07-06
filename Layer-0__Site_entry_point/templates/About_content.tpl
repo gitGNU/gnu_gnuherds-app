@@ -51,23 +51,23 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 <td><div class="spacerB"></div></td>
 <td>
 <a href="notices">
-<img src="/themes/red_Danijel/images/contracts.png" alt="{t}FS job offers{/t}"><br>
+<img src="/themes/red_Danijel/images/contracts.png" alt="{t}Job offers{/t}"><br>
 </a>
-{t}job offers{/t}
+{t}Job offers{/t}
 </td>
 <td><div class="spacerB"></div></td>
 <td>
 <a href="notices">
-<img src="/themes/red_Danijel/images/donations.png" alt="{t}FS pledges{/t}"><br>
+<img src="/themes/red_Danijel/images/donations.png" alt="{t}Pledges{/t}"><br>
 </a>
-{t}pledges{/t}
+{t}Pledges{/t}
 </td>
 <td><div class="spacerB"></div></td>
 <td>
 <a href="notices">
-<img src="/themes/red_Danijel/images/volunteers.png" alt="{t}FS volunteers{/t}"><br>
+<img src="/themes/red_Danijel/images/volunteers.png" alt="{t}Volunteers{/t}"><br>
 </a>
-{t}volunteers{/t}
+{t}Volunteers{/t}
 </td>
 <tr>
 </table>

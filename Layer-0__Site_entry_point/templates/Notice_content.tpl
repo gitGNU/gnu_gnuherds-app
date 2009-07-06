@@ -37,10 +37,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <td>
 <a href="offers?action=edit&amp;id=">
-<img src="/themes/red_Danijel/images/contracts.png" alt="{t}FS job offers{/t}"><br>
+<img src="/themes/red_Danijel/images/contracts.png" alt="{t}Job offers{/t}"><br>
 </a>
 <a href="offers?action=edit&amp;id=">
-{t}job offers{/t}
+{t}Job offers{/t}
 </a>
 </td>
 
@@ -48,10 +48,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <td>
 <a href="pledges?action=edit&amp;id=">
-<img src="/themes/red_Danijel/images/donations.png" alt="{t}FS pledges{/t}"><br>
+<img src="/themes/red_Danijel/images/donations.png" alt="{t}Pledges{/t}"><br>
 </a>
 <a href="pledges?action=edit&amp;id=">
-{t}pledges{/t}
+{t}Pledges{/t}
 </a>
 </td>
 
@@ -59,10 +59,10 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 
 <td>
 <a href="volunteers?action=edit&amp;id=">
-<img src="/themes/red_Danijel/images/volunteers.png" alt="{t}FS volunteers{/t}"><br>
+<img src="/themes/red_Danijel/images/volunteers.png" alt="{t}Volunteers{/t}"><br>
 </a>
 <a href="volunteers?action=edit&amp;id=">
-{t}volunteers{/t}
+{t}Volunteers{/t}
 </a>
 </td>
 

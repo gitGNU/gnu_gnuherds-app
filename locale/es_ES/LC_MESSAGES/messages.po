@@ -102,17 +102,17 @@ msgstr "Administración"
 msgid "Resources"
 msgstr "Recursos"
 
-msgid "FS business models"
-msgstr "Modelos de negocio SL"
+msgid "Business models"
+msgstr "Modelos de negocio"
 
-msgid "FS job offers"
-msgstr "Ofertas de empleo SL"
+msgid "Job offers"
+msgstr "Ofertas de empleo"
 
-msgid "FS pledges"
-msgstr "Promesas SL"
+msgid "Pledges"
+msgstr "Promesas"
 
-msgid "FS volunteers"
-msgstr "Voluntarios SL"
+msgid "Volunteers"
+msgstr "Voluntarios"
 
 #
 # log_in_box.tpl
