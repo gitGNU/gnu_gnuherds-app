@@ -140,7 +140,14 @@ class LookForVolunteersForm
 
 
 		// Some field can not be empty
-
+		if ( $_POST["Captcha"] != '1983' )
+		{
+			$this->checks['result'] = "fail";
+			$this->checks['Captcha'] = gettext('Please fill correctly');
+		}else
+		{
+			$this->checks['Captcha'] = 'Human verified';
+		}
 		if ( $this->data['VacancyTitle']=='' )
 		{
 			$this->checks['result'] = "fail";

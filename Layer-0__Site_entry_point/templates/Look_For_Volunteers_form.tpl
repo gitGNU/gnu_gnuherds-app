@@ -64,6 +64,16 @@ program in the COPYING file.  If not, see <http://www.gnu.org/licenses/>.
 {/if}
 <tr> <td><input type="text" name="Email" maxlength="60" class="required" value="{$data.Email}"></td> </tr>
 
+{if $checks.Captcha eq 'Human verified'}
+<tr> <td><input type="hidden" name="Captcha" value="1983"></td> </tr>
+{else}
+<tr> <td><span class="must">*</span><label for="Captcha">{t}Verify you are human by solving{/t}</label></td> </tr>
+{if $checks.Captcha neq '' }
+{/if}
+<tr> <td>{t}In what year was the GNU project announced?{/t} [<a href='http://www.gnu.org/gnu/gnu-history.html'>{t}click for a hint{/t}</a>] <input type="text" name="Captcha" value="{$data.Captcha}" size="5" maxlength="5" class="required"></td> </tr>
+<tr> <td><label class="must">{$checks.Captcha}</label></td> </tr>
+{/if}
+
 {/if}
 
 
