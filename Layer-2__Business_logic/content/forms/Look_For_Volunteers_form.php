@@ -118,7 +118,6 @@ class LookForVolunteersForm
 				$_GET['JobOfferId'] = $this->manager->addJobOffer($offerType,$completedEdition,$magic); // Add a new job offer with the data from the 'general' section
 			}
 		}
-
 	}
 
 
@@ -129,6 +128,7 @@ class LookForVolunteersForm
 		$this->data['VacancyTitle'] = isset($_POST['VacancyTitle']) ? trim($_POST['VacancyTitle']) : '';
 		$this->data['Description'] = isset($_POST['Description']) ? trim($_POST['Description']) : '';
 		$this->data['Email'] = isset($_POST['Email']) ? trim($_POST['Email']) : '';
+		$this->data['Captcha'] = isset($_POST['Captcha']) ? trim($_POST['Captcha']) : '';
 	}
 
 
@@ -140,14 +140,7 @@ class LookForVolunteersForm
 
 
 		// Some field can not be empty
-		if ( $_POST["Captcha"] != '1983' )
-		{
-			$this->checks['result'] = "fail";
-			$this->checks['Captcha'] = gettext('Please fill correctly');
-		}else
-		{
-			$this->checks['Captcha'] = 'Human verified';
-		}
+
 		if ( $this->data['VacancyTitle']=='' )
 		{
 			$this->checks['result'] = "fail";
@@ -176,6 +169,24 @@ class LookForVolunteersForm
 					{
 						$this->checks['result'] = "fail";
 						$this->checks['Email'] = gettext('Invalid email address');
+					}
+				}
+
+				if ( $this->data['Captcha']=='' )
+				{
+					$this->checks['result'] = "fail";
+					$this->checks['Captcha'] = gettext('Please fill in here');
+				}
+				else
+				{
+					if ( $this->data['Captcha'] != '1983' )
+					{
+						$this->checks['result'] = "fail";
+						$this->checks['Captcha'] = gettext('Please fill in correctly');
+					}
+					else
+					{
+						$this->checks['Captcha'] = 'Human verified';
 					}
 				}
 			}
